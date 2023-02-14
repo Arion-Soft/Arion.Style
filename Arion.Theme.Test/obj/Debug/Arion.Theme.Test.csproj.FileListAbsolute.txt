@@ -21,4 +21,3 @@ C:\Users\ss_six\RiderProjects\Arion.Theme.Test\Arion.Theme.Test\obj\Debug\Arion.
 C:\Users\ss_six\RiderProjects\Arion.Theme.Test\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.csproj.CopyComplete
 C:\Users\ss_six\RiderProjects\Arion.Theme.Test\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.exe
 C:\Users\ss_six\RiderProjects\Arion.Theme.Test\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.pdb
-C:\Users\ss_six\RiderProjects\Arion.Theme.Test\Arion.Theme.Test\obj\Debug\GeneratedInternalTypeHelper.g.cs

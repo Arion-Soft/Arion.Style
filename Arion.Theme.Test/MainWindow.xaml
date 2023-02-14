@@ -14,31 +14,35 @@
         <TabItem Header="Buttons">
             <!--  BUTTONS  -->
             <WrapPanel Orientation="Horizontal">
-                <Button Content="Test" Margin="5" />
+                <Button
+                    Content="Test"
+                    Margin="5"
+                    Style="{StaticResource FilledLarge}" />
                 <Button
                     Content="Test"
                     IsEnabled="False"
-                    Margin="5" />
+                    Margin="5"
+                    Style="{StaticResource FilledLarge}" />
 
                 <Button
                     Content="Test"
                     Margin="5"
-                    Style="{StaticResource Outline}" />
+                    Style="{StaticResource OutlineLarge}" />
                 <Button
                     Content="Test"
                     IsEnabled="False"
                     Margin="5"
-                    Style="{StaticResource Outline}" />
+                    Style="{StaticResource OutlineLarge}" />
 
                 <Button
                     Content="Test"
                     Margin="5"
-                    Style="{StaticResource Text}" />
+                    Style="{StaticResource TextLarge}" />
                 <Button
                     Content="Test"
                     IsEnabled="False"
                     Margin="5"
-                    Style="{StaticResource Text}" />
+                    Style="{StaticResource TextLarge}" />
             </WrapPanel>
         </TabItem>
         <TabItem Header="Check boxes">
