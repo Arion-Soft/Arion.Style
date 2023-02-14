@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>Arion.Theme</RootNamespace>
+    <AssemblyName>Arion.Theme</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\CRE-450T\packages\OpenCvSharp4.Extensions.4.6.0.20220608\lib\netstandard2.0\OpenCvSharp.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\CRE-450T\packages\System.Drawing.Common.5.0.3\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ArionTheme.xaml" />
+    <Page Include="ArionUiTheme.xaml" />
+    <Page Include="BaseTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Icons\Icons.xaml" />
+    <Page Include="Icons\SRE450.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IconTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OldTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ArionTheme\Button.xaml" />
+    <Page Include="Styles\ArionTheme\CheckBox.xaml" />
+    <Page Include="Styles\ArionTheme\Colors.xaml" />
+    <Page Include="Styles\ArionTheme\ComboBox.xaml" />
+    <Page Include="Styles\ArionTheme\DataGrid.xaml" />
+    <Page Include="Styles\ArionTheme\Expander.xaml" />
+    <Page Include="Styles\ArionTheme\Label.xaml" />
+    <Page Include="Styles\ArionTheme\ListView.xaml" />
+    <Page Include="Styles\ArionTheme\Page.xaml" />
+    <Page Include="Styles\ArionTheme\PasswordBox.xaml" />
+    <Page Include="Styles\ArionTheme\RadioButton.xaml" />
+    <Page Include="Styles\ArionTheme\RepeatButton.xaml" />
+    <Page Include="Styles\ArionTheme\TabControl.xaml" />
+    <Page Include="Styles\ArionTheme\TextBlock.xaml" />
+    <Page Include="Styles\ArionTheme\TextBox.xaml" />
+    <Page Include="Styles\ArionTheme\ToggleButton.xaml" />
+    <Page Include="Styles\ArionTheme\Window.xaml" />
+    <Page Include="Styles\ArionUi\Button.xaml" />
+    <Page Include="Styles\ArionUi\CheckBox.xaml" />
+    <Page Include="Styles\ArionUi\Colors.xaml" />
+    <Page Include="Styles\ArionUi\ComboBox.xaml" />
+    <Page Include="Styles\ArionUi\DataGrid.xaml" />
+    <Page Include="Styles\ArionUi\Expander.xaml" />
+    <Page Include="Styles\ArionUi\Label.xaml" />
+    <Page Include="Styles\ArionUi\ListView.xaml" />
+    <Page Include="Styles\ArionUi\Page.xaml" />
+    <Page Include="Styles\ArionUi\PasswordBox.xaml" />
+    <Page Include="Styles\ArionUi\RadioButton.xaml" />
+    <Page Include="Styles\ArionUi\RepeatButton.xaml" />
+    <Page Include="Styles\ArionUi\TabControl.xaml" />
+    <Page Include="Styles\ArionUi\TextBlock.xaml" />
+    <Page Include="Styles\ArionUi\TextBox.xaml" />
+    <Page Include="Styles\ArionUi\ToggleButton.xaml" />
+    <Page Include="Styles\ArionUi\Window.xaml" />
+    <Page Include="UIColors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Images\XrayGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\Images\Drive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Images\File.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Images\Folder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Icons\Images\Folder.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Icons\Images\Pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Images\Xray.gif" />
+    <Content Include="Icons\Images\XrayIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

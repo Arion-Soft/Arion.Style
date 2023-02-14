@@ -1,0 +1,233 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="BorderBrush" Value="#B0BABF" />
+        <Setter Property="Background" Value="#F6F8F9" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Grid
+                        Background="Transparent"
+                        SnapsToDevicePixels="True"
+                        x:Name="templateRoot">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="2"
+                            CornerRadius="3"
+                            Height="25"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Width="25"
+                            x:Name="checkBoxBorder">
+                            <Grid x:Name="markGrid">
+                                <Path
+                                    Data="F1 M 9.97498,1.22334L 4.6983,9.09834L 4.52164,9.09834L 0,5.19331L 1.27664,3.52165L 4.255,6.08833L 8.33331,1.52588e-005L 9.97498,1.22334 Z "
+                                    Fill="#335D8E"
+                                    Margin="5"
+                                    Opacity="0"
+                                    Stretch="Uniform"
+                                    x:Name="Mark" />
+                            </Grid>
+                        </Border>
+                        <TextBlock
+                            Focusable="False"
+                            Grid.Column="1"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            Text="{TemplateBinding Content}"
+                            TextWrapping="Wrap"
+                            VerticalAlignment="Center"
+                            x:Name="contentPresenter" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!--  CHECKED - TRUE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#0E73F6" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#0E73F6" />
+                            <Setter Property="Fill" TargetName="Mark" Value="White" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#0452C8" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#0452C8" />
+                            <Setter Property="Fill" TargetName="Mark" Value="White" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#4094F7" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#4094F7" />
+                            <Setter Property="Fill" TargetName="Mark" Value="White" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#D5DADD" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#D5DADD" />
+                            <Setter Property="Fill" TargetName="Mark" Value="White" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                            <Setter Property="Opacity" Value=".5" />
+                        </MultiTrigger>
+
+
+                        <!--  CHECKED - FALSE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#EEF0F2" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#9AA6AC" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Transparent" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#84919A" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Transparent" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Transparent" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Transparent" />
+                            <Setter Property="Opacity" Value="0.5" />
+                        </MultiTrigger>
+
+
+                        <!--  CHECKED - NULL | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="{x:Null}" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#EEF0F2" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#9AA6AC" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                        </MultiTrigger>
+                        <!--  CHECKED - NULL | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="{x:Null}" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#84919A" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                        </MultiTrigger>
+                        <!--  CHECKED - NULL | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="{x:Null}" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                        </MultiTrigger>
+                        <!--  CHECKED - NULL | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="{x:Null}" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Opacity" Value="0.5" />
+                            <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                        </MultiTrigger>
+
+                        <Trigger Property="HasContent" Value="true">
+                            <Setter Property="Padding" Value="4,-1,0,0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

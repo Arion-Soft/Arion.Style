@@ -1,0 +1,54 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="TextBox">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Padding" Value="5,0" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="{StaticResource BrushButton}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="White"
+                        BorderThickness="1"
+                        CornerRadius="3"
+                        x:Name="Border">
+                        <ScrollViewer
+                            FontWeight="Medium"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            IsTabStop="False"
+                            Padding="{TemplateBinding Padding}"
+                            TextElement.Foreground="{StaticResource BrushPrimary}"
+                            VerticalAlignment="Center"
+                            Width="{TemplateBinding Width}"
+                            x:Name="PART_ContentHost" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" TargetName="Border" Value="{StaticResource BrushControl}" />
+                            <Setter Property="BorderBrush" TargetName="Border" Value="{StaticResource BrushPrimary}" />
+                        </Trigger>
+                        <Trigger Property="IsReadOnly" Value="True">
+                            <Setter Property="Cursor" Value="No" />
+                            <Setter Property="Background" TargetName="Border" Value="{StaticResource BrushControl}" />
+                            <Setter Property="Foreground" Value="{StaticResource BrushDisable}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource BrushDisable}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" TargetName="Border" Value="{StaticResource BrushControl}" />
+                            <Setter Property="Foreground" Value="{StaticResource BrushDisable}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource BrushDisable}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

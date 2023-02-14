@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Icons/SRE450.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Button.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Window.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Expander.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Page.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/TextBlock.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/TextBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ToggleButton.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/RepeatButton.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/DataGrid.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Label.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/CheckBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/RadioButton.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ListView.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ComboBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/PasswordBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/TabControl.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="Border" x:Key="StatusBar">
+        <Setter Property="Background" Value="{StaticResource BrushBackground2}" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+        <Setter Property="BorderThickness" Value="0,1,0,0" />
+        <Setter Property="BorderBrush" Value="{StaticResource BrushButton}" />
+    </Style>
+
+</ResourceDictionary>

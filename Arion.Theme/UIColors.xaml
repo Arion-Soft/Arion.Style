@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Color
+        A="0xFF"
+        B="0xFF"
+        G="0xFF"
+        R="0xFF"
+        x:Key="ColorButton" />
+    <Color
+        A="0xFF"
+        B="0x76"
+        G="0x70"
+        R="0x7F"
+        x:Key="ColorDisable" />
+    <Color
+        A="0xFF"
+        B="0xAF"
+        G="0x7C"
+        R="0x51"
+        x:Key="ColorPrimary" />
+    <Color
+        A="0xFF"
+        B="0xD2"
+        G="0xDD"
+        R="0xEF"
+        x:Key="ColorBackground" />
+    <Color
+        A="0xFF"
+        B="0xEF"
+        G="0xE9"
+        R="0xE5"
+        x:Key="ColorControl" />
+    <Color
+        B="0xFF"
+        G="0xFF"
+        R="0xFF"
+        x:Key="Color.MouseOver.Foreground" />
+    <Color
+        B="0x77"
+        G="0x77"
+        R="0x77"
+        x:Key="Color.Element.Disable" />
+    <Color
+        A="0xFF"
+        B="0xF3"
+        G="0xE3"
+        R="0xD7"
+        x:Key="MainColor" />
+    <SolidColorBrush Color="{StaticResource ColorBackground}" x:Key="SolidMain" />
+</ResourceDictionary>

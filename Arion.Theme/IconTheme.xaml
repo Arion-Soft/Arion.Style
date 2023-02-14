@@ -1,0 +1,965 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="FindIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_FindDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_FindWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="GraphIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_GraphDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_GraphWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="GridIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_GridDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_GridWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FullScreenIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_FullScreenDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_FullScreenWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BackIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_BackDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_BackWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ReloadIcon" TargetType="Button">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_ReloadDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_ReloadWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ArrowIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_ArrowDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_ArrowWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="OptionIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_OptionDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_BarsWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="JoystickIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_JoystickDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_JoystickWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="StepIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_StepInStepDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_StepInStepWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="MacroIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_MacroDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_MacroWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BrushIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_BrushDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_BrushWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LeftIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_LeftDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_LeftWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RightIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_RightDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_RightWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="HorizontalMirrorIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_HorizontalMirrorDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_HorizontalMirrorWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="VerticalMirrorIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_VerticalMirrorDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_VerticalMirrorWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LetterIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_LetterDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_LetterWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="VectorIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_VectorDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_VectorWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ShootIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_ShootDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_ShootWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="HyperShotIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_HyperShotDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_HyperShotWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="AngleIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_AngleDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_AngleWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CreateIcon" TargetType="Button">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image
+                            x:Name="Img"
+                            Height="30"
+                            Source="{StaticResource Kind_CreateDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_CreateWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ApplyIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_ApplyDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_ApplyWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DownloadIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_DownloadDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_DownloadWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CloseIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_CloseDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_CloseWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CalibrationIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_CalibrationDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_CalibrationWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SaveIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_SaveDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_SaveBigWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SaveBigIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_SaveBigDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_SaveBigWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="PointIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_PointToPointDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_PointToPointWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="JoystickMoveIcon" TargetType="Button">
+        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="BorderBrush" Value="#ECF0F4" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="3">
+                        <Image x:Name="Img" Source="{StaticResource Kind_JoystickMoveDrawingImage}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#335D8E" />
+                            <Setter Property="BorderBrush" Value="#335D8E" />
+                            <Setter TargetName="Img" Property="Source" Value="{StaticResource Kind_JoystickMoveWhiteDrawingImage}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
