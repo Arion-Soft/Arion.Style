@@ -3,7 +3,15 @@
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="Label" x:Key="Title">
+    <Style x:Key="Lbl" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="Golos UI VF" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Width" Value="200" />
+    </Style>
+
+    <Style x:Key="Title" TargetType="Label">
         <Setter Property="Background" Value="#E7EAED" />
         <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
         <Setter Property="Focusable" Value="False" />
@@ -19,21 +27,21 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Label}">
                     <Border
-                        Background="{TemplateBinding Background}"
-                        CornerRadius="10,10,0,0"
                         Height="{TemplateBinding Height}"
-                        Padding="{TemplateBinding Padding}">
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="10,10,0,0">
                         <ContentPresenter
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             Name="PART_ContentHost"
-                            TextElement.Foreground="{TemplateBinding Foreground}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            TextElement.Foreground="{TemplateBinding Foreground}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="Label" x:Key="LabelText">
+    <Style x:Key="LabelText" TargetType="Label">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
         <Setter Property="Focusable" Value="False" />
@@ -45,7 +53,7 @@
         <Setter Property="Height" Value="40" />
         <Setter Property="Padding" Value="20,10" />
     </Style>
-    <Style TargetType="Label" x:Key="BlueLetters">
+    <Style x:Key="BlueLetters" TargetType="Label">
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
@@ -57,16 +65,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Label}">
                     <Border
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        Padding="{TemplateBinding Padding}"
                         SnapsToDevicePixels="true">
                         <ContentPresenter
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             RecognizesAccessKey="False"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">
@@ -77,50 +85,50 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type Label}" x:Key="RoundedLabelStyle">
+    <Style x:Key="RoundedLabelStyle" TargetType="{x:Type Label}">
         <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Label}">
                     <Border
+                        Name="Border"
                         BorderBrush="{StaticResource BrushPrimary}"
                         BorderThickness="1"
-                        CornerRadius="5"
-                        Name="Border">
+                        CornerRadius="5">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            ContentTemplate="{TemplateBinding ContentTemplate}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type Label}" x:Key="TimeIcon">
+    <Style x:Key="TimeIcon" TargetType="{x:Type Label}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Grid Height="34" Width="34">
+                    <Grid Width="34" Height="34">
                         <Rectangle
-                            Height="34"
                             Name="Rect"
+                            Width="34"
+                            Height="34"
                             RadiusX="32"
                             RadiusY="32"
                             Stroke="{StaticResource BrushPrimary}"
-                            StrokeThickness="3"
-                            Width="34" />
+                            StrokeThickness="3" />
                         <Rectangle
-                            Height="3"
-                            HorizontalAlignment="Center"
-                            Margin="0,4,0,0"
                             Name="RectMin"
+                            Width="3"
+                            Height="3"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
                             RadiusX="6"
                             RadiusY="6"
                             Stroke="{StaticResource BrushPrimary}"
-                            StrokeThickness="3"
-                            VerticalAlignment="Center"
-                            Width="3" />
+                            StrokeThickness="3" />
                         <Polyline
                             Name="Hour"
                             Points="17,6 17,19"
@@ -134,17 +142,17 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Stroke" TargetName="Rect" Value="Gray" />
-                            <Setter Property="Stroke" TargetName="RectMin" Value="Gray" />
-                            <Setter Property="Stroke" TargetName="Hour" Value="Gray" />
-                            <Setter Property="Stroke" TargetName="Min" Value="Gray" />
+                            <Setter TargetName="Rect" Property="Stroke" Value="Gray" />
+                            <Setter TargetName="RectMin" Property="Stroke" Value="Gray" />
+                            <Setter TargetName="Hour" Property="Stroke" Value="Gray" />
+                            <Setter TargetName="Min" Property="Stroke" Value="Gray" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="Label" x:Key="Display">
+    <Style x:Key="Display" TargetType="Label">
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="BorderBrush" Value="{StaticResource BrushPrimary}" />
         <Setter Property="Height" Value="35" />
@@ -159,15 +167,15 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="3">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="Label" x:Key="DisplayTransparent">
+    <Style x:Key="DisplayTransparent" TargetType="Label">
         <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="FontSize" Value="14" />

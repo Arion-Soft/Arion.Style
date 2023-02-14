@@ -1,17 +1,17 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style TargetType="{x:Type Button}" x:Key="ButtonBaseLarge">
+    <Style x:Key="ButtonBaseLarge" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontFamily" Value="GolosUi" />
+        <Setter Property="FontFamily" Value="Golos UI VF" />
         <Setter Property="MinWidth" Value="40" />
         <Setter Property="Height" Value="40" />
         <Setter Property="FontWeight" Value="Medium" />
     </Style>
 
     <Style
+        x:Key="FilledLarge"
         BasedOn="{StaticResource ButtonBaseLarge}"
-        TargetType="{x:Type Button}"
-        x:Key="FilledLarge">
+        TargetType="{x:Type Button}">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="#4094F7" />
         <Setter Property="BorderBrush" Value="#4094F7" />
@@ -20,16 +20,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border
+                        Name="Border"
+                        Padding="16,8"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="16,8">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -51,9 +51,9 @@
     </Style>
 
     <Style
+        x:Key="OutlineLarge"
         BasedOn="{StaticResource ButtonBaseLarge}"
-        TargetType="{x:Type Button}"
-        x:Key="OutlineLarge">
+        TargetType="{x:Type Button}">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#DDE2E4" />
@@ -62,16 +62,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border
+                        Name="Border"
+                        Padding="16,8"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="16,8">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -93,9 +93,9 @@
     </Style>
 
     <Style
+        x:Key="TextLarge"
         BasedOn="{StaticResource ButtonBaseLarge}"
-        TargetType="{x:Type Button}"
-        x:Key="TextLarge">
+        TargetType="{x:Type Button}">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -104,16 +104,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border
+                        Name="Border"
+                        Padding="16,8"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="16,8">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">

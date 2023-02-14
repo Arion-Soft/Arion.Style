@@ -1,88 +1,106 @@
 ﻿<Window
-    Height="540"
-    Left="600"
-    Title="MainWindow"
-    Top="-1080"
-    Width="960"
-    mc:Ignorable="d"
     x:Class="Arion.Theme.Test.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    Title="MainWindow"
+    Width="960"
+    Height="540"
+    Left="600"
+    Top="0"
+    mc:Ignorable="d">
     <TabControl TabStripPlacement="Left">
         <TabItem Header="Buttons">
             <!--  BUTTONS  -->
-            <WrapPanel Orientation="Horizontal">
-                <Button
-                    Content="Test"
-                    Margin="5"
-                    Style="{StaticResource FilledLarge}" />
-                <Button
-                    Content="Test"
-                    IsEnabled="False"
-                    Margin="5"
-                    Style="{StaticResource FilledLarge}" />
+            <WrapPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label
+                        Width="200"
+                        Content="Стиль: FilledLarge"
+                        Style="{StaticResource Lbl}" />
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        Style="{StaticResource FilledLarge}" />
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        IsEnabled="False"
+                        Style="{StaticResource FilledLarge}" />
+                </StackPanel>
 
-                <Button
-                    Content="Test"
-                    Margin="5"
-                    Style="{StaticResource OutlineLarge}" />
-                <Button
-                    Content="Test"
-                    IsEnabled="False"
-                    Margin="5"
-                    Style="{StaticResource OutlineLarge}" />
+                <StackPanel Orientation="Horizontal">
+                    <Label
+                        Width="200"
+                        Content="Стиль: OutlineLarge"
+                        Style="{StaticResource Lbl}" />
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        Style="{StaticResource OutlineLarge}" />
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        IsEnabled="False"
+                        Style="{StaticResource OutlineLarge}" />
+                </StackPanel>
 
-                <Button
-                    Content="Test"
-                    Margin="5"
-                    Style="{StaticResource TextLarge}" />
-                <Button
-                    Content="Test"
-                    IsEnabled="False"
-                    Margin="5"
-                    Style="{StaticResource TextLarge}" />
+                <StackPanel Orientation="Horizontal">
+                    <Label
+                        Width="200"
+                        Content="Стиль: TextLarge"
+                        Style="{StaticResource Lbl}" />
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        Style="{StaticResource TextLarge}" />
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        IsEnabled="False"
+                        Style="{StaticResource TextLarge}" />
+                </StackPanel>
             </WrapPanel>
         </TabItem>
         <TabItem Header="Check boxes">
             <!--  CHECK BOXES  -->
             <WrapPanel Orientation="Horizontal">
                 <CheckBox Margin="5" />
-                <CheckBox IsEnabled="False" Margin="5" />
+                <CheckBox Margin="5" IsEnabled="False" />
 
-                <CheckBox IsChecked="True" Margin="5" />
+                <CheckBox Margin="5" IsChecked="True" />
                 <CheckBox
+                    Margin="5"
                     IsChecked="True"
-                    IsEnabled="False"
-                    Margin="5" />
+                    IsEnabled="False" />
 
                 <CheckBox
+                    Margin="5"
                     IsChecked="{x:Null}"
-                    IsThreeState="True"
-                    Margin="5" />
+                    IsThreeState="True" />
                 <CheckBox
+                    Margin="5"
                     IsChecked="{x:Null}"
                     IsEnabled="False"
-                    IsThreeState="True"
-                    Margin="5" />
+                    IsThreeState="True" />
             </WrapPanel>
         </TabItem>
         <TabItem Header="ComboBoxes">
             <!--  COMBO BOXES  -->
             <WrapPanel Orientation="Horizontal">
-                <ComboBox Margin="5" Width="200" />
+                <ComboBox Width="200" Margin="5" />
                 <ComboBox
-                    IsEnabled="False"
+                    Width="200"
                     Margin="5"
-                    Width="200" />
+                    IsEnabled="False" />
             </WrapPanel>
         </TabItem>
         <TabItem Header="Radio buttons">
             <!--  RADIO BUTTONS  -->
             <WrapPanel Orientation="Horizontal">
                 <RadioButton Margin="5" />
-                <RadioButton IsEnabled="False" Margin="5" />
+                <RadioButton Margin="5" IsEnabled="False" />
             </WrapPanel>
         </TabItem>
         <TabItem Header="Scroll bars">
@@ -100,8 +118,8 @@
         <TabItem Header="Sliders">
             <!--  SLIDERS  -->
             <WrapPanel Orientation="Horizontal">
-                <Slider Margin="5" Width="200" />
-                <Slider Margin="5" Width="200" />
+                <Slider Width="200" Margin="5" />
+                <Slider Width="200" Margin="5" />
             </WrapPanel>
         </TabItem>
         <TabItem Header="Rangers">
@@ -123,15 +141,15 @@
         <TabItem Header="Text boxes">
             <!--  TEXT BOXES  -->
             <WrapPanel Orientation="Horizontal">
-                <TextBox Margin="5" Width="200" />
+                <TextBox Width="200" Margin="5" />
                 <TextBox
+                    Width="200"
                     Margin="5"
-                    Text="asdasd"
-                    Width="200" />
+                    Text="asdasd" />
                 <TextBox
-                    IsEnabled="False"
+                    Width="200"
                     Margin="5"
-                    Width="200" />
+                    IsEnabled="False" />
             </WrapPanel>
         </TabItem>
         <TabItem Header="Time inputs">
@@ -142,22 +160,22 @@
             <!--  TOGGLE BUTTONS  -->
             <WrapPanel Orientation="Horizontal">
                 <ToggleButton Margin="5" />
-                <ToggleButton IsChecked="True" Margin="5" />
+                <ToggleButton Margin="5" IsChecked="True" />
                 <ToggleButton
+                    Margin="5"
                     IsChecked="True"
-                    IsEnabled="False"
-                    Margin="5" />
-                <ToggleButton IsEnabled="False" Margin="5" />
+                    IsEnabled="False" />
+                <ToggleButton Margin="5" IsEnabled="False" />
 
                 <ToggleButton
+                    Margin="5"
                     IsChecked="{x:Null}"
-                    IsThreeState="True"
-                    Margin="5" />
+                    IsThreeState="True" />
                 <ToggleButton
+                    Margin="5"
                     IsChecked="{x:Null}"
                     IsEnabled="False"
-                    IsThreeState="True"
-                    Margin="5" />
+                    IsThreeState="True" />
             </WrapPanel>
         </TabItem>
         <TabItem Header="Tooltips">
