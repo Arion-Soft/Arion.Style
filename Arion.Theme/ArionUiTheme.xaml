@@ -2,6 +2,9 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Icons/SRE450.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Icons.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Colors.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/FontFamily.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Button.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Window.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Expander.xaml" />

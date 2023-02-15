@@ -52,6 +52,11 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Icon.xaml.cs">
+      <DependentUpon>Icon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EIcons.cs" />
+    <Compile Include="Controls\Icons.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -65,6 +70,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Styles\ArionUi\Extensions\HintAssist.cs" />
+    <Compile Include="Styles\ArionUi\Extensions\PackIcon.cs" />
+    <Compile Include="Styles\ArionUi\Extensions\PackIconDataFactory.cs" />
+    <Compile Include="Styles\ArionUi\Extensions\PackIconExtension.cs" />
+    <Compile Include="Styles\ArionUi\Extensions\PackIconKind.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,6 +92,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\Icon.xaml" />
     <Page Include="Icons\Icons.xaml" />
     <Page Include="Icons\SRE450.xaml">
       <SubType>Designer</SubType>
@@ -121,6 +132,8 @@
     <Page Include="Styles\ArionUi\ComboBox.xaml" />
     <Page Include="Styles\ArionUi\DataGrid.xaml" />
     <Page Include="Styles\ArionUi\Expander.xaml" />
+    <Page Include="Styles\ArionUi\FontFamily.xaml" />
+    <Page Include="Styles\ArionUi\Icons.xaml" />
     <Page Include="Styles\ArionUi\Label.xaml" />
     <Page Include="Styles\ArionUi\ListView.xaml" />
     <Page Include="Styles\ArionUi\Page.xaml" />

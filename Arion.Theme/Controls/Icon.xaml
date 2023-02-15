@@ -1,0 +1,21 @@
+﻿<UserControl
+    Background="Transparent"
+    Loaded="Icon_OnLoaded"
+    Name="IconControl"
+    d:DesignHeight="20"
+    d:DesignWidth="20"
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Controls.Icon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Arion.Theme.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Path
+            Data="{Binding ElementName=IconControl, Path=Image, Mode=TwoWay}"
+            Height="20"
+            Name="ImageTest"
+            Width="20" />
+    </Grid>
+</UserControl>
