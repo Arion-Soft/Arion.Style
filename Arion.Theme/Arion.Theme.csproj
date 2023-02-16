@@ -140,6 +140,7 @@
     <Page Include="Styles\ArionUi\PasswordBox.xaml" />
     <Page Include="Styles\ArionUi\RadioButton.xaml" />
     <Page Include="Styles\ArionUi\RepeatButton.xaml" />
+    <Page Include="Styles\ArionUi\Switcher.xaml" />
     <Page Include="Styles\ArionUi\TabControl.xaml" />
     <Page Include="Styles\ArionUi\TextBlock.xaml" />
     <Page Include="Styles\ArionUi\TextBox.xaml" />

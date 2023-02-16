@@ -3,37 +3,42 @@
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="TextBox">
+    <Style TargetType="{x:Type TextBox}">
         <Setter Property="Height" Value="40" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="FontSize" Value="14" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
         <Setter Property="Padding" Value="5,0" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-        <Setter Property="Background" Value="{StaticResource BrushButton}" />
+        <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="TextBox">
+                <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border
                         Background="{TemplateBinding Background}"
-                        BorderBrush="White"
+                        BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1"
-                        CornerRadius="3"
+                        CornerRadius="6"
                         x:Name="Border">
                         <ScrollViewer
                             FontWeight="Medium"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             IsTabStop="False"
                             Padding="{TemplateBinding Padding}"
-                            TextElement.Foreground="{StaticResource BrushPrimary}"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
                             VerticalAlignment="Center"
                             Width="{TemplateBinding Width}"
                             x:Name="PART_ContentHost" />
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="Border" Value="#FFFFFF" />
+                            <Setter Property="BorderBrush" TargetName="Border" Value="#B0BABF" />
+                        </Trigger>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Background" TargetName="Border" Value="{StaticResource BrushControl}" />
-                            <Setter Property="BorderBrush" TargetName="Border" Value="{StaticResource BrushPrimary}" />
+                            <Setter Property="Background" TargetName="Border" Value="#FFFFFF" />
+                            <Setter Property="BorderBrush" TargetName="Border" Value="#5B6871" />
                         </Trigger>
                         <Trigger Property="IsReadOnly" Value="True">
                             <Setter Property="Cursor" Value="No" />
@@ -43,8 +48,8 @@
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Background" TargetName="Border" Value="{StaticResource BrushControl}" />
-                            <Setter Property="Foreground" Value="{StaticResource BrushDisable}" />
-                            <Setter Property="BorderBrush" Value="{StaticResource BrushDisable}" />
+                            <Setter Property="Foreground" Value="#EEF0F2" />
+                            <Setter Property="BorderBrush" Value="#EEF0F2" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

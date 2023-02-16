@@ -20,6 +20,7 @@
 
 
     <SolidColorBrush Color="#FFFFFFFF" x:Key="TextBox.Static.Background" />
+
     <Style TargetType="{x:Type TextBox}" x:Key="ComboBoxEditableTextBox">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="AllowDrop" Value="true" />
@@ -41,6 +42,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+
     <SolidColorBrush Color="{StaticResource ColorButton}" x:Key="ComboBox.Static.Background" />
     <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Static.Border" />
     <Thickness
@@ -91,30 +93,51 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
-                <ColumnDefinition Width="35" />
+                <ColumnDefinition Width="40" />
             </Grid.ColumnDefinitions>
+            <!--  ФОН ОТ ВСЕГО  -->
+            <!--  РАМКА ОТ ВСЕГО  -->
             <Border
-                Background="{StaticResource ComboBox.Static.Background}"
-                BorderBrush="{StaticResource ComboBox.Static.Border}"
+                Background="#F6F8F9"
+                BorderBrush="#DDE2E4"
                 BorderThickness="1"
-                CornerRadius="5"
-                Grid.ColumnSpan="2"
+                CornerRadius="0,5,5,0"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
                 x:Name="Border" />
+            <!--  ФОН ОТ КОНТЕНТА  -->
+            <!--  РАМКА МЕЖДУ КОНТЕНТОМ И КНОПКОЙ  -->
             <Border
-                Background="{StaticResource ComboBox.Static.Background}"
-                BorderBrush="{StaticResource ComboBox.Static.Border}"
-                BorderThickness="0,0,1,0"
+                Background="White"
+                BorderBrush="#DDE2E4"
+                BorderThickness="1"
                 CornerRadius="5,0,0,5"
                 Grid.Column="0"
-                Margin="1" />
+                Margin="0,0,-1,0"
+                x:Name="Content" />
+            <!--  РИСУНОК КНОПКИ  -->
             <Path
                 Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 z"
-                Fill="{StaticResource BrushPrimary}"
+                Fill="#6E7C87"
                 Grid.Column="1"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 x:Name="Arrow" />
         </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" SourceName="Border" Value="True">
+                <Setter Property="Background" TargetName="Border" Value="#EEF0F2" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" SourceName="Content" Value="True">
+                <Setter Property="BorderBrush" TargetName="Content" Value="#B0BABF" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" TargetName="Border" Value="#F6F8F9" />
+                <Setter Property="BorderBrush" TargetName="Border" Value="#EEF0F2" />
+                <Setter Property="Background" TargetName="Content" Value="#F6F8F9" />
+                <Setter Property="BorderBrush" TargetName="Content" Value="#EEF0F2" />
+            </Trigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 
     <ControlTemplate TargetType="{x:Type TextBox}" x:Key="ComboBoxTextBox">
@@ -132,7 +155,7 @@
         <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
         <Setter Property="MinWidth" Value="120" />
         <Setter Property="MinHeight" Value="35" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Foreground" Value="{StaticResource BrushBlack}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="Template">
             <Setter.Value>
@@ -150,7 +173,7 @@
                             ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
                             HorizontalAlignment="Left"
                             IsHitTestVisible="False"
-                            Margin="5,0,35,0"
+                            Margin="10,0,40,0"
                             Name="ContentSite"
                             VerticalAlignment="Center" />
                         <TextBox
@@ -159,7 +182,7 @@
                             Foreground="{StaticResource BrushPrimary}"
                             HorizontalAlignment="Left"
                             IsReadOnly="{TemplateBinding IsReadOnly}"
-                            Margin="3,3,23,3"
+                            Margin="5,3,23,3"
                             Style="{x:Null}"
                             Template="{StaticResource ComboBoxTextBox}"
                             VerticalAlignment="Center"
@@ -179,9 +202,10 @@
                                 Name="DropDown"
                                 SnapsToDevicePixels="True">
                                 <Border
-                                    Background="{StaticResource ComboBox.Static.Background}"
-                                    BorderBrush="{StaticResource ComboBox.Static.Border}"
+                                    Background="White"
+                                    BorderBrush="#DDE2E4"
                                     BorderThickness="1"
+                                    CornerRadius="26"
                                     x:Name="DropDownBorder" />
                                 <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
                                     <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
@@ -200,7 +224,7 @@
                             <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
                         </Trigger>
                         <Trigger Property="Popup.AllowsTransparency" SourceName="Popup" Value="true">
-                            <Setter Property="CornerRadius" TargetName="DropDownBorder" Value="0" />
+                            <Setter Property="CornerRadius" TargetName="DropDownBorder" Value="6" />
                             <Setter Property="Margin" TargetName="DropDownBorder" Value="0,2,0,0" />
                         </Trigger>
                         <Trigger Property="IsEditable" Value="true">
@@ -217,7 +241,7 @@
     <!--  SimpleStyles: ComboBoxItem  -->
     <Style TargetType="{x:Type ComboBoxItem}" x:Key="{x:Type ComboBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Foreground" Value="{StaticResource BrushBlack}" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Template">
             <Setter.Value>
@@ -234,12 +258,12 @@
                             x:Name="Content" />
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsHighlighted" Value="true">
-                            <Setter Property="Background" TargetName="Border" Value="{StaticResource BrushPrimary}" />
-                            <Setter Property="TextElement.Foreground" Value="White" />
+                        <Trigger Property="IsHighlighted" Value="True">
+                            <Setter Property="Background" TargetName="Border" Value="#F6F8F9" />
+                            <Setter Property="TextElement.Foreground" Value="{StaticResource BrushBlack}" />
                         </Trigger>
-                        <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Foreground" Value="#888888" />
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="#9AA6AC" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -17,6 +17,7 @@
         <ResourceDictionary Source="Styles/ArionUi/Label.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/CheckBox.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/RadioButton.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Switcher.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ListView.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ComboBox.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/PasswordBox.xaml" />

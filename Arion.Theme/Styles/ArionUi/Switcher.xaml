@@ -1,0 +1,538 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="FocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle
+                        Margin="2"
+                        SnapsToDevicePixels="true"
+                        Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                        StrokeDashArray="1 2"
+                        StrokeThickness="1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="OptionMarkFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle
+                        Margin="14,0,0,0"
+                        SnapsToDevicePixels="true"
+                        Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                        StrokeDashArray="1 2"
+                        StrokeThickness="1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <SolidColorBrush Color="#F6F8F9" x:Key="RadioButton.Static.Background" />
+    <SolidColorBrush Color="#B0BABF" x:Key="RadioButton.Static.Border" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="RadioButton.Static.Glyph" />
+    <SolidColorBrush Color="#EEF0F2" x:Key="RadioButton.MouseOver.Background" />
+    <SolidColorBrush Color="#9AA6AC" x:Key="RadioButton.MouseOver.Border" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="RadioButton.MouseOver.Glyph" />
+    <SolidColorBrush Color="#E5E9EB" x:Key="RadioButton.Pressed.Background" />
+    <SolidColorBrush Color="#84919A" x:Key="RadioButton.Pressed.Border" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="RadioButton.Pressed.Glyph" />
+    <SolidColorBrush Color="#F6F8F9" x:Key="RadioButton.Disabled.Background" />
+    <SolidColorBrush Color="#B0BABF" x:Key="RadioButton.Disabled.Border" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="RadioButton.Disabled.Glyph" />
+    <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherFirst">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+        <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}" />
+        <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6,0,0,6"
+                        Height="{TemplateBinding Height}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        Margin="0"
+                        Padding="16,8"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        x:Name="radioButtonBorder">
+                        <Grid Margin="3" x:Name="markGrid">
+                            <ContentPresenter
+                                Focusable="False"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                TextElement.FontSize="14"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                x:Name="contentPresenter" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!--  CHECKED - TRUE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#4094F7" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#4094F7" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#D5DADD" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#D5DADD" />
+                            <Setter Property="Opacity" Value=".5" />
+                        </MultiTrigger>
+
+
+                        <!--  CHECKED - FALSE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#EEF0F2" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#9AA6AC" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#84919A" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                            <Setter Property="Opacity" Value="0.5" />
+                        </MultiTrigger>
+                        <Trigger Property="HasContent" Value="true">
+                            <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}" />
+                            <Setter Property="Padding" Value="4,-1,0,0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherMiddle">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+        <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}" />
+        <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid
+                        Background="Transparent"
+                        SnapsToDevicePixels="True"
+                        x:Name="templateRoot">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="100"
+                            Height="18"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="1,1,2,1"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Width="18"
+                            x:Name="radioButtonBorder">
+                            <Grid Margin="3" x:Name="markGrid">
+                                <Ellipse
+                                    Fill="{StaticResource RadioButton.Static.Glyph}"
+                                    MinHeight="8"
+                                    MinWidth="8"
+                                    Opacity="0"
+                                    x:Name="optionMark" />
+                            </Grid>
+                        </Border>
+                        <ContentPresenter
+                            Focusable="False"
+                            Grid.Column="1"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            x:Name="contentPresenter" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!--  CHECKED - TRUE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#4094F7" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#4094F7" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#D5DADD" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#D5DADD" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                            <Setter Property="Opacity" Value=".5" />
+                        </MultiTrigger>
+
+
+                        <!--  CHECKED - FALSE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#EEF0F2" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#9AA6AC" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#84919A" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                            <Setter Property="Opacity" Value="0.5" />
+                        </MultiTrigger>
+                        <Trigger Property="HasContent" Value="true">
+                            <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}" />
+                            <Setter Property="Padding" Value="4,-1,0,0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherLast">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+        <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}" />
+        <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid
+                        Background="Transparent"
+                        SnapsToDevicePixels="True"
+                        x:Name="templateRoot">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="100"
+                            Height="18"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="1,1,2,1"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Width="18"
+                            x:Name="radioButtonBorder">
+                            <Grid Margin="3" x:Name="markGrid">
+                                <Ellipse
+                                    Fill="{StaticResource RadioButton.Static.Glyph}"
+                                    MinHeight="8"
+                                    MinWidth="8"
+                                    Opacity="0"
+                                    x:Name="optionMark" />
+                            </Grid>
+                        </Border>
+                        <ContentPresenter
+                            Focusable="False"
+                            Grid.Column="1"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            x:Name="contentPresenter" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!--  CHECKED - TRUE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#4094F7" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#4094F7" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                        </MultiTrigger>
+                        <!--  CHECKED - TRUE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#D5DADD" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#D5DADD" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                            <Setter Property="Opacity" Value=".5" />
+                        </MultiTrigger>
+
+
+                        <!--  CHECKED - FALSE | Hover  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#EEF0F2" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#9AA6AC" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Pressed  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#84919A" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Default  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                        </MultiTrigger>
+                        <!--  CHECKED - FALSE | Disabled  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0" />
+                            <Setter Property="Opacity" Value="0.5" />
+                        </MultiTrigger>
+                        <Trigger Property="HasContent" Value="true">
+                            <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}" />
+                            <Setter Property="Padding" Value="4,-1,0,0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
