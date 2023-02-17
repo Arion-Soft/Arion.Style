@@ -4,12 +4,16 @@
         <ResourceDictionary Source="FontFamily.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <Style TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
+        <Setter Property="Foreground" Value="#252C32" />
+    </Style>
+
     <Style TargetType="{x:Type Label}" x:Key="Lbl">
-        <Setter Property="FontFamily" Value="Golos UI VF" />
-        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
+        <Setter Property="FontSize" Value="32" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Foreground" Value="#252C32" />
-        <Setter Property="Width" Value="200" />
     </Style>
 
     <Style TargetType="Label" x:Key="Title">

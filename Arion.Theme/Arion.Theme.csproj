@@ -57,6 +57,15 @@
     </Compile>
     <Compile Include="Controls\EIcons.cs" />
     <Compile Include="Controls\Icons.cs" />
+    <Compile Include="Controls\PasswordInput.xaml.cs">
+      <DependentUpon>PasswordInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextInput.xaml.cs">
+      <DependentUpon>TextInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimeInput.xaml.cs">
+      <DependentUpon>TimeInput.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +102,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\Icon.xaml" />
+    <Page Include="Controls\PasswordInput.xaml" />
+    <Page Include="Controls\TextInput.xaml" />
+    <Page Include="Controls\TimeInput.xaml" />
     <Page Include="Icons\Icons.xaml" />
     <Page Include="Icons\SRE450.xaml">
       <SubType>Designer</SubType>
@@ -155,6 +167,16 @@
     <Resource Include="Icons\Images\XrayGif.gif" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fonts\GolosText\Golos-Text_Black.ttf" />
+    <Content Include="Fonts\GolosText\Golos-Text_Bold.ttf" />
+    <Content Include="Fonts\GolosText\Golos-Text_DemiBold.ttf" />
+    <Content Include="Fonts\GolosText\Golos-Text_Medium.ttf" />
+    <Content Include="Fonts\GolosText\Golos-Text_Regular.ttf" />
+    <Content Include="Fonts\GolosText\Golos-Text_VF.ttf" />
+    <Content Include="Fonts\GolosUi\Golos-UI_Bold.ttf" />
+    <Content Include="Fonts\GolosUi\Golos-UI_Medium.ttf" />
+    <Content Include="Fonts\GolosUi\Golos-UI_Regular.ttf" />
+    <Resource Include="Fonts\GolosUi\GolosUi.ttf" />
     <Content Include="Icons\Images\Drive.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

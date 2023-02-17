@@ -113,8 +113,7 @@
                     Margin="10"
                     Padding="0"
                     Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="100" />
+                    VerticalAlignment="Top" />
                 <Label
                     Content="Small"
                     Grid.Column="0"
@@ -1084,8 +1083,8 @@
 
             </Grid>
         </TabItem>
+        <!--  CHECK BOXES  -->
         <TabItem Header="Check boxes">
-            <!--  CHECK BOXES  -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -1115,16 +1114,23 @@
                     Grid.Column="1"
                     Grid.Row="1"
                     Orientation="Horizontal">
-                    <CheckBox Margin="5" />
-                    <CheckBox IsEnabled="False" Margin="5" />
+                    <CheckBox Content="CheckBox" Margin="5" />
+                    <CheckBox
+                        Content="CheckBox"
+                        IsEnabled="False"
+                        Margin="5" />
                 </StackPanel>
 
                 <StackPanel
                     Grid.Column="1"
                     Grid.Row="2"
                     Orientation="Horizontal">
-                    <CheckBox IsChecked="True" Margin="5" />
                     <CheckBox
+                        Content="CheckBox"
+                        IsChecked="True"
+                        Margin="5" />
+                    <CheckBox
+                        Content="CheckBox"
                         IsChecked="True"
                         IsEnabled="False"
                         Margin="5" />
@@ -1135,10 +1141,12 @@
                     Grid.Row="3"
                     Orientation="Horizontal">
                     <CheckBox
+                        Content="CheckBox"
                         IsChecked="{x:Null}"
                         IsThreeState="True"
                         Margin="5" />
                     <CheckBox
+                        Content="CheckBox"
                         IsChecked="{x:Null}"
                         IsEnabled="False"
                         IsThreeState="True"
@@ -1324,7 +1332,7 @@
                     Width="Auto" />
             </Grid>
         </TabItem>
-        <TabItem Header="Switchers" IsSelected="True">
+        <TabItem Header="Switchers">
             <!--  SWITCHERS  -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -1340,10 +1348,8 @@
                 </Grid.RowDefinitions>
                 <Label
                     Content="Switcher"
-                    FontSize="32"
                     Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
                     Margin="10"
                     Padding="0"
                     Style="{StaticResource Lbl}"
@@ -1353,12 +1359,13 @@
                 <Label
                     Content="Filled"
                     Grid.Column="1"
-                    Grid.Row="0"
+                    Grid.Row="1"
+                    HorizontalAlignment="Left"
                     Style="{StaticResource Lbl}" />
 
                 <StackPanel
                     Grid.Column="1"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Orientation="Horizontal">
                     <RadioButton
                         Content="First"
@@ -1376,7 +1383,8 @@
                         Content="Last"
                         IsEnabled="False"
                         Margin="-1,5"
-                        Style="{StaticResource SwitcherLast}" />
+                        Style="{StaticResource SwitcherLast}"
+                        Width="100" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -1459,17 +1467,17 @@
                     Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
                     Width="Auto" />
-                <TextBox
+                <controls:TextInput
                     Grid.Column="1"
                     Grid.Row="1"
                     Margin="5"
-                    Width="200"
-                    extensions:HintAssist.Hint="Placeholder" />
+                    Placeholder="Placeholder"
+                    Width="200" />
                 <TextBox
                     Grid.Column="1"
                     Grid.Row="2"
                     Margin="5"
-                    Text="asdasd"
+                    Text="Text for example"
                     Width="200"
                     extensions:HintAssist.Hint="Placeholder" />
                 <TextBox
@@ -1481,9 +1489,77 @@
                     extensions:HintAssist.Hint="Placeholder" />
             </Grid>
         </TabItem>
+        <TabItem Header="Password boxes" IsSelected="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Content="PasswordBox"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+                <controls:PasswordInput
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="5"
+                    Placeholder="Placeholder"
+                    Width="200" />
+                <PasswordBox
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Margin="5"
+                    Password="Text for example"
+                    Width="200" />
+                <PasswordBox
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    IsEnabled="False"
+                    Margin="5"
+                    Width="200" />
+            </Grid>
+        </TabItem>
+        <!--  TIME INPUT  -->
         <TabItem Header="Time inputs">
-            <!--  TIME INPUT  -->
-
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Content="Time input"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+                <controls:TimeInput Grid.Column="1" Grid.Row="1" />
+            </Grid>
         </TabItem>
         <TabItem Header="Toggle buttons">
             <!--  TOGGLE BUTTONS  -->
