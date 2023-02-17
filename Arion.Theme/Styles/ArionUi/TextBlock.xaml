@@ -1,19 +1,29 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
+        <ResourceDictionary Source="FontFamily.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="TextBlock" x:Key="BlueTextBlockTransparentBackground">
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="BlueTextBlockTransparentBackground" TargetType="TextBlock">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
         <Setter Property="Focusable" Value="False" />
-        <Setter Property="FontFamily" Value="Montserrat" />
+        <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="TextAlignment" Value="Center" />
     </Style>
 
-    <Style TargetType="TextBlock" x:Key="TblFolderStyle">
+    <Style x:Key="TblFolderStyle" TargetType="TextBlock">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="#FFA000" />
         <Setter Property="FontSize" Value="18" />

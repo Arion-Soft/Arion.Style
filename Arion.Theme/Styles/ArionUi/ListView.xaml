@@ -6,8 +6,9 @@
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
     </Style>
-    <Style TargetType="ListViewItem">
-        <Setter Property="Foreground" Value="{StaticResource SolidDarkBlue}" />
+
+    <Style TargetType="{x:Type ListViewItem}">
+        <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
@@ -16,7 +17,8 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        TextElement.Foreground="White">
+                        CornerRadius="0"
+                        TextElement.Foreground="{TemplateBinding Foreground}">
                         <ContentPresenter
                             TextElement.FontSize="24"
                             TextElement.FontWeight="Bold"
@@ -27,16 +29,74 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Foreground" Value="White" />
-                <Setter Property="Background" Value="{StaticResource SolidDarkBlue}" />
+                <Setter Property="Background" Value="#F6F8F9" />
             </Trigger>
-            <Trigger Property="IsSelected" Value="False">
-                <Setter Property="Foreground" Value="{StaticResource SolidDarkBlue}" />
+            <!-- <Trigger Property="ItemsControl.AlternationIndex" Value="1"> -->
+            <!--     <Setter Property="Background" Value="{StaticResource SolidDarkBlue}" /> -->
+            <!--     <Setter Property="Foreground" Value="White" /> -->
+            <!-- </Trigger> -->
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ItemOutlineLeft" TargetType="{x:Type ListViewItem}">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListViewItem">
+                    <Border
+                        x:Name="brd"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="0,6,6,0"
+                        TextElement.Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter
+                            TextElement.FontSize="24"
+                            TextElement.FontWeight="Bold"
+                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="#F6F8F9" />
             </Trigger>
-            <!--<Trigger Property="ItemsControl.AlternationIndex" Value="1">
-                                        <Setter Property="Background" Value="{StaticResource SolidDarkBlue}" />
-                                        <Setter Property="Foreground" Value="White" />
-                                    </Trigger>-->
+            <!-- <Trigger Property="ItemsControl.AlternationIndex" Value="1"> -->
+            <!--     <Setter Property="Background" Value="{StaticResource SolidDarkBlue}" /> -->
+            <!--     <Setter Property="Foreground" Value="White" /> -->
+            <!-- </Trigger> -->
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ItemOutlineRight" TargetType="{x:Type ListViewItem}">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListViewItem">
+                    <Border
+                        x:Name="brd"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6,0,0,6"
+                        TextElement.Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter
+                            TextElement.FontSize="24"
+                            TextElement.FontWeight="Bold"
+                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="#F6F8F9" />
+            </Trigger>
+            <!-- <Trigger Property="ItemsControl.AlternationIndex" Value="1"> -->
+            <!--     <Setter Property="Background" Value="{StaticResource SolidDarkBlue}" /> -->
+            <!--     <Setter Property="Foreground" Value="White" /> -->
+            <!-- </Trigger> -->
         </Style.Triggers>
     </Style>
 </ResourceDictionary>
