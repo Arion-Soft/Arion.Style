@@ -1288,6 +1288,7 @@
                     Content="RadioButton"
                     Grid.Column="1"
                     Grid.Row="3"
+                    IsChecked="True"
                     Margin="5" />
                 <RadioButton
                     Content="RadioButton"
@@ -1348,21 +1349,33 @@
                     Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
                     Width="Auto" />
+
+                <Label
+                    Content="Filled"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Style="{StaticResource Lbl}" />
+
                 <StackPanel
                     Grid.Column="1"
                     Grid.Row="1"
                     Orientation="Horizontal">
                     <RadioButton
                         Content="First"
-                        Margin="5"
+                        Margin="-1,5"
                         Style="{StaticResource SwitcherFirst}" />
                     <RadioButton
                         Content="Middle"
-                        Margin="5"
+                        Margin="-1,5"
+                        Style="{StaticResource SwitcherMiddle}" />
+                    <RadioButton
+                        Content="Middle"
+                        Margin="-1,5"
                         Style="{StaticResource SwitcherMiddle}" />
                     <RadioButton
                         Content="Last"
-                        Margin="5"
+                        IsEnabled="False"
+                        Margin="-1,5"
                         Style="{StaticResource SwitcherLast}" />
                 </StackPanel>
             </Grid>
