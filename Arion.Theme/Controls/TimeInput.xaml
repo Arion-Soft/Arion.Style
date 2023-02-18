@@ -1,7 +1,8 @@
 ﻿<UserControl
     Background="Transparent"
-    Height="40"
-    Width="90"
+    Height="{Binding ElementName=TimeControl, Path=Height}"
+    Name="TimeControl"
+    Width="{Binding ElementName=TimeControl, Path=Width}"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Controls.TimeInput"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -22,14 +23,16 @@
             </Grid.ColumnDefinitions>
             <TextBox
                 BorderThickness="0"
-                FontSize="16"
+                FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
                 HorizontalAlignment="Center"
                 Name="Tb1"
                 Padding="0"
                 PreviewTextInput="Tb1_OnPreviewTextInput"
+                Text="{Binding ElementName=TimeControl, Path=Minute}"
                 VerticalAlignment="Center" />
             <Label
                 Content=":"
+                FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
                 Grid.Column="1"
                 Grid.Row="0"
                 HorizontalAlignment="Center"
@@ -37,13 +40,14 @@
                 VerticalAlignment="Center" />
             <TextBox
                 BorderThickness="0"
-                FontSize="16"
+                FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
                 Grid.Column="2"
                 Grid.Row="0"
                 HorizontalAlignment="Center"
                 Name="Tb2"
                 Padding="0"
                 PreviewTextInput="Tb2_OnPreviewTextInput"
+                Text="{Binding ElementName=TimeControl, Path=Second}"
                 VerticalAlignment="Center" />
 
             <StackPanel
@@ -56,6 +60,7 @@
                     Background="Black"
                     CornerRadius="1"
                     Height="1"
+                    Name="Br1"
                     Width="10">
                     <Border.Style>
                         <Style TargetType="{x:Type Border}">
@@ -73,6 +78,7 @@
                     CornerRadius="1"
                     Height="1"
                     Margin="2,0,0,0"
+                    Name="Br2"
                     Width="10">
                     <Border.Style>
                         <Style TargetType="{x:Type Border}">

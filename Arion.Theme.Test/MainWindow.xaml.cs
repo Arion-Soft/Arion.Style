@@ -135,5 +135,16 @@ namespace Arion.Theme.Test
                 keyRight = false; CbxRight.IsChecked = false;
             }
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            TiTime.Value += 1;
+        }
+        
+        private void BtnClear_OnClick(object sender, RoutedEventArgs e)
+        {
+            // TiTime.Backspace();
+            TiTime.ClearAll();
+        }
     }
 }
