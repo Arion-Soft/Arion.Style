@@ -43,11 +43,12 @@
     <SolidColorBrush Color="#F6F8F9" x:Key="RadioButton.Disabled.Background" />
     <SolidColorBrush Color="#B0BABF" x:Key="RadioButton.Disabled.Border" />
     <SolidColorBrush Color="#FFFFFF" x:Key="RadioButton.Disabled.Glyph" />
+
     <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherFirst">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
-        <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}" />
-        <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}" />
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <!-- <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" /> -->
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -75,7 +76,7 @@
                                 RecognizesAccessKey="True"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                 TextElement.FontSize="14"
-                                TextElement.Foreground="{TemplateBinding Foreground}"
+                                TextElement.Foreground="#252C32"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                 x:Name="contentPresenter" />
                         </Grid>
@@ -92,7 +93,7 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Pressed  -->
                         <MultiTrigger>
@@ -105,7 +106,7 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Default  -->
                         <MultiTrigger>
@@ -118,9 +119,8 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#4094F7" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#4094F7" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
-
 
                         <!--  CHECKED - FALSE | Hover  -->
                         <MultiTrigger>
@@ -147,17 +147,17 @@
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#84919A" />
                         </MultiTrigger>
                         <!--  CHECKED - FALSE | Default  -->
-                        <!-- <MultiTrigger> -->
-                        <!--     <MultiTrigger.Conditions> -->
-                        <!--         <Condition Property="IsChecked" Value="False" /> -->
-                        <!--         <Condition Property="IsMouseOver" Value="False" /> -->
-                        <!--         <Condition Property="IsPressed" Value="False" /> -->
-                        <!--         <Condition Property="IsEnabled" Value="True" /> -->
-                        <!--     </MultiTrigger.Conditions> -->
-                        <!--    -->
-                        <!--     <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" /> -->
-                        <!--     <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" /> -->
-                        <!-- </MultiTrigger> -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                        </MultiTrigger>
                         <!--  CHECKED - FALSE | Disabled  -->
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -177,10 +177,10 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherMiddle">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
-        <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}" />
-        <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}" />
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <!-- <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" /> -->
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="40" />
@@ -225,7 +225,7 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Pressed  -->
                         <MultiTrigger>
@@ -238,7 +238,7 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Default  -->
                         <MultiTrigger>
@@ -251,9 +251,8 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#4094F7" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#4094F7" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
-
 
                         <!--  CHECKED - FALSE | Hover  -->
                         <MultiTrigger>
@@ -280,17 +279,17 @@
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#84919A" />
                         </MultiTrigger>
                         <!--  CHECKED - FALSE | Default  -->
-                        <!-- <MultiTrigger> -->
-                        <!--     <MultiTrigger.Conditions> -->
-                        <!--         <Condition Property="IsChecked" Value="False" /> -->
-                        <!--         <Condition Property="IsMouseOver" Value="False" /> -->
-                        <!--         <Condition Property="IsPressed" Value="False" /> -->
-                        <!--         <Condition Property="IsEnabled" Value="True" /> -->
-                        <!--     </MultiTrigger.Conditions> -->
-                        <!--    -->
-                        <!--     <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" /> -->
-                        <!--     <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" /> -->
-                        <!-- </MultiTrigger> -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                        </MultiTrigger>
                         <!--  CHECKED - FALSE | Disabled  -->
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -310,10 +309,10 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherLast">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
-        <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}" />
-        <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}" />
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <!-- <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" /> -->
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -358,7 +357,7 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Pressed  -->
                         <MultiTrigger>
@@ -371,7 +370,7 @@
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Default  -->
                         <MultiTrigger>
@@ -383,10 +382,9 @@
                             </MultiTrigger.Conditions>
 
                             <Setter Property="Background" TargetName="radioButtonBorder" Value="#4094F7" />
-                            <Setter Property="Foreground" Value="#F6FCFF" />
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#4094F7" />
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
                         </MultiTrigger>
-
 
                         <!--  CHECKED - FALSE | Hover  -->
                         <MultiTrigger>
@@ -413,17 +411,17 @@
                             <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#84919A" />
                         </MultiTrigger>
                         <!--  CHECKED - FALSE | Default  -->
-                        <!-- <MultiTrigger> -->
-                        <!--     <MultiTrigger.Conditions> -->
-                        <!--         <Condition Property="IsChecked" Value="False" /> -->
-                        <!--         <Condition Property="IsMouseOver" Value="False" /> -->
-                        <!--         <Condition Property="IsPressed" Value="False" /> -->
-                        <!--         <Condition Property="IsEnabled" Value="True" /> -->
-                        <!--     </MultiTrigger.Conditions> -->
-                        <!--    -->
-                        <!--     <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" /> -->
-                        <!--     <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" /> -->
-                        <!-- </MultiTrigger> -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#F6F8F9" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
+                        </MultiTrigger>
                         <!--  CHECKED - FALSE | Disabled  -->
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
