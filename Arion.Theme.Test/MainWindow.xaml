@@ -1,21 +1,22 @@
 ﻿<Window
-    x:Class="Arion.Theme.Test.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:extensions="clr-namespace:Arion.Theme.Styles.ArionUi.Extensions;assembly=Arion.Theme"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainWindow"
-    Width="1000"
     Height="800"
     KeyDown="UIElement_OnKeyDown"
     KeyUp="UIElement_OnKeyUp"
     Left="600"
     Loaded="MainWindow_OnLoaded"
+    Title="MainWindow"
     Top="0"
+    Width="1000"
     WindowState="Maximized"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Test.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:extensions="clr-namespace:Arion.Theme.Styles.ArionUi.Extensions;assembly=Arion.Theme"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.Resources />
     <TabControl TabStripPlacement="Left">
         <TabItem Header="Buttons">
             <!--  BUTTONS  -->
@@ -51,381 +52,381 @@
                 </Grid.ColumnDefinitions>
 
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="Buttons"
                     FontSize="38"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
                 <Label
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Width="Auto"
-                    Margin="10"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="Filled"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
-                <Label
+                    Grid.Column="1"
                     Grid.Row="1"
-                    Grid.Column="2"
-                    Width="Auto"
-                    Margin="10"
                     HorizontalAlignment="Left"
+                    Margin="10"
+                    Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
+                    Width="Auto" />
+                <Label
                     Content="Outline"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
-                <Label
+                    Grid.Column="2"
                     Grid.Row="1"
-                    Grid.Column="3"
-                    Width="Auto"
-                    Margin="10"
                     HorizontalAlignment="Left"
+                    Margin="10"
+                    Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
+                    Width="Auto" />
+                <Label
                     Content="Text"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
                 <Label
-                    Grid.Row="2"
-                    Grid.RowSpan="3"
-                    Grid.Column="0"
-                    Width="100"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="Large"
-                    Style="{StaticResource Lbl}" />
-                <Label
-                    Grid.Row="7"
-                    Grid.RowSpan="3"
                     Grid.Column="0"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Content="Medium"
-                    Style="{StaticResource Lbl}" />
-                <Label
-                    Grid.Row="12"
-                    Grid.RowSpan="3"
-                    Grid.Column="0"
-                    Width="100"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Content="Small"
-                    Style="{StaticResource Lbl}" />
-
-                <StackPanel
                     Grid.Row="2"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button
-                        Margin="5"
-                        Content="Button"
-                        Style="{StaticResource FilledLg}" />
-                    <Button
-                        Margin="5"
-                        Content="Button"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledLg}" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button Margin="5" Style="{StaticResource FilledLg}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
-                                <Label
-                                    Margin="5,0,0,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                    <Button
-                        Margin="5"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledLg}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
-                                <Label
-                                    Margin="5,0,0,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                </StackPanel>
-                <StackPanel
-                    Grid.Row="4"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button Margin="5" Style="{StaticResource FilledLg}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <Label
-                                    Margin="0,0,5,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                                <controls:Icon Fill="White" Kind="Hand" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                    <Button
-                        Margin="5"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledLg}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <Label
-                                    Margin="0,0,5,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                                <controls:Icon Fill="White" Kind="Hand" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                </StackPanel>
-                <StackPanel
-                    Grid.Row="5"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button Margin="5" Style="{StaticResource FilledLg}">
-                        <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
-                        </Button.Content>
-                    </Button>
-                    <Button
-                        Margin="5"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledLg}">
-                        <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
-                        </Button.Content>
-                    </Button>
-                </StackPanel>
-
-                <Separator
-                    Grid.Row="6"
+                    Grid.RowSpan="3"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="100" />
+                <Label
+                    Content="Medium"
                     Grid.Column="0"
-                    Grid.ColumnSpan="4" />
-
-                <StackPanel
                     Grid.Row="7"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button
-                        Margin="5"
-                        Content="Button"
-                        Style="{StaticResource FilledMd}" />
-                    <Button
-                        Margin="5"
-                        Content="Button"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledMd}" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Row="8"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button Margin="5" Style="{StaticResource FilledMd}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
-                                <Label
-                                    Margin="5,0,0,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                    <Button
-                        Margin="5"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledMd}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
-                                <Label
-                                    Margin="5,0,0,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                </StackPanel>
-                <StackPanel
-                    Grid.Row="9"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button Margin="5" Style="{StaticResource FilledMd}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <Label
-                                    Margin="0,0,5,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                                <controls:Icon Fill="White" Kind="Hand" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                    <Button
-                        Margin="5"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledMd}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <Label
-                                    Margin="0,0,5,0"
-                                    Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
-                                <controls:Icon Fill="White" Kind="Hand" />
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                </StackPanel>
-
-                <Separator
-                    Grid.Row="11"
+                    Grid.RowSpan="3"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top" />
+                <Label
+                    Content="Small"
                     Grid.Column="0"
-                    Grid.ColumnSpan="4" />
-
-                <StackPanel
-                    Grid.Row="10"
-                    Grid.Column="1"
-                    Orientation="Horizontal">
-                    <Button Margin="5" Style="{StaticResource FilledMd}">
-                        <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
-                        </Button.Content>
-                    </Button>
-                    <Button
-                        Margin="5"
-                        IsEnabled="False"
-                        Style="{StaticResource FilledMd}">
-                        <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
-                        </Button.Content>
-                    </Button>
-                </StackPanel>
-
-                <Separator Grid.Row="6" Grid.Column="0" />
-
-                <StackPanel
                     Grid.Row="12"
+                    Grid.RowSpan="3"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="100" />
+
+                <StackPanel
                     Grid.Column="1"
+                    Grid.Row="2"
                     Orientation="Horizontal">
                     <Button
-                        Margin="5"
                         Content="Button"
-                        Style="{StaticResource FilledSm}" />
-                    <Button
                         Margin="5"
+                        Style="{StaticResource FilledLg}" />
+                    <Button
                         Content="Button"
                         IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledLg}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Orientation="Horizontal">
+                    <Button Margin="5" Style="{StaticResource FilledLg}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:Icon Fill="White" Kind="Hand" />
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="5,0,0,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledLg}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:Icon Fill="White" Kind="Hand" />
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="5,0,0,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Orientation="Horizontal">
+                    <Button Margin="5" Style="{StaticResource FilledLg}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="0,0,5,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                                <controls:Icon Fill="White" Kind="Hand" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledLg}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="0,0,5,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                                <controls:Icon Fill="White" Kind="Hand" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Orientation="Horizontal">
+                    <Button Margin="5" Style="{StaticResource FilledLg}">
+                        <Button.Content>
+                            <controls:Icon Fill="White" Kind="Hand" />
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledLg}">
+                        <Button.Content>
+                            <controls:Icon Fill="White" Kind="Hand" />
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+
+                <Separator
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    Grid.Row="6" />
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    Orientation="Horizontal">
+                    <Button
+                        Content="Button"
+                        Margin="5"
+                        Style="{StaticResource FilledMd}" />
+                    <Button
+                        Content="Button"
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledMd}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="8"
+                    Orientation="Horizontal">
+                    <Button Margin="5" Style="{StaticResource FilledMd}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:Icon Fill="White" Kind="Hand" />
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="5,0,0,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledMd}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:Icon Fill="White" Kind="Hand" />
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="5,0,0,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="9"
+                    Orientation="Horizontal">
+                    <Button Margin="5" Style="{StaticResource FilledMd}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="0,0,5,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                                <controls:Icon Fill="White" Kind="Hand" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledMd}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Label
+                                    Content="Button"
+                                    Foreground="White"
+                                    Margin="0,0,5,0"
+                                    Padding="0"
+                                    VerticalAlignment="Center" />
+                                <controls:Icon Fill="White" Kind="Hand" />
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+
+                <Separator
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    Grid.Row="11" />
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="10"
+                    Orientation="Horizontal">
+                    <Button Margin="5" Style="{StaticResource FilledMd}">
+                        <Button.Content>
+                            <controls:Icon Fill="White" Kind="Hand" />
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource FilledMd}">
+                        <Button.Content>
+                            <controls:Icon Fill="White" Kind="Hand" />
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+
+                <Separator Grid.Column="0" Grid.Row="6" />
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="12"
+                    Orientation="Horizontal">
+                    <Button
+                        Content="Button"
+                        Margin="5"
+                        Style="{StaticResource FilledSm}" />
+                    <Button
+                        Content="Button"
+                        IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource FilledSm}" />
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="1"
                     Grid.Row="13"
-                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="White" Kind="Hand" />
                                 <Label
+                                    Content="Button"
+                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="White" Kind="Hand" />
                                 <Label
+                                    Content="Button"
+                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="1"
                     Grid.Row="14"
-                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
+                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
+                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button"
-                                    Foreground="White" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Row="15"
                     Grid.Column="1"
+                    Grid.Row="15"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
@@ -433,8 +434,8 @@
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <controls:Icon Fill="White" Kind="Hand" />
@@ -443,109 +444,109 @@
                 </StackPanel>
 
                 <Separator
-                    Grid.Row="16"
                     Grid.Column="0"
-                    Grid.ColumnSpan="4" />
+                    Grid.ColumnSpan="4"
+                    Grid.Row="16" />
 
                 <StackPanel
-                    Grid.Row="17"
                     Grid.Column="1"
+                    Grid.Row="17"
                     Orientation="Horizontal">
                     <Button
-                        Margin="0,5"
                         Content="First"
+                        Margin="0,5"
                         Style="{StaticResource GroupedFilledFirstLg}" />
                     <Button
-                        Margin="0,5"
                         Content="Middle"
+                        Margin="0,5"
                         Style="{StaticResource GroupedFilledMiddleLg}" />
                     <Button
-                        Margin="0,5"
                         Content="Last"
+                        Margin="0,5"
                         Style="{StaticResource GroupedFilledLastLg}" />
                 </StackPanel>
 
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="2"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
-                        Margin="5"
                         Content="Button"
+                        Margin="5"
                         Style="{StaticResource OutlineLg}" />
                     <Button
-                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineLg}" />
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="3"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="4"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="5"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
@@ -553,8 +554,8 @@
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <controls:Icon Fill="Black" Kind="Hand" />
@@ -563,86 +564,86 @@
                 </StackPanel>
 
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="7"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
-                        Margin="5"
                         Content="Button"
+                        Margin="5"
                         Style="{StaticResource OutlineMd}" />
                     <Button
-                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineMd}" />
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="8"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="9"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Row="10"
                     Grid.Column="2"
+                    Grid.Row="10"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
@@ -650,8 +651,8 @@
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <controls:Icon Fill="Black" Kind="Hand" />
@@ -660,86 +661,86 @@
                 </StackPanel>
 
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="12"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
-                        Margin="5"
                         Content="Button"
+                        Margin="5"
                         Style="{StaticResource OutlineSm}" />
                     <Button
-                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineSm}" />
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="13"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="14"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="2"
                     Grid.Row="15"
-                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
@@ -747,8 +748,8 @@
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <controls:Icon Fill="Black" Kind="Hand" />
@@ -756,104 +757,104 @@
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Row="17"
                     Grid.Column="2"
+                    Grid.Row="17"
                     Orientation="Horizontal">
                     <Button
-                        Margin="0,5"
                         Content="First"
+                        Margin="0,5"
                         Style="{StaticResource GroupedOutlineFirstLg}" />
                     <Button
-                        Margin="0,5"
                         Content="Middle"
+                        Margin="0,5"
                         Style="{StaticResource GroupedOutlineMiddleLg}" />
                     <Button
-                        Margin="0,5"
                         Content="Last"
+                        Margin="0,5"
                         Style="{StaticResource GroupedOutlineLastLg}" />
                 </StackPanel>
 
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="2"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button
-                        Margin="5"
                         Content="Button"
+                        Margin="5"
                         Style="{StaticResource TextLg}" />
                     <Button
-                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextLg}" />
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="3"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="4"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="5"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
@@ -861,8 +862,8 @@
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextLg}">
                         <Button.Content>
                             <controls:Icon Fill="Black" Kind="Hand" />
@@ -871,86 +872,86 @@
                 </StackPanel>
 
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="7"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button
-                        Margin="5"
                         Content="Button"
+                        Margin="5"
                         Style="{StaticResource TextMd}" />
                     <Button
-                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextMd}" />
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="8"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="9"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Row="10"
                     Grid.Column="3"
+                    Grid.Row="10"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
@@ -958,8 +959,8 @@
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextMd}">
                         <Button.Content>
                             <controls:Icon Fill="Black" Kind="Hand" />
@@ -968,86 +969,86 @@
                 </StackPanel>
 
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="12"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button
-                        Margin="5"
                         Content="Button"
+                        Margin="5"
                         Style="{StaticResource TextSm}" />
                     <Button
-                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextSm}" />
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="13"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="Black" Kind="Hand" />
                                 <Label
+                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="14"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
+                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center"
-                                    Content="Button" />
+                                    VerticalAlignment="Center" />
                                 <controls:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
+                    Grid.Column="3"
                     Grid.Row="15"
-                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
@@ -1055,8 +1056,8 @@
                         </Button.Content>
                     </Button>
                     <Button
-                        Margin="5"
                         IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource TextSm}">
                         <Button.Content>
                             <controls:Icon Fill="Black" Kind="Hand" />
@@ -1064,20 +1065,20 @@
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Row="17"
                     Grid.Column="3"
+                    Grid.Row="17"
                     Orientation="Horizontal">
                     <Button
-                        Margin="0,5"
                         Content="First"
+                        Margin="0,5"
                         Style="{StaticResource GroupedTextFirstLg}" />
                     <Button
-                        Margin="0,5"
                         Content="Middle"
+                        Margin="0,5"
                         Style="{StaticResource GroupedTextMiddleLg}" />
                     <Button
-                        Margin="0,5"
                         Content="Last"
+                        Margin="0,5"
                         Style="{StaticResource GroupedTextLastLg}" />
                 </StackPanel>
 
@@ -1099,84 +1100,84 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="CheckBox"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
                 <StackPanel
-                    Grid.Row="1"
                     Grid.Column="1"
+                    Grid.Row="1"
                     Orientation="Horizontal">
-                    <CheckBox Margin="5" Content="CheckBox" />
+                    <CheckBox Content="CheckBox" Margin="5" />
                     <CheckBox
-                        Margin="5"
                         Content="CheckBox"
-                        IsEnabled="False" />
+                        IsEnabled="False"
+                        Margin="5" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Row="2"
                     Grid.Column="1"
+                    Grid.Row="2"
                     Orientation="Horizontal">
                     <CheckBox
-                        Margin="5"
-                        Content="CheckBox"
-                        IsChecked="True" />
-                    <CheckBox
-                        Margin="5"
                         Content="CheckBox"
                         IsChecked="True"
-                        IsEnabled="False" />
+                        Margin="5" />
+                    <CheckBox
+                        Content="CheckBox"
+                        IsChecked="True"
+                        IsEnabled="False"
+                        Margin="5" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Row="3"
                     Grid.Column="1"
+                    Grid.Row="3"
                     Orientation="Horizontal">
                     <CheckBox
-                        Margin="5"
                         Content="CheckBox"
                         IsChecked="{x:Null}"
-                        IsThreeState="True" />
+                        IsThreeState="True"
+                        Margin="5" />
                     <CheckBox
-                        Margin="5"
                         Content="CheckBox"
                         IsChecked="{x:Null}"
                         IsEnabled="False"
-                        IsThreeState="True" />
+                        IsThreeState="True"
+                        Margin="5" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Row="2"
                     Grid.Column="2"
+                    Grid.Row="2"
                     Orientation="Horizontal">
                     <CheckBox
-                        Name="CbxAlt"
+                        Content="Alt"
                         Margin="5"
-                        Content="Alt" />
+                        Name="CbxAlt" />
                     <CheckBox
-                        Name="CbxUp"
+                        Content="Up"
                         Margin="5"
-                        Content="Up" />
+                        Name="CbxUp" />
                     <CheckBox
-                        Name="CbxDown"
+                        Content="Down"
                         Margin="5"
-                        Content="Down" />
+                        Name="CbxDown" />
                     <CheckBox
-                        Name="CbxLeft"
+                        Content="Left"
                         Margin="5"
-                        Content="Left" />
+                        Name="CbxLeft" />
                     <CheckBox
-                        Name="CbxRight"
+                        Content="Right"
                         Margin="5"
-                        Content="Right" />
+                        Name="CbxRight" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -1196,22 +1197,22 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="ComboBox"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
                 <ComboBox
+                    Grid.Column="1"
                     Grid.Row="1"
-                    Grid.Column="1"
-                    Width="200"
-                    Margin="5">
+                    Margin="5"
+                    Width="200">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1222,11 +1223,11 @@
                     </ComboBox.Items>
                 </ComboBox>
                 <ComboBox
+                    Grid.Column="1"
                     Grid.Row="2"
-                    Grid.Column="1"
-                    Width="200"
+                    IsEditable="True"
                     Margin="5"
-                    IsEditable="True">
+                    Width="200">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1237,12 +1238,12 @@
                     </ComboBox.Items>
                 </ComboBox>
                 <ComboBox
-                    Grid.Row="3"
                     Grid.Column="1"
-                    Width="200"
-                    Margin="5"
+                    Grid.Row="3"
                     IsEnabled="False"
-                    SelectedIndex="2">
+                    Margin="5"
+                    SelectedIndex="2"
+                    Width="200">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1271,39 +1272,39 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="RadioButton"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
                 <RadioButton
+                    Content="RadioButton"
+                    Grid.Column="1"
                     Grid.Row="1"
-                    Grid.Column="1"
-                    Margin="5"
-                    Content="RadioButton" />
+                    Margin="5" />
                 <RadioButton
+                    Content="RadioButton"
+                    Grid.Column="1"
                     Grid.Row="2"
-                    Grid.Column="1"
-                    Margin="5"
-                    Content="RadioButton" />
+                    Margin="5" />
                 <RadioButton
+                    Content="RadioButton"
+                    Grid.Column="1"
                     Grid.Row="3"
-                    Grid.Column="1"
-                    Margin="5"
-                    Content="RadioButton"
-                    IsChecked="True" />
+                    IsChecked="True"
+                    Margin="5" />
                 <RadioButton
-                    Grid.Row="4"
-                    Grid.Column="1"
-                    Margin="5"
                     Content="RadioButton"
-                    IsEnabled="False" />
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    IsEnabled="False"
+                    Margin="5" />
             </Grid>
         </TabItem>
         <TabItem Header="Scroll bars">
@@ -1320,16 +1321,16 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="ScrollBar"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
             </Grid>
         </TabItem>
         <TabItem Header="Switchers">
@@ -1347,48 +1348,48 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label
-                    Grid.Row="0"
+                    Content="Switcher"
                     Grid.Column="0"
-                    Width="Auto"
+                    Grid.Row="0"
                     Margin="10"
                     Padding="0"
+                    Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
-                    Content="Switcher"
-                    Style="{StaticResource Lbl}" />
+                    Width="Auto" />
 
                 <Label
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    HorizontalAlignment="Left"
                     Content="Filled"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalAlignment="Left"
                     Style="{StaticResource Lbl}" />
 
                 <StackPanel
-                    Grid.Row="2"
                     Grid.Column="1"
+                    Grid.Row="2"
                     Orientation="Horizontal">
                     <RadioButton
-                        Margin="-1,5"
                         Content="First"
+                        Margin="-1,5"
                         Style="{StaticResource SwitcherFirst}" />
                     <RadioButton
-                        Margin="-1,5"
                         Content="Middle"
+                        Margin="-1,5"
                         Style="{StaticResource SwitcherMiddle}" />
                     <RadioButton
-                        Margin="-1,5"
                         Content="Middle"
+                        Margin="-1,5"
                         Style="{StaticResource SwitcherMiddle}" />
                     <RadioButton
-                        Width="100"
-                        Margin="-1,5"
                         Content="Last"
                         IsEnabled="False"
-                        Style="{StaticResource SwitcherLast}" />
+                        Margin="-1,5"
+                        Style="{StaticResource SwitcherLast}"
+                        Width="100" />
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Sliders">
+        <TabItem Header="Sliders" IsSelected="True">
             <!--  SLIDERS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -1404,26 +1405,27 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="Slider"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
                 <Slider
-                    Grid.Row="1"
                     Grid.Column="1"
-                    Width="200"
-                    Margin="5" />
+                    Grid.Row="1"
+                    Margin="5"
+                    Width="200" />
                 <Slider
-                    Grid.Row="1"
                     Grid.Column="1"
-                    Width="200"
-                    Margin="5" />
+                    Grid.Row="1"
+                    Margin="5"
+                    Style="{DynamicResource SliderStyle1}"
+                    Width="200" />
             </Grid>
         </TabItem>
         <TabItem Header="Rangers">
@@ -1436,7 +1438,7 @@
         </TabItem>
         <TabItem Header="Tables">
             <!--  TABLES  -->
-
+            <DataGrid Style="{DynamicResource DataGridStyle1}" />
         </TabItem>
         <TabItem Header="Tabs" Style="{DynamicResource TabItemStyle1}">
             <!--  TABS  -->
@@ -1457,36 +1459,36 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="TextBox"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
                 <controls:TextInput
+                    Grid.Column="1"
                     Grid.Row="1"
-                    Grid.Column="1"
-                    Width="200"
                     Margin="5"
-                    Placeholder="Placeholder" />
+                    Placeholder="Placeholder"
+                    Width="200" />
                 <TextBox
+                    Grid.Column="1"
                     Grid.Row="2"
-                    Grid.Column="1"
-                    Width="200"
                     Margin="5"
-                    extensions:HintAssist.Hint="Placeholder"
-                    Text="Text for example" />
+                    Text="Text for example"
+                    Width="200"
+                    extensions:HintAssist.Hint="Placeholder" />
                 <TextBox
-                    Grid.Row="3"
                     Grid.Column="1"
-                    Width="200"
+                    Grid.Row="3"
+                    IsEnabled="False"
                     Margin="5"
-                    extensions:HintAssist.Hint="Placeholder"
-                    IsEnabled="False" />
+                    Width="200"
+                    extensions:HintAssist.Hint="Placeholder" />
             </Grid>
         </TabItem>
         <TabItem Header="Password boxes">
@@ -1503,34 +1505,34 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="PasswordBox"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
                 <controls:PasswordInput
+                    Grid.Column="1"
                     Grid.Row="1"
-                    Grid.Column="1"
-                    Width="200"
                     Margin="5"
-                    Placeholder="Placeholder" />
+                    Placeholder="Placeholder"
+                    Width="200" />
                 <PasswordBox
+                    Grid.Column="1"
                     Grid.Row="2"
-                    Grid.Column="1"
-                    Width="200"
                     Margin="5"
-                    Password="Text for example" />
+                    Password="Text for example"
+                    Width="200" />
                 <PasswordBox
-                    Grid.Row="3"
                     Grid.Column="1"
-                    Width="200"
+                    Grid.Row="3"
+                    IsEnabled="False"
                     Margin="5"
-                    IsEnabled="False" />
+                    Width="200" />
             </Grid>
         </TabItem>
         <!--  TIME INPUT  -->
@@ -1548,48 +1550,96 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="Time input"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
-                <controls:TimeInput Grid.Row="1" Grid.Column="1" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+                <controls:TimeInput Grid.Column="1" Grid.Row="1" />
             </Grid>
         </TabItem>
         <TabItem Header="Toggle buttons">
             <!--  TOGGLE BUTTONS  -->
-            <WrapPanel Orientation="Horizontal">
-                <ToggleButton Margin="5" />
-                <ToggleButton Margin="5" IsChecked="True" />
-                <ToggleButton
-                    Margin="5"
-                    IsChecked="True"
-                    IsEnabled="False" />
-                <ToggleButton Margin="5" IsEnabled="False" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-                <ToggleButton
-                    Margin="5"
-                    IsChecked="{x:Null}"
-                    IsThreeState="True" />
-                <ToggleButton
-                    Margin="5"
-                    IsChecked="{x:Null}"
-                    IsEnabled="False"
-                    IsThreeState="True" />
-            </WrapPanel>
+                <Label
+                    Content="ToggleButton"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <ToggleButton Margin="5" />
+                    <ToggleButton IsEnabled="False" Margin="5" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Orientation="Horizontal">
+                    <ToggleButton IsChecked="True" Margin="5" />
+                    <ToggleButton
+                        IsChecked="True"
+                        IsEnabled="False"
+                        Margin="5" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Orientation="Horizontal">
+                    <ToggleButton
+                        IsChecked="{x:Null}"
+                        IsThreeState="True"
+                        Margin="5" />
+                    <ToggleButton
+                        IsChecked="{x:Null}"
+                        IsEnabled="False"
+                        IsThreeState="True"
+                        Margin="5" />
+                </StackPanel>
+            </Grid>
         </TabItem>
         <TabItem Header="Tooltips">
             <!--  TOOLTIPS  -->
-
+            <Button
+                Content="asd"
+                Height="50"
+                Width="200"
+                d:IsLocked="True">
+                <Button.ToolTip>
+                    <ToolTip Content="asdasd" />
+                </Button.ToolTip>
+            </Button>
         </TabItem>
-        <TabItem Header="ListView" IsSelected="True">
+        <TabItem Header="ListView">
             <!--  LISTVIEW  -->
-            <Grid>
+            <Grid Background="Gray">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -1604,19 +1654,143 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Width="Auto"
-                    Margin="10"
-                    Padding="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
                     Content="ListView"
                     FontSize="32"
-                    Style="{StaticResource Lbl}" />
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
-                <ListView Grid.Row="1" Grid.Column="1">
+                <ListView
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Height="400"
+                    ScrollViewer.VerticalScrollBarVisibility="Visible">
                     <ListView.Items>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 1" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 2" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 3" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 4" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 5" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 6" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 7" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 8" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 9" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 10" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 1" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 2" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 3" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 4" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 5" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 6" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 7" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 8" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 9" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 10" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 1" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 2" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 3" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 4" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 5" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 6" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 7" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 8" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 9" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 10" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 1" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 2" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 3" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 4" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 5" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 6" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 7" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 8" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 9" />
+                        </ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                            <Label Content="List view item 10" />
+                        </ListViewItem>
                         <ListViewItem Style="{StaticResource ItemOutlineLeft}">
                             <Label Content="List view item 1" />
                         </ListViewItem>
@@ -1650,7 +1824,7 @@
                     </ListView.Items>
                 </ListView>
 
-                <ListView Grid.Row="1" Grid.Column="2">
+                <ListView Grid.Column="2" Grid.Row="1">
                     <ListView.Items>
                         <ListViewItem>
                             <Label Content="List view item 1" />
@@ -1685,36 +1859,36 @@
                     </ListView.Items>
                 </ListView>
 
-                <ListView Grid.Row="1" Grid.Column="3">
+                <ListView Grid.Column="3" Grid.Row="1">
                     <ListView.Items>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 1" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 2" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 3" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 4" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 5" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 6" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 7" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 8" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 9" />
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 10" />
                         </ListViewItem>
                     </ListView.Items>

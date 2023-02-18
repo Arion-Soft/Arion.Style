@@ -152,11 +152,14 @@
     <Page Include="Styles\ArionUi\PasswordBox.xaml" />
     <Page Include="Styles\ArionUi\RadioButton.xaml" />
     <Page Include="Styles\ArionUi\RepeatButton.xaml" />
+    <Page Include="Styles\ArionUi\ScrollBar.xaml" />
+    <Page Include="Styles\ArionUi\Slider.xaml" />
     <Page Include="Styles\ArionUi\Switcher.xaml" />
     <Page Include="Styles\ArionUi\TabControl.xaml" />
     <Page Include="Styles\ArionUi\TextBlock.xaml" />
     <Page Include="Styles\ArionUi\TextBox.xaml" />
     <Page Include="Styles\ArionUi\ToggleButton.xaml" />
+    <Page Include="Styles\ArionUi\ToolTip.xaml" />
     <Page Include="Styles\ArionUi\Window.xaml" />
     <Page Include="UIColors.xaml">
       <Generator>MSBuild:Compile</Generator>
