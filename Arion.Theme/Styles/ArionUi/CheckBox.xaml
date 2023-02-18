@@ -122,7 +122,7 @@
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsChecked" Value="False" />
-                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
                                 <Condition Property="IsPressed" Value="True" />
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
@@ -166,21 +166,21 @@
                                 <Condition Property="IsChecked" Value="{x:Null}" />
                                 <Condition Property="IsMouseOver" Value="True" />
                                 <Condition Property="IsPressed" Value="False" />
-                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="#EEF0F2" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#9AA6AC" />
                             <Setter Property="Fill" TargetName="Mark" Value="Black" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Pressed  -->
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsChecked" Value="{x:Null}" />
                                 <Condition Property="IsMouseOver" Value="True" />
-                                <Condition Property="IsPressed" Value="False" />
+                                <Condition Property="IsPressed" Value="True" />
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
@@ -188,7 +188,7 @@
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#84919A" />
                             <Setter Property="Fill" TargetName="Mark" Value="Black" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Default  -->
                         <MultiTrigger>
@@ -203,7 +203,7 @@
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#B0BABF" />
                             <Setter Property="Fill" TargetName="Mark" Value="Black" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Disabled  -->
                         <MultiTrigger>
@@ -219,7 +219,7 @@
                             <Setter Property="Fill" TargetName="Mark" Value="Black" />
                             <Setter Property="Opacity" Value="0.5" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 8 0 Q 9 0 9 1 Q 9 2 8 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
                         </MultiTrigger>
 
                         <Trigger Property="HasContent" Value="true">
