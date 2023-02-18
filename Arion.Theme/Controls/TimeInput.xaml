@@ -28,7 +28,7 @@
                 Name="Tb1"
                 Padding="0"
                 PreviewTextInput="Tb1_OnPreviewTextInput"
-                Text="{Binding ElementName=TimeControl, Path=Minute}"
+                Text="{Binding ElementName=TimeControl, Path=Minute, StringFormat=00}"
                 VerticalAlignment="Center" />
             <Label
                 Content=":"
@@ -47,7 +47,7 @@
                 Name="Tb2"
                 Padding="0"
                 PreviewTextInput="Tb2_OnPreviewTextInput"
-                Text="{Binding ElementName=TimeControl, Path=Second}"
+                Text="{Binding ElementName=TimeControl, Path=Second, StringFormat=00}"
                 VerticalAlignment="Center" />
 
             <StackPanel
