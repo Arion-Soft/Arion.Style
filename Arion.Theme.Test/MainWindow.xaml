@@ -17,7 +17,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Window.Resources />
-    <TabControl TabStripPlacement="Left">
+    <TabControl TabStripPlacement="Top">
         <TabItem Header="Buttons">
             <!--  BUTTONS  -->
             <Grid>
@@ -1535,7 +1535,7 @@
             </Grid>
         </TabItem>
         <!--  TIME INPUT  -->
-        <TabItem Header="Time inputs" IsSelected="True">
+        <TabItem Header="Time inputs">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -1566,13 +1566,6 @@
                     Height="90"
                     Name="TiTime"
                     Width="200" />
-                <StackPanel
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    Orientation="Horizontal">
-                    <Button Click="ButtonBase_OnClick" Content="11111" />
-                    <Button Click="BtnClear_OnClick" Content="Clear" />
-                </StackPanel>
             </Grid>
         </TabItem>
         <TabItem Header="Toggle buttons">
@@ -1642,12 +1635,9 @@
             <Button
                 Content="asd"
                 Height="50"
+                ToolTip="Hello, i'm tooltip"
                 Width="200"
-                d:IsLocked="True">
-                <Button.ToolTip>
-                    <ToolTip Content="asdasd" />
-                </Button.ToolTip>
-            </Button>
+                d:IsLocked="True" />
         </TabItem>
         <TabItem Header="ListView">
             <!--  LISTVIEW  -->

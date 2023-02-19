@@ -5,7 +5,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#252C32" />
+        <!-- <Setter Property="Foreground" Value="#252C32" /> -->
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
         <Setter Property="FontWeight" Value="Bold" />
@@ -13,7 +13,7 @@
         <Setter Property="TextAlignment" Value="Center" />
     </Style>
 
-    <Style x:Key="BlueTextBlockTransparentBackground" TargetType="TextBlock">
+    <Style TargetType="TextBlock" x:Key="BlueTextBlockTransparentBackground">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
         <Setter Property="Focusable" Value="False" />
@@ -23,7 +23,7 @@
         <Setter Property="TextAlignment" Value="Center" />
     </Style>
 
-    <Style x:Key="TblFolderStyle" TargetType="TextBlock">
+    <Style TargetType="TextBlock" x:Key="TblFolderStyle">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="#FFA000" />
         <Setter Property="FontSize" Value="18" />
