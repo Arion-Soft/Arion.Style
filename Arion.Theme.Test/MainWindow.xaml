@@ -1389,7 +1389,7 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Sliders">
+        <TabItem Header="Sliders" IsSelected="True">
             <!--  SLIDERS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -1422,9 +1422,14 @@
                     Width="200" />
                 <Slider
                     Grid.Column="1"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Margin="5"
-                    Style="{DynamicResource SliderStyle1}"
+                    Width="200" />
+                <Slider
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    IsSelectionRangeEnabled="True"
+                    Margin="5"
                     Width="200" />
             </Grid>
         </TabItem>

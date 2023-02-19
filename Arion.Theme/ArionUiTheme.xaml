@@ -21,6 +21,7 @@
         <ResourceDictionary Source="Styles/ArionUi/ListView.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ComboBox.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/PasswordBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Slider.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ToolTip.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/TabControl.xaml" />
     </ResourceDictionary.MergedDictionaries>

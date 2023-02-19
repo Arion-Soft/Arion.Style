@@ -12,6 +12,7 @@ namespace Arion.Theme.Controls
             InitializeComponent();
             Width = 200;
             Height = 40;
+            FontSize = 14;
         }
 
         public event EventHandler PasswordChanged;

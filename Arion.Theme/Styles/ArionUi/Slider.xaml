@@ -31,15 +31,16 @@
             HorizontalAlignment="Center"
             UseLayoutRounding="True"
             VerticalAlignment="Center">
-            <Path
-                Data="M 0,0 C0,0 11,0 11,0 11,0 11,18 11,18 11,18 0,18 0,18 0,18 0,0 0,0 z"
+            <Ellipse
                 Fill="{StaticResource SliderThumb.Static.Background}"
+                Height="16"
                 SnapsToDevicePixels="True"
                 Stretch="Fill"
                 Stroke="{StaticResource SliderThumb.Static.Border}"
                 StrokeThickness="1"
                 UseLayoutRounding="True"
                 VerticalAlignment="Center"
+                Width="16"
                 x:Name="grip" />
         </Grid>
         <ControlTemplate.Triggers>
@@ -167,19 +168,29 @@
                 </Border>
                 <Track Grid.Row="1" x:Name="PART_Track">
                     <Track.DecreaseRepeatButton>
-                        <RepeatButton Command="{x:Static Slider.DecreaseLarge}" Style="{StaticResource RepeatButtonTransparent}" />
+                        <RepeatButton
+                            Background="#4094F7"
+                            Command="{x:Static Slider.DecreaseLarge}"
+                            Height="4"
+                            Margin="0,0,-10,0"
+                            Style="{StaticResource RepeatButtonTransparent}" />
                     </Track.DecreaseRepeatButton>
                     <Track.IncreaseRepeatButton>
-                        <RepeatButton Command="{x:Static Slider.IncreaseLarge}" Style="{StaticResource RepeatButtonTransparent}" />
+                        <RepeatButton
+                            Background="#DDE2E4"
+                            Command="{x:Static Slider.IncreaseLarge}"
+                            Height="4"
+                            Margin="-10,0,0,0"
+                            Style="{StaticResource RepeatButtonTransparent}" />
                     </Track.IncreaseRepeatButton>
                     <Track.Thumb>
                         <Thumb
                             Focusable="False"
-                            Height="18"
+                            Height="16"
                             OverridesDefaultStyle="True"
                             Template="{StaticResource SliderThumbHorizontalDefault}"
                             VerticalAlignment="Center"
-                            Width="11"
+                            Width="16"
                             x:Name="Thumb" />
                     </Track.Thumb>
                 </Track>
@@ -378,7 +389,7 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <Style TargetType="{x:Type Slider}" x:Key="SliderStyle1">
+    <Style TargetType="{x:Type Slider}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
