@@ -43,7 +43,33 @@ namespace Arion.Theme.Controls
 
         public static readonly DependencyProperty FillProperty =
             DependencyProperty.Register(nameof(Fill), typeof(Color), typeof(Icon), new PropertyMetadata());
-        
+
+        public new double Height
+        {
+            get => (double)GetValue(HeightProperty);
+            set
+            {
+                ImageTest.Height = value;
+                SetValue(HeightProperty, value);
+            }
+        }
+
+        public new static readonly DependencyProperty HeightProperty =
+            DependencyProperty.Register(nameof(Height), typeof(double), typeof(Icon), new PropertyMetadata());
+
+        public new double Width
+        {
+            get => (double)GetValue(WidthProperty);
+            set
+            {
+                ImageTest.Width = value;
+                SetValue(WidthProperty, value);
+            }
+        }
+
+        public new static readonly DependencyProperty WidthProperty =
+            DependencyProperty.Register(nameof(Width), typeof(double), typeof(Icon), new PropertyMetadata());
+
         public Icon()
         {
             InitializeComponent();
@@ -53,6 +79,8 @@ namespace Arion.Theme.Controls
         {
             Kind = Kind;
             ImageTest.Fill = new SolidColorBrush(Fill);
+            Width = Width;
+            Height = Height;
         }
     }
 }
