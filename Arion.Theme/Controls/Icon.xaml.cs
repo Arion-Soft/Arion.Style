@@ -15,7 +15,7 @@ namespace Arion.Theme.Controls
             set
             {
                 SetValue(KindProperty, value);
-                Image = Icons.IconsDictionary.FirstOrDefault(x => x.Key == value).Value;
+                Image = Geometry.Parse(Icons.IconsDictionary.FirstOrDefault(x => x.Key == value).Value);
             }
         }
 
