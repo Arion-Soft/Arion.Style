@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace Arion.Theme.Controls
 {
-    public partial class TimeInput : UserControl
+    public partial class TimeInput
     {
         public TimeInput()
         {
@@ -12,6 +12,7 @@ namespace Arion.Theme.Controls
             Width = 90;
             Height = 40;
             FontSize = 16;
+            Margin = new Thickness(10, 6, 10, 6);
         }
 
         private void Tb1_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -90,22 +91,31 @@ namespace Arion.Theme.Controls
         public new static readonly DependencyProperty WidthProperty =
             DependencyProperty.Register(nameof(Width), typeof(double), typeof(TimeInput), new PropertyMetadata());
 
-        public double Height
+        public new double Height
         {
             get => (double)GetValue(HeightProperty);
             set => SetValue(HeightProperty, value);
         }
 
-        public static readonly DependencyProperty HeightProperty =
+        public new static readonly DependencyProperty HeightProperty =
             DependencyProperty.Register(nameof(Height), typeof(double), typeof(TimeInput), new PropertyMetadata());
 
-        public double FontSize
+        public new double FontSize
         {
             get => (double)GetValue(FontSizeProperty);
             set => SetValue(FontSizeProperty, value);
         }
 
-        public static readonly DependencyProperty FontSizeProperty =
+        public new static readonly DependencyProperty FontSizeProperty =
             DependencyProperty.Register(nameof(FontSize), typeof(double), typeof(TimeInput), new PropertyMetadata());
+
+        public new Thickness Margin
+        {
+            get => (Thickness)GetValue(MarginProperty);
+            set => SetValue(MarginProperty, value);
+        }
+
+        public new static readonly DependencyProperty MarginProperty =
+            DependencyProperty.Register(nameof(Margin), typeof(Thickness), typeof(TimeInput), new PropertyMetadata());
     }
 }

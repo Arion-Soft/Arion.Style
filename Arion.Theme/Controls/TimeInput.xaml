@@ -14,8 +14,10 @@
         Background="#FFFFFF"
         BorderBrush="#DDE2E4"
         BorderThickness="1"
-        CornerRadius="6">
-        <Grid Margin="10,5">
+        CornerRadius="6"
+        Margin="0"
+        Padding="0">
+        <Grid Margin="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -24,7 +26,9 @@
             <TextBox
                 BorderThickness="0"
                 FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
+                Height="{Binding ElementName=TimeControl, Path=Height}"
                 HorizontalAlignment="Center"
+                Margin="0"
                 Name="Tb1"
                 Padding="0"
                 PreviewTextInput="Tb1_OnPreviewTextInput"
@@ -43,7 +47,9 @@
                 FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
                 Grid.Column="2"
                 Grid.Row="0"
+                Height="{Binding ElementName=TimeControl, Path=Height}"
                 HorizontalAlignment="Center"
+                Margin="0"
                 Name="Tb2"
                 Padding="0"
                 PreviewTextInput="Tb2_OnPreviewTextInput"
