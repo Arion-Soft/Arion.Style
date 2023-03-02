@@ -173,6 +173,9 @@
     <Content Include="Fonts\GolosUi\Golos-UI_Bold.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Medium.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Regular.ttf" />
+    <Content Include="Images\TextInputWithText.png" />
+    <Content Include="Images\TextBox.png" />
+    <Content Include="Images\TextInput.png" />
     <Content Include="Images\TextLg.png" />
     <Content Include="Images\TextMd.png" />
     <Content Include="Images\TextSm.png" />
@@ -183,6 +186,7 @@
     <Content Include="Images\OutlineMd.png" />
     <Content Include="Images\OutlineSm.png" />
     <Content Include="Images\Arion.Style.png" />
+    <Content Include="img.png" />
     <Resource Include="Fonts\GolosUi\GolosUi.ttf" />
     <Content Include="Icons\Images\Drive.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
