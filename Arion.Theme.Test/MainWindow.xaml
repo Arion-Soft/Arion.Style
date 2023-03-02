@@ -1158,32 +1158,6 @@
                         IsThreeState="True"
                         Margin="5" />
                 </StackPanel>
-
-                <StackPanel
-                    Grid.Column="2"
-                    Grid.Row="2"
-                    Orientation="Horizontal">
-                    <CheckBox
-                        Content="Alt"
-                        Margin="5"
-                        Name="CbxAlt" />
-                    <CheckBox
-                        Content="Up"
-                        Margin="5"
-                        Name="CbxUp" />
-                    <CheckBox
-                        Content="Down"
-                        Margin="5"
-                        Name="CbxDown" />
-                    <CheckBox
-                        Content="Left"
-                        Margin="5"
-                        Name="CbxLeft" />
-                    <CheckBox
-                        Content="Right"
-                        Margin="5"
-                        Name="CbxRight" />
-                </StackPanel>
             </Grid>
         </TabItem>
         <TabItem Header="ComboBoxes">
