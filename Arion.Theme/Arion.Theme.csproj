@@ -164,7 +164,6 @@
     <Resource Include="Icons\Images\XrayGif.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Arion.Style.png" />
     <Content Include="Fonts\GolosText\Golos-Text_Black.ttf" />
     <Content Include="Fonts\GolosText\Golos-Text_Bold.ttf" />
     <Content Include="Fonts\GolosText\Golos-Text_DemiBold.ttf" />
@@ -174,6 +173,16 @@
     <Content Include="Fonts\GolosUi\Golos-UI_Bold.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Medium.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Regular.ttf" />
+    <Content Include="Images\TextLg.png" />
+    <Content Include="Images\TextMd.png" />
+    <Content Include="Images\TextSm.png" />
+    <Content Include="Images\FilledLg.png" />
+    <Content Include="Images\FilledMd.png" />
+    <Content Include="Images\FilledSm.png" />
+    <Content Include="Images\OutlineLg.png" />
+    <Content Include="Images\OutlineMd.png" />
+    <Content Include="Images\OutlineSm.png" />
+    <Content Include="Images\Arion.Style.png" />
     <Resource Include="Fonts\GolosUi\GolosUi.ttf" />
     <Content Include="Icons\Images\Drive.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -6,9 +6,9 @@ ___
 
 ## Подключение
 
-В менеджере пакетов Nuget находите пакет ```Arion.Style``` и устанавливаете его
+В менеджере пакетов Nuget находите пакет `Arion.Style` и устанавливаете его
 
-![Alt-текст](Arion.Style.png "Arion.Style в менеджере пакетов нугет")
+![Arion.Style в менеджере пакетов nuget](Images/Arion.Style.png "Arion.Style в менеджере пакетов nuget")
 
 В документ ```App.xaml``` добавляете словарь
 
@@ -37,9 +37,41 @@ ___
 11. [Цвета](#Цвета)
 12. [Иконки](#Иконки)
 
+___
+
 ### Кнопка
 
+#### Обычные кнопки
 
+Есть несколько типов стилей кнопок `Filled`, `Outline`, `Text`
+
+Filled - Закрашенные без рамок
+Outline - Белые кнопки с рамками
+Text - Белые кнопки без рамок, на белом фоне похожи на простой текст, пока не наведешь
+
+Так же есть 3 размера этих кнопок Large(`Lg`), Medium(`Md`) и Small(`Sm`)
+
+Для использования стилей пишете сначала тип кнопки, потом её размер в сокращенном варианте
+
+Доступные стили для версии 0.1.3
+
+|             | Filled                                            | Outline                                             | Text                                          |
+|-------------|---------------------------------------------------|-----------------------------------------------------|-----------------------------------------------|
+| Large (Lg)  | ![Кнопка со стилем FilledLg](Images/FilledLg.png) | ![Кнопка со стилем OutlineLg](Images/OutlineLg.png) | ![Кнопка со стилем TextLg](Images/TextLg.png) |
+| Medium (Md) | ![Кнопка со стилем FilledMd](Images/FilledMd.png) | ![Кнопка со стилем OutlineMd](Images/OutlineMd.png) | ![Кнопка со стилем TextMd](Images/TextMd.png) |
+| Small (Sm)  | ![Кнопка со стилем FilledSm](Images/FilledSm.png) | ![Кнопка со стилем OutlineMd](Images/OutlineSm.png) | ![Кнопка со стилем TextSm](Images/TextSm.png) |
+
+`FilledLg`,
+`FilledMd`, 
+`FilledSm`,
+`OutlineLg`,
+`OutlineMd`,
+`OutlineSm`,
+`TextLg`,
+`TextMd`,
+`TextSm`.
+
+___
 
 ### Текстовое поле
 
