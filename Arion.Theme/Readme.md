@@ -87,7 +87,7 @@ ___
 
 `xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"`
 
-`<TextInput Placeholder="Placeholder" />`
+`<controls:TextInput Placeholder="Placeholder" />`
 
 ### Чек бокс
 
@@ -96,6 +96,14 @@ ___
 ![Чек бокс](Images/CheckBox.png)
 
 ### Переключатель
+
+
+
+### Радио кнопки
+
+
+
+### Свитчер
 
 Переключатели или же свитчеры, стиль для Радио кнопок.
 
@@ -109,10 +117,6 @@ ___
 
 `SwitcherFirst`, `SwitcherMiddle`, `SwitcherLast`
 
-### Радио кнопки
-
-### Свитчер
-
 ### Слайдер
 
 ### Табы
@@ -122,3 +126,19 @@ ___
 ### Цвета
 
 ### Иконки
+
+Для того что бы использовать иконки требуется так же подключить директорию контролов из библиотеки
+
+`xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"`
+
+После чего появится возможность использовать элемент `Icon`
+
+`<controls:Icon Kind="" Width="" Height="" Fill=""/>`
+
+В данном элементе есть 4 стандартных свойства которые требуется задать
+* `Kind` - Иконка
+* `Width` - Ширина
+* `Height` - Высота
+* `Fill` - Заливка цветом
+
+Пак всех иконок будет добавлен позднее
