@@ -173,6 +173,9 @@
     <Content Include="Fonts\GolosUi\Golos-UI_Bold.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Medium.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Regular.ttf" />
+    <Content Include="Images\SwitcherLast.png" />
+    <Content Include="Images\SwitcherFirst.png" />
+    <Content Include="Images\SwitcherMiddle.png" />
     <Content Include="Images\CheckBox.png" />
     <Content Include="Images\TextInputWithText.png" />
     <Content Include="Images\TextBox.png" />

@@ -1349,22 +1349,21 @@
                     Orientation="Horizontal">
                     <RadioButton
                         Content="First"
-                        Margin="-1,5"
+                        Margin="5"
                         Style="{StaticResource SwitcherFirst}" />
                     <RadioButton
                         Content="Middle"
-                        Margin="-1,5"
+                        Margin="5"
                         Style="{StaticResource SwitcherMiddle}" />
                     <RadioButton
                         Content="Middle"
-                        Margin="-1,5"
+                        IsEnabled="False"
+                        Margin="5"
                         Style="{StaticResource SwitcherMiddle}" />
                     <RadioButton
                         Content="Last"
-                        IsEnabled="False"
-                        Margin="-1,5"
-                        Style="{StaticResource SwitcherLast}"
-                        Width="100" />
+                        Margin="5"
+                        Style="{StaticResource SwitcherLast}" />
                 </StackPanel>
             </Grid>
         </TabItem>

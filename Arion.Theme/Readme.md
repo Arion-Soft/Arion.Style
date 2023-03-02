@@ -85,6 +85,10 @@ ___
 ![Элемент TextInput](Images/TextInput.png)
 ![Элемент TextInput с введеном текстом](Images/TextInputWithText.png)
 
+`xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"`
+
+`<TextInput Placeholder="Placeholder" />`
+
 ### Чек бокс
 
 Стиль данного элемента также установлен по умолчанию, и имеет разное отображение на 3 состояния `Checked`, `Unchecked`, `Null`
@@ -93,7 +97,17 @@ ___
 
 ### Переключатель
 
+Переключатели или же свитчеры, стиль для Радио кнопок.
 
+Имеют 3 типа по отображению
+
+|        | Switcher                                     |
+|--------|----------------------------------------------|
+| First  | ![SwitcherFirst](Images/SwitcherFirst.png)   |
+| Middle | ![SwitcherMiddle](Images/SwitcherMiddle.png) |
+| Last   | ![SwitcherLast](Images/SwitcherLast.png)     |
+
+`SwitcherFirst`, `SwitcherMiddle`, `SwitcherLast`
 
 ### Радио кнопки
 
