@@ -8,7 +8,7 @@ ___
 
 В менеджере пакетов Nuget находите пакет `Arion.Style` и устанавливаете его
 
-![Arion.Style в менеджере пакетов nuget](Images/Arion.Style.png "Arion.Style в менеджере пакетов nuget")
+![Arion.Style в менеджере пакетов nuget](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Arion.Style.png?raw=true "Arion.Style в менеджере пакетов nuget")
 
 В документ ```App.xaml``` добавляете словарь
 
@@ -55,11 +55,11 @@ Text - Белые кнопки без рамок, на белом фоне по�
 
 Доступные стили для версии 0.1.3
 
-|             | Filled                                            | Outline                                             | Text                                          |
-|-------------|---------------------------------------------------|-----------------------------------------------------|-----------------------------------------------|
-| Large (Lg)  | ![Кнопка со стилем FilledLg](Images/FilledLg.png) | ![Кнопка со стилем OutlineLg](Images/OutlineLg.png) | ![Кнопка со стилем TextLg](Images/TextLg.png) |
-| Medium (Md) | ![Кнопка со стилем FilledMd](Images/FilledMd.png) | ![Кнопка со стилем OutlineMd](Images/OutlineMd.png) | ![Кнопка со стилем TextMd](Images/TextMd.png) |
-| Small (Sm)  | ![Кнопка со стилем FilledSm](Images/FilledSm.png) | ![Кнопка со стилем OutlineMd](Images/OutlineSm.png) | ![Кнопка со стилем TextSm](Images/TextSm.png) |
+|             | Filled                                                                                                                     | Outline                                                                                                                      | Text                                                                                                                   |
+|-------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| Large (Lg)  | ![Кнопка со стилем FilledLg](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/FilledLg.png?raw=true) | ![Кнопка со стилем OutlineLg](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/OutlineLg.png?raw=true) | ![Кнопка со стилем TextLg](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/TextLg.png?raw=true) |
+| Medium (Md) | ![Кнопка со стилем FilledMd](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/FilledMd.png?raw=true) | ![Кнопка со стилем OutlineMd](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/OutlineMd.png?raw=true) | ![Кнопка со стилем TextMd](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/TextMd.png?raw=true) |
+| Small (Sm)  | ![Кнопка со стилем FilledSm](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/FilledSm.png?raw=true) | ![Кнопка со стилем OutlineMd](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/OutlineSm.png?raw=true) | ![Кнопка со стилем TextSm](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/TextSm.png?raw=true) |
 
 `FilledLg`,
 `FilledMd`, 
@@ -77,13 +77,13 @@ ___
 
 Стиль текстового поля задан по умолчанию, поэтому какой то определенный стиль применять не требуется.
 
-![Элемент TextBox](Images/TextBox.png)
+![Элемент TextBox](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/TextBox.png?raw=true)
 
 Так же есть текстовое поле с элементом предварительного текста `TextInput`.
 В этом элементе можно указать свойство Placeholder, которое отобразит текст, который будет пропадать при вводе.
 
-![Элемент TextInput](Images/TextInput.png)
-![Элемент TextInput с введеном текстом](Images/TextInputWithText.png)
+![Элемент TextInput](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/TextInput.png?raw=true)
+![Элемент TextInput с введеном текстом](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/TextInputWithText.png?raw=true)
 
 `xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"`
 
@@ -93,13 +93,15 @@ ___
 
 Стиль данного элемента также установлен по умолчанию, и имеет разное отображение на 3 состояния `Checked`, `Unchecked`, `Null`
 
-![Чек бокс](Images/CheckBox.png)
+![Чек бокс](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/CheckBox.png?raw=true)
 
 ### Переключатель
 
 
 
 ### Радио кнопки
+
+Стиль установлен по умолчанию
 
 
 
@@ -109,11 +111,11 @@ ___
 
 Имеют 3 типа по отображению
 
-|        | Switcher                                     |
-|--------|----------------------------------------------|
-| First  | ![SwitcherFirst](Images/SwitcherFirst.png)   |
-| Middle | ![SwitcherMiddle](Images/SwitcherMiddle.png) |
-| Last   | ![SwitcherLast](Images/SwitcherLast.png)     |
+|        | Switcher                                                                                                              |
+|--------|-----------------------------------------------------------------------------------------------------------------------|
+| First  | ![SwitcherFirst](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/SwitcherFirst.png?raw=true)   |
+| Middle | ![SwitcherMiddle](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/SwitcherMiddle.png?raw=true) |
+| Last   | ![SwitcherLast](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/SwitcherLast.png?raw=true)     |
 
 `SwitcherFirst`, `SwitcherMiddle`, `SwitcherLast`
 
