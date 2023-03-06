@@ -146,6 +146,8 @@ ___
 | 800 | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr800.png?raw=true)  | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Red/R800.png?raw=true) | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Green/G800.png?raw=true) | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Yellow/Y800.png?raw=true) | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Purple/P800.png?raw=true) | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Teal/T800.png?raw=true) |
 | 900 | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr900.png?raw=true)  | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Red/R900.png?raw=true) | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Green/G900.png?raw=true) | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Yellow/Y900.png?raw=true) | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Purple/P900.png?raw=true) | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Teal/T900.png?raw=true) |
 
+`Pr50`, `Pr100`, `Pr200`, `Pr300`, `Pr400`, `Pr500`, `Pr600`, `Pr700`, `Pr800`, `Pr900` и так далее
+
 ### Иконки
 
 Для того что бы использовать иконки требуется так же подключить директорию контролов из библиотеки

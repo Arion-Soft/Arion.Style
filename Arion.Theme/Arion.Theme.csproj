@@ -274,6 +274,7 @@
     <Content Include="Images\OutlineMd.png" />
     <Content Include="Images\OutlineSm.png" />
     <Content Include="Images\Arion.Style.png" />
+    <Content Include="Readme.md" />
     <Resource Include="Fonts\GolosUi\GolosUi.ttf" />
     <Content Include="Icons\Images\Drive.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
