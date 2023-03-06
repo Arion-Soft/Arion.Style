@@ -1978,5 +1978,404 @@
                 </StackPanel>
             </Grid>
         </TabItem>
+
+        <TabItem Header="Colors">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Content="Colors"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="9"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
+                <Border
+                    Background="{StaticResource Pr900}"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr800}"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr700}"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr600}"
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr500}"
+                    Grid.Column="4"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr400}"
+                    Grid.Column="5"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr300}"
+                    Grid.Column="6"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr200}"
+                    Grid.Column="7"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr100}"
+                    Grid.Column="8"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Pr50}"
+                    Grid.Column="9"
+                    Grid.Row="1"
+                    Style="{StaticResource Brd}" />
+
+
+                <Border
+                    Background="{StaticResource R900}"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R800}"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R700}"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R600}"
+                    Grid.Column="3"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R500}"
+                    Grid.Column="4"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R400}"
+                    Grid.Column="5"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R300}"
+                    Grid.Column="6"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R200}"
+                    Grid.Column="7"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R100}"
+                    Grid.Column="8"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource R50}"
+                    Grid.Column="9"
+                    Grid.Row="2"
+                    Style="{StaticResource Brd}" />
+
+                <Border
+                    Background="{StaticResource G900}"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G800}"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G700}"
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G600}"
+                    Grid.Column="3"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G500}"
+                    Grid.Column="4"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G400}"
+                    Grid.Column="5"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G300}"
+                    Grid.Column="6"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G200}"
+                    Grid.Column="7"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G100}"
+                    Grid.Column="8"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G50}"
+                    Grid.Column="9"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+
+                <Border
+                    Background="{StaticResource Y900}"
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y800}"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y700}"
+                    Grid.Column="2"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y600}"
+                    Grid.Column="3"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y500}"
+                    Grid.Column="4"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y400}"
+                    Grid.Column="5"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y300}"
+                    Grid.Column="6"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y200}"
+                    Grid.Column="7"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y100}"
+                    Grid.Column="8"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource Y50}"
+                    Grid.Column="9"
+                    Grid.Row="4"
+                    Style="{StaticResource Brd}" />
+
+                <Border
+                    Background="{StaticResource P900}"
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P800}"
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P700}"
+                    Grid.Column="2"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P600}"
+                    Grid.Column="3"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P500}"
+                    Grid.Column="4"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P400}"
+                    Grid.Column="5"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P300}"
+                    Grid.Column="6"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P200}"
+                    Grid.Column="7"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P100}"
+                    Grid.Column="8"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource P50}"
+                    Grid.Column="9"
+                    Grid.Row="5"
+                    Style="{StaticResource Brd}" />
+
+                <Border
+                    Background="{StaticResource T900}"
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T800}"
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T700}"
+                    Grid.Column="2"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T600}"
+                    Grid.Column="3"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T500}"
+                    Grid.Column="4"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T400}"
+                    Grid.Column="5"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T300}"
+                    Grid.Column="6"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T200}"
+                    Grid.Column="7"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T100}"
+                    Grid.Column="8"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource T50}"
+                    Grid.Column="9"
+                    Grid.Row="6"
+                    Style="{StaticResource Brd}" />
+
+                <Border
+                    Background="{StaticResource G900}"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G800}"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G700}"
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G600}"
+                    Grid.Column="3"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G500}"
+                    Grid.Column="4"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G400}"
+                    Grid.Column="5"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G300}"
+                    Grid.Column="6"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G200}"
+                    Grid.Column="7"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G100}"
+                    Grid.Column="8"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+                <Border
+                    Background="{StaticResource G50}"
+                    Grid.Column="9"
+                    Grid.Row="3"
+                    Style="{StaticResource Brd}" />
+            </Grid>
+        </TabItem>
     </TabControl>
 </Window>

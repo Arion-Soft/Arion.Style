@@ -173,6 +173,16 @@
     <Content Include="Fonts\GolosUi\Golos-UI_Bold.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Medium.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Regular.ttf" />
+    <Content Include="Images\Colors\Blue\Pr100.png" />
+    <Content Include="Images\Colors\Blue\Pr200.png" />
+    <Content Include="Images\Colors\Blue\Pr300.png" />
+    <Content Include="Images\Colors\Blue\Pr400.png" />
+    <Content Include="Images\Colors\Blue\Pr50.png" />
+    <Content Include="Images\Colors\Blue\Pr500.png" />
+    <Content Include="Images\Colors\Blue\Pr600.png" />
+    <Content Include="Images\Colors\Blue\Pr700.png" />
+    <Content Include="Images\Colors\Blue\Pr800.png" />
+    <Content Include="Images\Colors\Blue\Pr900.png" />
     <Content Include="Images\VerticalScrollBar.png" />
     <Content Include="Images\Tabs.png" />
     <Content Include="Images\ToggleButtons.png" />
@@ -197,7 +207,6 @@
     <Content Include="Images\OutlineMd.png" />
     <Content Include="Images\OutlineSm.png" />
     <Content Include="Images\Arion.Style.png" />
-    <Content Include="img.png" />
     <Resource Include="Fonts\GolosUi\GolosUi.ttf" />
     <Content Include="Icons\Images\Drive.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
