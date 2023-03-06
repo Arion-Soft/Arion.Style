@@ -133,18 +133,18 @@ ___
 
 ### Цвета
 
-|     | Pr                                                                                                         | R   |
-|-----|------------------------------------------------------------------------------------------------------------|-----|
-| 50  | ![Pr50](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr50.png?raw=true)   |     |
-| 100 | ![Pr100](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr100.png?raw=true) |     |
-| 200 | ![Pr200](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr200.png?raw=true) |     |
-| 300 | ![Pr300](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr300.png?raw=true) |     |
-| 400 | ![Pr400](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr400.png?raw=true) |     |
-| 500 | ![Pr500](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr500.png?raw=true) |     |
-| 600 | ![Pr600](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr600.png?raw=true) |     |
-| 700 | ![Pr700](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr700.png?raw=true) |     |
-| 800 | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr800.png?raw=true) |     |
-| 900 | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Pr900.png?raw=true) |     |
+|     | Pr                                                                                                               | R   |
+|-----|------------------------------------------------------------------------------------------------------------------|-----|
+| 50  | ![Pr50](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr50.png?raw=true)    |     |
+| 100 | ![Pr100](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr100.png?raw=true)  |     |
+| 200 | ![Pr200](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr200.png?raw=true)  |     |
+| 300 | ![Pr300](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr300.png?raw=true)  |     |
+| 400 | ![Pr400](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr400.png?raw=true)  |     |
+| 500 | ![Pr500](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr500.png?raw=true)  |     |
+| 600 | ![Pr600](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr600.png?raw=true)  |     |
+| 700 | ![Pr700](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr700.png?raw=true)  |     |
+| 800 | ![Pr800](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr800.png?raw=true)  |     |
+| 900 | ![Pr900](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Colors/Blue/Pr900.png?raw=true)  |     |
 
 ### Иконки
 
