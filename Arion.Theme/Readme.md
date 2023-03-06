@@ -121,9 +121,15 @@ ___
 
 ### Слайдер
 
+![Slider](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Slider.png?raw=true)
+
 ### Табы
 
+![Tabs](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Tabs.png?raw=true)
+
 ### Всплывающие подсказки
+
+![ToolTip](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/ToolTip.png?raw=true)
 
 ### Цвета
 
