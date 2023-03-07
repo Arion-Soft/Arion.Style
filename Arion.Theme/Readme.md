@@ -89,21 +89,27 @@ ___
 
 `<controls:TextInput Placeholder="Placeholder" />`
 
+---
+
 ### Чек бокс
 
 Стиль данного элемента также установлен по умолчанию, и имеет разное отображение на 3 состояния `Checked`, `Unchecked`, `Null`
 
 ![Чек бокс](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/CheckBox.png?raw=true)
 
+---
+
 ### Переключатель
 
 
+
+---
 
 ### Радио кнопки
 
 Стиль установлен по умолчанию
 
-
+---
 
 ### Свитчер
 
@@ -119,17 +125,25 @@ ___
 
 `SwitcherFirst`, `SwitcherMiddle`, `SwitcherLast`
 
+---
+
 ### Слайдер
 
 ![Slider](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Slider.png?raw=true)
+
+---
 
 ### Табы
 
 ![Tabs](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Tabs.png?raw=true)
 
+---
+
 ### Всплывающие подсказки
 
 ![ToolTip](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/ToolTip.png?raw=true)
+
+---
 
 ### Цвета
 
@@ -148,11 +162,15 @@ ___
 
 `Pr50`, `Pr100`, `Pr200`, `Pr300`, `Pr400`, `Pr500`, `Pr600`, `Pr700`, `Pr800`, `Pr900` и так далее
 
+---
+
 ### Тени
 
 | El1                                                                                                    | El2                                                                                                    | El3                                                                                                    | El4                                                                                                    | El5                                                                                                    | El6                                                                                                    |
 |--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | ![El1](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Shadow/El1.png?raw=true) | ![El2](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Shadow/El2.png?raw=true) | ![El3](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Shadow/El3.png?raw=true) | ![El4](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Shadow/El4.png?raw=true) | ![El5](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Shadow/El5.png?raw=true) | ![El6](https://github.com/IDerkBot/Arion.Style/blob/master/Arion.Theme/Images/Shadow/El6.png?raw=true) |
+
+---
 
 ### Иконки
 
