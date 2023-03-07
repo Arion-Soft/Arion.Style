@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DropShadowEffect
+        BlurRadius="1"
+        Color="#1a2024"
+        Direction="270"
+        Opacity="0.32"
+        RenderingBias="Quality"
+        ShadowDepth="1"
+        x:Key="El1" />
+    <DropShadowEffect
+        BlurRadius="8"
+        Color="#1a2024"
+        Direction="270"
+        Opacity="0.32"
+        RenderingBias="Quality"
+        ShadowDepth="4"
+        x:Key="El2" />
+    <DropShadowEffect
+        BlurRadius="16"
+        Color="#1a2024"
+        Direction="270"
+        Opacity="0.32"
+        RenderingBias="Quality"
+        ShadowDepth="8"
+        x:Key="El3" />
+    <DropShadowEffect
+        BlurRadius="24"
+        Color="#1a2024"
+        Direction="270"
+        Opacity="0.32"
+        RenderingBias="Quality"
+        ShadowDepth="12"
+        x:Key="El4" />
+    <DropShadowEffect
+        BlurRadius="32"
+        Color="#1a2024"
+        Direction="270"
+        Opacity="0.32"
+        RenderingBias="Quality"
+        ShadowDepth="24"
+        x:Key="El5" />
+    <DropShadowEffect
+        BlurRadius="64"
+        Color="#1a2024"
+        Direction="270"
+        Opacity="0.32"
+        RenderingBias="Quality"
+        ShadowDepth="40"
+        x:Key="El6" />
+</ResourceDictionary>

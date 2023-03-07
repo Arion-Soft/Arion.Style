@@ -65,7 +65,7 @@
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="{x:Type Button}">
                     <Border
                         Name="Border"
                         Padding="{TemplateBinding Padding}"
@@ -74,9 +74,11 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="6">
                         <ContentPresenter
+                            Name="Presenter"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
-                            Content="{TemplateBinding Content}" />
+                            Content="{TemplateBinding Content}"
+                            Effect="{TemplateBinding Effect}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -86,10 +88,30 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Background" Value="#E5E9EB" />
                             <Setter Property="BorderBrush" Value="#E5E9EB" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0"
+                                        Color="Transparent" />
+                                </Setter.Value>
+                            </Setter>
                         </Trigger>
 
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Opacity" Value=".5" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0"
+                                        Color="Transparent" />
+                                </Setter.Value>
+                            </Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

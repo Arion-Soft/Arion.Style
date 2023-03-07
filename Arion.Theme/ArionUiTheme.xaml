@@ -24,6 +24,7 @@
         <ResourceDictionary Source="Styles/ArionUi/Slider.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ToolTip.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/TabControl.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Shadow.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="Border" x:Key="StatusBar">
