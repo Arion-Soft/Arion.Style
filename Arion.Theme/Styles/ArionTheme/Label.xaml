@@ -172,4 +172,131 @@
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="FontSize" Value="14" />
     </Style>
+    <Style TargetType="{x:Type Label}" x:Key="LabelTextBoxBase">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Label}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5,5,5,5"
+                        Padding="{TemplateBinding Padding}"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            RecognizesAccessKey="False"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        BasedOn="{StaticResource LabelTextBoxBase}"
+        TargetType="{x:Type Label}"
+        x:Key="LabelTbTop">
+        <Setter Property="BorderThickness" Value="0,1,0,0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Label}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="0,0,5,5"
+                        Padding="{TemplateBinding Padding}"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            RecognizesAccessKey="False"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource LabelTextBoxBase}"
+        TargetType="{x:Type Label}"
+        x:Key="LabelTbRight">
+        <Setter Property="BorderThickness" Value="0,0,1,0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Label}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5,0,0,5"
+                        Padding="{TemplateBinding Padding}"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            RecognizesAccessKey="False"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource LabelTextBoxBase}"
+        TargetType="{x:Type Label}"
+        x:Key="LabelTbBottom">
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Label}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5,5,0,0"
+                        Padding="{TemplateBinding Padding}"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            RecognizesAccessKey="False"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource LabelTextBoxBase}"
+        TargetType="{x:Type Label}"
+        x:Key="LabelTbLeft">
+        <Setter Property="BorderThickness" Value="1,0,0,0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Label}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="0,5,5,0"
+                        Padding="{TemplateBinding Padding}"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            RecognizesAccessKey="False"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

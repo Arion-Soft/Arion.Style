@@ -32,15 +32,6 @@
         <!--<Setter Property="FontFamily" Value="Nasalization Rg" />-->
     </Style>
 
-    <Style x:Key="BlueWindow" TargetType="Window">
-        <Setter Property="Background">
-            <Setter.Value>
-                <ImageBrush ImageSource="/Res/glowy_hex.jpg" />
-            </Setter.Value>
-        </Setter>
-        <!--<Setter Property="FontFamily" Value="Nasalization Rg" /> -->
-    </Style>
-
     <Style x:Key="DarkBlueWindow" TargetType="Window">
         <!--<Setter Property="Background" Value="#FF001F20" />-->
         <Setter Property="Background" Value="#6D86AC" />
@@ -147,10 +138,8 @@
         <Setter Property="FontStyle" Value="Normal" />
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="Focusable" Value="False" />
-
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="Margin" Value="5" />
-
         <Setter Property="Template">
 
             <Setter.Value>

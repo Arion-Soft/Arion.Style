@@ -1,115 +1,118 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <SolidColorBrush x:Key="BrushWhite" Color="#FFFFFF" />
-    <SolidColorBrush x:Key="BrushDarkWhite" Color="#EAEAEA" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="BrushWhite" />
+    <SolidColorBrush Color="#EAEAEA" x:Key="BrushDarkWhite" />
 
-    <SolidColorBrush x:Key="BrushGray" Color="#D2DDEF" />
-    <SolidColorBrush x:Key="BrushDarkGray" Color="#C0CADB" />
+    <SolidColorBrush Color="#D2DDEF" x:Key="BrushLightGray" />
+    <SolidColorBrush Color="#C0CADB" x:Key="BrushLightDarkGray" />
 
-    <SolidColorBrush x:Key="BrushLightPrimary" Color="#B6D3F6" />
-    <SolidColorBrush x:Key="BrushDarkLightPrimary" Color="#A2BCDB" />
+    <SolidColorBrush Color="#9494a2" x:Key="BrushGray" />
+    <SolidColorBrush Color="#7d7d89" x:Key="BrushDarkGray" />
 
-    <SolidColorBrush x:Key="BrushPrimary" Color="#335D8E" />
-    <SolidColorBrush x:Key="BrushDarkPrimary" Color="#2D537E" />
+    <SolidColorBrush Color="#B6D3F6" x:Key="BrushLightPrimary" />
+    <SolidColorBrush Color="#A2BCDB" x:Key="BrushDarkLightPrimary" />
 
-    <SolidColorBrush x:Key="BrushBlack" Color="#1F1F1F" />
-    <SolidColorBrush x:Key="BrushDarkBlack" Color="#000000" />
+    <SolidColorBrush Color="#335D8E" x:Key="BrushPrimary" />
+    <SolidColorBrush Color="#2D537E" x:Key="BrushDarkPrimary" />
 
-    <SolidColorBrush x:Key="BrushYellow" Color="#F1C40F" />
-    <SolidColorBrush x:Key="BrushDarkYellow" Color="#F39C12" />
+    <SolidColorBrush Color="#1F1F1F" x:Key="BrushBlack" />
+    <SolidColorBrush Color="#000000" x:Key="BrushDarkBlack" />
 
-    <SolidColorBrush x:Key="BrushGreen" Color="#2ECC71" />
-    <SolidColorBrush x:Key="BrushDarkGreen" Color="#27AE60" />
+    <SolidColorBrush Color="#F1C40F" x:Key="BrushYellow" />
+    <SolidColorBrush Color="#F39C12" x:Key="BrushDarkYellow" />
 
-    <SolidColorBrush x:Key="BrushRed" Color="#E74C3C" />
-    <SolidColorBrush x:Key="BrushDarkRed" Color="#C0392B" />
+    <SolidColorBrush Color="#2ECC71" x:Key="BrushGreen" />
+    <SolidColorBrush Color="#27AE60" x:Key="BrushDarkGreen" />
+
+    <SolidColorBrush Color="#E74C3C" x:Key="BrushRed" />
+    <SolidColorBrush Color="#C0392B" x:Key="BrushDarkRed" />
 
 
-    <SolidColorBrush x:Key="BrushBackground" Color="#D2DDEF" />
-    <SolidColorBrush x:Key="BrushBackground2" Color="#DFECFE" />
-    <SolidColorBrush x:Key="BrushButton" Color="#FFFFFF" />
-    <SolidColorBrush x:Key="BrushGroup" Color="LightSteelBlue" />
-    <SolidColorBrush x:Key="BrushDanger" Color="#E45B5B" />
-    <SolidColorBrush x:Key="BrushSuccess" Color="#209A6E" />
-    <SolidColorBrush x:Key="BrushDisable" Color="#76707F" />
-    <SolidColorBrush x:Key="BrushControl" Color="#ECF0F4" />
-    <SolidColorBrush x:Key="BrushElement" Color="#E5E9EF" />
-    <SolidColorBrush x:Key="SolidDarkBlue" Color="#335D8E" />
-    <SolidColorBrush x:Key="SolidDisabled" Color="Gray" />
-    <SolidColorBrush x:Key="SolidControl" Color="#E5E9EF" />
-    <SolidColorBrush x:Key="SolidControlBorder" Color="#ECF0F4" />
-    <SolidColorBrush x:Key="SolidWhite" Color="#FFFFFF" />
+    <SolidColorBrush Color="#D2DDEF" x:Key="BrushBackground" />
+    <SolidColorBrush Color="#DFECFE" x:Key="BrushBackground2" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="BrushButton" />
+    <SolidColorBrush Color="LightSteelBlue" x:Key="BrushGroup" />
+    <SolidColorBrush Color="#E45B5B" x:Key="BrushDanger" />
+    <SolidColorBrush Color="#209A6E" x:Key="BrushSuccess" />
+    <SolidColorBrush Color="#76707F" x:Key="BrushDisable" />
+    <SolidColorBrush Color="#ECF0F4" x:Key="BrushControl" />
+    <SolidColorBrush Color="#E5E9EF" x:Key="BrushElement" />
+    <SolidColorBrush Color="#335D8E" x:Key="SolidDarkBlue" />
+    <SolidColorBrush Color="Gray" x:Key="SolidDisabled" />
+    <SolidColorBrush Color="#E5E9EF" x:Key="SolidControl" />
+    <SolidColorBrush Color="#ECF0F4" x:Key="SolidControlBorder" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="SolidWhite" />
     <Color
-        x:Key="ColorDarkBlue"
         A="255"
         B="0x8E"
         G="0x5D"
-        R="0x33" />
+        R="0x33"
+        x:Key="ColorDarkBlue" />
 
     <Color
-        x:Key="ColorButton"
         A="0xFF"
         B="0xFF"
         G="0xFF"
-        R="0xFF" />
+        R="0xFF"
+        x:Key="ColorButton" />
     <Color
-        x:Key="ColorDisable"
         A="0xFF"
         B="0x76"
         G="0x70"
-        R="0x7F" />
+        R="0x7F"
+        x:Key="ColorDisable" />
     <Color
-        x:Key="ColorPrimary"
         A="0xFF"
         B="0xAF"
         G="0x7C"
-        R="0x51" />
+        R="0x51"
+        x:Key="ColorPrimary" />
     <Color
-        x:Key="ColorBackground"
         A="0xFF"
         B="0xD2"
         G="0xDD"
-        R="0xEF" />
+        R="0xEF"
+        x:Key="ColorBackground" />
     <Color
-        x:Key="ColorControl"
         A="0xFF"
         B="0xEF"
         G="0xE9"
-        R="0xE5" />
+        R="0xE5"
+        x:Key="ColorControl" />
     <Color
-        x:Key="Color.MouseOver.Foreground"
         B="0xFF"
         G="0xFF"
-        R="0xFF" />
+        R="0xFF"
+        x:Key="Color.MouseOver.Foreground" />
     <Color
-        x:Key="Color.Element.Disable"
         B="0x77"
         G="0x77"
-        R="0x77" />
+        R="0x77"
+        x:Key="Color.Element.Disable" />
     <Color
-        x:Key="MainColor"
         A="0xFF"
         B="0xF3"
         G="0xE3"
-        R="0xD7" />
-    <SolidColorBrush x:Key="SolidMain" Color="{StaticResource ColorBackground}" />
+        R="0xD7"
+        x:Key="MainColor" />
+    <SolidColorBrush Color="{StaticResource ColorBackground}" x:Key="SolidMain" />
 
-    <SolidColorBrush x:Key="ColorSolidRed" Color="Red" />
-    <SolidColorBrush x:Key="ColorSolidGreen" Color="LimeGreen" />
-    <SolidColorBrush x:Key="ColorSolidOrange" Color="Orange" />
-    <SolidColorBrush x:Key="ColorSolidWhite" Color="White" />
-    <SolidColorBrush x:Key="ColorSolidGray" Color="Gray" />
-    <SolidColorBrush x:Key="ColorSolidYellow" Color="Yellow" />
-    <SolidColorBrush x:Key="ColorSolidTransparent" Color="Transparent" />
-    <SolidColorBrush x:Key="ColorActiveOption" Color="#64b4ff" />
-    <SolidColorBrush x:Key="ColorNotActiveOption" Color="Transparent" />
-    <SolidColorBrush x:Key="ColorDisabledPos" Color="Gray" />
-    <SolidColorBrush x:Key="ColorEditEnabled" Color="Orange" />
-    <SolidColorBrush x:Key="ColorEditDisabled" Color="#003273" />
-    <SolidColorBrush x:Key="ColorSolidOptionOn" Color="#64b4ff" />
-    <SolidColorBrush x:Key="ColorSolidOptionOff" Color="#e0e3eb" />
-    <SolidColorBrush x:Key="ColorSolidLightBlu" Color="#64b4ff" />
-    <SolidColorBrush x:Key="ColorSolidDarkBlu" Color="#003273" />
-    <SolidColorBrush x:Key="ColorSolidGrayBlu" Color="#c4d6f0" />
-    <SolidColorBrush x:Key="ColorSolidDarkBlue" Color="#335d8e" />
+    <SolidColorBrush Color="Red" x:Key="ColorSolidRed" />
+    <SolidColorBrush Color="LimeGreen" x:Key="ColorSolidGreen" />
+    <SolidColorBrush Color="Orange" x:Key="ColorSolidOrange" />
+    <SolidColorBrush Color="White" x:Key="ColorSolidWhite" />
+    <SolidColorBrush Color="Gray" x:Key="ColorSolidGray" />
+    <SolidColorBrush Color="Yellow" x:Key="ColorSolidYellow" />
+    <SolidColorBrush Color="Transparent" x:Key="ColorSolidTransparent" />
+    <SolidColorBrush Color="#64b4ff" x:Key="ColorActiveOption" />
+    <SolidColorBrush Color="Transparent" x:Key="ColorNotActiveOption" />
+    <SolidColorBrush Color="Gray" x:Key="ColorDisabledPos" />
+    <SolidColorBrush Color="Orange" x:Key="ColorEditEnabled" />
+    <SolidColorBrush Color="#003273" x:Key="ColorEditDisabled" />
+    <SolidColorBrush Color="#64b4ff" x:Key="ColorSolidOptionOn" />
+    <SolidColorBrush Color="#e0e3eb" x:Key="ColorSolidOptionOff" />
+    <SolidColorBrush Color="#64b4ff" x:Key="ColorSolidLightBlu" />
+    <SolidColorBrush Color="#003273" x:Key="ColorSolidDarkBlu" />
+    <SolidColorBrush Color="#c4d6f0" x:Key="ColorSolidGrayBlu" />
+    <SolidColorBrush Color="#335d8e" x:Key="ColorSolidDarkBlue" />
 </ResourceDictionary>
