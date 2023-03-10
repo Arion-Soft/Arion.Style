@@ -1446,7 +1446,7 @@
             <!--  TABLES  -->
             <DataGrid Style="{DynamicResource DataGridStyle1}" />
         </TabItem>
-        <TabItem Header="Tabs" IsSelected="True">
+        <TabItem Header="Tabs">
             <!--  TABS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -2525,6 +2525,71 @@
                     Grid.Row="1"
                     Margin="20"
                     Style="{StaticResource OutlineLg}" />
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Expander" IsSelected="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Content="Expander"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
+                <DockPanel Grid.Row="1">
+                    <Expander
+                        DockPanel.Dock="Top"
+                        ExpandDirection="Down"
+                        Header="asdasdasdasdasdasdasdasd">
+                        <Expander.Content>
+                            <Label Content="asdasdasdsad" />
+                        </Expander.Content>
+                    </Expander>
+                    <Expander
+                        DockPanel.Dock="Bottom"
+                        ExpandDirection="Up"
+                        Header="asdasdasdasdasdasdasdasd">
+                        <Expander.Content>
+                            <Label Content="asdasdasdsad" />
+                        </Expander.Content>
+                    </Expander>
+                    <Expander
+                        DockPanel.Dock="Right"
+                        ExpandDirection="Left"
+                        Header="sdassss"
+                        HorizontalAlignment="Right">
+                        <Expander.Content>
+                            <Label Content="asdasdasdsad" />
+                        </Expander.Content>
+                    </Expander>
+                    <Expander
+                        DockPanel.Dock="Left"
+                        ExpandDirection="Right"
+                        Header="dasd"
+                        HorizontalAlignment="Left">
+                        <Expander.Content>
+                            <Label Content="asdasdasdsad" />
+                        </Expander.Content>
+                    </Expander>
+
+                </DockPanel>
             </Grid>
         </TabItem>
     </TabControl>

@@ -55,8 +55,10 @@
                                 Margin="4,0,0,0"
                                 RecognizesAccessKey="True"
                                 SnapsToDevicePixels="True"
-                                TextElement.FontWeight="Bold"
-                                VerticalAlignment="Center" />
+                                TextElement.FontSize="{TemplateBinding FontSize}"
+                                TextElement.FontWeight="{TemplateBinding FontWeight}"
+                                VerticalAlignment="Center"
+                                x:Name="PART_ContentHost" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -112,6 +114,8 @@
                                 Margin="4,0,0,0"
                                 RecognizesAccessKey="True"
                                 SnapsToDevicePixels="True"
+                                TextElement.FontSize="{TemplateBinding FontSize}"
+                                TextElement.FontWeight="{TemplateBinding FontWeight}"
                                 VerticalAlignment="Center" />
                         </Grid>
                     </Border>
@@ -153,14 +157,6 @@
                                         </TransformGroup.Children>
                                     </TransformGroup>
                                 </Grid.LayoutTransform>
-                                <Ellipse
-                                    Fill="{StaticResource Expander.Static.Circle.Fill}"
-                                    Height="19"
-                                    HorizontalAlignment="Center"
-                                    Stroke="{StaticResource Expander.Static.Circle.Stroke}"
-                                    VerticalAlignment="Center"
-                                    Width="19"
-                                    x:Name="circle" />
                                 <Path
                                     Data="M 1,1.5 L 4.5,5 L 8,1.5"
                                     HorizontalAlignment="Center"
@@ -175,8 +171,15 @@
                                 HorizontalAlignment="Center"
                                 Margin="0,4,0,0"
                                 RecognizesAccessKey="True"
+                                RenderTransformOrigin="0.5,0.5"
                                 SnapsToDevicePixels="True"
-                                VerticalAlignment="Top" />
+                                TextElement.FontSize="{TemplateBinding FontSize}"
+                                TextElement.FontWeight="{TemplateBinding FontWeight}"
+                                VerticalAlignment="Top">
+                                <ContentPresenter.RenderTransform>
+                                    <RotateTransform Angle="90" />
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -184,19 +187,12 @@
                             <Setter Property="Data" TargetName="arrow" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Stroke" TargetName="circle" Value="{StaticResource Expander.MouseOver.Circle.Stroke}" />
-                            <Setter Property="Fill" TargetName="circle" Value="{StaticResource Expander.MouseOver.Circle.Fill}" />
                             <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Stroke" TargetName="circle" Value="{StaticResource Expander.Pressed.Circle.Stroke}" />
-                            <Setter Property="StrokeThickness" TargetName="circle" Value="1.5" />
-                            <Setter Property="Fill" TargetName="circle" Value="{StaticResource Expander.Pressed.Circle.Fill}" />
                             <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Stroke" TargetName="circle" Value="{StaticResource Expander.Disabled.Circle.Stroke}" />
-                            <Setter Property="Fill" TargetName="circle" Value="{StaticResource Expander.Disabled.Circle.Fill}" />
                             <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -228,7 +224,7 @@
                                     Data="M 1,1.5 L 4.5,5 L 8,1.5"
                                     HorizontalAlignment="Center"
                                     SnapsToDevicePixels="false"
-                                    Stroke="Red"
+                                    Stroke="Black"
                                     StrokeThickness="2"
                                     VerticalAlignment="Center"
                                     x:Name="arrow" />
@@ -237,10 +233,17 @@
                             <ContentPresenter
                                 Grid.Row="1"
                                 HorizontalAlignment="Center"
-                                Margin="0,4,0,0"
+                                Margin="0,4,0,8"
                                 RecognizesAccessKey="True"
+                                RenderTransformOrigin="0.5,0.5"
                                 SnapsToDevicePixels="True"
-                                VerticalAlignment="Top" />
+                                TextElement.FontSize="{TemplateBinding FontSize}"
+                                TextElement.FontWeight="{TemplateBinding FontWeight}"
+                                VerticalAlignment="Top">
+                                <ContentPresenter.RenderTransform>
+                                    <RotateTransform Angle="270" />
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -248,19 +251,12 @@
                             <Setter Property="Data" TargetName="arrow" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <!--<Setter TargetName="circle" Property="Stroke" Value="{StaticResource Expander.MouseOver.Circle.Stroke}" />
-                                <Setter TargetName="circle" Property="Fill" Value="{StaticResource Expander.MouseOver.Circle.Fill}" />-->
                             <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <!--<Setter TargetName="circle" Property="Stroke" Value="{StaticResource Expander.Pressed.Circle.Stroke}" />
-                                <Setter TargetName="circle" Property="StrokeThickness" Value="1.5" />
-                                <Setter TargetName="circle" Property="Fill" Value="{StaticResource Expander.Pressed.Circle.Fill}" />-->
                             <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <!--<Setter TargetName="circle" Property="Stroke" Value="{StaticResource Expander.Disabled.Circle.Stroke}" />
-                                <Setter TargetName="circle" Property="Fill" Value="{StaticResource Expander.Disabled.Circle.Fill}" />-->
                             <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -275,6 +271,8 @@
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Light" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Expander}">
@@ -288,7 +286,7 @@
                             <Border
                                 BorderBrush="#aaadb2"
                                 BorderThickness="1"
-                                CornerRadius="5,5,5,5"
+                                CornerRadius="5"
                                 DockPanel.Dock="Top"
                                 Name="BorderToggle">
                                 <ToggleButton
@@ -302,14 +300,15 @@
                                     FontStyle="{TemplateBinding FontStyle}"
                                     FontWeight="{TemplateBinding FontWeight}"
                                     Foreground="{TemplateBinding Foreground}"
-                                    Height="25"
+                                    HorizontalAlignment="Stretch"
                                     HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
                                     Margin="0"
-                                    MinHeight="0"
+                                    MinHeight="30"
                                     MinWidth="0"
-                                    Padding="{TemplateBinding Padding}"
+                                    Padding="0"
                                     Style="{StaticResource ExpanderDownHeaderStyle}"
+                                    VerticalAlignment="Stretch"
                                     VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                     x:Name="HeaderSite" />
                             </Border>
@@ -334,23 +333,28 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsExpanded" Value="true">
-                            <Setter Property="CornerRadius" TargetName="BorderToggle" Value="5,5,0,0" />
                             <Setter Property="Visibility" TargetName="BorderContent" Value="Visible" />
                             <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Right">
-                            <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Right" />
-                            <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Left" />
+                            <Setter Property="CornerRadius" TargetName="BorderToggle" Value="5,0,0,5" />
+                            <Setter Property="CornerRadius" TargetName="BorderContent" Value="0,5,5,5" />
+                            <Setter Property="DockPanel.Dock" TargetName="BorderContent" Value="Right" />
+                            <Setter Property="DockPanel.Dock" TargetName="BorderToggle" Value="Left" />
                             <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderRightHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Up">
-                            <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Top" />
-                            <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Bottom" />
+                            <Setter Property="CornerRadius" TargetName="BorderToggle" Value="0,0,5,5" />
+                            <Setter Property="CornerRadius" TargetName="BorderContent" Value="5,5,0,0" />
+                            <Setter Property="DockPanel.Dock" TargetName="BorderContent" Value="Top" />
+                            <Setter Property="DockPanel.Dock" TargetName="BorderToggle" Value="Bottom" />
                             <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderUpHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Left">
-                            <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Left" />
-                            <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Right" />
+                            <Setter Property="CornerRadius" TargetName="BorderToggle" Value="0,5,5,0" />
+                            <Setter Property="CornerRadius" TargetName="BorderContent" Value="5,0,0,5" />
+                            <Setter Property="DockPanel.Dock" TargetName="BorderContent" Value="Left" />
+                            <Setter Property="DockPanel.Dock" TargetName="BorderToggle" Value="Right" />
                             <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderLeftHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
