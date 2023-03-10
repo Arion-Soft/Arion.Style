@@ -42,6 +42,7 @@
                             Grid.Column="1"
                             TextElement.FontSize="{TemplateBinding FontSize}"
                             TextElement.Foreground="{TemplateBinding Foreground}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Visibility="Collapsed"
                             x:Name="PART_ContentHost" />
                     </Grid>
