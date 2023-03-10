@@ -1446,9 +1446,68 @@
             <!--  TABLES  -->
             <DataGrid Style="{DynamicResource DataGridStyle1}" />
         </TabItem>
-        <TabItem Header="Tabs">
+        <TabItem Header="Tabs" IsSelected="True">
             <!--  TABS  -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Content="Tabs"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
+                <TabControl
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    TabStripPlacement="Left">
+                    <TabItem Header="Head 1" />
+                    <TabItem Header="Head 2" />
+                    <TabItem Header="Head 3" />
+                    <TabItem Header="Head 4" />
+                </TabControl>
+                <TabControl
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    TabStripPlacement="Top">
+                    <TabItem Header="Head 1" />
+                    <TabItem Header="Head 2" />
+                    <TabItem Header="Head 3" />
+                    <TabItem Header="Head 4" />
+                </TabControl>
+                <TabControl
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    TabStripPlacement="Right">
+                    <TabItem Header="Head 1" />
+                    <TabItem Header="Head 2" />
+                    <TabItem Header="Head 3" />
+                    <TabItem Header="Head 4" />
+                </TabControl>
+                <TabControl
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    TabStripPlacement="Bottom">
+                    <TabItem Header="Head 1" />
+                    <TabItem Header="Head 2" />
+                    <TabItem Header="Head 3" />
+                    <TabItem Header="Head 4" />
+                </TabControl>
+            </Grid>
         </TabItem>
         <!--  TEXT BOXES  -->
         <TabItem Header="Text boxes">
@@ -1596,7 +1655,7 @@
                     Width="480" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle buttons" IsSelected="True">
+        <TabItem Header="Toggle buttons">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>

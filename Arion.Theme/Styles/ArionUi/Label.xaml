@@ -7,6 +7,7 @@
     <Style TargetType="{x:Type Label}">
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
         <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="FontWeight" Value="Medium" />
     </Style>
 
     <Style TargetType="{x:Type Label}" x:Key="Lbl">
