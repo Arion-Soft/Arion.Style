@@ -1596,7 +1596,7 @@
                     Width="480" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle buttons">
+        <TabItem Header="Toggle buttons" IsSelected="True">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -1627,7 +1627,7 @@
                     Grid.Column="1"
                     Grid.Row="1"
                     Orientation="Horizontal">
-                    <ToggleButton Margin="5" />
+                    <ToggleButton Content="asdasd" Margin="5" />
                     <ToggleButton IsEnabled="False" Margin="5" />
                 </StackPanel>
 
@@ -2400,7 +2400,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Shadow" IsSelected="True">
+        <TabItem Header="Shadow">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />

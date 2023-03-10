@@ -12,26 +12,39 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="2"
-                        CornerRadius="10"
-                        Height="20"
-                        Padding="{TemplateBinding Padding}"
-                        Width="32"
-                        x:Name="Border">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="32" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
                         <Border
-                            Background="White"
-                            CornerRadius="8"
-                            Height="16"
-                            HorizontalAlignment="Left"
-                            Margin="0"
-                            Padding="0"
-                            VerticalAlignment="Center"
-                            Width="16"
-                            x:Name="TgButton" />
-                    </Border>
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="2"
+                            CornerRadius="10"
+                            Height="20"
+                            Padding="{TemplateBinding Padding}"
+                            Width="32"
+                            x:Name="Border">
+                            <Border
+                                Background="White"
+                                CornerRadius="8"
+                                Height="16"
+                                HorizontalAlignment="Left"
+                                Margin="0"
+                                Padding="0"
+                                VerticalAlignment="Center"
+                                Width="16"
+                                x:Name="TgButton" />
+                        </Border>
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            Grid.Column="1"
+                            TextElement.FontSize="{TemplateBinding FontSize}"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
+                            Visibility="Collapsed"
+                            x:Name="PART_ContentHost" />
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <!--  CHECKED - TRUE | Hover  -->
                         <MultiTrigger>
@@ -203,13 +216,15 @@
                         </MultiTrigger>
 
                         <Trigger Property="HasContent" Value="true">
-                            <Setter Property="Padding" Value="4,-1,0,0" />
+                            <Setter Property="Margin" TargetName="PART_ContentHost" Value="5,0,0,0" />
+                            <Setter Property="Visibility" TargetName="PART_ContentHost" Value="Visible" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
+
     <Style TargetType="ToggleButton" x:Key="TgOnOff">
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -270,6 +285,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+
     <Style TargetType="ToggleButton" x:Key="OnOffToggle">
         <Setter Property="Template">
             <Setter.Value>
@@ -388,6 +404,78 @@
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Background" Value="{StaticResource SolidDisabled}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ToggleButton}" x:Key="ToggleButtonBaseLg">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="Golos UI VF" />
+        <Setter Property="MinWidth" Value="40" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Padding" Value="16,8" />
+    </Style>
+    <Style
+        BasedOn="{StaticResource ToggleButtonBaseLg}"
+        TargetType="{x:Type ToggleButton}"
+        x:Key="TgOutlineLg">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            Effect="{TemplateBinding Effect}"
+                            HorizontalAlignment="Center"
+                            Name="Presenter"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
