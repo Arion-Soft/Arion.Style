@@ -3,24 +3,33 @@
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="{x:Type RepeatButton}">
-        <Setter Property="Background" Value="{StaticResource BrushButton}" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
-        <Setter Property="Focusable" Value="False" />
-        <Setter Property="FontWeight" Value="500" />
-        <Setter Property="MinHeight" Value="35" />
-        <Setter Property="MinWidth" Value="35" />
-        <Setter Property="FontStyle" Value="Normal" />
-        <Setter Property="BorderBrush" Value="{StaticResource BrushButton}" />
+    <Style TargetType="{x:Type RepeatButton}" x:Key="ButtonBaseLg">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="Golos UI VF" />
+        <Setter Property="MinWidth" Value="40" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Padding" Value="16,8" />
+    </Style>
+
+    <Style
+        BasedOn="{StaticResource ButtonBaseLg}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbFilledLg">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="{StaticResource Pr500}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="RepeatButton">
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="1"
-                        CornerRadius="5"
-                        Name="border">
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
                         <ContentPresenter
                             Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
@@ -28,19 +37,119 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushPrimary}" />
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource BrushButton}" />
-                        </Trigger>
-                        <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushPrimary}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Pr600}" />
+                            <Setter Property="Background" Value="{StaticResource Pr600}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource BrushPrimary}" />
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushPrimary}" />
+                            <Setter Property="Background" Value="{StaticResource Pr700}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Pr700}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource BrushDisable}" />
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushDisable}" />
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseLg}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbOutlineLg">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            Effect="{TemplateBinding Effect}"
+                            HorizontalAlignment="Center"
+                            Name="Presenter"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseLg}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbTextLg">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#F6F8F9" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -48,51 +157,269 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type RepeatButton}" x:Key="RoundedRepeatButtonStyle">
-        <Setter Property="Background" Value="{StaticResource BrushButton}" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
-        <Setter Property="Focusable" Value="False" />
-        <Setter Property="FontWeight" Value="500" />
-        <Setter Property="FontStyle" Value="Normal" />
-        <Setter Property="BorderBrush" Value="{StaticResource BrushButton}" />
+    <!--  MEDIUM  -->
+
+    <Style TargetType="{x:Type RepeatButton}" x:Key="ButtonBaseMedium">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="Golos UI VF" />
+        <Setter Property="MinWidth" Value="32" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Padding" Value="12,4" />
+    </Style>
+
+    <Style
+        BasedOn="{StaticResource ButtonBaseMedium}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbFilledMd">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#4094F7" />
+        <Setter Property="BorderBrush" Value="#4094F7" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="RepeatButton">
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="1"
-                        CornerRadius="5"
-                        Name="border">
-                        <Grid>
-                            <Rectangle RadiusX="1" RadiusY="1" />
-                            <TextBlock
-                                Foreground="{TemplateBinding Foreground}"
-                                HorizontalAlignment="Center"
-                                Margin="0,-5,0,0"
-                                Name="text"
-                                Padding="0"
-                                Text="{TemplateBinding Content}"
-                                VerticalAlignment="Center" />
-                        </Grid>
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushPrimary}" />
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource BrushButton}" />
-                        </Trigger>
-                        <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushPrimary}" />
+                            <Setter Property="BorderBrush" Value="#0E73F6" />
+                            <Setter Property="Background" Value="#0E73F6" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource BrushPrimary}" />
-                            <Setter Property="Foreground" TargetName="text" Value="{StaticResource BrushButton}" />
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushPrimary}" />
+                            <Setter Property="Background" Value="#0452C8" />
+                            <Setter Property="BorderBrush" Value="#0452C8" />
                         </Trigger>
+
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource BrushDisable}" />
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BrushDisable}" />
-                            <Setter Property="Foreground" TargetName="text" Value="{StaticResource BrushButton}" />
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseMedium}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbOutlineMd">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseMedium}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbTextMd">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#F6F8F9" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  SMALL  -->
+
+    <Style TargetType="{x:Type RepeatButton}" x:Key="ButtonBaseSmall">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="Golos UI VF" />
+        <Setter Property="MinWidth" Value="24" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Padding" Value="8,0" />
+    </Style>
+
+    <Style
+        BasedOn="{StaticResource ButtonBaseSmall}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbFilledSm">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#4094F7" />
+        <Setter Property="BorderBrush" Value="#4094F7" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#0E73F6" />
+                            <Setter Property="Background" Value="#0E73F6" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#0452C8" />
+                            <Setter Property="BorderBrush" Value="#0452C8" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseSmall}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbOutlineSm">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseSmall}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbTextSm">
+        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#F6F8F9" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

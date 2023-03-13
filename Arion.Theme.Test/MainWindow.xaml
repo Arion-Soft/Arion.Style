@@ -1655,10 +1655,12 @@
                     Width="480" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle buttons">
+        <TabItem Header="Toggle buttons" IsSelected="True">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -1683,7 +1685,7 @@
                     Width="Auto" />
 
                 <StackPanel
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="1"
                     Orientation="Horizontal">
                     <ToggleButton Content="asdasd" Margin="5" />
@@ -1691,7 +1693,7 @@
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="2"
                     Orientation="Horizontal">
                     <ToggleButton IsChecked="True" Margin="5" />
@@ -1702,7 +1704,7 @@
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="3"
                     Orientation="Horizontal">
                     <ToggleButton
@@ -1714,6 +1716,21 @@
                         IsEnabled="False"
                         IsThreeState="True"
                         Margin="5" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <ToggleButton
+                        Content="asd"
+                        Margin="5"
+                        Style="{StaticResource TgOutlineLg}" />
+                    <ToggleButton
+                        Content="asd"
+                        IsChecked="True"
+                        Margin="5"
+                        Style="{StaticResource TgOutlineLg}" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -2528,7 +2545,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Expander" IsSelected="True">
+        <TabItem Header="Expander">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
