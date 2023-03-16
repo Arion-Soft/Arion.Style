@@ -13,18 +13,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Window.Resources>
-        <Storyboard x:Key="Storyboard1">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="lblStor" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="566.102" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="lblStor" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-1.695" />
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-    </Window.Resources>
     <TabControl TabStripPlacement="Top">
         <TabItem Header="Buttons">
             <!--  BUTTONS  -->
@@ -70,8 +58,7 @@
                     RenderTransformOrigin="0.5,0.5"
                     Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
-                    Width="Auto"
-                    x:Name="lblStor">
+                    Width="Auto">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform />
@@ -1688,16 +1675,23 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     Orientation="Horizontal">
-                    <ToggleButton Content="asdasd" Margin="5" />
-                    <ToggleButton IsEnabled="False" Margin="5" />
+                    <ToggleButton Content="Toggle button" Margin="5" />
+                    <ToggleButton
+                        Content="Toggle button"
+                        IsEnabled="False"
+                        Margin="5" />
                 </StackPanel>
 
                 <StackPanel
                     Grid.Column="0"
                     Grid.Row="2"
                     Orientation="Horizontal">
-                    <ToggleButton IsChecked="True" Margin="5" />
                     <ToggleButton
+                        Content="Toggle button"
+                        IsChecked="True"
+                        Margin="5" />
+                    <ToggleButton
+                        Content="Toggle button"
                         IsChecked="True"
                         IsEnabled="False"
                         Margin="5" />
@@ -1708,10 +1702,12 @@
                     Grid.Row="3"
                     Orientation="Horizontal">
                     <ToggleButton
+                        Content="Toggle button"
                         IsChecked="{x:Null}"
                         IsThreeState="True"
                         Margin="5" />
                     <ToggleButton
+                        Content="Toggle button"
                         IsChecked="{x:Null}"
                         IsEnabled="False"
                         IsThreeState="True"
@@ -1719,15 +1715,15 @@
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="1"
-                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.Row="4"
                     Orientation="Horizontal">
                     <ToggleButton
-                        Content="asd"
+                        Content="Toggle button"
                         Margin="5"
                         Style="{StaticResource TgOutlineLg}" />
                     <ToggleButton
-                        Content="asd"
+                        Content="Toggle button"
                         IsChecked="True"
                         Margin="5"
                         Style="{StaticResource TgOutlineLg}" />
@@ -2497,7 +2493,7 @@
                     Content="Shadow"
                     FontSize="32"
                     Grid.Column="0"
-                    Grid.ColumnSpan="9"
+                    Grid.ColumnSpan="5"
                     Grid.Row="0"
                     HorizontalAlignment="Left"
                     Margin="10"
@@ -2574,35 +2570,35 @@
                     <Expander
                         DockPanel.Dock="Top"
                         ExpandDirection="Down"
-                        Header="asdasdasdasdasdasdasdasd">
+                        Header="Expander">
                         <Expander.Content>
-                            <Label Content="asdasdasdsad" />
+                            <Label Content="Expander content" />
                         </Expander.Content>
                     </Expander>
                     <Expander
                         DockPanel.Dock="Bottom"
                         ExpandDirection="Up"
-                        Header="asdasdasdasdasdasdasdasd">
+                        Header="Expander">
                         <Expander.Content>
-                            <Label Content="asdasdasdsad" />
+                            <Label Content="Expander content" />
                         </Expander.Content>
                     </Expander>
                     <Expander
                         DockPanel.Dock="Right"
                         ExpandDirection="Left"
-                        Header="sdassss"
+                        Header="Expander"
                         HorizontalAlignment="Right">
                         <Expander.Content>
-                            <Label Content="asdasdasdsad" />
+                            <Label Content="Expander content" />
                         </Expander.Content>
                     </Expander>
                     <Expander
                         DockPanel.Dock="Left"
                         ExpandDirection="Right"
-                        Header="dasd"
+                        Header="Expander"
                         HorizontalAlignment="Left">
                         <Expander.Content>
-                            <Label Content="asdasdasdsad" />
+                            <Label Content="Expander content" />
                         </Expander.Content>
                     </Expander>
 

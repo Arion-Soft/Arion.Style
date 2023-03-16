@@ -46,6 +46,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\DisplayControl.xaml.cs">
+      <DependentUpon>DisplayControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\DisplayControl.xaml" />
     <Page Include="Controls\Icon.xaml" />
     <Page Include="Controls\PasswordInput.xaml" />
     <Page Include="Controls\TextInput.xaml" />
@@ -281,6 +285,18 @@
     <Content Include="Images\OutlineMd.png" />
     <Content Include="Images\OutlineSm.png" />
     <Content Include="Images\Arion.Style.png" />
+    <Content Include="nugets\Arion.Style.0.1.0.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.10.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.11.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.3.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.4.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.5.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.6.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.7.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.8.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.3.9.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.4.nupkg" />
+    <Content Include="nugets\Arion.Style.0.1.5.nupkg" />
     <Content Include="Readme.md" />
     <Resource Include="Fonts\GolosUi\GolosUi.ttf" />
     <Content Include="Icons\Images\Drive.png">
