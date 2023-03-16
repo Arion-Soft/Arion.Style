@@ -73,6 +73,9 @@ namespace Arion.Theme.Controls
         public Icon()
         {
             InitializeComponent();
+            Fill = Color.FromRgb(0x0,0x0,0x0);
+            Width = 20;
+            Height = 20;
         }
 
         private void Icon_OnLoaded(object sender, RoutedEventArgs e)

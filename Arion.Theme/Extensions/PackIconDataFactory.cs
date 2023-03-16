@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Arion.Theme.Styles.ArionUi.Extensions
+namespace Arion.Theme.Extensions
 {
     /// ******************************************
     /// This code is auto generated. Do not amend.

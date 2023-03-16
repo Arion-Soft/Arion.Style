@@ -2,8 +2,8 @@
     Background="Transparent"
     Loaded="Icon_OnLoaded"
     Name="IconControl"
-    d:DesignHeight="20"
-    d:DesignWidth="20"
+    d:DesignHeight="40"
+    d:DesignWidth="40"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Controls.Icon"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -12,8 +12,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Path
         Data="{Binding ElementName=IconControl, Path=Image, Mode=TwoWay}"
-        Height="20"
+        HorizontalAlignment="Stretch"
         Name="ImageTest"
         Stretch="Uniform"
-        Width="20" />
+        VerticalAlignment="Stretch" />
 </UserControl>

@@ -2,7 +2,7 @@
 <package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>Arion.Style</id>
-        <version>0.1.5</version>
+        <version>0.1.6.3</version>
         <title>Arion Design</title>
         <authors>Ivan Budanov</authors>
         <owners>Arion Soft</owners>
@@ -11,6 +11,8 @@
         <description>Дизайн для элементов</description>
         <copyright>Arion soft</copyright>
         <tags>arion, design, style, arion-soft, arion-style, arion-theme</tags>
+        <license type="file">LICENSE.txt</license>
+        <readme>docs\Readme.md</readme>
     </metadata>
     <files>
         <file src="bin/Debug/Arion.Theme.dll" target="lib/net48" />
@@ -19,5 +21,6 @@
         <file src="bin/Debug/Arion.Theme.pdb" target="lib/net461" />
         <file src="arion-logo.png" target="images\" />
         <file src="Readme.md" target="docs\" />
+        <file src="licenses\LICENSE.txt" target="" />
     </files>
 </package>

@@ -2,8 +2,6 @@
     Background="#F6F8F9"
     Height="130"
     MouseDown="UserControl_MouseDown"
-    MouseEnter="ValueControl_OnMouseEnter"
-    MouseLeave="ValueControl_OnMouseLeave"
     Name="ValueControl"
     Width="230"
     d:DesignHeight="130"
@@ -17,38 +15,41 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="55" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Border>
             <Grid>
                 <Label
                     Content="{Binding ElementName=ValueControl, Path=ActualValue, StringFormat=0.0}"
-                    FontSize="54"
-                    FontWeight="Bold"
-                    HorizontalAlignment="Left"
-                    Margin="10,5,0,5"
+                    FontSize="{Binding ElementName=ValueControl, Path=ActualValueFontSize}"
+                    FontWeight="{Binding ElementName=ValueControl, Path=ActualValueFontWeight}"
+                    HorizontalAlignment="{Binding ElementName=ValueControl, Path=ActualValueHorizontalAlignment}"
+                    Margin="{Binding ElementName=ValueControl, Path=ActualValueMargin}"
                     Padding="0"
-                    VerticalAlignment="Bottom" />
-                <Label
-                    Content="{Binding ElementName=ValueControl, Path=Text}"
-                    FontSize="24"
-                    FontWeight="Bold"
-                    HorizontalAlignment="Right"
-                    Margin="10"
-                    Padding="0"
-                    VerticalAlignment="Bottom" />
+                    VerticalAlignment="{Binding ElementName=ValueControl, Path=ActualValueVerticalAlignment}" />
             </Grid>
         </Border>
         <Border Background="Transparent" Grid.Row="1">
             <Label
                 Content="{Binding ElementName=ValueControl, Path=TargetValue, StringFormat=0.0, ConverterParameter=RU}"
-                FontSize="24"
-                FontWeight="Medium"
-                HorizontalAlignment="Left"
-                Margin="13"
+                FontSize="{Binding ElementName=ValueControl, Path=TargetValueFontSize}"
+                FontWeight="{Binding ElementName=ValueControl, Path=TargetValueFontWeight}"
+                HorizontalAlignment="{Binding ElementName=ValueControl, Path=TargetValueHorizontalAlignment}"
+                Margin="{Binding ElementName=ValueControl, Path=TargetValueMargin}"
                 Padding="0"
-                VerticalAlignment="Center" />
+                VerticalAlignment="{Binding ElementName=ValueControl, Path=TargetValueVerticalAlignment}" />
         </Border>
+
+        <Label
+            Content="{Binding ElementName=ValueControl, Path=Text}"
+            FontSize="{Binding ElementName=ValueControl, Path=TextFontSize}"
+            FontWeight="{Binding ElementName=ValueControl, Path=TextFontWeight}"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            HorizontalAlignment="{Binding ElementName=ValueControl, Path=TextHorizontalAlignment}"
+            Margin="{Binding ElementName=ValueControl, Path=TextMargin}"
+            Padding="0"
+            VerticalAlignment="{Binding ElementName=ValueControl, Path=TextVerticalAlignment}" />
     </Grid>
 </UserControl>
