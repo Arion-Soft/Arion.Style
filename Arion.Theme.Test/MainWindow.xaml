@@ -156,11 +156,11 @@
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <controls:Icon Fill="White" Kind="Hand" />
-                                <Label
-                                    Content="Button"
+                                <TextBlock
                                     Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
+                                    Text="Button"
                                     VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
@@ -1439,13 +1439,11 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Label
                     Content="Tabs"
@@ -1459,46 +1457,51 @@
                     VerticalAlignment="Top"
                     Width="Auto" />
 
-                <TabControl
+                <DockPanel
                     Grid.Column="0"
-                    Grid.Row="1"
-                    TabStripPlacement="Left">
-                    <TabItem Header="Head 1" />
-                    <TabItem Header="Head 2" />
-                    <TabItem Header="Head 3" />
-                    <TabItem Header="Head 4" />
-                </TabControl>
-                <TabControl
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    TabStripPlacement="Top">
-                    <TabItem Header="Head 1" />
-                    <TabItem Header="Head 2" />
-                    <TabItem Header="Head 3" />
-                    <TabItem Header="Head 4" />
-                </TabControl>
-                <TabControl
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    TabStripPlacement="Right">
-                    <TabItem Header="Head 1" />
-                    <TabItem Header="Head 2" />
-                    <TabItem Header="Head 3" />
-                    <TabItem Header="Head 4" />
-                </TabControl>
-                <TabControl
-                    Grid.Column="3"
-                    Grid.Row="1"
-                    TabStripPlacement="Bottom">
-                    <TabItem Header="Head 1" />
-                    <TabItem Header="Head 2" />
-                    <TabItem Header="Head 3" />
-                    <TabItem Header="Head 4" />
-                </TabControl>
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1">
+                    <TabControl DockPanel.Dock="Left" TabStripPlacement="Left">
+                        <TabItem Header="Head 1 Content" />
+                        <TabItem Header="Head 2" />
+                        <TabItem Header="Head 3" />
+                        <TabItem Header="Head 4" />
+                    </TabControl>
+                    <TabControl
+                        DockPanel.Dock="Top"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        TabStripPlacement="Top">
+                        <TabItem Header="Head 1" />
+                        <TabItem Header="Head 2" />
+                        <TabItem Header="Head 3" />
+                        <TabItem Header="Head 4" />
+                    </TabControl>
+                    <TabControl
+                        DockPanel.Dock="Right"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        TabStripPlacement="Right">
+                        <TabItem Header="Head 1" />
+                        <TabItem Header="Head 2" />
+                        <TabItem Header="Head 3" />
+                        <TabItem Header="Head 4" />
+                    </TabControl>
+                    <TabControl
+                        DockPanel.Dock="Bottom"
+                        Grid.Column="3"
+                        Grid.Row="1"
+                        TabStripPlacement="Bottom">
+                        <TabItem Header="Head 1" />
+                        <TabItem Header="Head 2" />
+                        <TabItem Header="Head 3" />
+                        <TabItem Header="Head 4" />
+                    </TabControl>
+                </DockPanel>
             </Grid>
         </TabItem>
         <!--  TEXT BOXES  -->
-        <TabItem Header="Text boxes" IsSelected="True">
+        <TabItem Header="Text boxes">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -1654,6 +1657,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -1729,6 +1733,23 @@
                         IsChecked="True"
                         Margin="5"
                         Style="{StaticResource TgOutlineLg}" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Margin="0,5"
+                    Orientation="Horizontal">
+                    <ToggleButton Content="First" Style="{StaticResource TgOutlineFirstLg}" />
+                    <ToggleButton Content="Middle" Style="{StaticResource TgOutlineMiddleLg}" />
+                    <ToggleButton Content="last" Style="{StaticResource TgOutlineLastLg}" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Orientation="Horizontal">
+                    <ToggleButton Style="{StaticResource ListControlSelectMode}" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -2547,13 +2568,11 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
                 <Label
@@ -2568,11 +2587,12 @@
                     VerticalAlignment="Top"
                     Width="Auto" />
 
-                <DockPanel Grid.Row="1">
+                <DockPanel Grid.ColumnSpan="2" Grid.Row="1">
                     <Expander
                         DockPanel.Dock="Top"
                         ExpandDirection="Down"
-                        Header="Expander">
+                        Header="Expander"
+                        IsExpanded="False">
                         <Expander.Content>
                             <Label Content="Expander content" />
                         </Expander.Content>
@@ -2638,6 +2658,120 @@
                     Height="90"
                     Text="кВ"
                     Width="170" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="Label" IsSelected="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Content="Label"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
+                <Label
+                    Content="ExtraLight"
+                    FontWeight="ExtraLight"
+                    Grid.Column="0"
+                    Grid.Row="1" />
+                <Label
+                    Content="Light"
+                    FontWeight="Light"
+                    Grid.Column="0"
+                    Grid.Row="2" />
+                <Label
+                    Content="Regular"
+                    FontWeight="Regular"
+                    Grid.Column="0"
+                    Grid.Row="3" />
+                <Label
+                    Content="Normal"
+                    FontWeight="Normal"
+                    Grid.Column="0"
+                    Grid.Row="4" />
+                <Label
+                    Content="Medium"
+                    FontWeight="Medium"
+                    Grid.Column="0"
+                    Grid.Row="5" />
+                <Label
+                    Content="Bold"
+                    FontWeight="Bold"
+                    Grid.Column="0"
+                    Grid.Row="6" />
+                <Label
+                    Content="Black"
+                    FontWeight="Black"
+                    Grid.Column="0"
+                    Grid.Row="7" />
+
+                <Label
+                    Content="TextBlock"
+                    FontSize="32"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
+                <TextBlock
+                    FontWeight="ExtraLight"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Text="ExtraLight" />
+                <TextBlock
+                    FontWeight="Light"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Text="Light" />
+                <TextBlock
+                    FontWeight="Regular"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Text="Regular" />
+                <TextBlock
+                    FontWeight="Normal"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Text="Normal" />
+                <TextBlock
+                    FontWeight="Medium"
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Text="Medium" />
+                <TextBlock
+                    FontWeight="Bold"
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    Text="Bold" />
+                <TextBlock
+                    FontWeight="Black"
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    Text="Black" />
             </Grid>
         </TabItem>
     </TabControl>

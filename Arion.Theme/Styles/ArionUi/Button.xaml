@@ -36,6 +36,7 @@
                         <ContentPresenter
                             Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
                             VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>

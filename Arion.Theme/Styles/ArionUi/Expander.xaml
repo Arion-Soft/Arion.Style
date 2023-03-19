@@ -3,18 +3,18 @@
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <SolidColorBrush Color="#FF333333" x:Key="Expander.Static.Circle.Stroke" />
-    <SolidColorBrush Color="#FFFFFFFF" x:Key="Expander.Static.Circle.Fill" />
-    <SolidColorBrush Color="#FF333333" x:Key="Expander.Static.Arrow.Stroke" />
-    <SolidColorBrush Color="#FF5593FF" x:Key="Expander.MouseOver.Circle.Stroke" />
-    <SolidColorBrush Color="#FFF3F9FF" x:Key="Expander.MouseOver.Circle.Fill" />
-    <SolidColorBrush Color="#FF000000" x:Key="Expander.MouseOver.Arrow.Stroke" />
-    <SolidColorBrush Color="#FF3C77DD" x:Key="Expander.Pressed.Circle.Stroke" />
-    <SolidColorBrush Color="#FFD9ECFF" x:Key="Expander.Pressed.Circle.Fill" />
-    <SolidColorBrush Color="#FF000000" x:Key="Expander.Pressed.Arrow.Stroke" />
-    <SolidColorBrush Color="#FFBCBCBC" x:Key="Expander.Disabled.Circle.Stroke" />
-    <SolidColorBrush Color="#FFE6E6E6" x:Key="Expander.Disabled.Circle.Fill" />
-    <SolidColorBrush Color="#FF707070" x:Key="Expander.Disabled.Arrow.Stroke" />
+    <SolidColorBrush x:Key="Expander.Static.Circle.Stroke" Color="#FF333333" />
+    <SolidColorBrush x:Key="Expander.Static.Circle.Fill" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="Expander.Static.Arrow.Stroke" Color="#FF333333" />
+    <SolidColorBrush x:Key="Expander.MouseOver.Circle.Stroke" Color="#FF5593FF" />
+    <SolidColorBrush x:Key="Expander.MouseOver.Circle.Fill" Color="#FFF3F9FF" />
+    <SolidColorBrush x:Key="Expander.MouseOver.Arrow.Stroke" Color="#FF000000" />
+    <SolidColorBrush x:Key="Expander.Pressed.Circle.Stroke" Color="#FF3C77DD" />
+    <SolidColorBrush x:Key="Expander.Pressed.Circle.Fill" Color="#FFD9ECFF" />
+    <SolidColorBrush x:Key="Expander.Pressed.Arrow.Stroke" Color="#FF000000" />
+    <SolidColorBrush x:Key="Expander.Disabled.Circle.Stroke" Color="#FFBCBCBC" />
+    <SolidColorBrush x:Key="Expander.Disabled.Circle.Fill" Color="#FFE6E6E6" />
+    <SolidColorBrush x:Key="Expander.Disabled.Arrow.Stroke" Color="#FF707070" />
     <Style x:Key="ExpanderHeaderFocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -31,7 +31,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type ToggleButton}" x:Key="ExpanderDownHeaderStyle">
+    <Style x:Key="ExpanderDownHeaderStyle" TargetType="{x:Type ToggleButton}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -42,44 +42,44 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Path
-                                Data="M 1,1.5 L 4.5,5 L 8,1.5"
+                                x:Name="arrow"
                                 HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Data="M 1,1.5 L 4.5,5 L 8,1.5"
                                 SnapsToDevicePixels="false"
                                 Stroke="{StaticResource Expander.Static.Arrow.Stroke}"
-                                StrokeThickness="2"
-                                VerticalAlignment="Center"
-                                x:Name="arrow" />
+                                StrokeThickness="2" />
                             <ContentPresenter
+                                x:Name="PART_ContentHost"
                                 Grid.Column="1"
-                                HorizontalAlignment="Center"
-                                Margin="4,0,0,0"
+                                Margin="0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
                                 RecognizesAccessKey="True"
                                 SnapsToDevicePixels="True"
                                 TextElement.FontSize="{TemplateBinding FontSize}"
-                                TextElement.FontWeight="{TemplateBinding FontWeight}"
-                                VerticalAlignment="Center"
-                                x:Name="PART_ContentHost" />
+                                TextElement.FontWeight="{TemplateBinding FontWeight}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Data" TargetName="arrow" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
+                            <Setter TargetName="arrow" Property="Data" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type ToggleButton}" x:Key="ExpanderUpHeaderStyle">
+    <Style x:Key="ExpanderUpHeaderStyle" TargetType="{x:Type ToggleButton}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -100,164 +100,156 @@
                                     </TransformGroup>
                                 </Grid.LayoutTransform>
                                 <Path
-                                    Data="M 1,1.5 L 4.5,5 L 8,1.5"
+                                    x:Name="arrow"
                                     HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Data="M 1,1.5 L 4.5,5 L 8,1.5"
                                     SnapsToDevicePixels="false"
                                     Stroke="{StaticResource Expander.Static.Arrow.Stroke}"
-                                    StrokeThickness="2"
-                                    VerticalAlignment="Center"
-                                    x:Name="arrow" />
+                                    StrokeThickness="2" />
                             </Grid>
                             <ContentPresenter
                                 Grid.Column="1"
+                                Margin="0,0,0,0"
                                 HorizontalAlignment="Left"
-                                Margin="4,0,0,0"
+                                VerticalAlignment="Center"
                                 RecognizesAccessKey="True"
                                 SnapsToDevicePixels="True"
                                 TextElement.FontSize="{TemplateBinding FontSize}"
-                                TextElement.FontWeight="{TemplateBinding FontWeight}"
-                                VerticalAlignment="Center" />
+                                TextElement.FontWeight="{TemplateBinding FontWeight}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Data" TargetName="arrow" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
+                            <Setter TargetName="arrow" Property="Data" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type ToggleButton}" x:Key="ExpanderLeftHeaderStyle">
+    <Style x:Key="ExpanderLeftHeaderStyle" TargetType="{x:Type ToggleButton}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Border Padding="{TemplateBinding Padding}">
                         <Grid Background="Transparent" SnapsToDevicePixels="False">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid>
-                                <Grid.LayoutTransform>
-                                    <TransformGroup>
-                                        <TransformGroup.Children>
-                                            <TransformCollection>
-                                                <RotateTransform Angle="90" />
-                                            </TransformCollection>
-                                        </TransformGroup.Children>
-                                    </TransformGroup>
-                                </Grid.LayoutTransform>
+                            <Grid.LayoutTransform>
+                                <TransformGroup>
+                                    <TransformGroup.Children>
+                                        <TransformCollection>
+                                            <RotateTransform Angle="90" />
+                                        </TransformCollection>
+                                    </TransformGroup.Children>
+                                </TransformGroup>
+                            </Grid.LayoutTransform>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
                                 <Path
-                                    Data="M 1,1.5 L 4.5,5 L 8,1.5"
+                                    x:Name="arrow"
                                     HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Data="M 1,1.5 L 4.5,5 L 8,1.5"
                                     SnapsToDevicePixels="false"
                                     Stroke="{StaticResource Expander.Static.Arrow.Stroke}"
-                                    StrokeThickness="2"
-                                    VerticalAlignment="Center"
-                                    x:Name="arrow" />
+                                    StrokeThickness="2" />
                             </Grid>
                             <ContentPresenter
-                                Grid.Row="1"
-                                HorizontalAlignment="Center"
-                                Margin="0,4,0,0"
+                                Grid.Column="1"
+                                Margin="0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
                                 RecognizesAccessKey="True"
                                 RenderTransformOrigin="0.5,0.5"
                                 SnapsToDevicePixels="True"
                                 TextElement.FontSize="{TemplateBinding FontSize}"
-                                TextElement.FontWeight="{TemplateBinding FontWeight}"
-                                VerticalAlignment="Top">
-                                <ContentPresenter.RenderTransform>
-                                    <RotateTransform Angle="90" />
-                                </ContentPresenter.RenderTransform>
-                            </ContentPresenter>
+                                TextElement.FontWeight="{TemplateBinding FontWeight}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Data" TargetName="arrow" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
+                            <Setter TargetName="arrow" Property="Data" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type ToggleButton}" x:Key="ExpanderRightHeaderStyle">
+    <Style x:Key="ExpanderRightHeaderStyle" TargetType="{x:Type ToggleButton}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Border Padding="{TemplateBinding Padding}">
                         <Grid Background="Transparent" SnapsToDevicePixels="False">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid>
-                                <Grid.LayoutTransform>
-                                    <TransformGroup>
-                                        <TransformGroup.Children>
-                                            <TransformCollection>
-                                                <RotateTransform Angle="-90" />
-                                            </TransformCollection>
-                                        </TransformGroup.Children>
-                                    </TransformGroup>
-                                </Grid.LayoutTransform>
+                            <Grid.LayoutTransform>
+                                <TransformGroup>
+                                    <TransformGroup.Children>
+                                        <TransformCollection>
+                                            <RotateTransform Angle="270" />
+                                        </TransformCollection>
+                                    </TransformGroup.Children>
+                                </TransformGroup>
+                            </Grid.LayoutTransform>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="30" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
                                 <Path
-                                    Data="M 1,1.5 L 4.5,5 L 8,1.5"
+                                    x:Name="arrow"
                                     HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Data="M 1,1.5 L 4.5,5 L 8,1.5"
                                     SnapsToDevicePixels="false"
                                     Stroke="Black"
-                                    StrokeThickness="2"
-                                    VerticalAlignment="Center"
-                                    x:Name="arrow" />
+                                    StrokeThickness="2" />
                                 <!--  {StaticResource Expander.Static.Arrow.Stroke}  -->
                             </Grid>
                             <ContentPresenter
-                                Grid.Row="1"
-                                HorizontalAlignment="Center"
-                                Margin="0,4,0,8"
+                                Grid.Column="0"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
                                 RecognizesAccessKey="True"
                                 RenderTransformOrigin="0.5,0.5"
                                 SnapsToDevicePixels="True"
                                 TextElement.FontSize="{TemplateBinding FontSize}"
-                                TextElement.FontWeight="{TemplateBinding FontWeight}"
-                                VerticalAlignment="Top">
-                                <ContentPresenter.RenderTransform>
-                                    <RotateTransform Angle="270" />
-                                </ContentPresenter.RenderTransform>
-                            </ContentPresenter>
+                                TextElement.FontWeight="{TemplateBinding FontWeight}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Data" TargetName="arrow" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
+                            <Setter TargetName="arrow" Property="Data" Value="M 1,4.5  L 4.5,1  L 8,4.5" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.MouseOver.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Pressed.Arrow.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Stroke" TargetName="arrow" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="{StaticResource Expander.Disabled.Arrow.Stroke}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -266,11 +258,11 @@
     </Style>
     <Style TargetType="{x:Type Expander}">
         <Setter Property="Foreground" Value="Black" />
-        <Setter Property="Background" Value="#E5E9EF" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontWeight" Value="Light" />
         <Setter Property="Template">
@@ -280,16 +272,24 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="5"
                         SnapsToDevicePixels="true">
                         <DockPanel>
                             <Border
-                                BorderBrush="#aaadb2"
-                                BorderThickness="1"
-                                CornerRadius="5"
-                                DockPanel.Dock="Top"
-                                Name="BorderToggle">
+                                Name="BorderToggle"
+                                BorderBrush="Transparent"
+                                BorderThickness="0"
+                                CornerRadius="0"
+                                DockPanel.Dock="Top">
                                 <ToggleButton
+                                    x:Name="HeaderSite"
+                                    MinWidth="30"
+                                    MinHeight="30"
+                                    Margin="0"
+                                    Padding="0"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch"
+                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                     Content="{TemplateBinding Header}"
                                     ContentTemplate="{TemplateBinding HeaderTemplate}"
                                     ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
@@ -300,62 +300,53 @@
                                     FontStyle="{TemplateBinding FontStyle}"
                                     FontWeight="{TemplateBinding FontWeight}"
                                     Foreground="{TemplateBinding Foreground}"
-                                    HorizontalAlignment="Stretch"
-                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
-                                    Margin="0"
-                                    MinHeight="30"
-                                    MinWidth="0"
-                                    Padding="0"
-                                    Style="{StaticResource ExpanderDownHeaderStyle}"
-                                    VerticalAlignment="Stretch"
-                                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                    x:Name="HeaderSite" />
+                                    Style="{StaticResource ExpanderDownHeaderStyle}" />
                             </Border>
                             <Border
-                                Background="#cdcdcd"
-                                BorderBrush="#aaadb2"
-                                BorderThickness="1,0,1,1"
-                                CornerRadius="0,0,5,5"
-                                DockPanel.Dock="Bottom"
                                 Name="BorderContent"
                                 Padding="2"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource Mg4}"
+                                BorderThickness="0,0,0,1"
+                                CornerRadius="0,0,0,0"
+                                DockPanel.Dock="Bottom"
                                 Visibility="Collapsed">
                                 <ContentPresenter
-                                    Focusable="false"
-                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    x:Name="ExpandSite"
                                     Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                    Visibility="Collapsed"
-                                    x:Name="ExpandSite" />
+                                    Focusable="false"
+                                    Visibility="Collapsed" />
                             </Border>
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsExpanded" Value="true">
-                            <Setter Property="Visibility" TargetName="BorderContent" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible" />
+                            <Setter TargetName="BorderContent" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="ExpandSite" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Right">
-                            <Setter Property="CornerRadius" TargetName="BorderToggle" Value="5,0,0,5" />
-                            <Setter Property="CornerRadius" TargetName="BorderContent" Value="0,5,5,5" />
-                            <Setter Property="DockPanel.Dock" TargetName="BorderContent" Value="Right" />
-                            <Setter Property="DockPanel.Dock" TargetName="BorderToggle" Value="Left" />
-                            <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderRightHeaderStyle}" />
+                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="5,0,0,5" />
+                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="0,5,5,5" />
+                            <Setter TargetName="BorderContent" Property="DockPanel.Dock" Value="Right" />
+                            <Setter TargetName="BorderToggle" Property="DockPanel.Dock" Value="Left" />
+                            <Setter TargetName="HeaderSite" Property="Style" Value="{StaticResource ExpanderRightHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Up">
-                            <Setter Property="CornerRadius" TargetName="BorderToggle" Value="0,0,5,5" />
-                            <Setter Property="CornerRadius" TargetName="BorderContent" Value="5,5,0,0" />
-                            <Setter Property="DockPanel.Dock" TargetName="BorderContent" Value="Top" />
-                            <Setter Property="DockPanel.Dock" TargetName="BorderToggle" Value="Bottom" />
-                            <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderUpHeaderStyle}" />
+                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="0,0,5,5" />
+                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="5,5,0,0" />
+                            <Setter TargetName="BorderContent" Property="DockPanel.Dock" Value="Top" />
+                            <Setter TargetName="BorderToggle" Property="DockPanel.Dock" Value="Bottom" />
+                            <Setter TargetName="HeaderSite" Property="Style" Value="{StaticResource ExpanderUpHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Left">
-                            <Setter Property="CornerRadius" TargetName="BorderToggle" Value="0,5,5,0" />
-                            <Setter Property="CornerRadius" TargetName="BorderContent" Value="5,0,0,5" />
-                            <Setter Property="DockPanel.Dock" TargetName="BorderContent" Value="Left" />
-                            <Setter Property="DockPanel.Dock" TargetName="BorderToggle" Value="Right" />
-                            <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderLeftHeaderStyle}" />
+                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="0,5,5,0" />
+                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="5,0,0,5" />
+                            <Setter TargetName="BorderContent" Property="DockPanel.Dock" Value="Left" />
+                            <Setter TargetName="BorderToggle" Property="DockPanel.Dock" Value="Right" />
+                            <Setter TargetName="HeaderSite" Property="Style" Value="{StaticResource ExpanderLeftHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />

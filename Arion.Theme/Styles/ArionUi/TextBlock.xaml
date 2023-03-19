@@ -5,36 +5,9 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type TextBlock}">
-        <!-- <Setter Property="Foreground" Value="#252C32" /> -->
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
-        <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="TextAlignment" Value="Center" />
-    </Style>
-
-    <Style TargetType="TextBlock" x:Key="BlueTextBlockTransparentBackground">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
-        <Setter Property="Focusable" Value="False" />
-        <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
-        <Setter Property="FontWeight" Value="SemiBold" />
-        <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="TextAlignment" Value="Center" />
-    </Style>
-
-    <Style TargetType="TextBlock" x:Key="TblFolderStyle">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="#FFA000" />
-        <Setter Property="FontSize" Value="18" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <!-- <Setter Property="Effect"> -->
-        <!--     <Setter.Value> -->
-        <!--  <DropShadowEffect  -->
-        <!--  BlurRadius="2"  -->
-        <!--  Direction="2"  -->
-        <!--  Opacity="75" />  -->
-        <!--     </Setter.Value> -->
-        <!-- </Setter> -->
     </Style>
 </ResourceDictionary>

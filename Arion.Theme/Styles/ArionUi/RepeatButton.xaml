@@ -118,6 +118,132 @@
     <Style
         BasedOn="{StaticResource ButtonBaseLg}"
         TargetType="{x:Type RepeatButton}"
+        x:Key="RbOutlineLgL">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6,0,0,6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            Effect="{TemplateBinding Effect}"
+                            HorizontalAlignment="Center"
+                            Name="Presenter"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseLg}"
+        TargetType="{x:Type RepeatButton}"
+        x:Key="RbOutlineLgR">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="0,6,6,0"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            Effect="{TemplateBinding Effect}"
+                            HorizontalAlignment="Center"
+                            Name="Presenter"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="#F6F8F9" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E5E9EB" />
+                            <Setter Property="BorderBrush" Value="#E5E9EB" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                            <Setter Property="Button.Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="0"
+                                        Color="Transparent"
+                                        Direction="0"
+                                        Opacity="0"
+                                        ShadowDepth="0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        BasedOn="{StaticResource ButtonBaseLg}"
+        TargetType="{x:Type RepeatButton}"
         x:Key="RbTextLg">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#FFFFFF" />
