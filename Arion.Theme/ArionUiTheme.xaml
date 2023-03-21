@@ -26,6 +26,7 @@
         <ResourceDictionary Source="Styles/ArionUi/TabControl.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Shadow.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/DisplayControl.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ProgressBar.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

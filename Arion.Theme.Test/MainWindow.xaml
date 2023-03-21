@@ -9,12 +9,13 @@
     mc:Ignorable="d"
     x:Class="Arion.Theme.Test.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:arion="clr-namespace:Arion.Style.Controls;assembly=Arion.Style.Controls"
     xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:extensions="clr-namespace:Arion.Theme.Extensions;assembly=Arion.Theme"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <TabControl TabStripPlacement="Top">
+    <TabControl TabStripPlacement="Left">
         <TabItem Header="Buttons">
             <!--  BUTTONS  -->
             <Grid>
@@ -155,7 +156,7 @@
                     <Button Margin="5" Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                                 <TextBlock
                                     Foreground="White"
                                     Margin="5,0,0,0"
@@ -171,7 +172,7 @@
                         Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Foreground="White"
@@ -195,7 +196,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -211,7 +212,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -222,7 +223,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledLg}">
                         <Button.Content>
-                            <controls:Icon
+                            <arion:Icon
                                 Fill="White"
                                 Height="15"
                                 Kind="UserOutline"
@@ -234,7 +235,7 @@
                         Margin="5"
                         Style="{StaticResource FilledLg}">
                         <Button.Content>
-                            <controls:Icon
+                            <arion:Icon
                                 Fill="White"
                                 Height="15"
                                 Kind="Hand"
@@ -269,7 +270,7 @@
                     <Button Margin="5" Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Foreground="White"
@@ -285,7 +286,7 @@
                         Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Foreground="White"
@@ -309,7 +310,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -325,7 +326,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -342,7 +343,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledMd}">
                         <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
+                            <arion:Icon Fill="White" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -350,7 +351,7 @@
                         Margin="5"
                         Style="{StaticResource FilledMd}">
                         <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
+                            <arion:Icon Fill="White" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -378,7 +379,7 @@
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Foreground="White"
@@ -394,7 +395,7 @@
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Foreground="White"
@@ -418,7 +419,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -434,7 +435,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -445,7 +446,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
+                            <arion:Icon Fill="White" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -453,7 +454,7 @@
                         Margin="5"
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
-                            <controls:Icon Fill="White" Kind="Hand" />
+                            <arion:Icon Fill="White" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -502,7 +503,7 @@
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -517,7 +518,7 @@
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -539,7 +540,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -554,7 +555,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -565,7 +566,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -573,7 +574,7 @@
                         Margin="5"
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -599,7 +600,7 @@
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -614,7 +615,7 @@
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -636,7 +637,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -651,7 +652,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -662,7 +663,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -670,7 +671,7 @@
                         Margin="5"
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -696,7 +697,7 @@
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -711,7 +712,7 @@
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -733,7 +734,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -748,7 +749,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -759,7 +760,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -767,7 +768,7 @@
                         Margin="5"
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -810,7 +811,7 @@
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -825,7 +826,7 @@
                         Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -847,7 +848,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -862,7 +863,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -873,7 +874,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -881,7 +882,7 @@
                         Margin="5"
                         Style="{StaticResource TextLg}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -907,7 +908,7 @@
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -922,7 +923,7 @@
                         Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -944,7 +945,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -959,7 +960,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -970,7 +971,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -978,7 +979,7 @@
                         Margin="5"
                         Style="{StaticResource TextMd}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -1004,7 +1005,7 @@
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -1019,7 +1020,7 @@
                         Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                                 <Label
                                     Content="Button"
                                     Margin="5,0,0,0"
@@ -1041,7 +1042,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -1056,7 +1057,7 @@
                                     Margin="0,0,5,0"
                                     Padding="0"
                                     VerticalAlignment="Center" />
-                                <controls:Icon Fill="Black" Kind="Hand" />
+                                <arion:Icon Fill="Black" Kind="Hand" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -1067,7 +1068,7 @@
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                     <Button
@@ -1075,7 +1076,7 @@
                         Margin="5"
                         Style="{StaticResource TextSm}">
                         <Button.Content>
-                            <controls:Icon Fill="Black" Kind="Hand" />
+                            <arion:Icon Fill="Black" Kind="Hand" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -1467,31 +1468,19 @@
                         <TabItem Header="Head 3" />
                         <TabItem Header="Head 4" />
                     </TabControl>
-                    <TabControl
-                        DockPanel.Dock="Top"
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        TabStripPlacement="Top">
+                    <TabControl DockPanel.Dock="Top" TabStripPlacement="Top">
                         <TabItem Header="Head 1" />
                         <TabItem Header="Head 2" />
                         <TabItem Header="Head 3" />
                         <TabItem Header="Head 4" />
                     </TabControl>
-                    <TabControl
-                        DockPanel.Dock="Right"
-                        Grid.Column="2"
-                        Grid.Row="1"
-                        TabStripPlacement="Right">
+                    <TabControl DockPanel.Dock="Right" TabStripPlacement="Right">
                         <TabItem Header="Head 1" />
                         <TabItem Header="Head 2" />
                         <TabItem Header="Head 3" />
                         <TabItem Header="Head 4" />
                     </TabControl>
-                    <TabControl
-                        DockPanel.Dock="Bottom"
-                        Grid.Column="3"
-                        Grid.Row="1"
-                        TabStripPlacement="Bottom">
+                    <TabControl DockPanel.Dock="Bottom" TabStripPlacement="Bottom">
                         <TabItem Header="Head 1" />
                         <TabItem Header="Head 2" />
                         <TabItem Header="Head 3" />
@@ -1681,9 +1670,13 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     Orientation="Horizontal">
-                    <ToggleButton Content="Toggle button" Margin="5" />
                     <ToggleButton
                         Content="Toggle button"
+                        Margin="5"
+                        Name="Tg1" />
+                    <ToggleButton
+                        Content="Toggle button"
+                        IsChecked="{Binding ElementName=Tg1, Path=IsChecked}"
                         IsEnabled="False"
                         Margin="5" />
                 </StackPanel>
@@ -1695,10 +1688,11 @@
                     <ToggleButton
                         Content="Toggle button"
                         IsChecked="True"
-                        Margin="5" />
+                        Margin="5"
+                        Name="Tg2" />
                     <ToggleButton
                         Content="Toggle button"
-                        IsChecked="True"
+                        IsChecked="{Binding ElementName=Tg2, Path=IsChecked}"
                         IsEnabled="False"
                         Margin="5" />
                 </StackPanel>
@@ -1711,10 +1705,11 @@
                         Content="Toggle button"
                         IsChecked="{x:Null}"
                         IsThreeState="True"
-                        Margin="5" />
+                        Margin="5"
+                        Name="Tg3" />
                     <ToggleButton
                         Content="Toggle button"
-                        IsChecked="{x:Null}"
+                        IsChecked="{Binding ElementName=Tg3, Path=IsChecked}"
                         IsEnabled="False"
                         IsThreeState="True"
                         Margin="5" />
@@ -1749,7 +1744,15 @@
                     Grid.Column="0"
                     Grid.Row="6"
                     Orientation="Horizontal">
-                    <ToggleButton Style="{StaticResource ListControlSelectMode}" />
+                    <ToggleButton
+                        Margin="5"
+                        Name="TgListControl"
+                        Style="{StaticResource ListControlSelectMode}" />
+                    <ToggleButton
+                        IsChecked="{Binding ElementName=TgListControl, Path=IsChecked}"
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource ListControlSelectMode}" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -2056,14 +2059,14 @@
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
-                        <DataTemplate DataType="{x:Type controls:Icon}">
+                        <DataTemplate DataType="{x:Type arion:Icon}">
                             <Grid Height="100" Width="80">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="5" />
                                     <RowDefinition Height="40" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
-                                <controls:Icon
+                                <arion:Icon
                                     Fill="#252C32"
                                     Grid.Row="1"
                                     Height="40"
@@ -2587,7 +2590,10 @@
                     VerticalAlignment="Top"
                     Width="Auto" />
 
-                <DockPanel Grid.ColumnSpan="2" Grid.Row="1">
+                <DockPanel
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1">
                     <Expander
                         DockPanel.Dock="Top"
                         ExpandDirection="Down"
@@ -2660,7 +2666,7 @@
                     Width="170" />
             </Grid>
         </TabItem>
-        <TabItem Header="Label" IsSelected="True">
+        <TabItem Header="Label">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -2772,6 +2778,110 @@
                     Grid.Column="1"
                     Grid.Row="7"
                     Text="Black" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="Inline Alert">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Content="Inline Alert"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
+                <arion:InlineAlert
+                    Caption="Short descriptive message"
+                    Grid.Row="1"
+                    Margin="5"
+                    Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+                    Type="Info" />
+                <arion:InlineAlert
+                    Caption="Short descriptive message"
+                    Grid.Row="2"
+                    Margin="5"
+                    Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+                    Type="Warning" />
+                <arion:InlineAlert
+                    Caption="Short descriptive message"
+                    Grid.Row="3"
+                    Margin="5"
+                    Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+                    Type="Danger" />
+                <arion:InlineAlert
+                    Caption="Short descriptive message"
+                    Grid.Row="4"
+                    Margin="5"
+                    Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+                    Type="Success" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="Progress bar" IsSelected="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Content="Inline Alert"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
+                <ProgressBar
+                    Grid.Row="1"
+                    Margin="5"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="0" />
+                <ProgressBar
+                    Grid.Row="2"
+                    Margin="5"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="{Binding ElementName=Slider, Path=Value}" />
+                <ProgressBar
+                    Grid.Row="3"
+                    Margin="5"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="100" />
+
+                <Slider
+                    Grid.Row="4"
+                    Margin="5"
+                    Maximum="100"
+                    Minimum="0"
+                    Name="Slider"
+                    Value="50" />
             </Grid>
         </TabItem>
     </TabControl>

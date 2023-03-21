@@ -50,11 +50,6 @@
     <Compile Include="Controls\DisplayControl.xaml.cs">
       <DependentUpon>DisplayControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Icon.xaml.cs">
-      <DependentUpon>Icon.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\EIcons.cs" />
-    <Compile Include="Controls\Icons.cs" />
     <Compile Include="Controls\PasswordInput.xaml.cs">
       <DependentUpon>PasswordInput.xaml</DependentUpon>
     </Compile>
@@ -171,7 +166,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\DisplayControl.xaml" />
-    <Page Include="Controls\Icon.xaml" />
     <Page Include="Controls\PasswordInput.xaml" />
     <Page Include="Controls\TextInput.xaml" />
     <Page Include="Controls\TimeInput.xaml" />
@@ -221,6 +215,7 @@
     <Page Include="Styles\ArionUi\ListView.xaml" />
     <Page Include="Styles\ArionUi\Page.xaml" />
     <Page Include="Styles\ArionUi\PasswordBox.xaml" />
+    <Page Include="Styles\ArionUi\ProgressBar.xaml" />
     <Page Include="Styles\ArionUi\RadioButton.xaml" />
     <Page Include="Styles\ArionUi\RepeatButton.xaml" />
     <Page Include="Styles\ArionUi\ScrollBar.xaml" />

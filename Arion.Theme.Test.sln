@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Theme.Test", "Arion.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Theme", "Arion.Theme\Arion.Theme.csproj", "{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Style.Controls", "Arion.Style.Controls\Arion.Style.Controls.csproj", "{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

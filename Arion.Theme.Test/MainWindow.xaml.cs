@@ -3,6 +3,8 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Arion.Style.Controls;
+using Arion.Style.Controls.Icons;
 using Arion.Theme.Controls;
 
 namespace Arion.Theme.Test
@@ -20,7 +22,7 @@ namespace Arion.Theme.Test
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
             List<Icon> icons = new List<Icon>();
-            var iconsLibrary = Icons.IconsDictionary.Select(x => x.Key).ToList();
+            var iconsLibrary = IconLibrary.IconsDictionary.Select(x => x.Key).ToList();
             
             for (int i = 0; i < 312; i++)
             {
@@ -38,7 +40,7 @@ namespace Arion.Theme.Test
         private void TbFind_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var icons = new List<Icon>();
-            var iconsLibrary = Icons.IconsDictionary.Where(x => x.Key.ToString().ToLower().Contains(TbFind.Text)).ToList();
+            var iconsLibrary = IconLibrary.IconsDictionary.Where(x => x.Key.ToString().ToLower().Contains(TbFind.Text)).ToList();
 
             var max = iconsLibrary.Count > 256 ? 256 : iconsLibrary.Count;
             

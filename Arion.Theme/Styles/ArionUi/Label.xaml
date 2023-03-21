@@ -6,7 +6,7 @@
 
     <Style TargetType="{x:Type Label}">
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
-        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="FontWeight" Value="Medium" />
     </Style>
 
@@ -14,14 +14,13 @@
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
         <Setter Property="FontSize" Value="32" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="#252C32" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
     </Style>
 
     <Style TargetType="Label" x:Key="Title">
-        <Setter Property="Background" Value="#E7EAED" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Background" Value="{StaticResource Lg4}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Focusable" Value="False" />
-        <Setter Property="FontFamily" Value="Segoe UI" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -49,7 +48,7 @@
     </Style>
     <Style TargetType="Label" x:Key="LabelText">
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FontFamily" Value="Montserrat" />
         <Setter Property="FontWeight" Value="SemiBold" />
@@ -62,7 +61,7 @@
     <Style TargetType="Label" x:Key="BlueLetters">
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <!-- <Setter Property="FontFamily" Value="Montserrat" /> -->
         <Setter Property="FontWeight" Value="500" />
@@ -92,12 +91,12 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type Label}" x:Key="RoundedLabelStyle">
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Label}">
                     <Border
-                        BorderBrush="{StaticResource BrushPrimary}"
+                        BorderBrush="{StaticResource Dg2}"
                         BorderThickness="1"
                         CornerRadius="5"
                         Name="Border">
@@ -121,7 +120,7 @@
                             Name="Rect"
                             RadiusX="32"
                             RadiusY="32"
-                            Stroke="{StaticResource BrushPrimary}"
+                            Stroke="{StaticResource Dg2}"
                             StrokeThickness="3"
                             Width="34" />
                         <Rectangle
@@ -131,19 +130,19 @@
                             Name="RectMin"
                             RadiusX="6"
                             RadiusY="6"
-                            Stroke="{StaticResource BrushPrimary}"
+                            Stroke="{StaticResource Dg2}"
                             StrokeThickness="3"
                             VerticalAlignment="Center"
                             Width="3" />
                         <Polyline
                             Name="Hour"
                             Points="17,6 17,19"
-                            Stroke="{StaticResource BrushPrimary}"
+                            Stroke="{StaticResource Dg2}"
                             StrokeThickness="3" />
                         <Polyline
                             Name="Min"
                             Points="26,14 17,19"
-                            Stroke="{StaticResource BrushPrimary}"
+                            Stroke="{StaticResource Dg2}"
                             StrokeThickness="3" />
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -160,9 +159,9 @@
     </Style>
     <Style TargetType="Label" x:Key="Display">
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Dg2}" />
         <Setter Property="Height" Value="35" />
-        <Setter Property="Background" Value="{StaticResource BrushElement}" />
+        <Setter Property="Background" Value="{StaticResource CleanW}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
@@ -182,8 +181,33 @@
         </Setter>
     </Style>
     <Style TargetType="Label" x:Key="DisplayTransparent">
-        <Setter Property="Foreground" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="FontSize" Value="14" />
+    </Style>
+    <Style TargetType="{x:Type Label}" x:Key="Heading1">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style TargetType="{x:Type Label}" x:Key="Heading2">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style TargetType="{x:Type Label}" x:Key="Heading3">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style TargetType="{x:Type Label}" x:Key="Heading4">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style TargetType="{x:Type Label}" x:Key="Heading5">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 </ResourceDictionary>

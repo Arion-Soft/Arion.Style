@@ -46,6 +46,35 @@
                             x:Name="PART_ContentHost" />
                     </Grid>
                     <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Checked">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard TargetName="TgButton">
+                                        <ThicknessAnimation
+                                            AutoReverse="False"
+                                            Duration="0:0:.2"
+                                            From="2,0,0,0"
+                                            Storyboard.TargetProperty="Margin"
+                                            To="14,0,0,0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Unchecked">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard TargetName="TgButton">
+                                        <ThicknessAnimation
+                                            AutoReverse="False"
+                                            Duration="0:0:.2"
+                                            From="14,0,0,0"
+                                            Storyboard.TargetProperty="Margin"
+                                            To="2,0,0,0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+
                         <!--  CHECKED - TRUE | Hover  -->
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -57,7 +86,7 @@
 
                             <Setter Property="Background" Value="#0E73F6" />
                             <Setter Property="BorderBrush" Value="#0E73F6" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Pressed  -->
                         <MultiTrigger>
@@ -70,7 +99,7 @@
 
                             <Setter Property="Background" Value="#0452C8" />
                             <Setter Property="BorderBrush" Value="#0452C8" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Default  -->
                         <MultiTrigger>
@@ -83,7 +112,7 @@
 
                             <Setter Property="Background" Value="#4094F7" />
                             <Setter Property="BorderBrush" Value="#4094F7" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Disabled  -->
                         <MultiTrigger>
@@ -96,7 +125,7 @@
 
                             <Setter Property="Background" Value="#DDE2E4" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
                         </MultiTrigger>
 
 
@@ -163,6 +192,7 @@
                             <Setter Property="BorderBrush" Value="#9AA6AC" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
+                            <Setter Property="Margin" Value="2" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
                             <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
                         </MultiTrigger>
@@ -177,6 +207,7 @@
 
                             <Setter Property="Background" Value="#84919A" />
                             <Setter Property="BorderBrush" Value="#84919A" />
+                            <Setter Property="Margin" Value="2" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
@@ -193,6 +224,7 @@
 
                             <Setter Property="Background" Value="#B0BABF" />
                             <Setter Property="BorderBrush" Value="#B0BABF" />
+                            <Setter Property="Margin" Value="2" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
@@ -208,6 +240,7 @@
                             </MultiTrigger.Conditions>
 
                             <Setter Property="Background" Value="#DDE2E4" />
+                            <Setter Property="Margin" Value="2" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
@@ -733,7 +766,7 @@
                                     CornerRadius="13"
                                     Height="25"
                                     HorizontalAlignment="Left"
-                                    Margin="0"
+                                    Margin="0,0,0,0"
                                     Padding="0"
                                     VerticalAlignment="Center"
                                     Width="68"
@@ -775,9 +808,14 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#0E73F6" />
-                            <Setter Property="BorderBrush" Value="#0E73F6" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <Setter Property="Background" Value="{StaticResource Mg4}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg4}" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
+                            <Setter Property="Width" TargetName="TgButton" Value="80" />
+                            <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
+                            <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
+                            <Setter Property="Opacity" TargetName="Text1" Value=".4" />
+                            <Setter Property="Opacity" TargetName="Text2" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Pressed  -->
                         <MultiTrigger>
@@ -788,9 +826,14 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#0452C8" />
-                            <Setter Property="BorderBrush" Value="#0452C8" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <Setter Property="Background" Value="{StaticResource Mg3}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg3}" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
+                            <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
+                            <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
+                            <Setter Property="Opacity" TargetName="Text1" Value=".4" />
+                            <Setter Property="Opacity" TargetName="Text2" Value="1" />
+                            <Setter Property="Width" TargetName="TgButton" Value="80" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Default  -->
                         <MultiTrigger>
@@ -800,7 +843,7 @@
                                 <Condition Property="IsPressed" Value="False" />
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
                             <Setter Property="Width" TargetName="TgButton" Value="80" />
                             <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
                             <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
@@ -816,9 +859,14 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#DDE2E4" />
-                            <Setter Property="BorderBrush" Value="#DDE2E4" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
+                            <Setter Property="Background" Value="{StaticResource Lg2}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
+                            <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
+                            <Setter Property="Width" TargetName="TgButton" Value="80" />
+                            <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
+                            <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
+                            <Setter Property="Opacity" TargetName="Text1" Value=".4" />
+                            <Setter Property="Opacity" TargetName="Text2" Value="1" />
                         </MultiTrigger>
 
 
@@ -831,8 +879,8 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#9AA6AC" />
-                            <Setter Property="BorderBrush" Value="#9AA6AC" />
+                            <Setter Property="Background" Value="{StaticResource Mg4}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg4}" />
                         </MultiTrigger>
                         <!--  CHECKED - FALSE | Pressed  -->
                         <MultiTrigger>
@@ -843,9 +891,50 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#84919A" />
-                            <Setter Property="BorderBrush" Value="#84919A" />
+                            <Setter Property="Background" Value="{StaticResource Mg3}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg3}" />
                         </MultiTrigger>
+
+                        <EventTrigger RoutedEvent="Checked">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard TargetName="TgButton">
+                                        <DoubleAnimation
+                                            AutoReverse="False"
+                                            Duration="0:0:.2"
+                                            From="68"
+                                            Storyboard.TargetProperty="Width"
+                                            To="80" />
+                                        <ThicknessAnimation
+                                            AutoReverse="False"
+                                            Duration="0:0:.2"
+                                            From="0,0,0,0"
+                                            Storyboard.TargetProperty="Margin"
+                                            To="70,0,0,0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Unchecked">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard TargetName="TgButton">
+                                        <DoubleAnimation
+                                            AutoReverse="False"
+                                            Duration="0:0:.2"
+                                            From="80"
+                                            Storyboard.TargetProperty="Width"
+                                            To="68" />
+                                        <ThicknessAnimation
+                                            AutoReverse="False"
+                                            Duration="0:0:.2"
+                                            From="70,0,0,0"
+                                            Storyboard.TargetProperty="Margin"
+                                            To="0,0,0,0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
                         <!--  CHECKED - FALSE | Default  -->
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -855,8 +944,8 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#B0BABF" />
-                            <Setter Property="BorderBrush" Value="#B0BABF" />
+                            <Setter Property="Background" Value="{StaticResource Mg5}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
                         </MultiTrigger>
                         <!--  CHECKED - FALSE | Disabled  -->
                         <MultiTrigger>
@@ -867,8 +956,8 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#DDE2E4" />
-                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="{StaticResource Lg2}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
                         </MultiTrigger>
 
 
@@ -881,8 +970,8 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#9AA6AC" />
-                            <Setter Property="BorderBrush" Value="#9AA6AC" />
+                            <Setter Property="Background" Value="{StaticResource Mg4}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg4}" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
@@ -897,8 +986,8 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#84919A" />
-                            <Setter Property="BorderBrush" Value="#84919A" />
+                            <Setter Property="Background" Value="{StaticResource Mg3}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg3}" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
@@ -913,8 +1002,8 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#B0BABF" />
-                            <Setter Property="BorderBrush" Value="#B0BABF" />
+                            <Setter Property="Background" Value="{StaticResource Mg5}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
@@ -929,8 +1018,8 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#DDE2E4" />
-                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="{StaticResource Lg2}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />

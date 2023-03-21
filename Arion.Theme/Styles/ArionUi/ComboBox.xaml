@@ -43,52 +43,6 @@
         </Setter>
     </Style>
 
-    <SolidColorBrush Color="{StaticResource ColorButton}" x:Key="ComboBox.Static.Background" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Static.Border" />
-    <Thickness
-        Bottom="1"
-        Left="1"
-        Right="1"
-        Top="1"
-        x:Key="ComboBox.Static.BorderThickness" />
-    <SolidColorBrush Color="White" x:Key="ComboBox.Static.Glyph" />
-
-    <SolidColorBrush Color="#FFFFFFFF" x:Key="ComboBox.Static.Editable.Background" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Static.Editable.Border" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.Static.Editable.Button.Background" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.Static.Editable.Button.Border" />
-
-    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0" x:Key="ComboBox.MouseOver.Background">
-        <GradientStop Color="#FFECF4FC" Offset="0.0" />
-        <GradientStop Color="#FFDCECFC" Offset="1.0" />
-    </LinearGradientBrush>
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.MouseOver.Border" />
-    <Thickness
-        Bottom="2"
-        Left="2"
-        Right="2"
-        Top="2"
-        x:Key="ComboBox.MouseOver.BorderThickness" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.MouseOver.Glyph" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.MouseOver.Editable.Background" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.MouseOver.Editable.Border" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.MouseOver.Editable.Button.Background" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.MouseOver.Editable.Button.Border" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Pressed.Background" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Pressed.Border" />
-    <SolidColorBrush Color="White" x:Key="ComboBox.Pressed.Glyph" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Pressed.Editable.Background" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Pressed.Editable.Border" />
-    <SolidColorBrush Color="{StaticResource ColorPrimary}" x:Key="ComboBox.Pressed.Editable.Button.Background" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.Pressed.Editable.Button.Border" />
-    <SolidColorBrush Color="LightGray" x:Key="ComboBox.Disabled.Background" />
-    <SolidColorBrush Color="DimGray" x:Key="ComboBox.Disabled.Border" />
-    <SolidColorBrush Color="DimGray" x:Key="ComboBox.Disabled.Glyph" />
-    <SolidColorBrush Color="#FFFFFFFF" x:Key="ComboBox.Disabled.Editable.Background" />
-    <SolidColorBrush Color="#FFBFBFBF" x:Key="ComboBox.Disabled.Editable.Border" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.Disabled.Editable.Button.Background" />
-    <SolidColorBrush Color="Transparent" x:Key="ComboBox.Disabled.Editable.Button.Border" />
-
     <ControlTemplate TargetType="{x:Type ToggleButton}" x:Key="ComboBoxToggleButton">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -103,7 +57,6 @@
                 BorderThickness="1"
                 CornerRadius="0,5,5,0"
                 Grid.Column="1"
-                Grid.ColumnSpan="1"
                 x:Name="Border" />
             <!--  ФОН ОТ КОНТЕНТА  -->
             <!--  РАМКА МЕЖДУ КОНТЕНТОМ И КНОПКОЙ  -->
@@ -155,7 +108,7 @@
         <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
         <Setter Property="MinWidth" Value="120" />
         <Setter Property="MinHeight" Value="35" />
-        <Setter Property="Foreground" Value="{StaticResource BrushBlack}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="Template">
             <Setter.Value>
@@ -177,9 +130,9 @@
                             Name="ContentSite"
                             VerticalAlignment="Center" />
                         <TextBox
-                            Background="{StaticResource ComboBox.Static.Background}"
+                            Background="{StaticResource CleanW}"
                             Focusable="True"
-                            Foreground="{StaticResource BrushPrimary}"
+                            Foreground="{StaticResource Dg2}"
                             HorizontalAlignment="Left"
                             IsReadOnly="{TemplateBinding IsReadOnly}"
                             Margin="5,3,23,3"
@@ -241,7 +194,7 @@
     <!--  SimpleStyles: ComboBoxItem  -->
     <Style TargetType="{x:Type ComboBoxItem}" x:Key="{x:Type ComboBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="Foreground" Value="{StaticResource BrushBlack}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Template">
             <Setter.Value>
@@ -260,7 +213,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="True">
                             <Setter Property="Background" TargetName="Border" Value="#F6F8F9" />
-                            <Setter Property="TextElement.Foreground" Value="{StaticResource BrushBlack}" />
+                            <Setter Property="TextElement.Foreground" Value="{StaticResource Dg2}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Foreground" Value="#9AA6AC" />
