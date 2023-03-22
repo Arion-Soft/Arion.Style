@@ -156,7 +156,7 @@
                     <Button Margin="5" Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <arion:Icon Fill="White" Kind="Hand" />
+                                <arion:Icon Fill="White" Kind="LinearFunction" />
                                 <TextBlock
                                     Foreground="White"
                                     Margin="5,0,0,0"
@@ -1421,11 +1421,62 @@
                     IsSelectionRangeEnabled="True"
                     Margin="5"
                     Width="200" />
+
             </Grid>
         </TabItem>
-        <TabItem Header="Rangers">
+        <TabItem Header="Rangers" IsSelected="True">
             <!--  RANGERS  -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Content="Range slider"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
 
+                <arion:RangeSlider
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Maximum="100"
+                    Minimum="10" />
+                <arion:RangeSlider
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Maximum="10"
+                    Minimum="0" />
+                <arion:RangeSlider
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Maximum="50"
+                    Minimum="0" />
+                <arion:RangeSlider
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Maximum="65535"
+                    Minimum="0"
+                    Name="Slider65535" />
+                <arion:RangeSlider2
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Width="{Binding ElementName=Slider65535, Path=Width}" />
+            </Grid>
         </TabItem>
         <TabItem Header="Steppers">
             <!--  STEPPERS  -->
@@ -2831,7 +2882,7 @@
                     Type="Success" />
             </Grid>
         </TabItem>
-        <TabItem Header="Progress bar" IsSelected="True">
+        <TabItem Header="Progress bar">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />

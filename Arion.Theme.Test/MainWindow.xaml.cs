@@ -4,8 +4,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Arion.Style.Controls;
-using Arion.Style.Controls.Icons;
-using Arion.Theme.Controls;
 
 namespace Arion.Theme.Test
 {
@@ -30,6 +28,7 @@ namespace Arion.Theme.Test
             }
 
             LvIcons.ItemsSource = icons;
+            
         }
 
         private void TbFind_OnTextInput(object sender, TextCompositionEventArgs e)

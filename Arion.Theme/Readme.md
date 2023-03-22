@@ -2,7 +2,7 @@
 
 [![nuget](https://img.shields.io/nuget/v/Arion.Style)](https://www.nuget.org/packages/Arion.Style)
 
-## Библиотека компонентов и стилей
+## Библиотека стилей
 
 ___
 

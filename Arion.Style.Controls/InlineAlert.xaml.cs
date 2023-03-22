@@ -2,7 +2,6 @@
 using System.Windows;
 using System.Windows.Media;
 using Arion.Style.Controls.Enums;
-using Arion.Style.Controls.Icons;
 
 namespace Arion.Style.Controls
 {

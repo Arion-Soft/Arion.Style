@@ -1,10 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Theme.Test", "Arion.Theme.Test\Arion.Theme.Test.csproj", "{FC2D013C-138C-410C-88C6-8790C16B9ABB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Theme", "Arion.Theme\Arion.Theme.csproj", "{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Style.Controls", "Arion.Style.Controls\Arion.Style.Controls.csproj", "{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Style.Controls", "Arion.Style.Controls\Arion.Style.Controls.csproj", "{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +23,12 @@ Global
 		{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBB91FB5-C181-4CC9-9859-F05DE4F045D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
