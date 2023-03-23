@@ -51,7 +51,11 @@
     <Compile Include="Breadcrumb.xaml.cs">
       <DependentUpon>Breadcrumb.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BreadcrumbItem.xaml.cs">
+      <DependentUpon>BreadcrumbItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EIcons.cs" />
+    <Compile Include="Enums\BreadcrumbItemType.cs" />
     <Compile Include="Enums\InlineAlertType.cs" />
     <Compile Include="Icon.xaml.cs" />
     <Compile Include="Icons.cs" />
@@ -83,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Breadcrumb.xaml" />
+    <Page Include="BreadcrumbItem.xaml" />
     <Page Include="Icon.xaml" />
     <Page Include="InlineAlert.xaml" />
     <Page Include="RangeSlider.xaml" />
