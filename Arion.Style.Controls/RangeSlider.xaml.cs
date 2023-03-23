@@ -8,6 +8,17 @@ namespace Arion.Style.Controls
 {
     public partial class RangeSlider
     {
+        #region Events
+
+        public event EventHandler RightValueChanged;
+        public event EventHandler LeftValueChanged;
+        public event EventHandler MaximumChanged;
+        public event EventHandler MinimumChanged;
+        public event EventHandler CenterValueChanged;
+        
+
+        #endregion
+    
         public RangeSlider()
         {
             InitializeComponent();
@@ -70,7 +81,11 @@ namespace Arion.Style.Controls
         public double RightValue
         {
             get => (double)GetValue(RightValueProperty);
-            set => SetValue(RightValueProperty, value);
+            set
+            {
+                SetValue(RightValueProperty, value);
+                RightValueChanged?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         public static readonly DependencyProperty RightValueProperty =
@@ -84,7 +99,11 @@ namespace Arion.Style.Controls
         public double LeftValue
         {
             get => (double)GetValue(LeftValueProperty);
-            set => SetValue(LeftValueProperty, value);
+            set
+            {
+                SetValue(LeftValueProperty, value); 
+                LeftValueChanged?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         public static readonly DependencyProperty LeftValueProperty =
@@ -97,7 +116,11 @@ namespace Arion.Style.Controls
         public double Maximum
         {
             get => (double)GetValue(MaximumProperty);
-            set => SetValue(MaximumProperty, value);
+            set
+            {
+                SetValue(MaximumProperty, value);
+                MaximumChanged?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         public static readonly DependencyProperty MaximumProperty =
@@ -110,7 +133,11 @@ namespace Arion.Style.Controls
         public double Minimum
         {
             get => (double)GetValue(MinimumProperty);
-            set => SetValue(MinimumProperty, value);
+            set
+            {
+                SetValue(MinimumProperty, value);
+                MinimumChanged?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         public static readonly DependencyProperty MinimumProperty =

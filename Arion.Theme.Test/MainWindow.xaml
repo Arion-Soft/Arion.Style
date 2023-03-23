@@ -1472,10 +1472,6 @@
                     Maximum="65535"
                     Minimum="0"
                     Name="Slider65535" />
-                <arion:RangeSlider2
-                    Grid.Column="0"
-                    Grid.Row="5"
-                    Width="{Binding ElementName=Slider65535, Path=Width}" />
             </Grid>
         </TabItem>
         <TabItem Header="Steppers">
