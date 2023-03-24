@@ -2694,7 +2694,8 @@
                     Grid.Column="0"
                     Width="300"
                     Maximum="50"
-                    Minimum="0" />
+                    Minimum="0"
+                    ShowValues="True" />
                 <arion:RangeSlider
                     Name="Slider65535"
                     Grid.Row="4"
@@ -2722,7 +2723,9 @@
                     Grid.Column="0"
                     Width="500"
                     Maximum="65535"
-                    Minimum="0" />
+                    Minimum="0"
+                    SelectedTrackHeight="12"
+                    TrackHeight="8" />
                 <Button
                     Grid.Row="7"
                     Grid.Column="0"
