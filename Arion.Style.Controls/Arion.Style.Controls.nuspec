@@ -19,7 +19,7 @@
     </metadata>
     <files>
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net461" />
-        <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net462" />
+        <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net461" />
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net462" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net462" />
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net463" />
