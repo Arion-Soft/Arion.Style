@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -32,6 +33,7 @@ namespace Arion.Style.Controls
             LeftThumbBorder = new Thickness(1);
             LeftThumbWidth = 20;
             LeftThumbHeight = 20;
+            LeftThumbMargin = new Thickness(-(LeftThumbWidth / 2), 0, 0, 0);
 
             #endregion
 
@@ -42,6 +44,7 @@ namespace Arion.Style.Controls
             RightThumbBorder = new Thickness(1);
             RightThumbWidth = 20;
             RightThumbHeight = 20;
+            RightThumbMargin = new Thickness(0, 0, -(RightThumbWidth / 2), 0);
 
             #endregion
 
@@ -70,6 +73,8 @@ namespace Arion.Style.Controls
         {
             RightValue = Maximum;
             LeftValue = Minimum;
+            
+            Track.Width = Width - 10;
         }
 
         #region Properties
@@ -84,6 +89,11 @@ namespace Arion.Style.Controls
             set
             {
                 SetValue(RightValueProperty, value);
+                
+                // var percent = value * 100 / Maximum;
+                // var margin = percent * Track.Width / 100;
+                // RightThumbMargin = new Thickness(0, 0,margin,0);
+                
                 RightValueChanged?.Invoke(this, EventArgs.Empty);
             }
         }
@@ -101,7 +111,7 @@ namespace Arion.Style.Controls
             get => (double)GetValue(LeftValueProperty);
             set
             {
-                SetValue(LeftValueProperty, value); 
+                SetValue(LeftValueProperty, value);
                 LeftValueChanged?.Invoke(this, EventArgs.Empty);
             }
         }
@@ -469,6 +479,19 @@ namespace Arion.Style.Controls
 
         #endregion
 
+        #region TrackWidth
+
+        public double TrackWidth
+        {
+            get => (double)GetValue(TrackWidthProperty);
+            set => SetValue(TrackWidthProperty, value);
+        }
+
+        public static readonly DependencyProperty TrackWidthProperty =
+            DependencyProperty.Register(nameof(TrackWidth), typeof(double), typeof(RangeSlider), new PropertyMetadata());
+
+        #endregion
+
         #endregion
 
         #region SelectedTrack
@@ -547,76 +570,98 @@ namespace Arion.Style.Controls
         {
             if (_leftSliderPressed)
             {
+                // Получение местоположения от
                 _leftSliderPoint = e.GetPosition(Thumb1);
+                MoveLeftThumb();
+                
+                // if (_leftSliderPoint.X > 10)
+                // {
+                //     if (LeftThumbMargin.Left + Thumb1.Width <= Track.Width - RightThumbMargin.Right /*- Thumb2.Width / 4*/)
+                //         LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
+                // }
+                // else if (_leftSliderPoint.X < 10)
+                // {
+                //     if (LeftThumbMargin.Left >= 0)
+                        // LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
+                // }
 
-                var changedMargin = LeftThumbMargin.Left + _leftSliderPoint.X - Thumb1.Width / 2;
-                if (_leftSliderPoint.X > 10)
-                {
-                    if (LeftThumbMargin.Left + Thumb1.Width <= Track.Width - RightThumbMargin.Right - Thumb2.Width / 2)
-                        LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
-                }
-                else if (_leftSliderPoint.X < 10)
-                {
-                    if (LeftThumbMargin.Left >= 0)
-                        LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
-                }
-
-                if (LeftThumbMargin.Left < 0) LeftThumbMargin = new Thickness(0);
+                CheckBorder();
             }
             else if (_rightSliderPressed)
             {
                 _rightSliderPoint = e.GetPosition(Thumb2);
-                var changedMargin = RightThumbMargin.Right - _rightSliderPoint.X + Thumb2.Width / 2;
-
+                MoveRightThumb();
+                
+                CheckBorder();
+                
+                // if (RightThumbMargin.Right < -10) RightThumbMargin = new Thickness(0,0,-10,0);
                 // Если перемещается вправо ->
-                if (_rightSliderPoint.X > 10)
-                {
-                    RightThumbMargin = RightThumbMargin.Right <= 0
-                        ? new Thickness(0)
-                        : new Thickness(0, 0, changedMargin, 0);
-                }
-                // Если перемещается влево <-
-                else if (_rightSliderPoint.X < 10)
-                {
-                    // Если отступ справа + ширина ползунка больше чем ширина, тогда не перемещать
-                    if (RightThumbMargin.Right + Thumb2.Width <= Track.Width - LeftThumbMargin.Left - Thumb1.Width / 2)
-                        RightThumbMargin = new Thickness(0, 0, changedMargin, 0);
-                }
+                // if (_rightSliderPoint.X > 10)
+                // {
+                //     RightThumbMargin = RightThumbMargin.Right <= 0
+                //         ? new Thickness(0)
+                //         : new Thickness(0, 0, changedMargin, 0);
+                // }
+                // // Если перемещается влево <-
+                // else if (_rightSliderPoint.X < 10)
+                // {
+                //     // Если отступ справа + ширина ползунка больше чем ширина, тогда не перемещать
+                //     if (RightThumbMargin.Right + Thumb2.Width <= Track.Width - LeftThumbMargin.Left /*- Thumb1.Width / 4*/)
+                //         RightThumbMargin = new Thickness(0, 0, changedMargin, 0);
+                // }
             }
             else if (_centerSliderPressed)
             {
                 _centerSliderPoint = e.GetPosition(CenterThumb);
-
-                if (_centerSliderPoint.X > 10)
-                {
-                    if (LeftThumbMargin.Left + Thumb1.Width <= Track.Width - RightThumbMargin.Right - Thumb2.Width / 2)
-                        LeftThumbMargin = new Thickness(LeftThumbMargin.Left + _centerSliderPoint.X - Thumb1.Width / 2,
-                            0, 0, 0);
-                    RightThumbMargin = RightThumbMargin.Right <= 0
-                        ? new Thickness(0)
-                        : new Thickness(0, 0, RightThumbMargin.Right - _centerSliderPoint.X + Thumb2.Width / 2, 0);
-                }
-                else if (_centerSliderPoint.X < 10)
-                {
-                    if (LeftThumbMargin.Left >= 0)
-                        LeftThumbMargin = new Thickness(LeftThumbMargin.Left + _centerSliderPoint.X - Thumb1.Width / 2,
-                            0, 0, 0);
-                    if (RightThumbMargin.Right + Thumb2.Width <= Track.Width - LeftThumbMargin.Left - Thumb1.Width / 2)
-                        RightThumbMargin = new Thickness(0, 0,
-                            RightThumbMargin.Right - _centerSliderPoint.X + Thumb2.Width / 2, 0);
-                }
-
-                if (LeftThumbMargin.Left < 0) LeftThumbMargin = new Thickness(0);
+            
+                var changedMarginLeft = Math.Round(Math.Truncate(LeftThumbMargin.Left) + _centerSliderPoint.X - Thumb1.Width / 2);
+                LeftThumbMargin = new Thickness(changedMarginLeft, 0, 0, 0);
+                
+                var changedMarginRight = Math.Round(Math.Truncate(RightThumbMargin.Right) - _centerSliderPoint.X + Thumb2.Width / 2);
+                RightThumbMargin = new Thickness(0, 0, changedMarginRight, 0);
+                
+                CheckBorder();
+                
+                // if (_centerSliderPoint.X > 10)
+                // {
+                //     if (LeftThumbMargin.Left + Thumb1.Width <= Track.Width - RightThumbMargin.Right - Thumb2.Width / 2)
+                //         LeftThumbMargin = new Thickness(LeftThumbMargin.Left + _centerSliderPoint.X - Thumb1.Width / 2,
+                //             0, 0, 0);
+                //     RightThumbMargin = RightThumbMargin.Right <= 0
+                //         ? new Thickness(0)
+                //         : new Thickness(0, 0, RightThumbMargin.Right - _centerSliderPoint.X + Thumb2.Width / 2, 0);
+                // }
+                // else if (_centerSliderPoint.X < 10)
+                // {
+                //     if (LeftThumbMargin.Left >= 0)
+                //         LeftThumbMargin = new Thickness(LeftThumbMargin.Left + _centerSliderPoint.X - Thumb1.Width / 2,
+                //             0, 0, 0);
+                //     if (RightThumbMargin.Right + Thumb2.Width <= Track.Width - LeftThumbMargin.Left - Thumb1.Width / 2)
+                //         RightThumbMargin = new Thickness(0, 0,
+                //             RightThumbMargin.Right - _centerSliderPoint.X + Thumb2.Width / 2, 0);
+                // }
+            
+                // if (LeftThumbMargin.Left < 0) LeftThumbMargin = new Thickness(0);
             }
 
-            var leftMiddle = Maximum - Minimum;
-            var leftPercent = leftMiddle * LeftThumbMargin.Left / Track.Width;
-            LeftValue = Math.Round(leftPercent + Minimum);
+            var middle = Maximum - Minimum;
 
-            var rightMiddle = Maximum - Minimum;
-            var rightPercent = rightMiddle * RightThumbMargin.Right / Track.Width;
-            RightValue = Math.Round(Maximum - rightPercent);
+            #region MyRegion
 
+            var leftMargin = Math.Round(middle * (LeftThumbMargin.Left + Thumb1.Width / 2) / Track.Width);
+            LeftValue = Math.Round(leftMargin + Minimum);
+
+            #endregion
+
+            #region MyRegion
+
+            var rightMargin = middle * (RightThumbMargin.Right + Thumb2.Width / 2) / Track.Width;
+            RightValue = Math.Round(Maximum - rightMargin);
+
+            #endregion
+            
+            // Debug.WriteLine(leftMargin.ToString() + " " + rightMargin.ToString());
+            
             if (LeftThumbMargin.Left + RightThumbMargin.Right > Width * .8)
             {
                 _centerSliderPressed = false;
@@ -627,6 +672,26 @@ namespace Arion.Style.Controls
             CenterThumb.Margin = new Thickness(LeftThumbMargin.Left, 0, RightThumbMargin.Right, 0);
             CenterMargin = new Thickness(LeftThumbMargin.Left + Thumb1.Width / 2, 0,
                 RightThumbMargin.Right + Thumb2.Width / 2, 0);
+        }
+
+        private void CheckBorder()
+        {
+            if (LeftThumbMargin.Left < -10) LeftThumbMargin = new Thickness(-10,0,0,0);
+            else if (LeftThumbMargin.Left > Track.Width-Thumb2.Width/2) LeftThumbMargin = new Thickness(Track.Width-Thumb2.Width/2, 0, 0, 0);
+            if (RightThumbMargin.Right < -10) RightThumbMargin = new Thickness(0,0,-10,0);
+            else if (RightThumbMargin.Right > Track.Width-Thumb2.Width/2) RightThumbMargin = new Thickness(0, 0, Track.Width-Thumb1.Width/2, 0);
+        }
+
+        private void MoveRightThumb()
+        {
+            var changedMargin = Math.Round(Math.Truncate(RightThumbMargin.Right) - _rightSliderPoint.X + Thumb2.Width / 2);
+            RightThumbMargin = new Thickness(0, 0, changedMargin, 0);
+        }
+
+        private void MoveLeftThumb()
+        {
+            var changedMargin = Math.Round(Math.Truncate(LeftThumbMargin.Left) + _leftSliderPoint.X - Thumb1.Width / 2);
+            LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
         }
 
         private void LeftSlider_OnMouseDown(object sender, MouseButtonEventArgs e)
@@ -675,11 +740,20 @@ namespace Arion.Style.Controls
             Mouse.Capture(CenterThumb, CaptureMode.None);
         }
 
-        private void RangeSlider_OnMouseLeave(object sender, MouseEventArgs e)
+        public void SetLeftValue(double value)
         {
-            _leftSliderPressed = false;
-            _rightSliderPressed = false;
-            _centerSliderPressed = false;
+            LeftValue = value;
+            var percent = value * 100 / Maximum;
+            var margin = percent * Track.Width / 100;
+            LeftThumbMargin = new Thickness(margin-10, 0,0,0);
+        }
+        
+        public void SetRightValue(double value)
+        {
+            RightValue = value;
+            var percent = Math.Abs(Math.Round(value * 100 / Maximum, 2) - 100);
+            var margin = Math.Round(percent * (Track.Width) / 100, 2);
+            RightThumbMargin = new Thickness(0, 0,margin-10,0);
         }
 
         #endregion

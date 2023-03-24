@@ -51,5 +51,11 @@ namespace Arion.Theme.Test
             
             LvIcons.ItemsSource = icons;
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            Slider65535.SetLeftValue(3000);
+            Slider65535.SetRightValue(17000);
+        }
     }
 }

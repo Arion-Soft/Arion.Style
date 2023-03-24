@@ -2500,7 +2500,7 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Password box" IsSelected="True">
+        <TabItem Header="Password box">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -2647,10 +2647,13 @@
                     Margin="5" />
             </Grid>
         </TabItem>
-        <TabItem Header="Ranger">
+        <TabItem Header="Ranger" IsSelected="True">
             <!--  RANGERS  -->
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -2692,9 +2695,37 @@
                 <arion:RangeSlider
                     Grid.Column="0"
                     Grid.Row="4"
+                    LeftValue="{Binding ElementName=SliderTest, Path=LeftValue}"
                     Maximum="65535"
                     Minimum="0"
-                    Name="Slider65535" />
+                    Name="Slider65535"
+                    RightValue="{Binding ElementName=SliderTest, Path=RightValue}"
+                    Width="500" />
+
+                <Grid Grid.Column="0" Grid.Row="5">
+                    <TextBox
+                        HorizontalAlignment="Left"
+                        Text="{Binding ElementName=Slider65535, Path=LeftValue}"
+                        Width="100" />
+                    <TextBox
+                        HorizontalAlignment="Right"
+                        Text="{Binding ElementName=Slider65535, Path=RightValue}"
+                        Width="100" />
+                </Grid>
+
+                <arion:RangeSlider
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Maximum="65535"
+                    Minimum="0"
+                    Name="SliderTest"
+                    Width="500" />
+                <Button
+                    Click="ButtonBase_OnClick"
+                    Content="Click me"
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    Style="{StaticResource OutlineLg}" />
             </Grid>
         </TabItem>
         <TabItem Header="Scroll bars">
