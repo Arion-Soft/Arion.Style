@@ -25,6 +25,8 @@ namespace Arion.Style.Controls
             InitializeComponent();
             RightValue = Maximum;
             LeftValue = Minimum;
+            
+            Track.Width = Width - 10;
 
             #region LeftThumb
 
@@ -573,42 +575,13 @@ namespace Arion.Style.Controls
                 // Получение местоположения от
                 _leftSliderPoint = e.GetPosition(Thumb1);
                 MoveLeftThumb();
-                
-                // if (_leftSliderPoint.X > 10)
-                // {
-                //     if (LeftThumbMargin.Left + Thumb1.Width <= Track.Width - RightThumbMargin.Right /*- Thumb2.Width / 4*/)
-                //         LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
-                // }
-                // else if (_leftSliderPoint.X < 10)
-                // {
-                //     if (LeftThumbMargin.Left >= 0)
-                        // LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
-                // }
-
                 CheckBorder();
             }
             else if (_rightSliderPressed)
             {
                 _rightSliderPoint = e.GetPosition(Thumb2);
                 MoveRightThumb();
-                
                 CheckBorder();
-                
-                // if (RightThumbMargin.Right < -10) RightThumbMargin = new Thickness(0,0,-10,0);
-                // Если перемещается вправо ->
-                // if (_rightSliderPoint.X > 10)
-                // {
-                //     RightThumbMargin = RightThumbMargin.Right <= 0
-                //         ? new Thickness(0)
-                //         : new Thickness(0, 0, changedMargin, 0);
-                // }
-                // // Если перемещается влево <-
-                // else if (_rightSliderPoint.X < 10)
-                // {
-                //     // Если отступ справа + ширина ползунка больше чем ширина, тогда не перемещать
-                //     if (RightThumbMargin.Right + Thumb2.Width <= Track.Width - LeftThumbMargin.Left /*- Thumb1.Width / 4*/)
-                //         RightThumbMargin = new Thickness(0, 0, changedMargin, 0);
-                // }
             }
             else if (_centerSliderPressed)
             {
@@ -621,46 +594,23 @@ namespace Arion.Style.Controls
                 RightThumbMargin = new Thickness(0, 0, changedMarginRight, 0);
                 
                 CheckBorder();
-                
-                // if (_centerSliderPoint.X > 10)
-                // {
-                //     if (LeftThumbMargin.Left + Thumb1.Width <= Track.Width - RightThumbMargin.Right - Thumb2.Width / 2)
-                //         LeftThumbMargin = new Thickness(LeftThumbMargin.Left + _centerSliderPoint.X - Thumb1.Width / 2,
-                //             0, 0, 0);
-                //     RightThumbMargin = RightThumbMargin.Right <= 0
-                //         ? new Thickness(0)
-                //         : new Thickness(0, 0, RightThumbMargin.Right - _centerSliderPoint.X + Thumb2.Width / 2, 0);
-                // }
-                // else if (_centerSliderPoint.X < 10)
-                // {
-                //     if (LeftThumbMargin.Left >= 0)
-                //         LeftThumbMargin = new Thickness(LeftThumbMargin.Left + _centerSliderPoint.X - Thumb1.Width / 2,
-                //             0, 0, 0);
-                //     if (RightThumbMargin.Right + Thumb2.Width <= Track.Width - LeftThumbMargin.Left - Thumb1.Width / 2)
-                //         RightThumbMargin = new Thickness(0, 0,
-                //             RightThumbMargin.Right - _centerSliderPoint.X + Thumb2.Width / 2, 0);
-                // }
-            
-                // if (LeftThumbMargin.Left < 0) LeftThumbMargin = new Thickness(0);
             }
 
             var middle = Maximum - Minimum;
 
-            #region MyRegion
+            #region Расчет левого значения
 
             var leftMargin = Math.Round(middle * (LeftThumbMargin.Left + Thumb1.Width / 2) / Track.Width);
             LeftValue = Math.Round(leftMargin + Minimum);
 
             #endregion
 
-            #region MyRegion
+            #region Расчет правого значения
 
             var rightMargin = middle * (RightThumbMargin.Right + Thumb2.Width / 2) / Track.Width;
             RightValue = Math.Round(Maximum - rightMargin);
 
             #endregion
-            
-            // Debug.WriteLine(leftMargin.ToString() + " " + rightMargin.ToString());
             
             if (LeftThumbMargin.Left + RightThumbMargin.Right > Width * .8)
             {
@@ -669,6 +619,11 @@ namespace Arion.Style.Controls
             }
             else CenterThumbVisibility = Visibility.Visible;
 
+            MoveCenterThumbAndFill();
+        }
+
+        private void MoveCenterThumbAndFill()
+        {
             CenterThumb.Margin = new Thickness(LeftThumbMargin.Left, 0, RightThumbMargin.Right, 0);
             CenterMargin = new Thickness(LeftThumbMargin.Left + Thumb1.Width / 2, 0,
                 RightThumbMargin.Right + Thumb2.Width / 2, 0);
@@ -746,6 +701,7 @@ namespace Arion.Style.Controls
             var percent = value * 100 / Maximum;
             var margin = percent * Track.Width / 100;
             LeftThumbMargin = new Thickness(margin-10, 0,0,0);
+            MoveCenterThumbAndFill();
         }
         
         public void SetRightValue(double value)
@@ -754,6 +710,7 @@ namespace Arion.Style.Controls
             var percent = Math.Abs(Math.Round(value * 100 / Maximum, 2) - 100);
             var margin = Math.Round(percent * (Track.Width) / 100, 2);
             RightThumbMargin = new Thickness(0, 0,margin-10,0);
+            MoveCenterThumbAndFill();
         }
 
         #endregion

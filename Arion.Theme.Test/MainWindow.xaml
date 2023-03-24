@@ -1,20 +1,20 @@
 ﻿<Window
-    Height="800"
-    Left="600"
-    Loaded="MainWindow_OnLoaded"
-    Title="MainWindow"
-    Top="0"
-    Width="1000"
-    WindowState="Maximized"
-    mc:Ignorable="d"
     x:Class="Arion.Theme.Test.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:arion="clr-namespace:Arion.Style.Controls;assembly=Arion.Style.Controls"
     xmlns:attachedProperties="clr-namespace:Arion.Style.Theme.AttachedProperties;assembly=Arion.Style.Theme"
     xmlns:controls="clr-namespace:Arion.Style.Theme.Controls;assembly=Arion.Style.Theme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    Title="MainWindow"
+    Width="1000"
+    Height="800"
+    Left="600"
+    Loaded="MainWindow_OnLoaded"
+    Top="0"
+    WindowState="Maximized"
+    mc:Ignorable="d">
     <TabControl TabStripPlacement="Left">
         <TabItem Header="Breadcrumb">
             <Grid>
@@ -48,17 +48,17 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="Breadcrumb"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
-                <arion:Breadcrumb Grid.Column="0" Grid.Row="1">
+                    Content="Breadcrumb"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
+                <arion:Breadcrumb Grid.Row="1" Grid.Column="0">
                     <arion:Breadcrumb.Items>
                         <arion:BreadcrumbItem Text="Directory" />
                         <arion:BreadcrumbItem Text="Directory" />
@@ -102,17 +102,17 @@
                 </Grid.ColumnDefinitions>
 
                 <Label
-                    Content="Buttons"
-                    FontSize="38"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    RenderTransformOrigin="0.5,0.5"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto">
+                    Content="Buttons"
+                    FontSize="38"
+                    RenderTransformOrigin="0.5,0.5"
+                    Style="{StaticResource Lbl}">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform />
@@ -124,1237 +124,1237 @@
                 </Label>
 
                 <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Width="Auto"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
                     Content="Filled"
                     FontSize="32"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
+                    Style="{StaticResource Lbl}" />
                 <Label
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Width="Auto"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
                     Content="Outline"
                     FontSize="32"
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
+                    Style="{StaticResource Lbl}" />
                 <Label
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Width="Auto"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
                     Content="Text"
                     FontSize="32"
-                    Grid.Column="3"
-                    Grid.Row="1"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
+                    Style="{StaticResource Lbl}" />
 
                 <Label
+                    Grid.Row="2"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Width="100"
+                    Margin="10"
+                    Padding="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
                     Content="Large"
-                    Grid.Column="0"
-                    Grid.Row="2"
+                    Style="{StaticResource Lbl}" />
+                <Label
+                    Grid.Row="7"
                     Grid.RowSpan="3"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="100" />
-                <Label
                     Content="Medium"
-                    Grid.Column="0"
-                    Grid.Row="7"
-                    Grid.RowSpan="3"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top" />
+                    Style="{StaticResource Lbl}" />
                 <Label
-                    Content="Small"
-                    Grid.Column="0"
                     Grid.Row="12"
                     Grid.RowSpan="3"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="100"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="100" />
+                    Content="Small"
+                    Style="{StaticResource Lbl}" />
 
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="2"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource FilledLg}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource FilledLg}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="3"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                                 <TextBlock
-                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    Text="Button"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Foreground="White"
+                                    Text="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="4"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="5"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="White"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="White"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledLg}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="White"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="White"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
                 <Separator
+                    Grid.Row="6"
                     Grid.Column="0"
-                    Grid.ColumnSpan="4"
-                    Grid.Row="6" />
+                    Grid.ColumnSpan="4" />
 
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="7"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource FilledMd}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource FilledMd}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="8"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="9"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
                 <Separator
+                    Grid.Row="11"
                     Grid.Column="0"
-                    Grid.ColumnSpan="4"
-                    Grid.Row="11" />
+                    Grid.ColumnSpan="4" />
 
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="10"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="White"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="White"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledMd}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="White"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="White"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
-                <Separator Grid.Column="0" Grid.Row="6" />
+                <Separator Grid.Row="6" Grid.Column="0" />
 
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="12"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource FilledSm}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource FilledSm}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="13"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="14"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
-                                    Foreground="White"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button"
+                                    Foreground="White" />
                                 <arion:Icon
-                                    Fill="White"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="White"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="15"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="White"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="White"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource FilledSm}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="White"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="White"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
                 <Separator
+                    Grid.Row="16"
                     Grid.Column="0"
-                    Grid.ColumnSpan="4"
-                    Grid.Row="16" />
+                    Grid.ColumnSpan="4" />
 
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="17"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
-                        Content="First"
                         Margin="0,5"
+                        Content="First"
                         Style="{StaticResource GroupedFilledFirstLg}" />
                     <Button
-                        Content="Middle"
                         Margin="0,5"
+                        Content="Middle"
                         Style="{StaticResource GroupedFilledMiddleLg}" />
                     <Button
-                        Content="Last"
                         Margin="0,5"
+                        Content="Last"
                         Style="{StaticResource GroupedFilledLastLg}" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="2"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource OutlineLg}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource OutlineLg}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="3"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="4"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="5"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineLg}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="7"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource OutlineMd}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource OutlineMd}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="8"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="9"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="10"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineMd}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="12"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource OutlineSm}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource OutlineSm}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="13"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="14"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="15"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource OutlineSm}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="2"
                     Grid.Row="17"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
-                        Content="First"
                         Margin="0,5"
+                        Content="First"
                         Style="{StaticResource GroupedOutlineFirstLg}" />
                     <Button
-                        Content="Middle"
                         Margin="0,5"
+                        Content="Middle"
                         Style="{StaticResource GroupedOutlineMiddleLg}" />
                     <Button
-                        Content="Last"
                         Margin="0,5"
+                        Content="Last"
                         Style="{StaticResource GroupedOutlineLastLg}" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="2"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource TextLg}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource TextLg}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="3"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="4"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextLg}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="5"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextLg}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextLg}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="7"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource TextMd}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource TextMd}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="8"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="9"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextMd}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="10"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextMd}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextMd}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="12"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button
-                        Content="Button"
                         Margin="5"
+                        Content="Button"
                         Style="{StaticResource TextSm}" />
                     <Button
+                        Margin="5"
                         Content="Button"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource TextSm}" />
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="13"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                                 <Label
-                                    Content="Button"
                                     Margin="5,0,0,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="14"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextSm}">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <Label
-                                    Content="Button"
                                     Margin="0,0,5,0"
                                     Padding="0"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Content="Button" />
                                 <arion:Icon
-                                    Fill="Black"
+                                    Width="15"
                                     Height="15"
-                                    Kind="User"
-                                    Width="15" />
+                                    Fill="Black"
+                                    Kind="User" />
                             </StackPanel>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="15"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button Margin="5" Style="{StaticResource TextSm}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                     <Button
-                        IsEnabled="False"
                         Margin="5"
+                        IsEnabled="False"
                         Style="{StaticResource TextSm}">
                         <Button.Content>
                             <arion:Icon
-                                Fill="Black"
+                                Width="15"
                                 Height="15"
-                                Kind="User"
-                                Width="15" />
+                                Fill="Black"
+                                Kind="User" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel
-                    Grid.Column="3"
                     Grid.Row="17"
+                    Grid.Column="3"
                     Orientation="Horizontal">
                     <Button
-                        Content="First"
                         Margin="0,5"
+                        Content="First"
                         Style="{StaticResource GroupedTextFirstLg}" />
                     <Button
-                        Content="Middle"
                         Margin="0,5"
+                        Content="Middle"
                         Style="{StaticResource GroupedTextMiddleLg}" />
                     <Button
-                        Content="Last"
                         Margin="0,5"
+                        Content="Last"
                         Style="{StaticResource GroupedTextLastLg}" />
                 </StackPanel>
 
@@ -1376,58 +1376,58 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="CheckBox"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="CheckBox"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="1"
+                    Grid.Column="0"
                     Orientation="Horizontal">
-                    <CheckBox Content="CheckBox" Margin="5" />
+                    <CheckBox Margin="5" Content="CheckBox" />
                     <CheckBox
+                        Margin="5"
                         Content="CheckBox"
-                        IsEnabled="False"
-                        Margin="5" />
+                        IsEnabled="False" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="2"
+                    Grid.Column="0"
                     Orientation="Horizontal">
                     <CheckBox
+                        Margin="5"
                         Content="CheckBox"
-                        IsChecked="True"
-                        Margin="5" />
+                        IsChecked="True" />
                     <CheckBox
+                        Margin="5"
                         Content="CheckBox"
                         IsChecked="True"
-                        IsEnabled="False"
-                        Margin="5" />
+                        IsEnabled="False" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="3"
+                    Grid.Column="0"
                     Orientation="Horizontal">
                     <CheckBox
+                        Margin="5"
                         Content="CheckBox"
                         IsChecked="{x:Null}"
-                        IsThreeState="True"
-                        Margin="5" />
+                        IsThreeState="True" />
                     <CheckBox
+                        Margin="5"
                         Content="CheckBox"
                         IsChecked="{x:Null}"
                         IsEnabled="False"
-                        IsThreeState="True"
-                        Margin="5" />
+                        IsThreeState="True" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -1458,374 +1458,374 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="Colors"
-                    FontSize="32"
+                    Grid.Row="0"
                     Grid.Column="0"
                     Grid.ColumnSpan="9"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Colors"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="0"
                     Background="{StaticResource Pr900}"
-                    Grid.Column="0"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="1"
                     Background="{StaticResource Pr800}"
-                    Grid.Column="1"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="2"
                     Background="{StaticResource Pr700}"
-                    Grid.Column="2"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="3"
                     Background="{StaticResource Pr600}"
-                    Grid.Column="3"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="4"
                     Background="{StaticResource Pr500}"
-                    Grid.Column="4"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="5"
                     Background="{StaticResource Pr400}"
-                    Grid.Column="5"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="6"
                     Background="{StaticResource Pr300}"
-                    Grid.Column="6"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="7"
                     Background="{StaticResource Pr200}"
-                    Grid.Column="7"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="8"
                     Background="{StaticResource Pr100}"
-                    Grid.Column="8"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="1"
+                    Grid.Column="9"
                     Background="{StaticResource Pr50}"
-                    Grid.Column="9"
-                    Grid.Row="1"
                     Style="{StaticResource Brd}" />
 
 
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="0"
                     Background="{StaticResource R900}"
-                    Grid.Column="0"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="1"
                     Background="{StaticResource R800}"
-                    Grid.Column="1"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="2"
                     Background="{StaticResource R700}"
-                    Grid.Column="2"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="3"
                     Background="{StaticResource R600}"
-                    Grid.Column="3"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="4"
                     Background="{StaticResource R500}"
-                    Grid.Column="4"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="5"
                     Background="{StaticResource R400}"
-                    Grid.Column="5"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="6"
                     Background="{StaticResource R300}"
-                    Grid.Column="6"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="7"
                     Background="{StaticResource R200}"
-                    Grid.Column="7"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="8"
                     Background="{StaticResource R100}"
-                    Grid.Column="8"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="2"
+                    Grid.Column="9"
                     Background="{StaticResource R50}"
-                    Grid.Column="9"
-                    Grid.Row="2"
                     Style="{StaticResource Brd}" />
 
                 <Border
-                    Background="{StaticResource G900}"
+                    Grid.Row="3"
                     Grid.Column="0"
-                    Grid.Row="3"
+                    Background="{StaticResource G900}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G800}"
+                    Grid.Row="3"
                     Grid.Column="1"
-                    Grid.Row="3"
+                    Background="{StaticResource G800}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G700}"
+                    Grid.Row="3"
                     Grid.Column="2"
-                    Grid.Row="3"
+                    Background="{StaticResource G700}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G600}"
+                    Grid.Row="3"
                     Grid.Column="3"
-                    Grid.Row="3"
+                    Background="{StaticResource G600}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G500}"
+                    Grid.Row="3"
                     Grid.Column="4"
-                    Grid.Row="3"
+                    Background="{StaticResource G500}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G400}"
+                    Grid.Row="3"
                     Grid.Column="5"
-                    Grid.Row="3"
+                    Background="{StaticResource G400}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G300}"
+                    Grid.Row="3"
                     Grid.Column="6"
-                    Grid.Row="3"
+                    Background="{StaticResource G300}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G200}"
+                    Grid.Row="3"
                     Grid.Column="7"
-                    Grid.Row="3"
+                    Background="{StaticResource G200}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G100}"
+                    Grid.Row="3"
                     Grid.Column="8"
-                    Grid.Row="3"
+                    Background="{StaticResource G100}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G50}"
-                    Grid.Column="9"
                     Grid.Row="3"
+                    Grid.Column="9"
+                    Background="{StaticResource G50}"
                     Style="{StaticResource Brd}" />
 
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="0"
                     Background="{StaticResource Y900}"
-                    Grid.Column="0"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="1"
                     Background="{StaticResource Y800}"
-                    Grid.Column="1"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="2"
                     Background="{StaticResource Y700}"
-                    Grid.Column="2"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="3"
                     Background="{StaticResource Y600}"
-                    Grid.Column="3"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="4"
                     Background="{StaticResource Y500}"
-                    Grid.Column="4"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="5"
                     Background="{StaticResource Y400}"
-                    Grid.Column="5"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="6"
                     Background="{StaticResource Y300}"
-                    Grid.Column="6"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="7"
                     Background="{StaticResource Y200}"
-                    Grid.Column="7"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="8"
                     Background="{StaticResource Y100}"
-                    Grid.Column="8"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="4"
+                    Grid.Column="9"
                     Background="{StaticResource Y50}"
-                    Grid.Column="9"
-                    Grid.Row="4"
                     Style="{StaticResource Brd}" />
 
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="0"
                     Background="{StaticResource P900}"
-                    Grid.Column="0"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="1"
                     Background="{StaticResource P800}"
-                    Grid.Column="1"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="2"
                     Background="{StaticResource P700}"
-                    Grid.Column="2"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="3"
                     Background="{StaticResource P600}"
-                    Grid.Column="3"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="4"
                     Background="{StaticResource P500}"
-                    Grid.Column="4"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="5"
                     Background="{StaticResource P400}"
-                    Grid.Column="5"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="6"
                     Background="{StaticResource P300}"
-                    Grid.Column="6"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="7"
                     Background="{StaticResource P200}"
-                    Grid.Column="7"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="8"
                     Background="{StaticResource P100}"
-                    Grid.Column="8"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
                 <Border
+                    Grid.Row="5"
+                    Grid.Column="9"
                     Background="{StaticResource P50}"
-                    Grid.Column="9"
-                    Grid.Row="5"
                     Style="{StaticResource Brd}" />
 
                 <Border
+                    Grid.Row="6"
+                    Grid.Column="0"
                     Background="{StaticResource T900}"
-                    Grid.Column="0"
-                    Grid.Row="6"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T800}"
+                    Grid.Row="6"
                     Grid.Column="1"
-                    Grid.Row="6"
+                    Background="{StaticResource T800}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T700}"
+                    Grid.Row="6"
                     Grid.Column="2"
-                    Grid.Row="6"
+                    Background="{StaticResource T700}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T600}"
+                    Grid.Row="6"
                     Grid.Column="3"
-                    Grid.Row="6"
+                    Background="{StaticResource T600}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T500}"
+                    Grid.Row="6"
                     Grid.Column="4"
-                    Grid.Row="6"
+                    Background="{StaticResource T500}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T400}"
+                    Grid.Row="6"
                     Grid.Column="5"
-                    Grid.Row="6"
+                    Background="{StaticResource T400}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T300}"
+                    Grid.Row="6"
                     Grid.Column="6"
-                    Grid.Row="6"
+                    Background="{StaticResource T300}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T200}"
+                    Grid.Row="6"
                     Grid.Column="7"
-                    Grid.Row="6"
+                    Background="{StaticResource T200}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T100}"
+                    Grid.Row="6"
                     Grid.Column="8"
-                    Grid.Row="6"
+                    Background="{StaticResource T100}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource T50}"
-                    Grid.Column="9"
                     Grid.Row="6"
+                    Grid.Column="9"
+                    Background="{StaticResource T50}"
                     Style="{StaticResource Brd}" />
 
                 <Border
-                    Background="{StaticResource G900}"
+                    Grid.Row="3"
                     Grid.Column="0"
-                    Grid.Row="3"
+                    Background="{StaticResource G900}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G800}"
+                    Grid.Row="3"
                     Grid.Column="1"
-                    Grid.Row="3"
+                    Background="{StaticResource G800}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G700}"
+                    Grid.Row="3"
                     Grid.Column="2"
-                    Grid.Row="3"
+                    Background="{StaticResource G700}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G600}"
+                    Grid.Row="3"
                     Grid.Column="3"
-                    Grid.Row="3"
+                    Background="{StaticResource G600}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G500}"
+                    Grid.Row="3"
                     Grid.Column="4"
-                    Grid.Row="3"
+                    Background="{StaticResource G500}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G400}"
+                    Grid.Row="3"
                     Grid.Column="5"
-                    Grid.Row="3"
+                    Background="{StaticResource G400}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G300}"
+                    Grid.Row="3"
                     Grid.Column="6"
-                    Grid.Row="3"
+                    Background="{StaticResource G300}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G200}"
+                    Grid.Row="3"
                     Grid.Column="7"
-                    Grid.Row="3"
+                    Background="{StaticResource G200}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G100}"
+                    Grid.Row="3"
                     Grid.Column="8"
-                    Grid.Row="3"
+                    Background="{StaticResource G100}"
                     Style="{StaticResource Brd}" />
                 <Border
-                    Background="{StaticResource G50}"
-                    Grid.Column="9"
                     Grid.Row="3"
+                    Grid.Column="9"
+                    Background="{StaticResource G50}"
                     Style="{StaticResource Brd}" />
             </Grid>
         </TabItem>
@@ -1845,22 +1845,22 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="ComboBox"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="ComboBox"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <ComboBox
-                    Grid.Column="0"
                     Grid.Row="1"
-                    Margin="5"
-                    Width="200">
+                    Grid.Column="0"
+                    Width="200"
+                    Margin="5">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1871,11 +1871,11 @@
                     </ComboBox.Items>
                 </ComboBox>
                 <ComboBox
-                    Grid.Column="0"
                     Grid.Row="2"
-                    IsEditable="True"
+                    Grid.Column="0"
+                    Width="200"
                     Margin="5"
-                    Width="200">
+                    IsEditable="True">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1886,12 +1886,12 @@
                     </ComboBox.Items>
                 </ComboBox>
                 <ComboBox
-                    Grid.Column="0"
                     Grid.Row="3"
-                    IsEnabled="False"
+                    Grid.Column="0"
+                    Width="200"
                     Margin="5"
-                    SelectedIndex="2"
-                    Width="200">
+                    IsEnabled="False"
+                    SelectedIndex="2">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1917,23 +1917,23 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="Display control"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Display control"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <controls:DisplayControl
-                    Grid.Column="0"
                     Grid.Row="1"
+                    Grid.Column="0"
+                    Width="170"
                     Height="90"
-                    Text="кВ"
-                    Width="170" />
+                    Text="кВ" />
             </Grid>
         </TabItem>
         <TabItem Header="Expander">
@@ -1948,21 +1948,21 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="Expander"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Expander"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <DockPanel
+                    Grid.Row="1"
                     Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="1">
+                    Grid.ColumnSpan="2">
                     <Expander
                         DockPanel.Dock="Top"
                         ExpandDirection="Down"
@@ -1981,19 +1981,19 @@
                         </Expander.Content>
                     </Expander>
                     <Expander
+                        HorizontalAlignment="Right"
                         DockPanel.Dock="Right"
                         ExpandDirection="Left"
-                        Header="Expander"
-                        HorizontalAlignment="Right">
+                        Header="Expander">
                         <Expander.Content>
                             <Label Content="Expander content" />
                         </Expander.Content>
                     </Expander>
                     <Expander
+                        HorizontalAlignment="Left"
                         DockPanel.Dock="Left"
                         ExpandDirection="Right"
-                        Header="Expander"
-                        HorizontalAlignment="Left">
+                        Header="Expander">
                         <Expander.Content>
                             <Label Content="Expander content" />
                         </Expander.Content>
@@ -2016,39 +2016,39 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="Inline Alert"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Inline Alert"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <arion:InlineAlert
-                    Caption="Short descriptive message"
                     Grid.Row="1"
                     Margin="5"
+                    Caption="Short descriptive message"
                     Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
                     Type="Info" />
                 <arion:InlineAlert
-                    Caption="Short descriptive message"
                     Grid.Row="2"
                     Margin="5"
+                    Caption="Short descriptive message"
                     Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
                     Type="Warning" />
                 <arion:InlineAlert
-                    Caption="Short descriptive message"
                     Grid.Row="3"
                     Margin="5"
+                    Caption="Short descriptive message"
                     Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
                     Type="Danger" />
                 <arion:InlineAlert
-                    Caption="Short descriptive message"
                     Grid.Row="4"
                     Margin="5"
+                    Caption="Short descriptive message"
                     Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
                     Type="Success" />
             </Grid>
@@ -2071,99 +2071,99 @@
                 </Grid.RowDefinitions>
 
                 <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Width="Auto"
+                    Margin="10"
+                    Padding="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
                     Content="Label"
                     FontSize="32"
+                    Style="{StaticResource Lbl}" />
+
+                <Label
+                    Grid.Row="1"
                     Grid.Column="0"
+                    Content="ExtraLight"
+                    FontWeight="ExtraLight" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Content="Light"
+                    FontWeight="Light" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Content="Regular"
+                    FontWeight="Regular" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Content="Normal"
+                    FontWeight="Normal" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Content="Medium"
+                    FontWeight="Medium" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Content="Bold"
+                    FontWeight="Bold" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Content="Black"
+                    FontWeight="Black" />
+
+                <Label
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="1"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <Label
-                    Content="ExtraLight"
-                    FontWeight="ExtraLight"
-                    Grid.Column="0"
-                    Grid.Row="1" />
-                <Label
-                    Content="Light"
-                    FontWeight="Light"
-                    Grid.Column="0"
-                    Grid.Row="2" />
-                <Label
-                    Content="Regular"
-                    FontWeight="Regular"
-                    Grid.Column="0"
-                    Grid.Row="3" />
-                <Label
-                    Content="Normal"
-                    FontWeight="Normal"
-                    Grid.Column="0"
-                    Grid.Row="4" />
-                <Label
-                    Content="Medium"
-                    FontWeight="Medium"
-                    Grid.Column="0"
-                    Grid.Row="5" />
-                <Label
-                    Content="Bold"
-                    FontWeight="Bold"
-                    Grid.Column="0"
-                    Grid.Row="6" />
-                <Label
-                    Content="Black"
-                    FontWeight="Black"
-                    Grid.Column="0"
-                    Grid.Row="7" />
-
-                <Label
                     Content="TextBlock"
                     FontSize="32"
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
+                    Style="{StaticResource Lbl}" />
 
                 <TextBlock
-                    FontWeight="ExtraLight"
-                    Grid.Column="1"
                     Grid.Row="1"
+                    Grid.Column="1"
+                    FontWeight="ExtraLight"
                     Text="ExtraLight" />
                 <TextBlock
-                    FontWeight="Light"
-                    Grid.Column="1"
                     Grid.Row="2"
+                    Grid.Column="1"
+                    FontWeight="Light"
                     Text="Light" />
                 <TextBlock
-                    FontWeight="Regular"
-                    Grid.Column="1"
                     Grid.Row="3"
+                    Grid.Column="1"
+                    FontWeight="Regular"
                     Text="Regular" />
                 <TextBlock
-                    FontWeight="Normal"
-                    Grid.Column="1"
                     Grid.Row="4"
+                    Grid.Column="1"
+                    FontWeight="Normal"
                     Text="Normal" />
                 <TextBlock
-                    FontWeight="Medium"
-                    Grid.Column="1"
                     Grid.Row="5"
+                    Grid.Column="1"
+                    FontWeight="Medium"
                     Text="Medium" />
                 <TextBlock
-                    FontWeight="Bold"
-                    Grid.Column="1"
                     Grid.Row="6"
+                    Grid.Column="1"
+                    FontWeight="Bold"
                     Text="Bold" />
                 <TextBlock
-                    FontWeight="Black"
-                    Grid.Column="1"
                     Grid.Row="7"
+                    Grid.Column="1"
+                    FontWeight="Black"
                     Text="Black" />
             </Grid>
         </TabItem>
@@ -2184,20 +2184,20 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="ListView"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="ListView"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <ListView
-                    Grid.Column="1"
                     Grid.Row="1"
+                    Grid.Column="1"
                     Height="400"
                     ScrollViewer.VerticalScrollBarVisibility="Visible">
                     <ListView.Items>
@@ -2354,7 +2354,7 @@
                     </ListView.Items>
                 </ListView>
 
-                <ListView Grid.Column="2" Grid.Row="1">
+                <ListView Grid.Row="1" Grid.Column="2">
                     <ListView.Items>
                         <ListViewItem>
                             <Label Content="List view item 1" />
@@ -2389,7 +2389,7 @@
                     </ListView.Items>
                 </ListView>
 
-                <ListView Grid.Column="3" Grid.Row="1">
+                <ListView Grid.Row="1" Grid.Column="3">
                     <ListView.Items>
                         <ListViewItem Style="{StaticResource ItemOutlineRight}">
                             <Label Content="List view item 1" />
@@ -2439,21 +2439,21 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="Icons"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Icons"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
                 <ListView
+                    Name="LvIcons"
+                    Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    Grid.Row="1"
-                    Name="LvIcons"
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -2462,22 +2462,22 @@
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
                         <DataTemplate DataType="{x:Type arion:Icon}">
-                            <Grid Height="100" Width="80">
+                            <Grid Width="80" Height="100">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="5" />
                                     <RowDefinition Height="40" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <arion:Icon
-                                    Fill="#252C32"
                                     Grid.Row="1"
+                                    Width="40"
                                     Height="40"
-                                    Kind="{Binding Kind}"
-                                    Width="40" />
+                                    Fill="#252C32"
+                                    Kind="{Binding Kind}" />
                                 <TextBlock
+                                    Grid.Row="2"
                                     FontSize="14"
                                     FontWeight="Light"
-                                    Grid.Row="2"
                                     Text="{Binding Kind}"
                                     TextAlignment="Center"
                                     TextWrapping="Wrap" />
@@ -2487,16 +2487,16 @@
                 </ListView>
 
                 <StackPanel
+                    Grid.Row="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    Grid.Row="2"
                     Orientation="Horizontal">
                     <TextBox
-                        CharacterCasing="Lower"
                         Name="TbFind"
+                        Width="400"
+                        CharacterCasing="Lower"
                         TextChanged="TbFind_OnTextChanged"
-                        TextInput="TbFind_OnTextInput"
-                        Width="400" />
+                        TextInput="TbFind_OnTextInput" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -2514,29 +2514,29 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="PasswordBox"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="PasswordBox"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
                 <PasswordBox
-                    Grid.Column="0"
                     Grid.Row="2"
-                    Margin="5"
+                    Grid.Column="0"
                     Width="200"
+                    Margin="5"
                     attachedProperties:PasswordBox.Placeholder="Empty" />
                 <PasswordBox
-                    Grid.Column="0"
                     Grid.Row="3"
-                    IsEnabled="False"
-                    Margin="5"
+                    Grid.Column="0"
                     Width="200"
-                    attachedProperties:PasswordBox.Placeholder="Disabled" />
+                    Margin="5"
+                    attachedProperties:PasswordBox.Placeholder="Disabled"
+                    IsEnabled="False" />
             </Grid>
         </TabItem>
         <TabItem Header="Progress bar">
@@ -2554,16 +2554,16 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="Inline Alert"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Inline Alert"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <ProgressBar
                     Grid.Row="1"
@@ -2587,11 +2587,11 @@
                 <!-- <ProgressBar Style="{StaticResource S}"></ProgressBar> -->
 
                 <Slider
+                    Name="Slider"
                     Grid.Row="5"
                     Margin="5"
                     Maximum="100"
                     Minimum="0"
-                    Name="Slider"
                     Value="50" />
             </Grid>
         </TabItem>
@@ -2612,39 +2612,39 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="RadioButton"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="RadioButton"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <RadioButton
-                    Content="RadioButton"
-                    Grid.Column="1"
                     Grid.Row="1"
-                    Margin="5" />
-                <RadioButton
-                    Content="RadioButton"
                     Grid.Column="1"
+                    Margin="5"
+                    Content="RadioButton" />
+                <RadioButton
                     Grid.Row="2"
-                    Margin="5" />
-                <RadioButton
-                    Content="RadioButton"
                     Grid.Column="1"
+                    Margin="5"
+                    Content="RadioButton" />
+                <RadioButton
                     Grid.Row="3"
-                    IsChecked="True"
-                    Margin="5" />
-                <RadioButton
-                    Content="RadioButton"
                     Grid.Column="1"
+                    Margin="5"
+                    Content="RadioButton"
+                    IsChecked="True" />
+                <RadioButton
                     Grid.Row="4"
-                    IsEnabled="False"
-                    Margin="5" />
+                    Grid.Column="1"
+                    Margin="5"
+                    Content="RadioButton"
+                    IsEnabled="False" />
             </Grid>
         </TabItem>
         <TabItem Header="Ranger" IsSelected="True">
@@ -2666,65 +2666,68 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="Range slider"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Range slider"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <arion:RangeSlider
-                    Grid.Column="0"
                     Grid.Row="1"
-                    Maximum="100"
-                    Minimum="10" />
-                <arion:RangeSlider
                     Grid.Column="0"
+                    Width="272"
+                    Maximum="65535"
+                    Minimum="0" />
+                <arion:RangeSlider
                     Grid.Row="2"
+                    Grid.Column="0"
+                    Width="300"
                     Maximum="10"
                     Minimum="0" />
                 <arion:RangeSlider
-                    Grid.Column="0"
                     Grid.Row="3"
+                    Grid.Column="0"
+                    Width="300"
                     Maximum="50"
                     Minimum="0" />
                 <arion:RangeSlider
-                    Grid.Column="0"
+                    Name="Slider65535"
                     Grid.Row="4"
+                    Grid.Column="0"
+                    Width="500"
                     LeftValue="{Binding ElementName=SliderTest, Path=LeftValue}"
                     Maximum="65535"
                     Minimum="0"
-                    Name="Slider65535"
-                    RightValue="{Binding ElementName=SliderTest, Path=RightValue}"
-                    Width="500" />
+                    RightValue="{Binding ElementName=SliderTest, Path=RightValue}" />
 
-                <Grid Grid.Column="0" Grid.Row="5">
+                <Grid Grid.Row="5" Grid.Column="0">
                     <TextBox
+                        Width="100"
                         HorizontalAlignment="Left"
-                        Text="{Binding ElementName=Slider65535, Path=LeftValue}"
-                        Width="100" />
+                        Text="{Binding ElementName=Slider65535, Path=LeftValue}" />
                     <TextBox
+                        Width="100"
                         HorizontalAlignment="Right"
-                        Text="{Binding ElementName=Slider65535, Path=RightValue}"
-                        Width="100" />
+                        Text="{Binding ElementName=Slider65535, Path=RightValue}" />
                 </Grid>
 
                 <arion:RangeSlider
-                    Grid.Column="0"
-                    Grid.Row="6"
-                    Maximum="65535"
-                    Minimum="0"
                     Name="SliderTest"
-                    Width="500" />
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Width="500"
+                    Maximum="65535"
+                    Minimum="0" />
                 <Button
+                    Grid.Row="7"
+                    Grid.Column="0"
                     Click="ButtonBase_OnClick"
                     Content="Click me"
-                    Grid.Column="0"
-                    Grid.Row="7"
                     Style="{StaticResource OutlineLg}" />
             </Grid>
         </TabItem>
@@ -2742,32 +2745,32 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Label
-                    Content="ScrollBar"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="ScrollBar"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
                 <Label
+                    Grid.Row="0"
+                    Grid.RowSpan="20"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="20"
+                    Width="Auto"
+                    Margin="10"
+                    Padding="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
                     Content="BUILD"
                     FontSize="144"
                     FontWeight="Black"
                     Foreground="{StaticResource Lg3}"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="20"
-                    Grid.Row="0"
-                    Grid.RowSpan="20"
-                    HorizontalAlignment="Center"
-                    Margin="10"
                     Opacity=".7"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Center"
-                    Width="Auto" />
+                    Style="{StaticResource Lbl}" />
             </Grid>
         </TabItem>
         <TabItem Header="Shadow">
@@ -2788,53 +2791,53 @@
                 </Grid.RowDefinitions>
 
                 <Label
-                    Content="Shadow"
-                    FontSize="32"
+                    Grid.Row="0"
                     Grid.Column="0"
                     Grid.ColumnSpan="5"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Shadow"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <Button
-                    Effect="{StaticResource El1}"
+                    Grid.Row="1"
                     Grid.Column="0"
-                    Grid.Row="1"
                     Margin="20"
+                    Effect="{StaticResource El1}"
                     Style="{StaticResource OutlineLg}" />
                 <Button
-                    Effect="{StaticResource El2}"
+                    Grid.Row="1"
                     Grid.Column="1"
-                    Grid.Row="1"
                     Margin="20"
+                    Effect="{StaticResource El2}"
                     Style="{StaticResource OutlineLg}" />
                 <Button
-                    Effect="{StaticResource El3}"
+                    Grid.Row="1"
                     Grid.Column="2"
-                    Grid.Row="1"
                     Margin="20"
+                    Effect="{StaticResource El3}"
                     Style="{StaticResource OutlineLg}" />
                 <Button
-                    Effect="{StaticResource El4}"
+                    Grid.Row="1"
                     Grid.Column="3"
-                    Grid.Row="1"
                     Margin="20"
+                    Effect="{StaticResource El4}"
                     Style="{StaticResource OutlineLg}" />
                 <Button
-                    Effect="{StaticResource El5}"
+                    Grid.Row="1"
                     Grid.Column="4"
-                    Grid.Row="1"
                     Margin="20"
+                    Effect="{StaticResource El5}"
                     Style="{StaticResource OutlineLg}" />
                 <Button
-                    Effect="{StaticResource El6}"
-                    Grid.Column="5"
                     Grid.Row="1"
+                    Grid.Column="5"
                     Margin="20"
+                    Effect="{StaticResource El6}"
                     Style="{StaticResource OutlineLg}" />
             </Grid>
         </TabItem>
@@ -2854,33 +2857,33 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="Slider"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Slider"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
                 <Slider
-                    Grid.Column="1"
                     Grid.Row="1"
-                    Margin="5"
-                    Width="200" />
-                <Slider
                     Grid.Column="1"
+                    Width="200"
+                    Margin="5" />
+                <Slider
                     Grid.Row="2"
-                    Margin="5"
-                    Style="{StaticResource SliderBig}"
-                    Width="200" />
-                <Slider
                     Grid.Column="1"
-                    Grid.Row="3"
-                    IsSelectionRangeEnabled="True"
+                    Width="200"
                     Margin="5"
-                    Width="200" />
+                    Style="{StaticResource SliderBig}" />
+                <Slider
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Width="200"
+                    Margin="5"
+                    IsSelectionRangeEnabled="True" />
 
             </Grid>
         </TabItem>
@@ -2900,21 +2903,21 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Label
+                    Grid.Row="0"
+                    Grid.RowSpan="20"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="20"
+                    Width="Auto"
+                    Margin="10"
+                    Padding="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
                     Content="BUILD"
                     FontSize="144"
                     FontWeight="Black"
                     Foreground="{StaticResource Lg3}"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="20"
-                    Grid.Row="0"
-                    Grid.RowSpan="20"
-                    HorizontalAlignment="Center"
-                    Margin="10"
                     Opacity=".7"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Center"
-                    Width="Auto" />
+                    Style="{StaticResource Lbl}" />
             </Grid>
         </TabItem>
         <TabItem Header="Switchers">
@@ -2932,42 +2935,42 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label
-                    Content="Switcher"
-                    Grid.Column="0"
                     Grid.Row="0"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Switcher"
+                    Style="{StaticResource Lbl}" />
 
                 <Label
-                    Content="Filled"
-                    Grid.Column="1"
                     Grid.Row="1"
+                    Grid.Column="1"
                     HorizontalAlignment="Left"
+                    Content="Filled"
                     Style="{StaticResource Lbl}" />
 
                 <StackPanel
-                    Grid.Column="1"
                     Grid.Row="2"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <RadioButton
-                        Content="First"
                         Margin="5"
+                        Content="First"
                         Style="{StaticResource SwitcherFirst}" />
                     <RadioButton
-                        Content="Middle"
                         Margin="5"
+                        Content="Middle"
                         Style="{StaticResource SwitcherMiddle}" />
                     <RadioButton
+                        Margin="5"
                         Content="Middle"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource SwitcherMiddle}" />
                     <RadioButton
-                        Content="Last"
                         Margin="5"
+                        Content="Last"
                         Style="{StaticResource SwitcherLast}" />
                 </StackPanel>
             </Grid>
@@ -2984,21 +2987,21 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="Tabs"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Tabs"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <DockPanel
+                    Grid.Row="1"
                     Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="1">
+                    Grid.ColumnSpan="2">
                     <TabControl DockPanel.Dock="Left" TabStripPlacement="Left">
                         <TabItem Header="Head 1 Content" />
                         <TabItem Header="Head 2" />
@@ -3038,18 +3041,18 @@
                 </Grid.RowDefinitions>
 
                 <DataGrid
+                    Grid.Row="1"
+                    Grid.Column="0"
                     CellStyle="{DynamicResource DataGridCellStyle1}"
                     ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
-                    Grid.Column="0"
-                    Grid.Row="1"
                     IsSelected="True"
                     Style="{DynamicResource DataGridStyle2}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Test column" Width="*" />
-                        <DataGridCheckBoxColumn Header="Checkbox" Width="*" />
-                        <DataGridComboBoxColumn Header="ComboBox" Width="*" />
-                        <DataGridHyperlinkColumn Header="Hyperlink" Width="*" />
-                        <DataGridTemplateColumn Header="Template" Width="*">
+                        <DataGridTextColumn Width="*" Header="Test column" />
+                        <DataGridCheckBoxColumn Width="*" Header="Checkbox" />
+                        <DataGridComboBoxColumn Width="*" Header="ComboBox" />
+                        <DataGridHyperlinkColumn Width="*" Header="Hyperlink" />
+                        <DataGridTemplateColumn Width="*" Header="Template">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button Content="Press me" />
@@ -3077,49 +3080,49 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="TextBox"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="TextBox"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <TextBox
-                    FontWeight="Light"
-                    Grid.Column="0"
                     Grid.Row="1"
-                    Margin="5"
+                    Grid.Column="0"
                     Width="200"
-                    attachedProperties:TextBox.Placeholder="Placeholder" />
+                    Margin="5"
+                    attachedProperties:TextBox.Placeholder="Placeholder"
+                    FontWeight="Light" />
                 <TextBox
-                    Grid.Column="0"
                     Grid.Row="2"
-                    Margin="5"
-                    Width="200" />
-                <TextBox
                     Grid.Column="0"
+                    Width="200"
+                    Margin="5" />
+                <TextBox
                     Grid.Row="3"
+                    Grid.Column="0"
+                    Width="200"
+                    Margin="5"
                     IsEnabled="False"
-                    Margin="5"
-                    Text="Disabled"
-                    Width="200" />
+                    Text="Disabled" />
                 <TextBox
-                    Grid.Column="0"
                     Grid.Row="4"
-                    IsReadOnly="True"
-                    Margin="5"
-                    Width="200" />
-                <TextBox
                     Grid.Column="0"
-                    Grid.Row="5"
-                    IsReadOnly="True"
+                    Width="200"
                     Margin="5"
-                    Text="Text"
-                    Width="200" />
+                    IsReadOnly="True" />
+                <TextBox
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Width="200"
+                    Margin="5"
+                    IsReadOnly="True"
+                    Text="Text" />
             </Grid>
         </TabItem>
 
@@ -3138,24 +3141,24 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label
-                    Content="Time input"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="Time input"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
                 <controls:TimeInput
-                    FontSize="58"
-                    Grid.Column="1"
+                    Name="TiTime"
                     Grid.Row="1"
+                    Grid.Column="1"
+                    Width="480"
                     Height="130"
                     Margin="0"
-                    Name="TiTime"
-                    Width="480" />
+                    FontSize="58" />
             </Grid>
         </TabItem>
         <TabItem Header="Toggle buttons">
@@ -3177,84 +3180,84 @@
                 </Grid.ColumnDefinitions>
 
                 <Label
-                    Content="ToggleButton"
-                    FontSize="32"
-                    Grid.Column="0"
                     Grid.Row="0"
-                    HorizontalAlignment="Left"
+                    Grid.Column="0"
+                    Width="Auto"
                     Margin="10"
                     Padding="0"
-                    Style="{StaticResource Lbl}"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="Auto" />
+                    Content="ToggleButton"
+                    FontSize="32"
+                    Style="{StaticResource Lbl}" />
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="1"
+                    Grid.Column="0"
                     Orientation="Horizontal">
                     <ToggleButton
-                        Content="Toggle button"
+                        Name="Tg1"
                         Margin="5"
-                        Name="Tg1" />
+                        Content="Toggle button" />
                     <ToggleButton
+                        Margin="5"
                         Content="Toggle button"
                         IsChecked="{Binding ElementName=Tg1, Path=IsChecked}"
-                        IsEnabled="False"
-                        Margin="5" />
+                        IsEnabled="False" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="2"
+                    Grid.Column="0"
                     Orientation="Horizontal">
                     <ToggleButton
-                        Content="Toggle button"
-                        IsChecked="True"
+                        Name="Tg2"
                         Margin="5"
-                        Name="Tg2" />
+                        Content="Toggle button"
+                        IsChecked="True" />
                     <ToggleButton
+                        Margin="5"
                         Content="Toggle button"
                         IsChecked="{Binding ElementName=Tg2, Path=IsChecked}"
-                        IsEnabled="False"
-                        Margin="5" />
+                        IsEnabled="False" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="3"
+                    Grid.Column="0"
                     Orientation="Horizontal">
                     <ToggleButton
+                        Name="Tg3"
+                        Margin="5"
                         Content="Toggle button"
                         IsChecked="{x:Null}"
-                        IsThreeState="True"
-                        Margin="5"
-                        Name="Tg3" />
+                        IsThreeState="True" />
                     <ToggleButton
+                        Margin="5"
                         Content="Toggle button"
                         IsChecked="{Binding ElementName=Tg3, Path=IsChecked}"
                         IsEnabled="False"
-                        IsThreeState="True"
-                        Margin="5" />
+                        IsThreeState="True" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="4"
+                    Grid.Column="0"
                     Orientation="Horizontal">
                     <ToggleButton
-                        Content="Toggle button"
                         Margin="5"
+                        Content="Toggle button"
                         Style="{StaticResource TgOutlineLg}" />
                     <ToggleButton
+                        Margin="5"
                         Content="Toggle button"
                         IsChecked="True"
-                        Margin="5"
                         Style="{StaticResource TgOutlineLg}" />
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="5"
+                    Grid.Column="0"
                     Margin="0,5"
                     Orientation="Horizontal">
                     <ToggleButton Content="First" Style="{StaticResource TgOutlineFirstLg}" />
@@ -3263,17 +3266,17 @@
                 </StackPanel>
 
                 <StackPanel
-                    Grid.Column="0"
                     Grid.Row="6"
+                    Grid.Column="0"
                     Orientation="Horizontal">
                     <ToggleButton
-                        Margin="5"
                         Name="TgListControl"
+                        Margin="5"
                         Style="{StaticResource ListControlSelectMode}" />
                     <ToggleButton
+                        Margin="5"
                         IsChecked="{Binding ElementName=TgListControl, Path=IsChecked}"
                         IsEnabled="False"
-                        Margin="5"
                         Style="{StaticResource ListControlSelectMode}" />
                 </StackPanel>
             </Grid>
@@ -3281,11 +3284,11 @@
         <TabItem Header="Tooltips">
             <!--  TOOLTIPS  -->
             <Button
-                Content="asd"
-                Height="50"
-                ToolTip="Hello, i'm tooltip"
                 Width="200"
-                d:IsLocked="True" />
+                Height="50"
+                d:IsLocked="True"
+                Content="asd"
+                ToolTip="Hello, i'm tooltip" />
         </TabItem>
     </TabControl>
 </Window>

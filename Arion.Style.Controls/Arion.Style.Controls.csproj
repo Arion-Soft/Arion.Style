@@ -96,8 +96,5 @@
     <Content Include="Arion.Style.Controls.nuspec" />
     <Content Include="Readme.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

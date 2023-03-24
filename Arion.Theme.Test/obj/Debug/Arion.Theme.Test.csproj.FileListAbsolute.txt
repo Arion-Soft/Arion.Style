@@ -57,10 +57,7 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.Test.exe
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.Test.pdb
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Controls.dll
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Controls.pdb
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.pdb
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.dll.config
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\MainWindow.baml
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\MainWindow.g.cs
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.g.resources
@@ -73,3 +70,6 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.pdb
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll.config
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.pdb
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll.config
