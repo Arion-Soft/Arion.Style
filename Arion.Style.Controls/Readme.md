@@ -1,6 +1,7 @@
 # Arion Controls
 
 [![nuget](https://img.shields.io/nuget/v/Arion.Style.Controls)](https://www.nuget.org/packages/Arion.Style.Controls)
+[![nuget(download)](https://img.shields.io/nuget/dt/Arion.Style.Controls)](https://www.nuget.org/packages/Arion.Style.Controls)
 
 ## Библиотека компонентов
 
@@ -9,7 +10,7 @@ ___
 ## Подключение
 
 В менеджере пакетов Nuget находите пакет `Arion.Style.Controls` и устанавливаете его
-![Arion.Style в менеджере пакетов nuget](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Controls.Images/nuget.png "Arion.Style.Controls в менеджере пакетов nuget")
+![Arion.Style в менеджере пакетов nuget](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Arion.Style.Controls.Images/nuget.png "Arion.Style.Controls в менеджере пакетов nuget")
 
 В документ в котором вам необходимо добавить элемент добавляете ссылку
 
