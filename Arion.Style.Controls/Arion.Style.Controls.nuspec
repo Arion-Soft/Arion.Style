@@ -14,24 +14,31 @@
         <license type="file">LICENSE.txt</license>
         <readme>docs\Readme.md</readme>
         <dependencies>
-            <dependency id="Arion.Style" version="0.1.7" />
+            <dependency id="Arion.Style" version="0.2.0" />
         </dependencies>
     </metadata>
     <files>
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net461" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net461" />
+        
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net462" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net462" />
+        
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net463" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net463" />
+        
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net47" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net47" />
+        
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net471" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net471" />
+        
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net472" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net472" />
+        
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net48" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net48" />
+        
         <file src="bin/Debug/Arion.Style.Controls.dll" target="lib/net481" />
         <file src="bin/Debug/Arion.Style.Controls.pdb" target="lib/net481" />
         <file src="arion-logo.png" target="images\" />
