@@ -1,8 +1,7 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Arion.Theme.Controls
+namespace Arion.Style.Theme.Controls
 {
     public partial class TimeInput
     {

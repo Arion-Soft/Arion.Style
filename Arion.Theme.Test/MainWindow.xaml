@@ -10,8 +10,8 @@
     x:Class="Arion.Theme.Test.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:arion="clr-namespace:Arion.Style.Controls;assembly=Arion.Style.Controls"
-    xmlns:attachedProperties="clr-namespace:Arion.Theme.AttachedProperties;assembly=Arion.Theme"
-    xmlns:controls="clr-namespace:Arion.Theme.Controls;assembly=Arion.Theme"
+    xmlns:attachedProperties="clr-namespace:Arion.Style.Theme.AttachedProperties;assembly=Arion.Style.Theme"
+    xmlns:controls="clr-namespace:Arion.Style.Theme.Controls;assembly=Arion.Style.Theme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">

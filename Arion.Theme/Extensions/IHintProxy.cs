@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Arion.Theme.Extensions
+namespace Arion.Style.Theme.Extensions
 {
     /// <summary>
     /// This interface is the adapter from UiControl (like <see cref="TextBox"/>, <see cref="ComboBox"/> and others) to <see cref="SmartHint"/>

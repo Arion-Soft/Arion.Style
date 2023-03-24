@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Arion.Theme.Extensions
+namespace Arion.Style.Theme.Extensions
 {
     public static class Spelling
     {

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Theme", "Arion.Theme\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Style.Controls", "Arion.Style.Controls\Arion.Style.Controls.csproj", "{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FilesForReadme", "FilesForReadme", "{38A3C876-87C2-4EF0-8093-7F8B0E4B434A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Files", "FilesForReadme\Files\Files.csproj", "{F3593D9F-005C-4819-9177-89AF8DCD4690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,15 @@ Global
 		{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53CF7B6F-43E6-4D2A-9691-B10190A45F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3593D9F-005C-4819-9177-89AF8DCD4690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3593D9F-005C-4819-9177-89AF8DCD4690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3593D9F-005C-4819-9177-89AF8DCD4690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3593D9F-005C-4819-9177-89AF8DCD4690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3593D9F-005C-4819-9177-89AF8DCD4690} = {38A3C876-87C2-4EF0-8093-7F8B0E4B434A}
 	EndGlobalSection
 EndGlobal

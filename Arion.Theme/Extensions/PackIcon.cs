@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace Arion.Theme.Extensions
+namespace Arion.Style.Theme.Extensions
 {
     public class PackIcon : Control
     {

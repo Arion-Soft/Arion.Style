@@ -5,7 +5,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Documents;
 using System.Windows.Media;
 
-namespace Arion.Theme.Extensions
+namespace Arion.Style.Theme.Extensions
 {
     /// <summary>
     /// Helper properties for working with text fields.
@@ -252,12 +252,12 @@ namespace Arion.Theme.Extensions
         public static double GetTrailingIconSize(DependencyObject element)
             => (double)element.GetValue(TrailingIconSizeProperty);
 
-        public static Style GetCharacterCounterStyle(DependencyObject obj) => (Style)obj.GetValue(CharacterCounterStyleProperty);
+        public static System.Windows.Style GetCharacterCounterStyle(DependencyObject obj) => (System.Windows.Style)obj.GetValue(CharacterCounterStyleProperty);
 
-        public static void SetCharacterCounterStyle(DependencyObject obj, Style value) => obj.SetValue(CharacterCounterStyleProperty, value);
+        public static void SetCharacterCounterStyle(DependencyObject obj, System.Windows.Style value) => obj.SetValue(CharacterCounterStyleProperty, value);
 
         public static readonly DependencyProperty CharacterCounterStyleProperty =
-            DependencyProperty.RegisterAttached("CharacterCounterStyle", typeof(Style), typeof(TextFieldAssist), new PropertyMetadata(null));
+            DependencyProperty.RegisterAttached("CharacterCounterStyle", typeof(System.Windows.Style), typeof(TextFieldAssist), new PropertyMetadata(null));
 
         public static Visibility GetCharacterCounterVisibility(DependencyObject obj)
             => (Visibility)obj.GetValue(CharacterCounterVisibilityProperty);
@@ -326,8 +326,8 @@ namespace Arion.Theme.Extensions
             SpellingError spellingError = GetSpellingError(textBoxBase);
             if (spellingError != null)
             {
-                Style spellingSuggestionStyle =
-                    contextMenu.TryFindResource(Spelling.SuggestionMenuItemStyleKey) as Style;
+                System.Windows.Style spellingSuggestionStyle =
+                    contextMenu.TryFindResource(Spelling.SuggestionMenuItemStyleKey) as System.Windows.Style;
 
                 int insertionIndex = 0;
                 bool hasSuggestion = false;
@@ -348,14 +348,14 @@ namespace Arion.Theme.Extensions
                 {
                     contextMenu.Items.Insert(insertionIndex++, new MenuItem
                     {
-                        Style = contextMenu.TryFindResource(Spelling.NoSuggestionsMenuItemStyleKey) as Style,
+                        Style = contextMenu.TryFindResource(Spelling.NoSuggestionsMenuItemStyleKey) as System.Windows.Style,
                         Tag = typeof(Spelling)
                     });
                 }
 
                 contextMenu.Items.Insert(insertionIndex++, new Separator
                 {
-                    Style = contextMenu.TryFindResource(Spelling.SeparatorStyleKey) as Style,
+                    Style = contextMenu.TryFindResource(Spelling.SeparatorStyleKey) as System.Windows.Style,
                     Tag = typeof(Spelling)
                 });
 
@@ -363,13 +363,13 @@ namespace Arion.Theme.Extensions
                 {
                     Command = EditingCommands.IgnoreSpellingError,
                     CommandTarget = textBoxBase,
-                    Style = contextMenu.TryFindResource(Spelling.IgnoreAllMenuItemStyleKey) as Style,
+                    Style = contextMenu.TryFindResource(Spelling.IgnoreAllMenuItemStyleKey) as System.Windows.Style,
                     Tag = typeof(Spelling)
                 });
 
                 contextMenu.Items.Insert(insertionIndex, new Separator
                 {
-                    Style = contextMenu.TryFindResource(Spelling.SeparatorStyleKey) as Style,
+                    Style = contextMenu.TryFindResource(Spelling.SeparatorStyleKey) as System.Windows.Style,
                     Tag = typeof(Spelling)
                 });
             }

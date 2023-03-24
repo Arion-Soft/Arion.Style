@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{F3593D9F-005C-4819-9177-89AF8DCD4690}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Files</RootNamespace>
+        <AssemblyName>Files</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Arion.Style.Controls.Images\nuget.png" />
+      <Content Include="Artion.Style.Theme.Images\Arion.Style.png" />
+      <Content Include="Artion.Style.Theme.Images\CheckBox.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr100.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr200.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr300.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr400.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr50.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr500.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr600.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr700.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr800.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Blue\Pr900.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Clean\CleanB.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Clean\CleanW.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\DarkGray\Dg1.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\DarkGray\Dg2.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\DarkGray\Dg3.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\DarkGray\Dg4.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\DarkGray\Dg5.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G100.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G200.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G300.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G400.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G50.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G500.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G600.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G700.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G800.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Green\G900.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\LightGray\Lg1.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\LightGray\Lg2.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\LightGray\Lg3.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\LightGray\Lg4.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\LightGray\Lg5.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\MidGray\Md1.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\MidGray\Md2.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\MidGray\Md3.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\MidGray\Md4.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\MidGray\Md5.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P100.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P200.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P300.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P400.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P50.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P500.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P600.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P700.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P800.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Purple\P900.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R100.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R200.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R300.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R400.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R50.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R500.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R600.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R700.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R800.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Red\R900.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T100.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T200.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T300.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T400.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T50.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T500.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T600.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T700.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T800.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Teal\T900.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y100.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y200.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y300.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y400.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y50.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y500.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y600.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y700.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y800.png" />
+      <Content Include="Artion.Style.Theme.Images\Colors\Yellow\Y900.png" />
+      <Content Include="Artion.Style.Theme.Images\ComboBox.png" />
+      <Content Include="Artion.Style.Theme.Images\ComboBoxExpanded.png" />
+      <Content Include="Artion.Style.Theme.Images\FilledLg.png" />
+      <Content Include="Artion.Style.Theme.Images\FilledMd.png" />
+      <Content Include="Artion.Style.Theme.Images\FilledSm.png" />
+      <Content Include="Artion.Style.Theme.Images\OutlineLg.png" />
+      <Content Include="Artion.Style.Theme.Images\OutlineMd.png" />
+      <Content Include="Artion.Style.Theme.Images\OutlineSm.png" />
+      <Content Include="Artion.Style.Theme.Images\Shadow\El1.png" />
+      <Content Include="Artion.Style.Theme.Images\Shadow\El2.png" />
+      <Content Include="Artion.Style.Theme.Images\Shadow\El3.png" />
+      <Content Include="Artion.Style.Theme.Images\Shadow\El4.png" />
+      <Content Include="Artion.Style.Theme.Images\Shadow\El5.png" />
+      <Content Include="Artion.Style.Theme.Images\Shadow\El6.png" />
+      <Content Include="Artion.Style.Theme.Images\Slider.png" />
+      <Content Include="Artion.Style.Theme.Images\SwitcherFirst.png" />
+      <Content Include="Artion.Style.Theme.Images\SwitcherLast.png" />
+      <Content Include="Artion.Style.Theme.Images\SwitcherMiddle.png" />
+      <Content Include="Artion.Style.Theme.Images\Tabs.png" />
+      <Content Include="Artion.Style.Theme.Images\TextBox.png" />
+      <Content Include="Artion.Style.Theme.Images\TextInput.png" />
+      <Content Include="Artion.Style.Theme.Images\TextInputWithText.png" />
+      <Content Include="Artion.Style.Theme.Images\TextLg.png" />
+      <Content Include="Artion.Style.Theme.Images\TextMd.png" />
+      <Content Include="Artion.Style.Theme.Images\TextSm.png" />
+      <Content Include="Artion.Style.Theme.Images\ToggleButtons.png" />
+      <Content Include="Artion.Style.Theme.Images\ToolTip.png" />
+      <Content Include="Artion.Style.Theme.Images\VerticalScrollBar.png" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

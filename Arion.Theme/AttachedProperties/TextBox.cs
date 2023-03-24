@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Arion.Theme.AttachedProperties
+namespace Arion.Style.Theme.AttachedProperties
 {
     public static class TextBox
     {

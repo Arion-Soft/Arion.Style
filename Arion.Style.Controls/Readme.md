@@ -9,8 +9,7 @@ ___
 ## Подключение
 
 В менеджере пакетов Nuget находите пакет `Arion.Style.Controls` и устанавливаете его
-
-![Arion.Style в менеджере пакетов nuget](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/Arion.Theme/Images/Arion.Style.png "Arion.Style в менеджере пакетов nuget")
+![Arion.Style в менеджере пакетов nuget](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Controls.Images/nuget.png "Arion.Style.Controls в менеджере пакетов nuget")
 
 В документ в котором вам необходимо добавить элемент добавляете ссылку
 
@@ -24,6 +23,8 @@ ___
 
 1. [Иконки](#Иконки)
 2. [Уведомление](#Уведомление)
+3. [RangeSlider](#RangeSlider)
+4. [Хлебные крошки](#Хлебные крошки)
 
 ___
 
@@ -50,3 +51,7 @@ ___
 ### Уведомление
 
 
+### RangeSlider
+
+
+### Хлебные крошки

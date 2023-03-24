@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Markup;
 
-namespace Arion.Theme.Extensions
+namespace Arion.Style.Theme.Extensions
 {
     [MarkupExtensionReturnType(typeof(PackIcon))]
     public class PackIconExtension : MarkupExtension

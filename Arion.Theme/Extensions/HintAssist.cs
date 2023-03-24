@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Media;
 
-namespace Arion.Theme.Extensions
+namespace Arion.Style.Theme.Extensions
 {
     public static class HintAssist
     {
@@ -123,12 +123,12 @@ namespace Arion.Theme.Extensions
 
         #region AttachedProperty : HelperTextStyleProperty
         public static readonly DependencyProperty HelperTextStyleProperty
-            = DependencyProperty.RegisterAttached("HelperTextStyle", typeof(Style), typeof(HintAssist),
+            = DependencyProperty.RegisterAttached("HelperTextStyle", typeof(System.Windows.Style), typeof(HintAssist),
                 new PropertyMetadata(null));
 
-        public static Style GetHelperTextStyle(DependencyObject element) =>
-            (Style)element.GetValue(HelperTextStyleProperty);
-        public static void SetHelperTextStyle(DependencyObject element, Style value) =>
+        public static System.Windows.Style GetHelperTextStyle(DependencyObject element) =>
+            (System.Windows.Style)element.GetValue(HelperTextStyleProperty);
+        public static void SetHelperTextStyle(DependencyObject element, System.Windows.Style value) =>
             element.SetValue(HelperTextStyleProperty, value);
 
         #endregion

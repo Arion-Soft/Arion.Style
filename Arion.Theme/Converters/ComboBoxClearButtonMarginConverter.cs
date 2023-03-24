@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using Arion.Theme.Extensions;
+using Arion.Style.Theme.Extensions;
 
 namespace Arion.Theme.Converters
 {

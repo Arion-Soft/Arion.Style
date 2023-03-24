@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Arion.Theme;component/ArionUiTheme.xaml" />
+                <ResourceDictionary Source="/Arion.Style.Theme;component/ArionUiTheme.xaml" />
                 <ResourceDictionary>
                     <Style TargetType="{x:Type Border}" x:Key="Brd">
                         <Setter Property="Width" Value="40" />

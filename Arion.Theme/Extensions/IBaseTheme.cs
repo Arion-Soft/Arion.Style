@@ -1,6 +1,6 @@
 ﻿using System.Windows.Media;
 
-namespace MaterialDesignThemes.Wpf
+namespace Arion.Style.Theme.Extensions
 {
     public interface IBaseTheme
     {
