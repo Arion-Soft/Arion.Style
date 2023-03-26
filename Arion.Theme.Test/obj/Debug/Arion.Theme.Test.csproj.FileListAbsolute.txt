@@ -70,6 +70,6 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.pdb
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll.config
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.pdb
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll.config
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.pdb
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll.config

@@ -1,16 +1,16 @@
 ﻿<UserControl
-    Height="32"
-    Loaded="BreadcrumbItem_OnLoaded"
-    Name="Root"
-    d:DesignHeight="24"
-    d:DesignWidth="300"
-    mc:Ignorable="d"
     x:Class="Arion.Style.Controls.BreadcrumbItem"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Arion.Style.Controls;assembly=Arion.Style"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Arion.Style.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    Name="Root"
+    Height="32"
+    d:DesignHeight="24"
+    d:DesignWidth="300"
+    Loaded="BreadcrumbItem_OnLoaded"
+    mc:Ignorable="d">
     <UserControl.Resources>
         <!-- <ResourceDictionary> -->
         <!--     <ResourceDictionary.MergedDictionaries> -->
@@ -24,21 +24,21 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <local:Icon
-            Fill="{StaticResource Mg5}"
+        <controls:Icon
+            Width="{Binding ElementName=Root, Path=IconWidth}"
             Height="{Binding ElementName=Root, Path=IconHeight}"
-            Kind="{Binding ElementName=Root, Path=Kind}"
             Margin="{Binding ElementName=Root, Path=IconMargin}"
             VerticalAlignment="Center"
-            Width="{Binding ElementName=Root, Path=IconWidth}" />
+            Fill="{StaticResource Mg5}"
+            Kind="{Binding ElementName=Root, Path=Kind}" />
 
         <Label
+            Grid.Column="1"
+            Margin="4,0,0,0"
+            VerticalAlignment="Center"
             Content="{Binding ElementName=Root, Path=Text}"
             FontSize="14"
             FontWeight="Normal"
-            Foreground="{Binding ElementName=Root, Path=ForegroundLabel}"
-            Grid.Column="1"
-            Margin="4,0,0,0"
-            VerticalAlignment="Center" />
+            Foreground="{Binding ElementName=Root, Path=ForegroundLabel}" />
     </Grid>
 </UserControl>

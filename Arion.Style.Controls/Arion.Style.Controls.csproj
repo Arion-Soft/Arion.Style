@@ -54,11 +54,8 @@
     <Compile Include="BreadcrumbItem.xaml.cs">
       <DependentUpon>BreadcrumbItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EIcons.cs" />
     <Compile Include="Enums\BreadcrumbItemType.cs" />
     <Compile Include="Enums\InlineAlertType.cs" />
-    <Compile Include="Icon.xaml.cs" />
-    <Compile Include="Icons.cs" />
     <Compile Include="InlineAlert.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -88,13 +85,18 @@
   <ItemGroup>
     <Page Include="Breadcrumb.xaml" />
     <Page Include="BreadcrumbItem.xaml" />
-    <Page Include="Icon.xaml" />
     <Page Include="InlineAlert.xaml" />
     <Page Include="RangeSlider.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Arion.Style.Controls.nuspec" />
     <Content Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Arion.Style\Arion.Style.csproj">
+      <Project>{b3327e45-c915-4a22-a9e1-90db0c6b47a4}</Project>
+      <Name>Arion.Style</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

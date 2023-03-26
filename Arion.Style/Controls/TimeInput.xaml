@@ -1,0 +1,142 @@
+﻿<UserControl
+    x:Class="Arion.Style.Controls.TimeInput"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Name="TimeControl"
+    Width="{Binding ElementName=TimeControl, Path=Width}"
+    Height="{Binding ElementName=TimeControl, Path=Height}"
+    Background="Transparent"
+    mc:Ignorable="d">
+    <Border
+        Margin="0"
+        Padding="0"
+        Background="#FFFFFF"
+        BorderBrush="#DDE2E4"
+        BorderThickness="1"
+        CornerRadius="6">
+        <Grid Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBox
+                Name="Tb1"
+                Height="{Binding ElementName=TimeControl, Path=Height}"
+                Margin="0"
+                Padding="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderThickness="0"
+                FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
+                PreviewTextInput="Tb1_OnPreviewTextInput"
+                Text="{Binding ElementName=TimeControl, Path=Minute, StringFormat=00}" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Padding="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content=":"
+                FontSize="{Binding ElementName=TimeControl, Path=FontSize}" />
+            <TextBox
+                Name="Tb2"
+                Grid.Row="0"
+                Grid.Column="2"
+                Height="{Binding ElementName=TimeControl, Path=Height}"
+                Margin="0"
+                Padding="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderThickness="0"
+                FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
+                PreviewTextInput="Tb2_OnPreviewTextInput"
+                Text="{Binding ElementName=TimeControl, Path=Second, StringFormat=00}" />
+
+            <StackPanel
+                Grid.Column="0"
+                Margin="0,0,0,5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal">
+                <Border
+                    Name="Br1"
+                    Width="10"
+                    Height="1"
+                    Background="Black"
+                    CornerRadius="1">
+                    <Border.Style>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=Tb1}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                </Border>
+                <Border
+                    Name="Br2"
+                    Width="10"
+                    Height="1"
+                    Margin="2,0,0,0"
+                    Background="Black"
+                    CornerRadius="1">
+                    <Border.Style>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=Tb1}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                </Border>
+            </StackPanel>
+            <StackPanel
+                Grid.Column="2"
+                Margin="0,0,0,5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal">
+                <Border
+                    Width="10"
+                    Height="1"
+                    Background="Black"
+                    CornerRadius="1">
+                    <Border.Style>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=Tb2}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                </Border>
+                <Border
+                    Width="10"
+                    Height="1"
+                    Margin="2,0,0,0"
+                    Background="Black"
+                    CornerRadius="1">
+                    <Border.Style>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=Tb2}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

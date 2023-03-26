@@ -13,7 +13,7 @@ namespace Arion.Style.Controls
             InitializeComponent();
             _styles = new ResourceDictionary
             {
-                Source = new Uri("/Arion.Style.Theme;component/ArionUiTheme.xaml",
+                Source = new Uri("/Arion.Style;component/ArionUiTheme.xaml",
                     UriKind.RelativeOrAbsolute)
             };
         }

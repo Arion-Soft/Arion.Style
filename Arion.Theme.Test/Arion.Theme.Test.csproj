@@ -86,9 +86,9 @@
       <Project>{dbb91fb5-c181-4cc9-9859-f05de4f045d4}</Project>
       <Name>Arion.Style.Controls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Arion.Theme\Arion.Theme.csproj">
+    <ProjectReference Include="..\Arion.Style\Arion.Style.csproj">
       <Project>{b3327e45-c915-4a22-a9e1-90db0c6b47a4}</Project>
-      <Name>Arion.Theme</Name>
+      <Name>Arion.Style</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

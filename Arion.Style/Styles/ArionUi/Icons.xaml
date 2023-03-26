@@ -1,0 +1,23 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Arion.Style.Controls">
+    <Path x:Key="Account">
+        <Path.Data>
+            M7556 10480 c-384 -61 -686 -316 -799 -676 -88 -278 -46 -583 115
+            -832 40 -62 200 -228 806 -834 l756 -758 -3289 -3 -3290 -2 -83 -23 c-412
+            -110 -696 -437 -742 -850 -50 -453 224 -878 662 -1028 166 -57 -15 -54 3503
+            -54 l3240 0 -756 -757 c-470 -471 -772 -781 -796 -818 -266 -399 -218 -911
+            117 -1245 186 -187 417 -282 685 -283 169 -1 295 28 445 103 168 85 66 -15
+            2024 1955 l1441 1450 52 95 c196 364 159 787 -98 1104 -32 39 -772 785 -1646
+            1657 -1369 1367 -1600 1594 -1674 1643 -157 102 -315 153 -504 160 -60 3 -137
+            1 -169 -4z
+        </Path.Data>
+    </Path>
+
+    <Style TargetType="{x:Type controls:Icon}">
+        <Setter Property="Fill" Value="Black" />
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Width" Value="20" />
+    </Style>
+</ResourceDictionary>

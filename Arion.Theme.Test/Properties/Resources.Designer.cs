@@ -45,7 +45,7 @@ namespace Arion.Theme.Test.Properties
                 if ((resourceMan == null))
                 {
                     global::System.Resources.ResourceManager temp =
-                        new global::System.Resources.ResourceManager("Arion.Theme.Test.Properties.Resources",
+                        new global::System.Resources.ResourceManager("Arion.Style.Test.Properties.Resources",
                             typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
