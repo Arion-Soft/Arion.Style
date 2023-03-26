@@ -10,14 +10,14 @@
     </ResourceDictionary.MergedDictionaries>
 
     <converters1:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-    <converters:TextFieldClearButtonVisibilityConverter x:Key="ClearButtonVisibilityConverter" />
+    <converters1:TextFieldClearButtonVisibilityConverter x:Key="ClearButtonVisibilityConverter" />
     <converters1:TextFieldPrefixTextVisibilityConverter x:Key="PrefixTextVisibilityConverter" />
-    <converters:NotConverter x:Key="NotConverter" />
-    <converters:MathConverter x:Key="MathMultiplyConverter" Operation="Multiply" />
+    <converters1:NotConverter x:Key="NotConverter" />
+    <converters1:MathConverter x:Key="MathMultiplyConverter" Operation="Multiply" />
     <converters1:FloatingHintOffsetCalculationConverter x:Key="FloatingHintOffsetCalculationConverter" />
     <converters1:CursorConverter x:Key="ArrowCursorConverter" FallbackCursor="Arrow" />
     <converters1:CursorConverter x:Key="IBeamCursorConverter" FallbackCursor="IBeam" />
-    <converters:StringLengthValueConverter x:Key="StringLengthValueConverter" />
+    <converters1:StringLengthValueConverter x:Key="StringLengthValueConverter" />
 
     <Style TargetType="{x:Type TextBox}">
         <Setter Property="Height" Value="40" />

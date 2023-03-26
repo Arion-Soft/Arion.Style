@@ -6,6 +6,7 @@
     xmlns:controls="clr-namespace:Arion.Style.Controls;assembly=Arion.Style"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     Title="MainWindow"
     Width="1000"
@@ -95,10 +96,6 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
                 <Label
@@ -135,7 +132,7 @@
                     Style="{StaticResource Lbl}" />
                 <Label
                     Grid.Row="1"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Width="Auto"
                     Margin="10"
                     HorizontalAlignment="Left"
@@ -145,7 +142,7 @@
                     Style="{StaticResource Lbl}" />
                 <Label
                     Grid.Row="1"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Width="Auto"
                     Margin="10"
                     HorizontalAlignment="Left"
@@ -158,15 +155,19 @@
                     Grid.Row="2"
                     Grid.Column="0"
                     Orientation="Horizontal">
-                    <Button
-                        Margin="5"
-                        Content="Button"
-                        Style="{StaticResource BtnFilled}" />
-                    <Button
-                        Margin="5"
-                        Content="Button"
-                        IsEnabled="False"
-                        Style="{StaticResource BtnFilled}" />
+                    <smtx:XamlDisplay UniqueKey="buttons_mini_action_1">
+                        <Button
+                            Margin="5"
+                            Content="Button"
+                            Style="{StaticResource BtnFilled}" />
+                    </smtx:XamlDisplay>
+                    <smtx:XamlDisplay UniqueKey="buttons_mini_action_2">
+                        <Button
+                            Margin="5"
+                            Content="Button"
+                            IsEnabled="False"
+                            Style="{StaticResource BtnFilled}" />
+                    </smtx:XamlDisplay>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="3"
@@ -214,11 +215,39 @@
                         IsEnabled="False"
                         Style="{StaticResource BtnFilled}" />
                 </StackPanel>
+                <StackPanel
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+                    <Button
+                        Margin="5"
+                        wpf:Button.ProgressBarMaximum="100"
+                        wpf:Button.ProgressBarMinimum="0"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Style="{StaticResource BtnFilled}" />
+                    <Button
+                        Margin="5"
+                        wpf:Button.ProgressBarMaximum="100"
+                        wpf:Button.ProgressBarMinimum="0"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        IsEnabled="False"
+                        Style="{StaticResource BtnFilled}" />
+                </StackPanel>
+
+                <Slider
+                    x:Name="SliderBtn"
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Maximum="100"
+                    Minimum="0" />
 
                 <Separator
                     Grid.Row="16"
                     Grid.Column="0"
-                    Grid.ColumnSpan="4" />
+                    Grid.ColumnSpan="3" />
 
                 <StackPanel
                     Grid.Row="17"
@@ -240,7 +269,7 @@
 
                 <StackPanel
                     Grid.Row="2"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -254,7 +283,7 @@
                 </StackPanel>
                 <StackPanel
                     Grid.Row="3"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -270,7 +299,7 @@
                 </StackPanel>
                 <StackPanel
                     Grid.Row="4"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -286,7 +315,7 @@
                 </StackPanel>
                 <StackPanel
                     Grid.Row="5"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -298,10 +327,30 @@
                         IsEnabled="False"
                         Style="{StaticResource BtnOutline}" />
                 </StackPanel>
+                <StackPanel
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Orientation="Horizontal">
+                    <Button
+                        Margin="5"
+                        wpf:Button.ProgressBarMaximum="100"
+                        wpf:Button.ProgressBarMinimum="0"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Style="{StaticResource BtnOutline}" />
+                    <Button
+                        Margin="5"
+                        wpf:Button.ProgressBarMaximum="100"
+                        wpf:Button.ProgressBarMinimum="0"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        IsEnabled="False"
+                        Style="{StaticResource BtnOutline}" />
+                </StackPanel>
 
                 <StackPanel
                     Grid.Row="17"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Orientation="Horizontal">
                     <Button
                         Margin="0,5"
@@ -319,7 +368,7 @@
 
                 <StackPanel
                     Grid.Row="2"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -333,7 +382,7 @@
                 </StackPanel>
                 <StackPanel
                     Grid.Row="3"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -349,7 +398,7 @@
                 </StackPanel>
                 <StackPanel
                     Grid.Row="4"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -365,7 +414,7 @@
                 </StackPanel>
                 <StackPanel
                     Grid.Row="5"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
@@ -377,10 +426,30 @@
                         IsEnabled="False"
                         Style="{StaticResource BtnText}" />
                 </StackPanel>
+                <StackPanel
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    Orientation="Horizontal">
+                    <Button
+                        Margin="5"
+                        wpf:Button.ProgressBarMaximum="100"
+                        wpf:Button.ProgressBarMinimum="0"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Style="{StaticResource BtnText}" />
+                    <Button
+                        Margin="5"
+                        wpf:Button.ProgressBarMaximum="100"
+                        wpf:Button.ProgressBarMinimum="0"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        IsEnabled="False"
+                        Style="{StaticResource BtnText}" />
+                </StackPanel>
 
                 <StackPanel
                     Grid.Row="17"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Orientation="Horizontal">
                     <Button
                         Margin="0,5"
@@ -1645,8 +1714,6 @@
                     Minimum="0"
                     Value="100" />
 
-                <!-- <ProgressBar Style="{StaticResource S}"></ProgressBar> -->
-
                 <Slider
                     Name="Slider"
                     Grid.Row="5"
@@ -1795,7 +1862,7 @@
                     Style="{StaticResource BtnOutline}" />
             </Grid>
         </TabItem>
-        <TabItem Header="Scroll bars">
+        <TabItem Header="Scroll bar">
             <!--  SCROLL BARS  -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -1905,7 +1972,7 @@
                     Style="{StaticResource BtnOutline}" />
             </Grid>
         </TabItem>
-        <TabItem Header="Sliders">
+        <TabItem Header="Slider">
             <!--  SLIDERS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -1984,7 +2051,7 @@
                     Style="{StaticResource Lbl}" />
             </Grid>
         </TabItem>
-        <TabItem Header="Switchers">
+        <TabItem Header="Switcher">
             <!--  SWITCHERS  -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -2039,7 +2106,7 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Tabs">
+        <TabItem Header="Tab">
             <!--  TABS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -2093,7 +2160,7 @@
                 </DockPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Tables">
+        <TabItem Header="Table">
             <!--  TABLES  -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -2128,7 +2195,7 @@
             </Grid>
         </TabItem>
         <!--  TEXT BOXES  -->
-        <TabItem Header="Text boxes">
+        <TabItem Header="Text box">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -2191,7 +2258,7 @@
         </TabItem>
 
         <!--  TIME INPUT  -->
-        <TabItem Header="Time inputs">
+        <TabItem Header="Time input">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -2225,7 +2292,7 @@
                     FontSize="58" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle buttons">
+        <TabItem Header="Toggle button">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -2345,7 +2412,7 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Tooltips">
+        <TabItem Header="Tooltip">
             <!--  TOOLTIPS  -->
             <Button
                 Width="200"

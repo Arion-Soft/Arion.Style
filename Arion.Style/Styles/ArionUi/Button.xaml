@@ -7,9 +7,27 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="FontFamily.xaml" />
         <ResourceDictionary Source="Colors.xaml" />
+        <ResourceDictionary Source="ProgressBar.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <Style x:Key="BtnFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle
+                        Margin="-2"
+                        RadiusX="6"
+                        RadiusY="6"
+                        SnapsToDevicePixels="true"
+                        Stroke="{StaticResource Pr300}"
+                        StrokeThickness="3" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
+    <converters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
 
     <ControlTemplate x:Key="FilledTemplate" TargetType="{x:Type Button}">
         <Border
@@ -60,6 +78,16 @@
                     Kind="{TemplateBinding attach:Button.RightIcon}"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
                                                  Converter={StaticResource IconConverter}}" />
+                <ProgressBar
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Width="56"
+                    Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
+                    Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
+                    Style="{StaticResource BtnProgressBar}"
+                    Visibility="{TemplateBinding attach:Button.ProgressBarShow,
+                                                 Converter={StaticResource VisibilityConverter}}"
+                    Value="{TemplateBinding attach:Button.ProgressBarValue}" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -73,6 +101,9 @@
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarShow" Value="True">
+                <Setter Property="Background" Value="{StaticResource Pr100}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -125,6 +156,16 @@
                     Kind="{TemplateBinding attach:Button.RightIcon}"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
                                                  Converter={StaticResource IconConverter}}" />
+                <ProgressBar
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Width="56"
+                    Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
+                    Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
+                    Style="{StaticResource BtnProgressBar}"
+                    Visibility="{TemplateBinding attach:Button.ProgressBarShow,
+                                                 Converter={StaticResource VisibilityConverter}}"
+                    Value="{TemplateBinding attach:Button.ProgressBarValue}" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -136,7 +177,6 @@
                 <Setter Property="Background" Value="{StaticResource Lg3}" />
                 <Setter Property="BorderBrush" Value="{StaticResource Lg3}" />
             </Trigger>
-
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
             </Trigger>
@@ -191,6 +231,16 @@
                     Kind="{TemplateBinding attach:Button.RightIcon}"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
                                                  Converter={StaticResource IconConverter}}" />
+                <ProgressBar
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Width="56"
+                    Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
+                    Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
+                    Style="{StaticResource BtnProgressBar}"
+                    Visibility="{TemplateBinding attach:Button.ProgressBarShow,
+                                                 Converter={StaticResource VisibilityConverter}}"
+                    Value="{TemplateBinding attach:Button.ProgressBarValue}" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -202,7 +252,6 @@
                 <Setter Property="Background" Value="{StaticResource Lg3}" />
                 <Setter Property="BorderBrush" Value="{StaticResource Lg3}" />
             </Trigger>
-
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
             </Trigger>
@@ -216,6 +265,7 @@
         <Setter Property="Height" Value="40" />
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Padding" Value="16,8" />
+        <Setter Property="FocusVisualStyle" Value="{StaticResource BtnFocusVisual}" />
     </Style>
 
     <Style

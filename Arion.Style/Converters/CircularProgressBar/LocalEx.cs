@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Arion.Theme.Converters.CircularProgressBar
+namespace Arion.Style.Converters.CircularProgressBar
 {
     internal static class LocalEx
     {

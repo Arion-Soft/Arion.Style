@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace Arion.Theme.Converters
+namespace Arion.Style.Converters
 {
     /// <summary>
     /// Helps coerce the correct item container style for a <see cref="ListView"/>, according to whether the list is displaying in standard mode, or using a <see cref="ListView.View"/>, such as a <see cref="GridView"/>.

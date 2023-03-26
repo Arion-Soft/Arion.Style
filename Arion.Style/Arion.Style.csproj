@@ -59,6 +59,8 @@
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Icons.cs" />
+    <Compile Include="Controls\PopupBox.cs" />
+    <Compile Include="Controls\PopupEx.cs" />
     <Compile Include="Controls\TimeInput.xaml.cs">
       <DependentUpon>TimeInput.xaml</DependentUpon>
     </Compile>
@@ -120,6 +122,7 @@
     <Compile Include="Converters\TimeToVisibilityConverter.cs" />
     <Compile Include="Converters\ToolBarOverflowButtonVisibilityConverter.cs" />
     <Compile Include="Converters\TopThicknessConverter.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Extensions\BottomDashedLineAdorner.cs" />
     <Compile Include="Extensions\Constants.cs" />
     <Compile Include="Extensions\HintAssist.cs" />
@@ -218,6 +221,7 @@
     <Page Include="Styles\ArionUi\ListView.xaml" />
     <Page Include="Styles\ArionUi\Page.xaml" />
     <Page Include="Styles\ArionUi\PasswordBox.xaml" />
+    <Page Include="Styles\ArionUi\Popup.xaml" />
     <Page Include="Styles\ArionUi\ProgressBar.xaml" />
     <Page Include="Styles\ArionUi\RadioButton.xaml" />
     <Page Include="Styles\ArionUi\RepeatButton.xaml" />

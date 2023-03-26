@@ -73,3 +73,9 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.pdb
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll.config
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.dll
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test_MarkupCompile.lref

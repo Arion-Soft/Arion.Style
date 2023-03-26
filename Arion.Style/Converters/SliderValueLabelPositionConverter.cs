@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace Arion.Theme.Converters
+namespace Arion.Style.Converters
 {
     [ValueConversion(typeof(double), typeof(double), ParameterType = typeof(Orientation))]
     internal class SliderValueLabelPositionConverter : IValueConverter

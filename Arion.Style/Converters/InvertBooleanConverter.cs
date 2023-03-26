@@ -1,6 +1,4 @@
-﻿using Arion.Style.Converters;
-
-namespace Arion.Theme.Converters
+﻿namespace Arion.Style.Converters
 {
     internal class InvertBooleanConverter : BooleanConverter<bool>
     {

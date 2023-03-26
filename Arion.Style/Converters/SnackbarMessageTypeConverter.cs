@@ -1,4 +1,4 @@
-﻿namespace Arion.Theme.Converters
+﻿namespace Arion.Style.Converters
 {
     // public class SnackbarMessageTypeConverter : TypeConverter
     // {

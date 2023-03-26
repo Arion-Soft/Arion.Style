@@ -4,26 +4,26 @@
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="Window" x:Key="WindowBase">
+    <Style x:Key="WindowBase" TargetType="Window">
         <Setter Property="Background" Value="#ffd7e3f3" />
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="ResizeMode" Value="NoResize" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Window">
-                    <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
-                        <ContentPresenter Content="{TemplateBinding Content}" x:Name="PART_ContentHost" />
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                        <ContentPresenter x:Name="PART_ContentHost" Content="{TemplateBinding Content}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <Style
+        x:Key="WindowBorder"
         BasedOn="{StaticResource WindowBase}"
-        TargetType="Window"
-        x:Key="WindowBorder">
+        TargetType="Window">
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Dg2}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Window">
@@ -31,17 +31,17 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <ContentPresenter Content="{TemplateBinding Content}" x:Name="PART_ContentHost" />
+                        <ContentPresenter x:Name="PART_ContentHost" Content="{TemplateBinding Content}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="Window" x:Key="WindowStyle">
+    <Style x:Key="WindowStyle" TargetType="Window">
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="Topmost" Value="False" />
-        <Setter Property="Background" Value="{StaticResource BrushBackground}" />
-        <Setter Property="BorderBrush" Value="{StaticResource BrushPrimary}" />
+        <Setter Property="Background" Value="{StaticResource Pr200}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Dg2}" />
         <Setter Property="BorderThickness" Value="5" />
         <Setter Property="AllowsTransparency" Value="True" />
         <Setter Property="Template">

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Data;
 
-namespace Arion.Theme.Converters
+namespace Arion.Style.Converters
 {
     public class RangeLengthConverter : IMultiValueConverter
     {

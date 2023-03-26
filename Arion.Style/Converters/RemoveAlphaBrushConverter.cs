@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace Arion.Theme.Converters
+namespace Arion.Style.Converters
 {
     internal class RemoveAlphaBrushConverter : IValueConverter, IMultiValueConverter
     {

@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace Arion.Theme.Converters.CircularProgressBar
+namespace Arion.Style.Converters.CircularProgressBar
 {
     public class RotateTransformCentreConverter : IValueConverter
     {

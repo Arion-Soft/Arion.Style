@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
+using Arion.Theme.Converters;
 
-namespace Arion.Theme.Converters
+namespace Arion.Style.Converters
 {
     public sealed class MathMultipleConverter : IMultiValueConverter
     {
