@@ -69,7 +69,7 @@
                 </arion:Breadcrumb>
             </Grid>
         </TabItem>
-        <TabItem Header="Button" IsSelected="True">
+        <TabItem Header="Button">
             <!--  BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -155,19 +155,15 @@
                     Grid.Row="2"
                     Grid.Column="0"
                     Orientation="Horizontal">
-                    <smtx:XamlDisplay UniqueKey="buttons_mini_action_1">
-                        <Button
-                            Margin="5"
-                            Content="Button"
-                            Style="{StaticResource BtnFilled}" />
-                    </smtx:XamlDisplay>
-                    <smtx:XamlDisplay UniqueKey="buttons_mini_action_2">
-                        <Button
-                            Margin="5"
-                            Content="Button"
-                            IsEnabled="False"
-                            Style="{StaticResource BtnFilled}" />
-                    </smtx:XamlDisplay>
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        Style="{StaticResource BtnFilled}" />
+                    <Button
+                        Margin="5"
+                        Content="Button"
+                        IsEnabled="False"
+                        Style="{StaticResource BtnFilled}" />
                 </StackPanel>
                 <StackPanel
                     Grid.Row="3"
@@ -192,6 +188,7 @@
                     <Button
                         Margin="5"
                         wpf:Button.RightIcon="User"
+                        Click="BtnProgress_OnClick"
                         Content="Button"
                         Style="{StaticResource BtnFilled}" />
                     <Button
@@ -206,6 +203,7 @@
                     Grid.Column="0"
                     Orientation="Horizontal">
                     <Button
+                        Name="BtnTest"
                         Margin="5"
                         wpf:Button.Icon="User"
                         Style="{StaticResource BtnFilled}" />
@@ -221,9 +219,10 @@
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
-                        wpf:Button.ProgressBarMaximum="100"
+                        wpf:Button.ProgressBarMaximum="1000"
                         wpf:Button.ProgressBarMinimum="0"
                         wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarType="Circle"
                         wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
                         Style="{StaticResource BtnFilled}" />
                     <Button
@@ -1607,7 +1606,7 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Password box">
+        <TabItem Header="Password box" IsSelected="True">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -1639,7 +1638,7 @@
                     Grid.Column="0"
                     Width="200"
                     Margin="5"
-                    wpf:PasswordBox.Placeholder="Empty" />
+                    wpf:PasswordBox.Placeholder="Placeholder" />
                 <PasswordBox
                     Grid.Row="3"
                     Grid.Column="0"

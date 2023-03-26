@@ -79,12 +79,13 @@
                     Visibility="{TemplateBinding attach:Button.RightIcon,
                                                  Converter={StaticResource IconConverter}}" />
                 <ProgressBar
+                    x:Name="ProgressBar"
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
                     Width="56"
                     Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
                     Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
-                    Style="{StaticResource BtnProgressBar}"
+                    Style="{StaticResource BtnCircleProgressBar}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
                     Value="{TemplateBinding attach:Button.ProgressBarValue}" />
@@ -104,6 +105,14 @@
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarShow" Value="True">
                 <Setter Property="Background" Value="{StaticResource Pr100}" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
+                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnCircleProgressBar}" />
+                <Setter TargetName="ProgressBar" Property="Width" Value="20" />
+                <Setter TargetName="ProgressBar" Property="Height" Value="20" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
+                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnProgressBar}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

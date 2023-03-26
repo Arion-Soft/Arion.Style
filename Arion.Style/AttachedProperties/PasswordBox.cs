@@ -9,9 +9,7 @@ namespace Arion.Style.AttachedProperties
 
         private static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var password = d as System.Windows.Controls.PasswordBox;
-            
-            if(password == null) return;
+            if(!(d is System.Windows.Controls.PasswordBox password)) return;
             
             password.PasswordChanged -= PasswordOnPasswordChanged;
 
@@ -29,12 +27,12 @@ namespace Arion.Style.AttachedProperties
             SetHasContent((System.Windows.Controls.PasswordBox)sender);
         }
 
-        public static void SetMonitorPassword(DependencyObject element, bool value)
+        public static void SetMonitorPassword(System.Windows.Controls.PasswordBox element, bool value)
         {
             element.SetValue(MonitorPasswordProperty, value);
         }
 
-        public static bool GetMonitorPassword(DependencyObject element)
+        public static bool GetMonitorPassword(System.Windows.Controls.PasswordBox element)
         {
             return (bool)element.GetValue(MonitorPasswordProperty);
         }
@@ -57,7 +55,7 @@ namespace Arion.Style.AttachedProperties
 
         public static void SetHasContent(System.Windows.Controls.PasswordBox element)
         {
-            element.SetValue(HasContentProperty, element.SecurePassword.Length > 0);
+            element.SetValue(HasContentProperty, element.Password.Length > 0);
         }
 
         public static bool GetHasContent(System.Windows.Controls.PasswordBox element)
@@ -73,7 +71,7 @@ namespace Arion.Style.AttachedProperties
             element.SetValue(CanShowPasswordProperty, value);
         }
 
-        public static bool GetCanShowPassword(DependencyObject element)
+        public static bool GetCanShowPassword(System.Windows.Controls.PasswordBox element)
         {
             return (bool)element.GetValue(CanShowPasswordProperty);
         }
@@ -86,7 +84,7 @@ namespace Arion.Style.AttachedProperties
             element.SetValue(SecuredPasswordProperty, element.Password);
         }
 
-        public static string GetSecuredPassword(DependencyObject element)
+        public static string GetSecuredPassword(System.Windows.Controls.PasswordBox element)
         {
             return (string)element.GetValue(SecuredPasswordProperty);
         }

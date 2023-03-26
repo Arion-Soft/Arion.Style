@@ -104,10 +104,12 @@
     <Compile Include="Converters\NullableDateTimeToCurrentDateConverter.cs" />
     <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Converters\OutlinedDateTimePickerActiveBorderThicknessConverter.cs" />
+    <Compile Include="Converters\PasswordBoxPlaceholderVisibilityConverter.cs" />
     <Compile Include="Converters\PickerInnerPaddingConverter.cs" />
     <Compile Include="Converters\PointValueConverter.cs" />
     <Compile Include="Converters\RangeLengthConverter.cs" />
     <Compile Include="Converters\RemoveAlphaBrushConverter.cs" />
+    <Compile Include="Converters\RoundProgressPathConverter.cs" />
     <Compile Include="Converters\ShadowConverter.cs" />
     <Compile Include="Converters\ShadowEdgeConverter.cs" />
     <Compile Include="Converters\SizeToRectConverter.cs" />

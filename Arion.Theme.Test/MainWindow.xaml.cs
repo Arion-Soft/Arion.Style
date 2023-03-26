@@ -5,6 +5,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Arion.Style.Controls;
 using ShowMeTheXAML;
+using Arion.Style.AttachedProperties;
+using Button = Arion.Style.AttachedProperties.Button;
 
 namespace Arion.Theme.Test
 {
@@ -59,6 +61,16 @@ namespace Arion.Theme.Test
         {
             Slider65535.SetLeftValue(3000);
             Slider65535.SetRightValue(17000);
+        }
+
+        private void BtnProgress_OnClick(object sender, RoutedEventArgs e)
+        {
+            Button.SetIcon(BtnTest, EIcons.NULL);
+            Button.SetProgressBarMaximum(BtnTest, 100);
+            Button.SetProgressBarMinimum(BtnTest, 0);
+            Button.SetProgressBarShow(BtnTest, true);
+            Button.SetProgressBarType(BtnTest, ProgressBarType.Circle);
+            Button.SetProgressBarValue(BtnTest, 50);
         }
     }
 }

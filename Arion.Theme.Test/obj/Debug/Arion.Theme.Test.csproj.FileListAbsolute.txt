@@ -77,5 +77,3 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAM
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.xml
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test_MarkupCompile.lref

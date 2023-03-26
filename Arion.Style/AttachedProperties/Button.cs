@@ -108,6 +108,25 @@ namespace Arion.Style.AttachedProperties
 
         public static bool GetProgressBarShow(ButtonBase element) => (bool)element.GetValue(ProgressBarShowProperty);
 
+        public static readonly DependencyProperty ProgressBarTypeProperty = DependencyProperty.RegisterAttached(
+            "ProgressBarType", typeof(ProgressBarType), typeof(Button), new PropertyMetadata(default(ProgressBarType)));
+
+        public static void SetProgressBarType(ButtonBase element, ProgressBarType value)
+        {
+            element.SetValue(ProgressBarTypeProperty, value);
+        }
+
+        public static ProgressBarType GetProgressBarType(ButtonBase element)
+        {
+            return (ProgressBarType)element.GetValue(ProgressBarTypeProperty);
+        }
+        
         #endregion
+    }
+
+    public enum ProgressBarType
+    {
+        Linear,
+        Circle
     }
 }
