@@ -6,6 +6,8 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=B3327E45_002DC915_002D4A22_002DA9E1_002D90DB0C6B47A4_002Fd_003AStyles_002Fd_003AArionUi_002Ff_003APackIconDataFactory_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=B3327E45_002DC915_002D4A22_002DA9E1_002D90DB0C6B47A4_002Fd_003AStyles_002Fd_003AArionUi_002Ff_003APackIconKind_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=DBB91FB5_002DC181_002D4CC9_002D9859_002DF05DE4F045D4_002Fd_003AIcon_002Ff_003AIcons_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Arion_002ETheme_002ETest_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
 	
 	
 	

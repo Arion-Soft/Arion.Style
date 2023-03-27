@@ -73,9 +73,5 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.xml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.dll
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.dll
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.pdb
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll.config
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.xml

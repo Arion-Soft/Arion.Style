@@ -4,7 +4,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Arion.Style.Controls;
-using ShowMeTheXAML;
 using Arion.Style.AttachedProperties;
 using Button = Arion.Style.AttachedProperties.Button;
 
@@ -18,8 +17,6 @@ namespace Arion.Theme.Test
         public MainWindow()
         {
             InitializeComponent();
-            XamlDisplay.Init();
-            // base.OnStartup(e);
         }
 
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
