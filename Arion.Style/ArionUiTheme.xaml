@@ -27,6 +27,7 @@
         <ResourceDictionary Source="Styles/ArionUi/Shadow.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/DisplayControl.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ProgressBar.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/RangeSlider.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

@@ -67,7 +67,7 @@
                 </controls:Breadcrumb>
             </Grid>
         </TabItem>
-        <TabItem Header="Button" IsSelected="True">
+        <TabItem Header="Button">
             <!--  BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -1773,7 +1773,7 @@
                     Margin="5" />
             </Grid>
         </TabItem>
-        <TabItem Header="Ranger">
+        <TabItem Header="Ranger" IsSelected="True">
             <!--  RANGERS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -1808,7 +1808,8 @@
                     Grid.Row="1"
                     Maximum="65535"
                     Minimum="0"
-                    Width="272" />
+                    Name="RangeSlider"
+                    Width="222" />
                 <controls:RangeSlider
                     Grid.Column="0"
                     Grid.Row="2"
@@ -1835,11 +1836,11 @@
                 <Grid Grid.Column="0" Grid.Row="5">
                     <TextBox
                         HorizontalAlignment="Left"
-                        Text="{Binding ElementName=Slider65535, Path=LowerValue}"
+                        Text="{Binding ElementName=RangeSlider, Path=LowerValue}"
                         Width="100" />
                     <TextBox
                         HorizontalAlignment="Right"
-                        Text="{Binding ElementName=Slider65535, Path=UpperValue}"
+                        Text="{Binding ElementName=RangeSlider, Path=UpperValue}"
                         Width="100" />
                 </Grid>
 

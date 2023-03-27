@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -22,60 +23,68 @@ namespace Arion.Style.Controls
             UpperValue = Maximum;
             LowerValue = Minimum;
 
-            Track.Width = Width - 10;
-
-            #region LeftThumb
-
-            LeftThumbBackground = new SolidColorBrush(Colors.Black);
-            LeftThumbBorderBrush = new SolidColorBrush(Colors.White);
-            LeftThumbBorder = new Thickness(1);
-            LeftThumbWidth = 20;
-            LeftThumbHeight = 20;
-            LeftThumbMargin = new Thickness(-(LeftThumbWidth / 2), 0, 0, 0);
-
-            #endregion
-
-            #region RightThumb
-
-            RightThumbBackground = new SolidColorBrush(Colors.White);
-            RightThumbBorderBrush = new SolidColorBrush(Colors.Black);
-            RightThumbBorder = new Thickness(1);
-            RightThumbWidth = 20;
-            RightThumbHeight = 20;
-            RightThumbMargin = new Thickness(0, 0, -(RightThumbWidth / 2), 0);
-
-            #endregion
-
-            #region CenterThumb
-
-            CenterThumbBackground = new SolidColorBrush(Color.FromRgb(0x6B, 0xB3, 0xFA));
-            CenterThumbOpacity = 0.5;
-
-            #endregion
-
-            #region Track
-
-            TrackBackground = new SolidColorBrush(Colors.Gray);
-            TrackHeight = 2;
-
-            #endregion
-
-            #region SelectedTrack
-
-            SelectedTrackBackground = new SolidColorBrush(Colors.CornflowerBlue);
-            SelectedTrackHeight = 4;
-
-            #endregion
-
-            if (!ShowValues)
+            try
             {
-                Brd1.Visibility = Visibility.Collapsed;
-                Brd2.Visibility = Visibility.Collapsed;
+                if(!double.IsNaN(Width))
+                    Track.Width = Width - 10;
+            
+                #region LeftThumb
+
+                LeftThumbBackground = new SolidColorBrush(Colors.Black);
+                LeftThumbBorderBrush = new SolidColorBrush(Colors.White);
+                LeftThumbBorder = new Thickness(1);
+                LeftThumbWidth = 20;
+                LeftThumbHeight = 20;
+                LeftThumbMargin = new Thickness(-(LeftThumbWidth / 2), 0, 0, 0);
+
+                #endregion
+
+                #region RightThumb
+
+                RightThumbBackground = new SolidColorBrush(Colors.White);
+                RightThumbBorderBrush = new SolidColorBrush(Colors.Black);
+                RightThumbBorder = new Thickness(1);
+                RightThumbWidth = 20;
+                RightThumbHeight = 20;
+                RightThumbMargin = new Thickness(0, 0, -(RightThumbWidth / 2), 0);
+
+                #endregion
+
+                #region CenterThumb
+
+                CenterThumbBackground = new SolidColorBrush(Color.FromRgb(0x6B, 0xB3, 0xFA));
+                CenterThumbOpacity = 0.5;
+
+                #endregion
+
+                #region Track
+
+                TrackBackground = new SolidColorBrush(Colors.Gray);
+                TrackHeight = 2;
+
+                #endregion
+
+                #region SelectedTrack
+
+                SelectedTrackBackground = new SolidColorBrush(Colors.CornflowerBlue);
+                SelectedTrackHeight = 4;
+
+                #endregion
+
+                if (!ShowValues)
+                {
+                    Brd1.Visibility = Visibility.Collapsed;
+                    Brd2.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Brd1.Visibility = Visibility.Hidden;
+                    Brd2.Visibility = Visibility.Hidden;
+                }
             }
-            else
+            catch (Exception e)
             {
-                Brd1.Visibility = Visibility.Hidden;
-                Brd2.Visibility = Visibility.Hidden;
+                Debug.WriteLine($"{e.Message}\n{e.StackTrace}");
             }
         }
 

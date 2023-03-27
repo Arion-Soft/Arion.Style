@@ -241,6 +241,7 @@
     <Page Include="Styles\ArionUi\Popup.xaml" />
     <Page Include="Styles\ArionUi\ProgressBar.xaml" />
     <Page Include="Styles\ArionUi\RadioButton.xaml" />
+    <Page Include="Styles\ArionUi\RangeSlider.xaml" />
     <Page Include="Styles\ArionUi\RepeatButton.xaml" />
     <Page Include="Styles\ArionUi\ScrollBar.xaml" />
     <Page Include="Styles\ArionUi\Shadow.xaml" />
