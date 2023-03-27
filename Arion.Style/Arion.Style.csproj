@@ -51,16 +51,28 @@
     <Compile Include="AttachedProperties\Button.cs" />
     <Compile Include="AttachedProperties\PasswordBox.cs" />
     <Compile Include="AttachedProperties\TextBox.cs" />
+    <Compile Include="Controls\Breadcrumb.xaml.cs">
+      <DependentUpon>Breadcrumb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BreadcrumbItem.xaml.cs">
+      <DependentUpon>BreadcrumbItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\DisplayControl.xaml.cs">
       <DependentUpon>DisplayControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\EIcons.cs" />
+    <Compile Include="Controls\Enums\BreadcrumbItemType.cs" />
+    <Compile Include="Controls\Enums\InlineAlertType.cs" />
     <Compile Include="Controls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Icons.cs" />
+    <Compile Include="Controls\InlineAlert.xaml.cs" />
     <Compile Include="Controls\PopupBox.cs" />
     <Compile Include="Controls\PopupEx.cs" />
+    <Compile Include="Controls\RangeSlider.xaml.cs">
+      <DependentUpon>RangeSlider.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TimeInput.xaml.cs">
       <DependentUpon>TimeInput.xaml</DependentUpon>
     </Compile>
@@ -174,8 +186,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\Breadcrumb.xaml" />
+    <Page Include="Controls\BreadcrumbItem.xaml" />
     <Page Include="Controls\DisplayControl.xaml" />
     <Page Include="Controls\Icon.xaml" />
+    <Page Include="Controls\InlineAlert.xaml" />
+    <Page Include="Controls\RangeSlider.xaml" />
     <Page Include="Controls\TimeInput.xaml" />
     <Page Include="Icons\Icons.xaml" />
     <Page Include="Icons\SRE450.xaml">
@@ -260,22 +276,7 @@
     <Content Include="Fonts\GolosUi\Golos-UI_Medium.ttf" />
     <Content Include="Fonts\GolosUi\Golos-UI_Regular.ttf" />
     <Content Include="licenses\LICENSE.txt" />
-    <Content Include="nugets\Arion.Style.0.1.0.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.10.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.11.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.3.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.4.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.5.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.6.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.7.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.8.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.3.9.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.4.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.5.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.6.1.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.6.2.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.6.3.nupkg" />
-    <Content Include="nugets\Arion.Style.0.1.6.nupkg" />
+    <Content Include="Readme.Controls.md" />
     <Content Include="Readme.md" />
     <Resource Include="Fonts\GolosUi\GolosUi.ttf" />
     <Content Include="Icons\Images\Drive.png">

@@ -2,7 +2,7 @@
 <package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>Arion.Style</id>
-        <version>0.2.0.2</version>
+        <version>0.2.0.3</version>
         <title>Arion Design</title>
         <authors>Ivan Budanov</authors>
         <owners>Arion Soft</owners>
@@ -15,22 +15,22 @@
         <readme>docs\Readme.md</readme>
     </metadata>
     <files>
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net461" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net461" />
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net462" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net462" />
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net463" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net463" />
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net47" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net47" />
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net471" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net471" />
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net472" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net472" />
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net48" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net48" />
-        <file src="bin/Debug/Arion.Style.Theme.dll" target="lib/net481" />
-        <file src="bin/Debug/Arion.Style.Theme.pdb" target="lib/net481" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net461" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net461" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net462" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net462" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net463" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net463" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net47" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net47" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net471" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net471" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net472" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net472" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net48" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net48" />
+        <file src="bin/Debug/Arion.Style.dll" target="lib/net481" />
+        <file src="bin/Debug/Arion.Style.pdb" target="lib/net481" />
         <file src="arion-logo.png" target="images\" />
         <file src="Readme.md" target="docs\" />
         <file src="licenses\LICENSE.txt" target="" />

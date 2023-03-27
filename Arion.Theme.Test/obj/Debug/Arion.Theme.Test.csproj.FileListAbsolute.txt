@@ -42,8 +42,6 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.csproj.CopyComplete
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.exe
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.pdb
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Controls.pdb
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Controls.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.csproj.AssemblyReference.cache
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.csproj.SuggestedBindingRedirects.cache
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\App.baml
@@ -67,9 +65,6 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.csproj.CopyComplete
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.exe
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.pdb
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.pdb
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.Theme.dll.config
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.pdb
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll.config
@@ -77,3 +72,10 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAM
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ShowMeTheXAML.dll
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.pdb
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll.config
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.AvalonEdit.xml
