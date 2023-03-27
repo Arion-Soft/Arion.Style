@@ -48,12 +48,13 @@ ___
 19. InlineAlert
 20. Label
 21. RangeSlider
+22. [Shadow](#Shadow)
+23. [Controllers](#Controllers)
+24. [Attached свойства](#Attached)
 
 ___
 
 ### Button
-
-#### Обычные кнопки
 
 Есть несколько типов стилей кнопок `Filled`, `Outline`, `Text`
 
@@ -61,11 +62,11 @@ Filled - Закрашенные без рамок
 Outline - Белые кнопки с рамками
 Text - Белые кнопки без рамок, на белом фоне похожи на простой текст, пока не наведешь
 
-Для использования стилей пишете сначала тип кнопки, потом её размер в сокращенном варианте
+Для использования стилей пишете тип кнопки
 
 Доступные стили для версии 0.3.0
 
-|                     | Filled                                                                                                                                                                    | Outline                                                                                                                                                                     | Text                                                                                                                                                          |
+| Default             | Filled                                                                                                                                                                    | Outline                                                                                                                                                                     | Text                                                                                                                                                          |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Standard            | ![Кнопка со стилем FilledLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Filled/Default/Button.png)     | ![Кнопка со стилем OutlineLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Outline/Default/Button.png)     | ![Кнопка со стилем TextLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Text/Button.png)     |
 | Left icon           | ![Кнопка со стилем FilledLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Filled/Default/LeftIcon.png)   | ![Кнопка со стилем OutlineLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Outline/Default/LeftIcon.png)   | ![Кнопка со стилем TextLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Text/LeftIcon.png)   |
@@ -166,14 +167,14 @@ ToggleButton имеет два стиля
 
 ----
 
-### Tab
+### ListView
 
-![Tabs](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Tab/HorizontalTab.png)
 
 ----
 
-### ListView
+### Tab
 
+![Tabs](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Tab/HorizontalTab.png)
 
 ----
 
@@ -212,6 +213,9 @@ ToggleButton имеет два стиля
 
 ---
 
-### Контролеры
+### Controllers
 
 [Arion.Style.Controls](https://github.com/IDerkBot/Arion.Style/tree/master/Arion.Style.Controls)
+
+### Attached
+

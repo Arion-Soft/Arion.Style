@@ -1,20 +1,20 @@
 ﻿<UserControl
-    x:Class="Arion.Style.Controls.RangeSlider"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Name="Root"
-    Width="Auto"
-    d:DesignHeight="40"
-    d:DesignWidth="300"
     Background="Transparent"
     Loaded="RangeSlider_OnLoaded"
     MouseEnter="RangeSlider_OnMouseEnter"
     MouseLeave="RangeSlider_OnMouseLeave"
     MouseMove="UIElement_OnMouseMove"
     MouseUp="RangeSlider_OnMouseUp"
-    mc:Ignorable="d">
+    Name="Root"
+    Width="Auto"
+    d:DesignHeight="40"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="Arion.Style.Controls.RangeSlider"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -22,109 +22,109 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Border
-            Name="Track"
+            Background="Gray"
             Grid.Row="1"
-            Width="{Binding ElementName=Root, Path=Width}"
             Height="2"
             Margin="0,0,0,0"
+            Name="Track"
             VerticalAlignment="Center"
-            Background="Gray" />
+            Width="{Binding ElementName=Root, Path=Width}" />
 
         <Border
+            Background="CornflowerBlue"
             Grid.Row="1"
             Height="4"
             Margin="{Binding ElementName=Root, Path=CenterMargin}"
-            VerticalAlignment="Center"
-            Background="CornflowerBlue" />
+            VerticalAlignment="Center" />
 
         <Ellipse
-            Name="Thumb1"
-            Grid.Row="1"
-            Width="{Binding ElementName=Root, Path=LeftThumbWidth}"
-            Height="{Binding ElementName=Root, Path=LeftThumbHeight}"
-            Margin="{Binding ElementName=Root, Path=LeftThumbMargin}"
-            HorizontalAlignment="Left"
             Fill="{Binding ElementName=Root, Path=LeftThumbBackground}"
+            Grid.Row="1"
+            Height="{Binding ElementName=Root, Path=LeftThumbHeight}"
+            HorizontalAlignment="Left"
+            Margin="{Binding ElementName=Root, Path=LeftThumbMargin}"
             MouseDown="LeftSlider_OnMouseDown"
             MouseEnter="Thumb1_OnMouseEnter"
             MouseLeave="Thumb1_OnMouseLeave"
             MouseUp="LeftSlider_OnMouseUp"
+            Name="Thumb1"
             Stroke="{Binding ElementName=Root, Path=LeftThumbBorderBrush}"
-            StrokeThickness="{Binding ElementName=Root, Path=LeftThumbBorder}" />
+            StrokeThickness="{Binding ElementName=Root, Path=LeftThumbBorder}"
+            Width="{Binding ElementName=Root, Path=LeftThumbWidth}" />
         <Ellipse
-            Name="Thumb2"
-            Grid.Row="1"
-            Width="{Binding ElementName=Root, Path=RightThumbWidth}"
-            Height="{Binding ElementName=Root, Path=RightThumbHeight}"
-            Margin="{Binding ElementName=Root, Path=RightThumbMargin}"
-            HorizontalAlignment="Right"
             Fill="{Binding ElementName=Root, Path=RightThumbBackground}"
+            Grid.Row="1"
+            Height="{Binding ElementName=Root, Path=RightThumbHeight}"
+            HorizontalAlignment="Right"
+            Margin="{Binding ElementName=Root, Path=RightThumbMargin}"
             MouseDown="RightSlider_OnMouseDown"
             MouseEnter="Thumb2_OnMouseEnter"
             MouseLeave="Thumb2_OnMouseLeave"
             MouseUp="RightSlider_OnMouseUp"
+            Name="Thumb2"
             Stroke="{Binding ElementName=Root, Path=RightThumbBorderBrush}"
-            StrokeThickness="{Binding ElementName=Root, Path=RightThumbBorder}" />
+            StrokeThickness="{Binding ElementName=Root, Path=RightThumbBorder}"
+            Width="{Binding ElementName=Root, Path=RightThumbWidth}" />
 
         <Border
-            Name="CenterThumb"
-            Grid.Row="1"
-            Width="24"
-            Height="12"
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Center"
             Background="{Binding ElementName=Root, Path=CenterThumbBackground}"
             BorderBrush="{Binding ElementName=Root, Path=CenterThumbBorderBrush}"
             BorderThickness="{Binding ElementName=Root, Path=CenterThumbBorder}"
             CornerRadius="3"
+            Grid.Row="1"
+            Height="12"
+            HorizontalAlignment="Stretch"
             MouseDown="Center_OnMouseDown"
             MouseUp="Center_OnMouseUp"
+            Name="CenterThumb"
             Opacity="{Binding ElementName=Root, Path=CenterThumbOpacity}"
-            Visibility="{Binding ElementName=Root, Path=CenterThumbVisibility}" />
+            VerticalAlignment="Center"
+            Visibility="{Binding ElementName=Root, Path=CenterThumbVisibility}"
+            Width="24" />
 
         <Border
-            Name="Brd1"
             Grid.Row="0"
-            Margin="{Binding ElementName=Root, Path=LeftThumbMargin}"
             HorizontalAlignment="Left"
+            Margin="{Binding ElementName=Root, Path=LeftThumbMargin}"
+            Name="Brd1"
             Visibility="Hidden">
             <Grid>
                 <Path
-                    HorizontalAlignment="Left"
                     Data="M 10 25 C 6.6667 20 0 16 0 10 C 0 4 4 0 10 0 C 16 0 20 4 20 10 C 20 16 13.3333 20 10 25 Z"
                     Fill="White"
+                    HorizontalAlignment="Left"
                     Stroke="Black"
                     StrokeThickness="1" />
                 <TextBlock
-                    Margin="0,0,0,5"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
                     FontSize="8"
-                    Text="{Binding ElementName=Root, Path=LeftValue}"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,5"
+                    Text="{Binding ElementName=Root, Path=LowerValue}"
                     TextAlignment="Center"
+                    VerticalAlignment="Center"
                     Visibility="Visible" />
             </Grid>
         </Border>
         <Border
-            Name="Brd2"
             Grid.Row="0"
-            Margin="{Binding ElementName=Root, Path=RightThumbMargin}"
             HorizontalAlignment="Right"
+            Margin="{Binding ElementName=Root, Path=RightThumbMargin}"
+            Name="Brd2"
             Visibility="Hidden">
             <Grid>
                 <Path
-                    HorizontalAlignment="Right"
                     Data="M 10 25 C 6.6667 20 0 16 0 10 C 0 4 4 0 10 0 C 16 0 20 4 20 10 C 20 16 13.3333 20 10 25 Z"
                     Fill="White"
+                    HorizontalAlignment="Right"
                     Stroke="Black"
                     StrokeThickness="1" />
                 <TextBlock
-                    Margin="0,0,0,5"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
                     FontSize="8"
-                    Text="{Binding ElementName=Root, Path=RightValue}"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,5"
+                    Text="{Binding ElementName=Root, Path=UpperValue}"
                     TextAlignment="Center"
+                    VerticalAlignment="Center"
                     Visibility="Visible" />
             </Grid>
         </Border>

@@ -19,8 +19,8 @@ namespace Arion.Style.Controls
         public RangeSlider()
         {
             InitializeComponent();
-            RightValue = Maximum;
-            LeftValue = Minimum;
+            UpperValue = Maximum;
+            LowerValue = Minimum;
 
             Track.Width = Width - 10;
 
@@ -81,8 +81,8 @@ namespace Arion.Style.Controls
 
         private void RangeSlider_OnLoaded(object sender, RoutedEventArgs e)
         {
-            RightValue = Maximum;
-            LeftValue = Minimum;
+            UpperValue = Maximum;
+            LowerValue = Minimum;
 
             Track.Width = Width - 10;
             if (!ShowValues)
@@ -101,38 +101,38 @@ namespace Arion.Style.Controls
 
         #region General
 
-        #region RightValue
+        #region UpperValue
 
-        public double RightValue
+        public double UpperValue
         {
-            get => (double)GetValue(RightValueProperty);
+            get => (double)GetValue(UpperValueProperty);
             set
             {
-                SetValue(RightValueProperty, value);
+                SetValue(UpperValueProperty, value);
                 RightValueChanged?.Invoke(this, EventArgs.Empty);
             }
         }
 
-        public static readonly DependencyProperty RightValueProperty =
-            DependencyProperty.Register(nameof(RightValue), typeof(double), typeof(RangeSlider),
+        public static readonly DependencyProperty UpperValueProperty =
+            DependencyProperty.Register(nameof(UpperValue), typeof(double), typeof(RangeSlider),
                 new PropertyMetadata());
 
         #endregion
 
-        #region LeftValue
+        #region LowerValue
 
-        public double LeftValue
+        public double LowerValue
         {
-            get => (double)GetValue(LeftValueProperty);
+            get => (double)GetValue(LowerValueProperty);
             set
             {
-                SetValue(LeftValueProperty, value);
+                SetValue(LowerValueProperty, value);
                 LeftValueChanged?.Invoke(this, EventArgs.Empty);
             }
         }
 
-        public static readonly DependencyProperty LeftValueProperty =
-            DependencyProperty.Register(nameof(LeftValue), typeof(double), typeof(RangeSlider), new PropertyMetadata());
+        public static readonly DependencyProperty LowerValueProperty =
+            DependencyProperty.Register(nameof(LowerValue), typeof(double), typeof(RangeSlider), new PropertyMetadata());
 
         #endregion
 
@@ -635,14 +635,14 @@ namespace Arion.Style.Controls
             #region Расчет левого значения
 
             var leftMargin = Math.Round(middle * (LeftThumbMargin.Left + Thumb1.Width / 2) / Track.Width);
-            LeftValue = Math.Round(leftMargin + Minimum);
+            LowerValue = Math.Round(leftMargin + Minimum);
 
             #endregion
 
             #region Расчет правого значения
 
             var rightMargin = middle * (RightThumbMargin.Right + Thumb2.Width / 2) / Track.Width;
-            RightValue = Math.Round(Maximum - rightMargin);
+            UpperValue = Math.Round(Maximum - rightMargin);
 
             #endregion
 
@@ -756,18 +756,18 @@ namespace Arion.Style.Controls
             Mouse.Capture(CenterThumb, CaptureMode.None);
         }
 
-        public void SetLeftValue(double value)
+        public void SetLowerValue(double value)
         {
-            LeftValue = value;
+            LowerValue = value;
             var percent = value * 100 / Maximum;
             var margin = percent * Track.Width / 100;
             LeftThumbMargin = new Thickness(margin - 10, 0, 0, 0);
             MoveCenterThumbAndFill();
         }
 
-        public void SetRightValue(double value)
+        public void SetUpperValue(double value)
         {
-            RightValue = value;
+            UpperValue = value;
             var percent = Math.Abs(Math.Round(value * 100 / Maximum, 2) - 100);
             var margin = Math.Round(percent * (Track.Width) / 100, 2);
             RightThumbMargin = new Thickness(0, 0, margin - 10, 0);

@@ -1825,21 +1825,21 @@
                 <controls:RangeSlider
                     Grid.Column="0"
                     Grid.Row="4"
-                    LeftValue="{Binding ElementName=SliderTest, Path=LeftValue}"
+                    LowerValue="{Binding ElementName=SliderTest, Path=LowerValue}"
                     Maximum="65535"
                     Minimum="0"
                     Name="Slider65535"
-                    RightValue="{Binding ElementName=SliderTest, Path=RightValue}"
+                    UpperValue="{Binding ElementName=SliderTest, Path=UpperValue}"
                     Width="500" />
 
                 <Grid Grid.Column="0" Grid.Row="5">
                     <TextBox
                         HorizontalAlignment="Left"
-                        Text="{Binding ElementName=Slider65535, Path=LeftValue}"
+                        Text="{Binding ElementName=Slider65535, Path=LowerValue}"
                         Width="100" />
                     <TextBox
                         HorizontalAlignment="Right"
-                        Text="{Binding ElementName=Slider65535, Path=RightValue}"
+                        Text="{Binding ElementName=Slider65535, Path=UpperValue}"
                         Width="100" />
                 </Grid>
 
