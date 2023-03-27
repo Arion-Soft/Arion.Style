@@ -3,9 +3,6 @@
 [![nuget](https://img.shields.io/nuget/v/Arion.Style)](https://www.nuget.org/packages/Arion.Style)
 [![nuget(download)](https://img.shields.io/nuget/dt/Arion.Style)](https://www.nuget.org/packages/Arion.Style)
 
-[//]: # ([![License]&#40;https://img.shields.io/github/license/iderkbot/Arion.Style&#41;]&#40;https://github.com/iderkbot/arion.style/blob/master/LICENSE&#41;)
-
-
 ## Библиотека стилей
 
 ___
@@ -14,14 +11,14 @@ ___
 
 В менеджере пакетов Nuget находите пакет `Arion.Style` и устанавливаете его
 
-![Arion.Style в менеджере пакетов nuget](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/Arion.Style.png "Arion.Style в менеджере пакетов nuget")
+![Arion.Style в менеджере пакетов nuget](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Arion.Style.png "Arion.Style в менеджере пакетов nuget")
 
 В документ ```App.xaml``` добавляете словарь
 
 ```xaml
 <ResourceDictionary>
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Arion.Style.Theme;component/ArionUiTheme.xaml" />
+        <ResourceDictionary Source="/Arion.Style;component/ArionUiTheme.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
 ```
@@ -64,27 +61,22 @@ Filled - Закрашенные без рамок
 Outline - Белые кнопки с рамками
 Text - Белые кнопки без рамок, на белом фоне похожи на простой текст, пока не наведешь
 
-Так же есть 3 размера этих кнопок Large(`Lg`), Medium(`Md`) и Small(`Sm`)
-
 Для использования стилей пишете сначала тип кнопки, потом её размер в сокращенном варианте
 
 Доступные стили для версии 0.1.3
 
-|             | Filled                                                                                                                                                      | Outline                                                                                                                                                       | Text                                                                                                                                                    |
-|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Large (Lg)  | ![Кнопка со стилем FilledLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/FilledLg.png)     | ![Кнопка со стилем OutlineLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/OutlineLg.png)     | ![Кнопка со стилем TextLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/TextLg.png)     |
-| Medium (Md) | ![Кнопка со стилем FilledMd](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/FilledMd.png)     | ![Кнопка со стилем OutlineMd](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/OutlineMd.png)     | ![Кнопка со стилем TextMd](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/TextMd.png)     |
-| Small (Sm)  | ![Кнопка со стилем FilledSm](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/FilledSm.png)     | ![Кнопка со стилем OutlineMd](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/OutlineSm.png)     | ![Кнопка со стилем TextSm](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/TextSm.png)     |
+|                     | Filled                                                                                                                                                                | Outline                                                                                                                                                                 | Text                                                                                                                                                            |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Standard            | ![Кнопка со стилем FilledLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Filled/Default/Button.png) | ![Кнопка со стилем OutlineLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Images/Button/Outline/Defailt/Button.png) | ![Кнопка со стилем TextLg](https://raw.githubusercontent.com/IDerkBot/Arion.Style/master/FilesForReadme/Files/Artion.Style.Theme.Images/Button/Text/Button.png) |
+| Left icon           |                                                                                                                                                                       |                                                                                                                                                                         |                                                                                                                                                                 |
+| Right icon          |                                                                                                                                                                       |                                                                                                                                                                         |                                                                                                                                                                 |
+| Center icon         |                                                                                                                                                                       |                                                                                                                                                                         |                                                                                                                                                                 |
+| Linear progress bar |                                                                                                                                                                       |                                                                                                                                                                         |                                                                                                                                                                 |
+| Circle progress bar |                                                                                                                                                                       |                                                                                                                                                                         |                                                                                                                                                                 |
 
-`FilledLg`,
-`FilledMd`, 
-`FilledSm`,
-`OutlineLg`,
-`OutlineMd`,
-`OutlineSm`,
-`TextLg`,
-`TextMd`,
-`TextSm`.
+`BtnFilled`,
+`BtnOutline`,
+`BtnText`,
 
 ___
 

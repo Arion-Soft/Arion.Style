@@ -57,6 +57,32 @@ namespace Arion.Style.AttachedProperties
 
         #endregion
 
+        public static readonly DependencyProperty IconWidthProperty = DependencyProperty.RegisterAttached(
+            "IconWidth", typeof(double), typeof(Button), new PropertyMetadata(default(double)));
+
+        public static void SetIconWidth(ButtonBase element, double value)
+        {
+            element.SetValue(IconWidthProperty, value);
+        }
+
+        public static double GetIconWidth(ButtonBase element)
+        {
+            return (double)element.GetValue(IconWidthProperty);
+        }
+
+        public static readonly DependencyProperty IconHeightProperty = DependencyProperty.RegisterAttached(
+            "IconHeight", typeof(double), typeof(Button), new PropertyMetadata(default(double)));
+
+        public static void SetIconHeight(ButtonBase element, double value)
+        {
+            element.SetValue(IconHeightProperty, value);
+        }
+
+        public static double GetIconHeight(ButtonBase element)
+        {
+            return (double)element.GetValue(IconHeightProperty);
+        }
+
         #region ProgressBar
 
         public static readonly DependencyProperty ProgressBarValueProperty = DependencyProperty.RegisterAttached(

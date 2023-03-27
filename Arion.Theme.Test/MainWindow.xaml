@@ -67,7 +67,7 @@
                 </controls:Breadcrumb>
             </Grid>
         </TabItem>
-        <TabItem Header="Button">
+        <TabItem Header="Button" IsSelected="True">
             <!--  BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -156,7 +156,8 @@
                     <Button
                         Content="Button"
                         Margin="5"
-                        Style="{StaticResource BtnFilled}" />
+                        Style="{StaticResource BtnFilled}"
+                        Width="100" />
                     <Button
                         Content="Button"
                         IsEnabled="False"
@@ -1604,7 +1605,7 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Password box" IsSelected="True">
+        <TabItem Header="Password box">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
