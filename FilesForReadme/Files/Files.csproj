@@ -91,7 +91,7 @@
       <Content Include="Artion.Style.Images\Button\Text\LinearLoad.png" />
       <Content Include="Artion.Style.Images\Button\Text\RightIcon.png" />
       <Content Include="Artion.Style.Images\CheckBox\Checked.png" />
-      <Content Include="Artion.Style.Images\CheckBox\Defailt.png" />
+      <Content Include="Artion.Style.Images\CheckBox\Default.png" />
       <Content Include="Artion.Style.Images\CheckBox\Mixed.png" />
       <Content Include="Artion.Style.Images\Colors\Blue\Pr100.png" />
       <Content Include="Artion.Style.Images\Colors\Blue\Pr200.png" />
