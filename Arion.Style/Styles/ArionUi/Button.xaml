@@ -10,6 +10,8 @@
         <ResourceDictionary Source="ProgressBar.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <converters:ButtonProgressBarWidthConverter x:Key="ProgressBarWidthConverter" />
+
     <Style x:Key="BtnFocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -87,7 +89,8 @@
                     Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
-                    Width="56"
+                    Width="{TemplateBinding Width,
+                                            Converter={StaticResource ProgressBarWidthConverter}}"
                     x:Name="ProgressBar" />
             </Grid>
         </Border>
@@ -105,11 +108,12 @@
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarShow" Value="True">
                 <Setter Property="Background" Value="{StaticResource Pr100}" />
+                <Setter Property="Padding" Value="12" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
-                <Setter Property="Width" TargetName="ProgressBar" Value="20" />
-                <Setter Property="Height" TargetName="ProgressBar" Value="20" />
+                <Setter Property="Width" TargetName="ProgressBar" Value="16" />
+                <Setter Property="Height" TargetName="ProgressBar" Value="16" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
@@ -117,13 +121,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <ControlTemplate TargetType="{x:Type Button}" x:Key="OutlineTemplate">
-        <Border
-            Background="{TemplateBinding Background}"
-            BorderBrush="{TemplateBinding BorderBrush}"
-            BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="6"
-            Name="Border"
-            Padding="{TemplateBinding Padding}">
+        <Border Padding="{TemplateBinding Padding}">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -174,7 +172,9 @@
                     Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
-                    Width="56" />
+                    Width="{TemplateBinding Width,
+                                            Converter={StaticResource ProgressBarWidthConverter}}"
+                    x:Name="ProgressBar" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -188,6 +188,17 @@
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarShow" Value="True">
+                <Setter Property="Padding" Value="12" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
+                <Setter Property="Width" TargetName="ProgressBar" Value="16" />
+                <Setter Property="Height" TargetName="ProgressBar" Value="16" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -249,7 +260,9 @@
                     Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
-                    Width="56" />
+                    Width="{TemplateBinding Width,
+                                            Converter={StaticResource ProgressBarWidthConverter}}"
+                    x:Name="ProgressBar" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -263,6 +276,17 @@
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarShow" Value="True">
+                <Setter Property="Padding" Value="12" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
+                <Setter Property="Width" TargetName="ProgressBar" Value="16" />
+                <Setter Property="Height" TargetName="ProgressBar" Value="16" />
+            </Trigger>
+            <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

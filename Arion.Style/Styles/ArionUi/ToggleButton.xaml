@@ -455,7 +455,7 @@
     <Style
         BasedOn="{StaticResource ToggleButtonBaseLg}"
         TargetType="{x:Type ToggleButton}"
-        x:Key="TgOutlineLg">
+        x:Key="TglOutline">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -529,7 +529,7 @@
     <Style
         BasedOn="{StaticResource ToggleButtonBaseLg}"
         TargetType="{x:Type ToggleButton}"
-        x:Key="TgOutlineFirstLg">
+        x:Key="TglOutlineFirst">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -600,7 +600,7 @@
     <Style
         BasedOn="{StaticResource ToggleButtonBaseLg}"
         TargetType="{x:Type ToggleButton}"
-        x:Key="TgOutlineMiddleLg">
+        x:Key="TglOutlineMiddle">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -671,7 +671,7 @@
     <Style
         BasedOn="{StaticResource ToggleButtonBaseLg}"
         TargetType="{x:Type ToggleButton}"
-        x:Key="TgOutlineLastLg">
+        x:Key="TglOutlineLast">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />

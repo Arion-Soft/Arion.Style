@@ -2,7 +2,7 @@
 
 namespace Arion.Style.AttachedProperties
 {
-    public static class TextBox
+    public class ComboBox
     {
         
     }

@@ -220,7 +220,7 @@
                     <Button
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
-                        wpf:Button.ProgressBarMaximum="1000"
+                        wpf:Button.ProgressBarMaximum="100"
                         wpf:Button.ProgressBarMinimum="0"
                         wpf:Button.ProgressBarShow="True"
                         wpf:Button.ProgressBarType="Circle"
@@ -229,6 +229,7 @@
                         IsEnabled="False"
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
+                        Width="100"
                         wpf:Button.ProgressBarMaximum="100"
                         wpf:Button.ProgressBarMinimum="0"
                         wpf:Button.ProgressBarShow="True"
@@ -973,7 +974,8 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     Margin="5"
-                    Width="200">
+                    Width="200"
+                    wpf:Hint.Placeholder="asdasd">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1645,34 +1647,34 @@
                     Grid.Row="2"
                     Margin="5"
                     Width="200"
-                    wpf:PasswordBox.Placeholder="Placeholder" />
+                    wpf:Hint.Placeholder="Placeholder" />
                 <PasswordBox
                     Grid.Column="0"
                     Grid.Row="3"
                     Margin="5"
                     Width="200"
-                    wpf:PasswordBox.Placeholder="Empty" />
+                    wpf:Hint.Placeholder="Empty" />
                 <PasswordBox
                     Grid.Column="0"
                     Grid.Row="4"
                     Margin="5"
                     Width="200"
-                    wpf:PasswordBox.CanShowPassword="True"
-                    wpf:PasswordBox.Placeholder="Empty" />
+                    wpf:Hint.Placeholder="Empty"
+                    wpf:PasswordBox.CanShowPassword="True" />
                 <PasswordBox
                     Grid.Column="0"
                     Grid.Row="5"
                     Margin="5"
                     Width="200"
-                    wpf:PasswordBox.CanShowPassword="True"
-                    wpf:PasswordBox.Placeholder="Empty" />
+                    wpf:Hint.Placeholder="Empty"
+                    wpf:PasswordBox.CanShowPassword="True" />
                 <PasswordBox
                     Grid.Column="0"
                     Grid.Row="6"
                     IsEnabled="False"
                     Margin="5"
                     Width="200"
-                    wpf:PasswordBox.Placeholder="Disabled" />
+                    wpf:Hint.Placeholder="Disabled" />
             </Grid>
         </TabItem>
         <TabItem Header="Progress bar">
@@ -1759,23 +1761,23 @@
 
                 <RadioButton
                     Content="RadioButton"
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="1"
                     Margin="5" />
                 <RadioButton
                     Content="RadioButton"
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="2"
                     Margin="5" />
                 <RadioButton
                     Content="RadioButton"
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="3"
                     IsChecked="True"
                     Margin="5" />
                 <RadioButton
                     Content="RadioButton"
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="4"
                     IsEnabled="False"
                     Margin="5" />
@@ -2235,7 +2237,7 @@
                     Grid.Row="1"
                     Margin="5"
                     Width="200"
-                    wpf:TextBox.Placeholder="Placeholder" />
+                    wpf:Hint.Placeholder="Placeholder" />
                 <TextBox
                     Grid.Column="0"
                     Grid.Row="2"
@@ -2385,12 +2387,12 @@
                     <ToggleButton
                         Content="Toggle button"
                         Margin="5"
-                        Style="{StaticResource TgOutlineLg}" />
+                        Style="{StaticResource TglOutline}" />
                     <ToggleButton
                         Content="Toggle button"
                         IsChecked="True"
                         Margin="5"
-                        Style="{StaticResource TgOutlineLg}" />
+                        Style="{StaticResource TglOutline}" />
                 </StackPanel>
 
                 <StackPanel
@@ -2398,9 +2400,9 @@
                     Grid.Row="5"
                     Margin="0,5"
                     Orientation="Horizontal">
-                    <ToggleButton Content="First" Style="{StaticResource TgOutlineFirstLg}" />
-                    <ToggleButton Content="Middle" Style="{StaticResource TgOutlineMiddleLg}" />
-                    <ToggleButton Content="last" Style="{StaticResource TgOutlineLastLg}" />
+                    <ToggleButton Content="First" Style="{StaticResource TglOutlineFirst}" />
+                    <ToggleButton Content="Middle" Style="{StaticResource TglOutlineMiddle}" />
+                    <ToggleButton Content="last" Style="{StaticResource TglOutlineLast}" />
                 </StackPanel>
 
                 <StackPanel
