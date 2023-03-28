@@ -13,7 +13,9 @@
         <tags>arion, design, style, arion-soft, arion-style, arion-theme</tags>
         <license type="file">LICENSE.txt</license>
         <readme>docs\Readme.md</readme>
-        <releaseNotes>docs\ReleaseNote.txt</releaseNotes>
+        <releaseNotes>
+            ТЕКСТ
+        </releaseNotes>
     </metadata>
     <files>
         <file src="bin/Debug/Arion.Style.dll" target="lib/net461" />
