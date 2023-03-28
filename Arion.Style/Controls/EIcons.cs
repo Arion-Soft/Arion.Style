@@ -13285,6 +13285,8 @@
         WarmUp,
         LinearFunctionAuto,
         LinearFunction,
-        ArcTgFunction
+        ArcTgFunction,
+        SinFunction,
+        AutoDefects
     }
 }

@@ -46,12 +46,12 @@
                 <controls:Icon
                     Fill="{TemplateBinding Foreground}"
                     Grid.Column="0"
-                    Height="15"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Margin="0,0,8,0"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
                                                  Converter={StaticResource IconConverter}}"
-                    Width="15" />
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ContentPresenter
                     Content="{TemplateBinding Content}"
                     Grid.Column="1"
@@ -61,23 +61,23 @@
                 <controls:Icon
                     Fill="{TemplateBinding Foreground}"
                     Grid.Column="1"
-                    Height="15"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
                     Kind="{TemplateBinding attach:Button.Icon}"
                     VerticalAlignment="Center"
                     Visibility="{TemplateBinding attach:Button.Icon,
                                                  Converter={StaticResource IconConverter}}"
-                    Width="15"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     x:Name="Icon" />
                 <controls:Icon
                     Fill="{TemplateBinding Foreground}"
                     Grid.Column="2"
-                    Height="15"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.RightIcon}"
                     Margin="8,0,0,0"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
                                                  Converter={StaticResource IconConverter}}"
-                    Width="15" />
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ProgressBar
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
@@ -133,12 +133,12 @@
                 <controls:Icon
                     Fill="{TemplateBinding Foreground}"
                     Grid.Column="0"
-                    Height="15"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Margin="0,0,8,0"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
                                                  Converter={StaticResource IconConverter}}"
-                    Width="15" />
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ContentPresenter
                     Content="{TemplateBinding Content}"
                     Grid.Column="1"
@@ -148,23 +148,23 @@
                 <controls:Icon
                     Fill="{TemplateBinding Foreground}"
                     Grid.Column="1"
-                    Height="15"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
                     Kind="{TemplateBinding attach:Button.Icon}"
                     VerticalAlignment="Center"
                     Visibility="{TemplateBinding attach:Button.Icon,
                                                  Converter={StaticResource IconConverter}}"
-                    Width="15"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     x:Name="Icon" />
                 <controls:Icon
                     Fill="{TemplateBinding Foreground}"
                     Grid.Column="2"
-                    Height="15"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.RightIcon}"
                     Margin="8,0,0,0"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
                                                  Converter={StaticResource IconConverter}}"
-                    Width="15" />
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ProgressBar
                     Grid.Column="0"
                     Grid.ColumnSpan="3"

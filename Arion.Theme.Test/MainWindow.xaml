@@ -67,7 +67,7 @@
                 </controls:Breadcrumb>
             </Grid>
         </TabItem>
-        <TabItem Header="Button">
+        <TabItem Header="Button" IsSelected="True">
             <!--  BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -156,8 +156,7 @@
                     <Button
                         Content="Button"
                         Margin="5"
-                        Style="{StaticResource BtnFilled}"
-                        Width="100" />
+                        Style="{StaticResource BtnFilled}" />
                     <Button
                         Content="Button"
                         IsEnabled="False"
@@ -172,13 +171,15 @@
                         Content="Button"
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
-                        wpf:Button.LeftIcon="User" />
+                        wpf:Button.IconHeight="30"
+                        wpf:Button.IconWidth="30"
+                        wpf:Button.LeftIcon="LinearFunction" />
                     <Button
                         Content="Button"
                         IsEnabled="False"
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
-                        wpf:Button.LeftIcon="User" />
+                        wpf:Button.LeftIcon="LinearFunctionAuto" />
                 </StackPanel>
                 <StackPanel
                     Grid.Column="0"
@@ -189,13 +190,13 @@
                         Content="Button"
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
-                        wpf:Button.RightIcon="User" />
+                        wpf:Button.RightIcon="SinFunction" />
                     <Button
                         Content="Button"
                         IsEnabled="False"
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
-                        wpf:Button.RightIcon="User" />
+                        wpf:Button.RightIcon="ArcTgFunction" />
                 </StackPanel>
                 <StackPanel
                     Grid.Column="0"
@@ -258,11 +259,18 @@
                     <Button
                         Content="Middle"
                         Margin="0,5"
-                        Style="{StaticResource GroupedFilledMiddleLg}" />
+                        Style="{StaticResource GroupedFilledMiddleLg}"
+                        wpf:Button.LeftIcon="LinearFunctionAuto" />
+                    <Button
+                        Content="Middle"
+                        Margin="0,5"
+                        Style="{StaticResource GroupedFilledMiddleLg}"
+                        wpf:Button.LeftIcon="SinFunction" />
                     <Button
                         Content="Last"
                         Margin="0,5"
-                        Style="{StaticResource GroupedFilledLastLg}" />
+                        Style="{StaticResource GroupedFilledLastLg}"
+                        wpf:Button.LeftIcon="ArcTgFunction" />
                 </StackPanel>
 
                 <StackPanel
@@ -1773,7 +1781,7 @@
                     Margin="5" />
             </Grid>
         </TabItem>
-        <TabItem Header="Ranger" IsSelected="True">
+        <TabItem Header="Ranger">
             <!--  RANGERS  -->
             <Grid>
                 <Grid.RowDefinitions>
