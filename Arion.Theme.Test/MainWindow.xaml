@@ -67,7 +67,7 @@
                 </controls:Breadcrumb>
             </Grid>
         </TabItem>
-        <TabItem Header="Button" IsSelected="True">
+        <TabItem Header="Button">
             <!--  BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -2282,7 +2282,7 @@
                     Width="480" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle button">
+        <TabItem Header="Toggle button" IsSelected="True">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -2400,6 +2400,36 @@
                         Margin="5"
                         Style="{StaticResource ListControlSelectMode}" />
                 </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <ToggleButton Style="{StaticResource TgFocus}" />
+                    <ToggleButton IsEnabled="False" Style="{StaticResource TgFocus}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Orientation="Horizontal">
+                    <ToggleButton Style="{StaticResource TgOnOff}" />
+                    <ToggleButton IsEnabled="False" Style="{StaticResource TgOnOff}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Orientation="Horizontal">
+                    <ToggleButton Style="{StaticResource OnOffToggle}" />
+                    <ToggleButton IsEnabled="False" Style="{StaticResource OnOffToggle}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Orientation="Horizontal">
+                    <ToggleButton Style="{StaticResource ActiveUser}" />
+                    <ToggleButton IsEnabled="False" Style="{StaticResource ActiveUser}" />
+                </StackPanel>
+
             </Grid>
         </TabItem>
         <TabItem Header="Tooltip">

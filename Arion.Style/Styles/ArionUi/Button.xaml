@@ -11,6 +11,8 @@
     </ResourceDictionary.MergedDictionaries>
 
     <converters:ButtonProgressBarWidthConverter x:Key="ProgressBarWidthConverter" />
+    <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
+    <converters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
 
     <Style x:Key="BtnFocusVisual">
         <Setter Property="Control.Template">
@@ -27,9 +29,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-    <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
-    <converters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
 
     <ControlTemplate TargetType="{x:Type Button}" x:Key="FilledTemplate">
         <Border

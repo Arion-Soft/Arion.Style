@@ -324,8 +324,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Border
-                        Background="{StaticResource BrushElement}"
-                        BorderBrush="{StaticResource BrushControl}"
+                        Background="{StaticResource Lg2}"
+                        BorderBrush="{StaticResource Lg2}"
                         BorderThickness="1"
                         CornerRadius="3"
                         Height="38"
@@ -368,8 +368,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Border
-                        Background="{StaticResource BrushElement}"
-                        BorderBrush="{StaticResource BrushControl}"
+                        Background="{StaticResource Lg2}"
+                        BorderBrush="{StaticResource Lg2}"
                         BorderThickness="1"
                         CornerRadius="3"
                         Height="35"
@@ -408,7 +408,7 @@
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid>
                         <Rectangle
-                            Fill="{StaticResource SolidDarkBlue}"
+                            Fill="{StaticResource Dg2}"
                             Height="{TemplateBinding Height}"
                             Width="{TemplateBinding Width}"
                             x:Name="Rect1" />
