@@ -70,6 +70,7 @@
     </Compile>
     <Compile Include="Controls\Icons.cs" />
     <Compile Include="Controls\InlineAlert.xaml.cs" />
+    <Compile Include="Controls\OptionControl.xaml.cs" />
     <Compile Include="Controls\PopupBox.cs" />
     <Compile Include="Controls\PopupEx.cs" />
     <Compile Include="Controls\RangeSlider.xaml.cs">
@@ -194,6 +195,7 @@
     <Page Include="Controls\DisplayControl.xaml" />
     <Page Include="Controls\Icon.xaml" />
     <Page Include="Controls\InlineAlert.xaml" />
+    <Page Include="Controls\OptionControl.xaml" />
     <Page Include="Controls\RangeSlider.xaml" />
     <Page Include="Controls\TimeInput.xaml" />
     <Page Include="Icons\Icons.xaml" />

@@ -2379,7 +2379,7 @@
                 <StackPanel
                     Grid.Column="0"
                     Grid.Row="5"
-                    Margin="0,5"
+                    Margin="5,5"
                     Orientation="Horizontal">
                     <ToggleButton Content="First" Style="{StaticResource TglOutlineFirst}" />
                     <ToggleButton Content="Middle" Style="{StaticResource TglOutlineMiddle}" />
@@ -2440,6 +2440,11 @@
                 ToolTip="Hello, i'm tooltip"
                 Width="200"
                 d:IsLocked="True" />
+        </TabItem>
+
+        <TabItem Header="OptionControl">
+            <!--  TOOLTIPS  -->
+            <controls:OptionControl Caption="asdsadasd" IsChecked="True" />
         </TabItem>
     </TabControl>
 </Window>
