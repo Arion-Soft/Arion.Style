@@ -36,7 +36,7 @@
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="6"
+            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
             Name="Border"
             Padding="{TemplateBinding Padding}">
             <Grid>
@@ -121,7 +121,13 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <ControlTemplate TargetType="{x:Type Button}" x:Key="OutlineTemplate">
-        <Border Padding="{TemplateBinding Padding}">
+        <Border
+            Background="{TemplateBinding Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+            Name="Border"
+            Padding="{TemplateBinding Padding}">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -207,7 +213,7 @@
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="6"
+            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
             Name="Border"
             Padding="{TemplateBinding Padding}">
             <Grid>
@@ -313,6 +319,7 @@
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="attach:Button.IconHeight" Value="15" />
         <Setter Property="attach:Button.IconWidth" Value="15" />
+        <Setter Property="attach:Hint.CornerRadius" Value="6" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnBase}"
@@ -326,6 +333,7 @@
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="attach:Button.IconHeight" Value="15" />
         <Setter Property="attach:Button.IconWidth" Value="15" />
+        <Setter Property="attach:Hint.CornerRadius" Value="6" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnBase}"
@@ -339,6 +347,7 @@
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="attach:Button.IconHeight" Value="15" />
         <Setter Property="attach:Button.IconWidth" Value="15" />
+        <Setter Property="attach:Hint.CornerRadius" Value="6" />
     </Style>
 
     <!--  GROUPED FILLED  -->
@@ -346,113 +355,20 @@
     <Style
         BasedOn="{StaticResource BtnFilled}"
         TargetType="{x:Type Button}"
-        x:Key="GroupedFilledFirstLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6,0,0,6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#0E73F6" />
-                            <Setter Property="Background" Value="#0E73F6" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#0452C8" />
-                            <Setter Property="BorderBrush" Value="#0452C8" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        x:Key="GroupFilledFirst">
+        <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnFilled}"
         TargetType="{x:Type Button}"
-        x:Key="GroupedFilledMiddleLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="0"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#0E73F6" />
-                            <Setter Property="Background" Value="#0E73F6" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#0452C8" />
-                            <Setter Property="BorderBrush" Value="#0452C8" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        x:Key="GroupFilledMiddle">
+        <Setter Property="attach:Hint.CornerRadius" Value="0" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnFilled}"
         TargetType="{x:Type Button}"
-        x:Key="GroupedFilledLastLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="0,6,6,0"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#0E73F6" />
-                            <Setter Property="Background" Value="#0E73F6" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#0452C8" />
-                            <Setter Property="BorderBrush" Value="#0452C8" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        x:Key="GroupFilledLast">
+        <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
     </Style>
 
     <!--  GROUPED OUTLINE  -->
@@ -460,227 +376,20 @@
     <Style
         BasedOn="{StaticResource BtnOutline}"
         TargetType="{x:Type Button}"
-        x:Key="GroupedOutlineFirstLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6,0,0,6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#F6F8F9" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter Property="BorderBrush" Value="#E5E9EB" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        x:Key="GroupOutlineFirst">
+        <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnOutline}"
         TargetType="{x:Type Button}"
-        x:Key="GroupedOutlineMiddleLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="0"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#F6F8F9" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter Property="BorderBrush" Value="#E5E9EB" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        x:Key="GroupOutlineMiddle">
+        <Setter Property="attach:Hint.CornerRadius" Value="0" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnOutline}"
         TargetType="{x:Type Button}"
-        x:Key="GroupedOutlineLastLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="0,6,6,0"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#F6F8F9" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter Property="BorderBrush" Value="#E5E9EB" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <!--  GROUPED TEXT  -->
-
-    <Style
-        BasedOn="{StaticResource BtnText}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupedTextFirstLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6,0,0,6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#F6F8F9" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter Property="BorderBrush" Value="#E5E9EB" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style
-        BasedOn="{StaticResource BtnText}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupedTextMiddleLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="0"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#F6F8F9" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter Property="BorderBrush" Value="#E5E9EB" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style
-        BasedOn="{StaticResource BtnText}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupedTextLastLg">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="0,6,6,0"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
-                        <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="#F6F8F9" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter Property="BorderBrush" Value="#E5E9EB" />
-                        </Trigger>
-
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value=".5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        x:Key="GroupOutlineLast">
+        <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
     </Style>
 
     <!--  Inline alert buttons  -->

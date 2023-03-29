@@ -256,21 +256,21 @@
                     <Button
                         Content="First"
                         Margin="0,5"
-                        Style="{StaticResource GroupedFilledFirstLg}" />
+                        Style="{StaticResource GroupFilledFirst}" />
                     <Button
                         Content="Middle"
                         Margin="0,5"
-                        Style="{StaticResource GroupedFilledMiddleLg}"
+                        Style="{StaticResource GroupFilledMiddle}"
                         wpf:Button.LeftIcon="LinearFunctionAuto" />
                     <Button
                         Content="Middle"
                         Margin="0,5"
-                        Style="{StaticResource GroupedFilledMiddleLg}"
+                        Style="{StaticResource GroupFilledMiddle}"
                         wpf:Button.LeftIcon="SinFunction" />
                     <Button
                         Content="Last"
-                        Margin="0,5"
-                        Style="{StaticResource GroupedFilledLastLg}"
+                        Margin="0,5,10,5"
+                        Style="{StaticResource GroupFilledLast}"
                         wpf:Button.LeftIcon="ArcTgFunction" />
                 </StackPanel>
 
@@ -362,15 +362,15 @@
                     <Button
                         Content="First"
                         Margin="0,5"
-                        Style="{StaticResource GroupedOutlineFirstLg}" />
+                        Style="{StaticResource GroupOutlineFirst}" />
                     <Button
                         Content="Middle"
                         Margin="0,5"
-                        Style="{StaticResource GroupedOutlineMiddleLg}" />
+                        Style="{StaticResource GroupOutlineMiddle}" />
                     <Button
                         Content="Last"
                         Margin="0,5"
-                        Style="{StaticResource GroupedOutlineLastLg}" />
+                        Style="{StaticResource GroupOutlineLast}" />
                 </StackPanel>
 
                 <StackPanel
@@ -453,25 +453,6 @@
                         wpf:Button.ProgressBarShow="True"
                         wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
                 </StackPanel>
-
-                <StackPanel
-                    Grid.Column="2"
-                    Grid.Row="17"
-                    Orientation="Horizontal">
-                    <Button
-                        Content="First"
-                        Margin="0,5"
-                        Style="{StaticResource GroupedTextFirstLg}" />
-                    <Button
-                        Content="Middle"
-                        Margin="0,5"
-                        Style="{StaticResource GroupedTextMiddleLg}" />
-                    <Button
-                        Content="Last"
-                        Margin="0,5"
-                        Style="{StaticResource GroupedTextLastLg}" />
-                </StackPanel>
-
             </Grid>
         </TabItem>
         <!--  CHECK BOXES  -->
@@ -2098,20 +2079,20 @@
                     <RadioButton
                         Content="First"
                         Margin="5"
-                        Style="{StaticResource SwitcherFirst}" />
+                        Style="{StaticResource SwtOutlineFirst}" />
                     <RadioButton
                         Content="Middle"
                         Margin="5"
-                        Style="{StaticResource SwitcherMiddle}" />
+                        Style="{StaticResource SwtOutlineMiddle}" />
                     <RadioButton
                         Content="Middle"
                         IsEnabled="False"
                         Margin="5"
-                        Style="{StaticResource SwitcherMiddle}" />
+                        Style="{StaticResource SwtOutlineMiddle}" />
                     <RadioButton
                         Content="Last"
                         Margin="5"
-                        Style="{StaticResource SwitcherLast}" />
+                        Style="{StaticResource SwtOutlineLast}" />
                 </StackPanel>
             </Grid>
         </TabItem>
