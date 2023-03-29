@@ -2405,8 +2405,8 @@
                     Grid.Column="1"
                     Grid.Row="1"
                     Orientation="Horizontal">
-                    <ToggleButton Style="{StaticResource TgFocus}" />
-                    <ToggleButton IsEnabled="False" Style="{StaticResource TgFocus}" />
+                    <ToggleButton Style="{StaticResource TglFocalSpot}" />
+                    <ToggleButton IsEnabled="False" Style="{StaticResource TglFocalSpot}" />
                 </StackPanel>
                 <StackPanel
                     Grid.Column="1"

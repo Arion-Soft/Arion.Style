@@ -399,44 +399,42 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="ToggleButton" x:Key="TgFocus">
-        <Setter Property="Width" Value="50" />
-        <Setter Property="Height" Value="50" />
+    <Style TargetType="ToggleButton" x:Key="TglFocalSpot">
+        <Setter Property="Width" Value="48" />
+        <Setter Property="Height" Value="48" />
         <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Background" Value="{StaticResource CleanW}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
-                    <Grid>
-                        <Rectangle
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="3">
+                        <Ellipse
                             Fill="{StaticResource Dg2}"
-                            Height="{TemplateBinding Height}"
-                            Width="{TemplateBinding Width}"
-                            x:Name="Rect1" />
-                        <Rectangle
-                            Fill="White"
-                            Height="20"
+                            Height="10"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
-                            Width="20"
-                            x:Name="Rect2" />
-                    </Grid>
+                            Width="10"
+                            x:Name="FocalSpot" />
+                    </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="BorderBrush" Value="{StaticResource SolidDarkBlue}" />
-                            <Setter Property="BorderThickness" Value="2" />
-                            <Setter Property="Width" TargetName="Rect2" Value="30" />
-                            <Setter Property="Height" TargetName="Rect2" Value="30" />
+                            <Setter Property="Width" TargetName="FocalSpot" Value="34" />
+                            <Setter Property="Height" TargetName="FocalSpot" Value="34" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="{StaticResource SolidDarkBlue}" />
+                            <Setter Property="Background" Value="{StaticResource Lg4}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="{StaticResource SolidDarkBlue}" />
-                            <Setter Property="BorderBrush" Value="{StaticResource SolidDarkBlue}" />
-                            <Setter Property="Foreground" Value="{StaticResource SolidWhite}" />
+                            <Setter Property="Background" Value="{StaticResource Lg2}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" Value="{StaticResource SolidDisabled}" />
+                            <Setter Property="Opacity" Value="0.7" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
