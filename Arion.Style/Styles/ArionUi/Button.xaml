@@ -208,14 +208,16 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <ControlTemplate TargetType="{x:Type Button}" x:Key="TextTemplate">
-        <Border
-            Background="{TemplateBinding Background}"
-            BorderBrush="{TemplateBinding BorderBrush}"
-            BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-            Name="Border"
-            Padding="{TemplateBinding Padding}">
-            <Grid>
+        <Grid>
+            <Border
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+                Name="Border"
+                Opacity="0"
+                Padding="{TemplateBinding Padding}" />
+            <Grid Margin="{TemplateBinding Padding}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -269,15 +271,13 @@
                                             Converter={StaticResource ProgressBarWidthConverter}}"
                     x:Name="ProgressBar" />
             </Grid>
-        </Border>
+        </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="BorderBrush" Value="{StaticResource Lg5}" />
-                <Setter Property="Background" Value="{StaticResource Lg5}" />
+                <Setter Property="Opacity" TargetName="Border" Value=".04" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="{StaticResource Lg3}" />
-                <Setter Property="BorderBrush" Value="{StaticResource Lg3}" />
+                <Setter Property="Opacity" TargetName="Border" Value=".1" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
@@ -339,8 +339,8 @@
         TargetType="{x:Type Button}"
         x:Key="BtnText">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
-        <Setter Property="Background" Value="{StaticResource CleanW}" />
-        <Setter Property="BorderBrush" Value="{StaticResource CleanW}" />
+        <Setter Property="Background" Value="#002D46" />
+        <Setter Property="BorderBrush" Value="#002D46" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Template" Value="{StaticResource TextTemplate}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />

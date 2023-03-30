@@ -62,6 +62,9 @@
     <Compile Include="Controls\DisplayControl.xaml.cs">
       <DependentUpon>DisplayControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DisplayControlFull.xaml.cs">
+      <DependentUpon>DisplayControlFull.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\EIcons.cs" />
     <Compile Include="Controls\Enums\BreadcrumbItemType.cs" />
     <Compile Include="Controls\Enums\InlineAlertType.cs" />
@@ -193,6 +196,7 @@
     <Page Include="Controls\Breadcrumb.xaml" />
     <Page Include="Controls\BreadcrumbItem.xaml" />
     <Page Include="Controls\DisplayControl.xaml" />
+    <Page Include="Controls\DisplayControlFull.xaml" />
     <Page Include="Controls\Icon.xaml" />
     <Page Include="Controls\InlineAlert.xaml" />
     <Page Include="Controls\OptionControl.xaml" />

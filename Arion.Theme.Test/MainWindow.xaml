@@ -999,7 +999,7 @@
                 </ComboBox>
             </Grid>
         </TabItem>
-        <TabItem Header="Display Control">
+        <TabItem Header="Display Control" IsSelected="True">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -1030,6 +1030,29 @@
                     Height="90"
                     Text="кВ"
                     Width="170" />
+
+                <controls:DisplayControlFull
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Label="кВ"
+                    Margin="5"
+                    Maximum="320"
+                    Minimum="0"
+                    QuickChange="True"
+                    Step="1"
+                    TargetValueChange="DisplayControlFull_OnTargetValueChange" />
+
+                <controls:DisplayControlFull
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Label="мА"
+                    Margin="5"
+                    Maximum="22.5"
+                    Minimum="0"
+                    QuickChange="True"
+                    Round="1"
+                    Step=".1"
+                    TargetValueChange="DisplayControlFull_OnTargetValueChange" />
             </Grid>
         </TabItem>
         <TabItem Header="Expander">
@@ -2282,7 +2305,7 @@
                     Width="480" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle button" IsSelected="True">
+        <TabItem Header="Toggle button">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>

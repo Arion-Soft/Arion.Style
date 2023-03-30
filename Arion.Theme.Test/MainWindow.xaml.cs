@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -68,6 +69,11 @@ namespace Arion.Theme.Test
             Button.SetProgressBarShow(BtnTest, true);
             Button.SetProgressBarType(BtnTest, ProgressBarType.Circle);
             Button.SetProgressBarValue(BtnTest, 50);
+        }
+
+        private void DisplayControlFull_OnTargetValueChange(object sender, EventArgs e)
+        {
+            // MessageBox.Show("Change");
         }
     }
 }
