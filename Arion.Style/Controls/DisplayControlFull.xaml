@@ -36,6 +36,7 @@
             Width="40"
             wpf:Hint.CornerRadius="6,0,0,6" />
         <Border
+            Background="White"
             BorderBrush="{StaticResource Lg2}"
             BorderThickness="0,1,0,1"
             Grid.Column="1">

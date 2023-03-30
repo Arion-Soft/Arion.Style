@@ -1,7 +1,16 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:arion="clr-namespace:Arion.Style.Controls"
+    xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
+    xmlns:converters="clr-namespace:Arion.Style.Converters"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+    <converters:ButtonProgressBarWidthConverter x:Key="ProgressBarWidthConverter" />
+    <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
+    <converters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
 
     <Style TargetType="ToggleButton">
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -461,21 +470,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="#DDE2E4"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        ClipToBounds="True"
-                        CornerRadius="6"
-                        Name="Border">
-                        <Grid>
-                            <ContentPresenter
-                                Content="{TemplateBinding Content}"
-                                Effect="{TemplateBinding Effect}"
-                                HorizontalAlignment="Center"
-                                Margin="{TemplateBinding Padding}"
-                                Name="Presenter"
-                                VerticalAlignment="Center" />
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="#DDE2E4"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            ClipToBounds="True"
+                            CornerRadius="6"
+                            Name="Border">
                             <Border
                                 Background="Transparent"
                                 BorderBrush="{TemplateBinding BorderBrush}"
@@ -495,8 +497,54 @@
                                         ShadowDepth="0" />
                                 </Border.Effect>
                             </Border>
+                        </Border>
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <arion:Icon
+                                Fill="{TemplateBinding Foreground}"
+                                Grid.Column="0"
+                                Height="{TemplateBinding attach:Button.IconHeight}"
+                                Kind="{TemplateBinding attach:Button.LeftIcon}"
+                                Margin="0,0,8,0"
+                                Visibility="{TemplateBinding attach:Button.LeftIcon,
+                                                             Converter={StaticResource IconConverter}}"
+                                Width="{TemplateBinding attach:Button.IconWidth}" />
+
+                            <ContentPresenter
+                                Content="{TemplateBinding Content}"
+                                Effect="{TemplateBinding Effect}"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                Name="Presenter"
+                                VerticalAlignment="Center" />
+                            <arion:Icon
+                                Fill="{TemplateBinding Foreground}"
+                                Grid.Column="1"
+                                Height="{TemplateBinding attach:Button.IconHeight}"
+                                HorizontalAlignment="Center"
+                                Kind="{TemplateBinding attach:Button.Icon}"
+                                VerticalAlignment="Center"
+                                Visibility="{TemplateBinding attach:Button.Icon,
+                                                             Converter={StaticResource IconConverter}}"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
+                                x:Name="Icon" />
+
+                            <arion:Icon
+                                Fill="{TemplateBinding Foreground}"
+                                Grid.Column="2"
+                                Height="{TemplateBinding attach:Button.IconHeight}"
+                                Kind="{TemplateBinding attach:Button.RightIcon}"
+                                Margin="8,0,0,0"
+                                Visibility="{TemplateBinding attach:Button.RightIcon,
+                                                             Converter={StaticResource IconConverter}}"
+                                Width="{TemplateBinding attach:Button.IconWidth}" />
                         </Grid>
-                    </Border>
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#F6F8F9" />
@@ -506,13 +554,11 @@
                             <Setter Property="Background" Value="#E5E9EB" />
                             <Setter Property="BorderBrush" TargetName="Border" Value="#E5E9EB" />
                         </Trigger>
-
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Background" Value="#E5E9EB" />
                             <Setter Property="BorderBrush" TargetName="Border" Value="#E5E9EB" />
                             <Setter Property="Visibility" TargetName="Shadow" Value="Visible" />
                         </Trigger>
-
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Opacity" Value=".5" />
                         </Trigger>

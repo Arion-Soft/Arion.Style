@@ -999,7 +999,7 @@
                 </ComboBox>
             </Grid>
         </TabItem>
-        <TabItem Header="Display Control" IsSelected="True">
+        <TabItem Header="Display Control">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -2305,7 +2305,7 @@
                     Width="480" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle button">
+        <TabItem Header="Toggle button" IsSelected="True">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -2390,11 +2390,13 @@
                     Orientation="Horizontal">
                     <ToggleButton
                         Content="Toggle button"
+                        IsChecked="True"
                         Margin="5"
                         Style="{StaticResource TglOutline}" />
                     <ToggleButton
                         Content="Toggle button"
                         IsChecked="True"
+                        IsEnabled="False"
                         Margin="5"
                         Style="{StaticResource TglOutline}" />
                 </StackPanel>
