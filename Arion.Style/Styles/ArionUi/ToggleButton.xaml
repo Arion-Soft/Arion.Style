@@ -39,7 +39,7 @@
                                 CornerRadius="8"
                                 Height="16"
                                 HorizontalAlignment="Left"
-                                Margin="2"
+                                Margin="2,0,0,0"
                                 Padding="0"
                                 VerticalAlignment="Center"
                                 Width="16"
@@ -55,6 +55,20 @@
                             x:Name="PART_ContentHost" />
                     </Grid>
                     <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Indeterminate">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard TargetName="TgButton">
+                                        <ThicknessAnimation
+                                            AutoReverse="False"
+                                            Duration="0:0:.2"
+                                            From="14,0,0,0"
+                                            Storyboard.TargetProperty="Margin"
+                                            To="0,0,0,0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
                         <EventTrigger RoutedEvent="Checked">
                             <EventTrigger.Actions>
                                 <BeginStoryboard>
@@ -93,6 +107,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
+                            <Setter Property="Margin" TargetName="TgButton" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#0E73F6" />
                             <Setter Property="BorderBrush" Value="#0E73F6" />
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
@@ -106,6 +121,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
+                            <Setter Property="Margin" TargetName="TgButton" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#0452C8" />
                             <Setter Property="BorderBrush" Value="#0452C8" />
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
@@ -119,6 +135,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
+                            <Setter Property="Margin" TargetName="TgButton" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#4094F7" />
                             <Setter Property="BorderBrush" Value="#4094F7" />
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
@@ -132,6 +149,7 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
+                            <Setter Property="Margin" TargetName="TgButton" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#DDE2E4" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
@@ -201,7 +219,7 @@
                             <Setter Property="BorderBrush" Value="#9AA6AC" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="Margin" Value="2" />
+                            <Setter Property="Margin" TargetName="TgButton" Value="0" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
                             <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
                         </MultiTrigger>
@@ -216,7 +234,7 @@
 
                             <Setter Property="Background" Value="#84919A" />
                             <Setter Property="BorderBrush" Value="#84919A" />
-                            <Setter Property="Margin" Value="2" />
+                            <Setter Property="Margin" TargetName="TgButton" Value="0" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
@@ -233,7 +251,7 @@
 
                             <Setter Property="Background" Value="#B0BABF" />
                             <Setter Property="BorderBrush" Value="#B0BABF" />
-                            <Setter Property="Margin" Value="2" />
+                            <Setter Property="Margin" TargetName="TgButton" Value="0" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
@@ -249,7 +267,7 @@
                             </MultiTrigger.Conditions>
 
                             <Setter Property="Background" Value="#DDE2E4" />
-                            <Setter Property="Margin" Value="2" />
+                            <Setter Property="Margin" TargetName="TgButton" Value="0" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
                             <Setter Property="Height" TargetName="TgButton" Value="2" />
                             <Setter Property="Width" TargetName="TgButton" Value="12" />
@@ -467,6 +485,8 @@
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
         <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="attach:Button.IconHeight" Value="15" />
+        <Setter Property="attach:Button.IconWidth" Value="15" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -498,7 +518,7 @@
                                 </Border.Effect>
                             </Border>
                         </Border>
-                        <Grid Margin="{TemplateBinding Padding}">
+                        <Grid Margin="{TemplateBinding Padding}" ZIndex="999">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
@@ -522,6 +542,7 @@
                                 HorizontalAlignment="Center"
                                 Name="Presenter"
                                 VerticalAlignment="Center" />
+
                             <arion:Icon
                                 Fill="{TemplateBinding Foreground}"
                                 Grid.Column="1"

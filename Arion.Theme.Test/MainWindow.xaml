@@ -2316,6 +2316,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -2404,6 +2405,25 @@
                 <StackPanel
                     Grid.Column="0"
                     Grid.Row="5"
+                    Orientation="Horizontal">
+                    <ToggleButton
+                        Content="Toggle button"
+                        IsChecked="True"
+                        Margin="5"
+                        Style="{StaticResource TglOutline}"
+                        wpf:Button.LeftIcon="User" />
+                    <ToggleButton
+                        Content="Toggle button"
+                        IsChecked="True"
+                        IsEnabled="False"
+                        Margin="5"
+                        Style="{StaticResource TglOutline}"
+                        wpf:Button.RightIcon="User" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.Row="6"
                     Margin="5,5"
                     Orientation="Horizontal">
                     <ToggleButton Content="First" Style="{StaticResource TglOutlineFirst}" />
@@ -2413,7 +2433,7 @@
 
                 <StackPanel
                     Grid.Column="0"
-                    Grid.Row="6"
+                    Grid.Row="7"
                     Orientation="Horizontal">
                     <ToggleButton
                         Margin="5"
