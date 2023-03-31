@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Media;
 using Arion.Style.Controls;
 
 namespace Arion.Style.AttachedProperties
@@ -80,6 +81,32 @@ namespace Arion.Style.AttachedProperties
         public static double GetIconHeight(DependencyObject element)
         {
             return (double)element.GetValue(IconHeightProperty);
+        }
+
+        public static readonly DependencyProperty IconStrokeColorProperty = DependencyProperty.RegisterAttached(
+            "IconStrokeColor", typeof(SolidColorBrush), typeof(Button), new PropertyMetadata(default(SolidColorBrush)));
+
+        public static void SetIconStrokeColor(DependencyObject element, SolidColorBrush value)
+        {
+            element.SetValue(IconStrokeColorProperty, value);
+        }
+
+        public static SolidColorBrush GetIconStrokeColor(DependencyObject element)
+        {
+            return (SolidColorBrush)element.GetValue(IconStrokeColorProperty);
+        }
+
+        public static readonly DependencyProperty IconStrokeThicknessProperty = DependencyProperty.RegisterAttached(
+            "IconStrokeThickness", typeof(double), typeof(Button), new PropertyMetadata(default(double)));
+
+        public static void SetIconStrokeThickness(DependencyObject element, double value)
+        {
+            element.SetValue(IconStrokeThicknessProperty, value);
+        }
+
+        public static double GetIconStrokeThickness(DependencyObject element)
+        {
+            return (double)element.GetValue(IconStrokeThicknessProperty);
         }
 
         #region ProgressBar

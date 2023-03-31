@@ -67,7 +67,7 @@
                 </controls:Breadcrumb>
             </Grid>
         </TabItem>
-        <TabItem Header="Button">
+        <TabItem Header="Button" IsSelected="True">
             <!--  BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -188,6 +188,7 @@
                     <Button
                         Click="BtnProgress_OnClick"
                         Content="Button"
+                        Foreground="{Binding ElementName=BtnTest, Path=Foreground}"
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
                         wpf:Button.RightIcon="SinFunction" />
@@ -203,6 +204,7 @@
                     Grid.Row="5"
                     Orientation="Horizontal">
                     <Button
+                        Click="BtnTest_OnClick"
                         Margin="5"
                         Name="BtnTest"
                         Style="{StaticResource BtnFilled}"
@@ -326,6 +328,7 @@
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
+                        Name="BtnTest2"
                         Style="{StaticResource BtnOutline}"
                         wpf:Button.Icon="User" />
                     <Button
@@ -425,6 +428,7 @@
                     Orientation="Horizontal">
                     <Button
                         Margin="5"
+                        Name="BtnTest3"
                         Style="{StaticResource BtnText}"
                         wpf:Button.Icon="User" />
                     <Button
@@ -2305,7 +2309,7 @@
                     Width="480" />
             </Grid>
         </TabItem>
-        <TabItem Header="Toggle button" IsSelected="True">
+        <TabItem Header="Toggle button">
             <!--  TOGGLE BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>

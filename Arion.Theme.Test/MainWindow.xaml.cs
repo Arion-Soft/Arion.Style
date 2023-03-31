@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using Arion.Style.Controls;
 using Arion.Style.AttachedProperties;
 using Button = Arion.Style.AttachedProperties.Button;
@@ -74,6 +75,13 @@ namespace Arion.Theme.Test
         private void DisplayControlFull_OnTargetValueChange(object sender, EventArgs e)
         {
             // MessageBox.Show("Change");
+        }
+
+        private void BtnTest_OnClick(object sender, RoutedEventArgs e)
+        {
+            BtnTest.Foreground = new SolidColorBrush(Colors.Red);
+            BtnTest2.Foreground = new SolidColorBrush(Colors.Red);
+            BtnTest3.Foreground = new SolidColorBrush(Colors.Red);
         }
     }
 }

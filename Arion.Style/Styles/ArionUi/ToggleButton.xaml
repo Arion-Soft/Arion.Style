@@ -531,6 +531,8 @@
                                 Height="{TemplateBinding attach:Button.IconHeight}"
                                 Kind="{TemplateBinding attach:Button.LeftIcon}"
                                 Margin="0,0,8,0"
+                                Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
+                                StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                                 Visibility="{TemplateBinding attach:Button.LeftIcon,
                                                              Converter={StaticResource IconConverter}}"
                                 Width="{TemplateBinding attach:Button.IconWidth}" />
@@ -549,6 +551,8 @@
                                 Height="{TemplateBinding attach:Button.IconHeight}"
                                 HorizontalAlignment="Center"
                                 Kind="{TemplateBinding attach:Button.Icon}"
+                                Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
+                                StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                                 VerticalAlignment="Center"
                                 Visibility="{TemplateBinding attach:Button.Icon,
                                                              Converter={StaticResource IconConverter}}"
@@ -561,6 +565,8 @@
                                 Height="{TemplateBinding attach:Button.IconHeight}"
                                 Kind="{TemplateBinding attach:Button.RightIcon}"
                                 Margin="8,0,0,0"
+                                Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
+                                StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                                 Visibility="{TemplateBinding attach:Button.RightIcon,
                                                              Converter={StaticResource IconConverter}}"
                                 Width="{TemplateBinding attach:Button.IconWidth}" />

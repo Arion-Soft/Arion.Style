@@ -55,10 +55,30 @@ namespace Arion.Style.Controls
         public new static readonly DependencyProperty WidthProperty =
             DependencyProperty.Register(nameof(Width), typeof(double), typeof(Icon), new PropertyMetadata());
 
+        public double Stroke
+        {
+            get => (double)GetValue(StrokeProperty);
+            set => SetValue(StrokeProperty, value);
+        }
+
+        public static readonly DependencyProperty StrokeProperty =
+            DependencyProperty.Register(nameof(Stroke), typeof(double), typeof(Icon), new PropertyMetadata());
+
+        public SolidColorBrush StrokeColor
+        {
+            get => (SolidColorBrush)GetValue(StrokeColorProperty);
+            set => SetValue(StrokeColorProperty, value);
+        }
+
+        public static readonly DependencyProperty StrokeColorProperty =
+            DependencyProperty.Register(nameof(StrokeColor), typeof(SolidColorBrush), typeof(Icon), new PropertyMetadata());
+        
         public Icon()
         {
             InitializeComponent();
         }
+        
+        
 
         private void Icon_OnLoaded(object sender, RoutedEventArgs e)
         {
