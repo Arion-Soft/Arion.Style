@@ -75,3 +75,5 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\ICSharpCode.
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.pdb
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Style.dll.config
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test_MarkupCompile.lref

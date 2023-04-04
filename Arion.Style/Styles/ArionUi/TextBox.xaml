@@ -20,14 +20,28 @@
 
     <Style TargetType="{x:Type TextBox}">
         <Setter Property="Height" Value="40" />
-        <Setter Property="Foreground" Value="#252C32" />
-        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="FontWeight" Value="Regular" />
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="BorderBrush" Value="#DDE2E4" />
+        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
         <Setter Property="Padding" Value="5,0" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="Background" Value="{StaticResource CleanW}" />
         <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border
+                        BorderBrush="{StaticResource R500}"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Margin="0"
+                        Padding="0">
+                        <AdornedElementPlaceholder />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
@@ -71,24 +85,29 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FFFFFF" />
-                            <Setter Property="BorderBrush" Value="#B0BABF" />
+                            <Setter Property="Background" Value="{StaticResource CleanW}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Background" Value="#FFFFFF" />
-                            <Setter Property="BorderBrush" Value="#5B6871" />
+                            <Setter Property="Background" Value="{StaticResource CleanW}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Mg1}" />
                         </Trigger>
                         <Trigger Property="IsReadOnly" Value="True">
                             <Setter Property="Cursor" Value="No" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                            <Setter Property="Foreground" Value="#B0BABF" />
-                            <Setter Property="BorderBrush" Value="#EEF0F2" />
+                            <Setter Property="Background" Value="{StaticResource Lg5}" />
+                            <Setter Property="Foreground" Value="{StaticResource Mg5}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg4}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Cursor" Value="No" />
-                            <Setter Property="Background" Value="#F6F8F9" />
-                            <Setter Property="Foreground" Value="#B0BABF" />
-                            <Setter Property="BorderBrush" Value="#EEF0F2" />
+                            <Setter Property="Background" Value="{StaticResource Lg5}" />
+                            <Setter Property="Foreground" Value="{StaticResource Mg5}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg4}" />
+                        </Trigger>
+                        <Trigger Property="Validation.HasError" Value="True">
+                            <Setter Property="Background" Value="{StaticResource CleanW}" />
+                            <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource R500}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

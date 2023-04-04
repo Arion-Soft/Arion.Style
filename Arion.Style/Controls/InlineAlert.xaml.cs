@@ -24,6 +24,9 @@ namespace Arion.Style.Controls
         public event EventHandler MessageChanged;
         public event EventHandler TypeChanged;
 
+        public event EventHandler PrimaryClick;
+        public event EventHandler SecondaryClick;
+
         #endregion
 
         #region Properties
@@ -129,12 +132,40 @@ namespace Arion.Style.Controls
 
         #endregion
 
+        public string PrimaryBtnContent
+        {
+            get => (string)GetValue(PrimaryBtnContentProperty);
+            set => SetValue(PrimaryBtnContentProperty, value);
+        }
+
+        public static readonly DependencyProperty PrimaryBtnContentProperty =
+            DependencyProperty.Register(nameof(PrimaryBtnContent), typeof(string), typeof(InlineAlert), new PropertyMetadata());
+
+        public string SecondaryBtnContent
+        {
+            get => (string)GetValue(SecondaryBtnContentProperty);
+            set => SetValue(SecondaryBtnContentProperty, value);
+        }
+
+        public static readonly DependencyProperty SecondaryBtnContentProperty =
+            DependencyProperty.Register(nameof(SecondaryBtnContent), typeof(string), typeof(InlineAlert), new PropertyMetadata());
+
         #endregion
 
 
         private void InlineAlert_OnLoaded(object sender, RoutedEventArgs e)
         {
             Type = Type;
+        }
+
+        private void Primary_OnClick(object sender, RoutedEventArgs e)
+        {
+            PrimaryClick?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void Secondary_OnClick(object sender, RoutedEventArgs e)
+        {
+            SecondaryClick?.Invoke(this, EventArgs.Empty);
         }
     }
 }

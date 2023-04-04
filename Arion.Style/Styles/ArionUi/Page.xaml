@@ -4,6 +4,6 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="Page" x:Key="PageStyle">
-        <Setter Property="Background" Value="{StaticResource BrushBackground}" />
+        <Setter Property="Background" Value="{StaticResource Pr200}" />
     </Style>
 </ResourceDictionary>

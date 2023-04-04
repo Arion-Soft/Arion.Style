@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using Arion.Style.Controls;
 using Arion.Style.AttachedProperties;
 using Button = Arion.Style.AttachedProperties.Button;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Arion.Theme.Test
 {
@@ -82,6 +84,16 @@ namespace Arion.Theme.Test
             BtnTest.Foreground = new SolidColorBrush(Colors.Red);
             BtnTest2.Foreground = new SolidColorBrush(Colors.Red);
             BtnTest3.Foreground = new SolidColorBrush(Colors.Red);
+        }
+
+        private void InlineAlert_OnPrimaryClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click to InlineAlert PRIMARY BUTTON");
+        }
+
+        private void InlineAlert_OnSecondaryClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click to InlineAlert SECONDARY BUTTON");
         }
     }
 }

@@ -12,8 +12,12 @@
     xmlns:controls="clr-namespace:Arion.Style.Controls;assembly=Arion.Style"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Arion.Theme.Test.ViewModel"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
     <TabControl TabStripPlacement="Left">
         <TabItem Header="Breadcrumb">
             <Grid>
@@ -67,7 +71,7 @@
                 </controls:Breadcrumb>
             </Grid>
         </TabItem>
-        <TabItem Header="Button" IsSelected="True">
+        <TabItem Header="Button">
             <!--  BUTTONS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -460,7 +464,7 @@
             </Grid>
         </TabItem>
         <!--  CHECK BOXES  -->
-        <TabItem FontWeight="ExtraLight" Header="Check box">
+        <TabItem Header="Check box">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -490,11 +494,15 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     Orientation="Horizontal">
-                    <CheckBox Content="CheckBox" Margin="5" />
+                    <CheckBox
+                        Content="CheckBox"
+                        Margin="5"
+                        wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
                     <CheckBox
                         Content="CheckBox"
                         IsEnabled="False"
-                        Margin="5" />
+                        Margin="5"
+                        wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
                 </StackPanel>
 
                 <StackPanel
@@ -530,7 +538,7 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Color">
+        <TabItem Header="Color" IsSelected="True">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -569,108 +577,88 @@
                     VerticalAlignment="Top"
                     Width="Auto" />
 
-                <Border
-                    Background="{StaticResource Pr900}"
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr800}"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr700}"
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr600}"
-                    Grid.Column="3"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr500}"
-                    Grid.Column="4"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr400}"
-                    Grid.Column="5"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr300}"
-                    Grid.Column="6"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr200}"
-                    Grid.Column="7"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr100}"
-                    Grid.Column="8"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource Pr50}"
-                    Grid.Column="9"
-                    Grid.Row="1"
-                    Style="{StaticResource Brd}" />
+                <StackPanel Grid.Column="0" Grid.Row="1">
+                    <Border Background="{StaticResource Pr900}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR900" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="1">
+                    <Border Background="{StaticResource Pr800}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR800" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" Grid.Row="1">
+                    <Border Background="{StaticResource Pr700}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR700" />
+                </StackPanel>
+                <StackPanel Grid.Column="3" Grid.Row="1">
+                    <Border Background="{StaticResource Pr600}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR600" />
+                </StackPanel>
+                <StackPanel Grid.Column="4" Grid.Row="1">
+                    <Border Background="{StaticResource Pr500}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR500" />
+                </StackPanel>
+                <StackPanel Grid.Column="5" Grid.Row="1">
+                    <Border Background="{StaticResource Pr400}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR400" />
+                </StackPanel>
+                <StackPanel Grid.Column="6" Grid.Row="1">
+                    <Border Background="{StaticResource Pr300}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR300" />
+                </StackPanel>
+                <StackPanel Grid.Column="7" Grid.Row="1">
+                    <Border Background="{StaticResource Pr200}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR200" />
+                </StackPanel>
+                <StackPanel Grid.Column="8" Grid.Row="1">
+                    <Border Background="{StaticResource Pr100}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR100" />
+                </StackPanel>
+                <StackPanel Grid.Column="9" Grid.Row="1">
+                    <Border Background="{StaticResource Pr50}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="PR50" />
+                </StackPanel>
 
+                <StackPanel Grid.Column="0" Grid.Row="2">
+                    <Border Background="{StaticResource R900}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R900" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="2">
+                    <Border Background="{StaticResource R800}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R800" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" Grid.Row="2">
+                    <Border Background="{StaticResource R700}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R700" />
+                </StackPanel>
+                <StackPanel Grid.Column="3" Grid.Row="2">
+                    <Border Background="{StaticResource R600}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R600" />
+                </StackPanel>
+                <StackPanel Grid.Column="4" Grid.Row="2">
+                    <Border Background="{StaticResource R500}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R500" />
+                </StackPanel>
+                <StackPanel Grid.Column="5" Grid.Row="2">
+                    <Border Background="{StaticResource R400}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R400" />
+                </StackPanel>
+                <StackPanel Grid.Column="6" Grid.Row="2">
+                    <Border Background="{StaticResource R300}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R300" />
+                </StackPanel>
+                <StackPanel Grid.Column="7" Grid.Row="2">
+                    <Border Background="{StaticResource R200}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R200" />
+                </StackPanel>
+                <StackPanel Grid.Column="8" Grid.Row="2">
+                    <Border Background="{StaticResource R100}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R100" />
+                </StackPanel>
+                <StackPanel Grid.Column="9" Grid.Row="2">
+                    <Border Background="{StaticResource R50}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="R50" />
+                </StackPanel>
 
-                <Border
-                    Background="{StaticResource R900}"
-                    Grid.Column="0"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R800}"
-                    Grid.Column="1"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R700}"
-                    Grid.Column="2"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R600}"
-                    Grid.Column="3"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R500}"
-                    Grid.Column="4"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R400}"
-                    Grid.Column="5"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R300}"
-                    Grid.Column="6"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R200}"
-                    Grid.Column="7"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R100}"
-                    Grid.Column="8"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource R50}"
-                    Grid.Column="9"
-                    Grid.Row="2"
-                    Style="{StaticResource Brd}" />
 
                 <Border
                     Background="{StaticResource G900}"
@@ -960,7 +948,7 @@
                     Grid.Row="1"
                     Margin="5"
                     Width="200"
-                    wpf:Hint.Placeholder="asdasd">
+                    wpf:Hint.Placeholder="Placeholder">
                     <ComboBox.Items>
                         <ComboBoxItem Content="1" />
                         <ComboBoxItem Content="2" />
@@ -1151,26 +1139,36 @@
                     Width="Auto" />
 
                 <controls:InlineAlert
-                    Caption="Short descriptive message"
+                    Caption="Тестовый заголовок"
                     Grid.Row="1"
+                    HorizontalAlignment="Left"
                     Margin="5"
-                    Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+                    Message="Тестовое сообщение"
+                    PrimaryBtnContent="Action 1"
+                    PrimaryClick="InlineAlert_OnPrimaryClick"
+                    SecondaryBtnContent="Action 2"
+                    SecondaryClick="InlineAlert_OnSecondaryClick"
                     Type="Info" />
                 <controls:InlineAlert
-                    Caption="Short descriptive message"
+                    Caption="Тестовый заголовок"
                     Grid.Row="2"
+                    HorizontalAlignment="Left"
                     Margin="5"
-                    Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+                    Message="Тестовое сообщение"
+                    PrimaryBtnContent="Action 1"
                     Type="Warning" />
                 <controls:InlineAlert
-                    Caption="Short descriptive message"
+                    Caption="Тестовый заголовок"
                     Grid.Row="3"
+                    HorizontalAlignment="Left"
                     Margin="5"
-                    Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+                    Message="Тестовое сообщение"
+                    SecondaryBtnContent="Action 2"
                     Type="Danger" />
                 <controls:InlineAlert
-                    Caption="Short descriptive message"
+                    Caption="Тестовый заголовок"
                     Grid.Row="4"
+                    HorizontalAlignment="Left"
                     Margin="5"
                     Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
                     Type="Success" />
@@ -1322,156 +1320,157 @@
                     Grid.Column="1"
                     Grid.Row="1"
                     Height="400"
+                    ItemContainerStyle="{StaticResource ItemOutlineLeft}"
                     ScrollViewer.VerticalScrollBarVisibility="Visible">
                     <ListView.Items>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 1" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 2" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 3" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 4" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 5" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 6" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 7" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 8" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 9" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 10" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 1" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 2" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 3" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 4" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 5" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 6" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 7" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 8" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 9" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 10" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 1" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 2" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 3" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 4" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 5" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 6" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 7" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 8" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 9" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 10" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 1" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 2" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 3" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 4" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 5" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 6" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 7" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 8" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 9" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 10" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 1" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 2" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 3" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 4" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 5" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 6" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 7" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 8" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 9" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineLeft}">
+                        <ListViewItem>
                             <Label Content="List view item 10" />
                         </ListViewItem>
                     </ListView.Items>
@@ -1512,36 +1511,39 @@
                     </ListView.Items>
                 </ListView>
 
-                <ListView Grid.Column="3" Grid.Row="1">
+                <ListView
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    ItemContainerStyle="{StaticResource ItemOutlineRight}">
                     <ListView.Items>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 1" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 2" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 3" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 4" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 5" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 6" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 7" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 8" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 9" />
                         </ListViewItem>
-                        <ListViewItem Style="{StaticResource ItemOutlineRight}">
+                        <ListViewItem>
                             <Label Content="List view item 10" />
                         </ListViewItem>
                     </ListView.Items>
@@ -1720,20 +1722,22 @@
                 <ProgressBar
                     Grid.Row="2"
                     Margin="5"
-                    Maximum="100"
+                    Maximum="65535"
                     Minimum="0"
-                    Value="{Binding ElementName=Slider, Path=Value}" />
+                    Value="{Binding ElementName=Slider, Path=Value}"
+                    wpf:ProgressBar.ShowProgress="True" />
                 <ProgressBar
                     Grid.Row="3"
                     Margin="5"
-                    Maximum="100"
+                    Maximum="65535"
                     Minimum="0"
-                    Value="100" />
+                    Value="100"
+                    wpf:ProgressBar.ShowProgress="True" />
 
                 <Slider
                     Grid.Row="5"
                     Margin="5"
-                    Maximum="100"
+                    Maximum="65535"
                     Minimum="0"
                     Name="Slider"
                     Value="50" />
@@ -2244,13 +2248,22 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     Margin="5"
+                    Text="{Binding Person.Surname}"
                     Width="200"
                     wpf:Hint.Placeholder="Placeholder" />
                 <TextBox
                     Grid.Column="0"
                     Grid.Row="2"
                     Margin="5"
-                    Width="200" />
+                    Width="200">
+                    <TextBox.Text>
+                        <Binding Path="Person.Age">
+                            <Binding.ValidationRules>
+                                <DataErrorValidationRule />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
                 <TextBox
                     Grid.Column="0"
                     Grid.Row="3"
@@ -2492,8 +2505,8 @@
         </TabItem>
 
         <TabItem Header="OptionControl">
-            <!--  TOOLTIPS  -->
-            <controls:OptionControl Caption="asdsadasd" IsChecked="True" />
+            <!--  OptionControl  -->
+            <controls:OptionControl Caption="Тестовый контролер" IsChecked="True" />
         </TabItem>
     </TabControl>
 </Window>

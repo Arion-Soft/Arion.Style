@@ -49,9 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttachedProperties\Button.cs" />
+    <Compile Include="AttachedProperties\CheckBox.cs" />
     <Compile Include="AttachedProperties\ComboBox.cs" />
     <Compile Include="AttachedProperties\Hint.cs" />
+    <Compile Include="AttachedProperties\ListView.cs" />
     <Compile Include="AttachedProperties\PasswordBox.cs" />
+    <Compile Include="AttachedProperties\ProgressBar.cs" />
     <Compile Include="AttachedProperties\TextBox.cs" />
     <Compile Include="Controls\Breadcrumb.xaml.cs">
       <DependentUpon>Breadcrumb.xaml</DependentUpon>
@@ -82,6 +85,7 @@
     <Compile Include="Controls\TimeInput.xaml.cs">
       <DependentUpon>TimeInput.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\ActionButtonVisibilityConverter.cs" />
     <Compile Include="Converters\BooleanAllConverter.cs" />
     <Compile Include="Converters\BooleanConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
@@ -141,6 +145,7 @@
     <Compile Include="Converters\TextFieldClearButtonVisibilityConverter.cs" />
     <Compile Include="Converters\TextFieldHintVisibilityConverter.cs" />
     <Compile Include="Converters\TextFieldPrefixTextVisibilityConverter.cs" />
+    <Compile Include="Converters\TextVisibilityConverter.cs" />
     <Compile Include="Converters\TimeToVisibilityConverter.cs" />
     <Compile Include="Converters\ToolBarOverflowButtonVisibilityConverter.cs" />
     <Compile Include="Converters\TopThicknessConverter.cs" />
