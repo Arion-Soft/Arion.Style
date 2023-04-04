@@ -660,56 +660,46 @@
                 </StackPanel>
 
 
-                <Border
-                    Background="{StaticResource G900}"
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G800}"
-                    Grid.Column="1"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G700}"
-                    Grid.Column="2"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G600}"
-                    Grid.Column="3"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G500}"
-                    Grid.Column="4"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G400}"
-                    Grid.Column="5"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G300}"
-                    Grid.Column="6"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G200}"
-                    Grid.Column="7"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G100}"
-                    Grid.Column="8"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G50}"
-                    Grid.Column="9"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
+                <StackPanel Grid.Column="0" Grid.Row="3">
+                    <Border Background="{StaticResource G900}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G900" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="3">
+                    <Border Background="{StaticResource G800}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G800" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" Grid.Row="3">
+                    <Border Background="{StaticResource G700}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G700" />
+                </StackPanel>
+                <StackPanel Grid.Column="3" Grid.Row="3">
+                    <Border Background="{StaticResource G600}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G600" />
+                </StackPanel>
+                <StackPanel Grid.Column="4" Grid.Row="3">
+                    <Border Background="{StaticResource G500}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G500" />
+                </StackPanel>
+                <StackPanel Grid.Column="5" Grid.Row="3">
+                    <Border Background="{StaticResource G400}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G400" />
+                </StackPanel>
+                <StackPanel Grid.Column="6" Grid.Row="3">
+                    <Border Background="{StaticResource G300}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G300" />
+                </StackPanel>
+                <StackPanel Grid.Column="7" Grid.Row="3">
+                    <Border Background="{StaticResource G200}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G200" />
+                </StackPanel>
+                <StackPanel Grid.Column="8" Grid.Row="3">
+                    <Border Background="{StaticResource G100}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G100" />
+                </StackPanel>
+                <StackPanel Grid.Column="9" Grid.Row="3">
+                    <Border Background="{StaticResource G50}" Style="{StaticResource Brd}" />
+                    <TextBlock Text="G50" />
+                </StackPanel>
 
                 <Border
                     Background="{StaticResource Y900}"
@@ -862,57 +852,6 @@
                     Background="{StaticResource T50}"
                     Grid.Column="9"
                     Grid.Row="6"
-                    Style="{StaticResource Brd}" />
-
-                <Border
-                    Background="{StaticResource G900}"
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G800}"
-                    Grid.Column="1"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G700}"
-                    Grid.Column="2"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G600}"
-                    Grid.Column="3"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G500}"
-                    Grid.Column="4"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G400}"
-                    Grid.Column="5"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G300}"
-                    Grid.Column="6"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G200}"
-                    Grid.Column="7"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G100}"
-                    Grid.Column="8"
-                    Grid.Row="3"
-                    Style="{StaticResource Brd}" />
-                <Border
-                    Background="{StaticResource G50}"
-                    Grid.Column="9"
-                    Grid.Row="3"
                     Style="{StaticResource Brd}" />
             </Grid>
         </TabItem>
