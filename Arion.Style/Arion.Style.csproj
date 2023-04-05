@@ -76,9 +76,10 @@
     </Compile>
     <Compile Include="Controls\Icons.cs" />
     <Compile Include="Controls\InlineAlert.xaml.cs" />
+    <Compile Include="Controls\ModalDialog.xaml.cs">
+      <DependentUpon>ModalDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\OptionControl.xaml.cs" />
-    <Compile Include="Controls\PopupBox.cs" />
-    <Compile Include="Controls\PopupEx.cs" />
     <Compile Include="Controls\RangeSlider.xaml.cs">
       <DependentUpon>RangeSlider.xaml</DependentUpon>
     </Compile>
@@ -204,6 +205,7 @@
     <Page Include="Controls\DisplayControlFull.xaml" />
     <Page Include="Controls\Icon.xaml" />
     <Page Include="Controls\InlineAlert.xaml" />
+    <Page Include="Controls\ModalDialog.xaml" />
     <Page Include="Controls\OptionControl.xaml" />
     <Page Include="Controls\RangeSlider.xaml" />
     <Page Include="Controls\TimeInput.xaml" />
@@ -247,6 +249,7 @@
     <Page Include="Styles\ArionUi\DataGrid.xaml" />
     <Page Include="Styles\ArionUi\DisplayControl.xaml" />
     <Page Include="Styles\ArionUi\Expander.xaml" />
+    <Page Include="Styles\ArionUi\FocusVisual.xaml" />
     <Page Include="Styles\ArionUi\FontFamily.xaml" />
     <Page Include="Styles\ArionUi\Icons.xaml" />
     <Page Include="Styles\ArionUi\Label.xaml" />

@@ -113,7 +113,7 @@
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
         <Setter Property="MinWidth" Value="120" />
-        <Setter Property="MinHeight" Value="35" />
+        <Setter Property="MinHeight" Value="40" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="Template">
@@ -138,10 +138,11 @@
                         <TextBox
                             Background="{StaticResource CleanW}"
                             Focusable="True"
+                            FontSize="{TemplateBinding FontSize}"
                             Foreground="{StaticResource Dg2}"
                             HorizontalAlignment="Left"
                             IsReadOnly="{TemplateBinding IsReadOnly}"
-                            Margin="5,3,23,3"
+                            Margin="16,3,56,3"
                             Style="{x:Null}"
                             Template="{StaticResource ComboBoxTextBox}"
                             VerticalAlignment="Center"
@@ -173,10 +174,11 @@
                         </Popup>
 
                         <TextBlock
+                            FontSize="{TemplateBinding FontSize}"
                             FontWeight="Light"
                             HorizontalAlignment="Left"
                             IsHitTestVisible="False"
-                            Margin="5,0,20,0"
+                            Margin="16,8,56,8"
                             Text="{TemplateBinding attach:Hint.Placeholder}"
                             VerticalAlignment="Center"
                             Visibility="{TemplateBinding SelectedIndex,

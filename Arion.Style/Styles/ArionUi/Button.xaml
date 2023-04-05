@@ -5,6 +5,7 @@
     xmlns:converters="clr-namespace:Arion.Style.Converters"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="FocusVisual.xaml" />
         <ResourceDictionary Source="FontFamily.xaml" />
         <ResourceDictionary Source="Colors.xaml" />
         <ResourceDictionary Source="ProgressBar.xaml" />
@@ -14,21 +15,7 @@
     <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
     <converters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
 
-    <Style x:Key="BtnFocusVisual">
-        <Setter Property="Control.Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Rectangle
-                        Margin="-2"
-                        RadiusX="6"
-                        RadiusY="6"
-                        SnapsToDevicePixels="true"
-                        Stroke="{StaticResource Pr300}"
-                        StrokeThickness="3" />
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+
 
     <ControlTemplate TargetType="{x:Type Button}" x:Key="FilledTemplate">
         <Border

@@ -52,9 +52,10 @@
                     Height="14"
                     VerticalAlignment="Top"
                     Width="45">
-                    <Path Data="M40 13.0001C37 14 8 14.0002 5 13.0001C2 12 0 7.72476e-05 0 7.72476e-05L45 7.72476e-05C45 7.72476e-05 43 12.0001 40 13.0001Z" Fill="{StaticResource Lg5}" />
+                    <Path Data="M40 13.0001C37 14 8 14.0002 5 13.0001C2 12 0 7.72476e-05 0 7.72476e-05L45 7.72476e-05C45 7.72476e-05 43 12.0001 40 13.0001Z" Fill="{StaticResource Lg4}" />
                     <TextBlock
-                        FontSize="14"
+                        FontSize="12"
+                        LineHeight="10"
                         Text="{Binding ElementName=Root, Path=Label}"
                         VerticalAlignment="Center" />
                 </Grid>
@@ -70,9 +71,10 @@
                     Height="14"
                     VerticalAlignment="Bottom"
                     Width="45">
-                    <Path Data="M5 0.999916C8 2.38419e-07 37 -0.000168324 40 0.999916C43 2 45 13.9999 45 13.9999H0C0 13.9999 2 1.99983 5 0.999916Z" Fill="{StaticResource Lg5}" />
+                    <Path Data="M5 0.999916C8 2.38419e-07 37 -0.000168324 40 0.999916C43 2 45 13.9999 45 13.9999H0C0 13.9999 2 1.99983 5 0.999916Z" Fill="{StaticResource Lg4}" />
                     <TextBlock
-                        FontSize="14"
+                        FontSize="12"
+                        LineHeight="10"
                         Padding="0"
                         Text="{Binding ElementName=Root, Path=TargetValue}"
                         VerticalAlignment="Center" />

@@ -11,7 +11,7 @@ namespace Arion.Theme.Test.ViewModel
         {
             Person = new Person()
             {
-                Surname = "asdasd",
+                Surname = "Малахов",
                 Age = 15
             };
         }

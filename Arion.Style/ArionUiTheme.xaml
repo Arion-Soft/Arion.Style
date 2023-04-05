@@ -27,6 +27,7 @@
         <ResourceDictionary Source="Styles/ArionUi/DisplayControl.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ProgressBar.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/RangeSlider.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Popup.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <!--  DEFAULT  -->
     <Style BasedOn="{StaticResource BtnOutline}" TargetType="{x:Type Button}" />

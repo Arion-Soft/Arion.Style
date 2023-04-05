@@ -8,7 +8,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using Arion.Style.Controls;
 using Arion.Style.AttachedProperties;
+using Microsoft.Build.Tasks;
 using Button = Arion.Style.AttachedProperties.Button;
+using Clipboard = System.Windows.Clipboard;
 using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Arion.Theme.Test
@@ -94,6 +96,22 @@ namespace Arion.Theme.Test
         private void InlineAlert_OnSecondaryClick(object sender, EventArgs e)
         {
             MessageBox.Show("Click to InlineAlert SECONDARY BUTTON");
+        }
+
+        private void UIElement_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is StackPanel stackPanel)
+            {
+                if (stackPanel.Children[1] is TextBlock textBlock)
+                {
+                    Clipboard.SetText("{StaticResource " + textBlock.Text + "}");
+                }
+            }
+        }
+
+        private void BtnOpenPopUp_OnClick(object sender, RoutedEventArgs e)
+        {
+            PopUp.IsOpen = !PopUp.IsOpen;
         }
     }
 }
