@@ -4,11 +4,5 @@
     xmlns:converters="clr-namespace:Arion.Style.Converters"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style TargetType="{x:Type ContentControl}" x:Key="PopupContentTemplate">
-        <Setter Property="Child">
-            <Setter.Value>
-                <Border />
-            </Setter.Value>
-        </Setter>
-    </Style>
+    <Style TargetType="{x:Type ContentControl}" x:Key="PopupContentTemplate" />
 </ResourceDictionary>

@@ -2206,9 +2206,10 @@
             </Grid>
         </TabItem>
         <!--  TEXT BOXES  -->
-        <TabItem Header="Text box">
+        <TabItem Header="Text box" IsSelected="True">
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -2257,23 +2258,84 @@
                 <TextBox
                     Grid.Column="0"
                     Grid.Row="3"
+                    Margin="5"
+                    Width="200">
+                    <TextBox.Text>
+                        <Binding Path="Person.Age">
+                            <Binding.ValidationRules>
+                                <DataErrorValidationRule />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox
+                    Grid.Column="0"
+                    Grid.Row="4"
                     IsEnabled="False"
                     Margin="5"
                     Text="Disabled"
                     Width="200" />
                 <TextBox
                     Grid.Column="0"
-                    Grid.Row="4"
+                    Grid.Row="5"
                     IsReadOnly="True"
                     Margin="5"
                     Width="200" />
                 <TextBox
                     Grid.Column="0"
-                    Grid.Row="5"
+                    Grid.Row="6"
                     IsReadOnly="True"
                     Margin="5"
                     Text="Text"
                     Width="200" />
+
+                <TextBox
+                    FontWeight="Light"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="5"
+                    wpf:Hint.Placeholder="Placeholder"
+                    wpf:TextBox.Prefix="Prefix"
+                    wpf:TextBox.Suffix="Suffix" />
+                <TextBox
+                    FontWeight="Light"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Margin="5"
+                    wpf:Hint.Placeholder="Placeholder"
+                    wpf:TextBox.Prefix="Prefix" />
+                <TextBox
+                    FontWeight="Light"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Margin="5"
+                    wpf:Hint.Placeholder="Placeholder"
+                    wpf:TextBox.Suffix="Suffix" />
+                <TextBox
+                    FontWeight="Light"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    IsEnabled="False"
+                    Margin="5"
+                    wpf:Hint.Placeholder="Placeholder"
+                    wpf:TextBox.Prefix="Prefix"
+                    wpf:TextBox.Suffix="Suffix" />
+                <TextBox
+                    FontWeight="Light"
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    IsEnabled="False"
+                    Margin="5"
+                    wpf:Hint.Placeholder="Placeholder"
+                    wpf:TextBox.Prefix="Prefix" />
+                <TextBox
+                    FontWeight="Light"
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    IsEnabled="False"
+                    Margin="5"
+                    wpf:Hint.Placeholder="Placeholder"
+                    wpf:TextBox.Suffix="Suffix" />
             </Grid>
         </TabItem>
 
@@ -2539,7 +2601,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Modal" IsSelected="True">
+        <TabItem Header="Modal">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
