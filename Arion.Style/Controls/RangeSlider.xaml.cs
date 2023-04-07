@@ -372,14 +372,25 @@ namespace Arion.Style.Controls
 
         #endregion
 
-        public static readonly DependencyProperty CenterThumbOpacityProperty = DependencyProperty.Register(
-            nameof(CenterThumbOpacity), typeof(double), typeof(RangeSlider), new PropertyMetadata(default(double)));
+        
 
-        public double CenterThumbOpacity
+        #region Percent
+
+        public double Percent
         {
-            get => (double)GetValue(CenterThumbOpacityProperty);
-            set => SetValue(CenterThumbOpacityProperty, value);
+            get => (double)GetValue(PercentProperty);
+            set
+            {
+                if (value > 1) value = 1;
+                else if (value < 0) value = 0;
+                SetValue(PercentProperty, value);
+            }
         }
+
+        public static readonly DependencyProperty PercentProperty =
+            DependencyProperty.Register(nameof(Percent), typeof(double), typeof(RangeSlider), new PropertyMetadata(.8));
+
+        #endregion
 
         #region CenterThumb
 
@@ -393,7 +404,7 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty CenterThumbWidthProperty =
             DependencyProperty.Register(nameof(CenterThumbWidth), typeof(double), typeof(RangeSlider),
-                new PropertyMetadata());
+                new PropertyMetadata(24.0));
 
         #endregion
 
@@ -450,6 +461,19 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty CenterThumbBorderProperty =
             DependencyProperty.Register(nameof(CenterThumbBorder), typeof(Thickness), typeof(RangeSlider),
                 new PropertyMetadata());
+
+        #endregion
+        
+        #region CenterThumbOpacity
+
+        public static readonly DependencyProperty CenterThumbOpacityProperty = DependencyProperty.Register(
+            nameof(CenterThumbOpacity), typeof(double), typeof(RangeSlider), new PropertyMetadata(default(double)));
+
+        public double CenterThumbOpacity
+        {
+            get => (double)GetValue(CenterThumbOpacityProperty);
+            set => SetValue(CenterThumbOpacityProperty, value);
+        }
 
         #endregion
 
@@ -656,7 +680,7 @@ namespace Arion.Style.Controls
 
             #endregion
 
-            if (LeftThumbMargin.Left + RightThumbMargin.Right > Width * .8)
+            if (LeftThumbMargin.Left + RightThumbMargin.Right > Width * Percent)
             {
                 _centerSliderPressed = false;
                 CenterThumbVisibility = Visibility.Collapsed;
@@ -678,14 +702,14 @@ namespace Arion.Style.Controls
             if (LeftThumbMargin.Left < -5)
                 LeftThumbMargin = new Thickness(-5, 0, 0, 0);
             
-            else if (LeftThumbMargin.Left > Track.Width - Thumb2.Width / 2)
-                LeftThumbMargin = new Thickness(Track.Width - Thumb2.Width / 2, 0, 0, 0);
+            else if (LeftThumbMargin.Left > Track.Width - RightThumbMargin.Right- Thumb2.Width)
+                LeftThumbMargin = new Thickness(Track.Width - RightThumbMargin.Right- Thumb2.Width, 0, 0, 0);
             
             
             if (RightThumbMargin.Right < -5)
                 RightThumbMargin = new Thickness(0, 0, -5, 0);
             
-            else if (RightThumbMargin.Right > Track.Width - Thumb2.Width / 2)
+            else if (RightThumbMargin.Right > Track.Width - LeftThumbMargin.Left - Thumb1.Width)
                 RightThumbMargin = new Thickness(0, 0, Track.Width - Thumb1.Width / 2, 0);
         }
 
@@ -769,7 +793,7 @@ namespace Arion.Style.Controls
             LowerValue = value;
             var percent = value * 100 / Maximum;
             var margin = percent * Track.Width / 100;
-            LeftThumbMargin = new Thickness(margin - 10, 0, 0, 0);
+            LeftThumbMargin = new Thickness(margin-5, 0, 0, 0);
             MoveCenterThumbAndFill();
         }
 
@@ -778,7 +802,7 @@ namespace Arion.Style.Controls
             UpperValue = value;
             var percent = Math.Abs(Math.Round(value * 100 / Maximum, 2) - 100);
             var margin = Math.Round(percent * (Track.Width) / 100, 2);
-            RightThumbMargin = new Thickness(0, 0, margin - 10, 0);
+            RightThumbMargin = new Thickness(0, 0, margin-5, 0);
             MoveCenterThumbAndFill();
         }
 

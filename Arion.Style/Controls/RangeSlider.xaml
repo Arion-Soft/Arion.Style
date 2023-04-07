@@ -32,7 +32,7 @@
 
         <!--  Background="CornflowerBlue"  -->
         <Border
-            Background="Transparent"
+            Background="CornflowerBlue"
             Grid.Row="1"
             Height="4"
             Margin="{Binding ElementName=Root, Path=CenterMargin}"
@@ -83,7 +83,7 @@
             Opacity="{Binding ElementName=Root, Path=CenterThumbOpacity}"
             VerticalAlignment="Center"
             Visibility="{Binding ElementName=Root, Path=CenterThumbVisibility}"
-            Width="24" />
+            Width="{Binding ElementName=Root, Path=CenterThumbWidth}" />
 
         <Border
             Grid.Row="0"
