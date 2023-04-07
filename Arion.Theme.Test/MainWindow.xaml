@@ -235,7 +235,6 @@
                         IsEnabled="False"
                         Margin="5"
                         Style="{StaticResource BtnFilled}"
-                        Width="100"
                         wpf:Button.ProgressBarMaximum="100"
                         wpf:Button.ProgressBarMinimum="0"
                         wpf:Button.ProgressBarShow="True"
@@ -262,22 +261,18 @@
                     <Button
                         Content="First"
                         Margin="0,5"
-                        Style="{StaticResource GroupFilledFirst}" />
+                        Style="{StaticResource BtnFilled}"
+                        wpf:Button.Position="First" />
                     <Button
                         Content="Middle"
                         Margin="0,5"
-                        Style="{StaticResource GroupFilledMiddle}"
-                        wpf:Button.LeftIcon="LinearFunctionAuto" />
-                    <Button
-                        Content="Middle"
-                        Margin="0,5"
-                        Style="{StaticResource GroupFilledMiddle}"
-                        wpf:Button.LeftIcon="SinFunction" />
+                        Style="{StaticResource BtnFilled}"
+                        wpf:Button.Position="Middle" />
                     <Button
                         Content="Last"
                         Margin="0,5,10,5"
-                        Style="{StaticResource GroupFilledLast}"
-                        wpf:Button.LeftIcon="ArcTgFunction" />
+                        Style="{StaticResource BtnFilled}"
+                        wpf:Button.Position="Last" />
                 </StackPanel>
 
                 <StackPanel
@@ -348,6 +343,7 @@
                     <Button
                         Margin="5"
                         Style="{StaticResource BtnOutline}"
+                        Width="40"
                         wpf:Button.ProgressBarMaximum="100"
                         wpf:Button.ProgressBarMinimum="0"
                         wpf:Button.ProgressBarShow="True"
@@ -369,15 +365,15 @@
                     <Button
                         Content="First"
                         Margin="0,5"
-                        Style="{StaticResource GroupOutlineFirst}" />
+                        wpf:Button.Position="First" />
                     <Button
                         Content="Middle"
                         Margin="0,5"
-                        Style="{StaticResource GroupOutlineMiddle}" />
+                        wpf:Button.Position="Middle" />
                     <Button
                         Content="Last"
                         Margin="0,5"
-                        Style="{StaticResource GroupOutlineLast}" />
+                        wpf:Button.Position="Last" />
                 </StackPanel>
 
                 <StackPanel
@@ -1785,7 +1781,7 @@
                     Margin="5" />
             </Grid>
         </TabItem>
-        <TabItem Header="Ranger">
+        <TabItem Header="Ranger" IsSelected="True">
             <!--  RANGERS  -->
             <Grid>
                 <Grid.RowDefinitions>
@@ -1825,13 +1821,13 @@
                 <controls:RangeSlider
                     Grid.Column="0"
                     Grid.Row="2"
-                    Maximum="10"
+                    Maximum="100"
                     Minimum="0"
                     Width="300" />
                 <controls:RangeSlider
                     Grid.Column="0"
                     Grid.Row="3"
-                    Maximum="50"
+                    Maximum="100"
                     Minimum="0"
                     ShowValues="True"
                     Width="300" />
@@ -1839,7 +1835,7 @@
                     Grid.Column="0"
                     Grid.Row="4"
                     LowerValue="{Binding ElementName=SliderTest, Path=LowerValue}"
-                    Maximum="65535"
+                    Maximum="100"
                     Minimum="0"
                     Name="Slider65535"
                     UpperValue="{Binding ElementName=SliderTest, Path=UpperValue}"
@@ -1859,7 +1855,7 @@
                 <controls:RangeSlider
                     Grid.Column="0"
                     Grid.Row="6"
-                    Maximum="65535"
+                    Maximum="100"
                     Minimum="0"
                     Name="SliderTest"
                     SelectedTrackHeight="12"
@@ -2075,16 +2071,44 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label
                     Content="Switcher"
                     Grid.Column="0"
+                    Grid.ColumnSpan="3"
                     Grid.Row="0"
                     Margin="10"
                     Padding="0"
                     Style="{StaticResource Lbl}"
                     VerticalAlignment="Top"
                     Width="Auto" />
+
+                <Label
+                    Content="Standard"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    VerticalAlignment="Center" />
+                <Label
+                    Content="Left Icon"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    VerticalAlignment="Center" />
+                <Label
+                    Content="Right Icon"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    VerticalAlignment="Center" />
+                <Label
+                    Content="Icon"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    VerticalAlignment="Center" />
 
                 <Label
                     Content="Filled"
@@ -2099,21 +2123,261 @@
                     Orientation="Horizontal">
                     <RadioButton
                         Content="First"
-                        Margin="5"
-                        Style="{StaticResource SwtOutlineFirst}" />
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="First"
+                        x:Name="Switcher1" />
                     <RadioButton
                         Content="Middle"
-                        Margin="5"
-                        Style="{StaticResource SwtOutlineMiddle}" />
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="Middle"
+                        x:Name="Switcher2" />
                     <RadioButton
                         Content="Middle"
                         IsEnabled="False"
-                        Margin="5"
-                        Style="{StaticResource SwtOutlineMiddle}" />
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="Middle"
+                        x:Name="Switcher3" />
                     <RadioButton
                         Content="Last"
-                        Margin="5"
-                        Style="{StaticResource SwtOutlineLast}" />
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="Last"
+                        x:Name="Switcher4" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Orientation="Horizontal">
+                    <RadioButton
+                        Content="First"
+                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="First" />
+                    <RadioButton
+                        Content="Middle"
+                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        Content="Middle"
+                        IsEnabled="False"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        Content="Last"
+                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="Last" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Orientation="Horizontal">
+                    <RadioButton
+                        Content="First"
+                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="First"
+                        wpf:Switcher.RightIcon="User" />
+                    <RadioButton
+                        Content="Middle"
+                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="Middle"
+                        wpf:Switcher.RightIcon="User" />
+                    <RadioButton
+                        Content="Middle"
+                        IsEnabled="False"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="Middle"
+                        wpf:Switcher.RightIcon="User" />
+                    <RadioButton
+                        Content="Last"
+                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Position="Last"
+                        wpf:Switcher.RightIcon="User" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Orientation="Horizontal">
+                    <RadioButton
+                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="First" />
+                    <RadioButton
+                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        IsEnabled="False"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherFilled}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="Last" />
+                </StackPanel>
+
+                <Label
+                    Content="Outlined"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    HorizontalAlignment="Left"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource Lbl}" />
+
+                <StackPanel
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Margin="10,0,0,0"
+                    Orientation="Horizontal">
+                    <RadioButton
+                        Content="First"
+                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="First" />
+                    <RadioButton
+                        Content="Middle"
+                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        Content="Middle"
+                        IsEnabled="False"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        Content="Last"
+                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="Last" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    Margin="10,0,0,0"
+                    Orientation="Horizontal">
+                    <RadioButton
+                        Content="First"
+                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="First" />
+                    <RadioButton
+                        Content="Middle"
+                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        Content="Middle"
+                        IsEnabled="False"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        Content="Last"
+                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.LeftIcon="User"
+                        wpf:Switcher.Position="Last" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    Grid.Row="4"
+                    Margin="10,0,0,0"
+                    Orientation="Horizontal">
+                    <RadioButton
+                        Content="First"
+                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="First"
+                        wpf:Switcher.RightIcon="User" />
+                    <RadioButton
+                        Content="Middle"
+                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="Middle"
+                        wpf:Switcher.RightIcon="User" />
+                    <RadioButton
+                        Content="Middle"
+                        IsEnabled="False"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="Middle"
+                        wpf:Switcher.RightIcon="User" />
+                    <RadioButton
+                        Content="Last"
+                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Position="Last"
+                        wpf:Switcher.RightIcon="User" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    Grid.Row="5"
+                    Margin="10,0,0,0"
+                    Orientation="Horizontal">
+                    <RadioButton
+                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="First" />
+                    <RadioButton
+                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        IsEnabled="False"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="Middle" />
+                    <RadioButton
+                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                        Margin="0,5"
+                        Style="{StaticResource SwitcherOutline}"
+                        wpf:Switcher.Icon="User"
+                        wpf:Switcher.Position="Last" />
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -2206,7 +2470,7 @@
             </Grid>
         </TabItem>
         <!--  TEXT BOXES  -->
-        <TabItem Header="Text box" IsSelected="True">
+        <TabItem Header="Text box">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -2587,7 +2851,7 @@
                     Width="Auto" />
 
                 <Button
-                    Click="BtnOpenPopUp_OnClick"
+                    Click="BtnOpenModalInfo_OnClick"
                     Content="Click to open Popup"
                     Grid.Column="0"
                     Grid.Row="1" />
@@ -2608,6 +2872,8 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -2618,6 +2884,7 @@
                     Content="Modal"
                     FontSize="32"
                     Grid.Column="0"
+                    Grid.ColumnSpan="2"
                     Grid.Row="0"
                     HorizontalAlignment="Left"
                     Margin="10"
@@ -2626,11 +2893,67 @@
                     VerticalAlignment="Top"
                     Width="Auto" />
 
-                <Button
-                    Click="BtnOpenPopUp_OnClick"
-                    Content="Click to open Modal Window"
+                <Label
+                    Content="Info"
+                    FontSize="18"
                     Grid.Column="0"
-                    Grid.Row="1" />
+                    Grid.Row="1"
+                    VerticalAlignment="Center" />
+                <Label
+                    Content="Danger"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    VerticalAlignment="Center" />
+                <Label
+                    Content="Warning"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    VerticalAlignment="Center" />
+                <Label
+                    Content="Success"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    VerticalAlignment="Center" />
+                <Label
+                    Content="NoIcon"
+                    FontSize="18"
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    VerticalAlignment="Center" />
+
+                <Button
+                    Click="BtnOpenModalInfo_OnClick"
+                    Content="Click to open ModalDialog"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="5" />
+                <Button
+                    Click="BtnOpenModalDanger_OnClick"
+                    Content="Click to open ModalDialog"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Margin="5" />
+                <Button
+                    Click="BtnOpenModalWarning_OnClick"
+                    Content="Click to open ModalDialog"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Margin="5" />
+                <Button
+                    Click="BtnOpenModalSuccess_OnClick"
+                    Content="Click to open ModalDialog"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Margin="5" />
+                <Button
+                    Click="BtnOpenModalNoIcon_OnClick"
+                    Content="Click to open ModalDialog"
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Margin="5" />
             </Grid>
         </TabItem>
     </TabControl>

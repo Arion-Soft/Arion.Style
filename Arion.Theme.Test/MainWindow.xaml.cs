@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using Arion.Style.Controls;
 using Arion.Style.AttachedProperties;
-using Microsoft.Build.Tasks;
+using Arion.Style.Controls.Enums;
 using Button = Arion.Style.AttachedProperties.Button;
 using Clipboard = System.Windows.Clipboard;
 using MessageBox = System.Windows.Forms.MessageBox;
@@ -29,19 +28,17 @@ namespace Arion.Theme.Test
         {
             List<Icon> icons = new List<Icon>();
             var iconsLibrary = IconLibrary.IconsDictionary.Select(x => x.Key).ToList();
-            
+
             for (int i = 0; i < 312; i++)
             {
-                icons.Add(new Icon { Kind = iconsLibrary[i]});
+                icons.Add(new Icon { Kind = iconsLibrary[i] });
             }
 
             LvIcons.ItemsSource = icons;
-            
         }
 
         private void TbFind_OnTextInput(object sender, TextCompositionEventArgs e)
         {
-            
         }
 
         private void TbFind_OnTextChanged(object sender, TextChangedEventArgs e)
@@ -50,13 +47,13 @@ namespace Arion.Theme.Test
             var iconsLibrary = IconLibrary.IconsDictionary.Where(x => x.Key.ToString().ToLower().Contains(TbFind.Text)).ToList();
 
             var max = iconsLibrary.Count > 256 ? 256 : iconsLibrary.Count;
-            
+
             for (int i = 0; i < max; i++)
             {
                 var item = new Icon { Kind = iconsLibrary[i].Key };
                 icons.Add(item);
             }
-            
+
             LvIcons.ItemsSource = icons;
         }
 
@@ -105,13 +102,48 @@ namespace Arion.Theme.Test
                 if (stackPanel.Children[1] is TextBlock textBlock)
                 {
                     Clipboard.SetText("{StaticResource " + textBlock.Text + "}");
+                    ModalDialog.Show("Copy", "Color copied");
                 }
             }
         }
 
-        private void BtnOpenPopUp_OnClick(object sender, RoutedEventArgs e)
+        private void BtnOpenModalInfo_OnClick(object sender, RoutedEventArgs e)
         {
-            PopUp.IsOpen = !PopUp.IsOpen;
+            ModalDialog.Show(
+                "Modal dialog more info for test size caption",
+                "A modal dialog is a dialog that appears on top of the main content and moves the system into a special mode requiring user interaction.");
+        }
+
+        private void BtnOpenModalDanger_OnClick(object sender, RoutedEventArgs e)
+        {
+            ModalDialog.Show(
+                "Modal dialog",
+                "A modal dialog is a dialog that appears on top of the main content and moves the system into a special mode requiring user interaction.",
+                 ModalDialogButtons.Ok, ModalDialogType.Danger);
+        }
+
+        private void BtnOpenModalWarning_OnClick(object sender, RoutedEventArgs e)
+        {
+            ModalDialog.Show(
+                "Modal dialog",
+                "A modal dialog is a dialog that appears on top of the main content and moves the system into a special mode requiring user interaction.",
+                ModalDialogButtons.Ok, ModalDialogType.Warning, this);
+        }
+
+        private void BtnOpenModalSuccess_OnClick(object sender, RoutedEventArgs e)
+        {
+            ModalDialog.Show(
+                "Modal dialog",
+                "A modal dialog is a dialog that appears on top of the main content and moves the system into a special mode requiring user interaction.",
+                 ModalDialogButtons.Ok, ModalDialogType.Success);
+        }
+
+        private void BtnOpenModalNoIcon_OnClick(object sender, RoutedEventArgs e)
+        {
+            ModalDialog.Show(
+                "Modal dialog",
+                "A modal dialog is a dialog that appears on top of the main content and moves the system into a special mode requiring user interaction.",
+                 ModalDialogButtons.Ok, ModalDialogType.NoIcon);
         }
     }
 }

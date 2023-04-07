@@ -26,27 +26,27 @@ namespace Arion.Style.Controls
             try
             {
                 if(!double.IsNaN(Width))
-                    Track.Width = Width - 10;
+                    Track.Width = Width - 20;
             
                 #region LeftThumb
 
-                LeftThumbBackground = new SolidColorBrush(Colors.Black);
-                LeftThumbBorderBrush = new SolidColorBrush(Colors.White);
+                // LeftThumbBackground = new SolidColorBrush(Colors.Black);
+                // LeftThumbBorderBrush = new SolidColorBrush(Colors.White);
                 LeftThumbBorder = new Thickness(1);
-                LeftThumbWidth = 20;
+                LeftThumbWidth = 10;
                 LeftThumbHeight = 20;
-                LeftThumbMargin = new Thickness(-(LeftThumbWidth / 2), 0, 0, 0);
+                LeftThumbMargin = new Thickness(-(LeftThumbWidth/2), 0, 0, 0);
 
                 #endregion
 
                 #region RightThumb
 
-                RightThumbBackground = new SolidColorBrush(Colors.White);
-                RightThumbBorderBrush = new SolidColorBrush(Colors.Black);
+                // RightThumbBackground = new SolidColorBrush(Colors.White);
+                // RightThumbBorderBrush = new SolidColorBrush(Colors.Black);
                 RightThumbBorder = new Thickness(1);
-                RightThumbWidth = 20;
+                RightThumbWidth = 10;
                 RightThumbHeight = 20;
-                RightThumbMargin = new Thickness(0, 0, -(RightThumbWidth / 2), 0);
+                RightThumbMargin = new Thickness(0, 0, -(RightThumbWidth/2), 0);
 
                 #endregion
 
@@ -66,7 +66,8 @@ namespace Arion.Style.Controls
 
                 #region SelectedTrack
 
-                SelectedTrackBackground = new SolidColorBrush(Colors.CornflowerBlue);
+                // SelectedTrackBackground = new SolidColorBrush(Colors.CornflowerBlue);
+                SelectedTrackBackground = new SolidColorBrush(Colors.Transparent);
                 SelectedTrackHeight = 4;
 
                 #endregion
@@ -629,11 +630,11 @@ namespace Arion.Style.Controls
                 _centerSliderPoint = e.GetPosition(CenterThumb);
 
                 var changedMarginLeft =
-                    Math.Round(Math.Truncate(LeftThumbMargin.Left) + _centerSliderPoint.X - Thumb1.Width / 2);
+                    Math.Round(Math.Truncate(LeftThumbMargin.Left) + _centerSliderPoint.X + Thumb1.Width / 2);
                 LeftThumbMargin = new Thickness(changedMarginLeft, 0, 0, 0);
 
                 var changedMarginRight =
-                    Math.Round(Math.Truncate(RightThumbMargin.Right) - _centerSliderPoint.X + Thumb2.Width / 2);
+                    Math.Round(Math.Truncate(RightThumbMargin.Right) - _centerSliderPoint.X - Thumb2.Width / 2);
                 RightThumbMargin = new Thickness(0, 0, changedMarginRight, 0);
 
                 CheckBorder();
@@ -674,20 +675,18 @@ namespace Arion.Style.Controls
 
         private void CheckBorder()
         {
-            if (LeftThumbMargin.Left < -10) LeftThumbMargin = new Thickness(-10, 0, 0, 0);
+            if (LeftThumbMargin.Left < -5)
+                LeftThumbMargin = new Thickness(-5, 0, 0, 0);
+            
             else if (LeftThumbMargin.Left > Track.Width - Thumb2.Width / 2)
                 LeftThumbMargin = new Thickness(Track.Width - Thumb2.Width / 2, 0, 0, 0);
-            if (RightThumbMargin.Right < -10) RightThumbMargin = new Thickness(0, 0, -10, 0);
+            
+            
+            if (RightThumbMargin.Right < -5)
+                RightThumbMargin = new Thickness(0, 0, -5, 0);
+            
             else if (RightThumbMargin.Right > Track.Width - Thumb2.Width / 2)
                 RightThumbMargin = new Thickness(0, 0, Track.Width - Thumb1.Width / 2, 0);
-
-            // if (LeftThumbMargin.Left + RightThumbMargin.Right > Track.Width - Thumb2.Width / 2)
-            // {
-            //     if(LeftThumbMargin.Left>RightThumbMargin.Right)
-            //         LeftThumbMargin = new Thickness(LeftThumbMargin.Left-10, 0, 0, 0);
-            //     else
-            //         RightThumbMargin = new Thickness(0, 0, RightThumbMargin.Right-10, 0);
-            // }
         }
 
         private bool CanRightThumbMove()

@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Media;
+using Arion.Style.AttachedProperties.Enum;
 using Arion.Style.Controls;
 
 namespace Arion.Style.AttachedProperties
@@ -174,6 +175,19 @@ namespace Arion.Style.AttachedProperties
         }
         
         #endregion
+
+        public static readonly DependencyProperty PositionProperty = DependencyProperty.RegisterAttached(
+            "Position", typeof(Position), typeof(Button), new PropertyMetadata(default(Position)));
+
+        public static void SetPosition(DependencyObject element, Position value)
+        {
+            element.SetValue(PositionProperty, value);
+        }
+
+        public static Position GetPosition(DependencyObject element)
+        {
+            return (Position)element.GetValue(PositionProperty);
+        }
     }
 
     public enum ProgressBarType

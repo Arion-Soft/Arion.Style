@@ -96,6 +96,7 @@
                             <Setter Property="BorderThickness" TargetName="checkBoxBorder" Value="0" />
                             <Setter Property="Fill" TargetName="Mark" Value="{StaticResource CleanW}" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                            <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Pressed  -->
                         <MultiTrigger>
@@ -111,6 +112,7 @@
                             <Setter Property="BorderThickness" TargetName="checkBoxBorder" Value="0" />
                             <Setter Property="Fill" TargetName="Mark" Value="{StaticResource CleanW}" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
+                            <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Default  -->
                         <MultiTrigger>
@@ -157,6 +159,7 @@
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg4}" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg4}" />
                             <Setter Property="Fill" TargetName="Mark" Value="Transparent" />
+                            <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - FALSE | Pressed  -->
                         <MultiTrigger>
@@ -167,9 +170,10 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Mg3}" />
-                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Lg3}" />
+                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg3}" />
+                            <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg3}" />
                             <Setter Property="Fill" TargetName="Mark" Value="Transparent" />
+                            <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - FALSE | Default  -->
                         <MultiTrigger>
@@ -214,6 +218,7 @@
                             <Setter Property="Fill" TargetName="Mark" Value="Black" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
                             <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Pressed  -->
                         <MultiTrigger>
@@ -229,6 +234,7 @@
                             <Setter Property="Fill" TargetName="Mark" Value="Black" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
                             <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Default  -->
                         <MultiTrigger>

@@ -1,10 +1,14 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
+    xmlns:controls="clr-namespace:Arion.Style.Controls"
+    xmlns:converters="clr-namespace:Arion.Style.Converters"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+    <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
 
     <Style x:Key="FocusVisual">
         <Setter Property="Control.Template">
@@ -21,6 +25,18 @@
         </Setter>
     </Style>
 
+    <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherBase">
+        <Setter Property="Background" Value="{StaticResource CleanW}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="attach:Switcher.IconHeight" Value="15" />
+        <Setter Property="attach:Switcher.IconWidth" Value="15" />
+    </Style>
+
     <ControlTemplate TargetType="{x:Type RadioButton}" x:Key="SwitcherFilledTemplate">
         <Border
             Background="{TemplateBinding Background}"
@@ -35,16 +51,57 @@
             Width="{TemplateBinding Width}"
             x:Name="radioButtonBorder">
             <Grid x:Name="markGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <controls:Icon
+                    Fill="{TemplateBinding Foreground}"
+                    Grid.Column="0"
+                    Height="{TemplateBinding attach:Switcher.IconHeight}"
+                    Kind="{TemplateBinding attach:Switcher.LeftIcon}"
+                    Margin="0,0,8,0"
+                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                    Visibility="{TemplateBinding attach:Switcher.LeftIcon,
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
                 <ContentPresenter
                     Focusable="False"
+                    Grid.Column="1"
                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                     Margin="{TemplateBinding Padding}"
                     RecognizesAccessKey="True"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                     TextElement.FontSize="14"
-                    TextElement.Foreground="#252C32"
+                    TextElement.Foreground="{TemplateBinding Foreground}"
                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                     x:Name="contentPresenter" />
+                <controls:Icon
+                    Fill="{TemplateBinding Foreground}"
+                    Grid.Column="1"
+                    Height="{TemplateBinding attach:Switcher.IconHeight}"
+                    HorizontalAlignment="Center"
+                    Kind="{TemplateBinding attach:Switcher.Icon}"
+                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                    VerticalAlignment="Center"
+                    Visibility="{TemplateBinding attach:Switcher.Icon,
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Switcher.IconWidth}"
+                    x:Name="Icon" />
+                <controls:Icon
+                    Fill="{TemplateBinding Foreground}"
+                    Grid.Column="2"
+                    Height="{TemplateBinding attach:Switcher.IconHeight}"
+                    Kind="{TemplateBinding attach:Switcher.RightIcon}"
+                    Margin="8,0,0,0"
+                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                    Visibility="{TemplateBinding attach:Switcher.RightIcon,
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -57,9 +114,9 @@
                     <Condition Property="IsPressed" Value="False" />
                 </MultiTrigger.Conditions>
 
-                <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
-                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
+                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource Pr600}" />
+                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource Pr600}" />
+                <Setter Property="Foreground" Value="#F6FCFF" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Pressed  -->
             <MultiTrigger>
@@ -70,9 +127,9 @@
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
 
-                <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
-                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
+                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource Pr700}" />
+                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource Pr700}" />
+                <Setter Property="Foreground" Value="#F6FCFF" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Default  -->
             <MultiTrigger>
@@ -83,9 +140,9 @@
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
 
-                <Setter Property="Background" TargetName="radioButtonBorder" Value="#4094F7" />
-                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#4094F7" />
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
+                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource Pr500}" />
+                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource Pr500}" />
+                <Setter Property="Foreground" Value="{StaticResource Pr50}" />
             </MultiTrigger>
 
             <!--  CHECKED - FALSE | Hover  -->
@@ -137,43 +194,17 @@
                 <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
                 <Setter Property="Opacity" Value="0.5" />
             </MultiTrigger>
+            <Trigger Property="attach:Switcher.Position" Value="First">
+                <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
+            </Trigger>
+            <Trigger Property="attach:Switcher.Position" Value="Middle">
+                <Setter Property="attach:Hint.CornerRadius" Value="0" />
+            </Trigger>
+            <Trigger Property="attach:Switcher.Position" Value="Last">
+                <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
+            </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
-    <Style TargetType="{x:Type RadioButton}" x:Key="SwtFilledFirst">
-        <Setter Property="Background" Value="{StaticResource CleanW}" />
-        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
-        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
-        <Setter Property="Template" Value="{StaticResource SwitcherFilledTemplate}" />
-    </Style>
-    <Style TargetType="{x:Type RadioButton}" x:Key="SwtFilledMiddle">
-        <Setter Property="Background" Value="{StaticResource CleanW}" />
-        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
-        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="attach:Hint.CornerRadius" Value="0" />
-        <Setter Property="Template" Value="{StaticResource SwitcherFilledTemplate}" />
-    </Style>
-    <Style TargetType="{x:Type RadioButton}" x:Key="SwtFilledLast">
-        <Setter Property="Background" Value="{StaticResource CleanW}" />
-        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
-        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
-        <Setter Property="Template" Value="{StaticResource SwitcherFilledTemplate}" />
-    </Style>
-
     <ControlTemplate TargetType="{x:Type RadioButton}" x:Key="SwitcherOutlineTemplate">
         <Border
             Background="{TemplateBinding Background}"
@@ -188,16 +219,57 @@
             Width="{TemplateBinding Width}"
             x:Name="radioButtonBorder">
             <Grid x:Name="markGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <controls:Icon
+                    Fill="{TemplateBinding Foreground}"
+                    Grid.Column="0"
+                    Height="{TemplateBinding attach:Switcher.IconHeight}"
+                    Kind="{TemplateBinding attach:Switcher.LeftIcon}"
+                    Margin="0,0,8,0"
+                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                    Visibility="{TemplateBinding attach:Switcher.LeftIcon,
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
                 <ContentPresenter
                     Focusable="False"
+                    Grid.Column="1"
                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                     Margin="{TemplateBinding Padding}"
                     RecognizesAccessKey="True"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                     TextElement.FontSize="14"
-                    TextElement.Foreground="#252C32"
+                    TextElement.Foreground="{TemplateBinding Foreground}"
                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                     x:Name="contentPresenter" />
+                <controls:Icon
+                    Fill="{TemplateBinding Foreground}"
+                    Grid.Column="1"
+                    Height="{TemplateBinding attach:Switcher.IconHeight}"
+                    HorizontalAlignment="Center"
+                    Kind="{TemplateBinding attach:Switcher.Icon}"
+                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                    VerticalAlignment="Center"
+                    Visibility="{TemplateBinding attach:Switcher.Icon,
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Switcher.IconWidth}"
+                    x:Name="Icon" />
+                <controls:Icon
+                    Fill="{TemplateBinding Foreground}"
+                    Grid.Column="2"
+                    Height="{TemplateBinding attach:Switcher.IconHeight}"
+                    Kind="{TemplateBinding attach:Switcher.RightIcon}"
+                    Margin="8,0,0,0"
+                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                    Visibility="{TemplateBinding attach:Switcher.RightIcon,
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -210,9 +282,10 @@
                     <Condition Property="IsPressed" Value="False" />
                 </MultiTrigger.Conditions>
 
-                <Setter Property="Background" TargetName="radioButtonBorder" Value="#0E73F6" />
-                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0E73F6" />
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
+                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource Pr100}" />
+                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource Pr600}" />
+                <Setter Property="Foreground" Value="{StaticResource Pr800}" />
+                <Setter Property="BorderThickness" Value="2" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Pressed  -->
             <MultiTrigger>
@@ -223,9 +296,10 @@
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
 
-                <Setter Property="Background" TargetName="radioButtonBorder" Value="#0452C8" />
-                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#0452C8" />
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#F6FCFF" />
+                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource Pr100}" />
+                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource Pr700}" />
+                <Setter Property="Foreground" Value="{StaticResource Pr900}" />
+                <Setter Property="BorderThickness" Value="2" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Default  -->
             <MultiTrigger>
@@ -238,7 +312,7 @@
 
                 <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource Pr100}" />
                 <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource Pr500}" />
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Pr700}" />
+                <Setter Property="Foreground" Value="{StaticResource Pr700}" />
                 <Setter Property="BorderThickness" Value="2" />
             </MultiTrigger>
 
@@ -291,40 +365,28 @@
                 <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#B0BABF" />
                 <Setter Property="Opacity" Value="0.5" />
             </MultiTrigger>
+            <Trigger Property="attach:Switcher.Position" Value="First">
+                <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
+            </Trigger>
+            <Trigger Property="attach:Switcher.Position" Value="Middle">
+                <Setter Property="attach:Hint.CornerRadius" Value="0" />
+            </Trigger>
+            <Trigger Property="attach:Switcher.Position" Value="Last">
+                <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
+            </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style TargetType="{x:Type RadioButton}" x:Key="SwtOutlineFirst">
-        <Setter Property="Background" Value="#FFFFFF" />
-        <Setter Property="BorderBrush" Value="#DDE2E4" />
-        <Setter Property="Foreground" Value="#252C32" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
-        <Setter Property="Template" Value="{StaticResource SwitcherOutlineTemplate}" />
+    <Style
+        BasedOn="{StaticResource SwitcherBase}"
+        TargetType="{x:Type RadioButton}"
+        x:Key="SwitcherFilled">
+        <Setter Property="Template" Value="{StaticResource SwitcherFilledTemplate}" />
     </Style>
-    <Style TargetType="{x:Type RadioButton}" x:Key="SwtOutlineMiddle">
-        <Setter Property="Background" Value="#FFFFFF" />
-        <Setter Property="BorderBrush" Value="#DDE2E4" />
-        <Setter Property="Foreground" Value="#252C32" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="attach:Hint.CornerRadius" Value="0" />
-        <Setter Property="Template" Value="{StaticResource SwitcherOutlineTemplate}" />
-    </Style>
-    <Style TargetType="{x:Type RadioButton}" x:Key="SwtOutlineLast">
-        <Setter Property="Background" Value="#FFFFFF" />
-        <Setter Property="BorderBrush" Value="#DDE2E4" />
-        <Setter Property="Foreground" Value="#252C32" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
+    <Style
+        BasedOn="{StaticResource SwitcherBase}"
+        TargetType="{x:Type RadioButton}"
+        x:Key="SwitcherOutline">
         <Setter Property="Template" Value="{StaticResource SwitcherOutlineTemplate}" />
     </Style>
 </ResourceDictionary>

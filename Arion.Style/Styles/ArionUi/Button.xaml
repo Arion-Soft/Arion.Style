@@ -23,9 +23,8 @@
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
             CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-            Name="Border"
-            Padding="{TemplateBinding Padding}">
-            <Grid>
+            Name="Border">
+            <Grid Margin="{TemplateBinding Padding}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -90,6 +89,7 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="BorderBrush" Value="{StaticResource Pr600}" />
                 <Setter Property="Background" Value="{StaticResource Pr600}" />
+                <Setter Property="Cursor" Value="Hand" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
                 <Setter Property="Background" Value="{StaticResource Pr700}" />
@@ -101,6 +101,7 @@
             <Trigger Property="attach:Button.ProgressBarShow" Value="True">
                 <Setter Property="Background" Value="{StaticResource Pr100}" />
                 <Setter Property="Padding" Value="12" />
+                <Setter Property="MinWidth" Value="40" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
@@ -109,6 +110,15 @@
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="First">
+                <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="Middle">
+                <Setter Property="attach:Hint.CornerRadius" Value="0" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="Last">
+                <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -166,7 +176,7 @@
                     Grid.ColumnSpan="3"
                     Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
                     Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
-                    Style="{StaticResource BtnProgressBar}"
+                    Style="{StaticResource BtnCircleProgressBar}"
                     Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
@@ -179,6 +189,7 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
                 <Setter Property="Background" Value="{StaticResource Lg5}" />
+                <Setter Property="Cursor" Value="Hand" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
                 <Setter Property="Background" Value="{StaticResource Lg3}" />
@@ -189,6 +200,7 @@
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarShow" Value="True">
                 <Setter Property="Padding" Value="12" />
+                <Setter Property="MinWidth" Value="40" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
@@ -197,6 +209,15 @@
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="First">
+                <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="Middle">
+                <Setter Property="attach:Hint.CornerRadius" Value="0" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="Last">
+                <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -256,7 +277,7 @@
                     Grid.ColumnSpan="3"
                     Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
                     Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
-                    Style="{StaticResource BtnProgressBar}"
+                    Style="{StaticResource BtnCircleProgressBar}"
                     Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
@@ -268,6 +289,7 @@
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Opacity" TargetName="Border" Value=".04" />
+                <Setter Property="Cursor" Value="Hand" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
                 <Setter Property="Opacity" TargetName="Border" Value=".1" />
@@ -277,6 +299,7 @@
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarShow" Value="True">
                 <Setter Property="Padding" Value="12" />
+                <Setter Property="MinWidth" Value="40" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
@@ -286,17 +309,32 @@
             <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
                 <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
             </Trigger>
+            <Trigger Property="attach:Button.Position" Value="First">
+                <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="Middle">
+                <Setter Property="attach:Hint.CornerRadius" Value="0" />
+            </Trigger>
+            <Trigger Property="attach:Button.Position" Value="Last">
+                <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
+            </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
     <Style TargetType="{x:Type Button}" x:Key="BtnBase">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
-        <Setter Property="MinWidth" Value="40" />
+        <Setter Property="MinWidth" Value="20" />
+        <Setter Property="MinHeight" Value="20" />
         <Setter Property="Height" Value="40" />
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Padding" Value="16,8" />
+        <Setter Property="attach:Button.IconHeight" Value="15" />
+        <Setter Property="attach:Button.IconWidth" Value="15" />
+        <Setter Property="attach:Hint.CornerRadius" Value="6" />
         <Setter Property="FocusVisualStyle" Value="{StaticResource BtnFocusVisual}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="0" />
     </Style>
 
     <Style
@@ -306,12 +344,7 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="{StaticResource Pr500}" />
         <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
-        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Template" Value="{StaticResource FilledTemplate}" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="attach:Button.IconHeight" Value="15" />
-        <Setter Property="attach:Button.IconWidth" Value="15" />
-        <Setter Property="attach:Hint.CornerRadius" Value="6" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnBase}"
@@ -322,10 +355,6 @@
         <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Template" Value="{StaticResource OutlineTemplate}" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="attach:Button.IconHeight" Value="15" />
-        <Setter Property="attach:Button.IconWidth" Value="15" />
-        <Setter Property="attach:Hint.CornerRadius" Value="6" />
     </Style>
     <Style
         BasedOn="{StaticResource BtnBase}"
@@ -334,54 +363,7 @@
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#002D46" />
         <Setter Property="BorderBrush" Value="#002D46" />
-        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Template" Value="{StaticResource TextTemplate}" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="attach:Button.IconHeight" Value="15" />
-        <Setter Property="attach:Button.IconWidth" Value="15" />
-        <Setter Property="attach:Hint.CornerRadius" Value="6" />
-    </Style>
-
-    <!--  GROUPED FILLED  -->
-
-    <Style
-        BasedOn="{StaticResource BtnFilled}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupFilledFirst">
-        <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
-    </Style>
-    <Style
-        BasedOn="{StaticResource BtnFilled}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupFilledMiddle">
-        <Setter Property="attach:Hint.CornerRadius" Value="0" />
-    </Style>
-    <Style
-        BasedOn="{StaticResource BtnFilled}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupFilledLast">
-        <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
-    </Style>
-
-    <!--  GROUPED OUTLINE  -->
-
-    <Style
-        BasedOn="{StaticResource BtnOutline}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupOutlineFirst">
-        <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
-    </Style>
-    <Style
-        BasedOn="{StaticResource BtnOutline}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupOutlineMiddle">
-        <Setter Property="attach:Hint.CornerRadius" Value="0" />
-    </Style>
-    <Style
-        BasedOn="{StaticResource BtnOutline}"
-        TargetType="{x:Type Button}"
-        x:Key="GroupOutlineLast">
-        <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
     </Style>
 
     <!--  Inline alert buttons  -->

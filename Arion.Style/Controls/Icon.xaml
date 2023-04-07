@@ -12,7 +12,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Path
         Data="{Binding ElementName=Root, Path=Image, Mode=TwoWay}"
-        Fill="{Binding ElementName=Root, Path=Fill, Mode=TwoWay, Delay=2000}"
+        Fill="{Binding ElementName=Root, Path=Fill, Mode=TwoWay, Delay=4000}"
         Height="{Binding ElementName=Root, Path=Height}"
         HorizontalAlignment="Stretch"
         Name="ImageTest"

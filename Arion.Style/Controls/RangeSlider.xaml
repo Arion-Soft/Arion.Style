@@ -30,15 +30,19 @@
             VerticalAlignment="Center"
             Width="{Binding ElementName=Root, Path=Width}" />
 
+        <!--  Background="CornflowerBlue"  -->
         <Border
-            Background="CornflowerBlue"
+            Background="Transparent"
             Grid.Row="1"
             Height="4"
             Margin="{Binding ElementName=Root, Path=CenterMargin}"
             VerticalAlignment="Center" />
 
-        <Ellipse
-            Fill="{Binding ElementName=Root, Path=LeftThumbBackground}"
+        <Border
+            Background="{StaticResource Lg5}"
+            BorderBrush="{StaticResource Mg5}"
+            BorderThickness="{Binding ElementName=Root, Path=LeftThumbBorder}"
+            CornerRadius="4,0,0,4"
             Grid.Row="1"
             Height="{Binding ElementName=Root, Path=LeftThumbHeight}"
             HorizontalAlignment="Left"
@@ -48,11 +52,12 @@
             MouseLeave="Thumb1_OnMouseLeave"
             MouseUp="LeftSlider_OnMouseUp"
             Name="Thumb1"
-            Stroke="{Binding ElementName=Root, Path=LeftThumbBorderBrush}"
-            StrokeThickness="{Binding ElementName=Root, Path=LeftThumbBorder}"
             Width="{Binding ElementName=Root, Path=LeftThumbWidth}" />
-        <Ellipse
-            Fill="{Binding ElementName=Root, Path=RightThumbBackground}"
+        <Border
+            Background="{StaticResource Lg5}"
+            BorderBrush="{StaticResource Mg5}"
+            BorderThickness="{Binding ElementName=Root, Path=RightThumbBorder}"
+            CornerRadius="0,4,4,0"
             Grid.Row="1"
             Height="{Binding ElementName=Root, Path=RightThumbHeight}"
             HorizontalAlignment="Right"
@@ -62,8 +67,6 @@
             MouseLeave="Thumb2_OnMouseLeave"
             MouseUp="RightSlider_OnMouseUp"
             Name="Thumb2"
-            Stroke="{Binding ElementName=Root, Path=RightThumbBorderBrush}"
-            StrokeThickness="{Binding ElementName=Root, Path=RightThumbBorder}"
             Width="{Binding ElementName=Root, Path=RightThumbWidth}" />
 
         <Border
