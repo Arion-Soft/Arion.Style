@@ -17,6 +17,10 @@
         <Setter Property="BorderBrush" Value="#B0BABF" />
         <Setter Property="Background" Value="#F6F8F9" />
         <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Width" Value="25" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="attach:CheckBox.MarkHeight" Value="11" />
+        <Setter Property="attach:CheckBox.MarkWidth" Value="15" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type CheckBox}">
@@ -37,20 +41,20 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="2"
                             CornerRadius="4"
-                            Height="25"
+                            Height="{TemplateBinding Height}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                            Width="25"
+                            Width="{TemplateBinding Width}"
                             x:Name="checkBoxBorder">
                             <Grid x:Name="markGrid">
                                 <Path
                                     Data="M11 0C10.72 0 10.47 0.11 10.29 0.29L4 6.59L1.71 4.29C1.53 4.11 1.28 4 1 4C0.45 4 0 4.45 0 5C0 5.28 0.11 5.53 0.29 5.71L3.29 8.71C3.47 8.89 3.72 9 4 9C4.28 9 4.53 8.89 4.71 8.71L11.71 1.71C11.89 1.53 12 1.28 12 1C12 0.45 11.55 0 11 0Z"
                                     Fill="{StaticResource CleanW}"
-                                    Height="11"
+                                    Height="{TemplateBinding attach:CheckBox.MarkHeight}"
                                     Margin="5"
                                     Opacity="0"
                                     Stretch="Uniform"
-                                    Width="15"
+                                    Width="{TemplateBinding attach:CheckBox.MarkWidth}"
                                     x:Name="Mark" />
                             </Grid>
                         </Border>
