@@ -59,8 +59,9 @@ namespace Arion.Theme.Test
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            Slider65535.SetLowerValue(0);
-            Slider65535.SetUpperValue(100);
+            // Slider65535.SetLowerValue(10000);
+            // Slider65535.SetUpperValue(60321);
+            Slider65535.SetValues(10000, 60321);
         }
 
         private void BtnProgress_OnClick(object sender, RoutedEventArgs e)

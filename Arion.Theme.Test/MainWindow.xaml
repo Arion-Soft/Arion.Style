@@ -1835,7 +1835,7 @@
                     Grid.Column="0"
                     Grid.Row="4"
                     LowerValue="{Binding ElementName=SliderTest, Path=LowerValue}"
-                    Maximum="100"
+                    Maximum="65535"
                     Minimum="0"
                     Name="Slider65535"
                     UpperValue="{Binding ElementName=SliderTest, Path=UpperValue}"
@@ -1844,11 +1844,11 @@
                 <Grid Grid.Column="0" Grid.Row="5">
                     <TextBox
                         HorizontalAlignment="Left"
-                        Text="{Binding ElementName=RangeSlider, Path=LowerValue}"
+                        Text="{Binding ElementName=Slider65535, Path=LowerValue}"
                         Width="100" />
                     <TextBox
                         HorizontalAlignment="Right"
-                        Text="{Binding ElementName=RangeSlider, Path=UpperValue}"
+                        Text="{Binding ElementName=Slider65535, Path=UpperValue}"
                         Width="100" />
                 </Grid>
 
@@ -2812,12 +2812,38 @@
         </TabItem>
         <TabItem Header="Tooltip">
             <!--  TOOLTIPS  -->
-            <Button
-                Content="asd"
-                Height="50"
-                ToolTip="Hello, i'm tooltip"
-                Width="200"
-                d:IsLocked="True" />
+            <Grid>
+                <Button
+                    Content="Press right mouse button for context menu"
+                    Height="50"
+                    ToolTip="Hello, i'm tooltip"
+                    Width="200"
+                    d:IsLocked="True">
+                    <Button.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Text Text" IsCheckable="True" />
+                            <MenuItem Header="Text Text Text">
+                                <MenuItem Header="Text" IsCheckable="True" />
+                                <MenuItem Header="Text" />
+                                <MenuItem Header="Text" />
+                            </MenuItem>
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text" />
+                            <MenuItem Header="Text Text Text Text Text" IsEnabled="False" />
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+            </Grid>
         </TabItem>
 
         <TabItem Header="OptionControl">
@@ -2954,6 +2980,59 @@
                     Grid.Column="1"
                     Grid.Row="5"
                     Margin="5" />
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Menu">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Menu Grid.Row="1" IsMainMenu="True">
+                    <MenuItem Header="File">
+                        <MenuItem Header="New..." />
+                        <MenuItem Header="Open" />
+                        <MenuItem Header="Save All" />
+                        <MenuItem Header="Reload All from Disk" />
+                    </MenuItem>
+                    <MenuItem Header="Edit" />
+                    <MenuItem Header="View" />
+                    <MenuItem Header="Navigate" IsEnabled="False" />
+                    <MenuItem Header="Code" />
+                    <MenuItem Header="Refactor" />
+                    <MenuItem Header="Build" />
+                    <MenuItem Header="Run" />
+                    <MenuItem Header="Test" />
+                    <MenuItem Header="Tools" />
+                    <MenuItem Header="Git" />
+                    <MenuItem Header="Window" />
+                    <MenuItem Header="Help" />
+                </Menu>
+
+                <Label
+                    Content="Menu"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Padding="0"
+                    Style="{StaticResource Lbl}"
+                    VerticalAlignment="Top"
+                    Width="Auto" />
+
             </Grid>
         </TabItem>
     </TabControl>
