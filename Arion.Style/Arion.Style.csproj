@@ -259,6 +259,7 @@
     <Page Include="Styles\ArionUi\Icons.xaml" />
     <Page Include="Styles\ArionUi\Label.xaml" />
     <Page Include="Styles\ArionUi\ListView.xaml" />
+    <Page Include="Styles\ArionUi\Menu.xaml" />
     <Page Include="Styles\ArionUi\Page.xaml" />
     <Page Include="Styles\ArionUi\PasswordBox.xaml" />
     <Page Include="Styles\ArionUi\Popup.xaml" />

@@ -800,9 +800,24 @@ namespace Arion.Style.Controls
         public void SetUpperValue(double value)
         {
             UpperValue = value;
-            var percent = Math.Abs(Math.Round(value * 100 / Maximum, 2) - 100);
-            var margin = Math.Round(percent * (Track.Width) / 100, 2);
+            var percent = Math.Abs(Math.Round(value * 100 / Maximum, 3) - 100);
+            var margin = Math.Round(percent * Track.Width / 100, 3);
             RightThumbMargin = new Thickness(0, 0, margin-5, 0);
+            MoveCenterThumbAndFill();
+        }
+
+        public void SetValues(double lowerValue, double upperValue)
+        {
+            LowerValue = lowerValue;
+            var lowerPercent = lowerValue * 100 / Maximum;
+            var lowerMargin = lowerPercent * Track.Width / 100;
+            LeftThumbMargin = new Thickness(lowerMargin-5, 0, 0, 0);
+            
+            UpperValue = upperValue;
+            var upperPercent = Math.Abs(Math.Round(upperValue * 100 / Maximum, 3) - 100);
+            var upperMargin = Math.Round(upperPercent * Track.Width / 100, 3);
+            RightThumbMargin = new Thickness(0, 0, upperMargin-5, 0);
+            
             MoveCenterThumbAndFill();
         }
 
