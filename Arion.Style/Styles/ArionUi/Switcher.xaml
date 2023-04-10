@@ -33,6 +33,8 @@
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="40" />
+        <Setter Property="Padding" Value="16,8" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="attach:Switcher.IconHeight" Value="15" />
         <Setter Property="attach:Switcher.IconWidth" Value="15" />
     </Style>
@@ -46,7 +48,7 @@
             Height="{TemplateBinding Height}"
             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
             Margin="0"
-            Padding="16,8"
+            Padding="{TemplateBinding Padding}"
             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
             Width="{TemplateBinding Width}"
             x:Name="radioButtonBorder">
@@ -74,7 +76,7 @@
                     Margin="{TemplateBinding Padding}"
                     RecognizesAccessKey="True"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                    TextElement.FontSize="14"
+                    TextElement.FontSize="{TemplateBinding FontSize}"
                     TextElement.Foreground="{TemplateBinding Foreground}"
                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                     x:Name="contentPresenter" />
@@ -214,7 +216,7 @@
             Height="{TemplateBinding Height}"
             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
             Margin="0"
-            Padding="16,8"
+            Padding="{TemplateBinding Padding}"
             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
             Width="{TemplateBinding Width}"
             x:Name="radioButtonBorder">
@@ -242,7 +244,7 @@
                     Margin="{TemplateBinding Padding}"
                     RecognizesAccessKey="True"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                    TextElement.FontSize="14"
+                    TextElement.FontSize="{TemplateBinding FontSize}"
                     TextElement.Foreground="{TemplateBinding Foreground}"
                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                     x:Name="contentPresenter" />
