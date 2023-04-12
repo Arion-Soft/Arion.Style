@@ -58,6 +58,7 @@
     <Compile Include="AttachedProperties\ProgressBar.cs" />
     <Compile Include="AttachedProperties\Switcher.cs" />
     <Compile Include="AttachedProperties\TextBox.cs" />
+    <Compile Include="Commands\ClearText.cs" />
     <Compile Include="Controls\Breadcrumb.xaml.cs">
       <DependentUpon>Breadcrumb.xaml</DependentUpon>
     </Compile>
@@ -140,7 +141,6 @@
     <Compile Include="Converters\RangeLengthConverter.cs" />
     <Compile Include="Converters\RemoveAlphaBrushConverter.cs" />
     <Compile Include="Converters\RoundProgressPathConverter.cs" />
-    <Compile Include="Converters\ShadowConverter.cs" />
     <Compile Include="Converters\ShadowEdgeConverter.cs" />
     <Compile Include="Converters\SizeToRectConverter.cs" />
     <Compile Include="Converters\SliderToolTipConverter.cs" />
@@ -148,7 +148,6 @@
     <Compile Include="Converters\SnackbarActionButtonPlacementModeConverter.cs" />
     <Compile Include="Converters\SnackbarMessageTypeConverter.cs" />
     <Compile Include="Converters\StringLengthValueConverter.cs" />
-    <Compile Include="Converters\TextFieldClearButtonVisibilityConverter.cs" />
     <Compile Include="Converters\TextFieldHintVisibilityConverter.cs" />
     <Compile Include="Converters\TextFieldPrefixTextVisibilityConverter.cs" />
     <Compile Include="Converters\TextVisibilityConverter.cs" />
@@ -253,16 +252,18 @@
     <Page Include="Styles\ArionUi\ComboBox.xaml" />
     <Page Include="Styles\ArionUi\DataGrid.xaml" />
     <Page Include="Styles\ArionUi\DisplayControl.xaml" />
+    <Page Include="Styles\ArionUi\DocumentViewer.xaml" />
     <Page Include="Styles\ArionUi\Expander.xaml" />
     <Page Include="Styles\ArionUi\FocusVisual.xaml" />
     <Page Include="Styles\ArionUi\FontFamily.xaml" />
+    <Page Include="Styles\ArionUi\GridSplitter.xaml" />
+    <Page Include="Styles\ArionUi\GroupBox.xaml" />
     <Page Include="Styles\ArionUi\Icons.xaml" />
     <Page Include="Styles\ArionUi\Label.xaml" />
     <Page Include="Styles\ArionUi\ListView.xaml" />
     <Page Include="Styles\ArionUi\Menu.xaml" />
     <Page Include="Styles\ArionUi\Page.xaml" />
     <Page Include="Styles\ArionUi\PasswordBox.xaml" />
-    <Page Include="Styles\ArionUi\Popup.xaml" />
     <Page Include="Styles\ArionUi\ProgressBar.xaml" />
     <Page Include="Styles\ArionUi\RadioButton.xaml" />
     <Page Include="Styles\ArionUi\RangeSlider.xaml" />

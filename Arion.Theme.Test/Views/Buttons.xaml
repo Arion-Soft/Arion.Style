@@ -1,0 +1,398 @@
+﻿<UserControl
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Test.Views.Buttons"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Arion.Theme.Test.ViewModel"
+    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.DataContext>
+        <vm:ButtonsViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Content="Buttons"
+            FontSize="38"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            RenderTransformOrigin="0.5,0.5"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+        <Label
+            Content="Filled"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+        <Label
+            Content="Outline"
+            FontSize="32"
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+        <Label
+            Content="Text"
+            FontSize="32"
+            Grid.Column="2"
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="2"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnFilled}" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnFilled}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="3"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.IconHeight="30"
+                wpf:Button.IconWidth="30"
+                wpf:Button.LeftIcon="LinearFunction" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.LeftIcon="LinearFunctionAuto" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="4"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Foreground="{Binding ElementName=BtnTest, Path=Foreground}"
+                Margin="5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.RightIcon="SinFunction" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.RightIcon="ArcTgFunction" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="5"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Name="BtnTest"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.Icon="User" />
+            <Button
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.Icon="User" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="6"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.ProgressBarMaximum="100"
+                wpf:Button.ProgressBarMinimum="0"
+                wpf:Button.ProgressBarShow="True"
+                wpf:Button.ProgressBarType="Circle"
+                wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
+            <Button
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.ProgressBarMaximum="100"
+                wpf:Button.ProgressBarMinimum="0"
+                wpf:Button.ProgressBarShow="True"
+                wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
+        </StackPanel>
+
+        <Slider
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="7"
+            Maximum="100"
+            Minimum="0"
+            x:Name="SliderBtn" />
+
+        <Separator
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="16" />
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="17"
+            Orientation="Horizontal">
+            <Button
+                Content="First"
+                Margin="0,5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.Position="First" />
+            <Button
+                Content="Middle"
+                Margin="0,5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.Position="Middle" />
+            <Button
+                Content="Last"
+                Margin="0,5,10,5"
+                Style="{StaticResource BtnFilled}"
+                wpf:Button.Position="Last" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="2"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnOutline}" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnOutline}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="3"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnOutline}"
+                wpf:Button.LeftIcon="User" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnOutline}"
+                wpf:Button.LeftIcon="User" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="4"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnOutline}"
+                wpf:Button.RightIcon="User" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnOutline}"
+                wpf:Button.RightIcon="User" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="5"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Name="BtnTest2"
+                Style="{StaticResource BtnOutline}"
+                wpf:Button.Icon="User" />
+            <Button
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnOutline}"
+                wpf:Button.Icon="User" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="6"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Style="{StaticResource BtnOutline}"
+                Width="40"
+                wpf:Button.ProgressBarMaximum="100"
+                wpf:Button.ProgressBarMinimum="0"
+                wpf:Button.ProgressBarShow="True"
+                wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
+            <Button
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnOutline}"
+                wpf:Button.ProgressBarMaximum="100"
+                wpf:Button.ProgressBarMinimum="0"
+                wpf:Button.ProgressBarShow="True"
+                wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="17"
+            Orientation="Horizontal">
+            <Button
+                Content="First"
+                Margin="0,5"
+                wpf:Button.Position="First" />
+            <Button
+                Content="Middle"
+                Margin="0,5"
+                wpf:Button.Position="Middle" />
+            <Button
+                Content="Last"
+                Margin="0,5"
+                wpf:Button.Position="Last" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="2"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnText}" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnText}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="3"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnText}"
+                wpf:Button.LeftIcon="User" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnText}"
+                wpf:Button.LeftIcon="User" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="4"
+            Orientation="Horizontal">
+            <Button
+                Content="Button"
+                Margin="5"
+                Style="{StaticResource BtnText}"
+                wpf:Button.RightIcon="User" />
+            <Button
+                Content="Button"
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnText}"
+                wpf:Button.RightIcon="User" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="5"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Name="BtnTest3"
+                Style="{StaticResource BtnText}"
+                wpf:Button.Icon="User" />
+            <Button
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnText}"
+                wpf:Button.Icon="User" />
+        </StackPanel>
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="6"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Style="{StaticResource BtnText}"
+                wpf:Button.ProgressBarMaximum="100"
+                wpf:Button.ProgressBarMinimum="0"
+                wpf:Button.ProgressBarShow="True"
+                wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
+            <Button
+                IsEnabled="False"
+                Margin="5"
+                Style="{StaticResource BtnText}"
+                wpf:Button.ProgressBarMaximum="100"
+                wpf:Button.ProgressBarMinimum="0"
+                wpf:Button.ProgressBarShow="True"
+                wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

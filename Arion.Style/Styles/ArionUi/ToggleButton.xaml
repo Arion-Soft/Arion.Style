@@ -472,7 +472,8 @@
     <Style TargetType="{x:Type ToggleButton}" x:Key="ToggleButtonBaseLg">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="Golos UI VF" />
-        <Setter Property="MinWidth" Value="40" />
+        <Setter Property="MinWidth" Value="20" />
+        <Setter Property="MinHeight" Value="20" />
         <Setter Property="Height" Value="40" />
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Padding" Value="16,8" />

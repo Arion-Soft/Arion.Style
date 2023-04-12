@@ -1,0 +1,43 @@
+﻿<UserControl
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Test.Views.Tooltips"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Arion.Theme.Test.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Button
+            Content="Press right mouse button for context menu"
+            Height="50"
+            ToolTip="Hello, i'm tooltip"
+            Width="200"
+            d:IsLocked="True">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Text Text" IsCheckable="True" />
+                    <MenuItem Header="Text Text Text">
+                        <MenuItem Header="Text" IsCheckable="True" />
+                        <MenuItem Header="Text" />
+                        <MenuItem Header="Text" />
+                    </MenuItem>
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text" />
+                    <MenuItem Header="Text Text Text Text Text" IsEnabled="False" />
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+    </Grid>
+</UserControl>

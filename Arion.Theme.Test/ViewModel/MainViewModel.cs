@@ -5,15 +5,6 @@ namespace Arion.Theme.Test.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-        public Person Person { get; set; }
-
-        public MainViewModel()
-        {
-            Person = new Person()
-            {
-                Surname = "Малахов",
-                Age = 15
-            };
-        }
+        
     }
 }

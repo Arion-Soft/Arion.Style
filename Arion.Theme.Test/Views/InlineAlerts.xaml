@@ -1,0 +1,71 @@
+﻿<UserControl
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Test.Views.InlineAlerts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:controls="clr-namespace:Arion.Style.Controls;assembly=Arion.Style"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Arion.Theme.Test.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label
+            Content="Inline Alert"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <controls:InlineAlert
+            Caption="Тестовый заголовок"
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            Margin="5"
+            Message="Тестовое сообщение"
+            PrimaryBtnContent="Action 1"
+            PrimaryClick="InlineAlert_OnPrimaryClick"
+            SecondaryBtnContent="Action 2"
+            SecondaryClick="InlineAlert_OnSecondaryClick"
+            Type="Info" />
+        <controls:InlineAlert
+            Caption="Тестовый заголовок"
+            Grid.Row="2"
+            HorizontalAlignment="Left"
+            Margin="5"
+            Message="Тестовое сообщение"
+            PrimaryBtnContent="Action 1"
+            Type="Warning" />
+        <controls:InlineAlert
+            Caption="Тестовый заголовок"
+            Grid.Row="3"
+            HorizontalAlignment="Left"
+            Margin="5"
+            Message="Тестовое сообщение"
+            SecondaryBtnContent="Action 2"
+            Type="Danger" />
+        <controls:InlineAlert
+            Caption="Тестовый заголовок"
+            Grid.Row="4"
+            HorizontalAlignment="Left"
+            Margin="5"
+            Message="Let's just say this; ideally, it doesn't have a lot of text. But, if you really need a lot of text, it will look like this."
+            Type="Success" />
+    </Grid>
+</UserControl>

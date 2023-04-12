@@ -34,11 +34,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=6.0.1.278, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.6.0.1\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Build" />
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Tasks.v4.0" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="ShowMeTheXAML, Version=2.0.0.62, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ShowMeTheXAML.2.0.0\lib\net472\ShowMeTheXAML.dll</HintPath>
+    </Reference>
+    <Reference Include="ShowMeTheXAML.AvalonEdit, Version=2.0.0.62, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ShowMeTheXAML.AvalonEdit.2.0.0\lib\net472\ShowMeTheXAML.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -58,7 +67,86 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModel\ButtonsViewModel.cs" />
+    <Compile Include="ViewModel\CheckBoxViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\TextBoxViewModel.cs" />
+    <Compile Include="Views\Breadcrumbs.xaml.cs">
+      <DependentUpon>Breadcrumbs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Buttons.xaml.cs">
+      <DependentUpon>Buttons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckBoxes.xaml.cs">
+      <DependentUpon>CheckBoxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colors.xaml.cs">
+      <DependentUpon>Colors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ComboBoxes.xaml.cs">
+      <DependentUpon>ComboBoxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DisplayControls.xaml.cs">
+      <DependentUpon>DisplayControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expanders.xaml.cs">
+      <DependentUpon>Expanders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IconPack.xaml.cs">
+      <DependentUpon>IconPack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InlineAlerts.xaml.cs">
+      <DependentUpon>InlineAlerts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Labels.xaml.cs">
+      <DependentUpon>Labels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListViews.xaml.cs">
+      <DependentUpon>ListViews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PasswordBox.xaml.cs">
+      <DependentUpon>PasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProgressBars.xaml.cs">
+      <DependentUpon>ProgressBars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RadioButtons.xaml.cs">
+      <DependentUpon>RadioButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Rangers.xaml.cs">
+      <DependentUpon>Rangers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shadows.xaml.cs">
+      <DependentUpon>Shadows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sliders.xaml.cs">
+      <DependentUpon>Sliders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steppers.xaml.cs">
+      <DependentUpon>Steppers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Switchers.xaml.cs">
+      <DependentUpon>Switchers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tables.xaml.cs">
+      <DependentUpon>Tables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs.xaml.cs">
+      <DependentUpon>Tabs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TextBox.xaml.cs">
+      <DependentUpon>TextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TimeInputs.xaml.cs">
+      <DependentUpon>TimeInputs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToggleButtons.xaml.cs">
+      <DependentUpon>ToggleButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tooltips.xaml.cs">
+      <DependentUpon>Tooltips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XamlDisplayEx.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +159,31 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Breadcrumbs.xaml" />
+    <Page Include="Views\Buttons.xaml" />
+    <Page Include="Views\CheckBoxes.xaml" />
+    <Page Include="Views\Colors.xaml" />
+    <Page Include="Views\ComboBoxes.xaml" />
+    <Page Include="Views\DisplayControls.xaml" />
+    <Page Include="Views\Expanders.xaml" />
+    <Page Include="Views\IconPack.xaml" />
+    <Page Include="Views\InlineAlerts.xaml" />
+    <Page Include="Views\Labels.xaml" />
+    <Page Include="Views\ListViews.xaml" />
+    <Page Include="Views\PasswordBox.xaml" />
+    <Page Include="Views\ProgressBars.xaml" />
+    <Page Include="Views\RadioButtons.xaml" />
+    <Page Include="Views\Rangers.xaml" />
+    <Page Include="Views\Shadows.xaml" />
+    <Page Include="Views\Sliders.xaml" />
+    <Page Include="Views\Steppers.xaml" />
+    <Page Include="Views\Switchers.xaml" />
+    <Page Include="Views\Tables.xaml" />
+    <Page Include="Views\Tabs.xaml" />
+    <Page Include="Views\TextBox.xaml" />
+    <Page Include="Views\TimeInputs.xaml" />
+    <Page Include="Views\ToggleButtons.xaml" />
+    <Page Include="Views\Tooltips.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Person.cs" />
@@ -102,5 +215,7 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
     </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets'))" />
   </Target>
+  <Import Project="..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets" Condition="Exists('..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets')" />
 </Project>

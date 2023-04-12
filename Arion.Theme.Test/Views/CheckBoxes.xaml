@@ -1,0 +1,87 @@
+﻿<UserControl
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Test.Views.CheckBoxes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Arion.Theme.Test.ViewModel"
+    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.DataContext>
+        <vm:CheckBoxViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label
+            Content="CheckBox"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="1"
+            Orientation="Horizontal">
+            <CheckBox
+                Content="CheckBox"
+                Margin="5"
+                wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            <CheckBox
+                Content="CheckBox"
+                IsEnabled="False"
+                Margin="5"
+                wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="2"
+            Orientation="Horizontal">
+            <CheckBox
+                Content="CheckBox"
+                IsChecked="True"
+                Margin="5" />
+            <CheckBox
+                Content="CheckBox"
+                IsChecked="True"
+                IsEnabled="False"
+                Margin="5" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="3"
+            Orientation="Horizontal">
+            <CheckBox
+                Content="CheckBox"
+                IsChecked="{x:Null}"
+                IsThreeState="True"
+                Margin="5" />
+            <CheckBox
+                Content="CheckBox"
+                IsChecked="{x:Null}"
+                IsEnabled="False"
+                IsThreeState="True"
+                Margin="5" />
+        </StackPanel>
+    </Grid>
+</UserControl>
