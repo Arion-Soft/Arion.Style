@@ -171,9 +171,7 @@
         <TabItem Header="Password box">
             <views:PasswordBox />
         </TabItem>
-        <TabItem Header="Progress bar">
-            
-        </TabItem>
+        <TabItem Header="Progress bar" />
         <TabItem Header="Radio button">
             <!--  RADIO BUTTONS  -->
             <Grid>
