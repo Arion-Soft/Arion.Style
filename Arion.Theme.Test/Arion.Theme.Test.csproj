@@ -87,6 +87,9 @@
     <Compile Include="Views\ComboBoxes.xaml.cs">
       <DependentUpon>ComboBoxes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DatePicker.xaml.cs">
+      <DependentUpon>DatePicker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DisplayControls.xaml.cs">
       <DependentUpon>DisplayControls.xaml</DependentUpon>
     </Compile>
@@ -165,6 +168,7 @@
     <Page Include="Views\CheckBoxes.xaml" />
     <Page Include="Views\Colors.xaml" />
     <Page Include="Views\ComboBoxes.xaml" />
+    <Page Include="Views\DatePicker.xaml" />
     <Page Include="Views\DisplayControls.xaml" />
     <Page Include="Views\Expanders.xaml" />
     <Page Include="Views\IconPack.xaml" />

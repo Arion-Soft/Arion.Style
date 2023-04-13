@@ -353,37 +353,7 @@
         </TabItem>
 
         <TabItem Header="Date picker">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-
-                <Label
-                    Content="DatePicker"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-
-
-            </Grid>
+            <views:DatePicker />
         </TabItem>
     </TabControl>
 </Window>
