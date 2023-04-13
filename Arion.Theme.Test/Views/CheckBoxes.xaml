@@ -1,11 +1,12 @@
 ﻿<UserControl
-    d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignHeight="1000"
+    d:DesignWidth="1900"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.CheckBoxes"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:vm="clr-namespace:Arion.Theme.Test.ViewModel"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -41,47 +42,67 @@
             Grid.Column="0"
             Grid.Row="1"
             Orientation="Horizontal">
-            <CheckBox
-                Content="CheckBox"
+            <smtx:XamlDisplay
                 Margin="5"
-                wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
-            <CheckBox
-                Content="CheckBox"
-                IsEnabled="False"
+                Style="{StaticResource Xaml}"
+                UniqueKey="CheckBox1">
+                <CheckBox Content="CheckBox" wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay
                 Margin="5"
-                wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+                Style="{StaticResource Xaml}"
+                UniqueKey="CheckBox2">
+                <CheckBox
+                    Content="CheckBox"
+                    IsEnabled="False"
+                    wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
         </StackPanel>
 
         <StackPanel
             Grid.Column="0"
             Grid.Row="2"
             Orientation="Horizontal">
-            <CheckBox
-                Content="CheckBox"
-                IsChecked="True"
-                Margin="5" />
-            <CheckBox
-                Content="CheckBox"
-                IsChecked="True"
-                IsEnabled="False"
-                Margin="5" />
+            <smtx:XamlDisplay
+                Margin="5"
+                Style="{StaticResource Xaml}"
+                UniqueKey="CheckBox3">
+                <CheckBox Content="CheckBox" IsChecked="True" />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay
+                Margin="5"
+                Style="{StaticResource Xaml}"
+                UniqueKey="CheckBox4">
+                <CheckBox
+                    Content="CheckBox"
+                    IsChecked="True"
+                    IsEnabled="False" />
+            </smtx:XamlDisplay>
         </StackPanel>
 
         <StackPanel
             Grid.Column="0"
             Grid.Row="3"
             Orientation="Horizontal">
-            <CheckBox
-                Content="CheckBox"
-                IsChecked="{x:Null}"
-                IsThreeState="True"
-                Margin="5" />
-            <CheckBox
-                Content="CheckBox"
-                IsChecked="{x:Null}"
-                IsEnabled="False"
-                IsThreeState="True"
-                Margin="5" />
+            <smtx:XamlDisplay
+                Margin="5"
+                Style="{StaticResource Xaml}"
+                UniqueKey="CheckBox5">
+                <CheckBox
+                    Content="CheckBox"
+                    IsChecked="{x:Null}"
+                    IsThreeState="True" />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay
+                Margin="5"
+                Style="{StaticResource Xaml}"
+                UniqueKey="CheckBox6">
+                <CheckBox
+                    Content="CheckBox"
+                    IsChecked="{x:Null}"
+                    IsEnabled="False"
+                    IsThreeState="True" />
+            </smtx:XamlDisplay>
         </StackPanel>
     </Grid>
 </UserControl>

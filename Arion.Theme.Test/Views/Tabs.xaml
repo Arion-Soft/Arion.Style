@@ -1,6 +1,6 @@
 ﻿<UserControl
-    d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.Tabs"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -8,5 +8,55 @@
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label
+            Content="Tabs"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <DockPanel
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Grid.Row="1">
+            <TabControl DockPanel.Dock="Left" TabStripPlacement="Left">
+                <TabItem Header="Head 1 Content" />
+                <TabItem Header="Head 2" />
+                <TabItem Header="Head 3" />
+                <TabItem Header="Head 4" />
+            </TabControl>
+            <TabControl DockPanel.Dock="Top" TabStripPlacement="Top">
+                <TabItem Header="Head 1" />
+                <TabItem Header="Head 2" />
+                <TabItem Header="Head 3" />
+                <TabItem Header="Head 4" />
+            </TabControl>
+            <TabControl DockPanel.Dock="Right" TabStripPlacement="Right">
+                <TabItem Header="Head 1" />
+                <TabItem Header="Head 2" />
+                <TabItem Header="Head 3" />
+                <TabItem Header="Head 4" />
+            </TabControl>
+            <TabControl DockPanel.Dock="Bottom" TabStripPlacement="Bottom">
+                <TabItem Header="Head 1" />
+                <TabItem Header="Head 2" />
+                <TabItem Header="Head 3" />
+                <TabItem Header="Head 4" />
+            </TabControl>
+        </DockPanel>
+    </Grid>
 </UserControl>

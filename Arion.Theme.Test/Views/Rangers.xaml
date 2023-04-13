@@ -1,12 +1,96 @@
 ﻿<UserControl
-    d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignHeight="1000"
+    d:DesignWidth="1900"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.Rangers"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:controls="clr-namespace:Arion.Style.Controls;assembly=Arion.Style"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label
+            Content="Range slider"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <controls:RangeSlider
+            Grid.Column="0"
+            Grid.Row="1"
+            Maximum="65535"
+            Minimum="0"
+            Name="RangeSlider"
+            Width="222" />
+        <controls:RangeSlider
+            Grid.Column="0"
+            Grid.Row="2"
+            Maximum="100"
+            Minimum="0"
+            Width="300" />
+        <controls:RangeSlider
+            Grid.Column="0"
+            Grid.Row="3"
+            Maximum="100"
+            Minimum="0"
+            ShowValues="True"
+            Width="300" />
+        <controls:RangeSlider
+            Grid.Column="0"
+            Grid.Row="4"
+            LowerValue="{Binding ElementName=SliderTest, Path=LowerValue}"
+            Maximum="65535"
+            Minimum="0"
+            Name="Slider65535"
+            UpperValue="{Binding ElementName=SliderTest, Path=UpperValue}"
+            Width="500" />
+
+        <Grid Grid.Column="0" Grid.Row="5">
+            <TextBox
+                HorizontalAlignment="Left"
+                Text="{Binding ElementName=Slider65535, Path=LowerValue}"
+                Width="100" />
+            <TextBox
+                HorizontalAlignment="Right"
+                Text="{Binding ElementName=Slider65535, Path=UpperValue}"
+                Width="100" />
+        </Grid>
+
+        <controls:RangeSlider
+            Grid.Column="0"
+            Grid.Row="6"
+            Maximum="100"
+            Minimum="0"
+            Name="SliderTest"
+            SelectedTrackHeight="12"
+            TrackHeight="8"
+            Width="500" />
+        <Button
+            Content="Click me"
+            Grid.Column="0"
+            Grid.Row="7"
+            Style="{StaticResource BtnOutline}" />
+    </Grid>
 </UserControl>

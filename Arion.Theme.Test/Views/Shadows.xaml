@@ -8,5 +8,70 @@
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label
+            Content="Shadow"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.ColumnSpan="5"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <Button
+            Effect="{StaticResource El1}"
+            Grid.Column="0"
+            Grid.Row="1"
+            Margin="20"
+            Style="{StaticResource BtnOutline}" />
+        <Button
+            Effect="{StaticResource El2}"
+            Grid.Column="1"
+            Grid.Row="1"
+            Margin="20"
+            Style="{StaticResource BtnOutline}" />
+        <Button
+            Effect="{StaticResource El3}"
+            Grid.Column="2"
+            Grid.Row="1"
+            Margin="20"
+            Style="{StaticResource BtnOutline}" />
+        <Button
+            Effect="{StaticResource El4}"
+            Grid.Column="3"
+            Grid.Row="1"
+            Margin="20"
+            Style="{StaticResource BtnOutline}" />
+        <Button
+            Effect="{StaticResource El5}"
+            Grid.Column="4"
+            Grid.Row="1"
+            Margin="20"
+            Style="{StaticResource BtnOutline}" />
+        <Button
+            Effect="{StaticResource El6}"
+            Grid.Column="5"
+            Grid.Row="1"
+            Margin="20"
+            Style="{StaticResource BtnOutline}" />
+    </Grid>
 </UserControl>

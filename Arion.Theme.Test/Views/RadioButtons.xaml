@@ -8,5 +8,53 @@
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Label
+            Content="RadioButton"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <RadioButton
+            Content="RadioButton"
+            Grid.Column="0"
+            Grid.Row="1"
+            Margin="5" />
+        <RadioButton
+            Content="RadioButton"
+            Grid.Column="0"
+            Grid.Row="2"
+            Margin="5" />
+        <RadioButton
+            Content="RadioButton"
+            Grid.Column="0"
+            Grid.Row="3"
+            IsChecked="True"
+            Margin="5" />
+        <RadioButton
+            Content="RadioButton"
+            Grid.Column="0"
+            Grid.Row="4"
+            IsEnabled="False"
+            Margin="5" />
+    </Grid>
 </UserControl>

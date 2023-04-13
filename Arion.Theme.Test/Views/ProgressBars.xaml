@@ -23,7 +23,7 @@
         </Grid.RowDefinitions>
 
         <Label
-            Content="Inline Alert"
+            Content="Progress Bars"
             FontSize="32"
             Grid.Column="0"
             Grid.Row="0"

@@ -8,5 +8,35 @@
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <DataGrid
+            CellStyle="{DynamicResource DataGridCellStyle1}"
+            ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+            Grid.Column="0"
+            Grid.Row="1"
+            IsSelected="True"
+            Style="{DynamicResource DataGridStyle2}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Test column" Width="*" />
+                <DataGridCheckBoxColumn Header="Checkbox" Width="*" />
+                <DataGridComboBoxColumn Header="ComboBox" Width="*" />
+                <DataGridHyperlinkColumn Header="Hyperlink" Width="*" />
+                <DataGridTemplateColumn Header="Template" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Press me" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </UserControl>

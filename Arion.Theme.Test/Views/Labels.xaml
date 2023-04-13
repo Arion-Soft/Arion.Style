@@ -8,5 +8,116 @@
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label
+            Content="Label"
+            FontSize="32"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <Label
+            Content="ExtraLight"
+            FontWeight="ExtraLight"
+            Grid.Column="0"
+            Grid.Row="1" />
+        <Label
+            Content="Light"
+            FontWeight="Light"
+            Grid.Column="0"
+            Grid.Row="2" />
+        <Label
+            Content="Regular"
+            FontWeight="Regular"
+            Grid.Column="0"
+            Grid.Row="3" />
+        <Label
+            Content="Normal"
+            FontWeight="Normal"
+            Grid.Column="0"
+            Grid.Row="4" />
+        <Label
+            Content="Medium"
+            FontWeight="Medium"
+            Grid.Column="0"
+            Grid.Row="5" />
+        <Label
+            Content="Bold"
+            FontWeight="Bold"
+            Grid.Column="0"
+            Grid.Row="6" />
+        <Label
+            Content="Black"
+            FontWeight="Black"
+            Grid.Column="0"
+            Grid.Row="7" />
+
+        <Label
+            Content="TextBlock"
+            FontSize="32"
+            Grid.Column="1"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{StaticResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
+
+        <TextBlock
+            FontWeight="ExtraLight"
+            Grid.Column="1"
+            Grid.Row="1"
+            Text="ExtraLight" />
+        <TextBlock
+            FontWeight="Light"
+            Grid.Column="1"
+            Grid.Row="2"
+            Text="Light" />
+        <TextBlock
+            FontWeight="Regular"
+            Grid.Column="1"
+            Grid.Row="3"
+            Text="Regular" />
+        <TextBlock
+            FontWeight="Normal"
+            Grid.Column="1"
+            Grid.Row="4"
+            Text="Normal" />
+        <TextBlock
+            FontWeight="Medium"
+            Grid.Column="1"
+            Grid.Row="5"
+            Text="Medium" />
+        <TextBlock
+            FontWeight="Bold"
+            Grid.Column="1"
+            Grid.Row="6"
+            Text="Bold" />
+        <TextBlock
+            FontWeight="Black"
+            Grid.Column="1"
+            Grid.Row="7"
+            Text="Black" />
+    </Grid>
 </UserControl>

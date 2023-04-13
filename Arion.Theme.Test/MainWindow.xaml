@@ -19,298 +19,65 @@
         <vm:MainViewModel />
     </Window.DataContext>
     <TabControl TabStripPlacement="Left">
+        <!--  BREADCRUMB  -->
         <TabItem Header="Breadcrumb">
             <views:Breadcrumbs />
         </TabItem>
+        <!--  BUTTONS  -->
         <TabItem Header="Button">
-            <!--  BUTTONS  -->
             <views:Buttons />
         </TabItem>
+        <!--  CHECK BOXES  -->
         <TabItem Header="Check box">
-            <!--  CHECK BOXES  -->
             <views:CheckBoxes />
         </TabItem>
+        <!--  COLORS  -->
         <TabItem Header="Color">
             <views:Colors />
         </TabItem>
+        <!--  COMBO BOXES  -->
         <TabItem Header="Combo Box">
-            <!--  COMBO BOXES  -->
             <views:ComboBoxes />
         </TabItem>
+        <!--  DISPLAY CONTROLS  -->
         <TabItem Header="Display Control">
             <views:DisplayControls />
         </TabItem>
+        <!--  EXPANDERS  -->
         <TabItem Header="Expander">
             <views:Expanders />
         </TabItem>
+        <!--  INLINE ALERTS  -->
         <TabItem Header="Inline Alert">
             <views:InlineAlerts />
         </TabItem>
+        <!--  LABELS  -->
         <TabItem Header="Label">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Content="Label"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <Label
-                    Content="ExtraLight"
-                    FontWeight="ExtraLight"
-                    Grid.Column="0"
-                    Grid.Row="1" />
-                <Label
-                    Content="Light"
-                    FontWeight="Light"
-                    Grid.Column="0"
-                    Grid.Row="2" />
-                <Label
-                    Content="Regular"
-                    FontWeight="Regular"
-                    Grid.Column="0"
-                    Grid.Row="3" />
-                <Label
-                    Content="Normal"
-                    FontWeight="Normal"
-                    Grid.Column="0"
-                    Grid.Row="4" />
-                <Label
-                    Content="Medium"
-                    FontWeight="Medium"
-                    Grid.Column="0"
-                    Grid.Row="5" />
-                <Label
-                    Content="Bold"
-                    FontWeight="Bold"
-                    Grid.Column="0"
-                    Grid.Row="6" />
-                <Label
-                    Content="Black"
-                    FontWeight="Black"
-                    Grid.Column="0"
-                    Grid.Row="7" />
-
-                <Label
-                    Content="TextBlock"
-                    FontSize="32"
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <TextBlock
-                    FontWeight="ExtraLight"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Text="ExtraLight" />
-                <TextBlock
-                    FontWeight="Light"
-                    Grid.Column="1"
-                    Grid.Row="2"
-                    Text="Light" />
-                <TextBlock
-                    FontWeight="Regular"
-                    Grid.Column="1"
-                    Grid.Row="3"
-                    Text="Regular" />
-                <TextBlock
-                    FontWeight="Normal"
-                    Grid.Column="1"
-                    Grid.Row="4"
-                    Text="Normal" />
-                <TextBlock
-                    FontWeight="Medium"
-                    Grid.Column="1"
-                    Grid.Row="5"
-                    Text="Medium" />
-                <TextBlock
-                    FontWeight="Bold"
-                    Grid.Column="1"
-                    Grid.Row="6"
-                    Text="Bold" />
-                <TextBlock
-                    FontWeight="Black"
-                    Grid.Column="1"
-                    Grid.Row="7"
-                    Text="Black" />
-            </Grid>
+            <views:Labels />
         </TabItem>
+        <!--  LISTVIEW  -->
         <TabItem Header="ListView">
-            <!--  LISTVIEW  -->
             <views:ListViews />
         </TabItem>
+        <!--  Pack Icon  -->
         <TabItem Header="Pack icon">
-            <!--  Pack Icon  -->
             <views:IconPack />
         </TabItem>
+        <!--  PASSWORD BOX  -->
         <TabItem Header="Password box">
             <views:PasswordBox />
         </TabItem>
-        <TabItem Header="Progress bar" />
-        <TabItem Header="Radio button">
-            <!--  RADIO BUTTONS  -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Label
-                    Content="RadioButton"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <RadioButton
-                    Content="RadioButton"
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Margin="5" />
-                <RadioButton
-                    Content="RadioButton"
-                    Grid.Column="0"
-                    Grid.Row="2"
-                    Margin="5" />
-                <RadioButton
-                    Content="RadioButton"
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    IsChecked="True"
-                    Margin="5" />
-                <RadioButton
-                    Content="RadioButton"
-                    Grid.Column="0"
-                    Grid.Row="4"
-                    IsEnabled="False"
-                    Margin="5" />
-            </Grid>
+        <!--  PROGRESS BAR  -->
+        <TabItem Header="Progress bar">
+            <views:ProgressBars />
         </TabItem>
+        <!--  RADIO BUTTONS  -->
+        <TabItem Header="Radio button">
+            <views:RadioButtons />
+        </TabItem>
+        <!--  RANGERS  -->
         <TabItem Header="Ranger">
-            <!--  RANGERS  -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label
-                    Content="Range slider"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <controls:RangeSlider
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Maximum="65535"
-                    Minimum="0"
-                    Name="RangeSlider"
-                    Width="222" />
-                <controls:RangeSlider
-                    Grid.Column="0"
-                    Grid.Row="2"
-                    Maximum="100"
-                    Minimum="0"
-                    Width="300" />
-                <controls:RangeSlider
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    Maximum="100"
-                    Minimum="0"
-                    ShowValues="True"
-                    Width="300" />
-                <controls:RangeSlider
-                    Grid.Column="0"
-                    Grid.Row="4"
-                    LowerValue="{Binding ElementName=SliderTest, Path=LowerValue}"
-                    Maximum="65535"
-                    Minimum="0"
-                    Name="Slider65535"
-                    UpperValue="{Binding ElementName=SliderTest, Path=UpperValue}"
-                    Width="500" />
-
-                <Grid Grid.Column="0" Grid.Row="5">
-                    <TextBox
-                        HorizontalAlignment="Left"
-                        Text="{Binding ElementName=Slider65535, Path=LowerValue}"
-                        Width="100" />
-                    <TextBox
-                        HorizontalAlignment="Right"
-                        Text="{Binding ElementName=Slider65535, Path=UpperValue}"
-                        Width="100" />
-                </Grid>
-
-                <controls:RangeSlider
-                    Grid.Column="0"
-                    Grid.Row="6"
-                    Maximum="100"
-                    Minimum="0"
-                    Name="SliderTest"
-                    SelectedTrackHeight="12"
-                    TrackHeight="8"
-                    Width="500" />
-                <Button
-                    Click="ButtonBase_OnClick"
-                    Content="Click me"
-                    Grid.Column="0"
-                    Grid.Row="7"
-                    Style="{StaticResource BtnOutline}" />
-            </Grid>
+            <views:Rangers />
         </TabItem>
         <TabItem Header="Scroll bar">
             <!--  SCROLL BARS  -->
@@ -354,579 +121,44 @@
                     Width="Auto" />
             </Grid>
         </TabItem>
+        <!--  SHADOWS  -->
         <TabItem Header="Shadow">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Content="Shadow"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="5"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <Button
-                    Effect="{StaticResource El1}"
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Margin="20"
-                    Style="{StaticResource BtnOutline}" />
-                <Button
-                    Effect="{StaticResource El2}"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Margin="20"
-                    Style="{StaticResource BtnOutline}" />
-                <Button
-                    Effect="{StaticResource El3}"
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    Margin="20"
-                    Style="{StaticResource BtnOutline}" />
-                <Button
-                    Effect="{StaticResource El4}"
-                    Grid.Column="3"
-                    Grid.Row="1"
-                    Margin="20"
-                    Style="{StaticResource BtnOutline}" />
-                <Button
-                    Effect="{StaticResource El5}"
-                    Grid.Column="4"
-                    Grid.Row="1"
-                    Margin="20"
-                    Style="{StaticResource BtnOutline}" />
-                <Button
-                    Effect="{StaticResource El6}"
-                    Grid.Column="5"
-                    Grid.Row="1"
-                    Margin="20"
-                    Style="{StaticResource BtnOutline}" />
-            </Grid>
+            <views:Shadows />
         </TabItem>
+        <!--  SLIDERS  -->
         <TabItem Header="Slider">
-            <!--  SLIDERS  -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Label
-                    Content="Slider"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-                <Slider
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Margin="5"
-                    Width="200" />
-                <Slider
-                    Grid.Column="1"
-                    Grid.Row="2"
-                    Margin="5"
-                    Style="{StaticResource SliderBig}"
-                    Width="200" />
-                <Slider
-                    Grid.Column="1"
-                    Grid.Row="3"
-                    IsSelectionRangeEnabled="True"
-                    Margin="5"
-                    Width="200" />
-
-            </Grid>
+            <views:Sliders />
         </TabItem>
+        <!--  STEPPERS  -->
         <TabItem Header="Stepper">
-            <!--  STEPPERS  -->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label
-                    Content="BUILD"
-                    FontSize="144"
-                    FontWeight="Black"
-                    Foreground="{StaticResource Lg3}"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="3"
-                    Grid.Row="0"
-                    Grid.RowSpan="3"
-                    HorizontalAlignment="Center"
-                    Margin="10"
-                    Opacity=".7"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Center"
-                    Width="Auto" />
-            </Grid>
+            <views:Steppers />
         </TabItem>
+        <!--  SWITCHERS  -->
         <TabItem Header="Switcher">
-            <!--  SWITCHERS  -->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label
-                    Content="Switcher"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="3"
-                    Grid.Row="0"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <Label
-                    Content="Standard"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="2"
-                    VerticalAlignment="Center" />
-                <Label
-                    Content="Left Icon"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    VerticalAlignment="Center" />
-                <Label
-                    Content="Right Icon"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="4"
-                    VerticalAlignment="Center" />
-                <Label
-                    Content="Icon"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="5"
-                    VerticalAlignment="Center" />
-
-                <Label
-                    Content="Filled"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    HorizontalAlignment="Left"
-                    Style="{StaticResource Lbl}" />
-
-                <StackPanel
-                    Grid.Column="1"
-                    Grid.Row="2"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        Content="First"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="First"
-                        x:Name="Switcher1" />
-                    <RadioButton
-                        Content="Middle"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="Middle"
-                        x:Name="Switcher2" />
-                    <RadioButton
-                        Content="Middle"
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="Middle"
-                        x:Name="Switcher3" />
-                    <RadioButton
-                        Content="Last"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="Last"
-                        x:Name="Switcher4" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="1"
-                    Grid.Row="3"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        Content="First"
-                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="First" />
-                    <RadioButton
-                        Content="Middle"
-                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        Content="Middle"
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        Content="Last"
-                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="Last" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="1"
-                    Grid.Row="4"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        Content="First"
-                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="First"
-                        wpf:Switcher.RightIcon="User" />
-                    <RadioButton
-                        Content="Middle"
-                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="Middle"
-                        wpf:Switcher.RightIcon="User" />
-                    <RadioButton
-                        Content="Middle"
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="Middle"
-                        wpf:Switcher.RightIcon="User" />
-                    <RadioButton
-                        Content="Last"
-                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Position="Last"
-                        wpf:Switcher.RightIcon="User" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="1"
-                    Grid.Row="5"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="First" />
-                    <RadioButton
-                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherFilled}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="Last" />
-                </StackPanel>
-
-                <Label
-                    Content="Outlined"
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    HorizontalAlignment="Left"
-                    Margin="10,0,0,0"
-                    Style="{StaticResource Lbl}" />
-
-                <StackPanel
-                    Grid.Column="2"
-                    Grid.Row="2"
-                    Margin="10,0,0,0"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        Content="First"
-                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="First" />
-                    <RadioButton
-                        Content="Middle"
-                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        Content="Middle"
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        Content="Last"
-                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="Last" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="2"
-                    Grid.Row="3"
-                    Margin="10,0,0,0"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        Content="First"
-                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="First" />
-                    <RadioButton
-                        Content="Middle"
-                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        Content="Middle"
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        Content="Last"
-                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.LeftIcon="User"
-                        wpf:Switcher.Position="Last" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="2"
-                    Grid.Row="4"
-                    Margin="10,0,0,0"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        Content="First"
-                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="First"
-                        wpf:Switcher.RightIcon="User" />
-                    <RadioButton
-                        Content="Middle"
-                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="Middle"
-                        wpf:Switcher.RightIcon="User" />
-                    <RadioButton
-                        Content="Middle"
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="Middle"
-                        wpf:Switcher.RightIcon="User" />
-                    <RadioButton
-                        Content="Last"
-                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Position="Last"
-                        wpf:Switcher.RightIcon="User" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="2"
-                    Grid.Row="5"
-                    Margin="10,0,0,0"
-                    Orientation="Horizontal">
-                    <RadioButton
-                        IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="First" />
-                    <RadioButton
-                        IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        IsEnabled="False"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="Middle" />
-                    <RadioButton
-                        IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
-                        Margin="0,5"
-                        Style="{StaticResource SwitcherOutline}"
-                        wpf:Switcher.Icon="User"
-                        wpf:Switcher.Position="Last" />
-                </StackPanel>
-            </Grid>
+            <views:Switchers />
         </TabItem>
+        <!--  TABS  -->
         <TabItem Header="Tab">
-            <!--  TABS  -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label
-                    Content="Tabs"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-
-                <DockPanel
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="1">
-                    <TabControl DockPanel.Dock="Left" TabStripPlacement="Left">
-                        <TabItem Header="Head 1 Content" />
-                        <TabItem Header="Head 2" />
-                        <TabItem Header="Head 3" />
-                        <TabItem Header="Head 4" />
-                    </TabControl>
-                    <TabControl DockPanel.Dock="Top" TabStripPlacement="Top">
-                        <TabItem Header="Head 1" />
-                        <TabItem Header="Head 2" />
-                        <TabItem Header="Head 3" />
-                        <TabItem Header="Head 4" />
-                    </TabControl>
-                    <TabControl DockPanel.Dock="Right" TabStripPlacement="Right">
-                        <TabItem Header="Head 1" />
-                        <TabItem Header="Head 2" />
-                        <TabItem Header="Head 3" />
-                        <TabItem Header="Head 4" />
-                    </TabControl>
-                    <TabControl DockPanel.Dock="Bottom" TabStripPlacement="Bottom">
-                        <TabItem Header="Head 1" />
-                        <TabItem Header="Head 2" />
-                        <TabItem Header="Head 3" />
-                        <TabItem Header="Head 4" />
-                    </TabControl>
-                </DockPanel>
-            </Grid>
+            <views:Tabs />
         </TabItem>
+        <!--  TABLES  -->
         <TabItem Header="Table">
-            <!--  TABLES  -->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <DataGrid
-                    CellStyle="{DynamicResource DataGridCellStyle1}"
-                    ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    IsSelected="True"
-                    Style="{DynamicResource DataGridStyle2}">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Test column" Width="*" />
-                        <DataGridCheckBoxColumn Header="Checkbox" Width="*" />
-                        <DataGridComboBoxColumn Header="ComboBox" Width="*" />
-                        <DataGridHyperlinkColumn Header="Hyperlink" Width="*" />
-                        <DataGridTemplateColumn Header="Template" Width="*">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Press me" />
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </Grid>
+            <views:Tables />
         </TabItem>
+        <!--  TEXT BOXES  -->
         <TabItem Header="Text box" IsSelected="True">
-            <!--  TEXT BOXES  -->
             <views:TextBox />
         </TabItem>
-
+        <!--  TIME INPUT  -->
         <TabItem Header="Time input">
-            <!--  TIME INPUT  -->
             <views:TimeInputs />
         </TabItem>
+        <!--  TOGGLE BUTTONS  -->
         <TabItem Header="Toggle button">
-            <!--  TOGGLE BUTTONS  -->
             <views:ToggleButtons />
         </TabItem>
+        <!--  TOOLTIPS  -->
         <TabItem Header="Tooltip">
-            <!--  TOOLTIPS  -->
             <views:Tooltips />
         </TabItem>
 

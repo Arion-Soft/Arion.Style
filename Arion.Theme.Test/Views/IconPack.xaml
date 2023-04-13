@@ -1,7 +1,7 @@
 ﻿<UserControl
     Loaded="IconPack_OnLoaded"
-    d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.IconPack"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

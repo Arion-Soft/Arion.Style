@@ -1,6 +1,6 @@
 ﻿<UserControl
-    d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.DisplayControls"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -8,6 +8,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
@@ -34,34 +35,46 @@
             VerticalAlignment="Top"
             Width="Auto" />
 
-        <controls:DisplayControl
+        <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="1"
-            Height="90"
-            Text="кВ"
-            Width="170" />
+            Style="{StaticResource Xaml}"
+            UniqueKey="DisplayControl1">
+            <controls:DisplayControl
+                Height="90"
+                Text="кВ"
+                Width="170" />
+        </smtx:XamlDisplay>
 
-        <controls:DisplayControlFull
+        <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="2"
-            Label="кВ"
-            Margin="5"
-            Maximum="320"
-            Minimum="0"
-            QuickChange="True"
-            Step="1"
-            TargetValueChange="DisplayControlFull_OnTargetValueChange" />
+            Style="{StaticResource Xaml}"
+            UniqueKey="DisplayControl2">
+            <controls:DisplayControlFull
+                Label="кВ"
+                Margin="5"
+                Maximum="320"
+                Minimum="0"
+                QuickChange="True"
+                Step="1"
+                TargetValueChange="DisplayControlFull_OnTargetValueChange" />
+        </smtx:XamlDisplay>
 
-        <controls:DisplayControlFull
+        <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="3"
-            Label="мА"
-            Margin="5"
-            Maximum="22.5"
-            Minimum="0"
-            QuickChange="True"
-            Round="1"
-            Step=".1"
-            TargetValueChange="DisplayControlFull_OnTargetValueChange" />
+            Style="{StaticResource Xaml}"
+            UniqueKey="DisplayControl3">
+            <controls:DisplayControlFull
+                Label="мА"
+                Margin="5"
+                Maximum="22.5"
+                Minimum="0"
+                QuickChange="True"
+                Round="1"
+                Step=".1"
+                TargetValueChange="DisplayControlFull_OnTargetValueChange" />
+        </smtx:XamlDisplay>
     </Grid>
 </UserControl>

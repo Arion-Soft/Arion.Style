@@ -8,10 +8,10 @@ namespace Arion.Theme.Test.ViewModel
 
         public TextBoxViewModel()
         {
-            Person = new Person()
+            Person = new Person
             {
                 Surname = "Малахов",
-                Age = 15
+                Age = 20
             };
         }
     }
