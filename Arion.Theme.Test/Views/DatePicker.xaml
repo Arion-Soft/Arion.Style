@@ -1,6 +1,6 @@
 ﻿<UserControl
-    d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
     mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.DatePicker"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -37,5 +37,7 @@
             Width="Auto" />
 
         <DatePicker Grid.Column="0" Grid.Row="1" />
+
+        <Calendar Grid.Column="0" Grid.Row="2" />
     </Grid>
 </UserControl>

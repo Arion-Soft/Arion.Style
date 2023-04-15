@@ -59,6 +59,7 @@
     <Compile Include="AttachedProperties\Switcher.cs" />
     <Compile Include="AttachedProperties\TextBox.cs" />
     <Compile Include="Commands\ClearText.cs" />
+    <Compile Include="Commands\NumberCommand.cs" />
     <Compile Include="Controls\Breadcrumb.xaml.cs">
       <DependentUpon>Breadcrumb.xaml</DependentUpon>
     </Compile>
@@ -251,10 +252,12 @@
     <Page Include="Styles\ArionTheme\ToggleButton.xaml" />
     <Page Include="Styles\ArionTheme\Window.xaml" />
     <Page Include="Styles\ArionUi\Button.xaml" />
+    <Page Include="Styles\ArionUi\Calendar.xaml" />
     <Page Include="Styles\ArionUi\CheckBox.xaml" />
     <Page Include="Styles\ArionUi\Colors.xaml" />
     <Page Include="Styles\ArionUi\ComboBox.xaml" />
     <Page Include="Styles\ArionUi\DataGrid.xaml" />
+    <Page Include="Styles\ArionUi\DatePicker.xaml" />
     <Page Include="Styles\ArionUi\DisplayControl.xaml" />
     <Page Include="Styles\ArionUi\DocumentViewer.xaml" />
     <Page Include="Styles\ArionUi\Expander.xaml" />

@@ -9,6 +9,8 @@
         <ResourceDictionary Source="Styles/ArionUi/FontFamily.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Label.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Button.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Calendar.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/DatePicker.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Window.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Expander.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Page.xaml" />

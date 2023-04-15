@@ -146,7 +146,7 @@
             <views:Tables />
         </TabItem>
         <!--  TEXT BOXES  -->
-        <TabItem Header="Text box" IsSelected="True">
+        <TabItem Header="Text box">
             <views:TextBox />
         </TabItem>
         <!--  TIME INPUT  -->
@@ -352,7 +352,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Date picker">
+        <TabItem Header="Date picker" IsSelected="True">
             <views:DatePicker />
         </TabItem>
     </TabControl>

@@ -375,6 +375,10 @@
             </smtx:XamlDisplay>
         </StackPanel>
 
+        <StackPanel Grid.Column="4" Grid.Row="2">
+            <TextBox wpf:TextBox.IsNumber="True" />
+        </StackPanel>
+
         <Label
             Content="Number"
             FontSize="16"

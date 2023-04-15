@@ -28,6 +28,8 @@
         <Setter Property="Background" Value="{StaticResource CleanW}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="commands:ClearText.HandlesClearCommand" Value="True" />
+        <Setter Property="commands:NumberCommand.HandlesUpCommand" Value="True" />
+        <Setter Property="commands:NumberCommand.HandlesDownCommand" Value="True" />
         <Setter Property="wpf:TextBox.IconHeight" Value="15" />
         <Setter Property="wpf:TextBox.IconWidth" Value="15" />
         <Setter Property="Validation.ErrorTemplate">
@@ -133,6 +135,23 @@
                                 Visibility="{TemplateBinding wpf:TextBox.RightIcon,
                                                              Converter={StaticResource IconConverter}}"
                                 Width="{TemplateBinding wpf:TextBox.IconWidth}" />
+
+                            <StackPanel Grid.Column="4" Visibility="{TemplateBinding wpf:TextBox.IsNumber, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <Button
+                                    Command="{x:Static commands:NumberCommand.UpCommand}"
+                                    Height="20"
+                                    Padding="0"
+                                    Width="32"
+                                    wpf:Button.Icon="ChevronUp"
+                                    wpf:Hint.CornerRadius="0,6,0,0" />
+                                <Button
+                                    Command="{x:Static commands:NumberCommand.DownCommand}"
+                                    Height="20"
+                                    Padding="0"
+                                    Width="32"
+                                    wpf:Button.Icon="ChevronDown"
+                                    wpf:Hint.CornerRadius="0,0,6,0" />
+                            </StackPanel>
 
                             <Button
                                 Command="{x:Static commands:ClearText.ClearCommand}"

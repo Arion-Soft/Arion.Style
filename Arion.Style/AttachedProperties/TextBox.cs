@@ -127,5 +127,18 @@ namespace Arion.Style.AttachedProperties
         #endregion
 
         #endregion
+
+        public static readonly DependencyProperty IsNumberProperty = DependencyProperty.RegisterAttached(
+            "IsNumber", typeof(bool), typeof(TextBox), new PropertyMetadata(default(bool)));
+
+        public static void SetIsNumber(DependencyObject element, bool value)
+        {
+            element.SetValue(IsNumberProperty, value);
+        }
+
+        public static bool GetIsNumber(DependencyObject element)
+        {
+            return (bool)element.GetValue(IsNumberProperty);
+        }
     }
 }
