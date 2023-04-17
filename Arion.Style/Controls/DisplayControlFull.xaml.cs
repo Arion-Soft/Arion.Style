@@ -17,7 +17,7 @@ namespace Arion.Style.Controls
         public event EventHandler TargetValueChange;
 
         #endregion
-        
+
         #region Properties
 
         public string Label
@@ -67,10 +67,10 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty RoundProperty =
             DependencyProperty.Register(nameof(Round), typeof(int), typeof(DisplayControlFull), new PropertyMetadata());
-        
+
         private DateTime _startSend;
         private bool _firstSend;
-        
+
         private async void Send()
         {
             if (QuickChange)
@@ -120,7 +120,7 @@ namespace Arion.Style.Controls
         }
 
         public static readonly DependencyProperty MaximumProperty =
-            DependencyProperty.Register(nameof(Maximum), typeof(double), typeof(DisplayControlFull), new PropertyMetadata());
+            DependencyProperty.Register(nameof(Maximum), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(0.0));
 
         public double Minimum
         {
@@ -129,19 +129,42 @@ namespace Arion.Style.Controls
         }
 
         public static readonly DependencyProperty MinimumProperty =
-            DependencyProperty.Register(nameof(Minimum), typeof(double), typeof(DisplayControlFull), new PropertyMetadata());
-        
-        #endregion
-        
-        public void BtnMinus_OnClick(object sender, RoutedEventArgs e)
+            DependencyProperty.Register(nameof(Minimum), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(0.0));
+
+        public double Limit
         {
-            if(TargetValue - Step >= Minimum)
+            get => (double)GetValue(LimitProperty);
+            set => SetValue(LimitProperty, value);
+        }
+
+        public static readonly DependencyProperty LimitProperty =
+            DependencyProperty.Register(nameof(Limit), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(0.0));
+
+        public bool MaxIsLimit
+        {
+            get => (bool)GetValue(MaxIsLimitProperty);
+            set => SetValue(MaxIsLimitProperty, value);
+        }
+
+        public static readonly DependencyProperty MaxIsLimitProperty =
+            DependencyProperty.Register(nameof(MaxIsLimit), typeof(bool), typeof(DisplayControlFull), new PropertyMetadata());
+
+        #endregion
+
+        private void BtnMinus_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (TargetValue - Step >= Minimum)
                 TargetValue -= Step;
         }
-        
-        public void BtnPlus_OnClick(object sender, RoutedEventArgs e)
+
+        private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
         {
-            if(TargetValue + Step <= Maximum)
+            if (MaxIsLimit)
+            {
+                if (TargetValue + Step <= Limit)
+                    TargetValue += Step;
+            }
+            else if (TargetValue + Step <= Maximum)
                 TargetValue += Step;
         }
     }
