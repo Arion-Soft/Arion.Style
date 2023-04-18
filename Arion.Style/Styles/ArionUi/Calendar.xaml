@@ -258,58 +258,6 @@
 
                             <Setter Property="Foreground" Value="{StaticResource Mg3}" />
                         </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsSelected" Value="False" />
-                                <Condition Property="IsMouseOver" Value="False" />
-                                <Condition Property="IsInactive" Value="False" />
-                                <Condition Property="IsToday" Value="False" />
-                                <Condition Property="IsBlackedOut" Value="False" />
-                                <Condition Property="IsEnabled" Value="False" />
-                            </MultiTrigger.Conditions>
-
-
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsSelected" Value="False" />
-                                <Condition Property="IsMouseOver" Value="False" />
-                                <Condition Property="IsInactive" Value="False" />
-                                <Condition Property="IsToday" Value="False" />
-                                <Condition Property="IsBlackedOut" Value="False" />
-                                <Condition Property="IsEnabled" Value="False" />
-                            </MultiTrigger.Conditions>
-
-
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsSelected" Value="False" />
-                                <Condition Property="IsMouseOver" Value="False" />
-                                <Condition Property="IsInactive" Value="False" />
-                                <Condition Property="IsToday" Value="False" />
-                                <Condition Property="IsBlackedOut" Value="False" />
-                                <Condition Property="IsEnabled" Value="False" />
-                            </MultiTrigger.Conditions>
-
-
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsSelected" Value="False" />
-                                <Condition Property="IsMouseOver" Value="False" />
-                                <Condition Property="IsInactive" Value="False" />
-                                <Condition Property="IsToday" Value="False" />
-                                <Condition Property="IsBlackedOut" Value="False" />
-                                <Condition Property="IsEnabled" Value="False" />
-                            </MultiTrigger.Conditions>
-
-
-                        </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -318,137 +266,132 @@
 
     <!--  Style for the months of a year and years of a decade.  -->
     <Style TargetType="CalendarButton" x:Key="CalendarButtonStyle">
-        <Setter Property="MinWidth" Value="40" />
-        <Setter Property="MinHeight" Value="42" />
+        <Setter Property="MinWidth" Value="32" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="Background" Value="White" />
         <Setter Property="FontSize" Value="10" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="CalendarButton">
-                    <Border Height="32" Width="32">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10"
+                        Height="64"
+                        MinHeight="{TemplateBinding MinHeight}"
+                        MinWidth="{TemplateBinding MinWidth}"
+                        Width="64">
                         <Grid>
-                            <Rectangle
-                                Opacity="0"
-                                RadiusX="1"
-                                RadiusY="1"
-                                x:Name="SelectedBackground">
-                                <Rectangle.Fill>
-                                    <SolidColorBrush Color="{DynamicResource SelectedBackgroundColor}" />
-                                </Rectangle.Fill>
-                            </Rectangle>
-                            <Rectangle
-                                Opacity="0"
-                                RadiusX="1"
-                                RadiusY="1"
-                                x:Name="Background">
-                                <Rectangle.Fill>
-                                    <SolidColorBrush Color="{DynamicResource SelectedBackgroundColor}" />
-                                </Rectangle.Fill>
-                            </Rectangle>
+                            <!--  TEXT  -->
                             <ContentPresenter
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                Margin="1,0,1,1"
+                                Margin="5,1,5,1"
+                                TextElement.FontSize="14"
+                                TextElement.Foreground="{TemplateBinding Foreground}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                x:Name="NormalText">
-                                <TextElement.Foreground>
-                                    <SolidColorBrush Color="#FF333333" />
-                                </TextElement.Foreground>
-                            </ContentPresenter>
-                            <Rectangle
-                                IsHitTestVisible="false"
-                                RadiusX="1"
-                                RadiusY="1"
-                                Visibility="Collapsed"
-                                x:Name="CalendarButtonFocusVisual">
-                                <Rectangle.Stroke>
-                                    <SolidColorBrush Color="{DynamicResource SelectedBackgroundColor}" />
-                                </Rectangle.Stroke>
-                            </Rectangle>
-                            <!-- <VisualStateManager.VisualStateGroups> -->
-                            <!--     <VisualStateGroup Name="CommonStates"> -->
-                            <!--         <VisualStateGroup.Transitions> -->
-                            <!--             <VisualTransition GeneratedDuration="0:0:0.1" /> -->
-                            <!--         </VisualStateGroup.Transitions> -->
-                            <!--         <VisualState Name="Normal" /> -->
-                            <!--         <VisualState Name="MouseOver"> -->
-                            <!--             <Storyboard> -->
-                            <!--  <DoubleAnimation  -->
-                            <!--  Duration="0"  -->
-                            <!--  Storyboard.TargetName="Background"  -->
-                            <!--  Storyboard.TargetProperty="Opacity"  -->
-                            <!--  To=".5" />  -->
-                            <!--             </Storyboard> -->
-                            <!--         </VisualState> -->
-                            <!--         <VisualState Name="Pressed"> -->
-                            <!--             <Storyboard> -->
-                            <!--  <DoubleAnimation  -->
-                            <!--  Duration="0"  -->
-                            <!--  Storyboard.TargetName="Background"  -->
-                            <!--  Storyboard.TargetProperty="Opacity"  -->
-                            <!--  To=".5" />  -->
-                            <!--             </Storyboard> -->
-                            <!--         </VisualState> -->
-                            <!--     </VisualStateGroup> -->
-                            <!--     <VisualStateGroup Name="SelectionStates"> -->
-                            <!--         <VisualStateGroup.Transitions> -->
-                            <!--             <VisualTransition GeneratedDuration="0" /> -->
-                            <!--         </VisualStateGroup.Transitions> -->
-                            <!--         <VisualState Name="Unselected" /> -->
-                            <!--         <VisualState Name="Selected"> -->
-                            <!--             <Storyboard> -->
-                            <!--  <DoubleAnimation  -->
-                            <!--  Duration="0"  -->
-                            <!--  Storyboard.TargetName="SelectedBackground"  -->
-                            <!--  Storyboard.TargetProperty="Opacity"  -->
-                            <!--  To=".75" />  -->
-                            <!--             </Storyboard> -->
-                            <!--         </VisualState> -->
-                            <!--     </VisualStateGroup> -->
-                            <!--     <VisualStateGroup Name="ActiveStates"> -->
-                            <!--         <VisualStateGroup.Transitions> -->
-                            <!--             <VisualTransition GeneratedDuration="0" /> -->
-                            <!--         </VisualStateGroup.Transitions> -->
-                            <!--         <VisualState Name="Active" /> -->
-                            <!--         <VisualState Name="Inactive"> -->
-                            <!--             <Storyboard> -->
-                            <!--  <ColorAnimation  -->
-                            <!--  Duration="0"  -->
-                            <!--  Storyboard.TargetName="NormalText"  -->
-                            <!--  Storyboard.TargetProperty="(TextElement.Foreground).                       (SolidColorBrush.Color)"  -->
-                            <!--  To="#FF777777" />  -->
-                            <!--             </Storyboard> -->
-                            <!--         </VisualState> -->
-                            <!--     </VisualStateGroup> -->
-                            <!--     <VisualStateGroup Name="CalendarButtonFocusStates"> -->
-                            <!--         <VisualStateGroup.Transitions> -->
-                            <!--             <VisualTransition GeneratedDuration="0" /> -->
-                            <!--         </VisualStateGroup.Transitions> -->
-                            <!--         <VisualState Name="CalendarButtonFocused"> -->
-                            <!--             <Storyboard> -->
-                            <!--  <ObjectAnimationUsingKeyFrames  -->
-                            <!--  Duration="0"  -->
-                            <!--  Storyboard.TargetName="CalendarButtonFocusVisual"  -->
-                            <!--  Storyboard.TargetProperty="Visibility">  -->
-                            <!--                     <DiscreteObjectKeyFrame KeyTime="0"> -->
-                            <!--                         <DiscreteObjectKeyFrame.Value> -->
-                            <!--                             <Visibility>Visible</Visibility> -->
-                            <!--                         </DiscreteObjectKeyFrame.Value> -->
-                            <!--                     </DiscreteObjectKeyFrame> -->
-                            <!--                 </ObjectAnimationUsingKeyFrames> -->
-                            <!--             </Storyboard> -->
-                            <!--         </VisualState> -->
-                            <!--         <VisualState Name="CalendarButtonUnfocused" /> -->
-                            <!--     </VisualStateGroup> -->
-                            <!-- </VisualStateManager.VisualStateGroups> -->
+                                x:Name="NormalText" />
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <!--  DEFAULT, HAS SELECTED DAYS, ENABLED  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsInactive" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="HasSelectedDays" Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="BorderBrush" Value="{StaticResource Pr600}" />
+                            <Setter Property="Background" Value="{StaticResource CleanW}" />
+                            <Setter Property="BorderThickness" Value="2" />
+                            <Setter Property="Foreground" Value="{StaticResource Pr600}" />
+                        </MultiTrigger>
+                        <!--  HOVER, HAS SELECTED DAYS, ENABLED  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsInactive" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="HasSelectedDays" Value="True" />
+
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" Value="{StaticResource Pr600}" />
+                            <Setter Property="Foreground" Value="{StaticResource CleanW}" />
+                        </MultiTrigger>
+
+                        <!--  DEFAULT, HAS NOT SELECTED DAYS, ENABLED  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsInactive" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="HasSelectedDays" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" Value="White" />
+                        </MultiTrigger>
+                        <!--  HOVER, HAS NOT SELECTED DAYS, ENABLED  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsInactive" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="HasSelectedDays" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" Value="{StaticResource Lg3}" />
+                        </MultiTrigger>
+
+                        <!--  DISABLED  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsInactive" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="HasSelectedDays" Value="False" />
+                            </MultiTrigger.Conditions>
+
+
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsInactive" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="HasSelectedDays" Value="True" />
+                            </MultiTrigger.Conditions>
+
+
+                        </MultiTrigger>
+
+                        <!--  IN ACTIVE  -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsInactive" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="HasSelectedDays" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" Value="{StaticResource Lg3}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsInactive" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                                <Condition Property="HasSelectedDays" Value="False" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Background" Value="White" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Background">
-            <Setter.Value>
-                <SolidColorBrush Color="{DynamicResource ControlMediumColor}" />
             </Setter.Value>
         </Setter>
     </Style>
@@ -468,36 +411,12 @@
                     wpf:Button.IconWidth="10"
                     x:Name="path" />
             </Grid>
-            <!-- <VisualStateManager.VisualStateGroups> -->
-            <!--     <VisualStateGroup x:Name="CommonStates"> -->
-            <!--         <VisualState x:Name="Normal" /> -->
-            <!--         <VisualState x:Name="MouseOver"> -->
-            <!--             <Storyboard> -->
-            <!--  <ColorAnimation  -->
-            <!--  Duration="0"  -->
-            <!--  Storyboard.TargetName="path"  -->
-            <!--  Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"  -->
-            <!--  To="{DynamicResource GlyphMouseOver}" />  -->
-            <!--             </Storyboard> -->
-            <!--         </VisualState> -->
-            <!--         <VisualState x:Name="Disabled"> -->
-            <!--             <Storyboard> -->
-            <!--  <DoubleAnimation  -->
-            <!--  Duration="0"  -->
-            <!--  Storyboard.TargetName="path"  -->
-            <!--  Storyboard.TargetProperty="(Shape.Fill).(Brush.Opacity)"  -->
-            <!--  To=".5" />  -->
-            <!--             </Storyboard> -->
-            <!--         </VisualState> -->
-            <!--     </VisualStateGroup> -->
-            <!-- </VisualStateManager.VisualStateGroups> -->
         </Grid>
     </ControlTemplate>
 
     <!--  Button to go to the next month or year.  -->
     <ControlTemplate TargetType="{x:Type Button}" x:Key="NextButtonTemplate">
         <Grid Cursor="Hand">
-            <!--<Rectangle Fill="#11E5EBF1" Opacity="1" Stretch="Fill"/>-->
             <Grid Background="Transparent">
                 <Button
                     Height="15"
@@ -509,29 +428,6 @@
                     wpf:Button.IconWidth="10"
                     x:Name="path" />
             </Grid>
-            <!-- <VisualStateManager.VisualStateGroups> -->
-            <!--     <VisualStateGroup x:Name="CommonStates"> -->
-            <!--         <VisualState x:Name="Normal" /> -->
-            <!--         <VisualState x:Name="MouseOver"> -->
-            <!--             <Storyboard> -->
-            <!--  <ColorAnimation  -->
-            <!--  Duration="0"  -->
-            <!--  Storyboard.TargetName="path"  -->
-            <!--  Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"  -->
-            <!--  To="{StaticResource GlyphMouseOver}" />  -->
-            <!--             </Storyboard> -->
-            <!--         </VisualState> -->
-            <!--         <VisualState x:Name="Disabled"> -->
-            <!--             <Storyboard> -->
-            <!--  <DoubleAnimation  -->
-            <!--  Duration="0"  -->
-            <!--  Storyboard.TargetName="path"  -->
-            <!--  Storyboard.TargetProperty="(Shape.Fill).(Brush.Opacity)"  -->
-            <!--  To=".5" />  -->
-            <!--             </Storyboard> -->
-            <!--         </VisualState> -->
-            <!--     </VisualStateGroup> -->
-            <!-- </VisualStateManager.VisualStateGroups> -->
         </Grid>
     </ControlTemplate>
 
@@ -733,7 +629,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type Calendar}">
+    <Style TargetType="{x:Type Calendar}" x:Key="CalendarStyle">
         <Setter Property="CalendarButtonStyle" Value="{StaticResource CalendarButtonStyle}" />
         <Setter Property="CalendarDayButtonStyle" Value="{StaticResource CalendarDayButtonStyle}" />
         <Setter Property="CalendarItemStyle" Value="{StaticResource CalendarItemStyle}" />

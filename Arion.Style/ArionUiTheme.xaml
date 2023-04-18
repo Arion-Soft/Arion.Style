@@ -36,4 +36,5 @@
     </ResourceDictionary.MergedDictionaries>
     <!--  DEFAULT  -->
     <Style BasedOn="{StaticResource BtnOutline}" TargetType="{x:Type Button}" />
+    <Style BasedOn="{StaticResource CalendarStyle}" TargetType="{x:Type Calendar}" />
 </ResourceDictionary>

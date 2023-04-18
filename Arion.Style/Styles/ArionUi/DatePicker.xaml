@@ -4,12 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
+        <ResourceDictionary Source="Calendar.xaml" />
         <ResourceDictionary Source="FontFamily.xaml" />
         <ResourceDictionary Source="Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style
-        BasedOn="{StaticResource {x:Type Calendar}}"
+        BasedOn="{StaticResource CalendarStyle}"
         TargetType="{x:Type Calendar}"
         x:Key="DatePickerCalendarStyle" />
 
@@ -21,7 +22,7 @@
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <!--  Set CalendarStyle to DatePickerCalendarStyle.  -->
-        <!-- <Setter Property="CalendarStyle" Value="{DynamicResource DatePickerCalendarStyle}" /> -->
+        <Setter Property="CalendarStyle" Value="{DynamicResource DatePickerCalendarStyle}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DatePicker}">
