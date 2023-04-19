@@ -116,7 +116,11 @@ namespace Arion.Style.Controls
         public double Maximum
         {
             get => (double)GetValue(MaximumProperty);
-            set => SetValue(MaximumProperty, value);
+            set
+            {
+                SetValue(MaximumProperty, value);
+                if (TargetValue > value) TargetValue = value;
+            }
         }
 
         public static readonly DependencyProperty MaximumProperty =
@@ -125,7 +129,11 @@ namespace Arion.Style.Controls
         public double Minimum
         {
             get => (double)GetValue(MinimumProperty);
-            set => SetValue(MinimumProperty, value);
+            set
+            {
+                SetValue(MinimumProperty, value);
+                if (TargetValue < value) TargetValue = value;
+            }
         }
 
         public static readonly DependencyProperty MinimumProperty =
