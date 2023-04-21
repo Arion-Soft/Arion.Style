@@ -1,5 +1,4 @@
 ﻿<UserControl
-    Loaded="IconPack_OnLoaded"
     d:DesignHeight="1000"
     d:DesignWidth="1000"
     mc:Ignorable="d"
@@ -9,10 +8,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Arion.Theme.Test.ViewModel"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.DataContext>
+        <vm:IconPackViewModel />
+    </UserControl.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -34,8 +36,8 @@
             Width="Auto" />
         <ListView
             Grid.Column="0"
-            Grid.ColumnSpan="2"
             Grid.Row="1"
+            ItemsSource="{Binding Icons}"
             Name="LvIcons"
             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemsPanel>
@@ -44,8 +46,8 @@
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
-                <DataTemplate DataType="{x:Type controls:Icon}">
-                    <Grid Height="100" Width="80">
+                <DataTemplate>
+                    <Grid Height="100" Width="100">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="5" />
                             <RowDefinition Height="40" />
@@ -55,13 +57,14 @@
                             Fill="#252C32"
                             Grid.Row="1"
                             Height="40"
-                            Kind="{Binding Kind}"
+                            Kind="{Binding}"
                             Width="40" />
                         <TextBlock
                             FontSize="14"
                             FontWeight="Light"
                             Grid.Row="2"
-                            Text="{Binding Kind}"
+                            Margin="7,5,7,0"
+                            Text="{Binding}"
                             TextAlignment="Center"
                             TextWrapping="Wrap" />
                     </Grid>
@@ -71,14 +74,12 @@
 
         <StackPanel
             Grid.Column="0"
-            Grid.ColumnSpan="2"
             Grid.Row="2"
             Orientation="Horizontal">
             <TextBox
                 CharacterCasing="Lower"
                 Name="TbFind"
-                TextChanged="TbFind_OnTextChanged"
-                TextInput="TbFind_OnTextInput"
+                Text="{Binding Search}"
                 Width="400" />
         </StackPanel>
     </Grid>

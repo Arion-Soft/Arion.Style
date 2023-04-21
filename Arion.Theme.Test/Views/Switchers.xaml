@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
@@ -78,6 +79,7 @@
                 x:Name="Switcher1" />
             <RadioButton
                 Content="Middle"
+                IsChecked="True"
                 Margin="0,5"
                 Style="{StaticResource SwitcherFilled}"
                 wpf:Switcher.Position="Middle"

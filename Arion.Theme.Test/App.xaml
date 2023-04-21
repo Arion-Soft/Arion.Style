@@ -36,7 +36,7 @@
 
                     <smtxAe:TextDocumentValueConverter x:Key="TextDocumentValueConverter" />
 
-                    <Style TargetType="{x:Type smtx:XamlDisplay}" x:Key="Xaml">
+                    <Style TargetType="{x:Type smtx:XamlDisplay}">
                         <Setter Property="MaxWidth" Value="600" />
                         <Setter Property="Template">
                             <Setter.Value>
@@ -93,7 +93,7 @@
                                             Margin="5,0,0,0"
                                             Padding="5"
                                             Style="{StaticResource TglOutline}"
-                                            VerticalAlignment="Center"
+                                            VerticalAlignment="Bottom"
                                             Width="25"
                                             wpf:Button.Icon="Xml"
                                             x:Name="Btn" />

@@ -38,7 +38,6 @@
         <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="1"
-            Style="{StaticResource Xaml}"
             UniqueKey="DisplayControl1">
             <controls:DisplayControl
                 Height="90"
@@ -49,7 +48,6 @@
         <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="2"
-            Style="{StaticResource Xaml}"
             UniqueKey="DisplayControl2">
             <controls:DisplayControlFull
                 Label="кВ"
@@ -64,7 +62,6 @@
         <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="3"
-            Style="{StaticResource Xaml}"
             UniqueKey="DisplayControl3">
             <controls:DisplayControlFull
                 Label="мА"

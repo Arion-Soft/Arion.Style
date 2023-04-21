@@ -110,7 +110,7 @@
                     <ControlTemplate.Triggers>
 
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" Value="#c5c5c5" />
+                            <Setter Property="Opacity" Value=".5" />
                         </Trigger>
                         <Trigger Property="IsIndeterminate" Value="true">
                             <Setter Property="Width" TargetName="width1" Value="0.25*" />
@@ -218,7 +218,7 @@
                     <ControlTemplate.Triggers>
 
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" Value="#c5c5c5" />
+                            <Setter Property="Opacity" Value="0.5" />
                         </Trigger>
                         <Trigger Property="IsIndeterminate" Value="true">
                             <Setter Property="Width" TargetName="width1" Value="0.25*" />

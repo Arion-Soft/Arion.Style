@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
@@ -34,26 +35,35 @@
             VerticalAlignment="Top"
             Width="Auto" />
 
-        <ProgressBar
+        <smtx:XamlDisplay
             Grid.Row="1"
             Margin="5"
-            Maximum="100"
-            Minimum="0"
-            Value="0" />
-        <ProgressBar
+            UniqueKey="ProgressBar1">
+            <ProgressBar
+                Maximum="100"
+                Minimum="0"
+                Value="0" />
+        </smtx:XamlDisplay>
+        <smtx:XamlDisplay
             Grid.Row="2"
             Margin="5"
-            Maximum="65535"
-            Minimum="0"
-            Value="{Binding ElementName=Slider, Path=Value}"
-            wpf:ProgressBar.ShowProgress="True" />
-        <ProgressBar
+            UniqueKey="ProgressBar2">
+            <ProgressBar
+                Maximum="65535"
+                Minimum="0"
+                Value="{Binding ElementName=Slider, Path=Value}"
+                wpf:ProgressBar.ShowProgress="True" />
+        </smtx:XamlDisplay>
+        <smtx:XamlDisplay
             Grid.Row="3"
             Margin="5"
-            Maximum="65535"
-            Minimum="0"
-            Value="100"
-            wpf:ProgressBar.ShowProgress="True" />
+            UniqueKey="3">
+            <ProgressBar
+                Maximum="65535"
+                Minimum="0"
+                Value="100"
+                wpf:ProgressBar.ShowProgress="True" />
+        </smtx:XamlDisplay>
 
         <Slider
             Grid.Row="5"

@@ -42,16 +42,10 @@
             Grid.Column="0"
             Grid.Row="1"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="CheckBox1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox1">
                 <CheckBox Content="CheckBox" wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="CheckBox2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox2">
                 <CheckBox
                     Content="CheckBox"
                     IsEnabled="False"
@@ -63,16 +57,10 @@
             Grid.Column="0"
             Grid.Row="2"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="CheckBox3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox3">
                 <CheckBox Content="CheckBox" IsChecked="True" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="CheckBox4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox4">
                 <CheckBox
                     Content="CheckBox"
                     IsChecked="True"
@@ -84,19 +72,13 @@
             Grid.Column="0"
             Grid.Row="3"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="CheckBox5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox5">
                 <CheckBox
                     Content="CheckBox"
                     IsChecked="{x:Null}"
                     IsThreeState="True" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="CheckBox6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox6">
                 <CheckBox
                     Content="CheckBox"
                     IsChecked="{x:Null}"

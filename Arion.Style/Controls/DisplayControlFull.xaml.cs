@@ -175,5 +175,15 @@ namespace Arion.Style.Controls
             else if (TargetValue + Step <= Maximum)
                 TargetValue += Step;
         }
+
+        public void PressPlus()
+        {
+            BtnPlus_OnClick(null, null);
+        }
+
+        public void PressMinus()
+        {
+            BtnMinus_OnClick(null, null);
+        }
     }
 }

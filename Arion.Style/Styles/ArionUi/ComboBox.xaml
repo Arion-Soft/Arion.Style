@@ -176,6 +176,7 @@
                         <TextBlock
                             FontSize="{TemplateBinding FontSize}"
                             FontWeight="Light"
+                            Foreground="{StaticResource Mg4}"
                             HorizontalAlignment="Left"
                             IsHitTestVisible="False"
                             Margin="16,8,56,8"

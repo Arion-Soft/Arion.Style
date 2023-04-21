@@ -39,7 +39,6 @@
             Grid.Column="0"
             Grid.Row="1"
             Margin="10"
-            Style="{StaticResource Xaml}"
             UniqueKey="Stepper1">
             <controls:Stepper />
         </smtx:XamlDisplay>

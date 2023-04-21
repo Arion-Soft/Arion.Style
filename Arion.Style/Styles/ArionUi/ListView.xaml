@@ -9,14 +9,14 @@
     <Style TargetType="ListView">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="attach:ListView.SelectColor" Value="{StaticResource R500}" />
     </Style>
 
     <Style TargetType="{x:Type ListViewItem}">
-        <Setter Property="Foreground" Value="#252C32" />
-        <Setter Property="attach:ListView.SelectColor" Value="#F6F8F9" />
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="ListViewItem">
+                <ControlTemplate TargetType="ListViewItem" x:Name="Root">
                     <Border
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
@@ -25,6 +25,7 @@
                         TextElement.Foreground="{TemplateBinding Foreground}"
                         x:Name="brd">
                         <ContentPresenter
+                            HorizontalAlignment="Left"
                             TextElement.FontSize="24"
                             TextElement.FontWeight="Bold"
                             TextElement.Foreground="{TemplateBinding Foreground}" />
@@ -52,6 +53,7 @@
                         TextElement.Foreground="{TemplateBinding Foreground}"
                         x:Name="brd">
                         <ContentPresenter
+                            HorizontalAlignment="Left"
                             TextElement.FontSize="24"
                             TextElement.FontWeight="Bold"
                             TextElement.Foreground="{TemplateBinding Foreground}" />
@@ -79,6 +81,7 @@
                         TextElement.Foreground="{TemplateBinding Foreground}"
                         x:Name="brd">
                         <ContentPresenter
+                            HorizontalAlignment="Left"
                             TextElement.FontSize="24"
                             TextElement.FontWeight="Bold"
                             TextElement.Foreground="{TemplateBinding Foreground}" />

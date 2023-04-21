@@ -133,16 +133,10 @@
             Grid.Column="1"
             Grid.Row="2"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled1">
                 <Button Content="Button" Style="{StaticResource BtnFilled}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled2">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -153,10 +147,7 @@
             Grid.Column="1"
             Grid.Row="3"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled3">
                 <Button
                     Content="Button"
                     Style="{StaticResource BtnFilled}"
@@ -164,10 +155,7 @@
                     wpf:Button.IconWidth="30"
                     wpf:Button.LeftIcon="LinearFunction" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled4">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -179,20 +167,14 @@
             Grid.Column="1"
             Grid.Row="4"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled5">
                 <Button
                     Content="Button"
                     Foreground="{Binding ElementName=BtnTest, Path=Foreground}"
                     Style="{StaticResource BtnFilled}"
                     wpf:Button.RightIcon="SinFunction" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled6">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -204,19 +186,13 @@
             Grid.Column="1"
             Grid.Row="5"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled7">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled7">
                 <Button
                     Name="BtnTest"
                     Style="{StaticResource BtnFilled}"
                     wpf:Button.Icon="User" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled8">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled8">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnFilled}"
@@ -227,10 +203,7 @@
             Grid.Column="1"
             Grid.Row="6"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled9">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled9">
                 <Button
                     Style="{StaticResource BtnFilled}"
                     wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
@@ -238,10 +211,7 @@
                     wpf:Button.ProgressBarShow="True"
                     wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled10">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled10">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnFilled}"
@@ -255,10 +225,7 @@
             Grid.Column="1"
             Grid.Row="7"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled11">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled11">
                 <Button
                     Style="{StaticResource BtnFilled}"
                     wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
@@ -267,10 +234,7 @@
                     wpf:Button.ProgressBarType="Circle"
                     wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnFilled12">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled12">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnFilled}"
@@ -286,16 +250,10 @@
             Grid.Column="2"
             Grid.Row="2"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline1">
                 <Button Content="Button" Style="{StaticResource BtnOutline}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline2">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -306,19 +264,13 @@
             Grid.Column="2"
             Grid.Row="3"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline3">
                 <Button
                     Content="Button"
                     Style="{StaticResource BtnOutline}"
                     wpf:Button.LeftIcon="User" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline4">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -330,19 +282,13 @@
             Grid.Column="2"
             Grid.Row="4"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline5">
                 <Button
                     Content="Button"
                     Style="{StaticResource BtnOutline}"
                     wpf:Button.RightIcon="User" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline6">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -354,19 +300,13 @@
             Grid.Column="2"
             Grid.Row="5"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline7">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline7">
                 <Button
                     Name="BtnTest2"
                     Style="{StaticResource BtnOutline}"
                     wpf:Button.Icon="User" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline8">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline8">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnOutline}"
@@ -377,10 +317,7 @@
             Grid.Column="2"
             Grid.Row="6"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline9">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline9">
                 <Button
                     Style="{StaticResource BtnOutline}"
                     Width="40"
@@ -389,10 +326,7 @@
                     wpf:Button.ProgressBarShow="True"
                     wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline10">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline10">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnOutline}"
@@ -406,10 +340,7 @@
             Grid.Column="2"
             Grid.Row="7"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline11">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline11">
                 <Button
                     Style="{StaticResource BtnOutline}"
                     Width="40"
@@ -419,10 +350,7 @@
                     wpf:Button.ProgressBarType="Circle"
                     wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnOutline12">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline12">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnOutline}"
@@ -438,16 +366,10 @@
             Grid.Column="3"
             Grid.Row="2"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText1">
                 <Button Content="Button" Style="{StaticResource BtnText}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText2">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -458,19 +380,13 @@
             Grid.Column="3"
             Grid.Row="3"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText3">
                 <Button
                     Content="Button"
                     Style="{StaticResource BtnText}"
                     wpf:Button.LeftIcon="User" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText4">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -482,19 +398,13 @@
             Grid.Column="3"
             Grid.Row="4"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText5">
                 <Button
                     Content="Button"
                     Style="{StaticResource BtnText}"
                     wpf:Button.RightIcon="User" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText6">
                 <Button
                     Content="Button"
                     IsEnabled="False"
@@ -506,19 +416,13 @@
             Grid.Column="3"
             Grid.Row="5"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText7">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText7">
                 <Button
                     Name="BtnTest3"
                     Style="{StaticResource BtnText}"
                     wpf:Button.Icon="User" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText8">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText8">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnText}"
@@ -529,10 +433,7 @@
             Grid.Column="3"
             Grid.Row="6"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText9">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText9">
                 <Button
                     Style="{StaticResource BtnText}"
                     wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
@@ -540,10 +441,7 @@
                     wpf:Button.ProgressBarShow="True"
                     wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText10">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText10">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnText}"
@@ -557,10 +455,7 @@
             Grid.Column="3"
             Grid.Row="7"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText11">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText11">
                 <Button
                     Style="{StaticResource BtnText}"
                     Width="40"
@@ -570,10 +465,7 @@
                     wpf:Button.ProgressBarType="Circle"
                     wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnText12">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText12">
                 <Button
                     IsEnabled="False"
                     Style="{StaticResource BtnText}"
@@ -603,28 +495,19 @@
             Grid.Column="1"
             Grid.Row="17"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnGroupedFilled1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedFilled1">
                 <Button
                     Content="First"
                     Style="{StaticResource BtnFilled}"
                     wpf:Button.Position="First" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnGroupedFilled2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedFilled2">
                 <Button
                     Content="Middle"
                     Style="{StaticResource BtnFilled}"
                     wpf:Button.Position="Middle" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnGroupedFilled3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedFilled3">
                 <Button
                     Content="Last"
                     Style="{StaticResource BtnFilled}"
@@ -636,22 +519,13 @@
             Grid.Column="2"
             Grid.Row="17"
             Orientation="Horizontal">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnGroupedOutline1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedOutline1">
                 <Button Content="First" wpf:Button.Position="First" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnGroupedOutline2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedOutline2">
                 <Button Content="Middle" wpf:Button.Position="Middle" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="BtnGroupedOutline3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedOutline3">
                 <Button Content="Last" wpf:Button.Position="Last" />
             </smtx:XamlDisplay>
         </StackPanel>

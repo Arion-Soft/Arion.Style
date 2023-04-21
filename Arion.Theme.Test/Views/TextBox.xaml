@@ -47,49 +47,28 @@
             Grid.Row="1" />
 
         <StackPanel Grid.Column="0" Grid.Row="2">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxDefault1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault1">
                 <TextBox Text="{Binding Person.Surname}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxDefault2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault2">
                 <TextBox wpf:Hint.Placeholder="Placeholder" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxDefault3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault3">
                 <TextBox wpf:TextBox.CanClear="True" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxDefault4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault4">
                 <TextBox wpf:TextBox.LeftIcon="Search" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxDefault5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault5">
                 <TextBox wpf:TextBox.RightIcon="Search" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxDefault6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault6">
                 <TextBox
                     IsReadOnly="True"
                     Text="IsReadOnly"
                     wpf:TextBox.CanClear="True" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxDefault7">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault7">
                 <TextBox IsEnabled="False" Text="Disabled" />
             </smtx:XamlDisplay>
         </StackPanel>
@@ -101,39 +80,27 @@
             Grid.Row="1" />
 
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix1">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.Prefix="Prefix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix2">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.Prefix="Prefix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix3">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.CanClear="True"
                     wpf:TextBox.Prefix="Prefix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix4">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -141,20 +108,14 @@
                     wpf:TextBox.CanClear="True"
                     wpf:TextBox.Prefix="Prefix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix5">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.LeftIcon="Search"
                     wpf:TextBox.Prefix="Prefix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix6">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -162,20 +123,14 @@
                     wpf:TextBox.LeftIcon="Search"
                     wpf:TextBox.Prefix="Prefix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix7">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix7">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.Prefix="Prefix"
                     wpf:TextBox.RightIcon="Search" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefix8">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix8">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -192,39 +147,27 @@
             Grid.Row="1" />
 
         <StackPanel Grid.Column="2" Grid.Row="2">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix1">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix2">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix3">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.CanClear="True"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix4">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -232,20 +175,14 @@
                     wpf:TextBox.CanClear="True"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix5">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.LeftIcon="Search"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix6">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -253,20 +190,14 @@
                     wpf:TextBox.LeftIcon="Search"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix7">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix7">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.RightIcon="Search"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxSuffix8">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix8">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -283,20 +214,14 @@
             Grid.Row="1" />
 
         <StackPanel Grid.Column="3" Grid.Row="2">
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix1">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix1">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
                     wpf:TextBox.Prefix="Prefix"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix2">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix2">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -304,10 +229,7 @@
                     wpf:TextBox.Prefix="Prefix"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix3">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix3">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
@@ -315,10 +237,7 @@
                     wpf:TextBox.Prefix="Prefix"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix4">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix4">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -327,10 +246,7 @@
                     wpf:TextBox.Prefix="Prefix"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix5">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix5">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
@@ -338,10 +254,7 @@
                     wpf:TextBox.Prefix="Prefix"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix6">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix6">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"
@@ -350,10 +263,7 @@
                     wpf:TextBox.Prefix="Prefix"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix7">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix7">
                 <TextBox
                     FontWeight="Light"
                     wpf:Hint.Placeholder="Placeholder"
@@ -361,10 +271,7 @@
                     wpf:TextBox.RightIcon="Search"
                     wpf:TextBox.Suffix="Suffix" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay
-                Margin="5"
-                Style="{StaticResource Xaml}"
-                UniqueKey="TextBoxPrefixSuffix8">
+            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix8">
                 <TextBox
                     FontWeight="Light"
                     IsEnabled="False"

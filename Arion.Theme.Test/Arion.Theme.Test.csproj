@@ -66,10 +66,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\EIconsGroup.cs" />
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\ButtonsViewModel.cs" />
     <Compile Include="ViewModel\CheckBoxViewModel.cs" />
     <Compile Include="ViewModel\ColorViewModel.cs" />
+    <Compile Include="ViewModel\IconPackViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\TextBoxViewModel.cs" />
     <Compile Include="Views\Breadcrumbs.xaml.cs">
