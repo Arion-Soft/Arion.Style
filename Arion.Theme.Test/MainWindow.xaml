@@ -38,6 +38,9 @@
         <TabItem Header="Combo Box">
             <views:ComboBoxes />
         </TabItem>
+        <TabItem Header="DocumentViewer">
+            <views:DocumentViewer />
+        </TabItem>
         <!--  DISPLAY CONTROLS  -->
         <TabItem Header="Display Control">
             <views:DisplayControls />

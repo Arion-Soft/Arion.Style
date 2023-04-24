@@ -56,6 +56,7 @@
     <Compile Include="AttachedProperties\ListView.cs" />
     <Compile Include="AttachedProperties\PasswordBox.cs" />
     <Compile Include="AttachedProperties\ProgressBar.cs" />
+    <Compile Include="AttachedProperties\RadioButton.cs" />
     <Compile Include="AttachedProperties\Switcher.cs" />
     <Compile Include="AttachedProperties\TextBox.cs" />
     <Compile Include="Commands\ClearText.cs" />

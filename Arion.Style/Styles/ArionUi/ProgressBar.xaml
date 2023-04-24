@@ -224,6 +224,8 @@
                             <Setter Property="Width" TargetName="width1" Value="0.25*" />
                             <Setter Property="Width" TargetName="width2" Value="0.725*" />
                         </Trigger>
+
+                        <Trigger Property="IsIndeterminate" Value="True" />
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -245,14 +247,12 @@
             <sys:Double x:Key="One">1.0</sys:Double>
             <!--  какой процент рисовать для неопределённого состояния  -->
             <sys:Double x:Key="IndeterminatePart">0.25</sys:Double>
-            <!--  обычно прогресс по умолчанию зелёный  -->
-            <SolidColorBrush Color="#FF06B025" x:Key="ProgressBar.Progress" />
             <!--  стандартный фон  -->
             <SolidColorBrush Color="#FFE6E6E6" x:Key="ProgressBar.Background" />
             <!--  стандартный цвет границы  -->
             <SolidColorBrush Color="#FFBCBCBC" x:Key="ProgressBar.Border" />
         </Style.Resources>
-        <Setter Property="Foreground" Value="{StaticResource ProgressBar.Progress}" />
+        <Setter Property="Foreground" Value="{StaticResource Pr500}" />
         <Setter Property="Background" Value="{StaticResource ProgressBar.Background}" />
         <Setter Property="BorderBrush" Value="{StaticResource ProgressBar.Border}" />
         <Setter Property="BorderThickness" Value="1" />
@@ -306,6 +306,7 @@
                                 <RotateTransform />
                             </Path.RenderTransform>
                         </Path>
+
                         <!--  в неопределённом состоянии запускаем вращающуюся анимацию  -->
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">

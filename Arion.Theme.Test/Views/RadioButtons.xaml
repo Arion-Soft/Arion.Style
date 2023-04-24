@@ -8,6 +8,7 @@
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
         <Grid.RowDefinitions>
@@ -40,28 +41,37 @@
             Grid.Row="1"
             Margin="5"
             UniqueKey="Rb1">
-            <RadioButton Content="RadioButton" />
+            <RadioButton Content="RadioButton" GroupName="Group1" />
         </smtx:XamlDisplay>
         <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="2"
             Margin="5"
             UniqueKey="Rb2">
-            <RadioButton Content="RadioButton" />
+            <RadioButton
+                Content="RadioButton"
+                GroupName="Group1"
+                wpf:RadioButton.Description="Helpful description of the option which may briefly highlight side effects or conditions of the                           option." />
         </smtx:XamlDisplay>
         <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="3"
             Margin="5"
             UniqueKey="Rb3">
-            <RadioButton Content="RadioButton" IsChecked="True" />
+            <RadioButton
+                Content="RadioButton"
+                GroupName="Group1"
+                IsChecked="True" />
         </smtx:XamlDisplay>
         <smtx:XamlDisplay
             Grid.Column="0"
             Grid.Row="4"
             Margin="5"
             UniqueKey="Rb4">
-            <RadioButton Content="RadioButton" IsEnabled="False" />
+            <RadioButton
+                Content="RadioButton"
+                GroupName="Group1"
+                IsEnabled="False" />
         </smtx:XamlDisplay>
     </Grid>
 </UserControl>

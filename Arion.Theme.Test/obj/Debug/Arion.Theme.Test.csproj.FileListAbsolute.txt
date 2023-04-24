@@ -133,3 +133,5 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Toggl
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Tooltips.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\DatePicker.g.cs
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\DatePicker.baml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\DocumentViewer.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\DocumentViewer.baml

@@ -42,6 +42,7 @@
     <Reference Include="Microsoft.Build.Tasks.v4.0" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="ReachFramework" />
     <Reference Include="ShowMeTheXAML, Version=2.0.0.62, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ShowMeTheXAML.2.0.0\lib\net472\ShowMeTheXAML.dll</HintPath>
     </Reference>
@@ -94,6 +95,9 @@
     </Compile>
     <Compile Include="Views\DisplayControls.xaml.cs">
       <DependentUpon>DisplayControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DocumentViewer.xaml.cs">
+      <DependentUpon>DocumentViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Expanders.xaml.cs">
       <DependentUpon>Expanders.xaml</DependentUpon>
@@ -172,6 +176,7 @@
     <Page Include="Views\ComboBoxes.xaml" />
     <Page Include="Views\DatePicker.xaml" />
     <Page Include="Views\DisplayControls.xaml" />
+    <Page Include="Views\DocumentViewer.xaml" />
     <Page Include="Views\Expanders.xaml" />
     <Page Include="Views\IconPack.xaml" />
     <Page Include="Views\InlineAlerts.xaml" />
