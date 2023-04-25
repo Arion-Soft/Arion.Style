@@ -1,0 +1,41 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:local="clr-namespace:Arion.Style.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Icons/SRE450.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Icons.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Colors.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/FontFamily.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/LabelDark.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Button.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Calendar.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/DatePicker.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Window.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Expander.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Page.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/TextBlock.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/TextBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ToggleButtonDark.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/RepeatButton.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/DataGrid.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/CheckBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/RadioButton.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Switcher.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ListView.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ComboBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/PasswordBox.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Slider.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ToolTip.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/TabControl.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Shadow.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/DisplayControl.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/ProgressBar.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/RangeSlider.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/Menu.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/DocumentViewer.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <!--  DEFAULT  -->
+    <Style BasedOn="{StaticResource BtnOutline}" TargetType="{x:Type Button}" />
+    <Style BasedOn="{StaticResource CalendarStyle}" TargetType="{x:Type Calendar}" />
+</ResourceDictionary>

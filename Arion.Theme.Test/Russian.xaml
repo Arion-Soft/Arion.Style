@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <sys:String x:Key="Button">Кнопка</sys:String>
+    <sys:String x:Key="Buttons">Кнопки</sys:String>
+    <sys:String x:Key="First">Первый</sys:String>
+    <sys:String x:Key="Middle">Средний</sys:String>
+    <sys:String x:Key="Last">Последний</sys:String>
+    <sys:String x:Key="Default">Стандарт</sys:String>
+    <sys:String x:Key="LeftIcon">Иконка слева</sys:String>
+    <sys:String x:Key="RightIcon">Иконка справа</sys:String>
+    <sys:String x:Key="Icon">Иконка</sys:String>
+    <sys:String x:Key="LinearProgressBar">Линейный индикатор выполнения</sys:String>
+    <sys:String x:Key="CircleProgressBar">Круговой индикатор выполнения</sys:String>
+    <sys:String x:Key="Filled">Закрашенные</sys:String>
+    <sys:String x:Key="Outline">Обведенные</sys:String>
+    <sys:String x:Key="Text">Только текст</sys:String>
+</ResourceDictionary>

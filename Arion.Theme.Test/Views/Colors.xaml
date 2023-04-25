@@ -35,344 +35,344 @@
             HorizontalAlignment="Left"
             Margin="10"
             Padding="0"
-            Style="{StaticResource Lbl}"
+            Style="{DynamicResource Lbl}"
             VerticalAlignment="Top"
             Width="Auto" />
 
         <WrapPanel Grid.Row="1" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr900}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr900}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR900" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr800}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr800}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR800" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr700}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr700}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR700" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr600}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr600}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR600" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr500}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr500}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR500" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr400}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr400}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR400" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr300}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr300}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR300" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr200}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr200}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR200" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr100}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr100}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR100" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Pr50}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Pr50}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="PR50" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="2" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R900}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R900}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R900" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R800}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R800}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R800" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R700}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R700}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R700" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R600}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R600}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R600" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R500}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R500}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R500" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R400}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R400}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R400" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R300}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R300}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R300" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R200}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R200}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R200" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R100}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R100}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R100" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource R50}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource R50}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="R50" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="3" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G900}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G900}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G900" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G800}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G800}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G800" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G700}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G700}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G700" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G600}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G600}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G600" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G500}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G500}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G500" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G400}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G400}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G400" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G300}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G300}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G300" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G200}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G200}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G200" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G100}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G100}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G100" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource G50}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource G50}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="G50" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="4" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y900}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y900}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y900" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y800}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y800}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y800" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y700}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y700}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y700" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y600}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y600}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y600" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y500}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y500}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y500" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y400}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y400}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y400" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y300}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y300}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y300" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y200}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y200}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y200" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y100}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y100}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y100" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Y50}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Y50}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Y50" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="5" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P900}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P900}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P900" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P800}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P800}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P800" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P700}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P700}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P700" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P600}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P600}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P600" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P500}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P500}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P500" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P400}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P400}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P400" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P300}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P300}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P300" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P200}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P200}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P200" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P100}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P100}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P100" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource P50}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource P50}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="P50" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="6" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T900}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T900}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T900" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T800}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T800}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T800" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T700}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T700}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T700" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T600}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T600}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T600" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T500}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T500}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T500" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T400}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T400}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T400" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T300}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T300}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T300" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T200}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T200}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T200" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T100}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T100}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T100" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource T50}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource T50}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="T50" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="8" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource CleanW}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource CleanW}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="CleanW" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource CleanB}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource CleanB}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="CleanB" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="9" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Dg1}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Dg1}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Dg1" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Dg2}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Dg2}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Dg2" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Dg3}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Dg3}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Dg3" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Dg4}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Dg4}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Dg4" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Dg5}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Dg5}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Dg5" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="10" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Mg1}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Mg1}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Mg1" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Mg2}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Mg2}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Mg2" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Mg3}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Mg3}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Mg3" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Mg4}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Mg4}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Mg4" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Mg5}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Mg5}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Mg5" />
             </StackPanel>
         </WrapPanel>
 
         <WrapPanel Grid.Row="11" Orientation="Horizontal">
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Lg1}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Lg1}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Lg1" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Lg2}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Lg2}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Lg2" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Lg3}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Lg3}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Lg3" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Lg4}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Lg4}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Lg4" />
             </StackPanel>
             <StackPanel MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
-                <Border Background="{StaticResource Lg5}" Style="{StaticResource Brd}" />
+                <Border Background="{DynamicResource Lg5}" Style="{DynamicResource Brd}" />
                 <TextBlock Text="Lg5" />
             </StackPanel>
         </WrapPanel>

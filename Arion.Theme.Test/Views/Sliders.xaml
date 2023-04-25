@@ -30,7 +30,7 @@
             HorizontalAlignment="Left"
             Margin="10"
             Padding="0"
-            Style="{StaticResource Lbl}"
+            Style="{DynamicResource Lbl}"
             VerticalAlignment="Top"
             Width="Auto" />
         <Slider
@@ -42,7 +42,7 @@
             Grid.Column="1"
             Grid.Row="2"
             Margin="5"
-            Style="{StaticResource SliderBig}"
+            Style="{DynamicResource SliderBig}"
             Width="200" />
         <Slider
             Grid.Column="1"

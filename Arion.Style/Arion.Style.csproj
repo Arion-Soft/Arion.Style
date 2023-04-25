@@ -51,6 +51,7 @@
     <Compile Include="AttachedProperties\Button.cs" />
     <Compile Include="AttachedProperties\CheckBox.cs" />
     <Compile Include="AttachedProperties\ComboBox.cs" />
+    <Compile Include="AttachedProperties\DocumentViewer.cs" />
     <Compile Include="AttachedProperties\Enum\Position.cs" />
     <Compile Include="AttachedProperties\Hint.cs" />
     <Compile Include="AttachedProperties\ListView.cs" />
@@ -204,6 +205,7 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="ArionTheme.xaml" />
+    <Page Include="ArionUiDark.xaml" />
     <Page Include="ArionUiTheme.xaml" />
     <Page Include="BaseTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -269,6 +271,7 @@
     <Page Include="Styles\ArionUi\GroupBox.xaml" />
     <Page Include="Styles\ArionUi\Icons.xaml" />
     <Page Include="Styles\ArionUi\Label.xaml" />
+    <Page Include="Styles\ArionUi\LabelDark.xaml" />
     <Page Include="Styles\ArionUi\ListView.xaml" />
     <Page Include="Styles\ArionUi\Menu.xaml" />
     <Page Include="Styles\ArionUi\Page.xaml" />
@@ -285,6 +288,7 @@
     <Page Include="Styles\ArionUi\TextBlock.xaml" />
     <Page Include="Styles\ArionUi\TextBox.xaml" />
     <Page Include="Styles\ArionUi\ToggleButton.xaml" />
+    <Page Include="Styles\ArionUi\ToggleButtonDark.xaml" />
     <Page Include="Styles\ArionUi\ToolTip.xaml" />
     <Page Include="Styles\ArionUi\Window.xaml" />
     <Page Include="UIColors.xaml">

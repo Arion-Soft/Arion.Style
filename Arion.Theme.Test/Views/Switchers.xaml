@@ -31,7 +31,7 @@
             Grid.Row="0"
             Margin="10"
             Padding="0"
-            Style="{StaticResource Lbl}"
+            Style="{DynamicResource Lbl}"
             VerticalAlignment="Top"
             Width="Auto" />
 
@@ -65,7 +65,7 @@
             Grid.Column="1"
             Grid.Row="1"
             HorizontalAlignment="Left"
-            Style="{StaticResource Lbl}" />
+            Style="{DynamicResource Lbl}" />
 
         <StackPanel
             Grid.Column="1"
@@ -74,27 +74,27 @@
             <RadioButton
                 Content="First"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="First"
                 x:Name="Switcher1" />
             <RadioButton
                 Content="Middle"
                 IsChecked="True"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="Middle"
                 x:Name="Switcher2" />
             <RadioButton
                 Content="Middle"
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="Middle"
                 x:Name="Switcher3" />
             <RadioButton
                 Content="Last"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="Last"
                 x:Name="Switcher4" />
         </StackPanel>
@@ -106,28 +106,28 @@
                 Content="First"
                 IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="First" />
             <RadioButton
                 Content="Middle"
                 IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 Content="Middle"
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 Content="Last"
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="Last" />
         </StackPanel>
@@ -139,28 +139,28 @@
                 Content="First"
                 IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="First"
                 wpf:Switcher.RightIcon="User" />
             <RadioButton
                 Content="Middle"
                 IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="Middle"
                 wpf:Switcher.RightIcon="User" />
             <RadioButton
                 Content="Middle"
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="Middle"
                 wpf:Switcher.RightIcon="User" />
             <RadioButton
                 Content="Last"
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Position="Last"
                 wpf:Switcher.RightIcon="User" />
         </StackPanel>
@@ -171,25 +171,25 @@
             <RadioButton
                 IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="First" />
             <RadioButton
                 IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherFilled}"
+                Style="{DynamicResource SwitcherFilled}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="Last" />
         </StackPanel>
@@ -200,7 +200,7 @@
             Grid.Row="1"
             HorizontalAlignment="Left"
             Margin="10,0,0,0"
-            Style="{StaticResource Lbl}" />
+            Style="{DynamicResource Lbl}" />
 
         <StackPanel
             Grid.Column="2"
@@ -211,25 +211,25 @@
                 Content="First"
                 IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="First" />
             <RadioButton
                 Content="Middle"
                 IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 Content="Middle"
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 Content="Last"
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="Last" />
         </StackPanel>
         <StackPanel
@@ -241,28 +241,28 @@
                 Content="First"
                 IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="First" />
             <RadioButton
                 Content="Middle"
                 IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 Content="Middle"
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 Content="Last"
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.LeftIcon="User"
                 wpf:Switcher.Position="Last" />
         </StackPanel>
@@ -275,28 +275,28 @@
                 Content="First"
                 IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="First"
                 wpf:Switcher.RightIcon="User" />
             <RadioButton
                 Content="Middle"
                 IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="Middle"
                 wpf:Switcher.RightIcon="User" />
             <RadioButton
                 Content="Middle"
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="Middle"
                 wpf:Switcher.RightIcon="User" />
             <RadioButton
                 Content="Last"
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Position="Last"
                 wpf:Switcher.RightIcon="User" />
         </StackPanel>
@@ -308,25 +308,25 @@
             <RadioButton
                 IsChecked="{Binding ElementName=Switcher1, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="First" />
             <RadioButton
                 IsChecked="{Binding ElementName=Switcher2, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 IsEnabled="False"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="Middle" />
             <RadioButton
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
                 Margin="0,5"
-                Style="{StaticResource SwitcherOutline}"
+                Style="{DynamicResource SwitcherOutline}"
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="Last" />
         </StackPanel>

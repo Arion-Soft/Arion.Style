@@ -293,7 +293,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Border
-                        Background="DarkRed"
+                        Background="Red"
                         BorderBrush="{StaticResource Lg1}"
                         BorderThickness="1"
                         CornerRadius="3"
@@ -324,7 +324,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="BorderBrush" Value="{StaticResource Lg1}" />
-                            <Setter Property="Background" TargetName="Border" Value="Green" />
+                            <Setter Property="Background" TargetName="Border" Value="Lime" />
                             <Setter Property="BorderThickness" Value="2" />
                             <Setter Property="Content" TargetName="Text" Value="ВКЛ" />
                             <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" />
@@ -430,7 +430,7 @@
         <Setter Property="Width" Value="48" />
         <Setter Property="Height" Value="48" />
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="Background" Value="{StaticResource CleanW}" />
+        <Setter Property="Background" Value="{StaticResource Dg3}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
         <Setter Property="Template">
@@ -442,7 +442,7 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="3">
                         <Ellipse
-                            Fill="{StaticResource Dg2}"
+                            Fill="{StaticResource CleanW}"
                             Height="10"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
@@ -455,10 +455,10 @@
                             <Setter Property="Height" TargetName="FocalSpot" Value="30" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{StaticResource Lg4}" />
+                            <Setter Property="Background" Value="{StaticResource Dg4}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="{StaticResource Lg2}" />
+                            <Setter Property="Background" Value="{StaticResource Dg2}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Opacity" Value="0.7" />

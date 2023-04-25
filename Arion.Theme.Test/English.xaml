@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <sys:String x:Key="Button">Button</sys:String>
+    <sys:String x:Key="Buttons">Buttons</sys:String>
+    <sys:String x:Key="First">First</sys:String>
+    <sys:String x:Key="Middle">Middle</sys:String>
+    <sys:String x:Key="Last">Last</sys:String>
+    <sys:String x:Key="Default">Default</sys:String>
+    <sys:String x:Key="LeftIcon">Left Icon</sys:String>
+    <sys:String x:Key="RightIcon">Right Icon</sys:String>
+    <sys:String x:Key="Icon">Icon</sys:String>
+    <sys:String x:Key="LinearProgressBar">Linear progress bar</sys:String>
+    <sys:String x:Key="CircleProgressBar">Circle progress bar</sys:String>
+    <sys:String x:Key="Filled">Filled</sys:String>
+    <sys:String x:Key="Outline">Outline</sys:String>
+    <sys:String x:Key="Text">Text</sys:String>
+</ResourceDictionary>

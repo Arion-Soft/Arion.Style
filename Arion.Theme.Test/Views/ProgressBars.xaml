@@ -32,7 +32,7 @@
             HorizontalAlignment="Left"
             Margin="10"
             Padding="0"
-            Style="{StaticResource Lbl}"
+            Style="{DynamicResource Lbl}"
             VerticalAlignment="Top"
             Width="Auto" />
 
@@ -74,7 +74,7 @@
             Height="40"
             Maximum="65535"
             Minimum="0"
-            Style="{StaticResource RoundProgressBarStyle}"
+            Style="{DynamicResource RoundProgressBarStyle}"
             Value="{Binding ElementName=Slider, Path=Value}"
             Width="40" />
 
@@ -83,7 +83,7 @@
             Grid.Row="2"
             Maximum="65535"
             Minimum="0"
-            Style="{StaticResource RoundProgressBarStyle}"
+            Style="{DynamicResource RoundProgressBarStyle}"
             Value="{Binding ElementName=Slider, Path=Value}" />
 
         <ProgressBar
@@ -92,7 +92,7 @@
             IsIndeterminate="True"
             Maximum="65535"
             Minimum="0"
-            Style="{StaticResource RoundProgressBarStyle}" />
+            Style="{DynamicResource RoundProgressBarStyle}" />
 
         <Slider
             Grid.Column="0"

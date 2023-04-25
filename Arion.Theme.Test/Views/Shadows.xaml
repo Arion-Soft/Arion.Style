@@ -34,45 +34,45 @@
             HorizontalAlignment="Left"
             Margin="10"
             Padding="0"
-            Style="{StaticResource Lbl}"
+            Style="{DynamicResource Lbl}"
             VerticalAlignment="Top"
             Width="Auto" />
 
         <Button
-            Effect="{StaticResource El1}"
+            Effect="{DynamicResource El1}"
             Grid.Column="0"
             Grid.Row="1"
             Margin="20"
-            Style="{StaticResource BtnOutline}" />
+            Style="{DynamicResource BtnOutline}" />
         <Button
-            Effect="{StaticResource El2}"
+            Effect="{DynamicResource El2}"
             Grid.Column="1"
             Grid.Row="1"
             Margin="20"
-            Style="{StaticResource BtnOutline}" />
+            Style="{DynamicResource BtnOutline}" />
         <Button
-            Effect="{StaticResource El3}"
+            Effect="{DynamicResource El3}"
             Grid.Column="2"
             Grid.Row="1"
             Margin="20"
-            Style="{StaticResource BtnOutline}" />
+            Style="{DynamicResource BtnOutline}" />
         <Button
-            Effect="{StaticResource El4}"
+            Effect="{DynamicResource El4}"
             Grid.Column="3"
             Grid.Row="1"
             Margin="20"
-            Style="{StaticResource BtnOutline}" />
+            Style="{DynamicResource BtnOutline}" />
         <Button
-            Effect="{StaticResource El5}"
+            Effect="{DynamicResource El5}"
             Grid.Column="4"
             Grid.Row="1"
             Margin="20"
-            Style="{StaticResource BtnOutline}" />
+            Style="{DynamicResource BtnOutline}" />
         <Button
-            Effect="{StaticResource El6}"
+            Effect="{DynamicResource El6}"
             Grid.Column="5"
             Grid.Row="1"
             Margin="20"
-            Style="{StaticResource BtnOutline}" />
+            Style="{DynamicResource BtnOutline}" />
     </Grid>
 </UserControl>

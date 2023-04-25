@@ -24,9 +24,6 @@
         </Setter>
     </Style>
 
-
-    <SolidColorBrush Color="#FFFFFFFF" x:Key="TextBox.Static.Background" />
-
     <Style TargetType="{x:Type TextBox}" x:Key="ComboBoxEditableTextBox">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="AllowDrop" Value="true" />
@@ -58,8 +55,8 @@
             <!--  ФОН ОТ ВСЕГО  -->
             <!--  РАМКА ОТ ВСЕГО  -->
             <Border
-                Background="#F6F8F9"
-                BorderBrush="#DDE2E4"
+                Background="{StaticResource Lg5}"
+                BorderBrush="{StaticResource Lg2}"
                 BorderThickness="1"
                 CornerRadius="0,5,5,0"
                 Grid.Column="1"
@@ -68,7 +65,7 @@
             <!--  РАМКА МЕЖДУ КОНТЕНТОМ И КНОПКОЙ  -->
             <Border
                 Background="White"
-                BorderBrush="#DDE2E4"
+                BorderBrush="{StaticResource Lg2}"
                 BorderThickness="1"
                 CornerRadius="5,0,0,5"
                 Grid.Column="0"
@@ -77,7 +74,7 @@
             <!--  РИСУНОК КНОПКИ  -->
             <Path
                 Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 z"
-                Fill="#6E7C87"
+                Fill="{StaticResource Mg2}"
                 Grid.Column="1"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
@@ -85,16 +82,16 @@
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" SourceName="Border" Value="True">
-                <Setter Property="Background" TargetName="Border" Value="#EEF0F2" />
+                <Setter Property="Background" TargetName="Border" Value="{StaticResource Lg4}" />
             </Trigger>
             <Trigger Property="IsMouseOver" SourceName="Content" Value="True">
-                <Setter Property="BorderBrush" TargetName="Content" Value="#B0BABF" />
+                <Setter Property="BorderBrush" TargetName="Content" Value="{StaticResource Mg5}" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Background" TargetName="Border" Value="#F6F8F9" />
-                <Setter Property="BorderBrush" TargetName="Border" Value="#EEF0F2" />
-                <Setter Property="Background" TargetName="Content" Value="#F6F8F9" />
-                <Setter Property="BorderBrush" TargetName="Content" Value="#EEF0F2" />
+                <Setter Property="Background" TargetName="Border" Value="{StaticResource Lg5}" />
+                <Setter Property="BorderBrush" TargetName="Border" Value="{StaticResource Lg4}" />
+                <Setter Property="Background" TargetName="Content" Value="{StaticResource Lg5}" />
+                <Setter Property="BorderBrush" TargetName="Content" Value="{StaticResource Lg4}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -163,7 +160,7 @@
                                 SnapsToDevicePixels="True">
                                 <Border
                                     Background="White"
-                                    BorderBrush="#DDE2E4"
+                                    BorderBrush="{StaticResource Lg2}"
                                     BorderThickness="1"
                                     CornerRadius="26"
                                     x:Name="DropDownBorder" />
@@ -191,7 +188,9 @@
                             <Setter Property="MinHeight" TargetName="DropDownBorder" Value="95" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Foreground" Value="#888888" />
+                            <Setter Property="Foreground" Value="{StaticResource Mg4}" />
+                            <Setter Property="Background" Value="{StaticResource Lg5}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg4}" />
                         </Trigger>
                         <Trigger Property="IsGrouping" Value="true">
                             <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
@@ -232,11 +231,13 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="True">
-                            <Setter Property="Background" TargetName="Border" Value="#F6F8F9" />
+                            <Setter Property="Background" TargetName="Border" Value="{StaticResource Lg5}" />
                             <Setter Property="TextElement.Foreground" Value="{StaticResource Dg2}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Foreground" Value="#9AA6AC" />
+                            <Setter Property="Foreground" Value="{StaticResource Mg4}" />
+                            <Setter Property="Background" Value="{StaticResource Lg5}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg4}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

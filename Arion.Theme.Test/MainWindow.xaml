@@ -17,345 +17,323 @@
     <Window.DataContext>
         <vm:MainViewModel />
     </Window.DataContext>
-    <TabControl TabStripPlacement="Left">
-        <!--  BREADCRUMB  -->
-        <TabItem Header="Breadcrumb">
-            <views:Breadcrumbs />
-        </TabItem>
-        <!--  BUTTONS  -->
-        <TabItem Header="Button">
-            <views:Buttons />
-        </TabItem>
-        <!--  CHECK BOXES  -->
-        <TabItem Header="Check box">
-            <views:CheckBoxes />
-        </TabItem>
-        <!--  COLORS  -->
-        <TabItem Header="Color">
-            <views:Colors />
-        </TabItem>
-        <!--  COMBO BOXES  -->
-        <TabItem Header="Combo Box">
-            <views:ComboBoxes />
-        </TabItem>
-        <TabItem Header="DocumentViewer">
-            <views:DocumentViewer />
-        </TabItem>
-        <!--  DISPLAY CONTROLS  -->
-        <TabItem Header="Display Control">
-            <views:DisplayControls />
-        </TabItem>
-        <!--  EXPANDERS  -->
-        <TabItem Header="Expander">
-            <views:Expanders />
-        </TabItem>
-        <!--  INLINE ALERTS  -->
-        <TabItem Header="Inline Alert">
-            <views:InlineAlerts />
-        </TabItem>
-        <!--  LABELS  -->
-        <TabItem Header="Label">
-            <views:Labels />
-        </TabItem>
-        <!--  LISTVIEW  -->
-        <TabItem Header="ListView">
-            <views:ListViews />
-        </TabItem>
-        <!--  Pack Icon  -->
-        <TabItem Header="Pack icon">
-            <views:IconPack />
-        </TabItem>
-        <!--  PASSWORD BOX  -->
-        <TabItem Header="Password box">
-            <views:PasswordBox />
-        </TabItem>
-        <!--  PROGRESS BAR  -->
-        <TabItem Header="Progress bar">
-            <views:ProgressBars />
-        </TabItem>
-        <!--  RADIO BUTTONS  -->
-        <TabItem Header="Radio button">
-            <views:RadioButtons />
-        </TabItem>
-        <!--  RANGERS  -->
-        <TabItem Header="Ranger">
-            <views:Rangers />
-        </TabItem>
-        <TabItem Header="Scroll bar">
-            <!--  SCROLL BARS  -->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label
-                    Content="ScrollBar"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
-                <Label
-                    Content="BUILD"
-                    FontSize="144"
-                    FontWeight="Black"
-                    Foreground="{StaticResource Lg3}"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="0"
-                    Grid.RowSpan="2"
-                    HorizontalAlignment="Center"
-                    Margin="10"
-                    Opacity=".7"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Center"
-                    Width="Auto" />
-            </Grid>
-        </TabItem>
-        <!--  SHADOWS  -->
-        <TabItem Header="Shadow">
-            <views:Shadows />
-        </TabItem>
-        <!--  SLIDERS  -->
-        <TabItem Header="Slider">
-            <views:Sliders />
-        </TabItem>
-        <!--  STEPPERS  -->
-        <TabItem Header="Stepper">
-            <views:Steppers />
-        </TabItem>
-        <!--  SWITCHERS  -->
-        <TabItem Header="Switcher">
-            <views:Switchers />
-        </TabItem>
-        <!--  TABS  -->
-        <TabItem Header="Tab">
-            <views:Tabs />
-        </TabItem>
-        <!--  TABLES  -->
-        <TabItem Header="Table">
-            <views:Tables />
-        </TabItem>
-        <!--  TEXT BOXES  -->
-        <TabItem Header="Text box">
-            <views:TextBox />
-        </TabItem>
-        <!--  TIME INPUT  -->
-        <TabItem Header="Time input">
-            <views:TimeInputs />
-        </TabItem>
-        <!--  TOGGLE BUTTONS  -->
-        <TabItem Header="Toggle button">
-            <views:ToggleButtons />
-        </TabItem>
-        <!--  TOOLTIPS  -->
-        <TabItem Header="Tooltip">
-            <views:Tooltips />
-        </TabItem>
+    <Grid>
+        <TabControl
+            Background="Transparent"
+            Name="TbMain"
+            TabStripPlacement="Left">
+            <!--  BREADCRUMB  -->
+            <TabItem Header="Breadcrumb">
+                <views:Breadcrumbs />
+            </TabItem>
+            <!--  BUTTONS  -->
+            <TabItem Header="Button">
+                <views:Buttons />
+            </TabItem>
+            <!--  CHECK BOXES  -->
+            <TabItem Header="Check box">
+                <views:CheckBoxes />
+            </TabItem>
+            <!--  COLORS  -->
+            <TabItem Header="Color">
+                <views:Colors />
+            </TabItem>
+            <!--  COMBO BOXES  -->
+            <TabItem Header="Combo Box">
+                <views:ComboBoxes />
+            </TabItem>
+            <TabItem Header="DocumentViewer">
+                <views:DocumentViewer />
+            </TabItem>
+            <!--  DISPLAY CONTROLS  -->
+            <TabItem Header="Display Control">
+                <views:DisplayControls />
+            </TabItem>
+            <!--  EXPANDERS  -->
+            <TabItem Header="Expander">
+                <views:Expanders />
+            </TabItem>
+            <!--  INLINE ALERTS  -->
+            <TabItem Header="Inline Alert">
+                <views:InlineAlerts />
+            </TabItem>
+            <!--  LABELS  -->
+            <TabItem Header="Label">
+                <views:Labels />
+            </TabItem>
+            <!--  LISTVIEW  -->
+            <TabItem Header="ListView">
+                <views:ListViews />
+            </TabItem>
+            <!--  Pack Icon  -->
+            <TabItem Header="Pack icon">
+                <views:IconPack />
+            </TabItem>
+            <!--  PASSWORD BOX  -->
+            <TabItem Header="Password box">
+                <views:PasswordBox />
+            </TabItem>
+            <!--  PROGRESS BAR  -->
+            <TabItem Header="Progress bar">
+                <views:ProgressBars />
+            </TabItem>
+            <!--  RADIO BUTTONS  -->
+            <TabItem Header="Radio button">
+                <views:RadioButtons />
+            </TabItem>
+            <!--  RANGERS  -->
+            <TabItem Header="Ranger">
+                <views:Rangers />
+            </TabItem>
+            <TabItem Header="Scroll bar">
+                <!--  SCROLL BARS  -->
+                <views:ScrollBars />
+            </TabItem>
+            <!--  SHADOWS  -->
+            <TabItem Header="Shadow">
+                <views:Shadows />
+            </TabItem>
+            <!--  SLIDERS  -->
+            <TabItem Header="Slider">
+                <views:Sliders />
+            </TabItem>
+            <!--  STEPPERS  -->
+            <TabItem Header="Stepper">
+                <views:Steppers />
+            </TabItem>
+            <!--  SWITCHERS  -->
+            <TabItem Header="Switcher">
+                <views:Switchers />
+            </TabItem>
+            <!--  TABS  -->
+            <TabItem Header="Tab">
+                <views:Tabs />
+            </TabItem>
+            <!--  TABLES  -->
+            <TabItem Header="Table" IsSelected="True">
+                <views:Tables />
+            </TabItem>
+            <!--  TEXT BOXES  -->
+            <TabItem Header="Text box">
+                <views:TextBox />
+            </TabItem>
+            <!--  TIME INPUT  -->
+            <TabItem Header="Time input">
+                <views:TimeInputs />
+            </TabItem>
+            <!--  TOGGLE BUTTONS  -->
+            <TabItem Header="Toggle button">
+                <views:ToggleButtons />
+            </TabItem>
+            <!--  TOOLTIPS  -->
+            <TabItem Header="Tooltip">
+                <views:Tooltips />
+            </TabItem>
 
-        <TabItem Header="OptionControl">
-            <!--  OptionControl  -->
-            <controls:OptionControl Caption="Тестовый контролер" IsChecked="True" />
-        </TabItem>
+            <TabItem Header="OptionControl">
+                <!--  OptionControl  -->
+                <controls:OptionControl Caption="Тестовый контролер" IsChecked="True" />
+            </TabItem>
 
-        <TabItem Header="Popup">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Label
-                    Content="Popup"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
+            <TabItem Header="Popup">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Content="Popup"
+                        FontSize="32"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                        Padding="0"
+                        Style="{StaticResource Lbl}"
+                        VerticalAlignment="Top"
+                        Width="Auto" />
 
-                <Button
-                    Click="BtnOpenModalInfo_OnClick"
-                    Content="Click to open Popup"
-                    Grid.Column="0"
-                    Grid.Row="1" />
+                    <Button
+                        Click="BtnOpenModalInfo_OnClick"
+                        Content="Click to open Popup"
+                        Grid.Column="0"
+                        Grid.Row="1" />
 
-                <Popup
-                    Grid.Column="0"
-                    Grid.Row="2"
-                    Name="PopUp">
-                    <TextBlock Text="asdasd" />
-                </Popup>
-            </Grid>
-        </TabItem>
+                    <Popup
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Name="PopUp">
+                        <TextBlock Text="asdasd" />
+                    </Popup>
+                </Grid>
+            </TabItem>
 
-        <TabItem Header="Modal">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Label
-                    Content="Modal"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
+            <TabItem Header="Modal">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Content="Modal"
+                        FontSize="32"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="0"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                        Padding="0"
+                        Style="{StaticResource Lbl}"
+                        VerticalAlignment="Top"
+                        Width="Auto" />
 
-                <Label
-                    Content="Info"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    VerticalAlignment="Center" />
-                <Label
-                    Content="Danger"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="2"
-                    VerticalAlignment="Center" />
-                <Label
-                    Content="Warning"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    VerticalAlignment="Center" />
-                <Label
-                    Content="Success"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="4"
-                    VerticalAlignment="Center" />
-                <Label
-                    Content="NoIcon"
-                    FontSize="18"
-                    Grid.Column="0"
-                    Grid.Row="5"
-                    VerticalAlignment="Center" />
+                    <Label
+                        Content="Info"
+                        FontSize="18"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        VerticalAlignment="Center" />
+                    <Label
+                        Content="Danger"
+                        FontSize="18"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        VerticalAlignment="Center" />
+                    <Label
+                        Content="Warning"
+                        FontSize="18"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        VerticalAlignment="Center" />
+                    <Label
+                        Content="Success"
+                        FontSize="18"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        VerticalAlignment="Center" />
+                    <Label
+                        Content="NoIcon"
+                        FontSize="18"
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        VerticalAlignment="Center" />
 
-                <Button
-                    Click="BtnOpenModalInfo_OnClick"
-                    Content="Click to open ModalDialog"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Margin="5" />
-                <Button
-                    Click="BtnOpenModalDanger_OnClick"
-                    Content="Click to open ModalDialog"
-                    Grid.Column="1"
-                    Grid.Row="2"
-                    Margin="5" />
-                <Button
-                    Click="BtnOpenModalWarning_OnClick"
-                    Content="Click to open ModalDialog"
-                    Grid.Column="1"
-                    Grid.Row="3"
-                    Margin="5" />
-                <Button
-                    Click="BtnOpenModalSuccess_OnClick"
-                    Content="Click to open ModalDialog"
-                    Grid.Column="1"
-                    Grid.Row="4"
-                    Margin="5" />
-                <Button
-                    Click="BtnOpenModalNoIcon_OnClick"
-                    Content="Click to open ModalDialog"
-                    Grid.Column="1"
-                    Grid.Row="5"
-                    Margin="5" />
-            </Grid>
-        </TabItem>
+                    <Button
+                        Click="BtnOpenModalInfo_OnClick"
+                        Content="Click to open ModalDialog"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="5" />
+                    <Button
+                        Click="BtnOpenModalDanger_OnClick"
+                        Content="Click to open ModalDialog"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Margin="5" />
+                    <Button
+                        Click="BtnOpenModalWarning_OnClick"
+                        Content="Click to open ModalDialog"
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Margin="5" />
+                    <Button
+                        Click="BtnOpenModalSuccess_OnClick"
+                        Content="Click to open ModalDialog"
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        Margin="5" />
+                    <Button
+                        Click="BtnOpenModalNoIcon_OnClick"
+                        Content="Click to open ModalDialog"
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        Margin="5" />
+                </Grid>
+            </TabItem>
 
-        <TabItem Header="Menu">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+            <TabItem Header="Menu">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
-                <Menu Grid.Row="1" IsMainMenu="True">
-                    <MenuItem Header="File">
-                        <MenuItem Header="New..." />
-                        <MenuItem Header="Open" />
-                        <MenuItem Header="Save All" />
-                        <MenuItem Header="Reload All from Disk" />
-                    </MenuItem>
-                    <MenuItem Header="Edit" />
-                    <MenuItem Header="View" />
-                    <MenuItem Header="Navigate" IsEnabled="False" />
-                    <MenuItem Header="Code" />
-                    <MenuItem Header="Refactor" />
-                    <MenuItem Header="Build" />
-                    <MenuItem Header="Run" />
-                    <MenuItem Header="Test" />
-                    <MenuItem Header="Tools" />
-                    <MenuItem Header="Git" />
-                    <MenuItem Header="Window" />
-                    <MenuItem Header="Help" />
-                </Menu>
+                    <Menu Grid.Row="1" IsMainMenu="True">
+                        <MenuItem Header="File">
+                            <MenuItem Header="New..." />
+                            <MenuItem Header="Open" />
+                            <MenuItem Header="Save All" />
+                            <MenuItem Header="Reload All from Disk" />
+                        </MenuItem>
+                        <MenuItem Header="Edit" />
+                        <MenuItem Header="View" />
+                        <MenuItem Header="Navigate" IsEnabled="False" />
+                        <MenuItem Header="Code" />
+                        <MenuItem Header="Refactor" />
+                        <MenuItem Header="Build" />
+                        <MenuItem Header="Run" />
+                        <MenuItem Header="Test" />
+                        <MenuItem Header="Tools" />
+                        <MenuItem Header="Git" />
+                        <MenuItem Header="Window" />
+                        <MenuItem Header="Help" />
+                    </Menu>
 
-                <Label
-                    Content="Menu"
-                    FontSize="32"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="0"
-                    HorizontalAlignment="Left"
-                    Margin="10"
-                    Padding="0"
-                    Style="{StaticResource Lbl}"
-                    VerticalAlignment="Top"
-                    Width="Auto" />
+                    <Label
+                        Content="Menu"
+                        FontSize="32"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="0"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                        Padding="0"
+                        Style="{StaticResource Lbl}"
+                        VerticalAlignment="Top"
+                        Width="Auto" />
 
-            </Grid>
-        </TabItem>
+                </Grid>
+            </TabItem>
 
-        <TabItem Header="Date picker">
-            <views:DatePicker />
-        </TabItem>
-    </TabControl>
+            <TabItem Header="Date picker">
+                <views:DatePicker />
+            </TabItem>
+        </TabControl>
+        <Button
+            Click="ChangeTheme_OnClick"
+            HorizontalAlignment="Left"
+            Style="{StaticResource BtnOutline}"
+            VerticalAlignment="Bottom" />
+        <Button
+            Click="ChangeLanguage_OnClick"
+            HorizontalAlignment="Left"
+            Margin="40,0,0,0"
+            Style="{StaticResource BtnOutline}"
+            VerticalAlignment="Bottom" />
+    </Grid>
 </Window>

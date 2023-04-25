@@ -14,8 +14,8 @@
         x:Key="TextVisibilityConverter" />
 
     <Style TargetType="{x:Type CheckBox}">
-        <Setter Property="BorderBrush" Value="#B0BABF" />
-        <Setter Property="Background" Value="#F6F8F9" />
+        <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
+        <Setter Property="Background" Value="{StaticResource Lg5}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="attach:CheckBox.MarkHeight" Value="11" />
         <Setter Property="attach:CheckBox.MarkWidth" Value="15" />
@@ -65,6 +65,7 @@
                             Margin="8,0,0,0"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                             Text="{TemplateBinding Content}"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
                             TextWrapping="Wrap"
                             VerticalAlignment="Center"
                             Visibility="{TemplateBinding Content,
@@ -251,7 +252,7 @@
 
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg5}" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg5}" />
-                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource CleanB}" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
                             <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
                         </MultiTrigger>
@@ -266,7 +267,7 @@
 
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg5}" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg5}" />
-                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource CleanB}" />
                             <Setter Property="Opacity" Value="0.5" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
                             <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />

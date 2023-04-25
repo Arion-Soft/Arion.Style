@@ -35,7 +35,7 @@
             HorizontalAlignment="Left"
             Margin="10"
             Padding="0"
-            Style="{StaticResource Lbl}"
+            Style="{DynamicResource Lbl}"
             VerticalAlignment="Top"
             Width="Auto" />
 
@@ -96,13 +96,13 @@
                 Content="Toggle button"
                 IsChecked="True"
                 Margin="5"
-                Style="{StaticResource TglOutline}" />
+                Style="{DynamicResource TglOutline}" />
             <ToggleButton
                 Content="Toggle button"
                 IsChecked="True"
                 IsEnabled="False"
                 Margin="5"
-                Style="{StaticResource TglOutline}" />
+                Style="{DynamicResource TglOutline}" />
         </StackPanel>
 
         <StackPanel
@@ -113,14 +113,14 @@
                 Content="Toggle button"
                 IsChecked="True"
                 Margin="5"
-                Style="{StaticResource TglOutline}"
+                Style="{DynamicResource TglOutline}"
                 wpf:Button.LeftIcon="User" />
             <ToggleButton
                 Content="Toggle button"
                 IsChecked="True"
                 IsEnabled="False"
                 Margin="5"
-                Style="{StaticResource TglOutline}"
+                Style="{DynamicResource TglOutline}"
                 wpf:Button.RightIcon="User" />
         </StackPanel>
 
@@ -129,9 +129,9 @@
             Grid.Row="6"
             Margin="5,5"
             Orientation="Horizontal">
-            <ToggleButton Content="First" Style="{StaticResource TglOutlineFirst}" />
-            <ToggleButton Content="Middle" Style="{StaticResource TglOutlineMiddle}" />
-            <ToggleButton Content="last" Style="{StaticResource TglOutlineLast}" />
+            <ToggleButton Content="First" Style="{DynamicResource TglOutlineFirst}" />
+            <ToggleButton Content="Middle" Style="{DynamicResource TglOutlineMiddle}" />
+            <ToggleButton Content="last" Style="{DynamicResource TglOutlineLast}" />
         </StackPanel>
 
         <StackPanel
@@ -141,41 +141,41 @@
             <ToggleButton
                 Margin="5"
                 Name="TgListControl"
-                Style="{StaticResource ListControlSelectMode}" />
+                Style="{DynamicResource ListControlSelectMode}" />
             <ToggleButton
                 IsChecked="{Binding ElementName=TgListControl, Path=IsChecked}"
                 IsEnabled="False"
                 Margin="5"
-                Style="{StaticResource ListControlSelectMode}" />
+                Style="{DynamicResource ListControlSelectMode}" />
         </StackPanel>
 
         <StackPanel
             Grid.Column="1"
             Grid.Row="1"
             Orientation="Horizontal">
-            <ToggleButton Style="{StaticResource TglFocalSpot}" />
-            <ToggleButton IsEnabled="False" Style="{StaticResource TglFocalSpot}" />
+            <ToggleButton Style="{DynamicResource TglFocalSpot}" />
+            <ToggleButton IsEnabled="False" Style="{DynamicResource TglFocalSpot}" />
         </StackPanel>
         <StackPanel
             Grid.Column="1"
             Grid.Row="2"
             Orientation="Horizontal">
-            <ToggleButton Style="{StaticResource TgOnOff}" />
-            <ToggleButton IsEnabled="False" Style="{StaticResource TgOnOff}" />
+            <ToggleButton Style="{DynamicResource TgOnOff}" />
+            <ToggleButton IsEnabled="False" Style="{DynamicResource TgOnOff}" />
         </StackPanel>
         <StackPanel
             Grid.Column="1"
             Grid.Row="3"
             Orientation="Horizontal">
-            <ToggleButton Style="{StaticResource OnOffToggle}" />
-            <ToggleButton IsEnabled="False" Style="{StaticResource OnOffToggle}" />
+            <ToggleButton Style="{DynamicResource OnOffToggle}" />
+            <ToggleButton IsEnabled="False" Style="{DynamicResource OnOffToggle}" />
         </StackPanel>
         <StackPanel
             Grid.Column="1"
             Grid.Row="4"
             Orientation="Horizontal">
-            <ToggleButton Style="{StaticResource ActiveUser}" />
-            <ToggleButton IsEnabled="False" Style="{StaticResource ActiveUser}" />
+            <ToggleButton Style="{DynamicResource ActiveUser}" />
+            <ToggleButton IsEnabled="False" Style="{DynamicResource ActiveUser}" />
         </StackPanel>
 
     </Grid>

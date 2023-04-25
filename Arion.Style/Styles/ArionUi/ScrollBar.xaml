@@ -6,6 +6,7 @@
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <!--  UP BUTTON  -->
     <Style TargetType="{x:Type RepeatButton}" x:Key="ScrollBarLineUpButton">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
@@ -15,8 +16,8 @@
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
                         Background="{StaticResource CleanW}"
-                        BorderBrush="{StaticResource Dg5}"
-                        BorderThickness="1"
+                        BorderBrush="{StaticResource Mg5}"
+                        BorderThickness="0"
                         CornerRadius="2"
                         Margin="1"
                         x:Name="Border">
@@ -30,6 +31,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--  DOWN BUTTON  -->
     <Style TargetType="{x:Type RepeatButton}" x:Key="ScrollBarLineDownButton">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
@@ -39,8 +41,8 @@
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
                         Background="{StaticResource CleanW}"
-                        BorderBrush="{StaticResource Dg5}"
-                        BorderThickness="1"
+                        BorderBrush="{StaticResource Mg5}"
+                        BorderThickness="0"
                         CornerRadius="2"
                         Margin="1"
                         x:Name="Border">
@@ -48,6 +50,56 @@
                             Fill="{StaticResource Mg3}"
                             Height="10"
                             Kind="ChevronDown"
+                            Width="10" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--  LEFT BUTTON  -->
+    <Style TargetType="{x:Type RepeatButton}" x:Key="ScrollBarLineLeftButton">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{StaticResource CleanW}"
+                        BorderBrush="{StaticResource Mg5}"
+                        BorderThickness="0"
+                        CornerRadius="2"
+                        Margin="1"
+                        x:Name="Border">
+                        <controls:Icon
+                            Fill="{StaticResource Mg3}"
+                            Height="10"
+                            Kind="ChevronLeft"
+                            Width="10" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--  RIGHT BUTTON  -->
+    <Style TargetType="{x:Type RepeatButton}" x:Key="ScrollBarLineRightButton">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="{StaticResource CleanW}"
+                        BorderBrush="{StaticResource Mg5}"
+                        BorderThickness="0"
+                        CornerRadius="2"
+                        Margin="1"
+                        x:Name="Border">
+                        <controls:Icon
+                            Fill="{StaticResource Mg3}"
+                            Height="10"
+                            Kind="ChevronRight"
                             Width="10" />
                     </Border>
                 </ControlTemplate>
@@ -78,11 +130,12 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
                     <Border
-                        Background="{StaticResource CleanW}"
-                        BorderBrush="{StaticResource Dg5}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1"
                         CornerRadius="6"
-                        Width="14" />
+                        Height="{TemplateBinding Height}"
+                        Width="{TemplateBinding Width}" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -96,12 +149,13 @@
                 <RowDefinition MaxHeight="18" />
             </Grid.RowDefinitions>
             <Border
-                Background="Transparent"
+                Background="{StaticResource CleanW}"
+                BorderBrush="{StaticResource Mg5}"
+                BorderThickness="1"
                 CornerRadius="2"
                 Grid.RowSpan="3" />
             <RepeatButton
                 Command="ScrollBar.LineUpCommand"
-                Content="M 0 4 L 8 4 L 4 0 Z"
                 Grid.Row="0"
                 Height="18"
                 Style="{StaticResource ScrollBarLineUpButton}" />
@@ -113,32 +167,12 @@
                     <RepeatButton Command="ScrollBar.PageUpCommand" Style="{StaticResource ScrollBarPageButton}" />
                 </Track.DecreaseRepeatButton>
                 <Track.Thumb>
-                    <Thumb Margin="1,0,1,0" Style="{StaticResource ScrollBarThumb}">
-                        <Thumb.BorderBrush>
-
-                            <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                                <LinearGradientBrush.GradientStops>
-                                    <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource BorderDarkColor}" Offset="1.0" />
-                                    </GradientStopCollection>
-                                </LinearGradientBrush.GradientStops>
-                            </LinearGradientBrush>
-
-                        </Thumb.BorderBrush>
-                        <Thumb.Background>
-
-                            <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                                <LinearGradientBrush.GradientStops>
-                                    <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource ControlLightColor}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource ControlMediumColor}" Offset="1.0" />
-                                    </GradientStopCollection>
-                                </LinearGradientBrush.GradientStops>
-                            </LinearGradientBrush>
-
-                        </Thumb.Background>
-                    </Thumb>
+                    <Thumb
+                        Background="{StaticResource CleanW}"
+                        BorderBrush="{StaticResource Mg5}"
+                        Margin="1,0,1,0"
+                        Style="{StaticResource ScrollBarThumb}"
+                        Width="14" />
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
                     <RepeatButton Command="ScrollBar.PageDownCommand" Style="{StaticResource ScrollBarPageButton}" />
@@ -146,11 +180,15 @@
             </Track>
             <RepeatButton
                 Command="ScrollBar.LineDownCommand"
-                Content="M 0 0 L 4 4 L 8 0 Z"
                 Grid.Row="2"
                 Height="18"
                 Style="{StaticResource ScrollBarLineDownButton}" />
         </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value=".5" />
+            </Trigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 
     <ControlTemplate TargetType="{x:Type ScrollBar}" x:Key="HorizontalScrollBar">
@@ -161,14 +199,15 @@
                 <ColumnDefinition MaxWidth="18" />
             </Grid.ColumnDefinitions>
             <Border
-                Background="#F0F0F0"
+                Background="{StaticResource CleanW}"
+                BorderBrush="{StaticResource Mg5}"
+                BorderThickness="1"
                 CornerRadius="2"
                 Grid.ColumnSpan="3" />
             <RepeatButton
                 Command="ScrollBar.LineLeftCommand"
-                Content="M 4 0 L 4 8 L 0 4 Z"
                 Grid.Column="0"
-                Style="{StaticResource ScrollBarLineButton}"
+                Style="{StaticResource ScrollBarLineLeftButton}"
                 Width="18" />
             <Track
                 Grid.Column="1"
@@ -178,33 +217,12 @@
                     <RepeatButton Command="ScrollBar.PageLeftCommand" Style="{StaticResource ScrollBarPageButton}" />
                 </Track.DecreaseRepeatButton>
                 <Track.Thumb>
-                    <Thumb Margin="0,1,0,1" Style="{StaticResource ScrollBarThumb}">
-
-                        <Thumb.BorderBrush>
-
-                            <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                                <LinearGradientBrush.GradientStops>
-                                    <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource BorderDarkColor}" Offset="1.0" />
-                                    </GradientStopCollection>
-                                </LinearGradientBrush.GradientStops>
-                            </LinearGradientBrush>
-
-                        </Thumb.BorderBrush>
-                        <Thumb.Background>
-
-                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                                <LinearGradientBrush.GradientStops>
-                                    <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource ControlLightColor}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource ControlMediumColor}" Offset="1.0" />
-                                    </GradientStopCollection>
-                                </LinearGradientBrush.GradientStops>
-                            </LinearGradientBrush>
-
-                        </Thumb.Background>
-                    </Thumb>
+                    <Thumb
+                        Background="{StaticResource CleanW}"
+                        BorderBrush="{StaticResource Mg5}"
+                        Height="14"
+                        Margin="0,1,0,1"
+                        Style="{StaticResource ScrollBarThumb}" />
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
                     <RepeatButton Command="ScrollBar.PageRightCommand" Style="{StaticResource ScrollBarPageButton}" />
@@ -212,11 +230,15 @@
             </Track>
             <RepeatButton
                 Command="ScrollBar.LineRightCommand"
-                Content="M 0 0 L 4 4 L 0 8 Z"
                 Grid.Column="2"
-                Style="{StaticResource ScrollBarLineButton}"
+                Style="{StaticResource ScrollBarLineRightButton}"
                 Width="18" />
         </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value=".5" />
+            </Trigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 
     <Style TargetType="{x:Type ScrollBar}">
@@ -225,11 +247,11 @@
         <Style.Triggers>
             <Trigger Property="Orientation" Value="Horizontal">
                 <Setter Property="Width" Value="Auto" />
-                <Setter Property="Height" Value="18" />
+                <Setter Property="Height" Value="20" />
                 <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
             </Trigger>
             <Trigger Property="Orientation" Value="Vertical">
-                <Setter Property="Width" Value="18" />
+                <Setter Property="Width" Value="20" />
                 <Setter Property="Height" Value="Auto" />
                 <Setter Property="Template" Value="{StaticResource VerticalScrollBar}" />
             </Trigger>
