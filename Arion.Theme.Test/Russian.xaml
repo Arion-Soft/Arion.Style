@@ -16,4 +16,30 @@
     <sys:String x:Key="Filled">Закрашенные</sys:String>
     <sys:String x:Key="Outline">Обведенные</sys:String>
     <sys:String x:Key="Text">Только текст</sys:String>
+
+    <!--  TABS  -->
+    <sys:String x:Key="Breadcrumbs">Хлебные крошки</sys:String>
+    <sys:String x:Key="CheckBoxes">Галочки</sys:String>
+    <sys:String x:Key="Colors">Цвета</sys:String>
+    <sys:String x:Key="ComboBoxes">Выпадающие списки</sys:String>
+    <sys:String x:Key="DocumentViewer">Просмотр документов</sys:String>
+    <sys:String x:Key="DisplayControls">Display Controls</sys:String>
+    <sys:String x:Key="Expanders">Expanders</sys:String>
+    <sys:String x:Key="InlineAlerts">Inline Alerts</sys:String>
+    <sys:String x:Key="Labels">Labels</sys:String>
+    <sys:String x:Key="IconPack">Иконки</sys:String>
+    <sys:String x:Key="PasswordBoxes">Поля для пароля</sys:String>
+    <sys:String x:Key="ProgressBars">Индикаторы прогресса</sys:String>
+    <sys:String x:Key="RadioButtons">Radio Buttons</sys:String>
+    <sys:String x:Key="Rangers">Rangers</sys:String>
+    <sys:String x:Key="Scrollbars">Scrollbars</sys:String>
+    <sys:String x:Key="Shadows">Тени</sys:String>
+    <sys:String x:Key="Steppers">Steppers</sys:String>
+    <sys:String x:Key="Switchers">Switchers</sys:String>
+    <sys:String x:Key="Tabs">Вкладки</sys:String>
+    <sys:String x:Key="Tables">Таблицы</sys:String>
+    <sys:String x:Key="TextBoxes">Текстовые поля</sys:String>
+    <sys:String x:Key="TimeInputs">Поля для времени</sys:String>
+    <sys:String x:Key="ToggleButtons">Toggle Buttons</sys:String>
+    <sys:String x:Key="Tooltips">Всплывающие подсказки</sys:String>
 </ResourceDictionary>

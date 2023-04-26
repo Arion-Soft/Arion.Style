@@ -23,42 +23,42 @@
             Name="TbMain"
             TabStripPlacement="Left">
             <!--  BREADCRUMB  -->
-            <TabItem Header="Breadcrumb">
+            <TabItem Header="{DynamicResource Breadcrumbs}">
                 <views:Breadcrumbs />
             </TabItem>
             <!--  BUTTONS  -->
-            <TabItem Header="Button">
+            <TabItem Header="{DynamicResource Buttons}">
                 <views:Buttons />
             </TabItem>
             <!--  CHECK BOXES  -->
-            <TabItem Header="Check box">
+            <TabItem Header="{DynamicResource CheckBoxes}">
                 <views:CheckBoxes />
             </TabItem>
             <!--  COLORS  -->
-            <TabItem Header="Color">
+            <TabItem Header="{DynamicResource Colors}">
                 <views:Colors />
             </TabItem>
             <!--  COMBO BOXES  -->
-            <TabItem Header="Combo Box">
+            <TabItem Header="{DynamicResource ComboBoxes}">
                 <views:ComboBoxes />
             </TabItem>
-            <TabItem Header="DocumentViewer">
+            <TabItem Header="{DynamicResource DocumentViewer}">
                 <views:DocumentViewer />
             </TabItem>
             <!--  DISPLAY CONTROLS  -->
-            <TabItem Header="Display Control">
+            <TabItem Header="{DynamicResource DisplayControls}">
                 <views:DisplayControls />
             </TabItem>
             <!--  EXPANDERS  -->
-            <TabItem Header="Expander">
+            <TabItem Header="{DynamicResource Expanders}">
                 <views:Expanders />
             </TabItem>
             <!--  INLINE ALERTS  -->
-            <TabItem Header="Inline Alert">
+            <TabItem Header="{DynamicResource InlineAlerts}">
                 <views:InlineAlerts />
             </TabItem>
             <!--  LABELS  -->
-            <TabItem Header="Label">
+            <TabItem Header="{DynamicResource Labels}">
                 <views:Labels />
             </TabItem>
             <!--  LISTVIEW  -->
@@ -66,31 +66,31 @@
                 <views:ListViews />
             </TabItem>
             <!--  Pack Icon  -->
-            <TabItem Header="Pack icon">
+            <TabItem Header="{DynamicResource IconPack}">
                 <views:IconPack />
             </TabItem>
             <!--  PASSWORD BOX  -->
-            <TabItem Header="Password box">
+            <TabItem Header="{DynamicResource PasswordBoxes}">
                 <views:PasswordBox />
             </TabItem>
             <!--  PROGRESS BAR  -->
-            <TabItem Header="Progress bar">
+            <TabItem Header="{DynamicResource ProgressBars}">
                 <views:ProgressBars />
             </TabItem>
             <!--  RADIO BUTTONS  -->
-            <TabItem Header="Radio button">
+            <TabItem Header="{DynamicResource RadioButtons}">
                 <views:RadioButtons />
             </TabItem>
             <!--  RANGERS  -->
-            <TabItem Header="Ranger">
+            <TabItem Header="{DynamicResource Rangers}">
                 <views:Rangers />
             </TabItem>
-            <TabItem Header="Scroll bar">
-                <!--  SCROLL BARS  -->
+            <!--  SCROLL BARS  -->
+            <TabItem Header="{DynamicResource Scrollbars}">
                 <views:ScrollBars />
             </TabItem>
             <!--  SHADOWS  -->
-            <TabItem Header="Shadow">
+            <TabItem Header="{DynamicResource Shadows}">
                 <views:Shadows />
             </TabItem>
             <!--  SLIDERS  -->
@@ -98,36 +98,39 @@
                 <views:Sliders />
             </TabItem>
             <!--  STEPPERS  -->
-            <TabItem Header="Stepper">
+            <TabItem Header="{DynamicResource Steppers}">
                 <views:Steppers />
             </TabItem>
             <!--  SWITCHERS  -->
-            <TabItem Header="Switcher">
+            <TabItem Header="{DynamicResource Switchers}">
                 <views:Switchers />
             </TabItem>
             <!--  TABS  -->
-            <TabItem Header="Tab">
+            <TabItem Header="{DynamicResource Tabs}">
                 <views:Tabs />
             </TabItem>
             <!--  TABLES  -->
-            <TabItem Header="Table" IsSelected="True">
+            <TabItem Header="{DynamicResource Tables}">
                 <views:Tables />
             </TabItem>
             <!--  TEXT BOXES  -->
-            <TabItem Header="Text box">
+            <TabItem Header="{DynamicResource TextBoxes}">
                 <views:TextBox />
             </TabItem>
             <!--  TIME INPUT  -->
-            <TabItem Header="Time input">
+            <TabItem Header="{DynamicResource TimeInputs}">
                 <views:TimeInputs />
             </TabItem>
             <!--  TOGGLE BUTTONS  -->
-            <TabItem Header="Toggle button">
+            <TabItem Header="{DynamicResource ToggleButtons}">
                 <views:ToggleButtons />
             </TabItem>
             <!--  TOOLTIPS  -->
-            <TabItem Header="Tooltip">
+            <TabItem Header="{DynamicResource Tooltips}">
                 <views:Tooltips />
+            </TabItem>
+            <TabItem Header="Badges" IsSelected="True">
+                <views:Badges />
             </TabItem>
 
             <TabItem Header="OptionControl">
@@ -322,6 +325,9 @@
 
             <TabItem Header="Date picker">
                 <views:DatePicker />
+            </TabItem>
+            <TabItem Header="Rich Text box">
+                <views:RichTextBoxes />
             </TabItem>
         </TabControl>
         <Button

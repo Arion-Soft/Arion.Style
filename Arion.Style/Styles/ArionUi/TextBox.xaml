@@ -17,7 +17,7 @@
         x:Key="TextVisibilityConverter" />
     <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
-    <Style TargetType="{x:Type TextBox}">
+    <Style TargetType="{x:Type TextBox}" x:Key="{x:Type TextBox}">
         <Setter Property="Height" Value="40" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="FontWeight" Value="Regular" />

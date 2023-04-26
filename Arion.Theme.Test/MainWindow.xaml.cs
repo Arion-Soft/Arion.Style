@@ -107,6 +107,8 @@ namespace Arion.Theme.Test
 
         private void ChangeTheme_OnClick(object sender, RoutedEventArgs e)
         {
+            var darkDictionary = new ResourceDictionary { Source = new Uri("..\\Dark.xaml", UriKind.Relative) };
+            var lightDictionary = new ResourceDictionary { Source = new Uri("..\\Light.xaml", UriKind.Relative) };
             if (_theme == Theme.Light)
             {
                 _theme = Theme.Dark;
@@ -114,8 +116,7 @@ namespace Arion.Theme.Test
                 Foreground = new SolidColorBrush(Color.FromRgb(0xFF, 0xFF, 0xFF));
                 TbMain.Foreground = new SolidColorBrush(Color.FromRgb(0xFF, 0xFF, 0xFF));
                 Application.Current.Resources.Clear();
-                var dict = new ResourceDictionary { Source = new Uri("..\\Dark.xaml", UriKind.Relative) };
-                Application.Current.Resources.MergedDictionaries.Add(dict);
+                Application.Current.Resources.MergedDictionaries.Add(darkDictionary);
             }
             else
             {
@@ -124,8 +125,7 @@ namespace Arion.Theme.Test
                 Foreground = new SolidColorBrush(Color.FromRgb(0x25, 0x2C, 0x32));
                 TbMain.Foreground = new SolidColorBrush(Color.FromRgb(0x25, 0x2C, 0x32));
                 Application.Current.Resources.Clear();
-                var dict = new ResourceDictionary { Source = new Uri("..\\Light.xaml", UriKind.Relative) };
-                Application.Current.Resources.MergedDictionaries.Add(dict);
+                Application.Current.Resources.MergedDictionaries.Add(lightDictionary);
             }
         }
 

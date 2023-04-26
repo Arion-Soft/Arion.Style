@@ -141,3 +141,9 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Dark.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Light.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\English.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Russian.baml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Badges.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Badges.baml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ColorPicker.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ColorPicker.baml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\RichTextBoxes.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\RichTextBoxes.baml

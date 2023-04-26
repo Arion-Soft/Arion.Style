@@ -76,6 +76,9 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\TableViewModel.cs" />
     <Compile Include="ViewModel\TextBoxViewModel.cs" />
+    <Compile Include="Views\Badges.xaml.cs">
+      <DependentUpon>Badges.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Breadcrumbs.xaml.cs">
       <DependentUpon>Breadcrumbs.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,9 @@
     </Compile>
     <Compile Include="Views\CheckBoxes.xaml.cs">
       <DependentUpon>CheckBoxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColorPicker.xaml.cs">
+      <DependentUpon>ColorPicker.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Colors.xaml.cs">
       <DependentUpon>Colors.xaml</DependentUpon>
@@ -126,6 +132,9 @@
     </Compile>
     <Compile Include="Views\Rangers.xaml.cs">
       <DependentUpon>Rangers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RichTextBoxes.xaml.cs">
+      <DependentUpon>RichTextBoxes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ScrollBars.xaml.cs">
       <DependentUpon>ScrollBars.xaml</DependentUpon>
@@ -177,9 +186,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Russian.xaml" />
+    <Page Include="Views\Badges.xaml" />
     <Page Include="Views\Breadcrumbs.xaml" />
     <Page Include="Views\Buttons.xaml" />
     <Page Include="Views\CheckBoxes.xaml" />
+    <Page Include="Views\ColorPicker.xaml" />
     <Page Include="Views\Colors.xaml" />
     <Page Include="Views\ComboBoxes.xaml" />
     <Page Include="Views\DatePicker.xaml" />
@@ -194,6 +205,7 @@
     <Page Include="Views\ProgressBars.xaml" />
     <Page Include="Views\RadioButtons.xaml" />
     <Page Include="Views\Rangers.xaml" />
+    <Page Include="Views\RichTextBoxes.xaml" />
     <Page Include="Views\ScrollBars.xaml" />
     <Page Include="Views\Shadows.xaml" />
     <Page Include="Views\Sliders.xaml" />

@@ -16,4 +16,31 @@
     <sys:String x:Key="Filled">Filled</sys:String>
     <sys:String x:Key="Outline">Outline</sys:String>
     <sys:String x:Key="Text">Text</sys:String>
+
+    <!--  TABS  -->
+    <sys:String x:Key="Breadcrumbs">Breadcrumbs</sys:String>
+    <sys:String x:Key="CheckBoxes">Check Boxes</sys:String>
+    <sys:String x:Key="Colors">Colors</sys:String>
+    <sys:String x:Key="ComboBoxes">Combo Boxes</sys:String>
+    <sys:String x:Key="DocumentViewer">Document Viewer</sys:String>
+    <sys:String x:Key="DisplayControls">Display Controls</sys:String>
+    <sys:String x:Key="Expanders">Expanders</sys:String>
+    <sys:String x:Key="InlineAlerts">Inline Alerts</sys:String>
+    <sys:String x:Key="Labels">Labels</sys:String>
+    <sys:String x:Key="IconPack">Icon Pack</sys:String>
+    <sys:String x:Key="PasswordBoxes">Password Boxes</sys:String>
+    <sys:String x:Key="ProgressBars">Progress Bars</sys:String>
+    <sys:String x:Key="RadioButtons">Radio Buttons</sys:String>
+    <sys:String x:Key="Rangers">Rangers</sys:String>
+    <sys:String x:Key="Scrollbars">Scrollbars</sys:String>
+    <sys:String x:Key="Shadows">Shadows</sys:String>
+    <sys:String x:Key="Steppers">Steppers</sys:String>
+    <sys:String x:Key="Switchers">Switchers</sys:String>
+    <sys:String x:Key="Tabs">Tabs</sys:String>
+    <sys:String x:Key="Tables">Tables</sys:String>
+    <sys:String x:Key="TextBoxes">Text Boxes</sys:String>
+    <sys:String x:Key="TimeInputs">Time Inputs</sys:String>
+    <sys:String x:Key="ToggleButtons">Toggle Buttons</sys:String>
+    <sys:String x:Key="Tooltips">Tooltips</sys:String>
+
 </ResourceDictionary>
