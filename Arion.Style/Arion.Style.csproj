@@ -71,6 +71,9 @@
     <Compile Include="Controls\BreadcrumbItem.xaml.cs">
       <DependentUpon>BreadcrumbItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CustomizeRichTextBox.xaml.cs">
+      <DependentUpon>CustomizeRichTextBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\DisplayControl.xaml.cs">
       <DependentUpon>DisplayControl.xaml</DependentUpon>
     </Compile>
@@ -219,6 +222,7 @@
     <Page Include="Controls\Badge.xaml" />
     <Page Include="Controls\Breadcrumb.xaml" />
     <Page Include="Controls\BreadcrumbItem.xaml" />
+    <Page Include="Controls\CustomizeRichTextBox.xaml" />
     <Page Include="Controls\DisplayControl.xaml" />
     <Page Include="Controls\DisplayControlFull.xaml" />
     <Page Include="Controls\Icon.xaml" />
@@ -297,6 +301,7 @@
     <Page Include="Styles\ArionUi\TextBox.xaml" />
     <Page Include="Styles\ArionUi\ToggleButton.xaml" />
     <Page Include="Styles\ArionUi\ToggleButtonDark.xaml" />
+    <Page Include="Styles\ArionUi\Toolbar.xaml" />
     <Page Include="Styles\ArionUi\ToolTip.xaml" />
     <Page Include="Styles\ArionUi\Window.xaml" />
     <Page Include="UIColors.xaml">

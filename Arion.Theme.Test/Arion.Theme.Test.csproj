@@ -166,6 +166,9 @@
     <Compile Include="Views\ToggleButtons.xaml.cs">
       <DependentUpon>ToggleButtons.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ToolBar.xaml.cs">
+      <DependentUpon>ToolBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Tooltips.xaml.cs">
       <DependentUpon>Tooltips.xaml</DependentUpon>
     </Compile>
@@ -216,6 +219,7 @@
     <Page Include="Views\TextBox.xaml" />
     <Page Include="Views\TimeInputs.xaml" />
     <Page Include="Views\ToggleButtons.xaml" />
+    <Page Include="Views\ToolBar.xaml" />
     <Page Include="Views\Tooltips.xaml" />
   </ItemGroup>
   <ItemGroup>

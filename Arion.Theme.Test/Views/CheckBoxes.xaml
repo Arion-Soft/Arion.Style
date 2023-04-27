@@ -41,22 +41,20 @@
         <StackPanel
             Grid.Column="0"
             Grid.Row="1"
-            Orientation="Horizontal">
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
             <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox1">
-                <CheckBox Content="CheckBox" wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+                <CheckBox Content="CheckBox" />
             </smtx:XamlDisplay>
             <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox2">
-                <CheckBox
-                    Content="CheckBox"
-                    IsEnabled="False"
-                    wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+                <CheckBox Content="CheckBox" IsEnabled="False" />
             </smtx:XamlDisplay>
         </StackPanel>
-
         <StackPanel
             Grid.Column="0"
             Grid.Row="2"
-            Orientation="Horizontal">
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
             <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox3">
                 <CheckBox Content="CheckBox" IsChecked="True" />
             </smtx:XamlDisplay>
@@ -67,11 +65,11 @@
                     IsEnabled="False" />
             </smtx:XamlDisplay>
         </StackPanel>
-
         <StackPanel
             Grid.Column="0"
             Grid.Row="3"
-            Orientation="Horizontal">
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
             <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox5">
                 <CheckBox
                     Content="CheckBox"
@@ -81,6 +79,100 @@
             <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox6">
                 <CheckBox
                     Content="CheckBox"
+                    IsChecked="{x:Null}"
+                    IsEnabled="False"
+                    IsThreeState="True" />
+            </smtx:XamlDisplay>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="1"
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox7">
+                <CheckBox Content="CheckBox" wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox8">
+                <CheckBox
+                    Content="CheckBox"
+                    IsEnabled="False"
+                    wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
+        </StackPanel>
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="2"
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox9">
+                <CheckBox
+                    Content="CheckBox"
+                    IsChecked="True"
+                    wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox10">
+                <CheckBox
+                    Content="CheckBox"
+                    IsChecked="True"
+                    IsEnabled="False"
+                    wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
+        </StackPanel>
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="3"
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox11">
+                <CheckBox
+                    Content="CheckBox"
+                    IsChecked="{x:Null}"
+                    wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox12">
+                <CheckBox
+                    Content="CheckBox"
+                    IsChecked="{x:Null}"
+                    IsEnabled="False"
+                    wpf:CheckBox.Description="Helpful description of the option which may briefly highlight side effects or conditions of the option." />
+            </smtx:XamlDisplay>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="1"
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox13">
+                <CheckBox />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox14">
+                <CheckBox IsEnabled="False" />
+            </smtx:XamlDisplay>
+        </StackPanel>
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="2"
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox15">
+                <CheckBox IsChecked="True" />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox16">
+                <CheckBox IsChecked="True" IsEnabled="False" />
+            </smtx:XamlDisplay>
+        </StackPanel>
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="3"
+            Orientation="Horizontal"
+            VerticalAlignment="Top">
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox17">
+                <CheckBox IsChecked="{x:Null}" IsThreeState="True" />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay Margin="5" UniqueKey="CheckBox18">
+                <CheckBox
                     IsChecked="{x:Null}"
                     IsEnabled="False"
                     IsThreeState="True" />

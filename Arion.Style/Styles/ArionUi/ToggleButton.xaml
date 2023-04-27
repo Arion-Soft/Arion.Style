@@ -595,6 +595,104 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style
+        BasedOn="{StaticResource ToggleButtonBaseLg}"
+        TargetType="{x:Type ToggleButton}"
+        x:Key="TglText">
+        <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="attach:Button.IconHeight" Value="15" />
+        <Setter Property="attach:Button.IconWidth" Value="15" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            ClipToBounds="True"
+                            CornerRadius="6"
+                            Name="Border" />
+                        <Border
+                            Background="#002D46"
+                            CornerRadius="6"
+                            Name="BrdEffect"
+                            Opacity="0" />
+                        <Grid Margin="{TemplateBinding Padding}" ZIndex="999">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <arion:Icon
+                                Fill="{TemplateBinding Foreground}"
+                                Grid.Column="0"
+                                Height="{TemplateBinding attach:Button.IconHeight}"
+                                Kind="{TemplateBinding attach:Button.LeftIcon}"
+                                Margin="0,0,8,0"
+                                Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
+                                StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
+                                Visibility="{TemplateBinding attach:Button.LeftIcon,
+                                                             Converter={StaticResource IconConverter}}"
+                                Width="{TemplateBinding attach:Button.IconWidth}" />
+
+                            <ContentPresenter
+                                Content="{TemplateBinding Content}"
+                                Effect="{TemplateBinding Effect}"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                Name="Presenter"
+                                VerticalAlignment="Center" />
+
+                            <arion:Icon
+                                Fill="{TemplateBinding Foreground}"
+                                Grid.Column="1"
+                                Height="{TemplateBinding attach:Button.IconHeight}"
+                                HorizontalAlignment="Center"
+                                Kind="{TemplateBinding attach:Button.Icon}"
+                                Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
+                                StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
+                                VerticalAlignment="Center"
+                                Visibility="{TemplateBinding attach:Button.Icon,
+                                                             Converter={StaticResource IconConverter}}"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
+                                x:Name="Icon" />
+
+                            <arion:Icon
+                                Fill="{TemplateBinding Foreground}"
+                                Grid.Column="2"
+                                Height="{TemplateBinding attach:Button.IconHeight}"
+                                Kind="{TemplateBinding attach:Button.RightIcon}"
+                                Margin="8,0,0,0"
+                                Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
+                                StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
+                                Visibility="{TemplateBinding attach:Button.RightIcon,
+                                                             Converter={StaticResource IconConverter}}"
+                                Width="{TemplateBinding attach:Button.IconWidth}" />
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" TargetName="BrdEffect" Value=".04" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" TargetName="BrdEffect" Value=".1" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Opacity" TargetName="BrdEffect" Value=".2" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!--  GROUPED  -->
 

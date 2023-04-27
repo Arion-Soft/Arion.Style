@@ -10,21 +10,6 @@
 
     <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
 
-    <Style x:Key="FocusVisual">
-        <Setter Property="Control.Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Rectangle
-                        Margin="2"
-                        SnapsToDevicePixels="true"
-                        Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
-                        StrokeDashArray="1 2"
-                        StrokeThickness="1" />
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <Style TargetType="{x:Type RadioButton}" x:Key="SwitcherBase">
         <Setter Property="Background" Value="{StaticResource CleanW}" />
         <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
@@ -34,78 +19,93 @@
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Padding" Value="12,4" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="attach:Switcher.IconHeight" Value="15" />
         <Setter Property="attach:Switcher.IconWidth" Value="15" />
     </Style>
 
     <ControlTemplate TargetType="{x:Type RadioButton}" x:Key="SwitcherFilledTemplate">
-        <Border
-            Background="{TemplateBinding Background}"
-            BorderBrush="{TemplateBinding BorderBrush}"
-            BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-            Height="{TemplateBinding Height}"
-            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-            Margin="0"
-            Padding="{TemplateBinding Padding}"
-            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-            Width="{TemplateBinding Width}"
-            x:Name="radioButtonBorder">
-            <Grid x:Name="markGrid">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
-                    Grid.Column="0"
-                    Height="{TemplateBinding attach:Switcher.IconHeight}"
-                    Kind="{TemplateBinding attach:Switcher.LeftIcon}"
-                    Margin="0,0,8,0"
-                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
-                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
-                    Visibility="{TemplateBinding attach:Switcher.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
-                <ContentPresenter
-                    Focusable="False"
-                    Grid.Column="1"
-                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    Margin="{TemplateBinding Padding}"
-                    RecognizesAccessKey="True"
-                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                    TextElement.FontSize="{TemplateBinding FontSize}"
-                    TextElement.Foreground="{TemplateBinding Foreground}"
-                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                    x:Name="contentPresenter" />
-                <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
-                    Grid.Column="1"
-                    Height="{TemplateBinding attach:Switcher.IconHeight}"
-                    HorizontalAlignment="Center"
-                    Kind="{TemplateBinding attach:Switcher.Icon}"
-                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
-                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
-                    VerticalAlignment="Center"
-                    Visibility="{TemplateBinding attach:Switcher.Icon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Switcher.IconWidth}"
-                    x:Name="Icon" />
-                <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
-                    Grid.Column="2"
-                    Height="{TemplateBinding attach:Switcher.IconHeight}"
-                    Kind="{TemplateBinding attach:Switcher.RightIcon}"
-                    Margin="8,0,0,0"
-                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
-                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
-                    Visibility="{TemplateBinding attach:Switcher.RightIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
-            </Grid>
-        </Border>
+        <Grid>
+            <Border
+                Background="{StaticResource Pr300}"
+                BorderBrush="{StaticResource Pr300}"
+                BorderThickness="3"
+                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+                Margin="-3"
+                Name="Focus"
+                Visibility="Collapsed" />
+            <Border
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+                Focusable="False"
+                Height="{TemplateBinding Height}"
+                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                Margin="0"
+                Padding="{TemplateBinding Padding}"
+                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                Width="{TemplateBinding Width}"
+                x:Name="radioButtonBorder">
+                <Grid Focusable="False" x:Name="markGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <controls:Icon
+                        Fill="{TemplateBinding Foreground}"
+                        Focusable="False"
+                        Grid.Column="0"
+                        Height="{TemplateBinding attach:Switcher.IconHeight}"
+                        Kind="{TemplateBinding attach:Switcher.LeftIcon}"
+                        Margin="0,0,8,0"
+                        Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                        StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                        Visibility="{TemplateBinding attach:Switcher.LeftIcon,
+                                                     Converter={StaticResource IconConverter}}"
+                        Width="{TemplateBinding attach:Switcher.IconWidth}" />
+                    <ContentPresenter
+                        Focusable="False"
+                        Grid.Column="1"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        Margin="{TemplateBinding Padding}"
+                        RecognizesAccessKey="True"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                        TextElement.FontSize="{TemplateBinding FontSize}"
+                        TextElement.Foreground="{TemplateBinding Foreground}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        x:Name="contentPresenter" />
+                    <controls:Icon
+                        Fill="{TemplateBinding Foreground}"
+                        Focusable="False"
+                        Grid.Column="1"
+                        Height="{TemplateBinding attach:Switcher.IconHeight}"
+                        HorizontalAlignment="Center"
+                        Kind="{TemplateBinding attach:Switcher.Icon}"
+                        Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                        StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                        VerticalAlignment="Center"
+                        Visibility="{TemplateBinding attach:Switcher.Icon,
+                                                     Converter={StaticResource IconConverter}}"
+                        Width="{TemplateBinding attach:Switcher.IconWidth}"
+                        x:Name="Icon" />
+                    <controls:Icon
+                        Fill="{TemplateBinding Foreground}"
+                        Focusable="False"
+                        Grid.Column="2"
+                        Height="{TemplateBinding attach:Switcher.IconHeight}"
+                        Kind="{TemplateBinding attach:Switcher.RightIcon}"
+                        Margin="8,0,0,0"
+                        Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                        StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                        Visibility="{TemplateBinding attach:Switcher.RightIcon,
+                                                     Converter={StaticResource IconConverter}}"
+                        Width="{TemplateBinding attach:Switcher.IconWidth}" />
+                </Grid>
+            </Border>
+        </Grid>
         <ControlTemplate.Triggers>
             <!--  CHECKED - TRUE | Hover  -->
             <MultiTrigger>
@@ -207,75 +207,92 @@
             <Trigger Property="attach:Switcher.Position" Value="Last">
                 <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
             </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
+            </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <ControlTemplate TargetType="{x:Type RadioButton}" x:Key="SwitcherOutlineTemplate">
-        <Border
-            Background="{TemplateBinding Background}"
-            BorderBrush="{TemplateBinding BorderBrush}"
-            BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-            Height="{TemplateBinding Height}"
-            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-            Margin="0"
-            Padding="{TemplateBinding Padding}"
-            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-            Width="{TemplateBinding Width}"
-            x:Name="radioButtonBorder">
-            <Grid x:Name="markGrid">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
-                    Grid.Column="0"
-                    Height="{TemplateBinding attach:Switcher.IconHeight}"
-                    Kind="{TemplateBinding attach:Switcher.LeftIcon}"
-                    Margin="0,0,8,0"
-                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
-                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
-                    Visibility="{TemplateBinding attach:Switcher.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
-                <ContentPresenter
-                    Focusable="False"
-                    Grid.Column="1"
-                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    Margin="{TemplateBinding Padding}"
-                    RecognizesAccessKey="True"
-                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                    TextElement.FontSize="{TemplateBinding FontSize}"
-                    TextElement.Foreground="{TemplateBinding Foreground}"
-                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                    x:Name="contentPresenter" />
-                <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
-                    Grid.Column="1"
-                    Height="{TemplateBinding attach:Switcher.IconHeight}"
-                    HorizontalAlignment="Center"
-                    Kind="{TemplateBinding attach:Switcher.Icon}"
-                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
-                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
-                    VerticalAlignment="Center"
-                    Visibility="{TemplateBinding attach:Switcher.Icon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Switcher.IconWidth}"
-                    x:Name="Icon" />
-                <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
-                    Grid.Column="2"
-                    Height="{TemplateBinding attach:Switcher.IconHeight}"
-                    Kind="{TemplateBinding attach:Switcher.RightIcon}"
-                    Margin="8,0,0,0"
-                    Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
-                    StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
-                    Visibility="{TemplateBinding attach:Switcher.RightIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Switcher.IconWidth}" />
-            </Grid>
-        </Border>
+        <Grid>
+            <Border
+                Background="{StaticResource Pr300}"
+                BorderBrush="{StaticResource Pr300}"
+                BorderThickness="3"
+                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+                Margin="-3"
+                Name="Focus"
+                Visibility="Collapsed" />
+            <Border
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+                Focusable="False"
+                Height="{TemplateBinding Height}"
+                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                Margin="0"
+                Padding="{TemplateBinding Padding}"
+                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                Width="{TemplateBinding Width}"
+                x:Name="radioButtonBorder">
+                <Grid Focusable="False" x:Name="markGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <controls:Icon
+                        Fill="{TemplateBinding Foreground}"
+                        Focusable="False"
+                        Grid.Column="0"
+                        Height="{TemplateBinding attach:Switcher.IconHeight}"
+                        Kind="{TemplateBinding attach:Switcher.LeftIcon}"
+                        Margin="0,0,8,0"
+                        Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                        StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                        Visibility="{TemplateBinding attach:Switcher.LeftIcon,
+                                                     Converter={StaticResource IconConverter}}"
+                        Width="{TemplateBinding attach:Switcher.IconWidth}" />
+                    <ContentPresenter
+                        Focusable="False"
+                        Grid.Column="1"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        Margin="{TemplateBinding Padding}"
+                        RecognizesAccessKey="True"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                        TextElement.FontSize="{TemplateBinding FontSize}"
+                        TextElement.Foreground="{TemplateBinding Foreground}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        x:Name="contentPresenter" />
+                    <controls:Icon
+                        Fill="{TemplateBinding Foreground}"
+                        Focusable="False"
+                        Grid.Column="1"
+                        Height="{TemplateBinding attach:Switcher.IconHeight}"
+                        HorizontalAlignment="Center"
+                        Kind="{TemplateBinding attach:Switcher.Icon}"
+                        Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                        StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                        VerticalAlignment="Center"
+                        Visibility="{TemplateBinding attach:Switcher.Icon,
+                                                     Converter={StaticResource IconConverter}}"
+                        Width="{TemplateBinding attach:Switcher.IconWidth}"
+                        x:Name="Icon" />
+                    <controls:Icon
+                        Fill="{TemplateBinding Foreground}"
+                        Focusable="False"
+                        Grid.Column="2"
+                        Height="{TemplateBinding attach:Switcher.IconHeight}"
+                        Kind="{TemplateBinding attach:Switcher.RightIcon}"
+                        Margin="8,0,0,0"
+                        Stroke="{TemplateBinding attach:Switcher.IconStrokeThickness}"
+                        StrokeColor="{TemplateBinding attach:Switcher.IconStrokeColor}"
+                        Visibility="{TemplateBinding attach:Switcher.RightIcon,
+                                                     Converter={StaticResource IconConverter}}"
+                        Width="{TemplateBinding attach:Switcher.IconWidth}" />
+                </Grid>
+            </Border>
+        </Grid>
         <ControlTemplate.Triggers>
             <!--  CHECKED - TRUE | Hover  -->
             <MultiTrigger>
@@ -391,6 +408,9 @@
             </Trigger>
             <Trigger Property="attach:Switcher.Position" Value="Last">
                 <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

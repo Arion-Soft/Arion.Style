@@ -13,18 +13,24 @@
         IsNotEmptyValue="Visible"
         x:Key="TextVisibilityConverter" />
 
+    <Geometry x:Key="Check">M11 0C10.72 0 10.47 0.11 10.29 0.29L4 6.59L1.71 4.29C1.53 4.11 1.28 4 1 4C0.45 4 0 4.45 0 5C0 5.28 0.11 5.53 0.29 5.71L3.29 8.71C3.47 8.89 3.72 9 4 9C4.28 9 4.53 8.89 4.71 8.71L11.71 1.71C11.89 1.53 12 1.28 12 1C12 0.45 11.55 0 11 0Z</Geometry>
+    <Geometry x:Key="Null">M 0 0.75 Q 0 0 1 0 L 5 0 Q 6 0 6 0.75 Q 6 1.5 5 1.5 L 1 1.5 Q 0 1.5 0 0.75 Z</Geometry>
+
     <Style TargetType="{x:Type CheckBox}">
         <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
         <Setter Property="Background" Value="{StaticResource Lg5}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="attach:CheckBox.MarkHeight" Value="11" />
         <Setter Property="attach:CheckBox.MarkWidth" Value="15" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type CheckBox}">
                     <Grid
                         Background="Transparent"
+                        Focusable="False"
                         SnapsToDevicePixels="True"
+                        ZIndex="999"
                         x:Name="templateRoot">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
@@ -36,23 +42,42 @@
                         </Grid.RowDefinitions>
 
                         <Border
+                            Background="{StaticResource Pr300}"
+                            BorderBrush="{StaticResource Pr300}"
+                            BorderThickness="0"
+                            CornerRadius="8"
+                            Height="33"
+                            HorizontalAlignment="Left"
+                            Margin="-4"
+                            Name="Focus"
+                            SnapsToDevicePixels="true"
+                            VerticalAlignment="Top"
+                            Visibility="Collapsed"
+                            Width="33" />
+                        <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="2"
                             CornerRadius="4"
+                            Focusable="False"
+                            Grid.Column="0"
+                            Grid.Row="0"
                             Height="25"
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
                             Width="25"
                             x:Name="checkBoxBorder">
                             <Grid x:Name="markGrid">
                                 <Path
-                                    Data="M11 0C10.72 0 10.47 0.11 10.29 0.29L4 6.59L1.71 4.29C1.53 4.11 1.28 4 1 4C0.45 4 0 4.45 0 5C0 5.28 0.11 5.53 0.29 5.71L3.29 8.71C3.47 8.89 3.72 9 4 9C4.28 9 4.53 8.89 4.71 8.71L11.71 1.71C11.89 1.53 12 1.28 12 1C12 0.45 11.55 0 11 0Z"
+                                    Data="{StaticResource Check}"
                                     Fill="{StaticResource CleanW}"
+                                    Focusable="False"
                                     Height="{TemplateBinding attach:CheckBox.MarkHeight}"
-                                    Margin="5"
+                                    HorizontalAlignment="Center"
+                                    Margin="0"
                                     Opacity="0"
                                     Stretch="Uniform"
+                                    VerticalAlignment="Center"
                                     Width="{TemplateBinding attach:CheckBox.MarkWidth}"
                                     x:Name="Mark" />
                             </Grid>
@@ -73,6 +98,7 @@
                             x:Name="contentPresenter" />
 
                         <TextBlock
+                            Focusable="False"
                             FontSize="12"
                             FontWeight="Regular"
                             Foreground="{StaticResource Mg4}"
@@ -220,9 +246,9 @@
 
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg4}" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg4}" />
-                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource Dg2}" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="{StaticResource Null}" />
                             <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Pressed  -->
@@ -236,9 +262,9 @@
 
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg3}" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg3}" />
-                            <Setter Property="Fill" TargetName="Mark" Value="Black" />
+                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource Dg2}" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="{StaticResource Null}" />
                             <Setter Property="Cursor" Value="Hand" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Default  -->
@@ -252,9 +278,9 @@
 
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg5}" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg5}" />
-                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource CleanB}" />
+                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource Dg2}" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="{StaticResource Null}" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Disabled  -->
                         <MultiTrigger>
@@ -267,11 +293,15 @@
 
                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource Lg5}" />
                             <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource Mg5}" />
-                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource CleanB}" />
+                            <Setter Property="Fill" TargetName="Mark" Value="{StaticResource Dg2}" />
                             <Setter Property="Opacity" Value="0.5" />
                             <Setter Property="Opacity" TargetName="Mark" Value="1" />
-                            <Setter Property="Data" TargetName="Mark" Value="M 0 1 Q 0 0 1 0 L 9 0 Q 10 0 10 1 Q 10 2 9 2 L 1 2 Q 0 2 0 1 Z" />
+                            <Setter Property="Data" TargetName="Mark" Value="{StaticResource Null}" />
                         </MultiTrigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

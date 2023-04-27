@@ -35,6 +35,7 @@
 
             <Style TargetType="{x:Type smtx:XamlDisplay}">
                 <Setter Property="MaxWidth" Value="600" />
+                <Setter Property="Focusable" Value="False" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="smtx:XamlDisplay">
@@ -83,6 +84,7 @@
                                     </Border>
                                 </Popup>
                                 <ToggleButton
+                                    Focusable="False"
                                     Grid.Column="1"
                                     Height="25"
                                     HorizontalAlignment="Left"

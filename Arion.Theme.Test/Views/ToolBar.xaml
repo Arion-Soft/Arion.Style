@@ -1,0 +1,42 @@
+﻿<UserControl
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Test.Views.ToolBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Arion.Theme.Test.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <ToolBar Height="40">
+            <ToolBar.Items>
+                <Button Content="Btn" />
+                <Button Content="Btn" />
+                <Button Content="Btn" />
+                <Button Content="Btn" />
+                <Button Content="Btn" />
+                <Button Content="Btn" IsEnabled="False" />
+                <ToggleButton Content="Btn" />
+                <ToggleButton Content="Btn" />
+                <ToggleButton Content="Btn" />
+                <ToggleButton Content="Btn" />
+                <ToggleButton Content="Btn" IsChecked="True" />
+                <ToggleButton Content="Btn" IsEnabled="False" />
+                <RadioButton Content="Btn" />
+                <RadioButton Content="Btn" />
+                <RadioButton Content="Btn" />
+                <RadioButton Content="Btn" />
+                <RadioButton Content="Btn" IsChecked="True" />
+                <RadioButton Content="Btn" IsEnabled="False" />
+                <CheckBox Content="Btn" />
+                <CheckBox Content="Btn" />
+                <CheckBox Content="Btn" />
+                <CheckBox Content="Btn" />
+                <CheckBox Content="Btn" IsChecked="True" />
+                <CheckBox Content="Btn" IsEnabled="False" />
+            </ToolBar.Items>
+
+        </ToolBar>
+    </Grid>
+</UserControl>

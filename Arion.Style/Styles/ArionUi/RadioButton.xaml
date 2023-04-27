@@ -4,7 +4,6 @@
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="FocusVisual.xaml" />
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -14,7 +13,7 @@
         x:Key="TextVisibilityConverter" />
 
     <Style TargetType="{x:Type RadioButton}">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource RadioButtonFocusVisual}" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Background" Value="{StaticResource Lg5}" />
         <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
@@ -36,13 +35,25 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Border
+                            Background="{StaticResource Pr300}"
+                            BorderBrush="{StaticResource Pr300}"
+                            BorderThickness="3"
+                            CornerRadius="10"
+                            Height="24"
+                            HorizontalAlignment="Left"
+                            Margin="-3"
+                            Name="Focus"
+                            VerticalAlignment="Top"
+                            Visibility="Collapsed"
+                            Width="24" />
+                        <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="100"
                             Height="18"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                            Margin="1,1,2,1"
+                            Margin="0,0,0,0"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Width="18"
                             x:Name="radioButtonBorder">
@@ -204,6 +215,9 @@
                         </MultiTrigger>
                         <Trigger Property="HasContent" Value="true">
                             <Setter Property="Padding" Value="4,-1,0,0" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

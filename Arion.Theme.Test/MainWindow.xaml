@@ -329,6 +329,9 @@
             <TabItem Header="Rich Text box">
                 <views:RichTextBoxes />
             </TabItem>
+            <TabItem Header="ToolBars">
+                <views:ToolBar />
+            </TabItem>
         </TabControl>
         <Button
             Click="ChangeTheme_OnClick"
