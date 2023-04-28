@@ -207,9 +207,9 @@
             <Trigger Property="attach:Switcher.Position" Value="Last">
                 <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
             </Trigger>
-            <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
-            </Trigger>
+            <!-- <Trigger Property="IsKeyboardFocusWithin" Value="True"> -->
+            <!--     <Setter Property="Visibility" TargetName="Focus" Value="Visible" /> -->
+            <!-- </Trigger> -->
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <ControlTemplate TargetType="{x:Type RadioButton}" x:Key="SwitcherOutlineTemplate">
@@ -409,9 +409,9 @@
             <Trigger Property="attach:Switcher.Position" Value="Last">
                 <Setter Property="attach:Hint.CornerRadius" Value="0,6,6,0" />
             </Trigger>
-            <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
-            </Trigger>
+            <!-- <Trigger Property="IsKeyboardFocused" Value="True"> -->
+            <!--     <Setter Property="Visibility" TargetName="Focus" Value="Visible" /> -->
+            <!-- </Trigger> -->
         </ControlTemplate.Triggers>
     </ControlTemplate>
 

@@ -34,18 +34,18 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Border
-                            Background="{StaticResource Pr300}"
-                            BorderBrush="{StaticResource Pr300}"
-                            BorderThickness="3"
-                            CornerRadius="10"
-                            Height="24"
-                            HorizontalAlignment="Left"
-                            Margin="-3"
-                            Name="Focus"
-                            VerticalAlignment="Top"
-                            Visibility="Collapsed"
-                            Width="24" />
+                        <!--  <Border  -->
+                        <!--  Background="{StaticResource Pr300}"  -->
+                        <!--  BorderBrush="{StaticResource Pr300}"  -->
+                        <!--  BorderThickness="3"  -->
+                        <!--  CornerRadius="10"  -->
+                        <!--  Height="24"  -->
+                        <!--  HorizontalAlignment="Left"  -->
+                        <!--  Margin="-3"  -->
+                        <!--  Name="Focus"  -->
+                        <!--  VerticalAlignment="Top"  -->
+                        <!--  Visibility="Collapsed"  -->
+                        <!--  Width="24" />  -->
                         <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -216,9 +216,9 @@
                         <Trigger Property="HasContent" Value="true">
                             <Setter Property="Padding" Value="4,-1,0,0" />
                         </Trigger>
-                        <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
-                        </Trigger>
+                        <!-- <Trigger Property="IsFocused" Value="True"> -->
+                        <!--     <Setter Property="Visibility" TargetName="Focus" Value="Visible" /> -->
+                        <!-- </Trigger> -->
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

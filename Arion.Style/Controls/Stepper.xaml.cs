@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Arion.Style.Controls
@@ -10,6 +11,9 @@ namespace Arion.Style.Controls
             InitializeComponent();
         }
 
+        public event EventHandler Plus;
+        public event EventHandler Minus;
+        
         #region Value
 
         /// <summary>
@@ -76,14 +80,16 @@ namespace Arion.Style.Controls
 
         private void BtnMinus_OnClick(object sender, RoutedEventArgs e)
         {
-            if(Value - Step >= Minimum)
-                Value -= Step;
+            if (!(Value - Step >= Minimum)) return;
+            Value -= Step;
+            Minus?.Invoke(this, EventArgs.Empty);
         }
         
         private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
         {
-            if(Value + Step <= Maximum)
-                Value += Step;
+            if (!(Value + Step <= Maximum)) return;
+            Value += Step;
+            Plus?.Invoke(this, EventArgs.Empty);
         }
     }
 }

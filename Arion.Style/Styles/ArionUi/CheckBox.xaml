@@ -13,6 +13,23 @@
         IsNotEmptyValue="Visible"
         x:Key="TextVisibilityConverter" />
 
+    <Style x:Key="BtnFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border
+                        BorderBrush="{StaticResource Pr300}"
+                        BorderThickness="4"
+                        CornerRadius="6"
+                        HorizontalAlignment="Left"
+                        Margin="-3"
+                        Name="Focus"
+                        VerticalAlignment="Top" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Geometry x:Key="Check">M11 0C10.72 0 10.47 0.11 10.29 0.29L4 6.59L1.71 4.29C1.53 4.11 1.28 4 1 4C0.45 4 0 4.45 0 5C0 5.28 0.11 5.53 0.29 5.71L3.29 8.71C3.47 8.89 3.72 9 4 9C4.28 9 4.53 8.89 4.71 8.71L11.71 1.71C11.89 1.53 12 1.28 12 1C12 0.45 11.55 0 11 0Z</Geometry>
     <Geometry x:Key="Null">M 0 0.75 Q 0 0 1 0 L 5 0 Q 6 0 6 0.75 Q 6 1.5 5 1.5 L 1 1.5 Q 0 1.5 0 0.75 Z</Geometry>
 
@@ -41,19 +58,19 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <Border
-                            Background="{StaticResource Pr300}"
-                            BorderBrush="{StaticResource Pr300}"
-                            BorderThickness="0"
-                            CornerRadius="8"
-                            Height="33"
-                            HorizontalAlignment="Left"
-                            Margin="-4"
-                            Name="Focus"
-                            SnapsToDevicePixels="true"
-                            VerticalAlignment="Top"
-                            Visibility="Collapsed"
-                            Width="33" />
+                        <!--  <Border  -->
+                        <!--  Background="{StaticResource Pr300}"  -->
+                        <!--  BorderBrush="{StaticResource Pr300}"  -->
+                        <!--  BorderThickness="0"  -->
+                        <!--  CornerRadius="8"  -->
+                        <!--  Height="33"  -->
+                        <!--  HorizontalAlignment="Left"  -->
+                        <!--  Margin="-4"  -->
+                        <!--  Name="Focus"  -->
+                        <!--  SnapsToDevicePixels="true"  -->
+                        <!--  VerticalAlignment="Top"  -->
+                        <!--  Visibility="Collapsed"  -->
+                        <!--  Width="33" />  -->
                         <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -299,9 +316,9 @@
                             <Setter Property="Data" TargetName="Mark" Value="{StaticResource Null}" />
                         </MultiTrigger>
 
-                        <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
-                        </Trigger>
+                        <!-- <Trigger Property="IsFocused" Value="True"> -->
+                        <!--     <Setter Property="Visibility" TargetName="Focus" Value="Visible" /> -->
+                        <!-- </Trigger> -->
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
