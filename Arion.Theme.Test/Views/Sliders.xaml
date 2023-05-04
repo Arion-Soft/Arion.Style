@@ -15,6 +15,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -51,5 +52,9 @@
             Margin="5"
             Width="200" />
 
+        <local:Rangers
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.Row="4" />
     </Grid>
 </UserControl>

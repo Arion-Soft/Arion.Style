@@ -20,6 +20,9 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -88,9 +91,15 @@
                 Margin="5" />
         </StackPanel>
 
+        <WrapPanel Grid.Column="0" Grid.Row="4">
+            <CheckBox IsChecked="{Binding ElementName=Tg1, Path=IsChecked}" />
+            <CheckBox IsChecked="{Binding ElementName=Tg2, Path=IsChecked}" />
+            <CheckBox IsChecked="{Binding ElementName=Tg3, Path=IsChecked}" IsThreeState="True" />
+        </WrapPanel>
+
         <StackPanel
             Grid.Column="0"
-            Grid.Row="4"
+            Grid.Row="5"
             Orientation="Horizontal">
             <ToggleButton
                 Content="Toggle button"
@@ -107,7 +116,7 @@
 
         <StackPanel
             Grid.Column="0"
-            Grid.Row="5"
+            Grid.Row="6"
             Orientation="Horizontal">
             <ToggleButton
                 Content="Toggle button"
@@ -126,7 +135,7 @@
 
         <StackPanel
             Grid.Column="0"
-            Grid.Row="6"
+            Grid.Row="7"
             Margin="5,5"
             Orientation="Horizontal">
             <ToggleButton Content="First" Style="{DynamicResource TglOutlineFirst}" />
@@ -136,7 +145,7 @@
 
         <StackPanel
             Grid.Column="0"
-            Grid.Row="7"
+            Grid.Row="10"
             Orientation="Horizontal">
             <ToggleButton
                 Margin="5"

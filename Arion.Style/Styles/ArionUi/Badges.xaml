@@ -312,7 +312,7 @@
                                         Duration="0:0:.1"
                                         From="0"
                                         Storyboard.TargetProperty="Opacity"
-                                        To="0.2" />
+                                        To="0.1" />
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -322,7 +322,7 @@
                                     <DoubleAnimation
                                         AutoReverse="False"
                                         Duration="0:0:.1"
-                                        From="0.2"
+                                        From="0.1"
                                         Storyboard.TargetProperty="Opacity"
                                         To="0" />
                                 </Storyboard>
@@ -334,9 +334,9 @@
                                     <DoubleAnimation
                                         AutoReverse="False"
                                         Duration="0:0:.1"
-                                        From="0.2"
+                                        From="0.1"
                                         Storyboard.TargetProperty="Opacity"
-                                        To="0.3" />
+                                        To="0.25" />
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -346,9 +346,9 @@
                                     <DoubleAnimation
                                         AutoReverse="False"
                                         Duration="0:0:.1"
-                                        From="0.3"
+                                        From="0.25"
                                         Storyboard.TargetProperty="Opacity"
-                                        To="0.2" />
+                                        To="0.1" />
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>

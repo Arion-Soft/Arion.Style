@@ -43,7 +43,7 @@
             ItemContainerStyle="{DynamicResource ItemOutlineLeft}"
             ScrollViewer.VerticalScrollBarVisibility="Visible">
             <ListView.Items>
-                <ListViewItem Content="List view item 1" wpf:ListView.SelectColor="Red" />
+                <ListViewItem Content="List view item 1" />
                 <ListViewItem Content="List view item 2" />
                 <ListViewItem Content="List view item 3" />
                 <ListViewItem Content="List view item 4" />

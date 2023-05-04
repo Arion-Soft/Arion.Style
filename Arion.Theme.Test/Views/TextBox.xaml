@@ -14,282 +14,310 @@
     <UserControl.DataContext>
         <vm:TextBoxViewModel />
     </UserControl.DataContext>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Label
-            Content="TextBox"
-            FontSize="32"
-            Grid.Column="0"
-            Grid.ColumnSpan="3"
-            Grid.Row="0"
-            HorizontalAlignment="Left"
-            Margin="10"
-            Padding="0"
-            Style="{DynamicResource Lbl}"
-            VerticalAlignment="Top"
-            Width="Auto" />
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Content="TextBox"
+                FontSize="32"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="0"
+                HorizontalAlignment="Left"
+                Margin="10"
+                Padding="0"
+                Style="{DynamicResource Lbl}"
+                VerticalAlignment="Top"
+                Width="Auto" />
 
-        <Label
-            Content="Default"
-            FontSize="16"
-            Grid.Column="0"
-            Grid.Row="1" />
+            <Label
+                Content="Default"
+                FontSize="16"
+                Grid.Column="0"
+                Grid.Row="1" />
 
-        <StackPanel Grid.Column="0" Grid.Row="2">
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault1">
-                <TextBox Text="{Binding Person.Surname}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault2">
-                <TextBox wpf:Hint.Placeholder="Placeholder" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault3">
-                <TextBox wpf:TextBox.CanClear="True" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault4">
-                <TextBox wpf:TextBox.LeftIcon="Search" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault5">
-                <TextBox wpf:TextBox.RightIcon="Search" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault6">
-                <TextBox
-                    IsReadOnly="True"
-                    Text="IsReadOnly"
-                    wpf:TextBox.CanClear="True" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault7">
-                <TextBox IsEnabled="False" Text="Disabled" />
-            </smtx:XamlDisplay>
-        </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="2">
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault1">
+                    <TextBox Text="{Binding Person.Surname}" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault2">
+                    <TextBox wpf:Hint.Placeholder="Placeholder" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault3">
+                    <TextBox wpf:TextBox.CanClear="True" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault4">
+                    <TextBox wpf:TextBox.LeftIcon="Search" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault5">
+                    <TextBox wpf:TextBox.RightIcon="Search" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault6">
+                    <TextBox
+                        IsReadOnly="True"
+                        Text="IsReadOnly"
+                        wpf:TextBox.CanClear="True" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxDefault7">
+                    <TextBox IsEnabled="False" Text="Disabled" />
+                </smtx:XamlDisplay>
+            </StackPanel>
 
-        <Label
-            Content="Prefix"
-            FontSize="16"
-            Grid.Column="1"
-            Grid.Row="1" />
+            <Label
+                Content="Prefix"
+                FontSize="16"
+                Grid.Column="1"
+                Grid.Row="1" />
 
-        <StackPanel Grid.Column="1" Grid.Row="2">
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix1">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix2">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix3">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.CanClear="True"
-                    wpf:TextBox.Prefix="Prefix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix4">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.CanClear="True"
-                    wpf:TextBox.Prefix="Prefix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix5">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.LeftIcon="Search"
-                    wpf:TextBox.Prefix="Prefix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix6">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.LeftIcon="Search"
-                    wpf:TextBox.Prefix="Prefix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix7">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.RightIcon="Search" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix8">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.RightIcon="Search" />
-            </smtx:XamlDisplay>
-        </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="2">
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix1">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix2">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix2.5">
+                    <TextBox
+                        FontWeight="Light"
+                        IsReadOnly="True"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix3">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.CanClear="True"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix4">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.CanClear="True"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix4.5">
+                    <TextBox
+                        FontWeight="Light"
+                        IsReadOnly="True"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.CanClear="True"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix5">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.LeftIcon="Search"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix6">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.LeftIcon="Search"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix6.5">
+                    <TextBox
+                        FontWeight="Light"
+                        IsReadOnly="True"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.LeftIcon="Search"
+                        wpf:TextBox.Prefix="Prefix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix7">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.RightIcon="Search" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix8">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.RightIcon="Search" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefix8.5">
+                    <TextBox
+                        FontWeight="Light"
+                        IsReadOnly="True"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.RightIcon="Search" />
+                </smtx:XamlDisplay>
+            </StackPanel>
 
-        <Label
-            Content="Suffix"
-            FontSize="16"
-            Grid.Column="2"
-            Grid.Row="1" />
+            <Label
+                Content="Suffix"
+                FontSize="16"
+                Grid.Column="2"
+                Grid.Row="1" />
 
-        <StackPanel Grid.Column="2" Grid.Row="2">
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix1">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix2">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix3">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.CanClear="True"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix4">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.CanClear="True"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix5">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.LeftIcon="Search"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix6">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.LeftIcon="Search"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix7">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.RightIcon="Search"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix8">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.RightIcon="Search"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-        </StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="2">
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix1">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix2">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix3">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.CanClear="True"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix4">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.CanClear="True"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix5">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.LeftIcon="Search"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix6">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.LeftIcon="Search"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix7">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.RightIcon="Search"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxSuffix8">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.RightIcon="Search"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+            </StackPanel>
 
-        <Label
-            Content="Prefix And Suffix"
-            FontSize="16"
-            Grid.Column="3"
-            Grid.Row="1" />
+            <Label
+                Content="Prefix And Suffix"
+                FontSize="16"
+                Grid.Column="3"
+                Grid.Row="1" />
 
-        <StackPanel Grid.Column="3" Grid.Row="2">
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix1">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix2">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix3">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.CanClear="True"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix4">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.CanClear="True"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix5">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.LeftIcon="Search"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix6">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.LeftIcon="Search"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix7">
-                <TextBox
-                    FontWeight="Light"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.RightIcon="Search"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix8">
-                <TextBox
-                    FontWeight="Light"
-                    IsEnabled="False"
-                    wpf:Hint.Placeholder="Placeholder"
-                    wpf:TextBox.Prefix="Prefix"
-                    wpf:TextBox.RightIcon="Search"
-                    wpf:TextBox.Suffix="Suffix" />
-            </smtx:XamlDisplay>
-        </StackPanel>
+            <StackPanel Grid.Column="3" Grid.Row="2">
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix1">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix2">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix3">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.CanClear="True"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix4">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.CanClear="True"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix5">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.LeftIcon="Search"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix6">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.LeftIcon="Search"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix7">
+                    <TextBox
+                        FontWeight="Light"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.RightIcon="Search"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay Margin="5" UniqueKey="TextBoxPrefixSuffix8">
+                    <TextBox
+                        FontWeight="Light"
+                        IsEnabled="False"
+                        wpf:Hint.Placeholder="Placeholder"
+                        wpf:TextBox.Prefix="Prefix"
+                        wpf:TextBox.RightIcon="Search"
+                        wpf:TextBox.Suffix="Suffix" />
+                </smtx:XamlDisplay>
+            </StackPanel>
 
-        <StackPanel Grid.Column="4" Grid.Row="2">
-            <TextBox wpf:TextBox.IsNumber="True" />
-        </StackPanel>
-
-        <Label
-            Content="Number"
-            FontSize="16"
-            Grid.Column="4"
-            Grid.Row="1" />
-    </Grid>
+            <local:PasswordBox
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                Grid.Row="3" />
+        </Grid>
+    </ScrollViewer>
 </UserControl>

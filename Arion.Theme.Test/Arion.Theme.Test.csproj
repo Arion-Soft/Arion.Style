@@ -109,6 +109,9 @@
     <Compile Include="Views\Expanders.xaml.cs">
       <DependentUpon>Expanders.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IconPack.xaml.cs">
       <DependentUpon>IconPack.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,7 @@
     <Page Include="Views\DisplayControls.xaml" />
     <Page Include="Views\DocumentViewer.xaml" />
     <Page Include="Views\Expanders.xaml" />
+    <Page Include="Views\Home.xaml" />
     <Page Include="Views\IconPack.xaml" />
     <Page Include="Views\InlineAlerts.xaml" />
     <Page Include="Views\Labels.xaml" />

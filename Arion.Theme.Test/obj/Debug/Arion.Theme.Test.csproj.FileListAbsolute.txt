@@ -149,3 +149,5 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\RichT
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\RichTextBoxes.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ToolBar.g.cs
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ToolBar.baml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.baml

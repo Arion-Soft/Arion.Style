@@ -60,6 +60,7 @@
     <Compile Include="AttachedProperties\RadioButton.cs" />
     <Compile Include="AttachedProperties\Switcher.cs" />
     <Compile Include="AttachedProperties\TextBox.cs" />
+    <Compile Include="AttachedProperties\ToggleButton.cs" />
     <Compile Include="Commands\ClearText.cs" />
     <Compile Include="Commands\NumberCommand.cs" />
     <Compile Include="Controls\Badge.xaml.cs">
