@@ -1,4 +1,7 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -45,8 +48,10 @@
         <Setter Property="BorderBrush" Value="{StaticResource Lg1}" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="Padding" Value="6,2,6,2" />
+        <Setter Property="attach:TabItem.MainBorder" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabItem}">
@@ -54,7 +59,7 @@
                         <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="0,0,0,1"
+                            BorderThickness="{TemplateBinding attach:TabItem.MainBorder}"
                             Margin="1"
                             x:Name="mainBorder" />
                         <ContentPresenter
@@ -68,6 +73,7 @@
                             x:Name="contentPresenter" />
                     </Grid>
                     <ControlTemplate.Triggers>
+                        <!--  LEFT HOVER  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsMouseOver), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -75,8 +81,9 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Mg3}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,1,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,1,0" />
                         </MultiDataTrigger>
+                        <!--  BOTTOM HOVER  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsMouseOver), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -84,8 +91,9 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Mg3}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,1,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,1,0,0" />
                         </MultiDataTrigger>
+                        <!--  RIGHT HOVER  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsMouseOver), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -93,8 +101,9 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Mg3}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="1,0,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="1,0,0,0" />
                         </MultiDataTrigger>
+                        <!--  TOP HOVER  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsMouseOver), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -102,8 +111,10 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Mg3}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,0,1" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,0,1" />
                         </MultiDataTrigger>
+
+                        <!--  LEFT DISABLED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsEnabled), RelativeSource={RelativeSource Self}}" Value="false" />
@@ -111,8 +122,9 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Lg5}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,1,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,1,0" />
                         </MultiDataTrigger>
+                        <!--  BOTTOM DISABLED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsEnabled), RelativeSource={RelativeSource Self}}" Value="false" />
@@ -120,8 +132,9 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Lg5}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,1,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,1,0,0" />
                         </MultiDataTrigger>
+                        <!--  RIGHT DISABLED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsEnabled), RelativeSource={RelativeSource Self}}" Value="false" />
@@ -129,8 +142,9 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Lg5}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="1,0,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="1,0,0,0" />
                         </MultiDataTrigger>
+                        <!--  TOP DISABLED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsEnabled), RelativeSource={RelativeSource Self}}" Value="false" />
@@ -138,11 +152,10 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Lg5}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,0,1" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,0,1" />
                         </MultiDataTrigger>
 
-
-
+                        <!--  LEFT DEFAULT  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="false" />
@@ -150,8 +163,9 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Margin" TargetName="mainBorder" Value="0,3" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Lg1}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,1,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,1,0" />
                         </MultiDataTrigger>
+                        <!--  LEFT SELECTED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -160,16 +174,18 @@
                             <Setter Property="Panel.ZIndex" Value="1" />
                             <Setter Property="Margin" TargetName="mainBorder" Value="0,3" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,1,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,1,0" />
                         </MultiDataTrigger>
+                        <!--  BOTTOM DEFAULT  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="false" />
                                 <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Bottom" />
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Margin" TargetName="mainBorder" Value="5,0" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,1,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,1,0,0" />
                         </MultiDataTrigger>
+                        <!--  BOTTOM SELECTED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -178,16 +194,18 @@
                             <Setter Property="Panel.ZIndex" Value="1" />
                             <Setter Property="Margin" TargetName="mainBorder" Value="5,0" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,1,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,1,0,0" />
                         </MultiDataTrigger>
+                        <!--  RIGHT DEFAULT  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="false" />
                                 <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Right" />
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Margin" TargetName="mainBorder" Value="0,3" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="1,0,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="1,0,0,0" />
                         </MultiDataTrigger>
+                        <!--  RIGHT SELECTED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -196,16 +214,18 @@
                             <Setter Property="Panel.ZIndex" Value="1" />
                             <Setter Property="Margin" TargetName="mainBorder" Value="0,3" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="1,0,0,0" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="1,0,0,0" />
                         </MultiDataTrigger>
+                        <!--  TOP DEFAULT  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="false" />
                                 <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Top" />
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Margin" TargetName="mainBorder" Value="5,0" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,0,1" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,0,1" />
                         </MultiDataTrigger>
+                        <!--  TOP SELECTED  -->
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding (TabItem.IsSelected), RelativeSource={RelativeSource Self}}" Value="true" />
@@ -214,7 +234,7 @@
                             <Setter Property="Panel.ZIndex" Value="1" />
                             <Setter Property="Margin" TargetName="mainBorder" Value="5,0" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
-                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,0,1" />
+                            <Setter Property="attach:TabItem.MainBorder" Value="0,0,0,1" />
                         </MultiDataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

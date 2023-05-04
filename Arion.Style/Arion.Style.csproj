@@ -59,6 +59,7 @@
     <Compile Include="AttachedProperties\ProgressBar.cs" />
     <Compile Include="AttachedProperties\RadioButton.cs" />
     <Compile Include="AttachedProperties\Switcher.cs" />
+    <Compile Include="AttachedProperties\TabItem.cs" />
     <Compile Include="AttachedProperties\TextBox.cs" />
     <Compile Include="AttachedProperties\ToggleButton.cs" />
     <Compile Include="Commands\ClearText.cs" />
