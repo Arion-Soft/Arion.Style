@@ -47,12 +47,6 @@
                                 Width="16"
                                 x:Name="TgButton" />
                         </Border>
-                        <Label
-                            Content="{TemplateBinding attach:ToggleButton.ValueMove}"
-                            Grid.Column="1"
-                            TextElement.FontSize="{TemplateBinding FontSize}"
-                            TextElement.Foreground="{TemplateBinding Foreground}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         <ContentPresenter
                             Content="{TemplateBinding Content}"
                             Grid.Column="1"
@@ -279,7 +273,7 @@
 
                         <Trigger Property="HasContent" Value="true">
                             <Setter Property="Margin" TargetName="PART_ContentHost" Value="5,0,0,0" />
-                            <Setter Property="Visibility" TargetName="PART_ContentHost" Value="Collapsed" />
+                            <Setter Property="Visibility" TargetName="PART_ContentHost" Value="Visible" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
