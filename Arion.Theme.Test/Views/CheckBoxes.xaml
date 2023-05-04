@@ -24,6 +24,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Label
@@ -84,6 +85,17 @@
                     IsThreeState="True" />
             </smtx:XamlDisplay>
         </StackPanel>
+
+        <CheckBox
+            Content="CheckBox"
+            Grid.Column="0"
+            Grid.Row="4"
+            IsChecked="True"
+            IsThreeState="True"
+            wpf:CheckBox.BoxMarkHeight="40"
+            wpf:CheckBox.BoxMarkWidth="40"
+            wpf:CheckBox.MarkHeight="20"
+            wpf:CheckBox.MarkWidth="30" />
 
         <StackPanel
             Grid.Column="1"

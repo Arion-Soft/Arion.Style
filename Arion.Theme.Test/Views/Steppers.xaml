@@ -40,7 +40,10 @@
             Grid.Row="1"
             Margin="10"
             UniqueKey="Stepper1">
-            <controls:Stepper />
+            <controls:Stepper
+                Maximum="100"
+                Minimum="1"
+                Step="1" />
         </smtx:XamlDisplay>
     </Grid>
 </UserControl>

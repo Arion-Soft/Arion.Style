@@ -39,6 +39,9 @@
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="attach:CheckBox.MarkHeight" Value="11" />
         <Setter Property="attach:CheckBox.MarkWidth" Value="15" />
+        <Setter Property="attach:CheckBox.BoxMarkHeight" Value="25" />
+        <Setter Property="attach:CheckBox.BoxMarkWidth" Value="25" />
+        <Setter Property="attach:Hint.CornerRadius" Value="4" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>
@@ -75,14 +78,14 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="2"
-                            CornerRadius="4"
+                            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
                             Focusable="False"
                             Grid.Column="0"
                             Grid.Row="0"
-                            Height="25"
+                            Height="{TemplateBinding attach:CheckBox.BoxMarkHeight}"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
-                            Width="25"
+                            Width="{TemplateBinding attach:CheckBox.BoxMarkWidth}"
                             x:Name="checkBoxBorder">
                             <Grid x:Name="markGrid">
                                 <Path
