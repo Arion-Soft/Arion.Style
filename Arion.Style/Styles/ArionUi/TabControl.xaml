@@ -48,14 +48,49 @@
         <Setter Property="BorderBrush" Value="{StaticResource Lg1}" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="Padding" Value="6,2,6,2" />
-        <Setter Property="attach:TabItem.MainBorder" />
+        <Setter Property="attach:TabItem.MainBorder" Value="0" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="attach:TabItem.PrimaryColorSelected" Value="Transparent" />
+        <Setter Property="attach:TabItem.SecondaryColorSelected" Value="Transparent" />
+        <Setter Property="attach:TabItem.StartPointLeft" Value="0 0.5" />
+        <Setter Property="attach:TabItem.EndPointLeft" Value="1 0.5" />
+
+        <Setter Property="attach:TabItem.StartPointTop" Value="0.5 0" />
+        <Setter Property="attach:TabItem.EndPointTop" Value="0.5 1" />
+
+        <Setter Property="attach:TabItem.StartPointRight" Value="1 0.5" />
+        <Setter Property="attach:TabItem.EndPointRight" Value="0 0.5" />
+
+        <Setter Property="attach:TabItem.StartPointBottom" Value="0.5 1" />
+        <Setter Property="attach:TabItem.EndPointBottom" Value="0.5 0" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabItem}">
+                    <ControlTemplate.Resources>
+                        <LinearGradientBrush EndPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.EndPointLeft)}" StartPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.StartPointLeft)}" x:Key="GradientEffectLeft">
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.SecondaryColorSelected)}" Offset="0" />
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.PrimaryColorSelected)}" Offset=".25" />
+                        </LinearGradientBrush>
+                        <LinearGradientBrush EndPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.EndPointTop)}" StartPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.StartPointTop)}" x:Key="GradientEffectTop">
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.SecondaryColorSelected)}" Offset="0" />
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.PrimaryColorSelected)}" Offset=".25" />
+                        </LinearGradientBrush>
+                        <LinearGradientBrush EndPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.EndPointRight)}" StartPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.StartPointRight)}" x:Key="GradientEffectRight">
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.SecondaryColorSelected)}" Offset="0" />
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.PrimaryColorSelected)}" Offset=".25" />
+                        </LinearGradientBrush>
+                        <LinearGradientBrush EndPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.EndPointBottom)}" StartPoint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.StartPointBottom)}" x:Key="GradientEffectBottom">
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.SecondaryColorSelected)}" Offset="0" />
+                            <GradientStop Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(attach:TabItem.PrimaryColorSelected)}" Offset=".25" />
+                        </LinearGradientBrush>
+                    </ControlTemplate.Resources>
                     <Grid SnapsToDevicePixels="true" x:Name="templateRoot">
+                        <Border
+                            Background="{StaticResource GradientEffectLeft}"
+                            Visibility="Collapsed"
+                            x:Name="Effect" />
                         <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -175,6 +210,8 @@
                             <Setter Property="Margin" TargetName="mainBorder" Value="0,3" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
                             <Setter Property="attach:TabItem.MainBorder" Value="0,0,1,0" />
+                            <Setter Property="Visibility" TargetName="Effect" Value="Visible" />
+                            <Setter Property="Background" TargetName="Effect" Value="{StaticResource GradientEffectLeft}" />
                         </MultiDataTrigger>
                         <!--  BOTTOM DEFAULT  -->
                         <MultiDataTrigger>
@@ -195,6 +232,8 @@
                             <Setter Property="Margin" TargetName="mainBorder" Value="5,0" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
                             <Setter Property="attach:TabItem.MainBorder" Value="0,1,0,0" />
+                            <Setter Property="Visibility" TargetName="Effect" Value="Visible" />
+                            <Setter Property="Background" TargetName="Effect" Value="{StaticResource GradientEffectBottom}" />
                         </MultiDataTrigger>
                         <!--  RIGHT DEFAULT  -->
                         <MultiDataTrigger>
@@ -215,6 +254,8 @@
                             <Setter Property="Margin" TargetName="mainBorder" Value="0,3" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
                             <Setter Property="attach:TabItem.MainBorder" Value="1,0,0,0" />
+                            <Setter Property="Visibility" TargetName="Effect" Value="Visible" />
+                            <Setter Property="Background" TargetName="Effect" Value="{StaticResource GradientEffectRight}" />
                         </MultiDataTrigger>
                         <!--  TOP DEFAULT  -->
                         <MultiDataTrigger>
@@ -235,6 +276,8 @@
                             <Setter Property="Margin" TargetName="mainBorder" Value="5,0" />
                             <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource Dg2}" />
                             <Setter Property="attach:TabItem.MainBorder" Value="0,0,0,1" />
+                            <Setter Property="Visibility" TargetName="Effect" Value="Visible" />
+                            <Setter Property="Background" TargetName="Effect" Value="{StaticResource GradientEffectTop}" />
                         </MultiDataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
