@@ -109,7 +109,7 @@ namespace Arion.Style.Controls
             return _modalDialog != null;
         }
 
-        public static ModalDialogResult Show( string caption, string message = "", ModalDialogButtons buttons = ModalDialogButtons.Ok, ModalDialogType type = ModalDialogType.Info,
+        public static ModalDialogResult Show(string caption, string message = "", ModalDialogButtons buttons = ModalDialogButtons.Ok, ModalDialogType type = ModalDialogType.Info,
             Window windowForBlur = null)
         {
             if (CheckExist()) return ModalDialogResult.Cancel;
@@ -120,7 +120,9 @@ namespace Arion.Style.Controls
                 _modalDialog.ShowDialog();
                 if (windowForBlur != null) windowForBlur.Effect = new BlurEffect { Radius = 0 };
             });
-            return _modalDialog._result;
+            var result = _modalDialog._result;
+            _modalDialog = null;
+            return result;
         }
 
         public EIcons ModalIcon
