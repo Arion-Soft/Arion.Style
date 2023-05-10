@@ -151,3 +151,5 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ToolB
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ToolBar.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.g.cs
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.baml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\GroupBox.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\GroupBox.baml

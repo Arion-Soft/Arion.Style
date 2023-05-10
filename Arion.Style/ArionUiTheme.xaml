@@ -37,6 +37,7 @@
         <ResourceDictionary Source="Styles/ArionUi/Badges.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/RichTextBox.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Toolbar.xaml" />
+        <ResourceDictionary Source="Styles/ArionUi/GroupBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <!--  DEFAULT  -->
     <Style BasedOn="{StaticResource BtnOutline}" TargetType="{x:Type Button}" />

@@ -53,6 +53,7 @@
     <Compile Include="AttachedProperties\ComboBox.cs" />
     <Compile Include="AttachedProperties\DocumentViewer.cs" />
     <Compile Include="AttachedProperties\Enum\Position.cs" />
+    <Compile Include="AttachedProperties\GroupBox.cs" />
     <Compile Include="AttachedProperties\Hint.cs" />
     <Compile Include="AttachedProperties\ListView.cs" />
     <Compile Include="AttachedProperties\PasswordBox.cs" />

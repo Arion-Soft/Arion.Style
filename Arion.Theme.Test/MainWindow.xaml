@@ -283,6 +283,9 @@
             <TabItem Header="ToolBars">
                 <views:ToolBar />
             </TabItem>
+            <TabItem Header="GroupBox">
+                <views:GroupBox />
+            </TabItem>
         </TabControl>
         <Button
             Click="ChangeTheme_OnClick"

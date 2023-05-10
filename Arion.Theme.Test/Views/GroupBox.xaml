@@ -1,0 +1,22 @@
+﻿<UserControl
+    Background="{StaticResource Pr200}"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="Arion.Theme.Test.Views.GroupBox"
+    x:Name="Root"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Arion.Theme.Test.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <GroupBox
+            BorderThickness="2"
+            Header="1234"
+            wpf:GroupBox.BackgroundHeader="{Binding ElementName=Root, Path=Background}">
+            <Button Content="1234" />
+        </GroupBox>
+    </Grid>
+</UserControl>
