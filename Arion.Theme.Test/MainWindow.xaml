@@ -19,10 +19,8 @@
         <vm:MainViewModel />
     </Window.DataContext>
     <Grid>
-        <TabControl
-            Background="{StaticResource Pr200}"
-            Name="TbMain"
-            TabStripPlacement="Left">
+        <!--  Background="{StaticResource Pr200}"  -->
+        <TabControl Name="TbMain" TabStripPlacement="Left">
             <TabItem Header="Home">
                 <views:Home />
             </TabItem>
