@@ -17,7 +17,10 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid>
+    <Border
+        BorderBrush="{StaticResource Lg1}"
+        BorderThickness="1"
+        CornerRadius="6">
         <DockPanel Name="MainPanel">
 
             <!--  This tool bar contains all the editing buttons.  -->
@@ -133,7 +136,10 @@
                 By default pressing tab moves focus to the next control. Setting AcceptsTab to true allows the
                 RichTextBox to accept tab characters.
             -->
-            <RichTextBox AcceptsTab="True" Name="mainRTB" />
+            <RichTextBox
+                AcceptsTab="True"
+                BorderThickness="0"
+                Name="MainRtb" />
         </DockPanel>
-    </Grid>
+    </Border>
 </UserControl>
