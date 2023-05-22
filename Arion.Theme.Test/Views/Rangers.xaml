@@ -56,10 +56,7 @@
             Grid.Column="0"
             Margin="5"
             UniqueKey="Rs2">
-            <controls:RangeSlider
-                Width="300"
-                Maximum="100"
-                Minimum="0" />
+            <controls:RangeSlider Width="300" Maximum="100" Minimum="0" />
         </smtx:XamlDisplay>
         <smtx:XamlDisplay
             Grid.Row="3"
@@ -80,21 +77,13 @@
             <controls:RangeSlider
                 Name="Slider65535"
                 Width="500"
-                LowerValue="{Binding ElementName=SliderTest, Path=LowerValue}"
                 Maximum="65535"
-                Minimum="0"
-                UpperValue="{Binding ElementName=SliderTest, Path=UpperValue}" />
+                Minimum="0" />
         </smtx:XamlDisplay>
 
         <Grid Grid.Row="5" Grid.Column="0">
-            <TextBox
-                Width="100"
-                HorizontalAlignment="Left"
-                Text="{Binding ElementName=Slider65535, Path=LowerValue}" />
-            <TextBox
-                Width="100"
-                HorizontalAlignment="Right"
-                Text="{Binding ElementName=Slider65535, Path=UpperValue}" />
+            <TextBox Width="100" HorizontalAlignment="Left" Text="{Binding ElementName=Slider65535, Path=LowerValue, Mode=TwoWay}" />
+            <TextBox Width="100" HorizontalAlignment="Right" Text="{Binding ElementName=Slider65535, Path=UpperValue, Mode=TwoWay}" />
         </Grid>
 
         <smtx:XamlDisplay
@@ -110,17 +99,6 @@
                 SelectedTrackHeight="12"
                 TrackHeight="8" />
         </smtx:XamlDisplay>
-        <Button
-            Grid.Row="7"
-            Grid.Column="0"
-            Content="Click me" />
-
-        <controls:RangeSliderNew
-            Grid.Row="1"
-            Grid.Column="1"
-            Width="500"
-            LowerValue="20"
-            Maximum="100"
-            Minimum="0" />
+        <Button Grid.Row="7" Grid.Column="0" Content="Click me" />
     </Grid>
 </UserControl>

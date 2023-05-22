@@ -12,7 +12,7 @@
     Loaded="RangeSlider_OnLoaded"
     MouseEnter="RangeSlider_OnMouseEnter"
     MouseLeave="RangeSlider_OnMouseLeave"
-    MouseMove="UIElement_OnMouseMove"
+    MouseMove="OnThumbDrag"
     MouseUp="RangeSlider_OnMouseUp"
     mc:Ignorable="d">
     <Grid Margin="0">
@@ -21,7 +21,20 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Label Panel.ZIndex="999" Content="{Binding ElementName=Root, Path=LowerValue}" />
+        <Border
+            Name="LeftMarker"
+            Grid.Row="0"
+            Width="1"
+            Height="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" />
+        <Border
+            Name="RightMarker"
+            Grid.Row="0"
+            Width="1"
+            Height="1"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center" />
         <Border
             Name="Track"
             Grid.Row="1"
@@ -59,7 +72,7 @@
             Width="{Binding ElementName=Root, Path=RightThumbWidth}"
             Height="{Binding ElementName=Root, Path=RightThumbHeight}"
             Margin="{Binding ElementName=Root, Path=RightThumbMargin}"
-            HorizontalAlignment="Right"
+            HorizontalAlignment="Left"
             Background="{StaticResource Lg5}"
             BorderBrush="{StaticResource Mg5}"
             BorderThickness="{Binding ElementName=Root, Path=RightThumbBorder}"
@@ -74,6 +87,7 @@
             Grid.Row="1"
             Width="{Binding ElementName=Root, Path=CenterThumbWidth}"
             Height="12"
+            Margin="{Binding ElementName=Root, Path=CenterMargin}"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Center"
             Background="{Binding ElementName=Root, Path=CenterThumbBackground}"

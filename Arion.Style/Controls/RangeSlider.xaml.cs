@@ -1,17 +1,20 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
 namespace Arion.Style.Controls
 {
-    public partial class RangeSlider
+    public sealed partial class RangeSlider : INotifyPropertyChanged
     {
         #region Events
 
-        public event EventHandler RightValueChanged;
-        public event EventHandler LeftValueChanged;
+        public event EventHandler UpperValueChanged;
+        public event EventHandler LowerValueChanged;
         public event EventHandler MaximumChanged;
         public event EventHandler MinimumChanged;
 
@@ -20,14 +23,15 @@ namespace Arion.Style.Controls
         public RangeSlider()
         {
             InitializeComponent();
+            PropertyChanged += OnPropertyChanged;
             UpperValue = Maximum;
             LowerValue = Minimum;
 
             try
             {
-                if(!double.IsNaN(Width))
+                if (!double.IsNaN(Width))
                     Track.Width = Width - 20;
-            
+
                 #region LeftThumb
 
                 // LeftThumbBackground = new SolidColorBrush(Colors.Black);
@@ -35,7 +39,7 @@ namespace Arion.Style.Controls
                 LeftThumbBorder = new Thickness(1);
                 LeftThumbWidth = 10;
                 LeftThumbHeight = 20;
-                LeftThumbMargin = new Thickness(-(LeftThumbWidth/2), 0, 0, 0);
+                LeftThumbMargin = new Thickness(-(LeftThumbWidth / 2), 0, 0, 0);
 
                 #endregion
 
@@ -46,14 +50,14 @@ namespace Arion.Style.Controls
                 RightThumbBorder = new Thickness(1);
                 RightThumbWidth = 10;
                 RightThumbHeight = 20;
-                RightThumbMargin = new Thickness(0, 0, -(RightThumbWidth/2), 0);
+                RightThumbMargin = new Thickness(0, 0, -(RightThumbWidth / 2), 0);
 
                 #endregion
 
                 #region CenterThumb
 
                 CenterThumbBackground = new SolidColorBrush(Color.FromRgb(0x6B, 0xB3, 0xFA));
-                CenterThumbOpacity = 0.5;
+                CenterThumbOpacity = 0;
 
                 #endregion
 
@@ -61,6 +65,7 @@ namespace Arion.Style.Controls
 
                 TrackBackground = new SolidColorBrush(Colors.Gray);
                 TrackHeight = 2;
+                TrackWidth = Width - 10;
 
                 #endregion
 
@@ -89,12 +94,37 @@ namespace Arion.Style.Controls
             }
         }
 
+        private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            Debug.WriteLine($"property changed: {e.PropertyName}");
+            if (e.PropertyName == nameof(LowerValue))
+            {
+                if (LowerValue < Minimum || LowerValue > Maximum) return;
+                var v1 = (LowerValue - Minimum) * TrackWidth;
+                var v2 = v1 / Maximum;
+                var margin = Math.Round(v2);
+                LeftThumbMargin = new Thickness(margin-5, 0, 10, 0);
+                LowerValueChanged?.Invoke(this, EventArgs.Empty);
+                CenterMargin = new Thickness(margin, 0, CenterMargin.Right, 0);
+            }
+            else if (e.PropertyName == nameof(UpperValue))
+            {
+                if (UpperValue < Minimum || UpperValue > Maximum) return;
+                var v1 = (UpperValue - Minimum) * TrackWidth;
+                var v2 = v1 / (Maximum - Minimum);
+                var margin = Math.Round(v2);
+                RightThumbMargin = new Thickness(margin, 0, -10, 0);
+                UpperValueChanged?.Invoke(this, EventArgs.Empty);
+                CenterMargin = new Thickness(CenterMargin.Left, 0, Math.Abs(margin-TrackWidth), 0);
+            }
+        }
+
         private void RangeSlider_OnLoaded(object sender, RoutedEventArgs e)
         {
+            TrackWidth = Width - 10;
             UpperValue = Maximum;
             LowerValue = Minimum;
 
-            Track.Width = Width - 10;
             if (!ShowValues)
             {
                 Brd1.Visibility = Visibility.Collapsed;
@@ -119,32 +149,61 @@ namespace Arion.Style.Controls
             set
             {
                 SetValue(UpperValueProperty, value);
-                RightValueChanged?.Invoke(this, EventArgs.Empty);
+                OnPropertyChanged();
             }
         }
 
         public static readonly DependencyProperty UpperValueProperty =
             DependencyProperty.Register(nameof(UpperValue), typeof(double), typeof(RangeSlider),
-                new PropertyMetadata());
+                new PropertyMetadata(100.0, PropertyChangedCallback, UpperValueCoerceValueCallback));
+
+        private static object UpperValueCoerceValueCallback(DependencyObject d, object baseValue)
+        {
+            if (!(d is RangeSlider slider)) return null;
+
+            var value = (double)baseValue;
+
+            if (value > slider.Maximum) return slider.Maximum;
+            if (value < slider.LowerValue) return slider.LowerValue;
+            return value;
+        }
 
         #endregion
 
         #region LowerValue
 
+        [Category("Значения")]
         public double LowerValue
         {
             get => (double)GetValue(LowerValueProperty);
             set
             {
                 SetValue(LowerValueProperty, value);
-                LeftValueChanged?.Invoke(this, EventArgs.Empty);
+                OnPropertyChanged();
             }
         }
 
         public static readonly DependencyProperty LowerValueProperty =
-            DependencyProperty.Register(nameof(LowerValue), typeof(double), typeof(RangeSlider), new PropertyMetadata());
+            DependencyProperty.Register(nameof(LowerValue), typeof(double), typeof(RangeSlider), new FrameworkPropertyMetadata(
+                0.0, FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender, PropertyChangedCallback, LowerValueCoerceValueCallback));
+
+        private static object LowerValueCoerceValueCallback(DependencyObject d, object baseValue)
+        {
+            if (!(d is RangeSlider slider)) return null;
+
+            var value = (double)baseValue;
+
+            if (value < slider.Minimum) return slider.Minimum;
+            if (value > slider.UpperValue) return slider.UpperValue;
+            return value;
+        }
 
         #endregion
+        
+        private static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is RangeSlider slider) slider.OnPropertyChanged(e.Property.Name);
+        }
 
         #region Maximum
 
@@ -159,7 +218,7 @@ namespace Arion.Style.Controls
         }
 
         public static readonly DependencyProperty MaximumProperty =
-            DependencyProperty.Register(nameof(Maximum), typeof(double), typeof(RangeSlider), new PropertyMetadata());
+            DependencyProperty.Register(nameof(Maximum), typeof(double), typeof(RangeSlider), new PropertyMetadata(100.0));
 
         #endregion
 
@@ -176,7 +235,7 @@ namespace Arion.Style.Controls
         }
 
         public static readonly DependencyProperty MinimumProperty =
-            DependencyProperty.Register(nameof(Minimum), typeof(double), typeof(RangeSlider), new PropertyMetadata());
+            DependencyProperty.Register(nameof(Minimum), typeof(double), typeof(RangeSlider), new PropertyMetadata(0.0));
 
         #endregion
 
@@ -372,8 +431,6 @@ namespace Arion.Style.Controls
 
         #endregion
 
-        
-
         #region Percent
 
         public double Percent
@@ -463,7 +520,7 @@ namespace Arion.Style.Controls
                 new PropertyMetadata());
 
         #endregion
-        
+
         #region CenterThumbOpacity
 
         public static readonly DependencyProperty CenterThumbOpacityProperty = DependencyProperty.Register(
@@ -626,199 +683,97 @@ namespace Arion.Style.Controls
 
         private bool _leftSliderPressed;
         private bool _rightSliderPressed;
-        private bool _centerSliderPressed;
+        // private bool _centerSliderPressed;
 
-        private Point _leftSliderPoint;
-        private Point _rightSliderPoint;
-        private Point _centerSliderPoint;
+        private double _leftSliderPoint;
+        private double _rightSliderPoint;
+        // private double _centerSliderPoint;
 
         #region Logic
 
-        private void UIElement_OnMouseMove(object sender, MouseEventArgs e)
+        private void OnThumbDrag(object sender, MouseEventArgs e)
         {
             if (_leftSliderPressed)
             {
-                // Получение местоположения от
-                _leftSliderPoint = e.GetPosition(Thumb1);
-                MoveLeftThumb();
-                CheckBorder();
+                _leftSliderPoint = Math.Round(e.GetPosition(LeftMarker).X - 5, 0);
+                if (_leftSliderPoint < 0 || _leftSliderPoint > Track.Width) return;
+                var calc = Math.Round(_leftSliderPoint / Track.Width * Maximum + Minimum, 0);
+                if(calc > UpperValue || calc < Minimum) return;
+                LowerValue = calc;
             }
-            else if (_rightSliderPressed)
+            
+            if (_rightSliderPressed)
             {
-                _rightSliderPoint = e.GetPosition(Thumb2);
-                MoveRightThumb();
-                CheckBorder();
+                _rightSliderPoint = Math.Round(e.GetPosition(RightMarker).X + 5, 0) + Track.Width;
+                if (_rightSliderPoint > Track.Width || _rightSliderPoint < 0) return;
+                var calc = Math.Abs(Math.Round(_rightSliderPoint / Track.Width * Maximum, 0));
+                if(calc < LowerValue) return;
+                UpperValue = calc;
             }
-            else if (_centerSliderPressed)
-            {
-                _centerSliderPoint = e.GetPosition(CenterThumb);
-
-                var changedMarginLeft =
-                    Math.Round(Math.Truncate(LeftThumbMargin.Left) + _centerSliderPoint.X + Thumb1.Width / 2);
-                LeftThumbMargin = new Thickness(changedMarginLeft, 0, 0, 0);
-
-                var changedMarginRight =
-                    Math.Round(Math.Truncate(RightThumbMargin.Right) - _centerSliderPoint.X - Thumb2.Width / 2);
-                RightThumbMargin = new Thickness(0, 0, changedMarginRight, 0);
-
-                CheckBorder();
-            }
-
-            var middle = Maximum - Minimum;
-
-            #region Расчет левого значения
-
-            var leftMargin = Math.Round(middle * (LeftThumbMargin.Left + Thumb1.Width / 2) / Track.Width);
-            LowerValue = Math.Round(leftMargin + Minimum);
-
-            #endregion
-
-            #region Расчет правого значения
-
-            var rightMargin = middle * (RightThumbMargin.Right + Thumb2.Width / 2) / Track.Width;
-            UpperValue = Math.Round(Maximum - rightMargin);
-
-            #endregion
-
-            if (LeftThumbMargin.Left + RightThumbMargin.Right > Width * Percent)
-            {
-                _centerSliderPressed = false;
-                CenterThumbVisibility = Visibility.Collapsed;
-            }
-            else CenterThumbVisibility = Visibility.Visible;
-
-            MoveCenterThumbAndFill();
-        }
-
-        private void MoveCenterThumbAndFill()
-        {
-            CenterThumb.Margin = new Thickness(LeftThumbMargin.Left, 0, RightThumbMargin.Right, 0);
-            CenterMargin = new Thickness(LeftThumbMargin.Left + Thumb1.Width / 2, 0,
-                RightThumbMargin.Right + Thumb2.Width / 2, 0);
-        }
-
-        private void CheckBorder()
-        {
-            if (LeftThumbMargin.Left < -5)
-                LeftThumbMargin = new Thickness(-5, 0, 0, 0);
             
-            else if (LeftThumbMargin.Left > Track.Width - RightThumbMargin.Right- Thumb2.Width)
-                LeftThumbMargin = new Thickness(Track.Width - RightThumbMargin.Right- Thumb2.Width, 0, 0, 0);
-            
-            
-            if (RightThumbMargin.Right < -5)
-                RightThumbMargin = new Thickness(0, 0, -5, 0);
-            
-            else if (RightThumbMargin.Right > Track.Width - LeftThumbMargin.Left - Thumb1.Width)
-                RightThumbMargin = new Thickness(0, 0, Track.Width - Thumb1.Width / 2, 0);
+            // else if (_centerSliderPressed)
+            // {
+            //     _leftSliderPoint = Math.Round(e.GetPosition(LeftMarker).X - 5, 0);
+            //     _rightSliderPoint = Math.Round(e.GetPosition(RightMarker).X + 5, 0) + Track.Width;
+            //     
+            //     if ((_leftSliderPoint < 0 || _leftSliderPoint > Track.Width) && (_rightSliderPoint > Track.Width || _rightSliderPoint < 0)) return;
+            //     
+            //     var calcLower = Math.Round(_leftSliderPoint / Track.Width * Maximum + Minimum, 0);
+            //     if(calcLower > UpperValue || calcLower < Minimum) return;
+            //     LowerValue = calcLower;
+            //     
+            //     var calcUpper = Math.Abs(Math.Round(_rightSliderPoint / Track.Width * Maximum, 0));
+            //     if(calcUpper < LowerValue) return;
+            //     UpperValue = calcUpper;
+            // }
         }
-
-        private bool CanRightThumbMove()
-        {
-            if (!(LeftThumbMargin.Left + RightThumbMargin.Right + Thumb2.Width >= Track.Width)) return true;
-            if (_rightSliderPoint.X > 10) return true;
-            return !(_rightSliderPoint.X < 10);
-        }
-
-        private bool CanLeftThumbMove()
-        {
-            if (!(LeftThumbMargin.Left + RightThumbMargin.Right + Thumb1.Width >= Track.Width)) return true;
-            if (_leftSliderPoint.X < 10) return true;
-            return !(_leftSliderPoint.X > 10);
-        }
-
-        private void MoveRightThumb()
-        {
-            if (!CanRightThumbMove()) return;
-            var changedMargin =
-                Math.Round(Math.Truncate(RightThumbMargin.Right) - _rightSliderPoint.X + Thumb2.Width / 2);
-            RightThumbMargin = new Thickness(0, 0, changedMargin, 0);
-        }
-
-        private void MoveLeftThumb()
-        {
-            if (!CanLeftThumbMove()) return;
-            var changedMargin = Math.Round(Math.Truncate(LeftThumbMargin.Left) + _leftSliderPoint.X - Thumb1.Width / 2);
-            LeftThumbMargin = new Thickness(changedMargin, 0, 0, 0);
-        }
-
+        
         private void LeftSlider_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             _leftSliderPressed = true;
-            Mouse.Capture(Thumb1, CaptureMode.Element);
+            Mouse.Capture(this, CaptureMode.Element);
+            Panel.SetZIndex(Thumb1, 999);
+            Panel.SetZIndex(Thumb2, 100);
         }
 
         private void LeftSlider_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             _leftSliderPressed = false;
-            Mouse.Capture(Thumb1, CaptureMode.None);
+            Mouse.Capture(this, CaptureMode.None);
         }
 
         private void RightSlider_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             _rightSliderPressed = true;
-            Mouse.Capture(Thumb2, CaptureMode.Element);
+            Mouse.Capture(this, CaptureMode.Element);
+            Panel.SetZIndex(Thumb1, 100);
+            Panel.SetZIndex(Thumb2, 999);
         }
 
         private void RightSlider_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             _rightSliderPressed = false;
-            Mouse.Capture(Thumb2, CaptureMode.None);
+            Mouse.Capture(this, CaptureMode.None);
         }
 
         private void RangeSlider_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             _leftSliderPressed = false;
             _rightSliderPressed = false;
-            _centerSliderPressed = false;
-            Mouse.Capture(Thumb1, CaptureMode.None);
-            Mouse.Capture(Thumb2, CaptureMode.None);
-            Mouse.Capture(CenterThumb, CaptureMode.None);
+            // _centerSliderPressed = false;
+            Mouse.Capture(this, CaptureMode.None);
         }
 
         private void Center_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
-            _centerSliderPressed = true;
-            Mouse.Capture(CenterThumb, CaptureMode.Element);
+            // _centerSliderPressed = true;
+            Mouse.Capture(this, CaptureMode.Element);
         }
 
         private void Center_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
-            _centerSliderPressed = false;
-            Mouse.Capture(CenterThumb, CaptureMode.None);
-        }
-
-        public void SetLowerValue(double value)
-        {
-            LowerValue = value;
-            var percent = value * 100 / Maximum;
-            var margin = percent * Track.Width / 100;
-            LeftThumbMargin = new Thickness(margin-5, 0, 0, 0);
-            MoveCenterThumbAndFill();
-        }
-
-        public void SetUpperValue(double value)
-        {
-            UpperValue = value;
-            var percent = Math.Abs(Math.Round(value * 100 / Maximum, 3) - 100);
-            var margin = Math.Round(percent * Track.Width / 100, 3);
-            RightThumbMargin = new Thickness(0, 0, margin-5, 0);
-            MoveCenterThumbAndFill();
-        }
-
-        public void SetValues(double lowerValue, double upperValue)
-        {
-            LowerValue = lowerValue;
-            var lowerPercent = lowerValue * 100 / Maximum;
-            var lowerMargin = lowerPercent * Track.Width / 100;
-            LeftThumbMargin = new Thickness(lowerMargin-5, 0, 0, 0);
-            
-            UpperValue = upperValue;
-            var upperPercent = Math.Abs(Math.Round(upperValue * 100 / Maximum, 3) - 100);
-            var upperMargin = Math.Round(upperPercent * Track.Width / 100, 3);
-            RightThumbMargin = new Thickness(0, 0, upperMargin-5, 0);
-            
-            MoveCenterThumbAndFill();
+            // _centerSliderPressed = false;
+            Mouse.Capture(this, CaptureMode.None);
         }
 
         #endregion
@@ -845,12 +800,19 @@ namespace Arion.Style.Controls
 
         private void RangeSlider_OnMouseEnter(object sender, MouseEventArgs e)
         {
-            CenterThumbOpacity = 1;
+            CenterThumbOpacity = 0;
         }
 
         private void RangeSlider_OnMouseLeave(object sender, MouseEventArgs e)
         {
-            CenterThumbOpacity = .5;
+            CenterThumbOpacity = 0;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

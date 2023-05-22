@@ -103,9 +103,6 @@
     <Compile Include="Controls\RangeSlider.xaml.cs">
       <DependentUpon>RangeSlider.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\RangeSliderNew.xaml.cs">
-      <DependentUpon>RangeSliderNew.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\Stepper.xaml.cs">
       <DependentUpon>Stepper.xaml</DependentUpon>
     </Compile>
@@ -236,7 +233,6 @@
     <Page Include="Controls\ModalDialog.xaml" />
     <Page Include="Controls\OptionControl.xaml" />
     <Page Include="Controls\RangeSlider.xaml" />
-    <Page Include="Controls\RangeSliderNew.xaml" />
     <Page Include="Controls\Stepper.xaml" />
     <Page Include="Controls\TimeInput.xaml" />
     <Page Include="Icons\Icons.xaml" />

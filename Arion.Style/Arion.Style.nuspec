@@ -2,7 +2,7 @@
 <package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>Arion.Style</id>
-        <version>0.4.11.1</version>
+        <version>0.5.0</version>
         <title>Arion Design</title>
         <authors>Ivan Budanov</authors>
         <owners>Arion Soft</owners>
@@ -14,7 +14,7 @@
         <license type="file">LICENSE.txt</license>
         <readme>docs\Readme.md</readme>
         <releaseNotes>
-            Исправлен элемент GroupBox
+            The Range Slider element has been updated, the main logic has been redesigned and the ability to bind has been added, the central slider has been temporarily removed (in revision)
         </releaseNotes>
     </metadata>
     <files>
