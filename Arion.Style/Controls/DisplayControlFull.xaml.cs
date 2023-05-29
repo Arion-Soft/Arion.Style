@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Arion.Style.Helpers;
 
 namespace Arion.Style.Controls
 {
@@ -49,6 +50,10 @@ namespace Arion.Style.Controls
                 Send();
             }
         }
+        
+        public static readonly DependencyProperty TargetValueProperty =
+            DependencyProperty.Register(nameof(TargetValue), typeof(double), typeof(DisplayControlFull),
+                new PropertyMetadata());
 
         public bool QuickChange
         {
@@ -71,6 +76,8 @@ namespace Arion.Style.Controls
         private DateTime _startSend;
         private bool _firstSend;
 
+        private Waiter _sendWaiter;
+
         private async void Send()
         {
             if (QuickChange)
@@ -79,29 +86,11 @@ namespace Arion.Style.Controls
             }
             else
             {
-                await Task.Run(() =>
-                {
-                    if (_firstSend == false)
-                    {
-                        _startSend = DateTime.Now;
-                        _firstSend = true;
-                        while (true)
-                        {
-                            if ((DateTime.Now - _startSend).Seconds > .1)
-                            {
-                                _firstSend = false;
-                                TargetValueChange?.Invoke(this, EventArgs.Empty);
-                                break;
-                            }
-                        }
-                    }
-                });
+                if (_sendWaiter == null) _sendWaiter = new Waiter();
+                await _sendWaiter.Wait();
+                TargetValueChange?.Invoke(this, EventArgs.Empty);
             }
         }
-
-        public static readonly DependencyProperty TargetValueProperty =
-            DependencyProperty.Register(nameof(TargetValue), typeof(double), typeof(DisplayControlFull),
-                new PropertyMetadata());
 
         public double Step
         {
@@ -157,23 +146,51 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty MaxIsLimitProperty =
             DependencyProperty.Register(nameof(MaxIsLimit), typeof(bool), typeof(DisplayControlFull), new PropertyMetadata());
 
-        #endregion
+        public static readonly DependencyProperty SpeedChangeProperty = DependencyProperty.Register(
+            nameof(SpeedChange), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(1.0));
 
-        private void BtnMinus_OnClick(object sender, RoutedEventArgs e)
+        public double SpeedChange
         {
-            if (TargetValue - Step >= Minimum)
-                TargetValue -= Step;
+            get => (double)GetValue(SpeedChangeProperty);
+            set => SetValue(SpeedChangeProperty, value);
         }
 
-        private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
+        #endregion
+
+        private double _delta;
+        private Waiter _minusWaiter;
+        private Waiter _plusWaiter;
+        
+        private async void BtnMinus_OnClick(object sender, RoutedEventArgs e)
         {
+            if (_minusWaiter == null) _minusWaiter = new Waiter();
+            if (_delta == 0) _delta = Step;
+            if (TargetValue - Step >= Minimum)
+                TargetValue -= _delta;
+            else TargetValue = Minimum;
+
+            _delta += Step * SpeedChange;
+            await _minusWaiter.Wait();
+            _delta = Step;
+        }
+
+        private async void BtnPlus_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (_plusWaiter == null) _plusWaiter = new Waiter();
+            if (_delta == 0) _delta = Step;
             if (MaxIsLimit)
             {
                 if (TargetValue + Step <= Limit)
-                    TargetValue += Step;
+                    TargetValue += _delta;
+                else TargetValue = Limit;
             }
             else if (TargetValue + Step <= Maximum)
-                TargetValue += Step;
+                TargetValue += _delta;
+            else TargetValue = Maximum;
+            
+            _delta *= SpeedChange;
+            await _plusWaiter.Wait();
+                _delta = Step;
         }
 
         public void PressPlus()

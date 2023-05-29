@@ -190,6 +190,7 @@
     <Compile Include="Extensions\SmartHint.cs" />
     <Compile Include="Extensions\Spelling.cs" />
     <Compile Include="Extensions\TextFieldAssist.cs" />
+    <Compile Include="Helpers\Waiter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

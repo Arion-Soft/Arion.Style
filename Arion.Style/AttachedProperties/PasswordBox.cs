@@ -76,6 +76,23 @@ namespace Arion.Style.AttachedProperties
 
         #endregion
 
+        #region IsShowPassword
+
+        public static readonly DependencyProperty IsShowPasswordProperty = DependencyProperty.RegisterAttached(
+            "IsShowPassword", typeof(bool), typeof(PasswordBox), new FrameworkPropertyMetadata(default(bool), FrameworkPropertyMetadataOptions.AffectsRender));
+
+        public static void SetIsShowPassword(DependencyObject element, bool value)
+        {
+            element.SetValue(IsShowPasswordProperty, value);
+        }
+
+        public static bool GetIsShowPassword(DependencyObject element)
+        {
+            return (bool)element.GetValue(IsShowPasswordProperty);
+        }
+
+        #endregion
+
         #region SecuredPassword
 
         public static readonly DependencyProperty SecuredPasswordProperty = DependencyProperty.RegisterAttached(
