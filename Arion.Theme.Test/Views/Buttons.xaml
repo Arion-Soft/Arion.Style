@@ -1,15 +1,20 @@
 ﻿<UserControl
-    d:DesignHeight="1000"
-    d:DesignWidth="1900"
-    mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.Buttons"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:vm="clr-namespace:Arion.Theme.Test.ViewModel"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    d:DesignHeight="1000"
+    d:DesignWidth="1900"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource {x:Type smtx:XamlDisplay}}" TargetType="{x:Type smtx:XamlDisplay}">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </UserControl.Resources>
     <UserControl.DataContext>
         <vm:ButtonsViewModel />
     </UserControl.DataContext>
@@ -42,491 +47,435 @@
         </Grid.ColumnDefinitions>
 
         <Label
-            Content="{DynamicResource Buttons}"
-            FontSize="38"
+            Grid.Row="0"
             Grid.Column="0"
             Grid.ColumnSpan="2"
-            Grid.Row="0"
-            HorizontalAlignment="Left"
+            Width="Auto"
             Margin="10"
             Padding="0"
-            RenderTransformOrigin="0.5,0.5"
-            Style="{DynamicResource Lbl}"
+            HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Width="Auto" />
+            Content="{DynamicResource Buttons}"
+            FontSize="38"
+            RenderTransformOrigin="0.5,0.5"
+            Style="{DynamicResource Lbl}" />
 
         <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="Auto"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
             Content="{DynamicResource Filled}"
             FontSize="32"
-            Grid.Column="1"
-            Grid.Row="1"
-            HorizontalAlignment="Left"
-            Margin="10"
-            Style="{DynamicResource Lbl}"
-            VerticalAlignment="Top"
-            Width="Auto" />
+            Style="{DynamicResource Lbl}" />
         <Label
+            Grid.Row="1"
+            Grid.Column="2"
+            Width="Auto"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
             Content="{DynamicResource Outline}"
             FontSize="32"
-            Grid.Column="2"
-            Grid.Row="1"
-            HorizontalAlignment="Left"
-            Margin="10"
-            Style="{DynamicResource Lbl}"
-            VerticalAlignment="Top"
-            Width="Auto" />
+            Style="{DynamicResource Lbl}" />
         <Label
+            Grid.Row="1"
+            Grid.Column="3"
+            Width="Auto"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
             Content="{DynamicResource Text}"
             FontSize="32"
-            Grid.Column="3"
-            Grid.Row="1"
-            HorizontalAlignment="Left"
-            Margin="10"
-            Style="{DynamicResource Lbl}"
-            VerticalAlignment="Top"
-            Width="Auto" />
+            Style="{DynamicResource Lbl}" />
 
         <Label
-            Content="{DynamicResource Default}"
-            FontSize="14"
-            Grid.Column="0"
             Grid.Row="2"
-            VerticalAlignment="Center" />
-        <Label
-            Content="{DynamicResource LeftIcon}"
-            FontSize="14"
             Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="{DynamicResource Default}"
+            FontSize="14" />
+        <Label
             Grid.Row="3"
-            VerticalAlignment="Center" />
-        <Label
-            Content="{DynamicResource RightIcon}"
-            FontSize="14"
             Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="{DynamicResource LeftIcon}"
+            FontSize="14" />
+        <Label
             Grid.Row="4"
-            VerticalAlignment="Center" />
-        <Label
-            Content="{DynamicResource Icon}"
-            FontSize="14"
             Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="{DynamicResource RightIcon}"
+            FontSize="14" />
+        <Label
             Grid.Row="5"
-            VerticalAlignment="Center" />
-        <Label
-            Content="{DynamicResource LinearProgressBar}"
-            FontSize="14"
             Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="{DynamicResource Icon}"
+            FontSize="14" />
+        <Label
             Grid.Row="6"
-            VerticalAlignment="Center" />
-        <Label
-            Content="{DynamicResource CircleProgressBar}"
-            FontSize="14"
             Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="{DynamicResource LinearProgressBar}"
+            FontSize="14" />
+        <Label
             Grid.Row="7"
-            VerticalAlignment="Center" />
-        <Label
-            Content="Grouped"
-            FontSize="14"
             Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="{DynamicResource CircleProgressBar}"
+            FontSize="14" />
+        <Label
             Grid.Row="17"
-            VerticalAlignment="Center" />
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="Grouped"
+            FontSize="14" />
+
+        <Grid
+            Grid.Row="2"
+            Grid.RowSpan="6"
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <Style BasedOn="{StaticResource BtnFilled}" TargetType="Button">
+                    <Setter Property="Content" Value="{DynamicResource Button}" />
+                </Style>
+            </Grid.Resources>
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnFilled1">
+                    <Button Click="ButtonBase_OnClick" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnFilled2">
+                    <Button Name="DisableButton" IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnFilled3">
+                    <Button
+                        wpf:Button.IconHeight="30"
+                        wpf:Button.IconWidth="30"
+                        wpf:Button.LeftIcon="User" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnFilled4">
+                    <Button wpf:Button.LeftIcon="User" IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnFilled5">
+                    <Button wpf:Button.RightIcon="User" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnFilled6">
+                    <Button wpf:Button.RightIcon="User" IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnFilled7">
+                    <Button wpf:Button.Icon="User" Content="" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnFilled8">
+                    <Button
+                        wpf:Button.Icon="User"
+                        Content=""
+                        IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnFilled9">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Content="" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnFilled10">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Content=""
+                        IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnFilled11">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarType="Circle"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Content="" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnFilled12">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarType="Circle"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Content=""
+                        IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+        </Grid>
+        <Grid
+            Grid.Row="2"
+            Grid.Column="2"
+            RowSpan="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <Style BasedOn="{StaticResource BtnOutline}" TargetType="Button">
+                    <Setter Property="Content" Value="{DynamicResource Button}" />
+                </Style>
+            </Grid.Resources>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnOutline1">
+                    <Button />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnOutline2">
+                    <Button IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnOutline3">
+                    <Button wpf:Button.LeftIcon="User" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnOutline4">
+                    <Button wpf:Button.LeftIcon="User" IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnOutline5">
+                    <Button wpf:Button.RightIcon="User" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnOutline6">
+                    <Button wpf:Button.RightIcon="User" IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnOutline7">
+                    <Button wpf:Button.Icon="User" Style="{DynamicResource BtnOutline}" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnOutline8">
+                    <Button
+                        wpf:Button.Icon="User"
+                        IsEnabled="False"
+                        Style="{DynamicResource BtnOutline}" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnOutline9">
+                    <Button
+                        Width="40"
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Style="{DynamicResource BtnOutline}" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnOutline10">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        IsEnabled="False"
+                        Style="{DynamicResource BtnOutline}" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnOutline11">
+                    <Button
+                        Width="40"
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarType="Circle"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Style="{DynamicResource BtnOutline}" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnOutline12">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarType="Circle"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        IsEnabled="False"
+                        Style="{DynamicResource BtnOutline}" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+        </Grid>
+
+        <Grid
+            Grid.Row="2"
+            Grid.Column="3"
+            RowSpan="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <Style BasedOn="{StaticResource BtnText}" TargetType="Button">
+                    <Setter Property="Content" Value="{DynamicResource Button}" />
+                </Style>
+            </Grid.Resources>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnText1">
+                    <Button />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnText2">
+                    <Button IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnText3">
+                    <Button wpf:Button.LeftIcon="User" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnText4">
+                    <Button wpf:Button.LeftIcon="User" IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnText5">
+                    <Button wpf:Button.RightIcon="User" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnText6">
+                    <Button wpf:Button.RightIcon="User" IsEnabled="False" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnText7">
+                    <Button
+                        Name="BtnTest3"
+                        wpf:Button.Icon="User"
+                        Style="{DynamicResource BtnText}" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnText8">
+                    <Button
+                        wpf:Button.Icon="User"
+                        IsEnabled="False"
+                        Style="{DynamicResource BtnText}" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnText9">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Style="{DynamicResource BtnText}" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnText10">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        IsEnabled="False"
+                        Style="{DynamicResource BtnText}" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Horizontal">
+                <smtx:XamlDisplay UniqueKey="BtnText11">
+                    <Button
+                        Width="40"
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarType="Circle"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        Style="{DynamicResource BtnText}" />
+                </smtx:XamlDisplay>
+                <smtx:XamlDisplay UniqueKey="BtnText12">
+                    <Button
+                        wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
+                        wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
+                        wpf:Button.ProgressBarShow="True"
+                        wpf:Button.ProgressBarType="Circle"
+                        wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}"
+                        IsEnabled="False"
+                        Style="{DynamicResource BtnText}" />
+                </smtx:XamlDisplay>
+            </StackPanel>
+        </Grid>
+
+        <Slider
+            x:Name="SliderBtn"
+            Grid.Row="8"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Margin="10"
+            Maximum="100"
+            Minimum="0" />
+
+        <Separator
+            Grid.Row="16"
+            Grid.Column="0"
+            Grid.ColumnSpan="4" />
 
         <StackPanel
+            Grid.Row="17"
             Grid.Column="1"
-            Grid.Row="2"
             Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled1">
-                <Button Content="{DynamicResource Button}" Style="{DynamicResource BtnFilled}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled2">
+            <smtx:XamlDisplay UniqueKey="BtnGroupedFilled1">
                 <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
+                    wpf:Button.Position="First"
+                    Content="{DynamicResource First}"
+                    Style="{DynamicResource BtnFilled}" />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay UniqueKey="BtnGroupedFilled2">
+                <Button
+                    wpf:Button.Position="Middle"
+                    Content="{DynamicResource Middle}"
+                    Style="{DynamicResource BtnFilled}" />
+            </smtx:XamlDisplay>
+            <smtx:XamlDisplay UniqueKey="BtnGroupedFilled3">
+                <Button
+                    wpf:Button.Position="Last"
+                    Content="{DynamicResource Last}"
                     Style="{DynamicResource BtnFilled}" />
             </smtx:XamlDisplay>
         </StackPanel>
-        <StackPanel
-            Grid.Column="1"
-            Grid.Row="3"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled3">
-                <Button
-                    Content="{DynamicResource Button}"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.IconHeight="30"
-                    wpf:Button.IconWidth="30"
-                    wpf:Button.LeftIcon="LinearFunction" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled4">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.LeftIcon="LinearFunctionAuto" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="1"
-            Grid.Row="4"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled5">
-                <Button
-                    Content="{DynamicResource Button}"
-                    Foreground="{Binding ElementName=BtnTest, Path=Foreground}"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.RightIcon="SinFunction" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled6">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.RightIcon="ArcTgFunction" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="1"
-            Grid.Row="5"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled7">
-                <Button
-                    Name="BtnTest"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.Icon="User" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled8">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.Icon="User" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="1"
-            Grid.Row="6"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled9">
-                <Button
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled10">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="1"
-            Grid.Row="7"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled11">
-                <Button
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarType="Circle"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnFilled12">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarType="Circle"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
 
         <StackPanel
-            Grid.Column="2"
-            Grid.Row="2"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline1">
-                <Button Content="{DynamicResource Button}" Style="{DynamicResource BtnOutline}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline2">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnOutline}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="2"
-            Grid.Row="3"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline3">
-                <Button
-                    Content="{DynamicResource Button}"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.LeftIcon="User" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline4">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.LeftIcon="User" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="2"
-            Grid.Row="4"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline5">
-                <Button
-                    Content="{DynamicResource Button}"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.RightIcon="User" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline6">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.RightIcon="User" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="2"
-            Grid.Row="5"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline7">
-                <Button
-                    Name="BtnTest2"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.Icon="User" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline8">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.Icon="User" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="2"
-            Grid.Row="6"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline9">
-                <Button
-                    Style="{DynamicResource BtnOutline}"
-                    Width="40"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline10">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="2"
-            Grid.Row="7"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline11">
-                <Button
-                    Style="{DynamicResource BtnOutline}"
-                    Width="40"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarType="Circle"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnOutline12">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnOutline}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarType="Circle"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-
-        <StackPanel
-            Grid.Column="3"
-            Grid.Row="2"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText1">
-                <Button Content="{DynamicResource Button}" Style="{DynamicResource BtnText}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText2">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnText}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="3"
-            Grid.Row="3"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText3">
-                <Button
-                    Content="{DynamicResource Button}"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.LeftIcon="User" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText4">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.LeftIcon="User" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="3"
-            Grid.Row="4"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText5">
-                <Button
-                    Content="{DynamicResource Button}"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.RightIcon="User" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText6">
-                <Button
-                    Content="{DynamicResource Button}"
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.RightIcon="User" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="3"
-            Grid.Row="5"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText7">
-                <Button
-                    Name="BtnTest3"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.Icon="User" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText8">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.Icon="User" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="3"
-            Grid.Row="6"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText9">
-                <Button
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText10">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="3"
-            Grid.Row="7"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText11">
-                <Button
-                    Style="{DynamicResource BtnText}"
-                    Width="40"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarType="Circle"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnText12">
-                <Button
-                    IsEnabled="False"
-                    Style="{DynamicResource BtnText}"
-                    wpf:Button.ProgressBarMaximum="{Binding ElementName=SliderBtn, Path=Maximum}"
-                    wpf:Button.ProgressBarMinimum="{Binding ElementName=SliderBtn, Path=Minimum}"
-                    wpf:Button.ProgressBarShow="True"
-                    wpf:Button.ProgressBarType="Circle"
-                    wpf:Button.ProgressBarValue="{Binding ElementName=SliderBtn, Path=Value}" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-
-        <Slider
-            Grid.Column="1"
-            Grid.ColumnSpan="3"
-            Grid.Row="8"
-            Margin="10"
-            Maximum="100"
-            Minimum="0"
-            x:Name="SliderBtn" />
-
-        <Separator
-            Grid.Column="0"
-            Grid.ColumnSpan="4"
-            Grid.Row="16" />
-
-        <StackPanel
-            Grid.Column="1"
             Grid.Row="17"
-            Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedFilled1">
-                <Button
-                    Content="{DynamicResource First}"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.Position="First" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedFilled2">
-                <Button
-                    Content="{DynamicResource Middle}"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.Position="Middle" />
-            </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedFilled3">
-                <Button
-                    Content="{DynamicResource Last}"
-                    Style="{DynamicResource BtnFilled}"
-                    wpf:Button.Position="Last" />
-            </smtx:XamlDisplay>
-        </StackPanel>
-
-        <StackPanel
             Grid.Column="2"
-            Grid.Row="17"
             Orientation="Horizontal">
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedOutline1">
-                <Button Content="{DynamicResource First}" wpf:Button.Position="First" />
+            <smtx:XamlDisplay UniqueKey="BtnGroupedOutline1">
+                <Button wpf:Button.Position="First" Content="{DynamicResource First}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedOutline2">
-                <Button Content="{DynamicResource Middle}" wpf:Button.Position="Middle" />
+            <smtx:XamlDisplay UniqueKey="BtnGroupedOutline2">
+                <Button wpf:Button.Position="Middle" Content="{DynamicResource Middle}" />
             </smtx:XamlDisplay>
-            <smtx:XamlDisplay Margin="5" UniqueKey="BtnGroupedOutline3">
-                <Button Content="{DynamicResource Last}" wpf:Button.Position="Last" />
+            <smtx:XamlDisplay UniqueKey="BtnGroupedOutline3">
+                <Button wpf:Button.Position="Last" Content="{DynamicResource Last}" />
             </smtx:XamlDisplay>
         </StackPanel>
     </Grid>

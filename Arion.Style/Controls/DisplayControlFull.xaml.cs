@@ -6,13 +6,29 @@ using Arion.Style.Helpers;
 
 namespace Arion.Style.Controls
 {
-    public partial class DisplayControlFull : UserControl
+    public partial class DisplayControlFull
     {
+        #region Constructor
+
         public DisplayControlFull()
         {
             InitializeComponent();
+            _sendWaiter = new CallerOnlyOnce(250);
+            _minusWaiter = new CallerOnlyOnce(250);
+            _plusWaiter = new CallerOnlyOnce(250);
         }
 
+        #endregion
+
+        #region Private fields
+
+        private readonly CallerOnlyOnce _sendWaiter;
+        private double _delta;
+        private readonly CallerOnlyOnce _minusWaiter;
+        private readonly CallerOnlyOnce _plusWaiter;
+
+        #endregion
+        
         #region Events
 
         public event EventHandler TargetValueChange;
@@ -20,6 +36,8 @@ namespace Arion.Style.Controls
         #endregion
 
         #region Properties
+
+        #region Label
 
         public string Label
         {
@@ -31,6 +49,10 @@ namespace Arion.Style.Controls
             DependencyProperty.Register(nameof(Label), typeof(string), typeof(DisplayControlFull),
                 new PropertyMetadata());
 
+        #endregion
+
+        #region ActualValue
+
         public double ActualValue
         {
             get => (double)GetValue(ActualValueProperty);
@@ -41,19 +63,28 @@ namespace Arion.Style.Controls
             DependencyProperty.Register(nameof(ActualValue), typeof(double), typeof(DisplayControlFull),
                 new PropertyMetadata());
 
+        #endregion
+
+        #region TargetValue
+
         public double TargetValue
         {
             get => (double)GetValue(TargetValueProperty);
             set
             {
                 SetValue(TargetValueProperty, Math.Round(value, Round));
-                Send();
+                if (QuickChange) TargetValueChange?.Invoke(this, EventArgs.Empty);
+                else _sendWaiter.CallOnce(() => TargetValueChange?.Invoke(this, EventArgs.Empty));
             }
         }
         
         public static readonly DependencyProperty TargetValueProperty =
             DependencyProperty.Register(nameof(TargetValue), typeof(double), typeof(DisplayControlFull),
                 new PropertyMetadata());
+
+        #endregion
+
+        #region QuickChange
 
         public bool QuickChange
         {
@@ -64,6 +95,10 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty QuickChangeProperty =
             DependencyProperty.Register(nameof(QuickChange), typeof(bool), typeof(DisplayControlFull), new PropertyMetadata());
 
+        #endregion
+
+        #region Round
+
         public int Round
         {
             get => (int)GetValue(RoundProperty);
@@ -73,24 +108,9 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty RoundProperty =
             DependencyProperty.Register(nameof(Round), typeof(int), typeof(DisplayControlFull), new PropertyMetadata());
 
-        private DateTime _startSend;
-        private bool _firstSend;
+        #endregion
 
-        private Waiter _sendWaiter;
-
-        private async void Send()
-        {
-            if (QuickChange)
-            {
-                TargetValueChange?.Invoke(this, EventArgs.Empty);
-            }
-            else
-            {
-                if (_sendWaiter == null) _sendWaiter = new Waiter();
-                await _sendWaiter.Wait();
-                TargetValueChange?.Invoke(this, EventArgs.Empty);
-            }
-        }
+        #region Step
 
         public double Step
         {
@@ -101,6 +121,10 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty StepProperty =
             DependencyProperty.Register(nameof(Step), typeof(double), typeof(DisplayControlFull),
                 new PropertyMetadata());
+
+        #endregion
+
+        #region Maximum
 
         public double Maximum
         {
@@ -115,6 +139,10 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty MaximumProperty =
             DependencyProperty.Register(nameof(Maximum), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(0.0));
 
+        #endregion
+
+        #region Minimum
+
         public double Minimum
         {
             get => (double)GetValue(MinimumProperty);
@@ -128,6 +156,10 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty MinimumProperty =
             DependencyProperty.Register(nameof(Minimum), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(0.0));
 
+        #endregion
+
+        #region Limit
+
         public double Limit
         {
             get => (double)GetValue(LimitProperty);
@@ -136,6 +168,10 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty LimitProperty =
             DependencyProperty.Register(nameof(Limit), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(0.0));
+
+        #endregion
+
+        #region MaxIsLimit
 
         public bool MaxIsLimit
         {
@@ -146,37 +182,38 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty MaxIsLimitProperty =
             DependencyProperty.Register(nameof(MaxIsLimit), typeof(bool), typeof(DisplayControlFull), new PropertyMetadata());
 
-        public static readonly DependencyProperty SpeedChangeProperty = DependencyProperty.Register(
-            nameof(SpeedChange), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(1.0));
+        #endregion
+
+        #region SpeedChange
 
         public double SpeedChange
         {
             get => (double)GetValue(SpeedChangeProperty);
             set => SetValue(SpeedChangeProperty, value);
         }
+        
+        public static readonly DependencyProperty SpeedChangeProperty = DependencyProperty.Register(
+            nameof(SpeedChange), typeof(double), typeof(DisplayControlFull), new PropertyMetadata(1.0));
 
         #endregion
 
-        private double _delta;
-        private Waiter _minusWaiter;
-        private Waiter _plusWaiter;
-        
-        private async void BtnMinus_OnClick(object sender, RoutedEventArgs e)
+        #endregion
+
+        #region Private Methods
+
+        private void BtnMinus_OnClick(object sender, RoutedEventArgs e)
         {
-            if (_minusWaiter == null) _minusWaiter = new Waiter();
             if (_delta == 0) _delta = Step;
             if (TargetValue - Step >= Minimum)
                 TargetValue -= _delta;
             else TargetValue = Minimum;
 
             _delta += Step * SpeedChange;
-            await _minusWaiter.Wait();
-            _delta = Step;
+            _minusWaiter.CallOnce(() => _delta = Step);
         }
 
-        private async void BtnPlus_OnClick(object sender, RoutedEventArgs e)
+        private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
         {
-            if (_plusWaiter == null) _plusWaiter = new Waiter();
             if (_delta == 0) _delta = Step;
             if (MaxIsLimit)
             {
@@ -189,9 +226,12 @@ namespace Arion.Style.Controls
             else TargetValue = Maximum;
             
             _delta *= SpeedChange;
-            await _plusWaiter.Wait();
-                _delta = Step;
+            _plusWaiter.CallOnce(() => _delta = Step);
         }
+
+        #endregion
+
+        #region Public Methods
 
         public void PressPlus()
         {
@@ -202,5 +242,7 @@ namespace Arion.Style.Controls
         {
             BtnMinus_OnClick(null, null);
         }
+
+        #endregion
     }
 }
