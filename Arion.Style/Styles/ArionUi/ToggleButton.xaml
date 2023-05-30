@@ -18,7 +18,6 @@
         <Setter Property="BorderBrush" Value="#B0BABF" />
         <Setter Property="Background" Value="#B0BABF" />
         <Setter Property="attach:ToggleButton.Angle" Value="0" />
-        <Setter Property="attach:ToggleButton.ValueMove" Value="2,0,0,0" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="Template">
             <Setter.Value>
@@ -28,6 +27,7 @@
                             <ColumnDefinition Width="32" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
+
                         <Border
                             x:Name="Border"
                             Width="32"
@@ -40,7 +40,7 @@
                                 x:Name="TgButton"
                                 Width="16"
                                 Height="16"
-                                Margin="{TemplateBinding attach:ToggleButton.ValueMove}"
+                                Margin="2,0,0,0"
                                 Padding="0"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
@@ -55,48 +55,47 @@
                             TextElement.FontSize="{TemplateBinding FontSize}"
                             TextElement.Foreground="{TemplateBinding Foreground}"
                             Visibility="Collapsed" />
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard FillBehavior="Stop">
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver" />
+                                <VisualState x:Name="Pressed" />
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
                                         <ThicknessAnimation
-                                            Storyboard.TargetProperty="(attach:ToggleButton.ValueMove)"
-                                            From="14 0 0 0"
-                                            To="2 0 0 0"
-                                            Duration="0:0:.25" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard FillBehavior="Stop">
-                                        <ThicknessAnimation
-                                            Storyboard.TargetProperty="(attach:ToggleButton.ValueMove)"
-                                            From="2 0 0 0"
+                                            Storyboard.TargetName="TgButton"
+                                            Storyboard.TargetProperty="Margin"
                                             To="14 0 0 0"
                                             Duration="0:0:.25" />
                                     </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="{x:Null}">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard FillBehavior="Stop">
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard>
                                         <ThicknessAnimation
-                                            Storyboard.TargetProperty="(attach:ToggleButton.ValueMove)"
-                                            From="14 0 0 0"
-                                            To="10 0 0 0"
+                                            Storyboard.TargetName="TgButton"
+                                            Storyboard.TargetProperty="Margin"
+                                            To="2 0 0 0"
                                             Duration="0:0:.25" />
                                     </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                        </Trigger>
+                                </VisualState>
+                                <VisualState x:Name="Indeterminate">
+                                    <Storyboard>
+                                        <ThicknessAnimation
+                                            Storyboard.TargetName="TgButton"
+                                            Storyboard.TargetProperty="Margin"
+                                            To="5 0 0 0"
+                                            Duration="0:0:.25" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
 
+                    <ControlTemplate.Triggers>
 
                         <!--  CHECKED - TRUE | Hover  -->
                         <MultiTrigger>
@@ -107,7 +106,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#0E73F6" />
                             <Setter Property="BorderBrush" Value="#0E73F6" />
                         </MultiTrigger>
@@ -120,7 +118,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#0452C8" />
                             <Setter Property="BorderBrush" Value="#0452C8" />
                         </MultiTrigger>
@@ -133,7 +130,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#4094F7" />
                             <Setter Property="BorderBrush" Value="#4094F7" />
                         </MultiTrigger>
@@ -146,7 +142,6 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="14,0,0,0" />
                             <Setter Property="Background" Value="#DDE2E4" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
                         </MultiTrigger>
@@ -161,7 +156,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="2,0,0,0" />
                             <Setter Property="Background" Value="#9AA6AC" />
                             <Setter Property="BorderBrush" Value="#9AA6AC" />
                         </MultiTrigger>
@@ -174,7 +168,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="2,0,0,0" />
                             <Setter Property="Background" Value="#84919A" />
                             <Setter Property="BorderBrush" Value="#84919A" />
                         </MultiTrigger>
@@ -187,7 +180,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="2,0,0,0" />
                             <Setter Property="Background" Value="#B0BABF" />
                             <Setter Property="BorderBrush" Value="#B0BABF" />
                         </MultiTrigger>
@@ -200,7 +192,6 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="2,0,0,0" />
                             <Setter Property="Background" Value="#DDE2E4" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
                         </MultiTrigger>
@@ -215,7 +206,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="10, 0, 0, 0" />
                             <Setter Property="Background" Value="#9AA6AC" />
                             <Setter Property="BorderBrush" Value="#9AA6AC" />
                             <Setter TargetName="TgButton" Property="Height" Value="2" />
@@ -231,7 +221,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="10, 0, 0, 0" />
                             <Setter Property="Background" Value="#84919A" />
                             <Setter Property="BorderBrush" Value="#84919A" />
                             <Setter TargetName="TgButton" Property="Height" Value="2" />
@@ -247,7 +236,6 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="10, 0, 0, 0" />
                             <Setter Property="Background" Value="#B0BABF" />
                             <Setter Property="BorderBrush" Value="#B0BABF" />
                             <Setter TargetName="TgButton" Property="Height" Value="2" />
@@ -263,7 +251,6 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="attach:ToggleButton.ValueMove" Value="10, 0, 0, 0" />
                             <Setter Property="Background" Value="#DDE2E4" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
                             <Setter TargetName="TgButton" Property="Height" Value="2" />
@@ -329,6 +316,7 @@
                             TextElement.Foreground="{TemplateBinding Foreground}"
                             Visibility="Collapsed" />
                     </Grid>
+
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="False">
                             <Trigger.EnterActions>

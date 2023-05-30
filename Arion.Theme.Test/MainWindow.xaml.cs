@@ -115,7 +115,7 @@ namespace Arion.Theme.Test
                 Background = new SolidColorBrush(Color.FromRgb(0x30, 0x39, 0x40));
                 Foreground = new SolidColorBrush(Color.FromRgb(0xFF, 0xFF, 0xFF));
                 TbMain.Foreground = new SolidColorBrush(Color.FromRgb(0xFF, 0xFF, 0xFF));
-                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Remove(lightDictionary);
                 Application.Current.Resources.MergedDictionaries.Add(darkDictionary);
             }
             else
@@ -124,7 +124,7 @@ namespace Arion.Theme.Test
                 Background = new SolidColorBrush(Color.FromRgb(0xFF, 0xFF, 0xFF));
                 Foreground = new SolidColorBrush(Color.FromRgb(0x25, 0x2C, 0x32));
                 TbMain.Foreground = new SolidColorBrush(Color.FromRgb(0x25, 0x2C, 0x32));
-                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Remove(darkDictionary);
                 Application.Current.Resources.MergedDictionaries.Add(lightDictionary);
             }
         }
