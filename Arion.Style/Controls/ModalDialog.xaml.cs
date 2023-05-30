@@ -9,6 +9,7 @@ namespace Arion.Style.Controls
     {
         private static ModalDialog _modalDialog;
         private ModalDialogResult _result;
+
         public ModalDialog(string message, string caption, ModalDialogButtons buttons, ModalDialogType type)
         {
             InitializeComponent();
@@ -17,8 +18,8 @@ namespace Arion.Style.Controls
             Caption = caption;
             Buttons = buttons;
             Type = type;
-            
-            switch(Buttons)
+
+            switch (Buttons)
             {
                 case ModalDialogButtons.Ok:
                 {
@@ -109,11 +110,12 @@ namespace Arion.Style.Controls
             return _modalDialog != null;
         }
 
-        public static ModalDialogResult Show(string caption, string message = "", ModalDialogButtons buttons = ModalDialogButtons.Ok, ModalDialogType type = ModalDialogType.Info,
+        public static ModalDialogResult Show(string caption, string message = "", ModalDialogButtons buttons = ModalDialogButtons.Ok,
+            ModalDialogType type = ModalDialogType.Info,
             Window windowForBlur = null)
         {
             if (CheckExist()) return ModalDialogResult.Cancel;
-            System.Windows.Threading.Dispatcher.CurrentDispatcher.Invoke(() =>
+            Application.Current.Dispatcher.Invoke(() =>
             {
                 _modalDialog = new ModalDialog(message, caption, buttons, type);
                 if (windowForBlur != null) windowForBlur.Effect = new BlurEffect { Radius = 3 };
@@ -151,7 +153,7 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty ModalIconVisibilityProperty =
             DependencyProperty.Register(nameof(ModalIconVisibility), typeof(Visibility), typeof(ModalDialog), new PropertyMetadata(Visibility.Visible));
-        
+
         public string Caption
         {
             get => (string)GetValue(CaptionProperty);

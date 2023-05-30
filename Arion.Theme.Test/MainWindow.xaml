@@ -126,7 +126,9 @@
             <TabItem Header="Badges">
                 <views:Badges />
             </TabItem>
-
+            <TabItem Header="Dialogs">
+                <views:Dialogs />
+            </TabItem>
             <TabItem Header="Modal">
                 <Grid>
                     <Grid.RowDefinitions>
