@@ -1,40 +1,41 @@
 ﻿<Window
-    AllowsTransparency="True"
-    Background="Transparent"
-    MaxWidth="420"
-    Name="Root"
-    SizeToContent="WidthAndHeight"
-    Title="ModalDialog"
-    WindowStartupLocation="CenterScreen"
-    WindowStyle="None"
-    d:DesignHeight="248"
-    d:DesignWidth="420"
-    mc:Ignorable="d"
     x:Class="Arion.Style.Controls.ModalDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:converters="clr-namespace:Arion.Style.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Style.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    Name="Root"
+    Title="ModalDialog"
+    MaxWidth="420"
+    d:DesignHeight="248"
+    d:DesignWidth="420"
+    AllowsTransparency="True"
+    Background="Transparent"
+    SizeToContent="WidthAndHeight"
+    Topmost="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Arion.Style;component/ArionUiTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <converters:TextVisibilityConverter
+                x:Key="TextVisibilityConverter"
                 IsEmptyValue="Collapsed"
-                IsNotEmptyValue="Visible"
-                x:Key="TextVisibilityConverter" />
+                IsNotEmptyValue="Visible" />
         </ResourceDictionary>
     </Window.Resources>
     <Border
+        Padding="32"
         Background="{StaticResource CleanW}"
         BorderBrush="{StaticResource Lg2}"
         BorderThickness="1"
-        CornerRadius="6"
-        Padding="32">
+        CornerRadius="6">
         <!--  Background="{StaticResource Lg4}"  -->
         <Grid Margin="0">
             <Grid.ColumnDefinitions>
@@ -49,78 +50,78 @@
 
             <!--  Fill="{Binding ElementName=Root, Path=ColorIcon}"  -->
             <local:Icon
-                Fill="{Binding ElementName=Root, Path=ModalIconColor}"
                 Grid.Row="0"
+                Width="20"
                 Height="20"
-                Kind="{Binding ElementName=Root, Path=ModalIcon}"
                 Margin="2,2,18,2"
                 VerticalAlignment="Top"
-                Visibility="{Binding ElementName=Root, Path=ModalIconVisibility}"
-                Width="20" />
+                Fill="{Binding ElementName=Root, Path=ModalIconColor}"
+                Kind="{Binding ElementName=Root, Path=ModalIcon}"
+                Visibility="{Binding ElementName=Root, Path=ModalIconVisibility}" />
 
             <TextBlock
+                Grid.Row="0"
+                Grid.Column="1"
+                Width="276"
+                HorizontalAlignment="Left"
                 FontSize="18"
                 FontWeight="SemiBold"
-                Grid.Column="1"
-                Grid.Row="0"
-                HorizontalAlignment="Left"
                 Text="{Binding ElementName=Root, Path=Caption, Mode=TwoWay}"
                 TextAlignment="Left"
-                TextTrimming="CharacterEllipsis"
-                Width="276" />
+                TextTrimming="CharacterEllipsis" />
 
             <Button
-                Click="BtnClose_OnClick"
-                Foreground="{StaticResource Mg3}"
-                Grid.Column="1"
                 Grid.Row="0"
-                Height="24"
-                HorizontalAlignment="Right"
-                Padding="0"
-                Style="{StaticResource BtnText}"
+                Grid.Column="1"
                 Width="24"
+                Height="24"
+                Padding="0"
+                HorizontalAlignment="Right"
                 wpf:Button.Icon="Close"
                 wpf:Button.IconHeight="12"
-                wpf:Button.IconWidth="12" />
+                wpf:Button.IconWidth="12"
+                Click="BtnClose_OnClick"
+                Foreground="{StaticResource Mg3}"
+                Style="{StaticResource BtnText}" />
 
             <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,8,0,0"
                 FontSize="16"
                 FontWeight="Regular"
-                Grid.Column="1"
-                Grid.Row="1"
-                Margin="0,8,0,0"
                 Text="{Binding ElementName=Root, Path=Message, Mode=TwoWay}"
                 TextAlignment="Left"
                 Visibility="{Binding ElementName=Root, Path=Message, Converter={StaticResource TextVisibilityConverter}}" />
 
             <StackPanel
-                Grid.Column="1"
                 Grid.Row="2"
-                HorizontalAlignment="Right"
+                Grid.Column="1"
                 Margin="0,24,0,0"
+                HorizontalAlignment="Right"
                 Orientation="Horizontal">
                 <Button
+                    x:Name="BtnOk"
+                    Margin="12,0,0,0"
                     Click="BtnOk_OnClick"
                     Content="Ок"
-                    Margin="12,0,0,0"
-                    Style="{StaticResource BtnFilled}"
-                    x:Name="BtnOk" />
+                    Style="{StaticResource BtnFilled}" />
                 <Button
+                    x:Name="BtnYes"
+                    Margin="12,0,0,0"
                     Click="BtnYes_OnClick"
                     Content="Да"
-                    Margin="12,0,0,0"
-                    Style="{StaticResource BtnFilled}"
-                    x:Name="BtnYes" />
+                    Style="{StaticResource BtnFilled}" />
                 <Button
+                    x:Name="BtnNo"
+                    Margin="12,0,0,0"
                     Click="BtnNo_OnClick"
-                    Content="Нет"
-                    Margin="12,0,0,0"
-                    x:Name="BtnNo" />
+                    Content="Нет" />
                 <Button
-                    Click="BtnCancel_OnClick"
-                    Content="Отмена"
+                    x:Name="BtnCancel"
                     Margin="12,0,0,0"
-                    x:Name="BtnCancel" />
+                    Click="BtnCancel_OnClick"
+                    Content="Отмена" />
             </StackPanel>
         </Grid>
     </Border>

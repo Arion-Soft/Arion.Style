@@ -727,6 +727,17 @@ namespace Arion.Style.Controls
             //     UpperValue = calcUpper;
             // }
         }
+
+        #region Depricated
+
+        [Obsolete("Method is deprecated, please use bindings")]
+        public void SetValues(double lowerValue, double upperValue) { }
+        [Obsolete("Method is deprecated, please use bindings")]
+        public void SetLowerValue(double value) { }
+        [Obsolete("Method is deprecated, please use bindings")]
+        public void SetUpperValue(double value) { }
+
+        #endregion
         
         private void LeftSlider_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
