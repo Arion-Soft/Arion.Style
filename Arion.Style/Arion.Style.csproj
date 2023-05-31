@@ -109,6 +109,9 @@
     <Compile Include="Controls\TimeInput.xaml.cs">
       <DependentUpon>TimeInput.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TimePicker.xaml.cs">
+      <DependentUpon>TimePicker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\ActionButtonVisibilityConverter.cs" />
     <Compile Include="Converters\BooleanAllConverter.cs" />
     <Compile Include="Converters\BooleanConverter.cs" />
@@ -237,6 +240,7 @@
     <Page Include="Controls\RangeSlider.xaml" />
     <Page Include="Controls\Stepper.xaml" />
     <Page Include="Controls\TimeInput.xaml" />
+    <Page Include="Controls\TimePicker.xaml" />
     <Page Include="Icons\Icons.xaml" />
     <Page Include="Icons\SRE450.xaml">
       <SubType>Designer</SubType>

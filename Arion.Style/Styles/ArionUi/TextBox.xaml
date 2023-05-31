@@ -1,23 +1,20 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:commands="clr-namespace:Arion.Style.Commands"
     xmlns:controls="clr-namespace:Arion.Style.Controls"
     xmlns:converters="clr-namespace:Arion.Style.Converters"
-    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
         <ResourceDictionary Source="FontFamily.xaml" />
         <ResourceDictionary Source="Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <converters:TextVisibilityConverter
-        IsEmptyValue="Collapsed"
-        IsNotEmptyValue="Visible"
-        x:Key="TextVisibilityConverter" />
+    <converters:TextVisibilityConverter x:Key="TextVisibilityConverter" IsEmptyValue="Collapsed" IsNotEmptyValue="Visible" />
     <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
-    <Style TargetType="{x:Type TextBox}" x:Key="{x:Type TextBox}">
+    <Style x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}">
         <Setter Property="Height" Value="40" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="FontWeight" Value="Regular" />
@@ -36,11 +33,11 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Border
+                        Margin="0"
+                        Padding="0"
                         BorderBrush="{StaticResource R500}"
                         BorderThickness="1"
-                        CornerRadius="8"
-                        Margin="0"
-                        Padding="0">
+                        CornerRadius="8">
                         <AdornedElementPlaceholder />
                     </Border>
                 </ControlTemplate>
@@ -51,11 +48,11 @@
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <!--  MAIN TEXT  -->
                     <Border
+                        x:Name="Border"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        x:Name="Border">
+                        CornerRadius="6">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
@@ -68,52 +65,52 @@
 
                             <!--  PREFIX  -->
                             <Border
-                                Background="{StaticResource Lg5}"
-                                CornerRadius="5.6,0,0,5.6"
+                                x:Name="BorderPrefix"
                                 Grid.Column="0"
                                 Padding="16,8"
+                                Background="{StaticResource Lg5}"
+                                CornerRadius="5.6,0,0,5.6"
                                 Visibility="{TemplateBinding wpf:TextBox.Prefix,
-                                                             Converter={StaticResource TextVisibilityConverter}}"
-                                x:Name="BorderPrefix">
+                                                             Converter={StaticResource TextVisibilityConverter}}">
                                 <TextBlock
-                                    Foreground="{StaticResource Mg2}"
                                     HorizontalAlignment="Center"
-                                    Text="{TemplateBinding wpf:TextBox.Prefix}"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Foreground="{StaticResource Mg2}"
+                                    Text="{TemplateBinding wpf:TextBox.Prefix}" />
                             </Border>
 
                             <controls:Icon
-                                Fill="{TemplateBinding Foreground}"
                                 Grid.Column="1"
+                                Width="{TemplateBinding wpf:TextBox.IconWidth}"
                                 Height="{TemplateBinding wpf:TextBox.IconHeight}"
-                                Kind="{TemplateBinding wpf:TextBox.LeftIcon}"
                                 Margin="8,0,8,0"
+                                Fill="{TemplateBinding Foreground}"
+                                Kind="{TemplateBinding wpf:TextBox.LeftIcon}"
                                 Visibility="{TemplateBinding wpf:TextBox.LeftIcon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding wpf:TextBox.IconWidth}" />
+                                                             Converter={StaticResource IconConverter}}" />
 
                             <ScrollViewer
-                                FontWeight="Medium"
+                                x:Name="PART_ContentHost"
                                 Grid.Column="2"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                IsTabStop="False"
-                                Padding="{TemplateBinding Padding}"
-                                TextElement.Foreground="{TemplateBinding Foreground}"
-                                VerticalAlignment="Center"
                                 Width="{TemplateBinding Width}"
-                                x:Name="PART_ContentHost" />
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="Center"
+                                FontWeight="Medium"
+                                IsTabStop="False"
+                                TextElement.Foreground="{TemplateBinding Foreground}" />
 
                             <!--  PLACE HOLDER  -->
                             <TextBlock
+                                x:Name="Placeholder"
+                                Grid.Column="2"
+                                Padding="10,0"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="Center"
                                 FontSize="{TemplateBinding FontSize}"
                                 Foreground="{StaticResource Mg4}"
-                                Grid.Column="2"
-                                HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                                 IsHitTestVisible="False"
-                                Padding="10,0"
-                                Text="{TemplateBinding wpf:Hint.Placeholder}"
-                                VerticalAlignment="Center"
-                                x:Name="Placeholder">
+                                Text="{TemplateBinding wpf:Hint.Placeholder}">
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Setter Property="Visibility" Value="Collapsed" />
@@ -127,44 +124,44 @@
                             </TextBlock>
 
                             <controls:Icon
-                                Fill="{TemplateBinding Foreground}"
                                 Grid.Column="3"
+                                Width="{TemplateBinding wpf:TextBox.IconWidth}"
                                 Height="{TemplateBinding wpf:TextBox.IconHeight}"
-                                Kind="{TemplateBinding wpf:TextBox.RightIcon}"
                                 Margin="8,0,8,0"
+                                Fill="{TemplateBinding Foreground}"
+                                Kind="{TemplateBinding wpf:TextBox.RightIcon}"
                                 Visibility="{TemplateBinding wpf:TextBox.RightIcon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding wpf:TextBox.IconWidth}" />
+                                                             Converter={StaticResource IconConverter}}" />
 
                             <StackPanel Grid.Column="4" Visibility="{TemplateBinding wpf:TextBox.IsNumber, Converter={StaticResource BooleanToVisibilityConverter}}">
                                 <Button
-                                    Command="{x:Static commands:NumberCommand.UpCommand}"
+                                    Width="32"
                                     Height="20"
                                     Padding="0"
-                                    Width="32"
                                     wpf:Button.Icon="ChevronUp"
-                                    wpf:Hint.CornerRadius="0,6,0,0" />
+                                    wpf:Hint.CornerRadius="0,6,0,0"
+                                    Command="{x:Static commands:NumberCommand.UpCommand}" />
                                 <Button
-                                    Command="{x:Static commands:NumberCommand.DownCommand}"
+                                    Width="32"
                                     Height="20"
                                     Padding="0"
-                                    Width="32"
                                     wpf:Button.Icon="ChevronDown"
-                                    wpf:Hint.CornerRadius="0,0,6,0" />
+                                    wpf:Hint.CornerRadius="0,0,6,0"
+                                    Command="{x:Static commands:NumberCommand.DownCommand}" />
                             </StackPanel>
 
                             <Button
-                                Command="{x:Static commands:ClearText.ClearCommand}"
                                 Grid.Column="4"
+                                Width="30"
                                 Height="30"
                                 Margin="5"
-                                Opacity=".4"
                                 Padding="5"
+                                wpf:Button.Icon="Close"
+                                Command="{x:Static commands:ClearText.ClearCommand}"
+                                Opacity=".4"
                                 Style="{StaticResource BtnText}"
                                 Visibility="{TemplateBinding wpf:TextBox.CanClear,
-                                                             Converter={StaticResource BooleanToVisibilityConverter}}"
-                                Width="30"
-                                wpf:Button.Icon="Close">
+                                                             Converter={StaticResource BooleanToVisibilityConverter}}">
                                 <!-- <Button.Triggers> -->
                                 <!--     <MultiTrigger> -->
                                 <!--         <MultiTrigger.Conditions> -->
@@ -179,18 +176,18 @@
 
                             <!--  SUFFIX  -->
                             <Border
-                                Background="{StaticResource Lg5}"
-                                CornerRadius="0,5.6,5.6,0"
+                                x:Name="BorderSuffix"
                                 Grid.Column="5"
                                 Padding="16,8"
+                                Background="{StaticResource Lg5}"
+                                CornerRadius="0,5.6,5.6,0"
                                 Visibility="{TemplateBinding wpf:TextBox.Suffix,
-                                                             Converter={StaticResource TextVisibilityConverter}}"
-                                x:Name="BorderSuffix">
+                                                             Converter={StaticResource TextVisibilityConverter}}">
                                 <TextBlock
-                                    Foreground="{StaticResource Mg2}"
                                     HorizontalAlignment="Center"
-                                    Text="{TemplateBinding wpf:TextBox.Suffix}"
-                                    VerticalAlignment="Center" />
+                                    VerticalAlignment="Center"
+                                    Foreground="{StaticResource Mg2}"
+                                    Text="{TemplateBinding wpf:TextBox.Suffix}" />
                             </Border>
                         </Grid>
                     </Border>
@@ -220,31 +217,31 @@
                             <Setter Property="Foreground" Value="{StaticResource Dg2}" />
                             <Setter Property="BorderBrush" Value="{StaticResource R500}" />
                         </Trigger>
-                        <Trigger Property="Visibility" SourceName="BorderPrefix" Value="Visible">
-                            <Setter Property="MinWidth" TargetName="PART_ContentHost" Value="100" />
+                        <Trigger SourceName="BorderPrefix" Property="Visibility" Value="Visible">
+                            <Setter TargetName="PART_ContentHost" Property="MinWidth" Value="100" />
                         </Trigger>
-                        <Trigger Property="Visibility" SourceName="BorderSuffix" Value="Visible">
-                            <Setter Property="MinWidth" TargetName="PART_ContentHost" Value="100" />
+                        <Trigger SourceName="BorderSuffix" Property="Visibility" Value="Visible">
+                            <Setter TargetName="PART_ContentHost" Property="MinWidth" Value="100" />
                         </Trigger>
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="Visibility" SourceName="BorderPrefix" Value="Visible" />
+                                <Condition SourceName="BorderPrefix" Property="Visibility" Value="Visible" />
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" TargetName="BorderPrefix" Value="{StaticResource Lg4}" />
-                            <Setter Property="Background" TargetName="BorderSuffix" Value="{StaticResource Lg4}" />
+                            <Setter TargetName="BorderPrefix" Property="Background" Value="{StaticResource Lg4}" />
+                            <Setter TargetName="BorderSuffix" Property="Background" Value="{StaticResource Lg4}" />
                         </MultiTrigger>
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="Visibility" SourceName="BorderSuffix" Value="Visible" />
+                                <Condition SourceName="BorderSuffix" Property="Visibility" Value="Visible" />
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" TargetName="BorderPrefix" Value="{StaticResource Lg4}" />
-                            <Setter Property="Background" TargetName="BorderSuffix" Value="{StaticResource Lg4}" />
+                            <Setter TargetName="BorderPrefix" Property="Background" Value="{StaticResource Lg4}" />
+                            <Setter TargetName="BorderSuffix" Property="Background" Value="{StaticResource Lg4}" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

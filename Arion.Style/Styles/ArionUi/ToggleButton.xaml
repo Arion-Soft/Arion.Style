@@ -142,8 +142,9 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#DDE2E4" />
-                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="#0E73F6" />
+                            <Setter Property="BorderBrush" Value="#0E73F6" />
+                            <Setter Property="Opacity" Value="0.5" />
                         </MultiTrigger>
 
 
@@ -192,8 +193,7 @@
                                 <Condition Property="IsEnabled" Value="False" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Background" Value="#DDE2E4" />
-                            <Setter Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Opacity" Value="0.5" />
                         </MultiTrigger>
 
 
@@ -608,9 +608,7 @@
                             Name="Border"
                             Height="33"
                             MaxWidth="298"
-                            Padding="20,0"
-                            Background="Red"
-                            CornerRadius="3">
+                            Padding="20,0">
                             <TextBlock
                                 Name="TbTitle"
                                 HorizontalAlignment="Center"
@@ -681,10 +679,7 @@
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Padding" Value="16,8" />
     </Style>
-    <Style
-        x:Key="TglOutline"
-        BasedOn="{StaticResource ToggleButtonBaseLg}"
-        TargetType="{x:Type ToggleButton}">
+    <Style x:Key="TglOutline" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -798,10 +793,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style
-        x:Key="TglText"
-        BasedOn="{StaticResource ToggleButtonBaseLg}"
-        TargetType="{x:Type ToggleButton}">
+    <Style x:Key="TglText" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
@@ -899,10 +891,7 @@
 
     <!--  GROUPED  -->
 
-    <Style
-        x:Key="TglOutlineFirst"
-        BasedOn="{StaticResource ToggleButtonBaseLg}"
-        TargetType="{x:Type ToggleButton}">
+    <Style x:Key="TglOutlineFirst" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -970,10 +959,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style
-        x:Key="TglOutlineMiddle"
-        BasedOn="{StaticResource ToggleButtonBaseLg}"
-        TargetType="{x:Type ToggleButton}">
+    <Style x:Key="TglOutlineMiddle" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -1041,10 +1027,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style
-        x:Key="TglOutlineLast"
-        BasedOn="{StaticResource ToggleButtonBaseLg}"
-        TargetType="{x:Type ToggleButton}">
+    <Style x:Key="TglOutlineLast" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
