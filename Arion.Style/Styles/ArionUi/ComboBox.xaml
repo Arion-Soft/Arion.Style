@@ -222,8 +222,9 @@
                         SnapsToDevicePixels="true">
                         <ContentPresenter
                             x:Name="Content"
+                            HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}"
                             VerticalAlignment="Center"
-                            TextElement.FontSize="18"
+                            TextElement.FontSize="14"
                             TextElement.Foreground="{TemplateBinding Foreground}" />
                     </Border>
                     <ControlTemplate.Triggers>
