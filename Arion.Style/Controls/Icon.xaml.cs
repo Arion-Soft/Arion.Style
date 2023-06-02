@@ -28,14 +28,14 @@ namespace Arion.Style.Controls
         public static readonly DependencyProperty ImageProperty =
             DependencyProperty.Register(nameof(Image), typeof(Geometry), typeof(Icon), new PropertyMetadata());
 
-        public SolidColorBrush Fill
+        public Brush Fill
         {
-            get => (SolidColorBrush)GetValue(FillProperty);
+            get => (Brush)GetValue(FillProperty);
             set => SetValue(FillProperty, value);
         }
 
         public static readonly DependencyProperty FillProperty =
-            DependencyProperty.Register(nameof(Fill), typeof(SolidColorBrush), typeof(Icon), new PropertyMetadata());
+            DependencyProperty.Register(nameof(Fill), typeof(Brush), typeof(Icon), new PropertyMetadata());
 
         public new double Height
         {
@@ -44,7 +44,7 @@ namespace Arion.Style.Controls
         }
 
         public new static readonly DependencyProperty HeightProperty =
-            DependencyProperty.Register(nameof(Height), typeof(double), typeof(Icon), new PropertyMetadata());
+            DependencyProperty.Register(nameof(Height), typeof(double), typeof(Icon), new PropertyMetadata(15.0));
 
         public new double Width
         {
@@ -53,7 +53,7 @@ namespace Arion.Style.Controls
         }
 
         public new static readonly DependencyProperty WidthProperty =
-            DependencyProperty.Register(nameof(Width), typeof(double), typeof(Icon), new PropertyMetadata());
+            DependencyProperty.Register(nameof(Width), typeof(double), typeof(Icon), new PropertyMetadata(15.0));
 
         public double Stroke
         {
@@ -83,7 +83,7 @@ namespace Arion.Style.Controls
         private void Icon_OnLoaded(object sender, RoutedEventArgs e)
         {
             Kind = Kind;
-            ImageTest.Fill = Fill;
+            Fill = Fill;
             Width = Width;
             Height = Height;
         }

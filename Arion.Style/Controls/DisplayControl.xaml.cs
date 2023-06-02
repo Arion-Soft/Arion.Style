@@ -79,7 +79,7 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty ActualValueFontSizeProperty =
             DependencyProperty.Register(nameof(ActualValueFontSize), typeof(double), typeof(DisplayControl),
-                new PropertyMetadata());
+                new PropertyMetadata(14.0));
 
         #endregion
 
@@ -180,7 +180,7 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty TargetValueFontSizeProperty =
             DependencyProperty.Register(nameof(TargetValueFontSize), typeof(double), typeof(DisplayControl),
-                new PropertyMetadata());
+                new PropertyMetadata(14.0));
 
         #endregion
 

@@ -4,9 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Name="TimeControl"
-    Width="{Binding ElementName=TimeControl, Path=Width}"
-    Height="{Binding ElementName=TimeControl, Path=Height}"
+    Name="Root"
+    Width="{Binding ElementName=Root, Path=Width}"
+    Height="{Binding ElementName=Root, Path=Height}"
     Background="Transparent"
     mc:Ignorable="d">
     <Border
@@ -24,15 +24,15 @@
             </Grid.ColumnDefinitions>
             <TextBox
                 Name="Tb1"
-                Height="{Binding ElementName=TimeControl, Path=Height}"
+                Height="{Binding ElementName=Root, Path=Height}"
                 Margin="0"
                 Padding="0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 BorderThickness="0"
-                FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
+                FontSize="{Binding ElementName=Root, Path=FontSize}"
                 PreviewTextInput="Tb1_OnPreviewTextInput"
-                Text="{Binding ElementName=TimeControl, Path=Minute, StringFormat=00}" />
+                Text="{Binding ElementName=Root, Path=Minute, StringFormat=00}" />
             <Label
                 Grid.Row="0"
                 Grid.Column="1"
@@ -40,20 +40,20 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Content=":"
-                FontSize="{Binding ElementName=TimeControl, Path=FontSize}" />
+                FontSize="{Binding ElementName=Root, Path=FontSize}" />
             <TextBox
                 Name="Tb2"
                 Grid.Row="0"
                 Grid.Column="2"
-                Height="{Binding ElementName=TimeControl, Path=Height}"
+                Height="{Binding ElementName=Root, Path=Height}"
                 Margin="0"
                 Padding="0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 BorderThickness="0"
-                FontSize="{Binding ElementName=TimeControl, Path=FontSize}"
+                FontSize="{Binding ElementName=Root, Path=FontSize}"
                 PreviewTextInput="Tb2_OnPreviewTextInput"
-                Text="{Binding ElementName=TimeControl, Path=Second, StringFormat=00}" />
+                Text="{Binding ElementName=Root, Path=Second, StringFormat=00}" />
 
             <StackPanel
                 Grid.Column="0"

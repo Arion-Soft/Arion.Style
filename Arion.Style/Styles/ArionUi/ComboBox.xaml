@@ -97,7 +97,10 @@
     </ControlTemplate>
 
     <ControlTemplate x:Key="ComboBoxTextBox" TargetType="{x:Type TextBox}">
-        <Border x:Name="PART_ContentHost" Background="{TemplateBinding Background}" Focusable="False" />
+        <Border
+            x:Name="PART_ContentHost"
+            Background="{TemplateBinding Background}"
+            Focusable="False" />
     </ControlTemplate>
 
     <Style x:Key="{x:Type ComboBox}" TargetType="{x:Type ComboBox}">
@@ -210,6 +213,7 @@
     <!--  SimpleStyles: ComboBoxItem  -->
     <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Template">
@@ -217,20 +221,24 @@
                 <ControlTemplate TargetType="{x:Type ComboBoxItem}">
                     <Border
                         Name="Border"
+                        Width="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=ActualWidth}"
                         Height="40"
                         Padding="5"
+                        HorizontalAlignment="Stretch"
                         SnapsToDevicePixels="true">
                         <ContentPresenter
                             x:Name="Content"
+                            Width="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=ActualWidth}"
                             HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}"
                             VerticalAlignment="Center"
+                            TextBlock.TextAlignment="Left"
                             TextElement.FontSize="14"
                             TextElement.Foreground="{TemplateBinding Foreground}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="True">
                             <Setter TargetName="Border" Property="Background" Value="{StaticResource Lg5}" />
-                            <Setter Property="TextElement.Foreground" Value="{StaticResource Dg2}" />
+                            <Setter Property="Foreground" Value="{StaticResource Dg2}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Foreground" Value="{StaticResource Mg4}" />
