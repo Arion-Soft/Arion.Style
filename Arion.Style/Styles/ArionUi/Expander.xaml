@@ -282,8 +282,8 @@
                                 DockPanel.Dock="Top">
                                 <ToggleButton
                                     x:Name="HeaderSite"
-                                    MinWidth="30"
-                                    MinHeight="30"
+                                    MinWidth="28"
+                                    MinHeight="28"
                                     Margin="0"
                                     Padding="0"
                                     HorizontalAlignment="Stretch"
@@ -308,7 +308,7 @@
                                 Padding="2"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource Mg4}"
-                                BorderThickness="0,0,0,1"
+                                BorderThickness="0,0,0,0"
                                 CornerRadius="0,0,0,0"
                                 DockPanel.Dock="Bottom"
                                 Visibility="Collapsed">
@@ -328,22 +328,22 @@
                             <Setter TargetName="ExpandSite" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Right">
-                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="5,0,0,5" />
-                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="0,5,5,5" />
+                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="0" />
+                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="0" />
                             <Setter TargetName="BorderContent" Property="DockPanel.Dock" Value="Right" />
                             <Setter TargetName="BorderToggle" Property="DockPanel.Dock" Value="Left" />
                             <Setter TargetName="HeaderSite" Property="Style" Value="{StaticResource ExpanderRightHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Up">
-                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="0,0,5,5" />
-                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="5,5,0,0" />
+                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="0" />
+                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="0" />
                             <Setter TargetName="BorderContent" Property="DockPanel.Dock" Value="Top" />
                             <Setter TargetName="BorderToggle" Property="DockPanel.Dock" Value="Bottom" />
                             <Setter TargetName="HeaderSite" Property="Style" Value="{StaticResource ExpanderUpHeaderStyle}" />
                         </Trigger>
                         <Trigger Property="ExpandDirection" Value="Left">
-                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="0,5,5,0" />
-                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="5,0,0,5" />
+                            <Setter TargetName="BorderToggle" Property="CornerRadius" Value="0" />
+                            <Setter TargetName="BorderContent" Property="CornerRadius" Value="0" />
                             <Setter TargetName="BorderContent" Property="DockPanel.Dock" Value="Left" />
                             <Setter TargetName="BorderToggle" Property="DockPanel.Dock" Value="Right" />
                             <Setter TargetName="HeaderSite" Property="Style" Value="{StaticResource ExpanderLeftHeaderStyle}" />
