@@ -1,18 +1,19 @@
 ﻿<UserControl
-    Background="Transparent"
-    Height="40"
-    MinWidth="150"
-    d:DesignHeight="40"
-    d:DesignWidth="150"
-    mc:Ignorable="d"
     x:Class="Arion.Style.Controls.Stepper"
-    x:Name="Root"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Style.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    x:Name="Root"
+    Height="40"
+    MinWidth="150"
+    d:DesignHeight="40"
+    d:DesignWidth="150"
+    Background="Transparent"
+    KeyDown="Stepper_OnKeyDown"
+    mc:Ignorable="d">
     <UserControl.Resources>
         <!-- <ResourceDictionary> -->
         <!--     <ResourceDictionary.MergedDictionaries> -->
@@ -28,31 +29,44 @@
         </Grid.ColumnDefinitions>
 
         <RepeatButton
-            Click="BtnMinus_OnClick"
-            FontSize="24"
             Grid.Column="0"
             Padding="5"
-            Style="{StaticResource RbOutline}"
             wpf:Button.Icon="Minus"
-            wpf:Hint.CornerRadius="6,0,0,6" />
+            wpf:Hint.CornerRadius="6,0,0,6"
+            Click="BtnMinus_OnClick"
+            FontSize="24"
+            Style="{StaticResource RbOutline}" />
         <Border
+            Grid.Column="1"
             Background="White"
             BorderBrush="{StaticResource Lg3}"
             BorderThickness="0,1,0,1"
-            Grid.Column="1">
-            <TextBlock
-                FontSize="18"
-                HorizontalAlignment="Center"
-                Text="{Binding ElementName=Root, Path=Value}"
-                TextAlignment="Center"
-                VerticalAlignment="Center" />
+            MouseDown="UIElement_OnMouseDown">
+            <Grid>
+                <TextBlock
+                    Name="TblValue"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="18"
+                    IsHitTestVisible="False"
+                    Text="{Binding ElementName=Root, Path=Value}"
+                    TextAlignment="Center" />
+                <TextBox
+                    Name="TbValue"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    wpf:Hint.CornerRadius="0"
+                    PreviewTextInput="TbValue_OnPreviewTextInput"
+                    Text="{Binding ElementName=Root, Path=Value}"
+                    Visibility="Collapsed" />
+            </Grid>
         </Border>
         <RepeatButton
-            Click="BtnPlus_OnClick"
             Grid.Column="2"
             Padding="5"
-            Style="{StaticResource RbOutline}"
             wpf:Button.Icon="Plus"
-            wpf:Hint.CornerRadius="0,6,6,0" />
+            wpf:Hint.CornerRadius="0,6,6,0"
+            Click="BtnPlus_OnClick"
+            Style="{StaticResource RbOutline}" />
     </Grid>
 </UserControl>

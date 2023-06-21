@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Arion.Style.Controls
 {
@@ -90,6 +91,39 @@ namespace Arion.Style.Controls
             if (!(Value + Step <= Maximum)) return;
             Value += Step;
             Plus?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ChangeVisible();
+        }
+
+        private void ChangeVisible()
+        {
+            if (TblValue.Visibility == Visibility.Visible)
+            {
+                TblValue.Visibility = Visibility.Collapsed;
+                TbValue.Visibility = Visibility.Visible;
+            }
+            else if (TblValue.Visibility == Visibility.Collapsed)
+            {
+                if (double.TryParse(TblValue.Text, out _))
+                {
+                    TblValue.Visibility = Visibility.Visible;
+                    TbValue.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
+        private void Stepper_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter) ChangeVisible();
+        }
+
+        private void TbValue_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var ch = char.Parse(e.Text);
+            if (!((ch >= '0' && ch <= '9') || ch == ',' || ch == '.' || ch == (char)Key.Back)) e.Handled = true;
         }
     }
 }
