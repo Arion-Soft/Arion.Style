@@ -75,15 +75,15 @@
                             <GradientStop Offset="0" Color="{TemplateBinding attach:TabItem.SecondaryColorSelected}" />
                             <GradientStop Offset=".25" Color="{TemplateBinding attach:TabItem.PrimaryColorSelected}" />
                         </LinearGradientBrush>
-                        <LinearGradientBrush x:Key="GradientEffectTop" StartPoint="{TemplateBinding attach:TabItem.StartPointLeft}" EndPoint="{TemplateBinding attach:TabItem.EndPointLeft}">
+                        <LinearGradientBrush x:Key="GradientEffectTop" StartPoint="{TemplateBinding attach:TabItem.StartPointTop}" EndPoint="{TemplateBinding attach:TabItem.EndPointTop}">
                             <GradientStop Offset="0" Color="{TemplateBinding attach:TabItem.SecondaryColorSelected}" />
                             <GradientStop Offset=".25" Color="{TemplateBinding attach:TabItem.PrimaryColorSelected}" />
                         </LinearGradientBrush>
-                        <LinearGradientBrush x:Key="GradientEffectRight" StartPoint="{TemplateBinding attach:TabItem.StartPointLeft}" EndPoint="{TemplateBinding attach:TabItem.EndPointLeft}">
+                        <LinearGradientBrush x:Key="GradientEffectRight" StartPoint="{TemplateBinding attach:TabItem.StartPointRight}" EndPoint="{TemplateBinding attach:TabItem.EndPointRight}">
                             <GradientStop Offset="0" Color="{TemplateBinding attach:TabItem.SecondaryColorSelected}" />
                             <GradientStop Offset=".25" Color="{TemplateBinding attach:TabItem.PrimaryColorSelected}" />
                         </LinearGradientBrush>
-                        <LinearGradientBrush x:Key="GradientEffectBottom" StartPoint="{TemplateBinding attach:TabItem.StartPointLeft}" EndPoint="{TemplateBinding attach:TabItem.EndPointLeft}">
+                        <LinearGradientBrush x:Key="GradientEffectBottom" StartPoint="{TemplateBinding attach:TabItem.StartPointBottom}" EndPoint="{TemplateBinding attach:TabItem.EndPointBottom}">
                             <GradientStop Offset="0" Color="{TemplateBinding attach:TabItem.SecondaryColorSelected}" />
                             <GradientStop Offset=".25" Color="{TemplateBinding attach:TabItem.PrimaryColorSelected}" />
                         </LinearGradientBrush>
