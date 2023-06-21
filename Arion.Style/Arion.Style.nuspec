@@ -14,7 +14,8 @@
         <license type="file">LICENSE.txt</license>
         <readme>docs\Readme.md</readme>
         <releaseNotes>
-            change style for expander
+            change style for tab item - select color
+            and add manual text on stepper
         </releaseNotes>
     </metadata>
     <files>
