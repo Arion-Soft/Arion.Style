@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Arion.Style.Extensions;
 
 namespace Arion.Style.AttachedProperties
 {
@@ -80,6 +81,19 @@ namespace Arion.Style.AttachedProperties
         public static Thickness GetValueMove(DependencyObject element)
         {
             return (Thickness)element.GetValue(ValueMoveProperty);
+        }
+
+        public static readonly DependencyProperty RectangleProperty = DependencyProperty.RegisterAttached(
+            "Rectangle", typeof(Rectangle), typeof(ToggleButton), new PropertyMetadata(default(Rectangle)));
+
+        public static void SetRectangle(DependencyObject element, Rectangle value)
+        {
+            element.SetValue(RectangleProperty, value);
+        }
+
+        public static Rectangle GetRectangle(DependencyObject element)
+        {
+            return (Rectangle)element.GetValue(RectangleProperty);
         }
     }
 }

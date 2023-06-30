@@ -2,7 +2,7 @@ using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Media;
 
-namespace Arion.Style.Theme.Extensions
+namespace Arion.Style.Extensions
 {
     public class BottomDashedLineAdorner : Adorner
     {

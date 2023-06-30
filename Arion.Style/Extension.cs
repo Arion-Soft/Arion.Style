@@ -7,7 +7,7 @@ using System.Windows.Media.Media3D;
 
 namespace Arion.Style
 {
-    internal static class Extensions
+    internal static class Extension
     {
         public static IEnumerable<DependencyObject> VisualDepthFirstTraversal(this DependencyObject node)
         {

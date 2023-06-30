@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace Arion.Style.Theme.Extensions
+namespace Arion.Style.Extensions
 {
     public static class Constants
     {

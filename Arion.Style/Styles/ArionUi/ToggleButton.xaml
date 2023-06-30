@@ -3,7 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:arion="clr-namespace:Arion.Style.Controls"
     xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:converters="clr-namespace:Arion.Style.Converters">
+    xmlns:converters="clr-namespace:Arion.Style.Converters"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -644,16 +645,16 @@
                         CornerRadius="3">
                         <Ellipse
                             x:Name="FocalSpot"
-                            Width="10"
-                            Height="10"
+                            Width="15"
+                            Height="15"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Fill="{StaticResource Dg2}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="FocalSpot" Property="Width" Value="30" />
-                            <Setter TargetName="FocalSpot" Property="Height" Value="30" />
+                            <Setter TargetName="FocalSpot" Property="Width" Value="25" />
+                            <Setter TargetName="FocalSpot" Property="Height" Value="25" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="{StaticResource Lg4}" />
@@ -679,44 +680,44 @@
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Padding" Value="16,8" />
     </Style>
-    <Style x:Key="TglOutline" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
+    <Style
+        x:Key="TglOutline"
+        BasedOn="{StaticResource ToggleButtonBaseLg}"
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
-        <Setter Property="BorderBrush" Value="#FFFFFF" />
-        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
+        <Setter Property="BorderThickness" Value="2" />
         <Setter Property="attach:Button.IconHeight" Value="15" />
         <Setter Property="attach:Button.IconWidth" Value="15" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Grid>
-                        <Border
-                            Name="Border"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="#DDE2E4"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            ClipToBounds="True"
-                            CornerRadius="6">
+                        <Grid>
+                            <Grid.OpacityMask>
+                                <VisualBrush Stretch="None" Visual="{Binding ElementName=Border}" />
+                            </Grid.OpacityMask>
+                            <Border
+                                Name="Border"
+                                Margin=".5"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="6" />
                             <Border
                                 Name="Shadow"
-                                Margin="-4"
-                                HorizontalAlignment="Stretch"
-                                VerticalAlignment="Stretch"
-                                Background="Transparent"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="3"
-                                CornerRadius="6"
-                                Opacity="1"
+                                BorderBrush="{StaticResource Dg4}"
+                                BorderThickness="5"
                                 Visibility="Collapsed">
                                 <Border.Effect>
-                                    <DropShadowEffect
-                                        BlurRadius="15"
-                                        Direction="270"
-                                        ShadowDepth="0"
-                                        Color="#B2000000" />
+                                    <BlurEffect Radius="15" />
                                 </Border.Effect>
                             </Border>
-                        </Border>
+                        </Grid>
+                        <Border
+                            x:Name="BorderMain"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="6" />
                         <Grid Margin="{TemplateBinding Padding}" ZIndex="999">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
@@ -773,16 +774,17 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#F6F8F9" />
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#DDE2E4" />
+                            <Setter Property="Background" Value="{StaticResource Lg5}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#E5E9EB" />
+                            <Setter Property="Background" Value="{StaticResource Lg3}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg3}" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="#E5E9EB" />
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#E5E9EB" />
+                            <!--  #E5E9EB  -->
+                            <Setter Property="Background" Value="{StaticResource CleanW}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Lg3}" />
                             <Setter TargetName="Shadow" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
@@ -793,7 +795,10 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="TglText" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
+    <Style
+        x:Key="TglText"
+        BasedOn="{StaticResource ToggleButtonBaseLg}"
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
@@ -891,7 +896,10 @@
 
     <!--  GROUPED  -->
 
-    <Style x:Key="TglOutlineFirst" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
+    <Style
+        x:Key="TglOutlineFirst"
+        BasedOn="{StaticResource ToggleButtonBaseLg}"
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -959,7 +967,10 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="TglOutlineMiddle" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
+    <Style
+        x:Key="TglOutlineMiddle"
+        BasedOn="{StaticResource ToggleButtonBaseLg}"
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -1027,7 +1038,10 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="TglOutlineLast" BasedOn="{StaticResource ToggleButtonBaseLg}" TargetType="{x:Type ToggleButton}">
+    <Style
+        x:Key="TglOutlineLast"
+        BasedOn="{StaticResource ToggleButtonBaseLg}"
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />

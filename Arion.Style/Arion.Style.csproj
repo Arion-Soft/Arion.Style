@@ -159,6 +159,7 @@
     <Compile Include="Converters\PickerInnerPaddingConverter.cs" />
     <Compile Include="Converters\PointValueConverter.cs" />
     <Compile Include="Converters\RangeLengthConverter.cs" />
+    <Compile Include="Converters\RectangleToRectConverter.cs" />
     <Compile Include="Converters\RemoveAlphaBrushConverter.cs" />
     <Compile Include="Converters\RoundProgressPathConverter.cs" />
     <Compile Include="Converters\ShadowEdgeConverter.cs" />
@@ -174,7 +175,7 @@
     <Compile Include="Converters\TimeToVisibilityConverter.cs" />
     <Compile Include="Converters\ToolBarOverflowButtonVisibilityConverter.cs" />
     <Compile Include="Converters\TopThicknessConverter.cs" />
-    <Compile Include="Extensions.cs" />
+    <Compile Include="Extension.cs" />
     <Compile Include="Extensions\BottomDashedLineAdorner.cs" />
     <Compile Include="Extensions\Constants.cs" />
     <Compile Include="Extensions\HintAssist.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Extensions\PackIconDataFactory.cs" />
     <Compile Include="Extensions\PackIconExtension.cs" />
     <Compile Include="Extensions\PackIconKind.cs" />
+    <Compile Include="Extensions\Rectangle.cs" />
     <Compile Include="Extensions\ScrollViewerAssist.cs" />
     <Compile Include="Extensions\SmartHint.cs" />
     <Compile Include="Extensions\Spelling.cs" />
