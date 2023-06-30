@@ -11,7 +11,10 @@
         <ResourceDictionary Source="Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <converters:TextVisibilityConverter x:Key="TextVisibilityConverter" IsEmptyValue="Collapsed" IsNotEmptyValue="Visible" />
+    <converters:TextVisibilityConverter
+        x:Key="TextVisibilityConverter"
+        IsEmptyValue="Collapsed"
+        IsNotEmptyValue="Visible" />
     <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}">
@@ -29,6 +32,7 @@
         <Setter Property="commands:NumberCommand.HandlesDownCommand" Value="True" />
         <Setter Property="wpf:TextBox.IconHeight" Value="15" />
         <Setter Property="wpf:TextBox.IconWidth" Value="15" />
+        <Setter Property="wpf:Hint.CornerRadius" Value="6" />
         <Setter Property="Validation.ErrorTemplate">
             <Setter.Value>
                 <ControlTemplate>
@@ -52,7 +56,7 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6">
+                        CornerRadius="{TemplateBinding wpf:Hint.CornerRadius}">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />

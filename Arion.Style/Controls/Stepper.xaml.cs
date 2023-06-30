@@ -104,6 +104,7 @@ namespace Arion.Style.Controls
             {
                 TblValue.Visibility = Visibility.Collapsed;
                 TbValue.Visibility = Visibility.Visible;
+                TbValue.Focus();
             }
             else if (TblValue.Visibility == Visibility.Collapsed)
             {
