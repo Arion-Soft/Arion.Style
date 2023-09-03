@@ -342,5 +342,8 @@
     <Content Include="Icons\Images\Xray.gif" />
     <Content Include="Icons\Images\XrayIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Styles\ArionTheme\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
