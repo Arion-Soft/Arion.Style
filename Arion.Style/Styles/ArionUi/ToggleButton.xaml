@@ -717,7 +717,7 @@
                         <Border
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="6"
+                            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
                             x:Name="BorderMain" />
                         <Grid Margin="{TemplateBinding Padding}" ZIndex="999">
                             <Grid.ColumnDefinitions>
