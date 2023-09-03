@@ -259,6 +259,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\ArionTheme\Button.xaml" />
+    <Page Include="Styles\ArionTheme\CheckBox.xaml" />
+    <Page Include="Styles\ArionTheme\Colors.xaml" />
+    <Page Include="Styles\ArionTheme\ComboBox.xaml" />
+    <Page Include="Styles\ArionTheme\DataGrid.xaml" />
+    <Page Include="Styles\ArionTheme\Expander.xaml" />
+    <Page Include="Styles\ArionTheme\Label.xaml" />
+    <Page Include="Styles\ArionTheme\ListView.xaml" />
+    <Page Include="Styles\ArionTheme\Page.xaml" />
+    <Page Include="Styles\ArionTheme\PasswordBox.xaml" />
+    <Page Include="Styles\ArionTheme\RadioButton.xaml" />
+    <Page Include="Styles\ArionTheme\RepeatButton.xaml" />
+    <Page Include="Styles\ArionTheme\TabControl.xaml" />
+    <Page Include="Styles\ArionTheme\TextBlock.xaml" />
+    <Page Include="Styles\ArionTheme\TextBox.xaml" />
+    <Page Include="Styles\ArionTheme\ToggleButton.xaml" />
+    <Page Include="Styles\ArionTheme\Window.xaml" />
     <Page Include="Styles\ArionUi\Badges.xaml" />
     <Page Include="Styles\ArionUi\Button.xaml" />
     <Page Include="Styles\ArionUi\Calendar.xaml" />
@@ -341,9 +358,6 @@
     </Content>
     <Content Include="Icons\Images\Xray.gif" />
     <Content Include="Icons\Images\XrayIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Styles\ArionTheme\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

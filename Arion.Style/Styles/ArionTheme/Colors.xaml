@@ -1,0 +1,118 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush Color="#FFFFFF" x:Key="BrushWhite" />
+    <SolidColorBrush Color="#EAEAEA" x:Key="BrushDarkWhite" />
+
+    <SolidColorBrush Color="#D2DDEF" x:Key="BrushLightGray" />
+    <SolidColorBrush Color="#C0CADB" x:Key="BrushLightDarkGray" />
+
+    <SolidColorBrush Color="#9494a2" x:Key="BrushGray" />
+    <SolidColorBrush Color="#7d7d89" x:Key="BrushDarkGray" />
+
+    <SolidColorBrush Color="#B6D3F6" x:Key="BrushLightPrimary" />
+    <SolidColorBrush Color="#A2BCDB" x:Key="BrushDarkLightPrimary" />
+
+    <SolidColorBrush Color="#335D8E" x:Key="BrushPrimary" />
+    <SolidColorBrush Color="#2D537E" x:Key="BrushDarkPrimary" />
+
+    <SolidColorBrush Color="#1F1F1F" x:Key="BrushBlack" />
+    <SolidColorBrush Color="#000000" x:Key="BrushDarkBlack" />
+
+    <SolidColorBrush Color="#F1C40F" x:Key="BrushYellow" />
+    <SolidColorBrush Color="#F39C12" x:Key="BrushDarkYellow" />
+
+    <SolidColorBrush Color="#2ECC71" x:Key="BrushGreen" />
+    <SolidColorBrush Color="#27AE60" x:Key="BrushDarkGreen" />
+
+    <SolidColorBrush Color="#E74C3C" x:Key="BrushRed" />
+    <SolidColorBrush Color="#C0392B" x:Key="BrushDarkRed" />
+
+
+    <SolidColorBrush Color="#D2DDEF" x:Key="BrushBackground" />
+    <SolidColorBrush Color="#DFECFE" x:Key="BrushBackground2" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="BrushButton" />
+    <SolidColorBrush Color="LightSteelBlue" x:Key="BrushGroup" />
+    <SolidColorBrush Color="#E45B5B" x:Key="BrushDanger" />
+    <SolidColorBrush Color="#209A6E" x:Key="BrushSuccess" />
+    <SolidColorBrush Color="#76707F" x:Key="BrushDisable" />
+    <SolidColorBrush Color="#ECF0F4" x:Key="BrushControl" />
+    <SolidColorBrush Color="#E5E9EF" x:Key="BrushElement" />
+    <SolidColorBrush Color="#335D8E" x:Key="SolidDarkBlue" />
+    <SolidColorBrush Color="Gray" x:Key="SolidDisabled" />
+    <SolidColorBrush Color="#E5E9EF" x:Key="SolidControl" />
+    <SolidColorBrush Color="#ECF0F4" x:Key="SolidControlBorder" />
+    <SolidColorBrush Color="#FFFFFF" x:Key="SolidWhite" />
+    <Color
+        A="255"
+        B="0x8E"
+        G="0x5D"
+        R="0x33"
+        x:Key="ColorDarkBlue" />
+
+    <Color
+        A="0xFF"
+        B="0xFF"
+        G="0xFF"
+        R="0xFF"
+        x:Key="ColorButton" />
+    <Color
+        A="0xFF"
+        B="0x76"
+        G="0x70"
+        R="0x7F"
+        x:Key="ColorDisable" />
+    <Color
+        A="0xFF"
+        B="0xAF"
+        G="0x7C"
+        R="0x51"
+        x:Key="ColorPrimary" />
+    <Color
+        A="0xFF"
+        B="0xD2"
+        G="0xDD"
+        R="0xEF"
+        x:Key="ColorBackground" />
+    <Color
+        A="0xFF"
+        B="0xEF"
+        G="0xE9"
+        R="0xE5"
+        x:Key="ColorControl" />
+    <Color
+        B="0xFF"
+        G="0xFF"
+        R="0xFF"
+        x:Key="Color.MouseOver.Foreground" />
+    <Color
+        B="0x77"
+        G="0x77"
+        R="0x77"
+        x:Key="Color.Element.Disable" />
+    <Color
+        A="0xFF"
+        B="0xF3"
+        G="0xE3"
+        R="0xD7"
+        x:Key="MainColor" />
+    <SolidColorBrush Color="{StaticResource ColorBackground}" x:Key="SolidMain" />
+
+    <SolidColorBrush Color="Red" x:Key="ColorSolidRed" />
+    <SolidColorBrush Color="LimeGreen" x:Key="ColorSolidGreen" />
+    <SolidColorBrush Color="Orange" x:Key="ColorSolidOrange" />
+    <SolidColorBrush Color="White" x:Key="ColorSolidWhite" />
+    <SolidColorBrush Color="Gray" x:Key="ColorSolidGray" />
+    <SolidColorBrush Color="Yellow" x:Key="ColorSolidYellow" />
+    <SolidColorBrush Color="Transparent" x:Key="ColorSolidTransparent" />
+    <SolidColorBrush Color="#64b4ff" x:Key="ColorActiveOption" />
+    <SolidColorBrush Color="Transparent" x:Key="ColorNotActiveOption" />
+    <SolidColorBrush Color="Gray" x:Key="ColorDisabledPos" />
+    <SolidColorBrush Color="Orange" x:Key="ColorEditEnabled" />
+    <SolidColorBrush Color="#003273" x:Key="ColorEditDisabled" />
+    <SolidColorBrush Color="#64b4ff" x:Key="ColorSolidOptionOn" />
+    <SolidColorBrush Color="#e0e3eb" x:Key="ColorSolidOptionOff" />
+    <SolidColorBrush Color="#64b4ff" x:Key="ColorSolidLightBlu" />
+    <SolidColorBrush Color="#003273" x:Key="ColorSolidDarkBlu" />
+    <SolidColorBrush Color="#c4d6f0" x:Key="ColorSolidGrayBlu" />
+    <SolidColorBrush Color="#335d8e" x:Key="ColorSolidDarkBlue" />
+</ResourceDictionary>
