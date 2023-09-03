@@ -1,15 +1,15 @@
 ﻿<UserControl
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
+    mc:Ignorable="d"
     x:Class="Arion.Theme.Test.Views.ToggleButtons"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
-    d:DesignHeight="1000"
-    d:DesignWidth="1000"
-    mc:Ignorable="d">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -31,111 +31,112 @@
         </Grid.ColumnDefinitions>
 
         <Label
-            Grid.Row="0"
-            Grid.Column="0"
-            Width="Auto"
-            Margin="10"
-            Padding="0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
             Content="ToggleButton"
             FontSize="32"
-            Style="{DynamicResource Lbl}" />
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="10"
+            Padding="0"
+            Style="{DynamicResource Lbl}"
+            VerticalAlignment="Top"
+            Width="Auto" />
 
         <StackPanel
-            Grid.Row="1"
             Grid.Column="0"
+            Grid.Row="1"
             Orientation="Horizontal">
             <ToggleButton
-                Name="Tg1"
+                Content="Toggle button"
                 Margin="5"
-                Content="Toggle button" />
+                Name="Tg1" />
             <ToggleButton
-                Margin="5"
                 Content="Toggle button"
                 IsChecked="{Binding ElementName=Tg1, Path=IsChecked}"
-                IsEnabled="False" />
+                IsEnabled="False"
+                Margin="5" />
         </StackPanel>
 
         <StackPanel
-            Grid.Row="2"
             Grid.Column="0"
+            Grid.Row="2"
             Orientation="Horizontal">
             <ToggleButton
-                Name="Tg2"
-                Margin="5"
                 Content="Toggle button"
-                IsChecked="True" />
-            <ToggleButton
+                IsChecked="True"
                 Margin="5"
+                Name="Tg2" />
+            <ToggleButton
                 Content="Toggle button"
                 IsChecked="{Binding ElementName=Tg2, Path=IsChecked}"
-                IsEnabled="False" />
+                IsEnabled="False"
+                Margin="5" />
         </StackPanel>
 
         <StackPanel
-            Grid.Row="3"
             Grid.Column="0"
+            Grid.Row="3"
             Orientation="Horizontal">
             <ToggleButton
-                Name="Tg3"
-                Margin="5"
                 Content="Toggle button"
                 IsChecked="{x:Null}"
-                IsThreeState="True" />
-            <ToggleButton
+                IsThreeState="True"
                 Margin="5"
+                Name="Tg3" />
+            <ToggleButton
                 Content="Toggle button"
                 IsChecked="{Binding ElementName=Tg3, Path=IsChecked}"
                 IsEnabled="False"
-                IsThreeState="True" />
+                IsThreeState="True"
+                Margin="5" />
         </StackPanel>
 
-        <WrapPanel Grid.Row="4" Grid.Column="0">
+        <WrapPanel Grid.Column="0" Grid.Row="4">
             <CheckBox IsChecked="{Binding ElementName=Tg1, Path=IsChecked}" />
             <CheckBox IsChecked="{Binding ElementName=Tg2, Path=IsChecked}" />
             <CheckBox IsChecked="{Binding ElementName=Tg3, Path=IsChecked}" IsThreeState="True" />
         </WrapPanel>
 
         <StackPanel
+            Grid.Column="0"
             Grid.Row="5"
-            Grid.Column="0"
             Orientation="Horizontal">
             <ToggleButton
-                Margin="5"
                 Content="Toggle button"
                 IsChecked="True"
-                Style="{DynamicResource TglOutline}" />
-            <ToggleButton
                 Margin="5"
+                Style="{DynamicResource TglOutline}"
+                wpf:Hint.CornerRadius="1" />
+            <ToggleButton
                 Content="Toggle button"
                 IsChecked="True"
                 IsEnabled="False"
+                Margin="5"
                 Style="{DynamicResource TglOutline}" />
         </StackPanel>
 
         <StackPanel
+            Grid.Column="0"
             Grid.Row="6"
-            Grid.Column="0"
             Orientation="Horizontal">
             <ToggleButton
-                Margin="5"
-                wpf:Button.LeftIcon="User"
                 Content="Toggle button"
                 IsChecked="True"
-                Style="{DynamicResource TglOutline}" />
-            <ToggleButton
                 Margin="5"
-                wpf:Button.RightIcon="User"
+                Style="{DynamicResource TglOutline}"
+                wpf:Button.LeftIcon="User" />
+            <ToggleButton
                 Content="Toggle button"
                 IsChecked="True"
                 IsEnabled="False"
-                Style="{DynamicResource TglOutline}" />
+                Margin="5"
+                Style="{DynamicResource TglOutline}"
+                wpf:Button.RightIcon="User" />
         </StackPanel>
 
         <StackPanel
-            Grid.Row="7"
             Grid.Column="0"
+            Grid.Row="7"
             Margin="5,5"
             Orientation="Horizontal">
             <ToggleButton Content="First" Style="{DynamicResource TglOutlineFirst}" />
@@ -144,68 +145,68 @@
         </StackPanel>
 
         <StackPanel
-            Grid.Row="10"
             Grid.Column="0"
+            Grid.Row="10"
             Orientation="Horizontal">
             <ToggleButton
-                Name="TgListControl"
                 Margin="5"
+                Name="TgListControl"
                 Style="{DynamicResource ListControlSelectMode}" />
             <ToggleButton
-                Margin="5"
                 IsChecked="{Binding ElementName=TgListControl, Path=IsChecked}"
                 IsEnabled="False"
+                Margin="5"
                 Style="{DynamicResource ListControlSelectMode}" />
         </StackPanel>
 
         <StackPanel
-            Grid.Row="1"
             Grid.Column="1"
+            Grid.Row="1"
             Orientation="Horizontal">
             <ToggleButton Style="{DynamicResource TglFocalSpot}" />
             <ToggleButton IsEnabled="False" Style="{DynamicResource TglFocalSpot}" />
         </StackPanel>
         <StackPanel
-            Grid.Row="2"
             Grid.Column="1"
+            Grid.Row="2"
             Orientation="Horizontal">
             <ToggleButton Style="{DynamicResource TgOnOff}" />
             <ToggleButton IsEnabled="False" Style="{DynamicResource TgOnOff}" />
         </StackPanel>
         <StackPanel
-            Grid.Row="3"
             Grid.Column="1"
+            Grid.Row="3"
             Orientation="Horizontal">
             <ToggleButton Style="{DynamicResource OnOffToggle}" />
             <ToggleButton IsEnabled="False" Style="{DynamicResource OnOffToggle}" />
         </StackPanel>
         <StackPanel
-            Grid.Row="4"
             Grid.Column="1"
+            Grid.Row="4"
             Orientation="Horizontal">
             <ToggleButton Style="{DynamicResource ActiveUser}" />
             <ToggleButton IsEnabled="False" Style="{DynamicResource ActiveUser}" />
         </StackPanel>
 
         <Border
+            Background="{StaticResource Pr200}"
+            Grid.Column="1"
             Grid.Row="5"
             Grid.RowSpan="4"
-            Grid.Column="1"
-            Padding="10"
-            Background="{StaticResource Pr200}">
+            Padding="10">
             <UniformGrid Columns="3" Rows="3">
                 <ToggleButton
-                    Margin="5"
                     Content="Toggle Button"
                     IsChecked="True"
+                    Margin="5"
                     Style="{StaticResource TglOutline}" />
                 <ToggleButton
-                    Margin="5"
                     Content="Toggle"
+                    Margin="5"
                     Style="{StaticResource TglOutline}" />
                 <ToggleButton
-                    Margin="5"
                     Content="1"
+                    Margin="5"
                     Style="{StaticResource TglOutline}" />
             </UniformGrid>
         </Border>

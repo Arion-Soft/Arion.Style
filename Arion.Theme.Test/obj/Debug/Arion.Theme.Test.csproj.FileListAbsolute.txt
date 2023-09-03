@@ -223,3 +223,9 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Group
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\GroupBox.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Dialogs.g.cs
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Dialogs.baml
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Dialogs.g.cs
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\GroupBox.g.cs
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.g.cs
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Dialogs.baml
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\GroupBox.baml
+C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.baml
