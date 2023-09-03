@@ -690,6 +690,7 @@
         <Setter Property="BorderThickness" Value="2" />
         <Setter Property="attach:Button.IconHeight" Value="15" />
         <Setter Property="attach:Button.IconWidth" Value="15" />
+        <Setter Property="attach:Hint.CornerRadius" Value="6" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -700,7 +701,7 @@
                             </Grid.OpacityMask>
                             <Border
                                 Background="{TemplateBinding Background}"
-                                CornerRadius="6"
+                                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
                                 Margin=".5"
                                 Name="Border" />
                             <Border
