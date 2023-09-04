@@ -118,7 +118,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr600}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr600}" />
-                <Setter Property="Foreground" Value="#F6FCFF" />
+                <!-- <Setter Property="Foreground" Value="#F6FCFF" /> -->
             </MultiTrigger>
             <!--  CHECKED - TRUE | Pressed  -->
             <MultiTrigger>
@@ -131,7 +131,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr700}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr700}" />
-                <Setter Property="Foreground" Value="#F6FCFF" />
+                <!-- <Setter Property="Foreground" Value="#F6FCFF" /> -->
             </MultiTrigger>
             <!--  CHECKED - TRUE | Default  -->
             <MultiTrigger>
@@ -144,7 +144,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr500}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr500}" />
-                <Setter Property="Foreground" Value="{StaticResource Pr50}" />
+                <!-- <Setter Property="Foreground" Value="{StaticResource Pr50}" /> -->
             </MultiTrigger>
             <!--  CHECKED - TRUE | Disable  -->
             <MultiTrigger>
@@ -157,7 +157,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr500}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr500}" />
-                <Setter Property="Foreground" Value="{StaticResource Pr50}" />
+                <!-- <Setter Property="Foreground" Value="{StaticResource Pr50}" /> -->
                 <Setter Property="Opacity" Value=".5" />
             </MultiTrigger>
 
@@ -317,7 +317,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr600}" />
-                <Setter Property="Foreground" Value="{StaticResource Pr800}" />
+                <!-- <Setter Property="Foreground" Value="{StaticResource Pr800}" /> -->
                 <Setter Property="BorderThickness" Value="2" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Pressed  -->
@@ -331,7 +331,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr700}" />
-                <Setter Property="Foreground" Value="{StaticResource Pr900}" />
+                <!-- <Setter Property="Foreground" Value="{StaticResource Pr900}" /> -->
                 <Setter Property="BorderThickness" Value="2" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Default  -->
@@ -345,7 +345,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr500}" />
-                <Setter Property="Foreground" Value="{StaticResource Pr700}" />
+                <!-- <Setter Property="Foreground" Value="{StaticResource Pr700}" /> -->
                 <Setter Property="BorderThickness" Value="2" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Disable  -->
@@ -359,7 +359,7 @@
 
                 <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr500}" />
-                <Setter Property="Foreground" Value="{StaticResource Pr700}" />
+                <!-- <Setter Property="Foreground" Value="{StaticResource Pr700}" /> -->
                 <Setter Property="Opacity" Value=".5" />
                 <Setter Property="BorderThickness" Value="2" />
             </MultiTrigger>
