@@ -2,9 +2,9 @@
 
 namespace Arion.Theme.Test.Views
 {
-    public partial class ColorPicker : UserControl
+    public partial class DataGrid : UserControl
     {
-        public ColorPicker()
+        public DataGrid()
         {
             InitializeComponent();
         }

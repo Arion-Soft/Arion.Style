@@ -2,7 +2,7 @@
 <package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>Arion.Style</id>
-        <version>0.5.16</version>
+        <version>0.5.17</version>
         <title>Arion Design</title>
         <authors>Ivan Budanov</authors>
         <owners>Arion Soft</owners>
@@ -14,7 +14,7 @@
         <license type="file">LICENSE.txt</license>
         <readme>docs\Readme.md</readme>
         <releaseNotes>
-            change style for toggle button. style - TglOutline
+            change data grid
         </releaseNotes>
     </metadata>
     <files>

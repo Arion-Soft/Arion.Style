@@ -88,14 +88,14 @@
     <Compile Include="Views\CheckBoxes.xaml.cs">
       <DependentUpon>CheckBoxes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ColorPicker.xaml.cs">
-      <DependentUpon>ColorPicker.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Colors.xaml.cs">
       <DependentUpon>Colors.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ComboBoxes.xaml.cs">
       <DependentUpon>ComboBoxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataGrid.xaml.cs">
+      <DependentUpon>DataGrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DatePicker.xaml.cs">
       <DependentUpon>DatePicker.xaml</DependentUpon>
@@ -202,9 +202,9 @@
     <Page Include="Views\Breadcrumbs.xaml" />
     <Page Include="Views\Buttons.xaml" />
     <Page Include="Views\CheckBoxes.xaml" />
-    <Page Include="Views\ColorPicker.xaml" />
     <Page Include="Views\Colors.xaml" />
     <Page Include="Views\ComboBoxes.xaml" />
+    <Page Include="Views\DataGrid.xaml" />
     <Page Include="Views\DatePicker.xaml" />
     <Page Include="Views\Dialogs.xaml" />
     <Page Include="Views\DisplayControls.xaml" />

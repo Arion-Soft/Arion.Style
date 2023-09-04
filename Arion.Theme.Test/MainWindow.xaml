@@ -21,8 +21,18 @@
     <Grid>
         <!--  Background="{StaticResource Pr200}"  -->
         <TabControl Name="TbMain" TabStripPlacement="Left">
+            <TabControl.Resources>
+                <Style BasedOn="{StaticResource {x:Type TabItem}}" TargetType="TabItem">
+                    <Setter Property="Height" Value="25" />
+                </Style>
+            </TabControl.Resources>
+            <!--  HOME  -->
             <TabItem Header="Home">
                 <views:Home />
+            </TabItem>
+            <!--  BADGES  -->
+            <TabItem Header="Badges">
+                <views:Badges />
             </TabItem>
             <!--  BREADCRUMB  -->
             <TabItem Header="{DynamicResource Breadcrumbs}">
@@ -44,16 +54,33 @@
             <TabItem Header="{DynamicResource ComboBoxes}">
                 <views:ComboBoxes />
             </TabItem>
-            <TabItem Header="{DynamicResource DocumentViewer}">
-                <views:DocumentViewer />
+            <!--  DATA GRID  -->
+            <TabItem Header="Data grid">
+                <views:DataGrid />
+            </TabItem>
+            <!--  DATE PICKER  -->
+            <TabItem Header="Date picker">
+                <views:DatePicker />
+            </TabItem>
+            <!--  DIALOGS  -->
+            <TabItem Header="Dialogs">
+                <views:Dialogs />
             </TabItem>
             <!--  DISPLAY CONTROLS  -->
             <TabItem Header="{DynamicResource DisplayControls}">
                 <views:DisplayControls />
             </TabItem>
+            <!--  DOCUMENT VIEWER  -->
+            <TabItem Header="{DynamicResource DocumentViewer}">
+                <views:DocumentViewer />
+            </TabItem>
             <!--  EXPANDERS  -->
             <TabItem Header="{DynamicResource Expanders}">
                 <views:Expanders />
+            </TabItem>
+            <!--  GROUP BOX  -->
+            <TabItem Header="GroupBox">
+                <views:GroupBox />
             </TabItem>
             <!--  INLINE ALERTS  -->
             <TabItem Header="{DynamicResource InlineAlerts}">
@@ -123,12 +150,7 @@
             <TabItem Header="{DynamicResource Tooltips}">
                 <views:Tooltips />
             </TabItem>
-            <TabItem Header="Badges">
-                <views:Badges />
-            </TabItem>
-            <TabItem Header="Dialogs">
-                <views:Dialogs />
-            </TabItem>
+            <!--  MODAL  -->
             <TabItem Header="Modal">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -220,7 +242,7 @@
                         Content="Click to open ModalDialog" />
                 </Grid>
             </TabItem>
-
+            <!--  MENU  -->
             <TabItem Header="Menu">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -273,18 +295,13 @@
 
                 </Grid>
             </TabItem>
-
-            <TabItem Header="Date picker">
-                <views:DatePicker />
-            </TabItem>
+            <!--  RICH TEXT BOX  -->
             <TabItem Header="Rich Text box">
                 <views:RichTextBoxes />
             </TabItem>
+            <!--  TOOL BARS  -->
             <TabItem Header="ToolBars">
                 <views:ToolBar />
-            </TabItem>
-            <TabItem Header="GroupBox">
-                <views:GroupBox />
             </TabItem>
         </TabControl>
         <Button
