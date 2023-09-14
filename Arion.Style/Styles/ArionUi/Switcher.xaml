@@ -23,6 +23,7 @@
         <Setter Property="FontSize" Value="14" />
         <Setter Property="attach:Switcher.IconHeight" Value="15" />
         <Setter Property="attach:Switcher.IconWidth" Value="15" />
+        <Setter Property="attach:Switcher.BorderThicknessSelected" Value="2" />
     </Style>
 
     <ControlTemplate x:Key="SwitcherFilledTemplate" TargetType="{x:Type RadioButton}">
@@ -314,11 +315,8 @@
                     <Condition Property="IsMouseOver" Value="True" />
                     <Condition Property="IsPressed" Value="False" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr600}" />
-                <!-- <Setter Property="Foreground" Value="{StaticResource Pr800}" /> -->
-                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="BorderThickness" Value="{Binding RelativeSource={RelativeSource Self}, Path=(attach:Switcher.BorderThicknessSelected)}" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Pressed  -->
             <MultiTrigger>
@@ -328,11 +326,8 @@
                     <Condition Property="IsPressed" Value="True" />
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr700}" />
-                <!-- <Setter Property="Foreground" Value="{StaticResource Pr900}" /> -->
-                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="BorderThickness" Value="{Binding RelativeSource={RelativeSource Self}, Path=(attach:Switcher.BorderThicknessSelected)}" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Default  -->
             <MultiTrigger>
@@ -342,11 +337,8 @@
                     <Condition Property="IsPressed" Value="False" />
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr500}" />
-                <!-- <Setter Property="Foreground" Value="{StaticResource Pr700}" /> -->
-                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="BorderThickness" Value="{Binding RelativeSource={RelativeSource Self}, Path=(attach:Switcher.BorderThicknessSelected)}" />
             </MultiTrigger>
             <!--  CHECKED - TRUE | Disable  -->
             <MultiTrigger>
@@ -356,12 +348,9 @@
                     <Condition Property="IsPressed" Value="False" />
                     <Condition Property="IsEnabled" Value="False" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="{StaticResource Pr100}" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{StaticResource Pr500}" />
-                <!-- <Setter Property="Foreground" Value="{StaticResource Pr700}" /> -->
                 <Setter Property="Opacity" Value=".5" />
-                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="BorderThickness" Value="{Binding RelativeSource={RelativeSource Self}, Path=(attach:Switcher.BorderThicknessSelected)}" />
             </MultiTrigger>
 
             <!--  CHECKED - FALSE | Hover  -->
@@ -372,8 +361,6 @@
                     <Condition Property="IsPressed" Value="False" />
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="#EEF0F2" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="#9AA6AC" />
             </MultiTrigger>
             <!--  CHECKED - FALSE | Pressed  -->
@@ -384,8 +371,6 @@
                     <Condition Property="IsPressed" Value="True" />
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="#E5E9EB" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="#84919A" />
             </MultiTrigger>
             <!--  CHECKED - FALSE | Default  -->
@@ -396,8 +381,6 @@
                     <Condition Property="IsPressed" Value="False" />
                     <Condition Property="IsEnabled" Value="True" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="#F6F8F9" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="#B0BABF" />
             </MultiTrigger>
             <!--  CHECKED - FALSE | Disabled  -->
@@ -408,8 +391,6 @@
                     <Condition Property="IsPressed" Value="False" />
                     <Condition Property="IsEnabled" Value="False" />
                 </MultiTrigger.Conditions>
-
-                <Setter TargetName="radioButtonBorder" Property="Background" Value="#F6F8F9" />
                 <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="#B0BABF" />
                 <Setter Property="Opacity" Value="0.5" />
             </MultiTrigger>

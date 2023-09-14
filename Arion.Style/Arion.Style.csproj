@@ -48,6 +48,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttachedProperties\Badge.cs" />
     <Compile Include="AttachedProperties\Button.cs" />
     <Compile Include="AttachedProperties\CheckBox.cs" />
     <Compile Include="AttachedProperties\ComboBox.cs" />

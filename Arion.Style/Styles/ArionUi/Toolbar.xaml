@@ -4,7 +4,7 @@
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="{x:Type ButtonBase}" x:Key="ToolBarButtonBaseStyle">
+    <Style x:Key="ToolBarButtonBaseStyle" TargetType="{x:Type ButtonBase}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="Padding" Value="10,5" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
@@ -13,20 +13,20 @@
                 <ControlTemplate TargetType="{x:Type ButtonBase}">
                     <Grid>
                         <Border
-                            Background="Black"
                             Name="Effect"
+                            Background="Black"
                             Opacity="0" />
                         <Border
+                            x:Name="Border"
+                            Padding="{TemplateBinding Padding}"
                             Background="Transparent"
                             BorderBrush="Transparent"
-                            BorderThickness="0"
-                            Padding="{TemplateBinding Padding}"
-                            x:Name="Border">
+                            BorderThickness="0">
                             <ContentPresenter
-                                HorizontalAlignment="Center"
                                 Margin="2"
-                                RecognizesAccessKey="True"
-                                VerticalAlignment="Center" />
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True" />
                             <!-- <VisualStateManager.VisualStateGroups> -->
                             <!--     <VisualStateGroup x:Name="CommonStates"> -->
                             <!--         <VisualState x:Name="Normal" /> -->
@@ -75,7 +75,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Opacity" TargetName="Effect" Value=".1" />
+                            <Setter TargetName="Effect" Property="Opacity" Value=".1" />
                         </MultiTrigger>
                         <!--  HOVER  -->
                         <MultiTrigger>
@@ -85,7 +85,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Opacity" TargetName="Effect" Value=".05" />
+                            <Setter TargetName="Effect" Property="Opacity" Value=".05" />
                         </MultiTrigger>
                         <!--  DEFAULT  -->
                         <MultiTrigger>
@@ -95,7 +95,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Opacity" TargetName="Effect" Value="0" />
+                            <Setter TargetName="Effect" Property="Opacity" Value="0" />
                         </MultiTrigger>
                         <!--  DISABLED  -->
                         <MultiTrigger>
@@ -116,7 +116,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Opacity" TargetName="Effect" Value=".2" />
+                            <Setter TargetName="Effect" Property="Opacity" Value=".2" />
                         </MultiTrigger>
                         <!--  HOVER CHECKED  -->
                         <MultiTrigger>
@@ -127,7 +127,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Opacity" TargetName="Effect" Value=".35" />
+                            <Setter TargetName="Effect" Property="Opacity" Value=".35" />
                         </MultiTrigger>
                         <!--  PRESSED CHECKED  -->
                         <MultiTrigger>
@@ -138,7 +138,7 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
 
-                            <Setter Property="Opacity" TargetName="Effect" Value=".5" />
+                            <Setter TargetName="Effect" Property="Opacity" Value=".5" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -147,23 +147,23 @@
     </Style>
 
     <Style
+        x:Key="{x:Static ToolBar.ButtonStyleKey}"
         BasedOn="{StaticResource ToolBarButtonBaseStyle}"
-        TargetType="{x:Type Button}"
-        x:Key="{x:Static ToolBar.ButtonStyleKey}" />
+        TargetType="{x:Type Button}" />
     <Style
+        x:Key="{x:Static ToolBar.ToggleButtonStyleKey}"
         BasedOn="{StaticResource ToolBarButtonBaseStyle}"
-        TargetType="{x:Type ToggleButton}"
-        x:Key="{x:Static ToolBar.ToggleButtonStyleKey}" />
+        TargetType="{x:Type ToggleButton}" />
     <Style
+        x:Key="{x:Static ToolBar.CheckBoxStyleKey}"
         BasedOn="{StaticResource ToolBarButtonBaseStyle}"
-        TargetType="{x:Type CheckBox}"
-        x:Key="{x:Static ToolBar.CheckBoxStyleKey}" />
+        TargetType="{x:Type CheckBox}" />
     <Style
+        x:Key="{x:Static ToolBar.RadioButtonStyleKey}"
         BasedOn="{StaticResource ToolBarButtonBaseStyle}"
-        TargetType="{x:Type RadioButton}"
-        x:Key="{x:Static ToolBar.RadioButtonStyleKey}" />
+        TargetType="{x:Type RadioButton}" />
 
-    <Style TargetType="{x:Type TextBox}" x:Key="{x:Static ToolBar.TextBoxStyleKey}">
+    <Style x:Key="{x:Static ToolBar.TextBoxStyleKey}" TargetType="{x:Type TextBox}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
@@ -173,26 +173,26 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border
-                        BorderThickness="1"
+                        x:Name="Border"
                         Padding="2"
-                        x:Name="Border">
+                        BorderThickness="1">
                         <Border.Background>
-                            <SolidColorBrush Color="Thistle" />
+                            <SolidColorBrush Color="{StaticResource ColorLg3}" />
                         </Border.Background>
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="Tomato" />
+                            <SolidColorBrush Color="{StaticResource ColorLg3}" />
                         </Border.BorderBrush>
-                        <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="0" />
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="Yellow" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ColorLg1}" />
                                         </ColorAnimationUsingKeyFrames>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="YellowGreen" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ColorLg1}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -206,7 +206,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type Thumb}" x:Key="ToolBarThumbStyle">
+    <Style x:Key="ToolBarThumbStyle" TargetType="{x:Type Thumb}">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Cursor" Value="SizeAll" />
         <Setter Property="Template">
@@ -224,7 +224,7 @@
                                     <DrawingBrush.Drawing>
                                         <DrawingGroup>
                                             <!--  RECTANGLE  -->
-                                            <GeometryDrawing Brush="Red" Geometry="M 4 4 L 4 8 L 8 8 L 8 4 z" />
+                                            <GeometryDrawing Brush="Yellow" Geometry="M 4 4 L 4 8 L 8 8 L 8 4 z" />
                                         </DrawingGroup>
                                     </DrawingBrush.Drawing>
                                 </DrawingBrush>
@@ -236,29 +236,29 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ToggleButton}" x:Key="ToolBarOverflowButtonStyle">
+    <Style x:Key="ToolBarOverflowButtonStyle" TargetType="{x:Type ToggleButton}">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Border
+                        x:Name="Border"
                         CornerRadius="0,3,3,0"
-                        SnapsToDevicePixels="true"
-                        x:Name="Border">
+                        SnapsToDevicePixels="true">
                         <Border.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#00000000" Offset="0" />
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Offset="0" Color="#00000000" />
                                 <GradientStop Offset="1" />
                             </LinearGradientBrush>
                         </Border.Background>
                         <Grid>
                             <!--  TRIANGLE  -->
                             <Path
-                                Data="M -0.5 3 L 5.5 3 L 2.5 6 Z"
-                                Fill="Black"
+                                x:Name="Arrow"
                                 Margin="2,3"
                                 VerticalAlignment="Bottom"
-                                x:Name="Arrow" />
+                                Data="M -0.5 3 L 5.5 3 L 2.5 6 Z"
+                                Fill="Black" />
                             <ContentPresenter />
                         </Grid>
                         <VisualStateManager.VisualStateGroups>
@@ -267,21 +267,21 @@
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="Peru" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ColorLg2}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="Indigo" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ColorLg2}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="IndianRed" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ColorLg1}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -293,18 +293,18 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ToolBar}" x:Key="{x:Type ToolBar}">
+    <Style x:Key="{x:Type ToolBar}" TargetType="{x:Type ToolBar}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToolBar}">
                     <Border
+                        x:Name="Border"
                         Background="{StaticResource CleanW}"
                         BorderBrush="{StaticResource Lg5}"
                         BorderThickness="1"
-                        CornerRadius="2"
-                        x:Name="Border">
+                        CornerRadius="2">
                         <DockPanel>
                             <ToggleButton
                                 ClickMode="Press"
@@ -313,51 +313,51 @@
                                 IsEnabled="{TemplateBinding HasOverflowItems}"
                                 Style="{StaticResource ToolBarOverflowButtonStyle}">
                                 <Popup
+                                    x:Name="OverflowPopup"
                                     AllowsTransparency="true"
                                     Focusable="false"
                                     IsOpen="{Binding IsOverflowOpen, RelativeSource={RelativeSource TemplatedParent}}"
                                     Placement="Bottom"
                                     PopupAnimation="Slide"
-                                    StaysOpen="false"
-                                    x:Name="OverflowPopup">
-                                    <Border BorderThickness="1" x:Name="DropDownBorder">
+                                    StaysOpen="false">
+                                    <Border x:Name="DropDownBorder" BorderThickness="1">
                                         <Border.BorderBrush>
                                             <SolidColorBrush Color="Pink" />
                                         </Border.BorderBrush>
                                         <Border.Background>
-                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                <GradientStop Color="OrangeRed" />
-                                                <GradientStop Color="Plum" Offset="1" />
+                                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                                <GradientStop Color="Blue" />
+                                                <GradientStop Offset="1" Color="Plum" />
                                             </LinearGradientBrush>
                                         </Border.Background>
                                         <ToolBarOverflowPanel
+                                            x:Name="PART_ToolBarOverflowPanel"
+                                            Margin="2"
                                             FocusVisualStyle="{x:Null}"
                                             Focusable="true"
                                             KeyboardNavigation.DirectionalNavigation="Cycle"
                                             KeyboardNavigation.TabNavigation="Cycle"
-                                            Margin="2"
-                                            WrapWidth="200"
-                                            x:Name="PART_ToolBarOverflowPanel" />
+                                            WrapWidth="200" />
                                     </Border>
                                 </Popup>
                             </ToggleButton>
 
                             <Thumb
-                                Style="{StaticResource ToolBarThumbStyle}"
+                                x:Name="ToolBarThumb"
                                 Width="10"
-                                x:Name="ToolBarThumb" />
+                                Style="{StaticResource ToolBarThumbStyle}" />
                             <ToolBarPanel
-                                IsItemsHost="true"
+                                x:Name="PART_ToolBarPanel"
                                 Margin="0,1,2,2"
-                                x:Name="PART_ToolBarPanel" />
+                                IsItemsHost="true" />
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsOverflowOpen" Value="true">
-                            <Setter Property="IsEnabled" TargetName="ToolBarThumb" Value="false" />
+                            <Setter TargetName="ToolBarThumb" Property="IsEnabled" Value="false" />
                         </Trigger>
                         <Trigger Property="ToolBarTray.IsLocked" Value="true">
-                            <Setter Property="Visibility" TargetName="ToolBarThumb" Value="Collapsed" />
+                            <Setter TargetName="ToolBarThumb" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -365,14 +365,14 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ToolBarTray}" x:Key="{x:Type ToolBarTray}">
+    <Style x:Key="{x:Type ToolBarTray}" TargetType="{x:Type ToolBarTray}">
         <Setter Property="Background">
             <Setter.Value>
-                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                     <LinearGradientBrush.GradientStops>
                         <GradientStopCollection>
-                            <GradientStop Color="Firebrick" Offset="0.0" />
-                            <GradientStop Color="Fuchsia" Offset="1.0" />
+                            <GradientStop Offset="0.0" Color="Green" />
+                            <GradientStop Offset="1.0" Color="Fuchsia" />
                         </GradientStopCollection>
                     </LinearGradientBrush.GradientStops>
                 </LinearGradientBrush>

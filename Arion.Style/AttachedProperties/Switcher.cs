@@ -75,6 +75,8 @@ namespace Arion.Style.AttachedProperties
 
         #endregion
 
+        #region IconWidth
+
         public static readonly DependencyProperty IconWidthProperty = DependencyProperty.RegisterAttached(
             "IconWidth", typeof(double), typeof(Switcher), new PropertyMetadata(default(double)));
 
@@ -87,6 +89,10 @@ namespace Arion.Style.AttachedProperties
         {
             return (double)element.GetValue(IconWidthProperty);
         }
+
+        #endregion IconWidth
+
+        #region IconHeight
 
         public static readonly DependencyProperty IconHeightProperty = DependencyProperty.RegisterAttached(
             "IconHeight", typeof(double), typeof(Switcher), new PropertyMetadata(default(double)));
@@ -101,6 +107,10 @@ namespace Arion.Style.AttachedProperties
             return (double)element.GetValue(IconHeightProperty);
         }
 
+        #endregion IconHeight
+
+        #region IconStrokeColor
+
         public static readonly DependencyProperty IconStrokeColorProperty = DependencyProperty.RegisterAttached(
             "IconStrokeColor", typeof(SolidColorBrush), typeof(Switcher), new PropertyMetadata(default(SolidColorBrush)));
 
@@ -114,6 +124,10 @@ namespace Arion.Style.AttachedProperties
             return (SolidColorBrush)element.GetValue(IconStrokeColorProperty);
         }
 
+        #endregion IconStrokeColor
+
+        #region IconStrokeThickness
+
         public static readonly DependencyProperty IconStrokeThicknessProperty = DependencyProperty.RegisterAttached(
             "IconStrokeThickness", typeof(double), typeof(Switcher), new PropertyMetadata(default(double)));
 
@@ -126,5 +140,24 @@ namespace Arion.Style.AttachedProperties
         {
             return (double)element.GetValue(IconStrokeThicknessProperty);
         }
+
+        #endregion IconStrokeThickness
+
+        #region BorderThicknessSelected
+
+        public static readonly DependencyProperty BorderThicknessSelectedProperty = DependencyProperty.RegisterAttached(
+            "BorderThicknessSelected", typeof(Thickness), typeof(Switcher), new PropertyMetadata(default(Thickness)));
+
+        public static void SetBorderThicknessSelected(DependencyObject element, Thickness value)
+        {
+            element.SetValue(BorderThicknessSelectedProperty, value);
+        }
+
+        public static Thickness GetBorderThicknessSelected(DependencyObject element)
+        {
+            return (Thickness)element.GetValue(BorderThicknessSelectedProperty);
+        }
+
+        #endregion BorderThicknessSelected
     }
 }

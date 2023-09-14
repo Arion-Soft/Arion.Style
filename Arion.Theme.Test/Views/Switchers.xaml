@@ -23,6 +23,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label
             Grid.Row="0"
@@ -329,6 +330,49 @@
                 wpf:Switcher.Icon="User"
                 wpf:Switcher.Position="Last"
                 IsChecked="{Binding ElementName=Switcher4, Path=IsChecked, Delay=1000}"
+                Style="{DynamicResource SwitcherOutline}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal">
+            <RadioButton
+                Margin="0,5"
+                wpf:Switcher.Icon="User"
+                wpf:Switcher.Position="First"
+                Background="White"
+                Style="{DynamicResource SwitcherOutline}" />
+            <RadioButton
+                Margin="0,5"
+                wpf:Switcher.BorderThicknessSelected="4"
+                wpf:Switcher.Icon="User"
+                wpf:Switcher.Position="Middle"
+                Background="{StaticResource Lg3}"
+                Style="{DynamicResource SwitcherOutline}" />
+            <RadioButton
+                Margin="0,5"
+                wpf:Switcher.Icon="User"
+                wpf:Switcher.Position="Middle"
+                Background="{StaticResource Lg1}"
+                Style="{DynamicResource SwitcherOutline}" />
+            <RadioButton
+                Margin="0,5"
+                wpf:Switcher.Icon="User"
+                wpf:Switcher.Position="Middle"
+                Background="{StaticResource Mg4}"
+                Style="{DynamicResource SwitcherOutline}" />
+            <RadioButton
+                Margin="0,5"
+                wpf:Switcher.Icon="User"
+                wpf:Switcher.Position="Middle"
+                Background="{StaticResource Mg2}"
+                Style="{DynamicResource SwitcherOutline}" />
+            <RadioButton
+                Margin="0,5"
+                wpf:Switcher.Icon="User"
+                wpf:Switcher.Position="Last"
+                Background="{StaticResource Dg5}"
                 Style="{DynamicResource SwitcherOutline}" />
         </StackPanel>
     </Grid>
