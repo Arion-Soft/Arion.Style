@@ -110,6 +110,23 @@ namespace Arion.Style.AttachedProperties
 
         #endregion
 
+        #region PasswordViewFontSize
+
+        public static readonly DependencyProperty PasswordViewFontSizeProperty = DependencyProperty.RegisterAttached(
+            "PasswordViewFontSize", typeof(double), typeof(PasswordBox), new PropertyMetadata(default(double)));
+
+        public static void SetPasswordViewFontSize(System.Windows.Controls.PasswordBox element, double value)
+        {
+            element.SetValue(PasswordViewFontSizeProperty, value + element.FontSize);
+        }
+
+        public static double GetPasswordViewFontSize(System.Windows.Controls.PasswordBox element)
+        {
+            return (double)element.GetValue(PasswordViewFontSizeProperty) + element.FontSize;
+        }
+
+        #endregion PasswordViewFontSize
+
         #region CanClear
 
         public static readonly DependencyProperty CanClearProperty = DependencyProperty.RegisterAttached(
