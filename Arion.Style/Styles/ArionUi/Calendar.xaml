@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:attach="clr-namespace:Arion.Style.AttachedProperties">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
         <ResourceDictionary Source="FontFamily.xaml" />
@@ -9,7 +9,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!--  Style for the days of a month.  -->
-    <Style TargetType="CalendarDayButton" x:Key="CalendarDayButtonStyle">
+    <Style x:Key="CalendarDayButtonStyle" TargetType="CalendarDayButton">
         <Setter Property="MinWidth" Value="32" />
         <Setter Property="MinHeight" Value="32" />
         <Setter Property="FontSize" Value="10" />
@@ -19,34 +19,34 @@
             <Setter.Value>
                 <ControlTemplate TargetType="CalendarDayButton">
                     <Border
+                        Width="32"
+                        Height="32"
+                        MinWidth="{TemplateBinding MinWidth}"
+                        MinHeight="{TemplateBinding MinHeight}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Height="32"
-                        MinHeight="{TemplateBinding MinHeight}"
-                        MinWidth="{TemplateBinding MinWidth}"
-                        Width="32">
+                        CornerRadius="6">
                         <Grid>
                             <!--  TEXT  -->
                             <ContentPresenter
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                x:Name="NormalText"
                                 Margin="5,1,5,1"
-                                TextElement.FontSize="14"
-                                TextElement.Foreground="{TemplateBinding Foreground}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                x:Name="NormalText" />
+                                TextElement.FontSize="14"
+                                TextElement.Foreground="{TemplateBinding Foreground}" />
 
                             <!--  BLAKCOUT  -->
                             <Path
-                                Fill="{StaticResource CleanB}"
-                                HorizontalAlignment="Stretch"
+                                x:Name="Blackout"
                                 Margin="3"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                Fill="{StaticResource CleanB}"
                                 Opacity="0"
                                 RenderTransformOrigin="0.5,0.5"
-                                Stretch="Fill"
-                                VerticalAlignment="Stretch"
-                                x:Name="Blackout">
+                                Stretch="Fill">
                                 <Path.Data>
                                     M8.1772461,11.029181 L10.433105,
                                     11.029181 L11.700684,12.801641 L12.973633,
@@ -214,7 +214,7 @@
     </Style>
 
     <!--  Style for the months of a year and years of a decade.  -->
-    <Style TargetType="CalendarButton" x:Key="CalendarButtonStyle">
+    <Style x:Key="CalendarButtonStyle" TargetType="CalendarButton">
         <Setter Property="MinWidth" Value="32" />
         <Setter Property="MinHeight" Value="32" />
         <Setter Property="Background" Value="White" />
@@ -225,23 +225,23 @@
             <Setter.Value>
                 <ControlTemplate TargetType="CalendarButton">
                     <Border
+                        Width="64"
+                        Height="64"
+                        MinWidth="{TemplateBinding MinWidth}"
+                        MinHeight="{TemplateBinding MinHeight}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="10"
-                        Height="64"
-                        MinHeight="{TemplateBinding MinHeight}"
-                        MinWidth="{TemplateBinding MinWidth}"
-                        Width="64">
+                        CornerRadius="10">
                         <Grid>
                             <!--  TEXT  -->
                             <ContentPresenter
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                x:Name="NormalText"
                                 Margin="5,1,5,1"
-                                TextElement.FontSize="14"
-                                TextElement.Foreground="{TemplateBinding Foreground}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                x:Name="NormalText" />
+                                TextElement.FontSize="14"
+                                TextElement.Foreground="{TemplateBinding Foreground}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -346,51 +346,51 @@
     </Style>
 
     <!--  Button to go to the previous month or year.  -->
-    <ControlTemplate TargetType="{x:Type Button}" x:Key="PreviousButtonTemplate">
+    <ControlTemplate x:Key="PreviousButtonTemplate" TargetType="{x:Type Button}">
         <Grid Cursor="Hand">
             <!--<Rectangle Fill="Transparent" Opacity="1" Stretch="Fill"/>-->
             <Grid Background="Transparent">
                 <Button
+                    x:Name="path"
+                    Width="15"
                     Height="15"
                     Padding="0"
-                    Style="{StaticResource BtnText}"
-                    Width="15"
-                    wpf:Button.Icon="ChevronLeft"
-                    wpf:Button.IconHeight="10"
-                    wpf:Button.IconWidth="10"
-                    x:Name="path" />
+                    attach:Button.Icon="ChevronLeft"
+                    attach:Button.IconHeight="10"
+                    attach:Button.IconWidth="10"
+                    Style="{StaticResource BtnText}" />
             </Grid>
         </Grid>
     </ControlTemplate>
 
     <!--  Button to go to the next month or year.  -->
-    <ControlTemplate TargetType="{x:Type Button}" x:Key="NextButtonTemplate">
+    <ControlTemplate x:Key="NextButtonTemplate" TargetType="{x:Type Button}">
         <Grid Cursor="Hand">
             <Grid Background="Transparent">
                 <Button
+                    x:Name="path"
+                    Width="15"
                     Height="15"
                     Padding="0"
-                    Style="{StaticResource BtnText}"
-                    Width="15"
-                    wpf:Button.Icon="ChevronRight"
-                    wpf:Button.IconHeight="10"
-                    wpf:Button.IconWidth="10"
-                    x:Name="path" />
+                    attach:Button.Icon="ChevronRight"
+                    attach:Button.IconHeight="10"
+                    attach:Button.IconWidth="10"
+                    Style="{StaticResource BtnText}" />
             </Grid>
         </Grid>
     </ControlTemplate>
 
     <!--  Button to go up a level to the year or decade.  -->
-    <ControlTemplate TargetType="{x:Type Button}" x:Key="HeaderButtonTemplate">
+    <ControlTemplate x:Key="HeaderButtonTemplate" TargetType="{x:Type Button}">
         <Grid Cursor="Hand">
             <ContentPresenter
+                x:Name="buttonContent"
+                Margin="1,4,1,9"
+                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                 Content="{TemplateBinding Content}"
                 ContentTemplate="{TemplateBinding ContentTemplate}"
-                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                Margin="1,4,1,9"
-                TextElement.Foreground="#FF333333"
-                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                x:Name="buttonContent" />
+                TextElement.Foreground="#FF333333" />
             <!-- <VisualStateManager.VisualStateGroups> -->
             <!--     <VisualStateGroup x:Name="CommonStates"> -->
             <!--         <VisualState x:Name="Normal" /> -->
@@ -417,7 +417,7 @@
         </Grid>
     </ControlTemplate>
 
-    <Style TargetType="{x:Type CalendarItem}" x:Key="CalendarItemStyle">
+    <Style x:Key="CalendarItemStyle" TargetType="{x:Type CalendarItem}">
         <Setter Property="Margin" Value="0,3,0,3" />
         <Setter Property="Template">
             <Setter.Value>
@@ -425,19 +425,19 @@
                     <ControlTemplate.Resources>
                         <DataTemplate x:Key="{x:Static CalendarItem.DayTitleTemplateResourceKey}">
                             <TextBlock
+                                Margin="0,6,0,6"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
                                 FontFamily="Verdana"
                                 FontSize="9.5"
                                 FontWeight="Bold"
                                 Foreground="#FF333333"
-                                HorizontalAlignment="Center"
-                                Margin="0,6,0,6"
-                                Text="{Binding}"
-                                VerticalAlignment="Center" />
+                                Text="{Binding}" />
                         </DataTemplate>
                     </ControlTemplate.Resources>
                     <Grid x:Name="PART_Root">
                         <Grid.Resources>
-                            <SolidColorBrush Color="#A5FFFFFF" x:Key="DisabledColor" />
+                            <SolidColorBrush x:Key="DisabledColor" Color="#A5FFFFFF" />
                         </Grid.Resources>
                         <Border
                             Background="{TemplateBinding Background}"
@@ -460,40 +460,40 @@
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
                                     <Button
-                                        Focusable="False"
-                                        Grid.Column="0"
+                                        x:Name="PART_PreviousButton"
                                         Grid.Row="0"
+                                        Grid.Column="0"
+                                        Width="28"
                                         Height="20"
                                         HorizontalAlignment="Left"
-                                        Template="{StaticResource PreviousButtonTemplate}"
-                                        Width="28"
-                                        x:Name="PART_PreviousButton" />
+                                        Focusable="False"
+                                        Template="{StaticResource PreviousButtonTemplate}" />
                                     <Button
+                                        x:Name="PART_HeaderButton"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
                                         Focusable="False"
                                         FontSize="10.5"
                                         FontWeight="Bold"
-                                        Grid.Column="1"
-                                        Grid.Row="0"
-                                        HorizontalAlignment="Center"
-                                        Template="{StaticResource HeaderButtonTemplate}"
-                                        VerticalAlignment="Center"
-                                        x:Name="PART_HeaderButton" />
+                                        Template="{StaticResource HeaderButtonTemplate}" />
                                     <Button
-                                        Focusable="False"
-                                        Grid.Column="2"
+                                        x:Name="PART_NextButton"
                                         Grid.Row="0"
+                                        Grid.Column="2"
+                                        Width="28"
                                         Height="20"
                                         HorizontalAlignment="Right"
-                                        Template="{StaticResource NextButtonTemplate}"
-                                        Width="28"
-                                        x:Name="PART_NextButton" />
+                                        Focusable="False"
+                                        Template="{StaticResource NextButtonTemplate}" />
                                     <Grid
-                                        Grid.ColumnSpan="3"
+                                        x:Name="PART_MonthView"
                                         Grid.Row="1"
-                                        HorizontalAlignment="Center"
+                                        Grid.ColumnSpan="3"
                                         Margin="6,-1,6,6"
-                                        Visibility="Visible"
-                                        x:Name="PART_MonthView">
+                                        HorizontalAlignment="Center"
+                                        Visibility="Visible">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="Auto" />
@@ -514,12 +514,12 @@
                                         </Grid.RowDefinitions>
                                     </Grid>
                                     <Grid
-                                        Grid.ColumnSpan="3"
+                                        x:Name="PART_YearView"
                                         Grid.Row="1"
-                                        HorizontalAlignment="Center"
+                                        Grid.ColumnSpan="3"
                                         Margin="6,-3,7,6"
-                                        Visibility="Hidden"
-                                        x:Name="PART_YearView">
+                                        HorizontalAlignment="Center"
+                                        Visibility="Hidden">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="Auto" />
@@ -536,6 +536,7 @@
                             </Border>
                         </Border>
                         <Rectangle
+                            x:Name="PART_DisabledVisual"
                             Fill="{StaticResource DisabledColor}"
                             Opacity="0"
                             RadiusX="2"
@@ -543,8 +544,7 @@
                             Stretch="Fill"
                             Stroke="{StaticResource DisabledColor}"
                             StrokeThickness="1"
-                            Visibility="Collapsed"
-                            x:Name="PART_DisabledVisual" />
+                            Visibility="Collapsed" />
                         <!-- <VisualStateManager.VisualStateGroups> -->
                         <!--     <VisualStateGroup x:Name="CommonStates"> -->
                         <!--         <VisualState x:Name="Normal" /> -->
@@ -562,15 +562,15 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Visibility" TargetName="PART_DisabledVisual" Value="Visible" />
+                            <Setter TargetName="PART_DisabledVisual" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <DataTrigger Binding="{Binding DisplayMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Calendar}}}" Value="Year">
-                            <Setter Property="Visibility" TargetName="PART_MonthView" Value="Hidden" />
-                            <Setter Property="Visibility" TargetName="PART_YearView" Value="Visible" />
+                            <Setter TargetName="PART_MonthView" Property="Visibility" Value="Hidden" />
+                            <Setter TargetName="PART_YearView" Property="Visibility" Value="Visible" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding DisplayMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Calendar}}}" Value="Decade">
-                            <Setter Property="Visibility" TargetName="PART_MonthView" Value="Hidden" />
-                            <Setter Property="Visibility" TargetName="PART_YearView" Value="Visible" />
+                            <Setter TargetName="PART_MonthView" Property="Visibility" Value="Hidden" />
+                            <Setter TargetName="PART_YearView" Property="Visibility" Value="Visible" />
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -578,7 +578,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type Calendar}" x:Key="CalendarStyle">
+    <Style x:Key="CalendarStyle" TargetType="{x:Type Calendar}">
         <Setter Property="CalendarButtonStyle" Value="{StaticResource CalendarButtonStyle}" />
         <Setter Property="CalendarDayButtonStyle" Value="{StaticResource CalendarDayButtonStyle}" />
         <Setter Property="CalendarItemStyle" Value="{StaticResource CalendarItemStyle}" />
@@ -594,8 +594,8 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="6">
-                        <StackPanel HorizontalAlignment="Center" x:Name="PART_Root">
-                            <CalendarItem Style="{TemplateBinding CalendarItemStyle}" x:Name="PART_CalendarItem" />
+                        <StackPanel x:Name="PART_Root" HorizontalAlignment="Center">
+                            <CalendarItem x:Name="PART_CalendarItem" Style="{TemplateBinding CalendarItemStyle}" />
                         </StackPanel>
                     </Border>
                 </ControlTemplate>
