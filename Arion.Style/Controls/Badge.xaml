@@ -1,13 +1,13 @@
 ﻿<UserControl
-    Height="32"
-    Name="Root"
-    d:DesignHeight="32"
-    d:DesignWidth="300"
-    mc:Ignorable="d"
     x:Class="Arion.Style.Controls.Badge"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Style.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    Name="Root"
+    Height="32"
+    d:DesignHeight="32"
+    d:DesignWidth="300"
+    mc:Ignorable="d" />

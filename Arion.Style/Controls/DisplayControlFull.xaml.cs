@@ -208,7 +208,7 @@ namespace Arion.Style.Controls
                 TargetValue -= _delta;
             else TargetValue = Minimum;
 
-            _delta += Step * SpeedChange;
+            _delta += SpeedChange;
             _minusWaiter.CallOnce(() => _delta = Step);
         }
 

@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:arion="clr-namespace:Arion.Style.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Arion.Style.Controls"
     xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:converters="clr-namespace:Arion.Style.Converters"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:converters="clr-namespace:Arion.Style.Converters">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -30,32 +30,32 @@
                         </Grid.ColumnDefinitions>
 
                         <Border
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+                            x:Name="Border"
+                            Width="32"
                             Height="20"
                             Padding="{TemplateBinding Padding}"
-                            Width="32"
-                            x:Name="Border">
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}">
                             <Border
-                                Background="White"
-                                CornerRadius="8"
+                                x:Name="TgButton"
+                                Width="16"
                                 Height="16"
-                                HorizontalAlignment="Left"
                                 Margin="2,0,0,0"
                                 Padding="0"
+                                HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
-                                Width="16"
-                                x:Name="TgButton" />
+                                Background="White"
+                                CornerRadius="8" />
                         </Border>
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
+                            x:Name="PART_ContentHost"
                             Grid.Column="1"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
                             TextElement.FontSize="{TemplateBinding FontSize}"
                             TextElement.Foreground="{TemplateBinding Foreground}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                            Visibility="Collapsed"
-                            x:Name="PART_ContentHost" />
+                            Visibility="Collapsed" />
 
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -68,28 +68,28 @@
                                 <VisualState x:Name="Checked">
                                     <Storyboard>
                                         <ThicknessAnimation
-                                            Duration="0:0:.25"
                                             Storyboard.TargetName="TgButton"
                                             Storyboard.TargetProperty="Margin"
-                                            To="14 0 0 0" />
+                                            To="14 0 0 0"
+                                            Duration="0:0:.25" />
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Unchecked">
                                     <Storyboard>
                                         <ThicknessAnimation
-                                            Duration="0:0:.25"
                                             Storyboard.TargetName="TgButton"
                                             Storyboard.TargetProperty="Margin"
-                                            To="2 0 0 0" />
+                                            To="2 0 0 0"
+                                            Duration="0:0:.25" />
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Indeterminate">
                                     <Storyboard>
                                         <ThicknessAnimation
-                                            Duration="0:0:.25"
                                             Storyboard.TargetName="TgButton"
                                             Storyboard.TargetProperty="Margin"
-                                            To="5 0 0 0" />
+                                            To="5 0 0 0"
+                                            Duration="0:0:.25" />
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
@@ -209,9 +209,9 @@
 
                             <Setter Property="Background" Value="#9AA6AC" />
                             <Setter Property="BorderBrush" Value="#9AA6AC" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Pressed  -->
                         <MultiTrigger>
@@ -224,9 +224,9 @@
 
                             <Setter Property="Background" Value="#84919A" />
                             <Setter Property="BorderBrush" Value="#84919A" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Default  -->
                         <MultiTrigger>
@@ -239,9 +239,9 @@
 
                             <Setter Property="Background" Value="#B0BABF" />
                             <Setter Property="BorderBrush" Value="#B0BABF" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Disabled  -->
                         <MultiTrigger>
@@ -254,14 +254,14 @@
 
                             <Setter Property="Background" Value="#DDE2E4" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
 
                         <Trigger Property="HasContent" Value="true">
-                            <Setter Property="Margin" TargetName="PART_ContentHost" Value="5,0,0,0" />
-                            <Setter Property="Visibility" TargetName="PART_ContentHost" Value="Visible" />
+                            <Setter TargetName="PART_ContentHost" Property="Margin" Value="5,0,0,0" />
+                            <Setter TargetName="PART_ContentHost" Property="Visibility" Value="Visible" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -269,7 +269,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="ToggleButton" x:Key="TglVertical">
+    <Style x:Key="TglVertical" TargetType="ToggleButton">
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="BorderBrush" Value="#B0BABF" />
@@ -290,32 +290,32 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         <Border
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            CornerRadius="10"
+                            x:Name="Border"
+                            Width="{TemplateBinding attach:ToggleButton.WidthMainBorder}"
                             Height="{TemplateBinding attach:ToggleButton.HeightMainBorder}"
                             Padding="{TemplateBinding Padding}"
-                            Width="{TemplateBinding attach:ToggleButton.WidthMainBorder}"
-                            x:Name="Border">
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}">
                             <Border
-                                Background="White"
-                                CornerRadius="8"
+                                x:Name="TgButton"
+                                Width="{TemplateBinding attach:ToggleButton.WidthCheckBorder}"
                                 Height="{TemplateBinding attach:ToggleButton.HeightCheckBorder}"
-                                HorizontalAlignment="Center"
                                 Margin="{TemplateBinding attach:ToggleButton.ValueMove}"
                                 Padding="0"
+                                HorizontalAlignment="Center"
                                 VerticalAlignment="Bottom"
-                                Width="{TemplateBinding attach:ToggleButton.WidthCheckBorder}"
-                                x:Name="TgButton" />
+                                Background="White"
+                                CornerRadius="8" />
                         </Border>
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
+                            x:Name="PART_ContentHost"
                             Grid.Column="1"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
                             TextElement.FontSize="{TemplateBinding FontSize}"
                             TextElement.Foreground="{TemplateBinding Foreground}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                            Visibility="Collapsed"
-                            x:Name="PART_ContentHost" />
+                            Visibility="Collapsed" />
                     </Grid>
 
                     <ControlTemplate.Triggers>
@@ -324,10 +324,10 @@
                                 <BeginStoryboard>
                                     <Storyboard FillBehavior="Stop">
                                         <ThicknessAnimation
-                                            Duration="0:0:.25"
-                                            From="0 0 0 14"
                                             Storyboard.TargetProperty="(attach:ToggleButton.ValueMove)"
-                                            To="0 0 0 2" />
+                                            From="0 0 0 14"
+                                            To="0 0 0 2"
+                                            Duration="0:0:.25" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
@@ -337,10 +337,10 @@
                                 <BeginStoryboard>
                                     <Storyboard FillBehavior="Stop">
                                         <ThicknessAnimation
-                                            Duration="0:0:.25"
-                                            From="0 0 0 2"
                                             Storyboard.TargetProperty="(attach:ToggleButton.ValueMove)"
-                                            To="0 0 0 14" />
+                                            From="0 0 0 2"
+                                            To="0 0 0 14"
+                                            Duration="0:0:.25" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
@@ -350,10 +350,10 @@
                                 <BeginStoryboard>
                                     <Storyboard FillBehavior="Stop">
                                         <ThicknessAnimation
-                                            Duration="0:0:.25"
-                                            From="0 0 0 14"
                                             Storyboard.TargetProperty="(attach:ToggleButton.ValueMove)"
-                                            To="0 0 0 10" />
+                                            From="0 0 0 14"
+                                            To="0 0 0 10"
+                                            Duration="0:0:.25" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
@@ -482,11 +482,11 @@
 
                             <Setter Property="Background" Value="#9AA6AC" />
                             <Setter Property="BorderBrush" Value="#9AA6AC" />
-                            <Setter Property="Height" TargetName="TgButton" Value="12" />
-                            <Setter Property="Width" TargetName="TgButton" Value="2" />
+                            <Setter TargetName="TgButton" Property="Height" Value="12" />
+                            <Setter TargetName="TgButton" Property="Width" Value="2" />
                             <Setter Property="attach:ToggleButton.ValueMove" Value="0,0,0,10" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Pressed  -->
                         <MultiTrigger>
@@ -500,10 +500,10 @@
                             <Setter Property="Background" Value="#84919A" />
                             <Setter Property="BorderBrush" Value="#84919A" />
                             <Setter Property="attach:ToggleButton.ValueMove" Value="0,0,0,10" />
-                            <Setter Property="Height" TargetName="TgButton" Value="12" />
-                            <Setter Property="Width" TargetName="TgButton" Value="2" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="12" />
+                            <Setter TargetName="TgButton" Property="Width" Value="2" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Default  -->
                         <MultiTrigger>
@@ -517,10 +517,10 @@
                             <Setter Property="Background" Value="#B0BABF" />
                             <Setter Property="BorderBrush" Value="#B0BABF" />
                             <Setter Property="attach:ToggleButton.ValueMove" Value="0,0,0,10" />
-                            <Setter Property="Height" TargetName="TgButton" Value="12" />
-                            <Setter Property="Width" TargetName="TgButton" Value="2" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="12" />
+                            <Setter TargetName="TgButton" Property="Width" Value="2" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Disabled  -->
                         <MultiTrigger>
@@ -534,15 +534,15 @@
                             <Setter Property="Background" Value="#DDE2E4" />
                             <Setter Property="attach:ToggleButton.ValueMove" Value="0,0,0,10" />
                             <Setter Property="BorderBrush" Value="#DDE2E4" />
-                            <Setter Property="Height" TargetName="TgButton" Value="12" />
-                            <Setter Property="Width" TargetName="TgButton" Value="2" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="12" />
+                            <Setter TargetName="TgButton" Property="Width" Value="2" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
 
                         <Trigger Property="HasContent" Value="true">
-                            <Setter Property="Margin" TargetName="PART_ContentHost" Value="5,0,0,0" />
-                            <Setter Property="Visibility" TargetName="PART_ContentHost" Value="Visible" />
+                            <Setter TargetName="PART_ContentHost" Property="Margin" Value="5,0,0,0" />
+                            <Setter TargetName="PART_ContentHost" Property="Visibility" Value="Visible" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -550,17 +550,17 @@
         </Setter>
     </Style>
 
-    <Style TargetType="ToggleButton" x:Key="OnOffToggle">
+    <Style x:Key="OnOffToggle" TargetType="ToggleButton">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Border
+                        Width="80"
+                        Height="38"
                         Background="{StaticResource Lg2}"
                         BorderBrush="{StaticResource Lg2}"
                         BorderThickness="1"
-                        CornerRadius="3"
-                        Height="38"
-                        Width="80">
+                        CornerRadius="3">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
@@ -568,67 +568,67 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Border
-                                Background="Red"
-                                CornerRadius="3"
-                                Grid.Column="0"
-                                Height="36"
                                 Name="Border"
-                                Width="36">
+                                Grid.Column="0"
+                                Width="36"
+                                Height="36"
+                                Background="Red"
+                                CornerRadius="3">
                                 <TextBlock
-                                    Foreground="White"
-                                    HorizontalAlignment="Center"
                                     Name="TbTitle"
-                                    Text="Выкл"
-                                    VerticalAlignment="Center" />
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Foreground="White"
+                                    Text="Выкл" />
                             </Border>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Grid.Column" TargetName="Border" Value="2" />
-                            <Setter Property="Background" TargetName="Border" Value="Green" />
-                            <Setter Property="Text" TargetName="TbTitle" Value="Вкл" />
+                            <Setter TargetName="Border" Property="Grid.Column" Value="2" />
+                            <Setter TargetName="Border" Property="Background" Value="Green" />
+                            <Setter TargetName="TbTitle" Property="Text" Value="Вкл" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="ToggleButton" x:Key="ActiveUser">
+    <Style x:Key="ActiveUser" TargetType="ToggleButton">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Border
+                        Height="35"
+                        MaxWidth="300"
                         Background="{StaticResource Lg2}"
                         BorderBrush="{StaticResource Lg2}"
                         BorderThickness="1"
-                        CornerRadius="3"
-                        Height="35"
-                        MaxWidth="300">
+                        CornerRadius="3">
                         <Border
+                            Name="Border"
                             Height="33"
                             MaxWidth="298"
-                            Name="Border"
                             Padding="20,0">
                             <TextBlock
-                                Foreground="White"
-                                HorizontalAlignment="Center"
                                 Name="TbTitle"
-                                Text="Выключенный пользователь"
-                                VerticalAlignment="Center" />
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="Выключенный пользователь" />
                         </Border>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" TargetName="Border" Value="Green" />
-                            <Setter Property="Text" TargetName="TbTitle" Value="Активный пользователь" />
+                            <Setter TargetName="Border" Property="Background" Value="Green" />
+                            <Setter TargetName="TbTitle" Property="Text" Value="Активный пользователь" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="ToggleButton" x:Key="TglFocalSpot">
+    <Style x:Key="TglFocalSpot" TargetType="ToggleButton">
         <Setter Property="Width" Value="48" />
         <Setter Property="Height" Value="48" />
         <Setter Property="Cursor" Value="Hand" />
@@ -644,17 +644,17 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="3">
                         <Ellipse
-                            Fill="{StaticResource Dg2}"
+                            x:Name="FocalSpot"
+                            Width="15"
                             Height="15"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
-                            Width="15"
-                            x:Name="FocalSpot" />
+                            Fill="{StaticResource Dg2}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Width" TargetName="FocalSpot" Value="25" />
-                            <Setter Property="Height" TargetName="FocalSpot" Value="25" />
+                            <Setter TargetName="FocalSpot" Property="Width" Value="25" />
+                            <Setter TargetName="FocalSpot" Property="Height" Value="25" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="{StaticResource Lg4}" />
@@ -671,7 +671,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ToggleButton}" x:Key="ToggleButtonBaseLg">
+    <Style x:Key="ToggleButtonBaseLg" TargetType="{x:Type ToggleButton}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="Golos UI VF" />
         <Setter Property="MinWidth" Value="20" />
@@ -681,9 +681,9 @@
         <Setter Property="Padding" Value="16,8" />
     </Style>
     <Style
+        x:Key="TglOutline"
         BasedOn="{StaticResource ToggleButtonBaseLg}"
-        TargetType="{x:Type ToggleButton}"
-        x:Key="TglOutline">
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
@@ -700,14 +700,14 @@
                                 <VisualBrush Stretch="None" Visual="{Binding ElementName=Border}" />
                             </Grid.OpacityMask>
                             <Border
-                                Background="{TemplateBinding Background}"
-                                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+                                Name="Border"
                                 Margin=".5"
-                                Name="Border" />
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="{TemplateBinding attach:Hint.CornerRadius}" />
                             <Border
+                                Name="Shadow"
                                 BorderBrush="{StaticResource Dg4}"
                                 BorderThickness="5"
-                                Name="Shadow"
                                 Visibility="Collapsed">
                                 <Border.Effect>
                                     <BlurEffect Radius="15" />
@@ -715,10 +715,10 @@
                             </Border>
                         </Grid>
                         <Border
+                            x:Name="BorderMain"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-                            x:Name="BorderMain" />
+                            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}" />
                         <Grid Margin="{TemplateBinding Padding}" ZIndex="999">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
@@ -726,51 +726,51 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <arion:Icon
-                                Fill="{TemplateBinding Foreground}"
+                            <controls:Icon
                                 Grid.Column="0"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
                                 Height="{TemplateBinding attach:Button.IconHeight}"
-                                Kind="{TemplateBinding attach:Button.LeftIcon}"
                                 Margin="0,0,8,0"
+                                Fill="{TemplateBinding Foreground}"
+                                Kind="{TemplateBinding attach:Button.LeftIcon}"
                                 Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                                 StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                                 Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                             Converter={StaticResource IconConverter}}" />
 
                             <ContentPresenter
-                                Content="{TemplateBinding Content}"
-                                Effect="{TemplateBinding Effect}"
+                                Name="Presenter"
                                 Grid.Column="1"
                                 HorizontalAlignment="Center"
-                                Name="Presenter"
-                                VerticalAlignment="Center" />
+                                VerticalAlignment="Center"
+                                Content="{TemplateBinding Content}"
+                                Effect="{TemplateBinding Effect}" />
 
-                            <arion:Icon
-                                Fill="{TemplateBinding Foreground}"
+                            <controls:Icon
+                                x:Name="Icon"
                                 Grid.Column="1"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
                                 Height="{TemplateBinding attach:Button.IconHeight}"
                                 HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Fill="{TemplateBinding Foreground}"
                                 Kind="{TemplateBinding attach:Button.Icon}"
                                 Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                                 StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
-                                VerticalAlignment="Center"
                                 Visibility="{TemplateBinding attach:Button.Icon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding attach:Button.IconWidth}"
-                                x:Name="Icon" />
+                                                             Converter={StaticResource IconConverter}}" />
 
-                            <arion:Icon
-                                Fill="{TemplateBinding Foreground}"
+                            <controls:Icon
                                 Grid.Column="2"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
                                 Height="{TemplateBinding attach:Button.IconHeight}"
-                                Kind="{TemplateBinding attach:Button.RightIcon}"
                                 Margin="8,0,0,0"
+                                Fill="{TemplateBinding Foreground}"
+                                Kind="{TemplateBinding attach:Button.RightIcon}"
                                 Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                                 StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                                 Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                             Converter={StaticResource IconConverter}}" />
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -786,7 +786,7 @@
                             <!--  #E5E9EB  -->
                             <Setter Property="Background" Value="{StaticResource CleanW}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Lg3}" />
-                            <Setter Property="Visibility" TargetName="Shadow" Value="Visible" />
+                            <Setter TargetName="Shadow" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Opacity" Value=".5" />
@@ -810,9 +810,9 @@
         </Setter>
     </Style>
     <Style
+        x:Key="TglText"
         BasedOn="{StaticResource ToggleButtonBaseLg}"
-        TargetType="{x:Type ToggleButton}"
-        x:Key="TglText">
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
@@ -824,16 +824,16 @@
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Grid>
                         <Border
+                            Name="Border"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             ClipToBounds="True"
-                            CornerRadius="6"
-                            Name="Border" />
+                            CornerRadius="6" />
                         <Border
+                            Name="BrdEffect"
                             Background="#002D46"
                             CornerRadius="6"
-                            Name="BrdEffect"
                             Opacity="0" />
                         <Grid Margin="{TemplateBinding Padding}" ZIndex="999">
                             <Grid.ColumnDefinitions>
@@ -842,62 +842,62 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <arion:Icon
-                                Fill="{TemplateBinding Foreground}"
+                            <controls:Icon
                                 Grid.Column="0"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
                                 Height="{TemplateBinding attach:Button.IconHeight}"
-                                Kind="{TemplateBinding attach:Button.LeftIcon}"
                                 Margin="0,0,8,0"
+                                Fill="{TemplateBinding Foreground}"
+                                Kind="{TemplateBinding attach:Button.LeftIcon}"
                                 Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                                 StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                                 Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                             Converter={StaticResource IconConverter}}" />
 
                             <ContentPresenter
-                                Content="{TemplateBinding Content}"
-                                Effect="{TemplateBinding Effect}"
+                                Name="Presenter"
                                 Grid.Column="1"
                                 HorizontalAlignment="Center"
-                                Name="Presenter"
-                                VerticalAlignment="Center" />
+                                VerticalAlignment="Center"
+                                Content="{TemplateBinding Content}"
+                                Effect="{TemplateBinding Effect}" />
 
-                            <arion:Icon
-                                Fill="{TemplateBinding Foreground}"
+                            <controls:Icon
+                                x:Name="Icon"
                                 Grid.Column="1"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
                                 Height="{TemplateBinding attach:Button.IconHeight}"
                                 HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Fill="{TemplateBinding Foreground}"
                                 Kind="{TemplateBinding attach:Button.Icon}"
                                 Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                                 StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
-                                VerticalAlignment="Center"
                                 Visibility="{TemplateBinding attach:Button.Icon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding attach:Button.IconWidth}"
-                                x:Name="Icon" />
+                                                             Converter={StaticResource IconConverter}}" />
 
-                            <arion:Icon
-                                Fill="{TemplateBinding Foreground}"
+                            <controls:Icon
                                 Grid.Column="2"
+                                Width="{TemplateBinding attach:Button.IconWidth}"
                                 Height="{TemplateBinding attach:Button.IconHeight}"
-                                Kind="{TemplateBinding attach:Button.RightIcon}"
                                 Margin="8,0,0,0"
+                                Fill="{TemplateBinding Foreground}"
+                                Kind="{TemplateBinding attach:Button.RightIcon}"
                                 Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                                 StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                                 Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                             Converter={StaticResource IconConverter}}"
-                                Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                             Converter={StaticResource IconConverter}}" />
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" TargetName="BrdEffect" Value=".04" />
+                            <Setter TargetName="BrdEffect" Property="Opacity" Value=".04" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Opacity" TargetName="BrdEffect" Value=".1" />
+                            <Setter TargetName="BrdEffect" Property="Opacity" Value=".1" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Opacity" TargetName="BrdEffect" Value=".2" />
+                            <Setter TargetName="BrdEffect" Property="Opacity" Value=".2" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Opacity" Value=".5" />
@@ -910,7 +910,7 @@
 
     <!--  LIST CONTROL SELECT  -->
 
-    <Style TargetType="ToggleButton" x:Key="ListControlSelectMode">
+    <Style x:Key="ListControlSelectMode" TargetType="ToggleButton">
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="BorderBrush" Value="#B0BABF" />
@@ -921,47 +921,47 @@
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid>
                         <Border
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            CornerRadius="16"
+                            x:Name="Border"
+                            Width="156"
                             Height="32"
                             Padding="{TemplateBinding Padding}"
-                            Width="156"
-                            x:Name="Border">
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="16">
                             <Grid Margin="3">
                                 <Border
-                                    Background="White"
-                                    CornerRadius="13"
+                                    x:Name="TgButton"
+                                    Width="68"
                                     Height="25"
-                                    HorizontalAlignment="Left"
                                     Margin="0,0,0,0"
                                     Padding="0"
+                                    HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
-                                    Width="68"
-                                    x:Name="TgButton" />
+                                    Background="White"
+                                    CornerRadius="13" />
 
                                 <TextBlock
+                                    x:Name="Text1"
+                                    Width="68"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
                                     FontSize="11"
                                     FontWeight="Normal"
                                     Foreground="{StaticResource Dg2}"
-                                    HorizontalAlignment="Left"
                                     Text="Один"
-                                    TextAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Width="68"
-                                    x:Name="Text1" />
+                                    TextAlignment="Center" />
 
                                 <TextBlock
+                                    x:Name="Text2"
+                                    Width="80"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
                                     FontSize="11"
                                     FontWeight="Normal"
                                     Foreground="{StaticResource Mg1}"
-                                    HorizontalAlignment="Right"
                                     Opacity=".4"
                                     Text="Несколько"
-                                    TextAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Width="80"
-                                    x:Name="Text2" />
+                                    TextAlignment="Center" />
 
                             </Grid>
                         </Border>
@@ -979,11 +979,11 @@
                             <Setter Property="Background" Value="{StaticResource Mg4}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Mg4}" />
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
-                            <Setter Property="Width" TargetName="TgButton" Value="80" />
-                            <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
-                            <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
-                            <Setter Property="Opacity" TargetName="Text1" Value=".4" />
-                            <Setter Property="Opacity" TargetName="Text2" Value="1" />
+                            <Setter TargetName="TgButton" Property="Width" Value="80" />
+                            <Setter TargetName="Text1" Property="Foreground" Value="{StaticResource Mg1}" />
+                            <Setter TargetName="Text2" Property="Foreground" Value="{StaticResource Dg2}" />
+                            <Setter TargetName="Text1" Property="Opacity" Value=".4" />
+                            <Setter TargetName="Text2" Property="Opacity" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Pressed  -->
                         <MultiTrigger>
@@ -997,11 +997,11 @@
                             <Setter Property="Background" Value="{StaticResource Mg3}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Mg3}" />
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
-                            <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
-                            <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
-                            <Setter Property="Opacity" TargetName="Text1" Value=".4" />
-                            <Setter Property="Opacity" TargetName="Text2" Value="1" />
-                            <Setter Property="Width" TargetName="TgButton" Value="80" />
+                            <Setter TargetName="Text1" Property="Foreground" Value="{StaticResource Mg1}" />
+                            <Setter TargetName="Text2" Property="Foreground" Value="{StaticResource Dg2}" />
+                            <Setter TargetName="Text1" Property="Opacity" Value=".4" />
+                            <Setter TargetName="Text2" Property="Opacity" Value="1" />
+                            <Setter TargetName="TgButton" Property="Width" Value="80" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Default  -->
                         <MultiTrigger>
@@ -1012,11 +1012,11 @@
                                 <Condition Property="IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
-                            <Setter Property="Width" TargetName="TgButton" Value="80" />
-                            <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
-                            <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
-                            <Setter Property="Opacity" TargetName="Text1" Value=".4" />
-                            <Setter Property="Opacity" TargetName="Text2" Value="1" />
+                            <Setter TargetName="TgButton" Property="Width" Value="80" />
+                            <Setter TargetName="Text1" Property="Foreground" Value="{StaticResource Mg1}" />
+                            <Setter TargetName="Text2" Property="Foreground" Value="{StaticResource Dg2}" />
+                            <Setter TargetName="Text1" Property="Opacity" Value=".4" />
+                            <Setter TargetName="Text2" Property="Opacity" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - TRUE | Disabled  -->
                         <MultiTrigger>
@@ -1030,11 +1030,11 @@
                             <Setter Property="Background" Value="{StaticResource Lg2}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
                             <!-- <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Right" /> -->
-                            <Setter Property="Width" TargetName="TgButton" Value="80" />
-                            <Setter Property="Foreground" TargetName="Text1" Value="{StaticResource Mg1}" />
-                            <Setter Property="Foreground" TargetName="Text2" Value="{StaticResource Dg2}" />
-                            <Setter Property="Opacity" TargetName="Text1" Value=".4" />
-                            <Setter Property="Opacity" TargetName="Text2" Value="1" />
+                            <Setter TargetName="TgButton" Property="Width" Value="80" />
+                            <Setter TargetName="Text1" Property="Foreground" Value="{StaticResource Mg1}" />
+                            <Setter TargetName="Text2" Property="Foreground" Value="{StaticResource Dg2}" />
+                            <Setter TargetName="Text1" Property="Opacity" Value=".4" />
+                            <Setter TargetName="Text2" Property="Opacity" Value="1" />
                         </MultiTrigger>
 
 
@@ -1069,16 +1069,16 @@
                                     <Storyboard TargetName="TgButton">
                                         <DoubleAnimation
                                             AutoReverse="False"
-                                            Duration="0:0:.2"
-                                            From="68"
                                             Storyboard.TargetProperty="Width"
-                                            To="80" />
+                                            From="68"
+                                            To="80"
+                                            Duration="0:0:.2" />
                                         <ThicknessAnimation
                                             AutoReverse="False"
-                                            Duration="0:0:.2"
-                                            From="0,0,0,0"
                                             Storyboard.TargetProperty="Margin"
-                                            To="70,0,0,0" />
+                                            From="0,0,0,0"
+                                            To="70,0,0,0"
+                                            Duration="0:0:.2" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger.Actions>
@@ -1089,16 +1089,16 @@
                                     <Storyboard TargetName="TgButton">
                                         <DoubleAnimation
                                             AutoReverse="False"
-                                            Duration="0:0:.2"
-                                            From="80"
                                             Storyboard.TargetProperty="Width"
-                                            To="68" />
+                                            From="80"
+                                            To="68"
+                                            Duration="0:0:.2" />
                                         <ThicknessAnimation
                                             AutoReverse="False"
-                                            Duration="0:0:.2"
-                                            From="70,0,0,0"
                                             Storyboard.TargetProperty="Margin"
-                                            To="0,0,0,0" />
+                                            From="70,0,0,0"
+                                            To="0,0,0,0"
+                                            Duration="0:0:.2" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger.Actions>
@@ -1140,10 +1140,10 @@
 
                             <Setter Property="Background" Value="{StaticResource Mg4}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Mg4}" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Pressed  -->
                         <MultiTrigger>
@@ -1156,10 +1156,10 @@
 
                             <Setter Property="Background" Value="{StaticResource Mg3}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Mg3}" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Default  -->
                         <MultiTrigger>
@@ -1172,10 +1172,10 @@
 
                             <Setter Property="Background" Value="{StaticResource Mg5}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                         <!--  CHECKED - NULL | Disabled  -->
                         <MultiTrigger>
@@ -1188,10 +1188,10 @@
 
                             <Setter Property="Background" Value="{StaticResource Lg2}" />
                             <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
-                            <Setter Property="Height" TargetName="TgButton" Value="2" />
-                            <Setter Property="Width" TargetName="TgButton" Value="12" />
-                            <Setter Property="HorizontalAlignment" TargetName="TgButton" Value="Center" />
-                            <Setter Property="CornerRadius" TargetName="TgButton" Value="1" />
+                            <Setter TargetName="TgButton" Property="Height" Value="2" />
+                            <Setter TargetName="TgButton" Property="Width" Value="12" />
+                            <Setter TargetName="TgButton" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="TgButton" Property="CornerRadius" Value="1" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -1,17 +1,16 @@
 ﻿<UserControl
-    Height="54"
+    x:Class="Arion.Style.Controls.DisplayControlFull"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
+    x:Name="Root"
     Width="142"
+    Height="54"
     d:DesignHeight="54"
     d:DesignWidth="142"
-    mc:Ignorable="d"
-    x:Class="Arion.Style.Controls.DisplayControlFull"
-    x:Name="Root"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Arion.Style.Controls"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    mc:Ignorable="d">
     <UserControl.Resources>
         <!-- <ResourceDictionary> -->
         <!--     <ResourceDictionary.MergedDictionaries> -->
@@ -26,20 +25,20 @@
             <ColumnDefinition Width="40" />
         </Grid.ColumnDefinitions>
         <RepeatButton
+            Grid.Column="0"
+            Width="40"
+            Height="54"
+            Padding="5"
+            attach:Hint.CornerRadius="6,0,0,6"
             Click="BtnMinus_OnClick"
             Content="-"
             FontSize="24"
-            Grid.Column="0"
-            Height="54"
-            Padding="5"
-            Style="{StaticResource RbOutline}"
-            Width="40"
-            wpf:Hint.CornerRadius="6,0,0,6" />
+            Style="{StaticResource RbOutline}" />
         <Border
+            Grid.Column="1"
             Background="White"
             BorderBrush="{StaticResource Lg2}"
-            BorderThickness="0,1,0,1"
-            Grid.Column="1">
+            BorderThickness="0,1,0,1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="14" />
@@ -49,47 +48,47 @@
 
                 <Grid
                     Grid.Row="0"
+                    Width="45"
                     Height="14"
-                    VerticalAlignment="Top"
-                    Width="45">
+                    VerticalAlignment="Top">
                     <Path Data="M40 13.0001C37 14 8 14.0002 5 13.0001C2 12 0 7.72476e-05 0 7.72476e-05L45 7.72476e-05C45 7.72476e-05 43 12.0001 40 13.0001Z" Fill="{StaticResource Lg4}" />
                     <TextBlock
+                        VerticalAlignment="Center"
                         FontSize="12"
                         LineHeight="10"
-                        Text="{Binding ElementName=Root, Path=Label}"
-                        VerticalAlignment="Center" />
+                        Text="{Binding ElementName=Root, Path=Label}" />
                 </Grid>
                 <TextBlock
-                    FontSize="20"
-                    FontWeight="Regular"
                     Grid.Row="1"
                     Padding="0"
-                    Text="{Binding ElementName=Root, Path=ActualValue}"
-                    VerticalAlignment="Center" />
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    FontWeight="Regular"
+                    Text="{Binding ElementName=Root, Path=ActualValue}" />
                 <Grid
                     Grid.Row="2"
+                    Width="45"
                     Height="14"
-                    VerticalAlignment="Bottom"
-                    Width="45">
+                    VerticalAlignment="Bottom">
                     <Path Data="M5 0.999916C8 2.38419e-07 37 -0.000168324 40 0.999916C43 2 45 13.9999 45 13.9999H0C0 13.9999 2 1.99983 5 0.999916Z" Fill="{StaticResource Lg4}" />
                     <TextBlock
+                        Padding="0"
+                        VerticalAlignment="Center"
                         FontSize="12"
                         LineHeight="10"
-                        Padding="0"
-                        Text="{Binding ElementName=Root, Path=TargetValue}"
-                        VerticalAlignment="Center" />
+                        Text="{Binding ElementName=Root, Path=TargetValue}" />
                 </Grid>
             </Grid>
         </Border>
         <RepeatButton
+            Grid.Column="2"
+            Width="40"
+            Height="54"
+            Padding="5"
+            attach:Hint.CornerRadius="0,6,6,0"
             Click="BtnPlus_OnClick"
             Content="+"
             FontSize="24"
-            Grid.Column="2"
-            Height="54"
-            Padding="5"
-            Style="{StaticResource RbOutline}"
-            Width="40"
-            wpf:Hint.CornerRadius="0,6,6,0" />
+            Style="{StaticResource RbOutline}" />
     </Grid>
 </UserControl>

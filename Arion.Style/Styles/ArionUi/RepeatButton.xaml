@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
     xmlns:controls="clr-namespace:Arion.Style.Controls"
-    xmlns:converters="clr-namespace:Arion.Style.Converters"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:converters="clr-namespace:Arion.Style.Converters">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -12,7 +12,7 @@
     <converters:ButtonIconVisibilityConverter x:Key="IconConverter" />
     <converters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
 
-    <Style TargetType="{x:Type RepeatButton}" x:Key="ButtonBaseLg">
+    <Style x:Key="ButtonBaseLg" TargetType="{x:Type RepeatButton}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="Golos UI VF" />
         <Setter Property="MinWidth" Value="40" />
@@ -25,14 +25,14 @@
         <Setter Property="attach:Hint.CornerRadius" Value="6" />
     </Style>
 
-    <ControlTemplate TargetType="{x:Type RepeatButton}" x:Key="RepeatButtonFilledTemplate">
+    <ControlTemplate x:Key="RepeatButtonFilledTemplate" TargetType="{x:Type RepeatButton}">
         <Border
+            Name="Border"
+            Padding="{TemplateBinding Padding}"
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-            Name="Border"
-            Padding="{TemplateBinding Padding}">
+            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -41,41 +41,41 @@
                 </Grid.ColumnDefinitions>
 
                 <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
                     Grid.Column="0"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
-                    Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Margin="0,0,8,0"
+                    Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                 Converter={StaticResource IconConverter}}" />
 
                 <ContentPresenter
-                    Content="{TemplateBinding Content}"
                     Grid.Column="1"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center" />
+                    VerticalAlignment="Center"
+                    Content="{TemplateBinding Content}" />
 
                 <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
+                    x:Name="Icon"
                     Grid.Column="1"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
-                    Kind="{TemplateBinding attach:Button.Icon}"
                     VerticalAlignment="Center"
-                    Visibility="{TemplateBinding attach:Button.Icon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
-                    x:Name="Icon" />
-                <controls:Icon
                     Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.Icon}"
+                    Visibility="{TemplateBinding attach:Button.Icon,
+                                                 Converter={StaticResource IconConverter}}" />
+                <controls:Icon
                     Grid.Column="2"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
-                    Kind="{TemplateBinding attach:Button.RightIcon}"
                     Margin="8,0,0,0"
+                    Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.RightIcon}"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                 Converter={StaticResource IconConverter}}" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -92,14 +92,14 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <ControlTemplate TargetType="{x:Type RepeatButton}" x:Key="RepeatButtonOutlineTemplate">
+    <ControlTemplate x:Key="RepeatButtonOutlineTemplate" TargetType="{x:Type RepeatButton}">
         <Border
+            Name="Border"
+            Padding="{TemplateBinding Padding}"
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-            Name="Border"
-            Padding="{TemplateBinding Padding}">
+            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -108,41 +108,41 @@
                 </Grid.ColumnDefinitions>
 
                 <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
                     Grid.Column="0"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
-                    Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Margin="0,0,8,0"
+                    Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                 Converter={StaticResource IconConverter}}" />
 
                 <ContentPresenter
-                    Content="{TemplateBinding Content}"
                     Grid.Column="1"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center" />
+                    VerticalAlignment="Center"
+                    Content="{TemplateBinding Content}" />
 
                 <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
+                    x:Name="Icon"
                     Grid.Column="1"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
-                    Kind="{TemplateBinding attach:Button.Icon}"
                     VerticalAlignment="Center"
-                    Visibility="{TemplateBinding attach:Button.Icon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
-                    x:Name="Icon" />
-                <controls:Icon
                     Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.Icon}"
+                    Visibility="{TemplateBinding attach:Button.Icon,
+                                                 Converter={StaticResource IconConverter}}" />
+                <controls:Icon
                     Grid.Column="2"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
-                    Kind="{TemplateBinding attach:Button.RightIcon}"
                     Margin="8,0,0,0"
+                    Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.RightIcon}"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                 Converter={StaticResource IconConverter}}" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -160,16 +160,16 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <ControlTemplate TargetType="{x:Type RepeatButton}" x:Key="RepeatButtonTextTemplate">
+    <ControlTemplate x:Key="RepeatButtonTextTemplate" TargetType="{x:Type RepeatButton}">
         <Grid>
             <Border
+                Name="Border"
+                Padding="{TemplateBinding Padding}"
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-                Name="Border"
-                Opacity="0"
-                Padding="{TemplateBinding Padding}" />
+                Opacity="0" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -178,49 +178,49 @@
                 </Grid.ColumnDefinitions>
 
                 <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
                     Grid.Column="0"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
-                    Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Margin="0,0,8,0"
+                    Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.LeftIcon}"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                 Converter={StaticResource IconConverter}}" />
 
                 <ContentPresenter
-                    Content="{TemplateBinding Content}"
                     Grid.Column="1"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center" />
+                    VerticalAlignment="Center"
+                    Content="{TemplateBinding Content}" />
 
                 <controls:Icon
-                    Fill="{TemplateBinding Foreground}"
+                    x:Name="Icon"
                     Grid.Column="1"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
-                    Kind="{TemplateBinding attach:Button.Icon}"
                     VerticalAlignment="Center"
-                    Visibility="{TemplateBinding attach:Button.Icon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
-                    x:Name="Icon" />
-                <controls:Icon
                     Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.Icon}"
+                    Visibility="{TemplateBinding attach:Button.Icon,
+                                                 Converter={StaticResource IconConverter}}" />
+                <controls:Icon
                     Grid.Column="2"
+                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
-                    Kind="{TemplateBinding attach:Button.RightIcon}"
                     Margin="8,0,0,0"
+                    Fill="{TemplateBinding Foreground}"
+                    Kind="{TemplateBinding attach:Button.RightIcon}"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                 Converter={StaticResource IconConverter}}"
-                    Width="{TemplateBinding attach:Button.IconWidth}" />
+                                                 Converter={StaticResource IconConverter}}" />
             </Grid>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Opacity" TargetName="Border" Value=".04" />
+                <Setter TargetName="Border" Property="Opacity" Value=".04" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Opacity" TargetName="Border" Value=".1" />
+                <Setter TargetName="Border" Property="Opacity" Value=".1" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
@@ -229,9 +229,9 @@
     </ControlTemplate>
 
     <Style
+        x:Key="RbFilled"
         BasedOn="{StaticResource ButtonBaseLg}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbFilled">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="{StaticResource Pr500}" />
         <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
@@ -239,9 +239,9 @@
         <Setter Property="Template" Value="{StaticResource RepeatButtonFilledTemplate}" />
     </Style>
     <Style
+        x:Key="RbOutline"
         BasedOn="{StaticResource ButtonBaseLg}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbOutline">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#DDE2E4" />
@@ -249,9 +249,9 @@
         <Setter Property="Template" Value="{StaticResource RepeatButtonOutlineTemplate}" />
     </Style>
     <Style
+        x:Key="RbText"
         BasedOn="{StaticResource ButtonBaseLg}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbText">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#002D46" />
         <Setter Property="BorderBrush" Value="#002D46" />
@@ -259,9 +259,9 @@
         <Setter Property="Template" Value="{StaticResource RepeatButtonTextTemplate}" />
     </Style>
     <Style
+        x:Key="RbOutlineL"
         BasedOn="{StaticResource ButtonBaseLg}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbOutlineL">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#DDE2E4" />
@@ -270,18 +270,18 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6,0,0,6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="6,0,0,6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            Effect="{TemplateBinding Effect}"
-                            HorizontalAlignment="Center"
                             Name="Presenter"
-                            VerticalAlignment="Center" />
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}"
+                            Effect="{TemplateBinding Effect}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -295,10 +295,10 @@
                                 <Setter.Value>
                                     <DropShadowEffect
                                         BlurRadius="0"
-                                        Color="Transparent"
                                         Direction="0"
                                         Opacity="0"
-                                        ShadowDepth="0" />
+                                        ShadowDepth="0"
+                                        Color="Transparent" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -309,10 +309,10 @@
                                 <Setter.Value>
                                     <DropShadowEffect
                                         BlurRadius="0"
-                                        Color="Transparent"
                                         Direction="0"
                                         Opacity="0"
-                                        ShadowDepth="0" />
+                                        ShadowDepth="0"
+                                        Color="Transparent" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -322,9 +322,9 @@
         </Setter>
     </Style>
     <Style
+        x:Key="RbOutlineR"
         BasedOn="{StaticResource ButtonBaseLg}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbOutlineR">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#DDE2E4" />
@@ -333,18 +333,18 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="0,6,6,0"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="0,6,6,0">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
-                            Effect="{TemplateBinding Effect}"
-                            HorizontalAlignment="Center"
                             Name="Presenter"
-                            VerticalAlignment="Center" />
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}"
+                            Effect="{TemplateBinding Effect}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -358,10 +358,10 @@
                                 <Setter.Value>
                                     <DropShadowEffect
                                         BlurRadius="0"
-                                        Color="Transparent"
                                         Direction="0"
                                         Opacity="0"
-                                        ShadowDepth="0" />
+                                        ShadowDepth="0"
+                                        Color="Transparent" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -372,10 +372,10 @@
                                 <Setter.Value>
                                     <DropShadowEffect
                                         BlurRadius="0"
-                                        Color="Transparent"
                                         Direction="0"
                                         Opacity="0"
-                                        ShadowDepth="0" />
+                                        ShadowDepth="0"
+                                        Color="Transparent" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -387,7 +387,7 @@
 
     <!--  MEDIUM  -->
 
-    <Style TargetType="{x:Type RepeatButton}" x:Key="ButtonBaseMedium">
+    <Style x:Key="ButtonBaseMedium" TargetType="{x:Type RepeatButton}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="Golos UI VF" />
         <Setter Property="MinWidth" Value="32" />
@@ -397,9 +397,9 @@
     </Style>
 
     <Style
+        x:Key="RbFilledMd"
         BasedOn="{StaticResource ButtonBaseMedium}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbFilledMd">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="#4094F7" />
         <Setter Property="BorderBrush" Value="#4094F7" />
@@ -408,16 +408,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -438,9 +438,9 @@
         </Setter>
     </Style>
     <Style
+        x:Key="RbOutlineMd"
         BasedOn="{StaticResource ButtonBaseMedium}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbOutlineMd">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#DDE2E4" />
@@ -449,16 +449,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -479,9 +479,9 @@
         </Setter>
     </Style>
     <Style
+        x:Key="RbTextMd"
         BasedOn="{StaticResource ButtonBaseMedium}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbTextMd">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -490,16 +490,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -522,7 +522,7 @@
 
     <!--  SMALL  -->
 
-    <Style TargetType="{x:Type RepeatButton}" x:Key="ButtonBaseSmall">
+    <Style x:Key="ButtonBaseSmall" TargetType="{x:Type RepeatButton}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="Golos UI VF" />
         <Setter Property="MinWidth" Value="24" />
@@ -532,9 +532,9 @@
     </Style>
 
     <Style
+        x:Key="RbFilledSm"
         BasedOn="{StaticResource ButtonBaseSmall}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbFilledSm">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="#4094F7" />
         <Setter Property="BorderBrush" Value="#4094F7" />
@@ -543,16 +543,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -573,9 +573,9 @@
         </Setter>
     </Style>
     <Style
+        x:Key="RbOutlineSm"
         BasedOn="{StaticResource ButtonBaseSmall}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbOutlineSm">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#DDE2E4" />
@@ -584,16 +584,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -614,9 +614,9 @@
         </Setter>
     </Style>
     <Style
+        x:Key="RbTextSm"
         BasedOn="{StaticResource ButtonBaseSmall}"
-        TargetType="{x:Type RepeatButton}"
-        x:Key="RbTextSm">
+        TargetType="{x:Type RepeatButton}">
         <Setter Property="Foreground" Value="#252C32" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -625,16 +625,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
                     <Border
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6"
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}">
+                        CornerRadius="6">
                         <ContentPresenter
-                            Content="{TemplateBinding Content}"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center" />
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
