@@ -22,6 +22,23 @@ namespace Arion.Style.AttachedProperties
 
         #endregion
 
+        #region PrefixWidth
+
+        public static readonly DependencyProperty PrefixWidthProperty = DependencyProperty.RegisterAttached(
+            "PrefixWidth", typeof(GridLength), typeof(TextBox), new PropertyMetadata(GridLength.Auto));
+
+        public static void SetPrefixWidth(DependencyObject element, GridLength value)
+        {
+            element.SetValue(PrefixWidthProperty, value);
+        }
+
+        public static GridLength GetPrefixWidth(DependencyObject element)
+        {
+            return (GridLength)element.GetValue(PrefixWidthProperty);
+        }
+
+        #endregion PrefixWidth
+
         #region Suffix
 
         public static readonly DependencyProperty SuffixProperty = DependencyProperty.RegisterAttached(
@@ -38,6 +55,23 @@ namespace Arion.Style.AttachedProperties
         }
 
         #endregion
+
+        #region SuffixWidth
+
+        public static readonly DependencyProperty SuffixWidthProperty = DependencyProperty.RegisterAttached(
+            "SuffixWidth", typeof(GridLength), typeof(TextBox), new PropertyMetadata(GridLength.Auto));
+
+        public static void SetSuffixWidth(DependencyObject element, GridLength value)
+        {
+            element.SetValue(SuffixWidthProperty, value);
+        }
+
+        public static GridLength GetSuffixWidth(DependencyObject element)
+        {
+            return (GridLength)element.GetValue(SuffixWidthProperty);
+        }
+
+        #endregion SuffixWidth
 
         #region CanClear
 
@@ -128,6 +162,8 @@ namespace Arion.Style.AttachedProperties
 
         #endregion
 
+        #region IsNymber
+
         public static readonly DependencyProperty IsNumberProperty = DependencyProperty.RegisterAttached(
             "IsNumber", typeof(bool), typeof(TextBox), new PropertyMetadata(default(bool)));
 
@@ -140,5 +176,7 @@ namespace Arion.Style.AttachedProperties
         {
             return (bool)element.GetValue(IsNumberProperty);
         }
+
+        #endregion IsNymber
     }
 }

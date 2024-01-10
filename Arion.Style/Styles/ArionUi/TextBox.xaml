@@ -25,6 +25,7 @@
         <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
         <Setter Property="Padding" Value="5,0" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource CleanW}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="commands:ClearText.HandlesClearCommand" Value="True" />
@@ -32,6 +33,8 @@
         <Setter Property="commands:NumberCommand.HandlesDownCommand" Value="True" />
         <Setter Property="attach:TextBox.IconHeight" Value="15" />
         <Setter Property="attach:TextBox.IconWidth" Value="15" />
+        <Setter Property="attach:TextBox.PrefixWidth" Value="Auto" />
+        <Setter Property="attach:TextBox.SuffixWidth" Value="Auto" />
         <Setter Property="attach:Hint.CornerRadius" Value="6" />
         <Setter Property="Validation.ErrorTemplate">
             <Setter.Value>
@@ -59,12 +62,12 @@
                         CornerRadius="{TemplateBinding attach:Hint.CornerRadius}">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="{TemplateBinding attach:TextBox.PrefixWidth}" />
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="{TemplateBinding attach:TextBox.SuffixWidth}" />
                             </Grid.ColumnDefinitions>
 
                             <!--  PREFIX  -->
@@ -72,6 +75,7 @@
                                 x:Name="BorderPrefix"
                                 Grid.Column="0"
                                 Padding="16,8"
+                                HorizontalAlignment="Stretch"
                                 Background="{StaticResource Lg5}"
                                 CornerRadius="5.6,0,0,5.6"
                                 Visibility="{TemplateBinding attach:TextBox.Prefix,
@@ -99,18 +103,17 @@
                                 Width="{TemplateBinding Width}"
                                 Padding="{TemplateBinding Padding}"
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="Center"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                 FontWeight="Medium"
                                 IsTabStop="False"
                                 TextElement.Foreground="{TemplateBinding Foreground}" />
-
                             <!--  PLACE HOLDER  -->
                             <TextBlock
                                 x:Name="Placeholder"
                                 Grid.Column="2"
                                 Padding="10,0"
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="Center"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                 FontSize="{TemplateBinding FontSize}"
                                 Foreground="{StaticResource Mg4}"
                                 IsHitTestVisible="False"
@@ -183,6 +186,7 @@
                                 x:Name="BorderSuffix"
                                 Grid.Column="5"
                                 Padding="16,8"
+                                HorizontalAlignment="Stretch"
                                 Background="{StaticResource Lg5}"
                                 CornerRadius="0,5.6,5.6,0"
                                 Visibility="{TemplateBinding attach:TextBox.Suffix,

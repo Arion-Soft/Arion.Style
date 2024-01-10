@@ -225,7 +225,7 @@ namespace Arion.Style.Controls
                 TargetValue += _delta;
             else TargetValue = Maximum;
             
-            _delta *= SpeedChange;
+            _delta += SpeedChange;
             _plusWaiter.CallOnce(() => _delta = Step);
         }
 
