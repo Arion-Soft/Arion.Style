@@ -14,7 +14,7 @@
         <license type="file">LICENSE.txt</license>
         <readme>docs\Readme.md</readme>
         <releaseNotes>
-            change minus on display block
+            change style for text box
         </releaseNotes>
     </metadata>
     <files>
