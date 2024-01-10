@@ -742,7 +742,7 @@ namespace Arion.Style.Controls
         private void LeftSlider_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             _leftSliderPressed = true;
-            Mouse.Capture(this, CaptureMode.Element);
+            Mouse.Capture(Thumb1, CaptureMode.Element);
             Panel.SetZIndex(Thumb1, 999);
             Panel.SetZIndex(Thumb2, 100);
         }
@@ -750,13 +750,13 @@ namespace Arion.Style.Controls
         private void LeftSlider_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             _leftSliderPressed = false;
-            Mouse.Capture(this, CaptureMode.None);
+            Mouse.Capture(Thumb1, CaptureMode.None);
         }
 
         private void RightSlider_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             _rightSliderPressed = true;
-            Mouse.Capture(this, CaptureMode.Element);
+            Mouse.Capture(Thumb2, CaptureMode.Element);
             Panel.SetZIndex(Thumb1, 100);
             Panel.SetZIndex(Thumb2, 999);
         }
@@ -764,7 +764,7 @@ namespace Arion.Style.Controls
         private void RightSlider_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             _rightSliderPressed = false;
-            Mouse.Capture(this, CaptureMode.None);
+            Mouse.Capture(Thumb2, CaptureMode.None);
         }
 
         private void RangeSlider_OnMouseUp(object sender, MouseButtonEventArgs e)
