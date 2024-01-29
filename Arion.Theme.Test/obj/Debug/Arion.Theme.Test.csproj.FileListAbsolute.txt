@@ -29,7 +29,6 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.Test.exe
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\bin\Debug\Arion.Theme.Test.pdb
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.csproj.AssemblyReference.cache
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Arion.Theme.Test.csproj.SuggestedBindingRedirects.cache
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\MainWindow.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\App.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\MainWindow.g.cs
@@ -141,8 +140,6 @@ C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\English.bam
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Russian.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Badges.g.cs
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Badges.baml
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ColorPicker.g.cs
-C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ColorPicker.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\RichTextBoxes.g.cs
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\RichTextBoxes.baml
 C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\ToolBar.g.cs
@@ -229,3 +226,5 @@ C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.g
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Dialogs.baml
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\GroupBox.baml
 C:\Users\ivand\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\Home.baml
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\DataGrid.g.cs
+C:\Users\ss_six\RiderProjects\Arion.Style\Arion.Theme.Test\obj\Debug\Views\DataGrid.baml

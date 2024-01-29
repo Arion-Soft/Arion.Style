@@ -6,16 +6,16 @@ namespace Arion.Style.AttachedProperties
     public class GroupBox
     {
         public static readonly DependencyProperty BackgroundHeaderProperty = DependencyProperty.RegisterAttached(
-            "BackgroundHeader", typeof(SolidColorBrush), typeof(GroupBox), new PropertyMetadata(default(SolidColorBrush)));
+            "BackgroundHeader", typeof(Brush), typeof(GroupBox), new PropertyMetadata(default(Brush)));
 
-        public static void SetBackgroundHeader(DependencyObject element, SolidColorBrush value)
+        public static void SetBackgroundHeader(DependencyObject element, Brush value)
         {
             element.SetValue(BackgroundHeaderProperty, value);
         }
 
-        public static SolidColorBrush GetBackgroundHeader(DependencyObject element)
+        public static Brush GetBackgroundHeader(DependencyObject element)
         {
-            return (SolidColorBrush)element.GetValue(BackgroundHeaderProperty);
+            return (Brush)element.GetValue(BackgroundHeaderProperty);
         }
     }
 }

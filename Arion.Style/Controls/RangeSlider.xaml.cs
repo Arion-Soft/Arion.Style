@@ -23,6 +23,10 @@ namespace Arion.Style.Controls
         public RangeSlider()
         {
             InitializeComponent();
+
+            RightThumbMargin = new Thickness(0,0,0,0);
+            LeftThumbMargin = new Thickness(0,0,0,0);
+
             PropertyChanged += OnPropertyChanged;
             UpperValue = Maximum;
             LowerValue = Minimum;
@@ -97,6 +101,8 @@ namespace Arion.Style.Controls
         private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             Debug.WriteLine($"property changed: {e.PropertyName}");
+
+            if (TrackWidth is double.NaN) return;
             if (e.PropertyName == nameof(LowerValue))
             {
                 if (LowerValue < Minimum || LowerValue > Maximum) return;
@@ -341,7 +347,7 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty RightThumbMarginProperty =
             DependencyProperty.Register(nameof(RightThumbMargin), typeof(Thickness), typeof(RangeSlider),
-                new PropertyMetadata());
+                new PropertyMetadata(new Thickness(0,0,0,0)));
 
         #endregion
 

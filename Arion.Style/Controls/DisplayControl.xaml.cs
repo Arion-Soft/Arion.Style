@@ -321,7 +321,7 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty TextFontSizeProperty =
             DependencyProperty.Register(nameof(TextFontSize), typeof(double), typeof(DisplayControl),
-                new PropertyMetadata());
+                new PropertyMetadata(10.0));
 
         #endregion
 

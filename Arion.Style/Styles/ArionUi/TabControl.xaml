@@ -43,21 +43,21 @@
 
     <Style TargetType="{x:Type TabItem}">
         <Style.Resources>
-            <LinearGradientBrush x:Key="GradientEffectLeft" StartPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.StartPointLeft)}" EndPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.EndPointLeft)}">
-                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.SecondaryColorSelected)}" />
-                <GradientStop Offset=".25" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.PrimaryColorSelected)}" />
+            <LinearGradientBrush x:Key="GradientEffectLeft" StartPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.StartPointLeft)}" EndPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.EndPointLeft)}">
+                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.SecondaryColorSelected)}" />
+                <GradientStop Offset=".25" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.PrimaryColorSelected)}" />
             </LinearGradientBrush>
-            <LinearGradientBrush x:Key="GradientEffectTop" StartPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.StartPointTop)}" EndPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.EndPointTop)}">
-                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.SecondaryColorSelected)}" />
-                <GradientStop Offset=".5" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.PrimaryColorSelected)}" />
+            <LinearGradientBrush x:Key="GradientEffectTop" StartPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.StartPointTop)}" EndPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.EndPointTop)}">
+                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.SecondaryColorSelected)}" />
+                <GradientStop Offset=".5" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.PrimaryColorSelected)}" />
             </LinearGradientBrush>
-            <LinearGradientBrush x:Key="GradientEffectRight" StartPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.StartPointRight)}" EndPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.EndPointRight)}">
-                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.SecondaryColorSelected)}" />
-                <GradientStop Offset=".25" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.PrimaryColorSelected)}" />
+            <LinearGradientBrush x:Key="GradientEffectRight" StartPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.StartPointRight)}" EndPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.EndPointRight)}">
+                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.SecondaryColorSelected)}" />
+                <GradientStop Offset=".25" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.PrimaryColorSelected)}" />
             </LinearGradientBrush>
-            <LinearGradientBrush x:Key="GradientEffectBottom" StartPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.StartPointBottom)}" EndPoint="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.EndPointBottom)}">
-                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.SecondaryColorSelected)}" />
-                <GradientStop Offset=".25" Color="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=(attach:TabItem.PrimaryColorSelected)}" />
+            <LinearGradientBrush x:Key="GradientEffectBottom" StartPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.StartPointBottom)}" EndPoint="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.EndPointBottom)}">
+                <GradientStop Offset="0" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.SecondaryColorSelected)}" />
+                <GradientStop Offset=".25" Color="{Binding RelativeSource={RelativeSource Self}, Path=(attach:TabItem.PrimaryColorSelected)}" />
             </LinearGradientBrush>
         </Style.Resources>
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
