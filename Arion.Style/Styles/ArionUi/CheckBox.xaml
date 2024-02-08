@@ -36,7 +36,7 @@
     <Style TargetType="{x:Type CheckBox}">
         <Setter Property="BorderBrush" Value="{StaticResource Mg5}" />
         <Setter Property="Background" Value="{StaticResource Lg5}" />
-        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderThickness" Value="2" />
         <Setter Property="attach:CheckBox.MarkHeight" Value="11" />
         <Setter Property="attach:CheckBox.MarkWidth" Value="15" />
         <Setter Property="attach:CheckBox.BoxMarkHeight" Value="25" />
@@ -84,7 +84,7 @@
                             VerticalAlignment="Center"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="2"
+                            BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
                             Focusable="False">
                             <Grid x:Name="markGrid">
