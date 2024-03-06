@@ -197,6 +197,19 @@ namespace Arion.Style.Controls
 
         #endregion
 
+        #region ChangeStep - bool
+
+        public static readonly DependencyProperty ChangeStepProperty = DependencyProperty.Register(
+            nameof(ChangeStep), typeof(bool), typeof(DisplayControlFull), new PropertyMetadata(true));
+
+        public bool ChangeStep
+        {
+            get => (bool)GetValue(ChangeStepProperty);
+            set => SetValue(ChangeStepProperty, value);
+        }
+
+        #endregion ChangeStep
+
         #endregion
 
         #region Private Methods
@@ -208,7 +221,8 @@ namespace Arion.Style.Controls
                 TargetValue -= _delta;
             else TargetValue = Minimum;
 
-            _delta += SpeedChange;
+            if(ChangeStep)
+                _delta += SpeedChange;
             _minusWaiter.CallOnce(() => _delta = Step);
         }
 
@@ -225,7 +239,8 @@ namespace Arion.Style.Controls
                 TargetValue += _delta;
             else TargetValue = Maximum;
             
-            _delta += SpeedChange;
+            if(ChangeStep)
+                _delta += SpeedChange;
             _plusWaiter.CallOnce(() => _delta = Step);
         }
 

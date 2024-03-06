@@ -35,7 +35,7 @@ namespace Arion.Style.Controls
         }
 
         public static readonly DependencyProperty FillProperty =
-            DependencyProperty.Register(nameof(Fill), typeof(Brush), typeof(Icon), new PropertyMetadata());
+            DependencyProperty.Register(nameof(Fill), typeof(Brush), typeof(Icon), new FrameworkPropertyMetadata(default(Brush), FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         public new double Height
         {
