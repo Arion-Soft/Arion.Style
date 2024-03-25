@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Theme", "Arion.Theme.csproj", "{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arion.Style", "Arion.Style.csproj", "{B3327E45-C915-4A22-A9E1-90DB0C6B47A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

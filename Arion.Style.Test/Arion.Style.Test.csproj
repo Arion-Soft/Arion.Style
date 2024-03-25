@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>Arion.Style</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Arion.Style\Arion.Style.csproj">
+      <Project>{b3327e45-c915-4a22-a9e1-90db0c6b47a4}</Project>
+      <Name>Arion.Style</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
