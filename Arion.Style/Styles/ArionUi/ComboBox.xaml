@@ -111,7 +111,12 @@
         <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
         <Setter Property="MinWidth" Value="120" />
         <Setter Property="MinHeight" Value="40" />
+        <Setter Property="Padding" Value="5,0,0,0" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Background" Value="{StaticResource CleanW}" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="Template">
             <Setter.Value>
@@ -125,22 +130,23 @@
                             Template="{StaticResource ComboBoxToggleButton}" />
                         <ContentPresenter
                             Name="ContentSite"
-                            Margin="10,0,40,0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Content="{TemplateBinding SelectionBoxItem}"
                             ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                             ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
                             IsHitTestVisible="False" />
                         <TextBox
                             x:Name="PART_EditableTextBox"
-                            Margin="16,3,56,3"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
-                            Background="{StaticResource CleanW}"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Background="{TemplateBinding Background}"
                             Focusable="True"
                             FontSize="{TemplateBinding FontSize}"
-                            Foreground="{StaticResource Dg2}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}"
                             IsReadOnly="{TemplateBinding IsReadOnly}"
                             Style="{x:Null}"
                             Template="{StaticResource ComboBoxTextBox}"
@@ -152,7 +158,6 @@
                             IsOpen="{TemplateBinding IsDropDownOpen}"
                             Placement="Bottom"
                             PopupAnimation="Slide">
-
                             <Grid
                                 Name="DropDown"
                                 MinWidth="{TemplateBinding ActualWidth}"
@@ -160,11 +165,10 @@
                                 SnapsToDevicePixels="True">
                                 <Border
                                     x:Name="DropDownBorder"
-                                    Background="White"
-                                    BorderBrush="{StaticResource Lg2}"
-                                    BorderThickness="1"
-                                    CornerRadius="26" />
-                                <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1" />
+                                <ScrollViewer SnapsToDevicePixels="True">
                                     <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
                                 </ScrollViewer>
                             </Grid>
@@ -172,11 +176,12 @@
 
                         <TextBlock
                             x:Name="Placeholder"
-                            Margin="16,8,56,8"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Background="{TemplateBinding Background}"
                             FontSize="{TemplateBinding FontSize}"
-                            FontWeight="Light"
+                            FontWeight="{TemplateBinding FontWeight}"
                             Foreground="{StaticResource Mg4}"
                             IsHitTestVisible="False"
                             Text="{TemplateBinding attach:Hint.Placeholder}"
@@ -212,27 +217,22 @@
 
     <!--  SimpleStyles: ComboBoxItem  -->
     <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
-        <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ComboBoxItem}">
                     <Border
                         Name="Border"
-                        Width="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=ActualWidth}"
                         Height="40"
-                        Padding="5"
-                        HorizontalAlignment="Stretch"
                         SnapsToDevicePixels="true">
                         <ContentPresenter
                             x:Name="Content"
-                            Width="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=ActualWidth}"
-                            HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}"
-                            VerticalAlignment="Center"
-                            TextBlock.TextAlignment="Left"
-                            TextElement.FontSize="14"
+                            Margin="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=Padding}"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=VerticalContentAlignment}"
+                            SnapsToDevicePixels="true"
+                            TextElement.FontSize="{TemplateBinding FontSize}"
+                            TextElement.FontWeight="{TemplateBinding FontWeight}"
                             TextElement.Foreground="{TemplateBinding Foreground}" />
                     </Border>
                     <ControlTemplate.Triggers>
