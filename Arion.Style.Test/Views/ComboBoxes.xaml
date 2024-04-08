@@ -39,7 +39,6 @@
             <ComboBox
                 Width="200"
                 Margin="5"
-                HorizontalContentAlignment="Left"
                 wpf:Hint.Placeholder="Placeholder">
                 <ComboBox.Items>
                     <ComboBoxItem Content="1" />
