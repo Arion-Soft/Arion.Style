@@ -30,9 +30,4 @@
     <Content Include="Icons\Images\Xray.gif" />
     <Content Include="Icons\Images\XrayIcon.png" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="ShowMeTheXAML.AvalonEdit" Version="2.0.0" />
-    <PackageReference Include="ShowMeTheXAML.MSBuild" Version="2.0.0" />
-  </ItemGroup>
 </Project>
