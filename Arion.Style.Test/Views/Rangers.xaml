@@ -6,10 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     d:DesignHeight="1000"
     d:DesignWidth="1900"
     mc:Ignorable="d">
+    <UserControl.Style>
+        <Style BasedOn="{StaticResource {StaticResource {x:Type controls:RangeSlider}}}" TargetType="controls:RangeSlider">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </UserControl.Style>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -38,51 +42,37 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Range slider"
-            FontSize="32"
             Style="{DynamicResource Lbl}" />
-        <smtx:XamlDisplay
+        <controls:RangeSlider
+            Name="RangeSlider"
             Grid.Row="1"
             Grid.Column="0"
-            Margin="5"
-            UniqueKey="Rs1">
-            <controls:RangeSlider
-                Name="RangeSlider"
-                Width="222"
-                Maximum="65535"
-                Minimum="0" />
-        </smtx:XamlDisplay>
-        <smtx:XamlDisplay
+            Width="222"
+            Maximum="65535"
+            Minimum="0" />
+
+        <controls:RangeSlider
             Grid.Row="2"
             Grid.Column="0"
-            Margin="5"
-            UniqueKey="Rs2">
-            <controls:RangeSlider
-                Width="300"
-                Maximum="100"
-                Minimum="0" />
-        </smtx:XamlDisplay>
-        <smtx:XamlDisplay
+            Width="300"
+            Maximum="100"
+            Minimum="0" />
+
+        <controls:RangeSlider
             Grid.Row="3"
             Grid.Column="0"
-            Margin="5"
-            UniqueKey="Rs3">
-            <controls:RangeSlider
-                Width="300"
-                Maximum="100"
-                Minimum="0"
-                ShowValues="True" />
-        </smtx:XamlDisplay>
-        <smtx:XamlDisplay
+            Width="300"
+            Maximum="100"
+            Minimum="0"
+            ShowValues="True" />
+
+        <controls:RangeSlider
+            Name="Slider65535"
             Grid.Row="4"
             Grid.Column="0"
-            Margin="5"
-            UniqueKey="Rs4">
-            <controls:RangeSlider
-                Name="Slider65535"
-                Width="500"
-                Maximum="65535"
-                Minimum="0" />
-        </smtx:XamlDisplay>
+            Width="500"
+            Maximum="65535"
+            Minimum="0" />
 
         <Grid Grid.Row="5" Grid.Column="0">
             <TextBox
@@ -95,18 +85,16 @@
                 Text="{Binding ElementName=Slider65535, Path=UpperValue, Mode=OneWay}" />
         </Grid>
 
-        <smtx:XamlDisplay
+
+        <controls:RangeSlider
             Grid.Row="6"
             Grid.Column="0"
+            Width="500"
             Margin="5"
-            UniqueKey="Rs5">
-            <controls:RangeSlider
-                Width="500"
-                LowerValue="{Binding ElementName=Slider65535, Path=LowerValue, Mode=TwoWay}"
-                Maximum="65535"
-                Minimum="0"
-                ShowValues="True"
-                UpperValue="{Binding ElementName=Slider65535, Path=UpperValue, Mode=TwoWay}" />
-        </smtx:XamlDisplay>
+            LowerValue="{Binding ElementName=Slider65535, Path=LowerValue, Mode=TwoWay}"
+            Maximum="65535"
+            Minimum="0"
+            ShowValues="True"
+            UpperValue="{Binding ElementName=Slider65535, Path=UpperValue, Mode=TwoWay}" />
     </Grid>
 </UserControl>

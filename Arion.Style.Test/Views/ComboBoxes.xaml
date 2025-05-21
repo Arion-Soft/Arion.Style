@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     d:DesignHeight="1000"
     d:DesignWidth="1000"
@@ -35,49 +34,46 @@
             FontSize="32"
             Style="{DynamicResource Lbl}" />
 
-        <smtx:XamlDisplay Grid.Row="1" Grid.Column="0" UniqueKey="ComboBox1">
-            <ComboBox
-                Width="200"
-                Margin="5"
-                HorizontalContentAlignment="Left"
-                wpf:Hint.Placeholder="Placeholder">
-                <ComboBox.Items>
-                    <ComboBoxItem Content="1" />
-                    <ComboBoxItem Content="2" />
-                    <ComboBoxItem Content="3" />
-                    <ComboBoxItem Content="4" />
-                    <ComboBoxItem Content="5" />
-                    <ComboBoxItem Content="6" />
-                </ComboBox.Items>
-            </ComboBox>
-        </smtx:XamlDisplay>
-        <smtx:XamlDisplay Grid.Row="2" Grid.Column="0" UniqueKey="ComboBox2">
-            <ComboBox Width="200" Margin="5" IsEditable="True">
-                <ComboBox.Items>
-                    <ComboBoxItem Content="1" />
-                    <ComboBoxItem Content="2" />
-                    <ComboBoxItem Content="3" />
-                    <ComboBoxItem Content="4" />
-                    <ComboBoxItem Content="5" />
-                    <ComboBoxItem Content="6" />
-                </ComboBox.Items>
-            </ComboBox>
-        </smtx:XamlDisplay>
-        <smtx:XamlDisplay Grid.Row="3" Grid.Column="0" UniqueKey="ComboBox3">
-            <ComboBox
-                Width="200"
-                Margin="5"
-                IsEnabled="False"
-                SelectedIndex="2">
-                <ComboBox.Items>
-                    <ComboBoxItem Content="1" />
-                    <ComboBoxItem Content="2" />
-                    <ComboBoxItem Content="3" />
-                    <ComboBoxItem Content="4" />
-                    <ComboBoxItem Content="5" />
-                    <ComboBoxItem Content="6" />
-                </ComboBox.Items>
-            </ComboBox>
-        </smtx:XamlDisplay>
+        <ComboBox
+            Width="200"
+            Margin="5"
+            HorizontalContentAlignment="Left"
+            wpf:Hint.Placeholder="Placeholder">
+            <ComboBox.Items>
+                <ComboBoxItem Content="1" />
+                <ComboBoxItem Content="2" />
+                <ComboBoxItem Content="3" />
+                <ComboBoxItem Content="4" />
+                <ComboBoxItem Content="5" />
+                <ComboBoxItem Content="6" />
+            </ComboBox.Items>
+        </ComboBox>
+        <ComboBox
+            Width="200"
+            Margin="5"
+            IsEditable="True">
+            <ComboBox.Items>
+                <ComboBoxItem Content="1" />
+                <ComboBoxItem Content="2" />
+                <ComboBoxItem Content="3" />
+                <ComboBoxItem Content="4" />
+                <ComboBoxItem Content="5" />
+                <ComboBoxItem Content="6" />
+            </ComboBox.Items>
+        </ComboBox>
+        <ComboBox
+            Width="200"
+            Margin="5"
+            IsEnabled="False"
+            SelectedIndex="2">
+            <ComboBox.Items>
+                <ComboBoxItem Content="1" />
+                <ComboBoxItem Content="2" />
+                <ComboBoxItem Content="3" />
+                <ComboBoxItem Content="4" />
+                <ComboBoxItem Content="5" />
+                <ComboBoxItem Content="6" />
+            </ComboBox.Items>
+        </ComboBox>
     </Grid>
 </UserControl>

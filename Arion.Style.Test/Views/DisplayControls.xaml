@@ -6,7 +6,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Arion.Theme.Test.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties;assembly=Arion.Style"
     d:DesignHeight="1000"
     d:DesignWidth="1000"
@@ -35,44 +34,35 @@
             FontSize="32"
             Style="{DynamicResource Lbl}" />
 
-        <smtx:XamlDisplay
+        <controls:DisplayControl
             Grid.Row="1"
             Grid.Column="0"
-            UniqueKey="DisplayControl1">
-            <controls:DisplayControl
-                Width="170"
-                Height="90"
-                Text="кВ" />
-        </smtx:XamlDisplay>
+            Width="170"
+            Height="90"
+            Text="кВ" />
 
-        <smtx:XamlDisplay
+        <controls:DisplayControlFull
             Grid.Row="2"
             Grid.Column="0"
-            UniqueKey="DisplayControl2">
-            <controls:DisplayControlFull
-                Margin="5"
-                Label="кВ"
-                Maximum="320"
-                Minimum="0"
-                QuickChange="True"
-                SpeedChange="1.05"
-                Step="1"
-                TargetValueChange="DisplayControlFull_OnTargetValueChange" />
-        </smtx:XamlDisplay>
+            Margin="5"
+            Label="кВ"
+            Maximum="320"
+            Minimum="0"
+            QuickChange="True"
+            SpeedChange="1.05"
+            Step="1"
+            TargetValueChange="DisplayControlFull_OnTargetValueChange" />
 
-        <smtx:XamlDisplay
+        <controls:DisplayControlFull
             Grid.Row="3"
             Grid.Column="0"
-            UniqueKey="DisplayControl3">
-            <controls:DisplayControlFull
-                Margin="5"
-                Label="мА"
-                Maximum="22.5"
-                Minimum="0"
-                QuickChange="True"
-                Round="1"
-                Step=".1"
-                TargetValueChange="DisplayControlFull_OnTargetValueChange" />
-        </smtx:XamlDisplay>
+            Margin="5"
+            Label="мА"
+            Maximum="22.5"
+            Minimum="0"
+            QuickChange="True"
+            Round="1"
+            Step=".1"
+            TargetValueChange="DisplayControlFull_OnTargetValueChange" />
     </Grid>
 </UserControl>

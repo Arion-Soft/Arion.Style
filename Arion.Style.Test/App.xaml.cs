@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using ShowMeTheXAML;
 
 namespace Arion.Theme.Test
 {
@@ -10,7 +9,6 @@ namespace Arion.Theme.Test
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            XamlDisplay.Init();
             base.OnStartup(e);
         }
     }
