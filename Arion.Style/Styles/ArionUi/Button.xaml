@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:attach="clr-namespace:Arion.Style.AttachedProperties"
     xmlns:controls="clr-namespace:Arion.Style.Controls"
-    xmlns:converters="clr-namespace:Arion.Style.Converters">
+    xmlns:converters="clr-namespace:Arion.Style.Converters"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="FontFamily.xaml" />
         <ResourceDictionary Source="Colors.xaml" />
@@ -19,23 +19,23 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Border
-                        Name="Focus"
-                        Margin="-3"
                         BorderBrush="{StaticResource Pr300}"
                         BorderThickness="4"
-                        CornerRadius="6" />
+                        CornerRadius="6"
+                        Margin="-3"
+                        Name="Focus" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
-    <ControlTemplate x:Key="FilledTemplate" TargetType="{x:Type Button}">
+    <ControlTemplate TargetType="{x:Type Button}" x:Key="FilledTemplate">
         <Border
-            Name="Border"
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}">
+            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+            Name="Border">
             <Grid Margin="{TemplateBinding Padding}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -43,58 +43,58 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <controls:Icon
-                    Grid.Column="0"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
-                    Height="{TemplateBinding attach:Button.IconHeight}"
-                    Margin="0,0,8,0"
                     Fill="{TemplateBinding Foreground}"
+                    Grid.Column="0"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.LeftIcon}"
+                    Margin="0,0,8,0"
                     Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                     StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}" />
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ContentPresenter
+                    Content="{TemplateBinding Content}"
                     Grid.Column="1"
                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    VerticalAlignment="Center"
-                    Content="{TemplateBinding Content}"
-                    TextElement.Foreground="{TemplateBinding Foreground}" />
+                    TextElement.Foreground="{TemplateBinding Foreground}"
+                    VerticalAlignment="Center" />
                 <controls:Icon
-                    x:Name="Icon"
+                    Fill="{TemplateBinding Foreground}"
                     Grid.Column="1"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Fill="{TemplateBinding Foreground}"
                     Kind="{TemplateBinding attach:Button.Icon}"
                     Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                     StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
+                    VerticalAlignment="Center"
                     Visibility="{TemplateBinding attach:Button.Icon,
-                                                 Converter={StaticResource IconConverter}}" />
-                <controls:Icon
-                    Grid.Column="2"
+                                                 Converter={StaticResource IconConverter}}"
                     Width="{TemplateBinding attach:Button.IconWidth}"
-                    Height="{TemplateBinding attach:Button.IconHeight}"
-                    Margin="8,0,0,0"
+                    x:Name="Icon" />
+                <controls:Icon
                     Fill="{TemplateBinding Foreground}"
+                    Grid.Column="2"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.RightIcon}"
+                    Margin="8,0,0,0"
                     Stroke="{TemplateBinding attach:Button.IconStrokeThickness}"
                     StrokeColor="{TemplateBinding attach:Button.IconStrokeColor}"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                 Converter={StaticResource IconConverter}}" />
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ProgressBar
-                    x:Name="ProgressBar"
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
-                    Width="{TemplateBinding Width,
-                                            Converter={StaticResource ProgressBarWidthConverter}}"
                     Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
                     Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
                     Style="{StaticResource BtnCircleProgressBar}"
+                    Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
-                    Value="{TemplateBinding attach:Button.ProgressBarValue}" />
+                    Width="{TemplateBinding Width,
+                                            Converter={StaticResource ProgressBarWidthConverter}}"
+                    x:Name="ProgressBar" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -116,13 +116,13 @@
                 <Setter Property="MinWidth" Value="40" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
-                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnCircleProgressBar}" />
-                <Setter TargetName="ProgressBar" Property="Width" Value="16" />
-                <Setter TargetName="ProgressBar" Property="Height" Value="16" />
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
+                <Setter Property="Width" TargetName="ProgressBar" Value="16" />
+                <Setter Property="Height" TargetName="ProgressBar" Value="16" />
                 <Setter Property="Padding" Value="5" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
-                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnProgressBar}" />
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
             </Trigger>
             <Trigger Property="attach:Button.Position" Value="First">
                 <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
@@ -135,14 +135,14 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <ControlTemplate x:Key="OutlineTemplate" TargetType="{x:Type Button}">
+    <ControlTemplate TargetType="{x:Type Button}" x:Key="OutlineTemplate">
         <Border
-            Name="Border"
-            Padding="{TemplateBinding Padding}"
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}">
+            CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
+            Name="Border"
+            Padding="{TemplateBinding Padding}">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -150,52 +150,52 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <controls:Icon
-                    Grid.Column="0"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
-                    Height="{TemplateBinding attach:Button.IconHeight}"
-                    Margin="0,0,8,0"
                     Fill="{TemplateBinding Foreground}"
+                    Grid.Column="0"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.LeftIcon}"
+                    Margin="0,0,8,0"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}" />
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ContentPresenter
+                    Content="{TemplateBinding Content}"
                     Grid.Column="1"
                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    VerticalAlignment="Center"
-                    Content="{TemplateBinding Content}"
-                    TextElement.Foreground="{TemplateBinding Foreground}" />
+                    TextElement.Foreground="{TemplateBinding Foreground}"
+                    VerticalAlignment="Center" />
                 <controls:Icon
-                    x:Name="Icon"
+                    Fill="{TemplateBinding Foreground}"
                     Grid.Column="1"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Fill="{TemplateBinding Foreground}"
                     Kind="{TemplateBinding attach:Button.Icon}"
+                    VerticalAlignment="Center"
                     Visibility="{TemplateBinding attach:Button.Icon,
-                                                 Converter={StaticResource IconConverter}}" />
-                <controls:Icon
-                    Grid.Column="2"
+                                                 Converter={StaticResource IconConverter}}"
                     Width="{TemplateBinding attach:Button.IconWidth}"
-                    Height="{TemplateBinding attach:Button.IconHeight}"
-                    Margin="8,0,0,0"
+                    x:Name="Icon" />
+                <controls:Icon
                     Fill="{TemplateBinding Foreground}"
+                    Grid.Column="2"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.RightIcon}"
+                    Margin="8,0,0,0"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                 Converter={StaticResource IconConverter}}" />
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ProgressBar
-                    x:Name="ProgressBar"
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
-                    Width="{TemplateBinding Width,
-                                            Converter={StaticResource ProgressBarWidthConverter}}"
                     Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
                     Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
                     Style="{StaticResource BtnCircleProgressBar}"
+                    Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
-                    Value="{TemplateBinding attach:Button.ProgressBarValue}" />
+                    Width="{TemplateBinding Width,
+                                            Converter={StaticResource ProgressBarWidthConverter}}"
+                    x:Name="ProgressBar" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -216,13 +216,13 @@
                 <Setter Property="MinWidth" Value="40" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
-                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnCircleProgressBar}" />
-                <Setter TargetName="ProgressBar" Property="Width" Value="16" />
-                <Setter TargetName="ProgressBar" Property="Height" Value="16" />
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
+                <Setter Property="Width" TargetName="ProgressBar" Value="16" />
+                <Setter Property="Height" TargetName="ProgressBar" Value="16" />
                 <Setter Property="Padding" Value="5" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
-                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnProgressBar}" />
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
             </Trigger>
             <Trigger Property="attach:Button.Position" Value="First">
                 <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
@@ -239,16 +239,16 @@
             <!-- </Trigger> -->
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <ControlTemplate x:Key="TextTemplate" TargetType="{x:Type Button}">
+    <ControlTemplate TargetType="{x:Type Button}" x:Key="TextTemplate">
         <Grid>
             <Border
-                Name="Border"
-                Padding="{TemplateBinding Padding}"
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 CornerRadius="{TemplateBinding attach:Hint.CornerRadius}"
-                Opacity="0" />
+                Name="Border"
+                Opacity="0"
+                Padding="{TemplateBinding Padding}" />
             <Grid Margin="{TemplateBinding Padding}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -256,61 +256,61 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <controls:Icon
-                    Grid.Column="0"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
-                    Height="{TemplateBinding attach:Button.IconHeight}"
-                    Margin="0,0,8,0"
                     Fill="{TemplateBinding Foreground}"
+                    Grid.Column="0"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.LeftIcon}"
+                    Margin="0,0,8,0"
                     Visibility="{TemplateBinding attach:Button.LeftIcon,
-                                                 Converter={StaticResource IconConverter}}" />
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ContentPresenter
+                    Content="{TemplateBinding Content}"
                     Grid.Column="1"
                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    VerticalAlignment="Center"
-                    Content="{TemplateBinding Content}"
-                    TextElement.Foreground="{TemplateBinding Foreground}" />
+                    TextElement.Foreground="{TemplateBinding Foreground}"
+                    VerticalAlignment="Center" />
                 <controls:Icon
-                    x:Name="Icon"
+                    Fill="{TemplateBinding Foreground}"
                     Grid.Column="1"
-                    Width="{TemplateBinding attach:Button.IconWidth}"
                     Height="{TemplateBinding attach:Button.IconHeight}"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Fill="{TemplateBinding Foreground}"
                     Kind="{TemplateBinding attach:Button.Icon}"
+                    VerticalAlignment="Center"
                     Visibility="{TemplateBinding attach:Button.Icon,
-                                                 Converter={StaticResource IconConverter}}" />
-                <controls:Icon
-                    Grid.Column="2"
+                                                 Converter={StaticResource IconConverter}}"
                     Width="{TemplateBinding attach:Button.IconWidth}"
-                    Height="{TemplateBinding attach:Button.IconHeight}"
-                    Margin="8,0,0,0"
+                    x:Name="Icon" />
+                <controls:Icon
                     Fill="{TemplateBinding Foreground}"
+                    Grid.Column="2"
+                    Height="{TemplateBinding attach:Button.IconHeight}"
                     Kind="{TemplateBinding attach:Button.RightIcon}"
+                    Margin="8,0,0,0"
                     Visibility="{TemplateBinding attach:Button.RightIcon,
-                                                 Converter={StaticResource IconConverter}}" />
+                                                 Converter={StaticResource IconConverter}}"
+                    Width="{TemplateBinding attach:Button.IconWidth}" />
                 <ProgressBar
-                    x:Name="ProgressBar"
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
-                    Width="{TemplateBinding Width,
-                                            Converter={StaticResource ProgressBarWidthConverter}}"
                     Maximum="{TemplateBinding attach:Button.ProgressBarMaximum}"
                     Minimum="{TemplateBinding attach:Button.ProgressBarMinimum}"
                     Style="{StaticResource BtnCircleProgressBar}"
+                    Value="{TemplateBinding attach:Button.ProgressBarValue}"
                     Visibility="{TemplateBinding attach:Button.ProgressBarShow,
                                                  Converter={StaticResource VisibilityConverter}}"
-                    Value="{TemplateBinding attach:Button.ProgressBarValue}" />
+                    Width="{TemplateBinding Width,
+                                            Converter={StaticResource ProgressBarWidthConverter}}"
+                    x:Name="ProgressBar" />
             </Grid>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter TargetName="Border" Property="Opacity" Value=".04" />
+                <Setter Property="Opacity" TargetName="Border" Value=".04" />
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter TargetName="Border" Property="Opacity" Value=".1" />
+                <Setter Property="Opacity" TargetName="Border" Value=".1" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value=".5" />
@@ -320,12 +320,12 @@
                 <Setter Property="MinWidth" Value="40" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Circle">
-                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnCircleProgressBar}" />
-                <Setter TargetName="ProgressBar" Property="Width" Value="16" />
-                <Setter TargetName="ProgressBar" Property="Height" Value="16" />
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnCircleProgressBar}" />
+                <Setter Property="Width" TargetName="ProgressBar" Value="16" />
+                <Setter Property="Height" TargetName="ProgressBar" Value="16" />
             </Trigger>
             <Trigger Property="attach:Button.ProgressBarType" Value="Linear">
-                <Setter TargetName="ProgressBar" Property="Style" Value="{StaticResource BtnProgressBar}" />
+                <Setter Property="Style" TargetName="ProgressBar" Value="{StaticResource BtnProgressBar}" />
             </Trigger>
             <Trigger Property="attach:Button.Position" Value="First">
                 <Setter Property="attach:Hint.CornerRadius" Value="6,0,0,6" />
@@ -343,14 +343,13 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="BtnBase" TargetType="{x:Type Button}">
+    <Style TargetType="{x:Type Button}" x:Key="BtnBase">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
         <Setter Property="MinWidth" Value="20" />
         <Setter Property="MinHeight" Value="20" />
-        <Setter Property="Height" Value="40" />
         <Setter Property="FontWeight" Value="Medium" />
-        <Setter Property="Padding" Value="16,8" />
+        <Setter Property="Padding" Value="16,14" />
         <Setter Property="attach:Button.IconHeight" Value="15" />
         <Setter Property="attach:Button.IconWidth" Value="15" />
         <Setter Property="attach:Hint.CornerRadius" Value="6" />
@@ -360,18 +359,18 @@
     </Style>
 
     <Style
-        x:Key="BtnFilled"
         BasedOn="{StaticResource BtnBase}"
-        TargetType="{x:Type Button}">
+        TargetType="{x:Type Button}"
+        x:Key="BtnFilled">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="{StaticResource Pr500}" />
         <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
         <Setter Property="Template" Value="{StaticResource FilledTemplate}" />
     </Style>
     <Style
-        x:Key="BtnOutline"
         BasedOn="{StaticResource BtnBase}"
-        TargetType="{x:Type Button}">
+        TargetType="{x:Type Button}"
+        x:Key="BtnOutline">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="{StaticResource CleanW}" />
         <Setter Property="BorderBrush" Value="{StaticResource Lg2}" />
@@ -379,9 +378,9 @@
         <Setter Property="Template" Value="{StaticResource OutlineTemplate}" />
     </Style>
     <Style
-        x:Key="BtnText"
         BasedOn="{StaticResource BtnBase}"
-        TargetType="{x:Type Button}">
+        TargetType="{x:Type Button}"
+        x:Key="BtnText">
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="Background" Value="#002D46" />
         <Setter Property="BorderBrush" Value="#002D46" />
@@ -391,9 +390,9 @@
     <!--  Inline alert buttons  -->
 
     <Style
-        x:Key="InlineAlertInfoPrimary"
         BasedOn="{StaticResource BtnBase}"
-        TargetType="{x:Type Button}">
+        TargetType="{x:Type Button}"
+        x:Key="InlineAlertInfoPrimary">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="{StaticResource Pr500}" />
         <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
@@ -401,17 +400,17 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6">
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
                         <ContentPresenter
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
                             Content="{TemplateBinding Content}"
-                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                            HorizontalAlignment="Center"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
+                            VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -431,9 +430,9 @@
         </Setter>
     </Style>
     <Style
-        x:Key="InlineAlertDangerPrimary"
         BasedOn="{StaticResource BtnBase}"
-        TargetType="{x:Type Button}">
+        TargetType="{x:Type Button}"
+        x:Key="InlineAlertDangerPrimary">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="{StaticResource R500}" />
         <Setter Property="BorderBrush" Value="{StaticResource R500}" />
@@ -441,17 +440,17 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6">
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
                         <ContentPresenter
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
                             Content="{TemplateBinding Content}"
-                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                            HorizontalAlignment="Center"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
+                            VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -471,9 +470,9 @@
         </Setter>
     </Style>
     <Style
-        x:Key="InlineAlertWarningPrimary"
         BasedOn="{StaticResource BtnBase}"
-        TargetType="{x:Type Button}">
+        TargetType="{x:Type Button}"
+        x:Key="InlineAlertWarningPrimary">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="{StaticResource Y500}" />
         <Setter Property="BorderBrush" Value="{StaticResource Y500}" />
@@ -481,17 +480,17 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6">
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
                         <ContentPresenter
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
                             Content="{TemplateBinding Content}"
-                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                            HorizontalAlignment="Center"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
+                            VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -511,9 +510,9 @@
         </Setter>
     </Style>
     <Style
-        x:Key="InlineAlertSuccessPrimary"
         BasedOn="{StaticResource BtnBase}"
-        TargetType="{x:Type Button}">
+        TargetType="{x:Type Button}"
+        x:Key="InlineAlertSuccessPrimary">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Background" Value="{StaticResource G500}" />
         <Setter Property="BorderBrush" Value="{StaticResource G500}" />
@@ -521,17 +520,17 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border
-                        Name="Border"
-                        Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="6">
+                        CornerRadius="6"
+                        Name="Border"
+                        Padding="{TemplateBinding Padding}">
                         <ContentPresenter
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
                             Content="{TemplateBinding Content}"
-                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                            HorizontalAlignment="Center"
+                            TextElement.Foreground="{TemplateBinding Foreground}"
+                            VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
