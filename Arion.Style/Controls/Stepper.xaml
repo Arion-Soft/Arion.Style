@@ -50,7 +50,7 @@
                     VerticalAlignment="Center"
                     FontSize="18"
                     IsHitTestVisible="False"
-                    Text="{Binding ElementName=Root, Path=Value}"
+                    Text="{Binding ElementName=Root, Path=Value, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"
                     TextAlignment="Center" />
                 <TextBox
                     Name="TbValue"
@@ -62,7 +62,7 @@
                     BorderThickness="0"
                     FontSize="18"
                     PreviewTextInput="TbValue_OnPreviewTextInput"
-                    Text="{Binding ElementName=Root, Path=Value}"
+                    Text="{Binding ElementName=Root, Path=Value, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"
                     Visibility="Collapsed" />
             </Grid>
         </Border>
