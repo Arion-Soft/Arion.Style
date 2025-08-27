@@ -10,6 +10,7 @@ namespace Arion.Style.Controls
         public Stepper()
         {
             InitializeComponent();
+            DataObject.AddPastingHandler(TblValue, OnTextPaste);
         }
 
         public event EventHandler Plus;
@@ -78,6 +79,11 @@ namespace Arion.Style.Controls
             DependencyProperty.Register(nameof(Step), typeof(double), typeof(Stepper), new PropertyMetadata(1.0));
 
         #endregion
+
+        private void OnTextPaste(object sender, DataObjectPastingEventArgs e)
+        {
+            e.Handled = true;
+        }
 
         private void BtnMinus_OnClick(object sender, RoutedEventArgs e)
         {
