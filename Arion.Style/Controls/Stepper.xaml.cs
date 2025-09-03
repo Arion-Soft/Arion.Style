@@ -11,6 +11,7 @@ namespace Arion.Style.Controls
         {
             InitializeComponent();
             DataObject.AddPastingHandler(TblValue, OnTextPaste);
+            DataObject.AddPastingHandler(TbValue, OnTextPaste);
         }
 
         public event EventHandler Plus;
@@ -82,6 +83,7 @@ namespace Arion.Style.Controls
 
         private void OnTextPaste(object sender, DataObjectPastingEventArgs e)
         {
+            e.CancelCommand();
             e.Handled = true;
         }
 
