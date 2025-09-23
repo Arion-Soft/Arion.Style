@@ -45,7 +45,7 @@
         <Setter Property="Topmost" Value="False" />
         <Setter Property="Background" Value="{StaticResource Pr200}" />
         <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
-        <Setter Property="BorderThickness" Value="5" />
+        <Setter Property="BorderThickness" Value="4" />
         <Setter Property="AllowsTransparency" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
