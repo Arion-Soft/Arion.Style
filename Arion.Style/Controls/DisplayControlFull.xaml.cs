@@ -32,6 +32,10 @@ namespace Arion.Style.Controls
         #region Events
 
         public event EventHandler TargetValueChange;
+        public event EventHandler MinusMouseUp;
+        public event EventHandler MinusMouseDown;
+        public event EventHandler PlusMouseUp;
+        public event EventHandler PlusMouseDown;
 
         #endregion
 
@@ -226,6 +230,15 @@ namespace Arion.Style.Controls
             _minusWaiter.CallOnce(() => _delta = Step);
         }
 
+        private void BtnMinus_OnLeftMouseUp(object sender, RoutedEventArgs e)
+        {
+            MinusMouseUp?.Invoke(this, EventArgs.Empty);
+        }
+        private void BtnMinus_OnLeftMouseDown(object sender, RoutedEventArgs e)
+        {
+            MinusMouseDown?.Invoke(this, EventArgs.Empty);
+        }
+
         private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
         {
             if (_delta == 0) _delta = Step;
@@ -242,6 +255,16 @@ namespace Arion.Style.Controls
             if(ChangeStep)
                 _delta += SpeedChange;
             _plusWaiter.CallOnce(() => _delta = Step);
+        }
+        
+        private void BtnPlus_OnLeftMouseUp(object sender, RoutedEventArgs e)
+        {
+            PlusMouseUp?.Invoke(this, EventArgs.Empty);
+        }
+        
+        private void BtnPlus_OnLeftMouseDown(object sender, RoutedEventArgs e)
+        {
+            PlusMouseDown?.Invoke(this, EventArgs.Empty);
         }
 
         #endregion
