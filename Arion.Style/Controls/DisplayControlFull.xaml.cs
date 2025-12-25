@@ -220,14 +220,14 @@ namespace Arion.Style.Controls
 
         private void BtnMinus_OnClick(object sender, RoutedEventArgs e)
         {
-            if (_delta == 0) _delta = Step;
-            if (TargetValue - Step >= Minimum)
-                TargetValue -= _delta;
-            else TargetValue = Minimum;
-
-            if(ChangeStep)
-                _delta += SpeedChange;
-            _minusWaiter.CallOnce(() => _delta = Step);
+            // if (_delta == 0) _delta = Step;
+            // if (TargetValue - Step >= Minimum)
+            //     TargetValue -= _delta;
+            // else TargetValue = Minimum;
+            //
+            // if(ChangeStep)
+            //     _delta += SpeedChange;
+            // _minusWaiter.CallOnce(() => _delta = Step);
         }
 
         private void BtnMinus_OnLeftMouseUp(object sender, RoutedEventArgs e)
@@ -241,20 +241,20 @@ namespace Arion.Style.Controls
 
         private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
         {
-            if (_delta == 0) _delta = Step;
-            if (MaxIsLimit)
-            {
-                if (TargetValue + Step <= Limit)
-                    TargetValue += _delta;
-                else TargetValue = Limit;
-            }
-            else if (TargetValue + Step <= Maximum)
-                TargetValue += _delta;
-            else TargetValue = Maximum;
-            
-            if(ChangeStep)
-                _delta += SpeedChange;
-            _plusWaiter.CallOnce(() => _delta = Step);
+            // if (_delta == 0) _delta = Step;
+            // if (MaxIsLimit)
+            // {
+            //     if (TargetValue + Step <= Limit)
+            //         TargetValue += _delta;
+            //     else TargetValue = Limit;
+            // }
+            // else if (TargetValue + Step <= Maximum)
+            //     TargetValue += _delta;
+            // else TargetValue = Maximum;
+            //
+            // if(ChangeStep)
+            //     _delta += SpeedChange;
+            // _plusWaiter.CallOnce(() => _delta = Step);
         }
         
         private void BtnPlus_OnLeftMouseUp(object sender, RoutedEventArgs e)
