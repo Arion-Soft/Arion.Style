@@ -31,8 +31,8 @@
             Padding="5"
             attach:Hint.CornerRadius="6,0,0,6"
             Click="BtnMinus_OnClick"
-            MouseLeftButtonUp="BtnMinus_OnLeftMouseUp"
-            MouseLeftButtonDown="BtnMinus_OnLeftMouseDown"
+            PreviewMouseDown="BtnMinus_OnLeftMouseDown"
+            PreviewMouseUp="BtnMinus_OnLeftMouseUp"
             Content="-"
             FontSize="24"
             Style="{StaticResource RbOutline}" />
@@ -89,8 +89,8 @@
             Padding="5"
             attach:Hint.CornerRadius="0,6,6,0"
             Click="BtnPlus_OnClick"
-            MouseLeftButtonUp="BtnPlus_OnLeftMouseUp"
-            MouseLeftButtonDown="BtnPlus_OnLeftMouseDown"
+            PreviewMouseDown="BtnPlus_OnLeftMouseDown"
+            PreviewMouseUp="BtnPlus_OnLeftMouseUp"
             Content="+"
             FontSize="24"
             Style="{StaticResource RbOutline}" />

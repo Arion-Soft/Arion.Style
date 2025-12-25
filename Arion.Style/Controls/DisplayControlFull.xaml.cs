@@ -230,11 +230,12 @@ namespace Arion.Style.Controls
             // _minusWaiter.CallOnce(() => _delta = Step);
         }
 
-        private void BtnMinus_OnLeftMouseUp(object sender, RoutedEventArgs e)
+        private void BtnMinus_OnLeftMouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MinusMouseUp?.Invoke(this, EventArgs.Empty);
         }
-        private void BtnMinus_OnLeftMouseDown(object sender, RoutedEventArgs e)
+
+        private void BtnMinus_OnLeftMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MinusMouseDown?.Invoke(this, EventArgs.Empty);
         }
@@ -257,12 +258,12 @@ namespace Arion.Style.Controls
             // _plusWaiter.CallOnce(() => _delta = Step);
         }
         
-        private void BtnPlus_OnLeftMouseUp(object sender, RoutedEventArgs e)
+        private void BtnPlus_OnLeftMouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             PlusMouseUp?.Invoke(this, EventArgs.Empty);
         }
         
-        private void BtnPlus_OnLeftMouseDown(object sender, RoutedEventArgs e)
+        private void BtnPlus_OnLeftMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             PlusMouseDown?.Invoke(this, EventArgs.Empty);
         }
