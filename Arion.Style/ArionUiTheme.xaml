@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:local="clr-namespace:Arion.Style.Controls"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Arion.Style.Controls">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Icons/SRE450.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Icons.xaml" />
@@ -31,7 +31,7 @@
         <ResourceDictionary Source="Styles/ArionUi/Shadow.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/DisplayControl.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/ProgressBar.xaml" />
-        <ResourceDictionary Source="Styles/ArionUi/RangeSlider.xaml" />
+        <!-- <ResourceDictionary Source="Styles/ArionUi/RangeSlider.xaml" /> -->
         <ResourceDictionary Source="Styles/ArionUi/Menu.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/DocumentViewer.xaml" />
         <ResourceDictionary Source="Styles/ArionUi/Badges.xaml" />

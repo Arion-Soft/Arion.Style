@@ -9,92 +9,92 @@
     d:DesignHeight="1000"
     d:DesignWidth="1900"
     mc:Ignorable="d">
-    <UserControl.Style>
-        <Style BasedOn="{StaticResource {StaticResource {x:Type controls:RangeSlider}}}" TargetType="controls:RangeSlider">
-            <Setter Property="Margin" Value="5" />
-        </Style>
-    </UserControl.Style>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Label
-            Grid.Row="0"
-            Grid.Column="0"
-            Width="Auto"
-            Margin="10"
-            Padding="0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Range slider"
-            Style="{DynamicResource Lbl}" />
-        <controls:RangeSlider
-            Name="RangeSlider"
-            Grid.Row="1"
-            Grid.Column="0"
-            Width="222"
-            Maximum="65535"
-            Minimum="0" />
-
-        <controls:RangeSlider
-            Grid.Row="2"
-            Grid.Column="0"
-            Width="300"
-            Maximum="100"
-            Minimum="0" />
-
-        <controls:RangeSlider
-            Grid.Row="3"
-            Grid.Column="0"
-            Width="300"
-            Maximum="100"
-            Minimum="0"
-            ShowValues="True" />
-
-        <controls:RangeSlider
-            Name="Slider65535"
-            Grid.Row="4"
-            Grid.Column="0"
-            Width="500"
-            Maximum="65535"
-            Minimum="0" />
-
-        <Grid Grid.Row="5" Grid.Column="0">
-            <TextBox
-                Width="100"
-                HorizontalAlignment="Left"
-                Text="{Binding ElementName=Slider65535, Path=LowerValue, Mode=OneWay}" />
-            <TextBox
-                Width="100"
-                HorizontalAlignment="Right"
-                Text="{Binding ElementName=Slider65535, Path=UpperValue, Mode=OneWay}" />
-        </Grid>
-
-
-        <controls:RangeSlider
-            Grid.Row="6"
-            Grid.Column="0"
-            Width="500"
-            Margin="5"
-            LowerValue="{Binding ElementName=Slider65535, Path=LowerValue, Mode=TwoWay}"
-            Maximum="65535"
-            Minimum="0"
-            ShowValues="True"
-            UpperValue="{Binding ElementName=Slider65535, Path=UpperValue, Mode=TwoWay}" />
-    </Grid>
+    <!-- <UserControl.Style> -->
+    <!--     <Style BasedOn="{StaticResource {StaticResource {x:Type controls:RangeSlider}}}" TargetType="controls:RangeSlider"> -->
+    <!--         <Setter Property="Margin" Value="5" /> -->
+    <!--     </Style> -->
+    <!-- </UserControl.Style> -->
+    <!-- <Grid> -->
+    <!--     <Grid.RowDefinitions> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--         <RowDefinition Height="Auto" /> -->
+    <!--     </Grid.RowDefinitions> -->
+    <!--     <Grid.ColumnDefinitions> -->
+    <!--         <ColumnDefinition Width="Auto" /> -->
+    <!--         <ColumnDefinition Width="*" /> -->
+    <!--     </Grid.ColumnDefinitions> -->
+    <!--  <Label  -->
+    <!--  Grid.Row="0"  -->
+    <!--  Grid.Column="0"  -->
+    <!--  Width="Auto"  -->
+    <!--  Margin="10"  -->
+    <!--  Padding="0"  -->
+    <!--  HorizontalAlignment="Left"  -->
+    <!--  VerticalAlignment="Top"  -->
+    <!--  Content="Range slider"  -->
+    <!--  Style="{DynamicResource Lbl}" />  -->
+    <!--  <controls:RangeSlider  -->
+    <!--  Name="RangeSlider"  -->
+    <!--  Grid.Row="1"  -->
+    <!--  Grid.Column="0"  -->
+    <!--  Width="222"  -->
+    <!--  Maximum="65535"  -->
+    <!--  Minimum="0" />  -->
+    <!--    -->
+    <!--  <controls:RangeSlider  -->
+    <!--  Grid.Row="2"  -->
+    <!--  Grid.Column="0"  -->
+    <!--  Width="300"  -->
+    <!--  Maximum="100"  -->
+    <!--  Minimum="0" />  -->
+    <!--    -->
+    <!--  <controls:RangeSlider  -->
+    <!--  Grid.Row="3"  -->
+    <!--  Grid.Column="0"  -->
+    <!--  Width="300"  -->
+    <!--  Maximum="100"  -->
+    <!--  Minimum="0"  -->
+    <!--  ShowValues="True" />  -->
+    <!--    -->
+    <!--  <controls:RangeSlider  -->
+    <!--  Name="Slider65535"  -->
+    <!--  Grid.Row="4"  -->
+    <!--  Grid.Column="0"  -->
+    <!--  Width="500"  -->
+    <!--  Maximum="65535"  -->
+    <!--  Minimum="0" />  -->
+    <!--    -->
+    <!--     <Grid Grid.Row="5" Grid.Column="0"> -->
+    <!--  <TextBox  -->
+    <!--  Width="100"  -->
+    <!--  HorizontalAlignment="Left"  -->
+    <!--  Text="{Binding ElementName=Slider65535, Path=LowerValue, Mode=OneWay}" />  -->
+    <!--  <TextBox  -->
+    <!--  Width="100"  -->
+    <!--  HorizontalAlignment="Right"  -->
+    <!--  Text="{Binding ElementName=Slider65535, Path=UpperValue, Mode=OneWay}" />  -->
+    <!--     </Grid> -->
+    <!--    -->
+    <!--    -->
+    <!--  <controls:RangeSlider  -->
+    <!--  Grid.Row="6"  -->
+    <!--  Grid.Column="0"  -->
+    <!--  Width="500"  -->
+    <!--  Margin="5"  -->
+    <!--  LowerValue="{Binding ElementName=Slider65535, Path=LowerValue, Mode=TwoWay}"  -->
+    <!--  Maximum="65535"  -->
+    <!--  Minimum="0"  -->
+    <!--  ShowValues="True"  -->
+    <!--  UpperValue="{Binding ElementName=Slider65535, Path=UpperValue, Mode=TwoWay}" />  -->
+    <!-- </Grid> -->
 </UserControl>
