@@ -134,5 +134,10 @@ namespace Arion.Style.Controls
             var ch = char.Parse(e.Text);
             if (!((ch >= '0' && ch <= '9') || ch == ',' || ch == '.' || ch == (char)Key.Back)) e.Handled = true;
         }
+
+        private void TbValue_OnLostFocus(object sender, RoutedEventArgs e)
+        {
+            Value = Math.Clamp(Value, Minimum, Maximum);
+        }
     }
 }

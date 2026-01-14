@@ -61,6 +61,7 @@
                     wpf:Hint.CornerRadius="0"
                     BorderThickness="0"
                     FontSize="18"
+                    LostFocus="TbValue_OnLostFocus"
                     PreviewTextInput="TbValue_OnPreviewTextInput"
                     Text="{Binding ElementName=Root, Path=Value, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"
                     Visibility="Collapsed" />
