@@ -16,7 +16,7 @@ namespace Arion.Style.Controls
 
         public event EventHandler Plus;
         public event EventHandler Minus;
-        public event EventHandler<double> Changed;
+        public event EventHandler Changed;
         
         #region Value
 
@@ -144,7 +144,8 @@ namespace Arion.Style.Controls
 
         private void TbValue_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            Changed?.Invoke(this, Value);
+            Plus?.Invoke(this, EventArgs.Empty);
+            Changed?.Invoke(this, EventArgs.Empty);
         }
     }
 }
