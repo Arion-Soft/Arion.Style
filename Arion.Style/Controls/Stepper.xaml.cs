@@ -16,6 +16,7 @@ namespace Arion.Style.Controls
 
         public event EventHandler Plus;
         public event EventHandler Minus;
+        public event EventHandler<double> Changed;
         
         #region Value
 
@@ -133,11 +134,17 @@ namespace Arion.Style.Controls
         {
             var ch = char.Parse(e.Text);
             if (!((ch >= '0' && ch <= '9') || ch == ',' || ch == '.' || ch == (char)Key.Back)) e.Handled = true;
+            
         }
 
         private void TbValue_OnLostFocus(object sender, RoutedEventArgs e)
         {
             Value = Math.Clamp(Value, Minimum, Maximum);
+        }
+
+        private void TbValue_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            Changed?.Invoke(this, Value);
         }
     }
 }
