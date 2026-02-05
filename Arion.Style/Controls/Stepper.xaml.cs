@@ -144,6 +144,7 @@ namespace Arion.Style.Controls
 
         private void TbValue_OnTextChanged(object sender, TextChangedEventArgs e)
         {
+            Plus?.Invoke(this, EventArgs.Empty);
             Changed?.Invoke(this, Value);
         }
     }
