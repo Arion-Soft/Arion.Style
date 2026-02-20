@@ -104,7 +104,7 @@ namespace Arion.Style.Controls
 
         private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
-            //ChangeVisible();
+            ChangeVisible();
         }
 
         private void ChangeVisible()
