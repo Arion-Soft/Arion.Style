@@ -36,12 +36,18 @@ namespace Arion.Style.Controls
 
         #region IsEdit
 
+        /// <summary>
+        /// Gets or sets that stepper is editable.
+        /// </summary>
         public bool IsEdit
         {
             get => (bool)GetValue(IsEditProperty);
             set => SetValue(IsEditProperty, value);
         }
 
+        /// <summary>
+        /// Gets dependency property of <see cref="IsEdit"/>.
+        /// </summary>
         public static readonly DependencyProperty IsEditProperty =
             DependencyProperty.Register(nameof(IsEdit), typeof(bool), typeof(Stepper), new PropertyMetadata(true));
 
