@@ -17,7 +17,7 @@ namespace Arion.Style.Controls
         public event EventHandler Plus;
         public event EventHandler Minus;
         public event EventHandler Changed;
-        
+
         #region Value
 
         /// <summary>
@@ -31,6 +31,19 @@ namespace Arion.Style.Controls
 
         public static readonly DependencyProperty ValueProperty =
             DependencyProperty.Register(nameof(Value), typeof(double), typeof(Stepper), new PropertyMetadata(1.0));
+
+        #endregion
+
+        #region IsEdit
+
+        public bool IsEdit
+        {
+            get => (bool)GetValue(IsEditProperty);
+            set => SetValue(IsEditProperty, value);
+        }
+
+        public static readonly DependencyProperty IsEditProperty =
+            DependencyProperty.Register(nameof(IsEdit), typeof(bool), typeof(Stepper), new PropertyMetadata(true));
 
         #endregion
 
@@ -94,7 +107,7 @@ namespace Arion.Style.Controls
             Value -= Step;
             Minus?.Invoke(this, EventArgs.Empty);
         }
-        
+
         private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
         {
             if (!(Value + Step <= Maximum)) return;
@@ -104,7 +117,8 @@ namespace Arion.Style.Controls
 
         private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
-            //ChangeVisible();
+            if(IsEdit)
+                ChangeVisible();
         }
 
         private void ChangeVisible()
@@ -127,14 +141,13 @@ namespace Arion.Style.Controls
 
         private void Stepper_OnKeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Enter) ChangeVisible();
+            if (e.Key == Key.Enter) ChangeVisible();
         }
 
         private void TbValue_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             var ch = char.Parse(e.Text);
             if (!((ch >= '0' && ch <= '9') || ch == ',' || ch == '.' || ch == (char)Key.Back)) e.Handled = true;
-            
         }
 
         private void TbValue_OnLostFocus(object sender, RoutedEventArgs e)
