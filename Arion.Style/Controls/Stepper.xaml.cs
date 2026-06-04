@@ -26,13 +26,38 @@ namespace Arion.Style.Controls
         public double Value
         {
             get => (double)GetValue(ValueProperty);
-            set => SetValue(ValueProperty, value);
+            set
+            {
+                if(int.TryParse(Round, out int res))
+                    value = Math.Round(value, res);
+                SetValue(ValueProperty, value);
+            }
         }
 
         public static readonly DependencyProperty ValueProperty =
             DependencyProperty.Register(nameof(Value), typeof(double), typeof(Stepper), new PropertyMetadata(1.0));
 
         #endregion
+
+        public bool IsEdit
+        {
+            get => (bool)GetValue(IsEditProperty);
+            set => SetValue(IsEditProperty, value);
+        }
+
+        public static readonly DependencyProperty IsEditProperty = DependencyProperty.Register(nameof(IsEdit), typeof(bool), typeof(Stepper), new PropertyMetadata(true));
+
+        public string Round
+        {
+            get {
+                if (int.TryParse((string)GetValue(RoundProperty), out var value))
+                    return value.ToString();
+                return "0";
+            }
+            set => SetValue(RoundProperty, value);
+        }
+
+        public static readonly DependencyProperty RoundProperty = DependencyProperty.Register(nameof(Round), typeof(string), typeof(Stepper), new PropertyMetadata("0"));
 
         #region Maximum
 
@@ -104,7 +129,8 @@ namespace Arion.Style.Controls
 
         private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
-            //ChangeVisible();
+            if(IsEdit)
+                ChangeVisible();
         }
 
         private void ChangeVisible()
