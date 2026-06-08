@@ -17,7 +17,7 @@ namespace Arion.Style.Controls
         public event EventHandler Plus;
         public event EventHandler Minus;
         public event EventHandler Changed;
-        
+
         #region Value
 
         /// <summary>
@@ -39,13 +39,24 @@ namespace Arion.Style.Controls
 
         #endregion
 
+        #region IsEdit
+
+        /// <summary>
+        /// Gets or sets that stepper is editable.
+        /// </summary>
         public bool IsEdit
         {
             get => (bool)GetValue(IsEditProperty);
             set => SetValue(IsEditProperty, value);
         }
 
-        public static readonly DependencyProperty IsEditProperty = DependencyProperty.Register(nameof(IsEdit), typeof(bool), typeof(Stepper), new PropertyMetadata(true));
+        /// <summary>
+        /// Gets dependency property of <see cref="IsEdit"/>.
+        /// </summary>
+        public static readonly DependencyProperty IsEditProperty =
+            DependencyProperty.Register(nameof(IsEdit), typeof(bool), typeof(Stepper), new PropertyMetadata(true));
+
+        #endregion
 
         public string Round
         {
@@ -119,7 +130,7 @@ namespace Arion.Style.Controls
             Value -= Step;
             Minus?.Invoke(this, EventArgs.Empty);
         }
-        
+
         private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
         {
             if (!(Value + Step <= Maximum)) return;
@@ -153,14 +164,13 @@ namespace Arion.Style.Controls
 
         private void Stepper_OnKeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Enter) ChangeVisible();
+            if (e.Key == Key.Enter) ChangeVisible();
         }
 
         private void TbValue_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             var ch = char.Parse(e.Text);
             if (!((ch >= '0' && ch <= '9') || ch == ',' || ch == '.' || ch == (char)Key.Back)) e.Handled = true;
-            
         }
 
         private void TbValue_OnLostFocus(object sender, RoutedEventArgs e)
