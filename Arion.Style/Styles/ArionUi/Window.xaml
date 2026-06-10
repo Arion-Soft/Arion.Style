@@ -1,4 +1,5 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:global="clr-namespace:Arion.Style">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
@@ -56,6 +57,109 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="10">
                         <ContentPresenter Name="PART_ContentHost" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <global:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    <Style x:Key="NewWindowStyle" TargetType="Window">
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Background" Value="{StaticResource Pr200}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
+        <Setter Property="BorderThickness" Value="5" />
+        <Setter Property="ResizeMode" Value="CanResize" />
+        <Setter Property="global:WindowBehavior.IsEnabled" Value="True" />
+
+        <!-- Настройка WindowChrome для стандартного поведения -->
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome 
+                CaptionHeight="0"
+                ResizeBorderThickness="5"
+                GlassFrameThickness="0"
+                UseAeroCaptionButtons="False" />
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Window}">
+                    <Border
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="10">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <!-- Title Bar -->
+                             <Border 
+                            Grid.Row="0"
+                            Background="{StaticResource Lg4}"
+                            CornerRadius="10,10,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Title Label -->
+                                    <Label 
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    Style="{DynamicResource Title}"
+                                    HorizontalAlignment="Stretch"
+                                    HorizontalContentAlignment="Center"
+                                    Background="Transparent"
+                                    Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.TitleLabel)}" />
+
+                                    <!-- Системные кнопки -->
+                                    <StackPanel 
+                                    Grid.Column="1"
+                                    Orientation="Horizontal">
+
+                                        <!-- Minimize Button -->
+                                        <Button 
+                                        x:Name="PART_MinimizeButton"
+                                        Width="42" 
+                                        Height="42"
+                                        Style="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.MinimizeButtonStyle), FallbackValue={StaticResource BtnOutline}}"
+                                        Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.MinimizeContent)}"
+                                        Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.EnableMinimize), Converter={StaticResource BoolToVisibilityConverter}}" />
+
+                                        <!-- Maximize/Restore Button -->
+                                        <Button 
+                                        x:Name="PART_MaximizeButton" 
+                                        Width="42" 
+                                        Height="42"
+                                        Style="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.MaximizeButtonStyle), FallbackValue={StaticResource BtnOutline}}"
+                                        Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.MaximizeContent)}"
+                                        Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.EnableMaximize), Converter={StaticResource BoolToVisibilityConverter}}" />
+
+                                        <!-- Close Button -->
+                                        <Button 
+                                        x:Name="PART_CloseButton"
+                                        Width="42" 
+                                        Height="42"
+                                        Style="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.CloseButtonStyle), FallbackValue={StaticResource BtnOutline}}"
+                                        Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.CloseContent)}"
+                                        Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(global:WindowProperties.EnableClose), Converter={StaticResource BoolToVisibilityConverter}}" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <!-- Content -->
+                            <ContentPresenter Grid.Row="1" x:Name="PART_ContentHost" />
+
+                            <!-- Resize Grip -->
+                            <ResizeGrip Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="16" Height="16" />
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

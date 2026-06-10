@@ -29,7 +29,7 @@
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="40" />
+        <Setter Property="Height" Value="42" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="attach:Hint.CornerRadius" Value="10,10,0,0" />
         <Setter Property="Template">
