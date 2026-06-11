@@ -20,22 +20,50 @@ namespace Arion.Style.Controls
 
         #region Value
 
-        /// <summary>
-        /// Значение, по умолчанию - 1
-        /// </summary>
         public double Value
         {
             get => (double)GetValue(ValueProperty);
-            set
-            {
-                if(int.TryParse(Round, out int res))
-                    value = Math.Round(value, res);
-                SetValue(ValueProperty, value);
-            }
+            set => SetValue(ValueProperty, value);
         }
 
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.Register(nameof(Value), typeof(double), typeof(Stepper), new PropertyMetadata(1.0));
+            DependencyProperty.Register(
+                nameof(Value),
+                typeof(double),
+                typeof(Stepper),
+                new PropertyMetadata(1.0, null, CoerceValueCallback));
+
+        private static object CoerceValueCallback(DependencyObject d, object baseValue)
+        {
+            if (baseValue is double value)
+            {
+                var stepper = (Stepper)d;
+                return Math.Round(value, stepper.Round);
+            }
+            return baseValue;
+        }
+
+        #endregion
+
+        #region Round
+
+        public int Round
+        {
+            get => (int)GetValue(RoundProperty);
+            set => SetValue(RoundProperty, value);
+        }
+
+        public static readonly DependencyProperty RoundProperty =
+            DependencyProperty.Register(
+                nameof(Round),
+                typeof(int),
+                typeof(Stepper),
+                new PropertyMetadata(0, OnRoundChanged));
+
+        private static void OnRoundChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            d.CoerceValue(ValueProperty);
+        }
 
         #endregion
 
@@ -57,18 +85,6 @@ namespace Arion.Style.Controls
             DependencyProperty.Register(nameof(IsEdit), typeof(bool), typeof(Stepper), new PropertyMetadata(true));
 
         #endregion
-
-        public string Round
-        {
-            get {
-                if (int.TryParse((string)GetValue(RoundProperty), out var value))
-                    return value.ToString();
-                return "0";
-            }
-            set => SetValue(RoundProperty, value);
-        }
-
-        public static readonly DependencyProperty RoundProperty = DependencyProperty.Register(nameof(Round), typeof(string), typeof(Stepper), new PropertyMetadata("0"));
 
         #region Maximum
 
