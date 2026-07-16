@@ -13,8 +13,6 @@
     Loaded="Icon_OnLoaded"
     mc:Ignorable="d">
     <Path
-        Width="{Binding ElementName=Root, Path=Width}"
-        Height="{Binding ElementName=Root, Path=Height}"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch"
         Data="{Binding ElementName=Root, Path=Image, Mode=TwoWay}"
