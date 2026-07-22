@@ -9,15 +9,16 @@
     VerticalAlignment="Stretch"
     d:DesignHeight="40"
     d:DesignWidth="40"
+    d:Background="White"
+    MinWidth="15" MinHeight="15" 
     Background="Transparent"
-    Loaded="Icon_OnLoaded"
     mc:Ignorable="d">
     <Path
+        Stretch="Uniform"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch"
-        Data="{Binding ElementName=Root, Path=Image, Mode=TwoWay}"
-        Fill="{Binding ElementName=Root, Path=Fill, Mode=TwoWay, Delay=4000}"
-        Stretch="Uniform"
+        Data="{Binding ElementName=Root, Path=Image}"
+        Fill="{Binding ElementName=Root, Path=Fill}"
         Stroke="{Binding ElementName=Root, Path=StrokeColor}"
         StrokeThickness="{Binding ElementName=Root, Path=Stroke}" />
 </UserControl>
