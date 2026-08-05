@@ -2584,81 +2584,94 @@
       <GeometryDrawing Brush="#FFFFA000" Geometry="{StaticResource Kind_DayRuGeometry3}" />
     </DrawingGroup>
   </DrawingGroup>
-  <DrawingImage x:Key="Kind_DayRuDrawingImage" Drawing="{StaticResource Kind_DayRuDrawingGroup}" />
 
-    <Geometry x:Key="DefectHeightIconGeometry1">F1 M300,300z M0,0z M165,140L165,140 170,132 175,140</Geometry>
-    <Geometry x:Key="DefectHeightIconGeometry2">F1 M300,300z M0,0z M165,160L165,160 170,168 175,160</Geometry>
+    <DrawingImage x:Key="Kind_DayRuDrawingImage" Drawing="{StaticResource Kind_DayRuDrawingGroup}" />
+  <Geometry x:Key="DefectHeightIconGeometry1">F1 M300,300z M0,0z M167.5,143 L170,138 172.5,143 Z</Geometry>
+  <Geometry x:Key="DefectHeightIconGeometry2">F1 M300,300z M0,0z M167.5,157 L170,162 172.5,157 Z</Geometry>
+
     <DrawingGroup x:Key="DefectHeightDrawingGroup" ClipGeometry="M0,0 V300 H300 V0 H0 Z">
         <DrawingGroup Opacity="1">
+            <!-- Верхняя горизонтальная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                    <Pen Brush="#FF000000" Thickness="7" />
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
                     <LineGeometry StartPoint="110,120" EndPoint="190,120" />
                 </GeometryDrawing.Geometry>
             </GeometryDrawing>
+
+            <!-- Нижняя горизонтальная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                    <Pen Brush="#FF000000" Thickness="7" />
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
                     <LineGeometry StartPoint="110,180" EndPoint="190,180" />
                 </GeometryDrawing.Geometry>
             </GeometryDrawing>
+
+            <!-- Центральный круг -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                    <Pen Brush="#FF000000" Thickness="7" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
-                    <EllipseGeometry RadiusX="20" RadiusY="20" Center="135,150" />
+                    <EllipseGeometry RadiusX="13" RadiusY="13" Center="135,150" />
                 </GeometryDrawing.Geometry>
             </GeometryDrawing>
+
+            <!-- Верхняя пунктирная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" DashCap="Flat" LineJoin="Round">
+                    <Pen Brush="#FF000000" Thickness="4" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Offset=".4" Dashes="3 1" />
                         </Pen.DashStyle>
                     </Pen>
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
-                    <LineGeometry StartPoint="150,130" EndPoint="175,130" />
+                    <LineGeometry StartPoint="130,132" EndPoint="175,132" />
                 </GeometryDrawing.Geometry>
             </GeometryDrawing>
+
+            <!-- Нижняя пунктирная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" DashCap="Flat" LineJoin="Round">
+                    <Pen Brush="#FF000000" Thickness="4" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Offset=".4" Dashes="3 1" />
                         </Pen.DashStyle>
                     </Pen>
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
-                    <LineGeometry StartPoint="150,170" EndPoint="175,170" />
+                    <LineGeometry StartPoint="130,168" EndPoint="175,168" />
                 </GeometryDrawing.Geometry>
             </GeometryDrawing>
+
             <DrawingGroup Opacity="1">
+                <!-- Вертикальная соединительная линия между основаниями стрелок -->
                 <GeometryDrawing>
                     <GeometryDrawing.Pen>
-                        <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                        <Pen Brush="#FF000000" Thickness="4" />
                     </GeometryDrawing.Pen>
                     <GeometryDrawing.Geometry>
-                        <LineGeometry StartPoint="170,132" EndPoint="170,167" />
+                        <LineGeometry StartPoint="170,142" EndPoint="170,158" />
                     </GeometryDrawing.Geometry>
                 </GeometryDrawing>
                 <GeometryDrawing Geometry="{StaticResource DefectHeightIconGeometry1}">
                     <GeometryDrawing.Pen>
-                        <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                        <Pen Brush="#FF000000" Thickness="5" />
                     </GeometryDrawing.Pen>
                 </GeometryDrawing>
                 <GeometryDrawing Geometry="{StaticResource DefectHeightIconGeometry2}">
                     <GeometryDrawing.Pen>
-                        <Pen Brush="#FF000000" Thickness="4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                        <Pen Brush="#FF000000" Thickness="5" />
                     </GeometryDrawing.Pen>
                 </GeometryDrawing>
             </DrawingGroup>
         </DrawingGroup>
     </DrawingGroup>
+
     <DrawingImage x:Key="DefectHeightIcon" Drawing="{StaticResource DefectHeightDrawingGroup}" />
 </ResourceDictionary>
