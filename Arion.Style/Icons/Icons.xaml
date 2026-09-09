@@ -2594,7 +2594,7 @@
             <!-- Верхняя горизонтальная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="7" />
+                    <Pen Brush="#252C32" Thickness="7" />
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
                     <LineGeometry StartPoint="110,120" EndPoint="190,120" />
@@ -2604,7 +2604,7 @@
             <!-- Нижняя горизонтальная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="7" />
+                    <Pen Brush="#252C32" Thickness="7" />
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
                     <LineGeometry StartPoint="110,180" EndPoint="190,180" />
@@ -2614,7 +2614,7 @@
             <!-- Центральный круг -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="7" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                    <Pen Brush="#252C32" Thickness="7" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
                 </GeometryDrawing.Pen>
                 <GeometryDrawing.Geometry>
                     <EllipseGeometry RadiusX="13" RadiusY="13" Center="135,150" />
@@ -2624,7 +2624,7 @@
             <!-- Верхняя пунктирная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="4" DashCap="Flat">
+                    <Pen Brush="#252C32" Thickness="4" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Offset=".4" Dashes="3 1" />
                         </Pen.DashStyle>
@@ -2638,7 +2638,7 @@
             <!-- Нижняя пунктирная линия -->
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#FF000000" Thickness="4" DashCap="Flat">
+                    <Pen Brush="#252C32" Thickness="4" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Offset=".4" Dashes="3 1" />
                         </Pen.DashStyle>
@@ -2653,7 +2653,7 @@
                 <!-- Вертикальная соединительная линия между основаниями стрелок -->
                 <GeometryDrawing>
                     <GeometryDrawing.Pen>
-                        <Pen Brush="#FF000000" Thickness="4" />
+                        <Pen Brush="#252C32" Thickness="4" />
                     </GeometryDrawing.Pen>
                     <GeometryDrawing.Geometry>
                         <LineGeometry StartPoint="170,142" EndPoint="170,158" />
@@ -2661,12 +2661,12 @@
                 </GeometryDrawing>
                 <GeometryDrawing Geometry="{StaticResource DefectHeightIconGeometry1}">
                     <GeometryDrawing.Pen>
-                        <Pen Brush="#FF000000" Thickness="5" />
+                        <Pen Brush="#252C32" Thickness="5" />
                     </GeometryDrawing.Pen>
                 </GeometryDrawing>
                 <GeometryDrawing Geometry="{StaticResource DefectHeightIconGeometry2}">
                     <GeometryDrawing.Pen>
-                        <Pen Brush="#FF000000" Thickness="5" />
+                        <Pen Brush="#252C32" Thickness="5" />
                     </GeometryDrawing.Pen>
                 </GeometryDrawing>
             </DrawingGroup>
