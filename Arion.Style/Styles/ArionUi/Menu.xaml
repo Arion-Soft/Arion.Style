@@ -6,6 +6,7 @@
     xmlns:wpf="clr-namespace:Arion.Style.AttachedProperties">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
+        <ResourceDictionary Source="ContextMenuStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type Menu}">
@@ -344,9 +345,7 @@
                     PopupAnimation="Fade">
                     <Border
                         x:Name="SubmenuBorder"
-                        Background="{StaticResource CleanW}"
-                        BorderBrush="{StaticResource Lg3}"
-                        BorderThickness="1"
+                        Style="{StaticResource MenuFrameStyle}"
                         SnapsToDevicePixels="True">
                         <ScrollViewer CanContentScroll="True" Style="{StaticResource MenuScrollViewer}">
                             <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
@@ -362,10 +361,6 @@
             <Trigger Property="IsHighlighted" Value="true">
                 <Setter TargetName="Border" Property="Background" Value="{StaticResource Lg5}" />
                 <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource Lg5}" />
-            </Trigger>
-            <Trigger SourceName="Popup" Property="AllowsTransparency" Value="True">
-                <Setter TargetName="SubmenuBorder" Property="CornerRadius" Value="4" />
-                <Setter TargetName="SubmenuBorder" Property="Padding" Value="0,3,0,3" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Opacity" Value=".5" />
