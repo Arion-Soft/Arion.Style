@@ -133,7 +133,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Separator}">
-                    <Border BorderBrush="Aqua" BorderThickness="1" />
+                    <Border BorderBrush="{StaticResource Pr300}" BorderThickness="1" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
