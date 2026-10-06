@@ -64,7 +64,6 @@
         <ComboBox
             Width="200"
             Margin="5"
-            IsEnabled="False"
             SelectedIndex="2">
             <ComboBox.Items>
                 <ComboBoxItem Content="1" />

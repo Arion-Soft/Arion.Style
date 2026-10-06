@@ -164,7 +164,7 @@
                                     BorderBrush="{StaticResource Lg2}"
                                     BorderThickness="1"
                                     CornerRadius="26" />
-                                <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                <ScrollViewer Margin="0" SnapsToDevicePixels="True">
                                     <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
                                 </ScrollViewer>
                             </Grid>
@@ -221,15 +221,13 @@
                 <ControlTemplate TargetType="{x:Type ComboBoxItem}">
                     <Border
                         Name="Border"
-                        Width="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=ActualWidth}"
                         Height="40"
                         Padding="5"
                         HorizontalAlignment="Stretch"
                         SnapsToDevicePixels="true">
                         <ContentPresenter
                             x:Name="Content"
-                            Width="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=ActualWidth}"
-                            HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}"
+                            HorizontalAlignment="Stretch"
                             VerticalAlignment="Center"
                             TextBlock.TextAlignment="Left"
                             TextElement.FontSize="14"
