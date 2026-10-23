@@ -65,12 +65,10 @@
     </Style>
     <global:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
     <Style x:Key="NewWindowStyle" TargetType="Window">
-        <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="AllowsTransparency" Value="True" />
-        <Setter Property="Background" Value="{StaticResource Pr200}" />
+	    <Setter Property="Background" Value="{StaticResource Pr200}" />
         <Setter Property="BorderBrush" Value="{StaticResource Pr500}" />
         <Setter Property="BorderThickness" Value="5" />
-        <Setter Property="ResizeMode" Value="CanResize" />
+        <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
         <Setter Property="global:WindowBehavior.IsEnabled" Value="True" />
         <Setter Property="wpf:Hint.CornerRadius" Value="10" />
 
@@ -79,7 +77,7 @@
             <Setter.Value>
                 <WindowChrome 
                 CaptionHeight="0"
-                ResizeBorderThickness="5"
+                ResizeBorderThickness="10"
                 GlassFrameThickness="0"
                 UseAeroCaptionButtons="False" />
             </Setter.Value>
@@ -104,7 +102,7 @@
                              <Border 
                             Grid.Row="0"
                             Background="{StaticResource Lg4}"
-                            CornerRadius="8,8,0,0">
+                            CornerRadius="10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
