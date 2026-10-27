@@ -9,7 +9,26 @@
         <ResourceDictionary Source="Colors.xaml" />
         <ResourceDictionary Source="FontFamily.xaml" />
         <ResourceDictionary Source="Button.xaml" />
+        <ResourceDictionary Source="ContextMenuStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+    <ContextMenu x:Key="TextBoxContextMenu" Style="{StaticResource ContextMenuStyle}">
+        <MenuItem
+            Command="ApplicationCommands.Cut"
+            CommandTarget="{Binding PlacementTarget, RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}}}"
+            Header="Вырезать (Ctrl+X)"
+            InputGestureText=" " />
+        <MenuItem
+            Command="ApplicationCommands.Copy"
+            CommandTarget="{Binding PlacementTarget, RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}}}"
+            Header="Копировать (Ctrl+C)"
+            InputGestureText=" " />
+        <MenuItem
+            Command="ApplicationCommands.Paste"
+            CommandTarget="{Binding PlacementTarget, RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}}}"
+            Header="Вставить (Ctrl+V)"
+            InputGestureText=" " />
+    </ContextMenu>
 
     <converters:TextVisibilityConverter
         x:Key="TextVisibilityConverter"
@@ -18,6 +37,7 @@
     <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}">
+        <Setter Property="ContextMenu" Value="{StaticResource TextBoxContextMenu}" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Foreground" Value="{StaticResource Dg2}" />
         <Setter Property="FontWeight" Value="Regular" />

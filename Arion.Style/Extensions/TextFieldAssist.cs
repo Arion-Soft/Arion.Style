@@ -317,7 +317,7 @@ namespace Arion.Style.Theme.Extensions
             var textBoxBase = sender as TextBoxBase;
 
             ContextMenu contextMenu = textBoxBase?.ContextMenu;
-            if (contextMenu is null) return;
+			if (contextMenu is null) return;
 
             RemoveSpellingSuggestions(contextMenu);
 
